@@ -218,20 +218,20 @@ __marimo__/
 .streamlit/secrets.toml
 
 # dataset
-data/
+/data/
 
 # model weights
-checkpoints/
+/checkpoints/
 *.pth
 *.pt
 *.ckpt
 
 # experiment outputs
-outputs/
-logs/
+/outputs/
+/logs/
 
 # tensorboard
-runs/
+/runs/
 
 # local models
-models/
+/models/
