@@ -1,0 +1,5 @@
+﻿target,total,correct,coarse,wrong,correct_rate_percent,coarse_rate_percent,wrong_rate_percent
+sleeve,10,0,3,7,0.0,30.0,70.0
+collar,10,0,0,10,0.0,0.0,100.0
+button,10,0,3,7,0.0,30.0,70.0
+zipper,10,0,0,10,0.0,0.0,100.0

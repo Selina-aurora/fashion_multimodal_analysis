@@ -1,0 +1,6 @@
+black>=24.0
+isort>=5.13
+flake8>=7.0
+mypy>=1.10
+pylint>=3.2
+pytest>=8.0

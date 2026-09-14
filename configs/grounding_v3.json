@@ -1,0 +1,84 @@
+{
+  "model_id": "IDEA-Research/grounding-dino-tiny",
+  "targets": [
+    "sleeve",
+    "collar",
+    "button",
+    "zipper"
+  ],
+  "threshold": 0.3,
+  "roi_margin_ratio": 0.05,
+  "local_enlarge_factor": 1.0,
+  "local_nms_iou": 0.5,
+  "scale_groups": {
+    "sleeve": "larger_part",
+    "collar": "larger_part",
+    "button": "small_object",
+    "zipper": "small_object"
+  },
+  "local_window_rules": {
+    "sleeve": [
+      [
+        0.0,
+        0.02,
+        0.36,
+        0.75
+      ],
+      [
+        0.64,
+        0.02,
+        1.0,
+        0.75
+      ]
+    ],
+    "collar": [
+      [
+        0.2,
+        0.0,
+        0.8,
+        0.34
+      ]
+    ],
+    "button": [
+      [
+        0.28,
+        0.06,
+        0.5,
+        0.94
+      ],
+      [
+        0.39,
+        0.06,
+        0.61,
+        0.94
+      ],
+      [
+        0.5,
+        0.06,
+        0.72,
+        0.94
+      ]
+    ],
+    "zipper": [
+      [
+        0.28,
+        0.03,
+        0.5,
+        0.97
+      ],
+      [
+        0.39,
+        0.03,
+        0.61,
+        0.97
+      ],
+      [
+        0.5,
+        0.03,
+        0.72,
+        0.97
+      ]
+    ]
+  },
+  "note": "Frozen v3 diagnostic configuration used for the 88-case verified-positive evaluation. Local windows are coarse spatial priors, not fine-grained ground truth."
+}

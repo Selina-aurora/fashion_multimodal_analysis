@@ -1,5 +1,8 @@
 # 服饰实例分割模块开发记录
 
+> **Current status (2026-09-14):** The Mask2Former/DeepFashion2 data pipeline and adaptive Person ROI diagnostics are implemented. 3.1.2 has since progressed through a full verified-positive Grounding DINO evaluation. The current-week goal is to consolidate final 3.1.1 parameters, complete 3.1.2 mentor-feedback diagnostics, implement 3.1.3, and integrate the full 3.1 pipeline.
+
+
 ## 1. 文档说明
 
 本文档用于记录“多模态驱动的电商服饰细粒度语义增强与智能解析系统”中服饰实例分割模块的开发过程，包括数据分析、模型选型、Baseline 实验、ROI 方案、训练数据构造、问题记录与当前技术决策。
@@ -948,65 +951,47 @@ DeepFashion2 无法完整覆盖：
 - inference latency；
 - error analysis。
 
-## 14. 下一步计划
+## 14. 当前阶段下一步（2026-09-14）
 
-### 14.1 代码与工程整理
+### 14.1 3.1.1 参数收口
 
-按照项目编码规范统一整理当前代码：
-- 模块结构；
-- 函数职责；
-- 类型注解；
-- Google 风格 docstring；
-- 异常处理；
-- logging；
-- Black；
-- isort；
-- flake8。
+本周对当前实例分割 / ROI baseline 做最后一轮配置检查，包括输入分辨率、置信度阈值、最小区域过滤和后处理参数，并记录最终 baseline 配置。
 
-### 14.2 Train / Validation 数据接入
+### 14.2 3.1.2 反馈诊断
 
-分别建立：
-- training dataset；
-- validation dataset；
-- training DataLoader；
-- validation DataLoader。
+3.1.2 已完成 88-case verified-positive FULL / ROI / LOCAL 正式评测。当前根据带教反馈补充分类别人工定位指标、Prompt 对照、segmentation-first tight crop 和小目标专项小实验，之后冻结该模块 baseline。
 
-### 14.3 GPU Fine-tuning
+### 14.3 3.1.3 属性提取
 
-在服务器 GPU 环境：
-- 配置训练参数；
-- 建立 optimizer / scheduler；
-- 完成 checkpoint 保存；
-- 记录 loss；
-- 进行初步 fine-tuning。
+完成属性 schema、第一版 baseline、参数调整与批量评测，并记录字段级错误和 fallback 规则。
 
-### 14.4 模型评估
+### 14.4 3.1 端到端联调
 
-逐步加入：
-- mask IoU；
-- 类别预测指标；
-- 实例分割相关指标；
-- 典型错误样例分析；
-- 推理延迟统计。
+串联：
 
-### 14.5 后续模块
+```text
+3.1.1 ROI / segmentation
+        ↓
+3.1.2 language-guided localization
+        ↓
+3.1.3 structured attribute extraction
+```
 
-完成 3.1.1 基础模型验证后，继续进入：
-- 3.1.2 语言引导局部区域定位；
-- 3.1.3 细粒度属性提取。
+统一输入输出接口，完成端到端复测、错误分析和参数冻结，为后续 3.2 做准备。
 
 ## 15. 实验记录维护约定
 
-后续每次形成有意义的实验结论时，更新本文档。
+后续每次形成有意义的实验结论时，更新相应模块文档和 `docs/project_status.md`。
 
-建议重点记录：
+重点记录：
+
 - 实验日期；
 - 实验目的；
-- 模型/checkpoint；
+- 模型 / checkpoint；
 - 数据范围；
 - 参数；
 - 输出指标；
-- 典型成功/失败案例；
+- 典型成功 / 失败案例；
 - 结论；
 - 下一步技术决策。
 
@@ -1014,12 +999,12 @@ DeepFashion2 无法完整覆盖：
 
 ```text
 问题
-↓
+  ↓
 实验
-↓
+  ↓
 结果
-↓
+  ↓
 分析
-↓
+  ↓
 技术决策
 ```

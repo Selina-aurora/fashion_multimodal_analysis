@@ -1,258 +1,148 @@
-3.1.2 Language-guided Local Region Localization
+# 3.1.2 Language-guided Local Region Localization
 
-1\. Motivation
+## 1. Objective
 
-Traditional clothing part segmentation methods often rely on predefined part categories, such as:
+The module accepts a fashion image plus a natural-language description and returns a candidate local region with a confidence score. Unlike fixed part segmentation, the target vocabulary is not limited to a predefined clothing-part list.
 
-\- collar
-
-\- sleeve
-
-\- shoulder
-
-\- hem
-
-Although these methods can achieve accurate segmentation for predefined parts, they have several limitations:
-
-1）Adding new clothing parts requires additional annotation data.
-
-2）The model needs to be retrained when introducing new categories.
-
-3）It is difficult to support open-ended descriptions beyond predefined classes.
-
-For example, if a new clothing detail such as a zipper, button, or embroidery area needs to be detected, traditional part segmentation methods usually require new labels and additional training.
-
-Therefore, this project considers a language-guided local region localization approach. By leveraging vision-language models, the system aims to establish semantic alignment between fashion images and natural language descriptions, allowing users to locate fine-grained regions through flexible text descriptions.
-
-
-
-2\. Objective
-
-The objective of this module is to support open-ended natural language guided localization in fashion images.
-
-Input
-
-Image + Natural Language Description
-
-Examples:
-
-\- "the left sleeve cuff"
-
-\- "the floral pattern on the shirt"
-
-\- "the zipper of the jacket"
-
-\- "the overlap between jacket and inner shirt"
-
-&#x20;Output
-
-Target Region Bounding Box + Confidence Score
-
-The first stage focuses on obtaining the corresponding local region through language-guided grounding.
-
-After localization, the detected region can optionally be further refined using a segmentation model to obtain a more accurate mask.
-
-
-
-3\. Comparison with Fixed Part Segmentation
-
-| Aspect | Fixed Part Segmentation | Language-guided Local Region Localization |
-
-|---|---|---|
-
-| Input | Predefined clothing part categories | Arbitrary natural language descriptions |
-
-| Example | collar, sleeve, shoulder, hem | left sleeve cuff, floral pattern on shirt, zipper of jacket |
-
-| Flexibility | Limited to predefined categories | Supports open-ended descriptions |
-
-| Extension to New Parts | Requires new annotations and model retraining | Can potentially generalize through pretrained vision-language knowledge |
-
-| Generalization Ability | Relatively limited | Stronger semantic generalization capability |
-
-| Understanding Ability | Focuses on category-level segmentation | Can understand attributes, spatial relationships, and part relationships |
-
-| Example Extensions | Adding button or zipper requires new training data | Can describe new concepts such as buttons, zippers, or embroidery |
-
-| Scalability | Difficult to scale to a large number of clothing details | Easier to extend to fine-grained and complex descriptions |
-
-Compared with fixed part segmentation, language-guided localization provides stronger flexibility and scalability.
-
-Fixed segmentation methods mainly focus on recognizing predefined categories, while language-guided localization can leverage pretrained vision-language knowledge to understand more diverse descriptions, including clothing parts, attributes, spatial positions, and relationships.
-
-
-
-4\. Preliminary Technical Route
-
-The preliminary pipeline is designed as:
-
-Image+Natural Language Prompt
-
-&#x20;       ↓
-
-Vision-Language Grounding Model
-
-&#x20;       ↓
-
-Candidate Regions + Confidence Scores
-
-&#x20;       ↓
-
-Region Selection / Refinement
-
-&#x20;       ↓
-
-Local Region Output
-
-The first stage aims to validate whether a vision-language model can correctly associate natural language descriptions with corresponding regions in fashion images.
-
-Further refinement can be performed by combining localization results with segmentation models.
-
-
-
-5\. Candidate Models
-
-（1）Grounding DINO
-
-Grounding DINO is selected as the first candidate baseline.
-
-Reasons:
-
-1）Supports open-vocabulary detection.
-
-2）Allows natural language descriptions as input.
-
-3）Directly outputs target region bounding boxes and confidence scores.
-
-The expected workflow is:
-
-Image + Text Description
-
-&#x20;       ↓
-
+```text
+Fashion image + text prompt
+        ↓
 Grounding DINO
+        ↓
+Candidate bounding box + score
+        ↓
+Optional ROI / local-window diagnostic
+        ↓
+Manual localization-quality review
+```
 
-&#x20;       ↓
+Current model: `IDEA-Research/grounding-dino-tiny`.
 
-Bounding Box + Confidence Score
+## 2. Why Grounding DINO is used as the baseline
 
-Grounding DINO is suitable for this task because it does not require predefined clothing categories and can potentially generalize to unseen descriptions.
+Grounding DINO directly supports open-vocabulary text-guided detection and can therefore test whether descriptions such as `sleeve`, `shirt collar`, or `front zipper closure` can be grounded without training a fixed fashion-part detector.
 
-（2）CLIP
+The baseline is intentionally diagnostic. A returned box does not prove that the requested fine-grained part is correctly localized.
 
-Advantages:
+## 3. Evaluation history
 
-1）Strong vision-language semantic matching ability.
+### 3.1 Pilot prompt and threshold experiments
 
-2）Effective for measuring the similarity between image regions and text descriptions.
+Initial experiments compared category/part/detail/spatial prompts and detection thresholds from 0.2 to 0.5. These experiments established that prompt wording changes model output and that overly strict thresholds can increase misses.
 
-Limitations:
+Early prompt-improvement percentages are treated as **prediction coverage only**, not localization accuracy.
 
-1）Does not directly output object locations.
+### 3.2 300-image repeated evaluation
 
-2）Requires additional region proposal or localization methods.
+Three non-overlapping groups of 100 DeepFashion2 images were used to compare baseline and clothing-context prompts for sleeve, collar, button and zipper.
 
-Potential usage:
+Main finding: contextual prompts increase emitted predictions for sleeve/collar but also increase large/coarse boxes. Button and zipper remain rare and weak under random sampling.
 
-CLIP can be used as a semantic ranking module after candidate regions are generated.
+See [`experiments/2026-09-10_grounding_localization_evaluation.md`](experiments/2026-09-10_grounding_localization_evaluation.md).
 
-（3）DINOv2
+### 3.3 Verified-positive benchmark
 
-Advantages:
+Because random samples frequently did not actually contain the queried target, a verified-positive benchmark was built by manual screening:
 
-1）Provides strong visual feature representations.
+| Target | Verified cases |
+| --- | ---: |
+| sleeve | 22 |
+| collar | 22 |
+| button | 22 |
+| zipper | 22 |
+| **Total** | **88** |
 
-2）Effective for fine-grained visual understanding.
+Three diagnostic conditions are compared:
 
-Limitations:
+- **FULL**: original image;
+- **ROI**: annotation-assisted garment ROI (oracle diagnostic, not deployment ground truth);
+- **LOCAL**: fixed target-conditioned local windows inside the ROI.
 
-1）It is mainly a visual feature extractor.
+The LOCAL windows are deterministic spatial priors. They do not use a fine-grained ground-truth part bbox.
 
-2）It does not directly provide image-text alignment.
+## 4. Frozen v3 local-window configuration
 
-3）Additional cross-modal learning modules are required for language-guided localization.
+Ratios are relative to the garment ROI.
 
+| Target | Relative windows `(x1, y1, x2, y2)` |
+| --- | --- |
+| sleeve | `(0.00, 0.02, 0.36, 0.75)`, `(0.64, 0.02, 1.00, 0.75)` |
+| collar | `(0.20, 0.00, 0.80, 0.34)` |
+| button | three overlapping vertical windows centered around the front torso |
+| zipper | three overlapping vertical windows spanning most of garment height |
 
+Exact values are recorded in [`../configs/grounding_v3.json`](../configs/grounding_v3.json) and `src/fashion_multimodal_analysis/grounding/config.py`.
 
-6\. Evaluation Strategy
+The v3 window geometry was frozen after a small sanity check and was not repeatedly tuned against final 88-case results.
 
-The evaluation prompts are not intended to define fixed categories.
+## 5. Final automatic 88-case results
 
-Instead, they are used as representative examples to evaluate the model's ability to understand different types of natural language descriptions.
+| Target | FULL | ROI | LOCAL |
+| --- | ---: | ---: | ---: |
+| sleeve | 40.9% | 40.9% | 36.4% |
+| collar | 68.2% | 68.2% | 45.5% |
+| button | 18.2% | 18.2% | 9.1% |
+| zipper | 4.5% | 4.5% | 9.1% |
+| **Overall** | **33.0%** | **33.0%** | **25.0%** |
 
-（1）Part-related Descriptions
+Mean top-box area ratio among detected cases:
 
-Examples:
+- FULL: `0.963`
+- ROI: `0.963`
+- LOCAL: `0.219`
 
-\- "the collar of the shirt"
+Interpretation:
 
-\- "the zipper of the jacket"
+1. FULL and ROI are effectively the same on this benchmark.
+2. FULL/ROI detections are often extremely large and cannot be counted as precise part localization.
+3. LOCAL makes detections spatially smaller but does not improve overall coverage.
+4. Sleeve and collar are easier than button and zipper.
+5. Tight cropping is retained as a mixed/negative diagnostic result.
 
-\- "the button on the coat"
+## 6. Manual localization quality
 
-（2）Attribute-related Descriptions
+Because the benchmark verifies target presence but has no fine-grained target bounding-box ground truth, localization quality is manually reviewed with four labels:
 
-Examples:
+- `correct`: appropriate target localization;
+- `coarse`: target is included, but the box is too broad;
+- `wrong`: a prediction exists but localizes the wrong region;
+- `missed`: no prediction.
 
-\- "the floral pattern on the shirt"
-
-\- "the embroidered area"
-
-\- "the logo on the chest"
-
-（3）Spatial Descriptions
-
-Examples:
-
-\- "the left sleeve"
-
-\- "the right pocket"
-
-\- "the lower part of the skirt"
-
-（4）Relationship Descriptions
-
-Examples:
-
-\- "the area where the jacket overlaps with the inner shirt"
-
-\- "the button near the collar"
-
-The evaluation focuses on:
-
-\- Whether the model can understand the description.
-
-\- Whether the predicted region corresponds to the described area.
-
-\- Failure cases caused by ambiguous descriptions or small-scale details.
-
-
-
-7\. Future Improvement
-
-After validating the baseline pipeline, possible improvements include:
-
-1）Combining Person ROI preprocessing to reduce background interference.
-
-2）Refining predicted bounding boxes using segmentation models.
-
-3）Evaluating different confidence thresholds and prompt designs.
-
-4）Improving localization accuracy for fine-grained clothing details.
-
-5）Exploring stronger vision-language models for better semantic understanding.
-
-
-
-8\. Expected Outcome
-
-The expected outcome of this module is a flexible local region localization system that can:
-
-（1）Accept natural language descriptions without predefined categories.
-
-（2）Locate fine-grained clothing regions in fashion images.
-
-（3）Support future extensions to attributes, components, and relationships.
-
-（4）Provide region information for subsequent fashion analysis modules.
-
+Reporting definitions:
+
+```text
+Strict Accuracy = correct / N
+Usable Rate     = (correct + coarse) / N
+Missed Rate     = missed / N
+```
+
+The current audit under `reports/verified_positive_evaluation/final_analysis/` is still marked **preliminary** because low-confidence cases require final human confirmation. It must not be presented as a final localization-accuracy table until that review is complete.
+
+## 7. Current failure modes
+
+- garment-level or near-full-image boxes;
+- head/face/hat confusion around collar prompts;
+- background or non-clothing-object confusion for button;
+- footwear/accessory confusion for zipper;
+- misses caused by very small target scale;
+- language-visual semantic association without precise boundary isolation.
+
+## 8. Current follow-up requested by mentor
+
+Before freezing 3.1.2:
+
+1. finalize per-class manual localization metrics;
+2. compare generic, garment-specific and explicit part-specific prompts on a small controlled subset;
+3. test segmentation-first tight crop instead of repeatedly shrinking fixed windows;
+4. inspect attention/response behavior where practical to identify input-side vs cross-modal alignment failure;
+5. treat button/zipper as small-object targeted diagnostics rather than requiring immediate parity with sleeve/collar.
+
+## 9. Main files
+
+- `scripts/evaluate_verified_positive_benchmark_v3.py`
+- `scripts/build_verified_positive_benchmark.py`
+- `scripts/build_target_balanced_candidates.py`
+- `scripts/analyze_grounding_failure_patterns.py`
+- `reports/verified_positive_benchmark/`
+- `reports/verified_positive_evaluation/`
+- `configs/grounding_v3.json`

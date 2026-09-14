@@ -1,0 +1,6 @@
+﻿audit_id,group_id,target,prompt_type,prompt,image_name,roi_category,roi_area_ratio,detection_count,label,score,bbox_area_ratio,inference_ms,baseline_quality,baseline_error_type,baseline_notes,visualization_path,roi_quality,roi_error_type,roi_notes
+1,3,sleeve,baseline,sleeve,106709.jpg,short sleeve dress,0.422266,0,,,,38267.65,,,,outputs\roi_conditioned_grounding\visualizations\1_106709_sleeve_baseline.jpg,,,
+2,1,sleeve,baseline,sleeve,025354.jpg,long sleeve top,0.366167,0,,,,39825.59,,,,outputs\roi_conditioned_grounding\visualizations\2_025354_sleeve_baseline.jpg,,,
+3,1,sleeve,baseline,sleeve,022791.jpg,short sleeve top,0.375274,0,,,,28716.92,,,,outputs\roi_conditioned_grounding\visualizations\3_022791_sleeve_baseline.jpg,,,
+4,2,sleeve,baseline,sleeve,068877.jpg,short sleeve top,0.136116,1,sleeve,0.322591,0.012237,36432.94,,,,outputs\roi_conditioned_grounding\visualizations\4_068877_sleeve_baseline.jpg,,,
+5,2,sleeve,baseline,sleeve,055739.jpg,vest,0.207912,2,sleeve,0.343876,0.029577,32461.46,,,,outputs\roi_conditioned_grounding\visualizations\5_055739_sleeve_baseline.jpg,,,

@@ -1,0 +1,28 @@
+{
+    "benchmark_name": "DeepFashion2 Verified Positive Fine-Grained Localization Benchmark",
+    "total_cases": 88,
+    "target_counts": {
+        "sleeve": 22,
+        "collar": 22,
+        "button": 22,
+        "zipper": 22
+    },
+    "targets": [
+        "sleeve",
+        "collar",
+        "button",
+        "zipper"
+    ],
+    "verification_policy": "Target must be directly visible in the image. Examples requiring inference from garment type are excluded.",
+    "balance_policy": "22 verified-positive cases per target.",
+    "targets_grouping": {
+        "larger_part": [
+            "sleeve",
+            "collar"
+        ],
+        "small_object": [
+            "button",
+            "zipper"
+        ]
+    }
+}
