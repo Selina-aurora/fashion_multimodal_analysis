@@ -80,9 +80,7 @@ def relative_window_to_bbox(
     rx1, ry1, rx2, ry2 = window
 
     if not (0 <= rx1 <= rx2 <= 1 and 0 <= ry1 <= ry2 <= 1):
-        raise ValueError(
-            "relative window values must satisfy 0 <= min <= max <= 1"
-        )
+        raise ValueError("relative window values must satisfy 0 <= min <= max <= 1")
 
     width, height = x2 - x1, y2 - y1
     if width < 0 or height < 0:
