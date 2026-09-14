@@ -8,13 +8,13 @@ import logging
 from pathlib import Path
 from typing import Any, TypedDict
 
-import cv2 # type: ignore
-import numpy as np # type: ignore
-import torch # type: ignore
-from PIL import Image # type: ignore
-from torch import Tensor # type: ignore
-from torch.utils.data import Dataset # type: ignore
-from transformers import Mask2FormerImageProcessor # type: ignore
+import cv2  # type: ignore
+import numpy as np  # type: ignore
+import torch  # type: ignore
+from PIL import Image  # type: ignore
+from torch import Tensor  # type: ignore
+from torch.utils.data import Dataset  # type: ignore
+from transformers import Mask2FormerImageProcessor  # type: ignore
 
 LOGGER = logging.getLogger(__name__)
 
