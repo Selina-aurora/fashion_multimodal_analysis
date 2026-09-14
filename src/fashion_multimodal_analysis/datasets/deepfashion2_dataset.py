@@ -1,17 +1,20 @@
 """DeepFashion2 dataset utilities for Mask2Former training."""
 
+# OpenCV exposes several bindings dynamically, which Pylint cannot infer.
+# pylint: disable=no-member
+
 import json
 import logging
 from pathlib import Path
 from typing import Any, TypedDict
 
-import cv2
-import numpy as np
-import torch
-from PIL import Image
-from torch import Tensor
-from torch.utils.data import Dataset
-from transformers import Mask2FormerImageProcessor
+import cv2 # type: ignore
+import numpy as np # type: ignore
+import torch # type: ignore
+from PIL import Image # type: ignore
+from torch import Tensor # type: ignore
+from torch.utils.data import Dataset # type: ignore
+from transformers import Mask2FormerImageProcessor # type: ignore
 
 LOGGER = logging.getLogger(__name__)
 
