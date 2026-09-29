@@ -1,0 +1,9 @@
+﻿garment_category,n,high_conf_suggestions,needs_review,scene_distribution_suggested,occlusion_distribution_suggested,visibility_distribution_suggested
+top,54,28,26,partial_view=8; product_display=13; worn_person=33,none=21; partial=33,full=4; partial=50
+pants,55,37,18,complex_scene=1; partial_view=7; product_display=11; worn_person=36,none=30; partial=25,full=10; partial=45
+skirt,55,29,26,complex_scene=4; partial_view=9; product_display=11; worn_person=31,none=30; partial=25,full=4; partial=51
+outerwear,54,31,23,complex_scene=2; partial_view=3; product_display=8; worn_person=41,heavy=1; none=18; partial=35,full=25; partial=29
+dress,55,34,21,complex_scene=1; partial_view=4; product_display=12; worn_person=38,heavy=1; none=25; partial=29,full=11; partial=44
+shoe,55,26,29,complex_scene=19; partial_view=12; product_display=4; worn_person=20,none=15; partial=40,full=10; partial=45
+bag,54,30,24,complex_scene=9; partial_view=5; product_display=1; worn_person=39,none=3; partial=51,full=22; partial=32
+accessory,55,31,24,complex_scene=14; partial_view=18; product_display=1; worn_person=22,none=17; partial=38,full=9; partial=46

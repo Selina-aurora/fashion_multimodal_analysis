@@ -1,0 +1,48 @@
+PRD 3.1.1 Automated GT Annotation QC v2
+======================================
+
+cases=520
+GEOMETRY_PASS=496
+REVIEW_PRIORITY=13
+REVIEW_REQUIRED=11
+
+Core only
+---------
+core_cases=440
+core_GEOMETRY_PASS=429
+core_REVIEW_PRIORITY=9
+core_REVIEW_REQUIRED=2
+
+v2 logic
+--------
+mask_inside_bbox_ratio_min=0.95
+mask_fill_ratio_min=0.03
+loose_bbox_review_iou=0.6
+
+Important interpretation
+------------------------
+- mask-derived-bbox IoU is no longer an automatic defect threshold.
+- It measures bbox tightness as well as mask/bbox consistency.
+- GEOMETRY_PASS means file/geometry checks are acceptable; it does NOT complete human review.
+- REVIEW_PRIORITY means inspect first, but do not automatically exclude.
+- REVIEW_REQUIRED means a stronger geometry issue exists and must be resolved before freeze.
+- Category semantics, bbox semantics, mask visual quality and image quality still require human confirmation.
+
+By subset/class
+---------------
+core top: n=55 pass=52 priority=2 required=1 required_reasons=(MASK_OUTSIDE_BBOX_SEVERE=1) advisories=(LOOSE_SOURCE_BBOX_REVIEW=3)
+core pants: n=55 pass=54 priority=1 required=0 required_reasons=() advisories=(LOOSE_SOURCE_BBOX_REVIEW=1)
+core skirt: n=55 pass=53 priority=2 required=0 required_reasons=() advisories=(LOOSE_SOURCE_BBOX_REVIEW=2)
+core outerwear: n=55 pass=51 priority=4 required=0 required_reasons=() advisories=(LOOSE_SOURCE_BBOX_REVIEW=4)
+core dress: n=55 pass=55 priority=0 required=0 required_reasons=() advisories=()
+core shoe: n=55 pass=55 priority=0 required=0 required_reasons=() advisories=()
+core bag: n=55 pass=54 priority=0 required=1 required_reasons=(VERY_LOW_MASK_FILL=1) advisories=()
+core accessory: n=55 pass=55 priority=0 required=0 required_reasons=() advisories=()
+stress top: n=10 pass=9 priority=1 required=0 required_reasons=() advisories=(LOOSE_SOURCE_BBOX_REVIEW=1)
+stress pants: n=10 pass=9 priority=1 required=0 required_reasons=() advisories=(LOOSE_SOURCE_BBOX_REVIEW=1)
+stress skirt: n=10 pass=10 priority=0 required=0 required_reasons=() advisories=()
+stress outerwear: n=10 pass=9 priority=1 required=0 required_reasons=() advisories=(LOOSE_SOURCE_BBOX_REVIEW=1)
+stress dress: n=10 pass=9 priority=1 required=0 required_reasons=() advisories=(LOOSE_SOURCE_BBOX_REVIEW=1)
+stress shoe: n=10 pass=6 priority=0 required=4 required_reasons=(MASK_OUTSIDE_BBOX_SEVERE=4) advisories=()
+stress bag: n=10 pass=10 priority=0 required=0 required_reasons=() advisories=()
+stress accessory: n=10 pass=5 priority=0 required=5 required_reasons=(MASK_OUTSIDE_BBOX_SEVERE=5) advisories=()

@@ -1,0 +1,5 @@
+﻿gt_class,failure_mode,count
+OVERALL,both_score_and_iou_low,10
+collar,both_score_and_iou_low,3
+cuff,both_score_and_iou_low,5
+hem,both_score_and_iou_low,2

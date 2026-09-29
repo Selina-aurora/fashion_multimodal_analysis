@@ -1,0 +1,17 @@
+﻿review_subset,garment_category,n,geometry_pass,review_priority,review_required,required_reasons,advisories
+core,top,55,52,2,1,MASK_OUTSIDE_BBOX_SEVERE=1,LOOSE_SOURCE_BBOX_REVIEW=3
+core,pants,55,54,1,0,,LOOSE_SOURCE_BBOX_REVIEW=1
+core,skirt,55,53,2,0,,LOOSE_SOURCE_BBOX_REVIEW=2
+core,outerwear,55,51,4,0,,LOOSE_SOURCE_BBOX_REVIEW=4
+core,dress,55,55,0,0,,
+core,shoe,55,55,0,0,,
+core,bag,55,54,0,1,VERY_LOW_MASK_FILL=1,
+core,accessory,55,55,0,0,,
+stress,top,10,9,1,0,,LOOSE_SOURCE_BBOX_REVIEW=1
+stress,pants,10,9,1,0,,LOOSE_SOURCE_BBOX_REVIEW=1
+stress,skirt,10,10,0,0,,
+stress,outerwear,10,9,1,0,,LOOSE_SOURCE_BBOX_REVIEW=1
+stress,dress,10,9,1,0,,LOOSE_SOURCE_BBOX_REVIEW=1
+stress,shoe,10,6,0,4,MASK_OUTSIDE_BBOX_SEVERE=4,
+stress,bag,10,10,0,0,,
+stress,accessory,10,5,0,5,MASK_OUTSIDE_BBOX_SEVERE=5,

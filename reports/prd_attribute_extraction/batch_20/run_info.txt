@@ -1,0 +1,8 @@
+PRD 3.1.3 CLIP batch pilot
+model=openai/clip-vit-base-patch32
+image_dir=../fashion_data/raw/train/train/image
+sample_size=20
+seed=20260915
+attributes=color,pattern,sleeve_length,neckline
+material_and_craftsmanship=excluded
+scores=relative candidate-set softmax, not calibrated probabilities

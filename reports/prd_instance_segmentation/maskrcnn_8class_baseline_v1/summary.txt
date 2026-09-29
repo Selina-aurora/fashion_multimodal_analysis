@@ -1,0 +1,27 @@
+PRD 3.1.1 Mask R-CNN 8-class baseline v1
+=========================================
+
+device=cuda
+gpu=NVIDIA GeForce RTX 4090
+epochs=15
+batch_size=1
+lr=0.0025
+momentum=0.9
+weight_decay=0.0005
+min_size=640
+max_size=1024
+hflip=True
+seed=20260918
+train_image_groups=127
+val_image_groups=32
+total_training_seconds=145.16
+
+Final training loss
+-------------------
+train_loss_total=0.298031
+
+Important
+---------
+- This file reports training completion only.
+- Final PRD evaluation must be run separately on the fixed validation split.
+- Do not interpret training loss as IoU or category accuracy.

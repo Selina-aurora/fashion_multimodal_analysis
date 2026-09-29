@@ -1,0 +1,40 @@
+Fashionpedia missing-3 pilot for PRD 3.1.1
+==========================================
+
+annotation=../fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json
+images_dir=../fashion_data/raw/fashionpedia/images/test
+seed=20260917
+requested_per_class=20
+selected_before_decode=60
+saved_instances=60
+skipped_instances=0
+
+PRD class counts
+----------------
+shoe=20
+bag=20
+accessory=20
+
+Fine source-category counts
+---------------------------
+accessory <- belt: 2
+accessory <- glasses: 2
+accessory <- glove: 2
+accessory <- hat: 2
+accessory <- headband, head covering, hair accessory: 2
+accessory <- leg warmer: 1
+accessory <- scarf: 2
+accessory <- sock: 2
+accessory <- tie: 2
+accessory <- tights, stockings: 2
+accessory <- watch: 1
+bag <- bag, wallet: 20
+shoe <- shoe: 20
+
+Notes
+-----
+- Raw Fashionpedia files were not modified.
+- This is a small pilot, not the final training/evaluation set.
+- Fashionpedia fine categories are collapsed into the PRD shoe/bag/accessory categories.
+- Inspect shoe.jpg, bag.jpg and accessory.jpg before using the pilot downstream.
+- If a source category is mapped incorrectly, fix the mapping before scaling up.

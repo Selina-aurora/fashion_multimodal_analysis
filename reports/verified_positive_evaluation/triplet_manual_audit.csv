@@ -1,0 +1,9 @@
+﻿benchmark_id,target,scale_group,image_name,item_id,category_name,visibility,full_detected,full_top_score,roi_detected,roi_top_score,local_detected,local_top_score,full_localization_quality,roi_localization_quality,local_localization_quality,full_notes,roi_notes,local_notes
+sleeve_001,sleeve,larger_part,017524.jpg,item1,short sleeve dress,clear,yes,0.3299792408943176,yes,0.3299792408943176,yes,0.3044644892215729,,,,,,
+sleeve_002,sleeve,larger_part,018629.jpg,item1,short sleeve top,clear,no,,no,,no,,missed,missed,missed,,,
+collar_001,collar,larger_part,032686.jpg,item1,long sleeve top,clear,yes,0.40590307116508484,yes,0.40590307116508484,no,,,,missed,,,
+collar_002,collar,larger_part,145442.jpg,item1,long sleeve top,clear,no,,no,,yes,0.3098009526729584,missed,missed,,,,
+button_001,button,small_object,100023.jpg,item1,long sleeve top,clear,no,,no,,yes,0.30486372113227844,missed,missed,,,,
+button_002,button,small_object,091865.jpg,item1,long sleeve outwear,clear,no,,no,,no,,missed,missed,missed,,,
+zipper_001,zipper,small_object,191459.jpg,item1,long sleeve outwear,clear,no,,no,,no,,missed,missed,missed,,,
+zipper_002,zipper,small_object,151528.jpg,item1,long sleeve outwear,clear,no,,no,,no,,missed,missed,missed,,,

@@ -1,0 +1,39 @@
+PRD 3.1 Fashionpedia -> PRD Mapping Audit v1
+===========================================
+
+raw_annotation_json=/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json
+configs_with_fashionpedia_rows=14
+resolved_unique_fashionpedia_garments=350
+unresolved_rows=37
+
+Empirical mapping used by existing project data
+-----------------------------------------------
+accessory <- Fashionpedia id=15 name=headband, head covering, hair accessory supercategory=head used_unique=13
+accessory <- Fashionpedia id=22 name=sock supercategory=legs and feet used_unique=13
+accessory <- Fashionpedia id=25 name=scarf supercategory=others used_unique=13
+accessory <- Fashionpedia id=13 name=glasses supercategory=head used_unique=12
+accessory <- Fashionpedia id=14 name=hat supercategory=head used_unique=12
+accessory <- Fashionpedia id=17 name=glove supercategory=arms and hands used_unique=12
+accessory <- Fashionpedia id=19 name=belt supercategory=waist used_unique=12
+accessory <- Fashionpedia id=21 name=tights, stockings supercategory=legs and feet used_unique=11
+accessory <- Fashionpedia id=18 name=watch supercategory=arms and hands used_unique=10
+accessory <- Fashionpedia id=20 name=leg warmer supercategory=legs and feet used_unique=6
+accessory <- Fashionpedia id=16 name=tie supercategory=neck used_unique=3
+bag <- Fashionpedia id=24 name=bag, wallet supercategory=others used_unique=116
+shoe <- Fashionpedia id=23 name=shoe supercategory=legs and feet used_unique=117
+
+Consistency check
+-----------------
+shoe_fashionpedia_category_count=1
+bag_fashionpedia_category_count=1
+accessory_fashionpedia_category_count=11
+fashionpedia_categories_mapped_to_multiple_prd_classes=0
+
+Files
+-----
+- fashionpedia_used_annotation_mapping.csv: one row per previously used unique Fashionpedia garment.
+- fashionpedia_mapping_summary.csv: empirical source-category -> PRD-class mapping.
+- code_mapping_hits.txt: mapping-related code context from existing scripts.
+- unresolved_fashionpedia_rows.csv: only created if any rows cannot be reconstructed.
+
+Do not freeze benchmark mapping until this audit is reviewed.

@@ -1,0 +1,9 @@
+﻿region,followup_condition,N,correct,coarse,wrong,missed,strict_accuracy_pct,usable_rate_pct,interpretation
+collar,Spatial-HR,5,0,4,0,1,0.0,80.0,Spatial crop did not tighten localization; SAM pilot also remained coarse.
+cuff,Spatial-HR,5,0,5,0,0,0.0,100.0,"Response availability improved, but localization remained coarse; supervised/top-k diagnostics still showed unstable candidate quality/ranking."
+hem,Spatial-HR,5,0,0,0,5,0.0,0.0,Fixed spatial prior was unstable for hem; later supervised candidate diagnostics showed some feasibility but not robust acceptance-level localization.
+shoulder,Spatial refinement visual review,5,0,5,0,0,0.0,100.0,"Misses were recovered, but boxes remained broad upper-body/shoulder-inclusive regions."
+waist,Spatial refinement visual review,5,0,5,0,0,0.0,100.0,"Misses were recovered, but boxes remained broad waist-inclusive regions."
+pattern,Spatial refinement visual review,5,1,4,0,0,20.0,100.0,Misses were recovered; only the case where the pattern occupies nearly the whole garment is strict-correct.
+pocket,Prompt-scale diagnostic visual review,5,0,5,0,0,0.0,100.0,"Candidate availability recovered, but boxes generally covered the whole trousers/outerwear rather than a tight pocket."
+decoration,Prompt-scale diagnostic visual review,5,1,4,0,0,20.0,100.0,"Candidate availability recovered; one large graphic was localized reasonably, while most boxes remained coarse."

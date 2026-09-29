@@ -1,0 +1,9 @@
+﻿error_type,count,error_rate_percent,sleeve,collar,button,zipper
+target_absent,15,37.5,5,5,2,3
+wrong_part,5,12.5,2,1,0,2
+whole_garment,4,10.0,3,0,1,0
+face_head,4,10.0,0,4,0,0
+non_clothing_object,4,10.0,0,0,3,1
+footwear,4,10.0,0,0,0,4
+background_object,2,5.0,0,0,2,0
+whole_image,2,5.0,0,0,2,0

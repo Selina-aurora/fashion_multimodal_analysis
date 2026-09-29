@@ -1,0 +1,13 @@
+﻿target,scale_group,condition,n_cases,detected_count,detection_rate,mean_num_detections,mean_top_score_detected,median_top_score_detected,mean_top_box_area_ratio_detected,mean_inference_seconds
+sleeve,larger_part,full_image,5,1,0.2000,0.2000,0.3300,0.3300,0.9877,25.6384
+sleeve,larger_part,roi_conditioned,5,1,0.2000,0.2000,0.3300,0.3300,0.9877,25.2286
+sleeve,larger_part,local_enlarged,5,1,0.2000,0.4000,0.3259,0.3259,0.2911,47.7578
+collar,larger_part,full_image,5,3,0.6000,0.6000,0.3950,0.3917,0.9986,23.9666
+collar,larger_part,roi_conditioned,5,3,0.6000,0.6000,0.3950,0.3917,0.9986,25.2493
+collar,larger_part,local_enlarged,5,3,0.6000,0.6000,0.3512,0.3542,0.3657,23.8078
+button,small_object,full_image,5,0,0.0000,0.0000,,,,29.4143
+button,small_object,roi_conditioned,5,0,0.0000,0.0000,,,,29.6614
+button,small_object,local_enlarged,5,1,0.2000,0.2000,0.3185,0.3185,0.5397,31.7720
+zipper,small_object,full_image,5,0,0.0000,0.0000,,,,30.7125
+zipper,small_object,roi_conditioned,5,0,0.0000,0.0000,,,,31.6912
+zipper,small_object,local_enlarged,5,0,0.0000,0.0000,,,,34.3076

@@ -1,0 +1,18 @@
+﻿prd_class,annotation_id,image_id,file_name,reason
+shoe,8930,13297,e14733841b04c64e75789a91fbe549b3.jpg,RLE annotation encountered but pycocotools is missing. Install with: pip install pycocotools
+shoe,692,15860,4dfb4420e88d33d4d1fe455ad77d7901.jpg,RLE annotation encountered but pycocotools is missing. Install with: pip install pycocotools
+shoe,4777,20250,cfe1c4de7beeb5eef7cdc05e8be73d57.jpg,RLE annotation encountered but pycocotools is missing. Install with: pip install pycocotools
+shoe,3932,19450,a99f0561c41b1b00721572e7b3ec9c38.jpg,RLE annotation encountered but pycocotools is missing. Install with: pip install pycocotools
+shoe,3320,18745,73d2b7e13c0b34f9d0572b57ea56be63.jpg,RLE annotation encountered but pycocotools is missing. Install with: pip install pycocotools
+shoe,8077,12183,3ae36909e5aa4ad018b2601797debf94.jpg,RLE annotation encountered but pycocotools is missing. Install with: pip install pycocotools
+shoe,8794,13083,25e92d53394ac92b6b9edbbfe7cb0e1e.jpg,RLE annotation encountered but pycocotools is missing. Install with: pip install pycocotools
+shoe,8889,13256,b22ea58665d776f693c9f13635499460.jpg,RLE annotation encountered but pycocotools is missing. Install with: pip install pycocotools
+shoe,1433,16728,a3c6c961d4529f272f9efe3ff180abd7.jpg,RLE annotation encountered but pycocotools is missing. Install with: pip install pycocotools
+shoe,5237,7731,50ab7c8b2848817931e5879671e234ae.jpg,RLE annotation encountered but pycocotools is missing. Install with: pip install pycocotools
+shoe,1561,16942,545342e1ff1fbecc6cf069bd3ebf7e1a.jpg,RLE annotation encountered but pycocotools is missing. Install with: pip install pycocotools
+shoe,911,16010,50e763ae42f2872db7567e607005d3b1.jpg,RLE annotation encountered but pycocotools is missing. Install with: pip install pycocotools
+accessory,9127,13428,809906ce0fd1e001d613c9b13e7e8a4e.jpg,RLE annotation encountered but pycocotools is missing. Install with: pip install pycocotools
+accessory,3113,18531,bc6426e3f3df37ba4b2a84b808c20152.jpg,RLE annotation encountered but pycocotools is missing. Install with: pip install pycocotools
+accessory,4608,20052,1dc3829659f97c1cff867ef710ece470.jpg,RLE annotation encountered but pycocotools is missing. Install with: pip install pycocotools
+accessory,4581,20002,b2006174759a811aca6bd63e861dc741.jpg,RLE annotation encountered but pycocotools is missing. Install with: pip install pycocotools
+accessory,1887,23338,fb81f1a32e154a77e683f309cdf0794a.jpg,RLE annotation encountered but pycocotools is missing. Install with: pip install pycocotools

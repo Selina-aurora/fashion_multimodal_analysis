@@ -1,0 +1,10 @@
+PRD 3.1.3 upper silhouette continuous features v2
+manifest=configs/garment_instances_gt_pilot_100.csv
+instances=65
+garment_categories=top,outerwear
+input=garment_instance_mask
+method=torso_centered_connected_segment_widths
+output_features=garment_length_proxy,waist_to_chest_ratio,hem_to_chest_ratio,lower_taper_slope
+hard_classification=false
+gt_available=false
+material_and_craftsmanship=excluded

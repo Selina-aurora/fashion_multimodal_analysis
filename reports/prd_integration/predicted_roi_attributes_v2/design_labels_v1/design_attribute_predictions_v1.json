@@ -1,0 +1,1072 @@
+{
+  "schema_version": "3.1.3-design-labels-v1",
+  "model": "openai/clip-vit-base-patch32",
+  "confidence_note": "candidate-relative CLIP softmax; not calibrated probability",
+  "geometry_policy": "weak geometry is flagged invalid for trusted downstream geometry use; raw values are preserved",
+  "records": [
+    {
+      "source_image": "../fashion_data/raw/train/train/image/096778.jpg",
+      "garment_id": "item2_sling_dress",
+      "garment_category": "dress",
+      "design_attributes": {
+        "sleeve_length": {
+          "label": "sleeveless",
+          "confidence": 0.41378873586654663,
+          "top2_label": "short",
+          "top2_score": 0.3141838312149048,
+          "margin": 0.09960490465164185,
+          "entropy": 0.7374821517667173,
+          "top3": [
+            {
+              "label": "sleeveless",
+              "score": 0.41378873586654663
+            },
+            {
+              "label": "short",
+              "score": 0.3141838312149048
+            },
+            {
+              "label": "cap",
+              "score": 0.19475291669368744
+            }
+          ],
+          "confidence_note": "candidate-relative CLIP softmax; not calibrated probability"
+        },
+        "neckline": {
+          "label": "mock_neck",
+          "confidence": 0.16939297318458557,
+          "top2_label": "hooded",
+          "top2_score": 0.14778071641921997,
+          "margin": 0.0216122567653656,
+          "entropy": 0.9016660170775559,
+          "top3": [
+            {
+              "label": "mock_neck",
+              "score": 0.16939297318458557
+            },
+            {
+              "label": "hooded",
+              "score": 0.14778071641921997
+            },
+            {
+              "label": "crew",
+              "score": 0.1220843717455864
+            }
+          ],
+          "confidence_note": "candidate-relative CLIP softmax; not calibrated probability"
+        },
+        "silhouette_fit": {
+          "label": "fitted",
+          "confidence": 0.4585507810115814,
+          "top2_label": "flared",
+          "top2_score": 0.3432539999485016,
+          "margin": 0.11529678106307983,
+          "entropy": 0.8427867919844976,
+          "top3": [
+            {
+              "label": "fitted",
+              "score": 0.4585507810115814
+            },
+            {
+              "label": "flared",
+              "score": 0.3432539999485016
+            },
+            {
+              "label": "straight",
+              "score": 0.13636861741542816
+            }
+          ],
+          "confidence_note": "candidate-relative CLIP softmax; not calibrated probability"
+        },
+        "fashion_style": {
+          "label": "vintage",
+          "confidence": 0.6365989446640015,
+          "top2_label": "romantic",
+          "top2_score": 0.17250598967075348,
+          "margin": 0.464092954993248,
+          "entropy": 0.5557640573825268,
+          "top3": [
+            {
+              "label": "vintage",
+              "score": 0.6365989446640015
+            },
+            {
+              "label": "romantic",
+              "score": 0.17250598967075348
+            },
+            {
+              "label": "streetwear",
+              "score": 0.10377257317304611
+            }
+          ],
+          "confidence_note": "candidate-relative CLIP softmax; not calibrated probability"
+        }
+      },
+      "continuous_style_features": {},
+      "style_quality": {},
+      "geometry_gate": {
+        "upper_geometry_quality": null,
+        "upper_geometry_valid_for_downstream": null,
+        "trouser_geometry_quality": null,
+        "trouser_geometry_valid_for_downstream": null
+      }
+    },
+    {
+      "source_image": "../fashion_data/raw/train/train/image/124892.jpg",
+      "garment_id": "item1_short_sleeve_top",
+      "garment_category": "top",
+      "design_attributes": {
+        "sleeve_length": {
+          "label": "long",
+          "confidence": 0.31272193789482117,
+          "top2_label": "short",
+          "top2_score": 0.26462119817733765,
+          "margin": 0.04810073971748352,
+          "entropy": 0.89873070066485,
+          "top3": [
+            {
+              "label": "long",
+              "score": 0.31272193789482117
+            },
+            {
+              "label": "short",
+              "score": 0.26462119817733765
+            },
+            {
+              "label": "sleeveless",
+              "score": 0.16672269999980927
+            }
+          ],
+          "confidence_note": "candidate-relative CLIP softmax; not calibrated probability"
+        },
+        "neckline": {
+          "label": "crew",
+          "confidence": 0.21405334770679474,
+          "top2_label": "other",
+          "top2_score": 0.17592307925224304,
+          "margin": 0.0381302684545517,
+          "entropy": 0.8998952171345129,
+          "top3": [
+            {
+              "label": "crew",
+              "score": 0.21405334770679474
+            },
+            {
+              "label": "other",
+              "score": 0.17592307925224304
+            },
+            {
+              "label": "off_shoulder",
+              "score": 0.1065717488527298
+            }
+          ],
+          "confidence_note": "candidate-relative CLIP softmax; not calibrated probability"
+        },
+        "silhouette_fit": {
+          "label": "slim_fitted",
+          "confidence": 0.8382233381271362,
+          "top2_label": "regular_straight",
+          "top2_score": 0.1102655827999115,
+          "margin": 0.7279577553272247,
+          "entropy": 0.495008379318677,
+          "top3": [
+            {
+              "label": "slim_fitted",
+              "score": 0.8382233381271362
+            },
+            {
+              "label": "regular_straight",
+              "score": 0.1102655827999115
+            },
+            {
+              "label": "loose_oversized",
+              "score": 0.051511164754629135
+            }
+          ],
+          "confidence_note": "candidate-relative CLIP softmax; not calibrated probability"
+        },
+        "fashion_style": {
+          "label": "casual",
+          "confidence": 0.34906530380249023,
+          "top2_label": "formal",
+          "top2_score": 0.28483846783638,
+          "margin": 0.06422683596611023,
+          "entropy": 0.7969982743376591,
+          "top3": [
+            {
+              "label": "casual",
+              "score": 0.34906530380249023
+            },
+            {
+              "label": "formal",
+              "score": 0.28483846783638
+            },
+            {
+              "label": "romantic",
+              "score": 0.14238467812538147
+            }
+          ],
+          "confidence_note": "candidate-relative CLIP softmax; not calibrated probability"
+        }
+      },
+      "continuous_style_features": {},
+      "style_quality": {},
+      "geometry_gate": {
+        "upper_geometry_quality": null,
+        "upper_geometry_valid_for_downstream": null,
+        "trouser_geometry_quality": null,
+        "trouser_geometry_valid_for_downstream": null
+      }
+    },
+    {
+      "source_image": "../fashion_data/raw/train/train/image/101034.jpg",
+      "garment_id": "item2_sling_dress",
+      "garment_category": "dress",
+      "design_attributes": {
+        "sleeve_length": {
+          "label": "sleeveless",
+          "confidence": 0.3082299828529358,
+          "top2_label": "short",
+          "top2_score": 0.2926467955112457,
+          "margin": 0.015583187341690063,
+          "entropy": 0.8958525941191655,
+          "top3": [
+            {
+              "label": "sleeveless",
+              "score": 0.3082299828529358
+            },
+            {
+              "label": "short",
+              "score": 0.2926467955112457
+            },
+            {
+              "label": "cap",
+              "score": 0.15803618729114532
+            }
+          ],
+          "confidence_note": "candidate-relative CLIP softmax; not calibrated probability"
+        },
+        "neckline": {
+          "label": "crew",
+          "confidence": 0.2533717155456543,
+          "top2_label": "mock_neck",
+          "top2_score": 0.19312229752540588,
+          "margin": 0.06024941802024841,
+          "entropy": 0.8426501632745373,
+          "top3": [
+            {
+              "label": "crew",
+              "score": 0.2533717155456543
+            },
+            {
+              "label": "mock_neck",
+              "score": 0.19312229752540588
+            },
+            {
+              "label": "off_shoulder",
+              "score": 0.10551895201206207
+            }
+          ],
+          "confidence_note": "candidate-relative CLIP softmax; not calibrated probability"
+        },
+        "silhouette_fit": {
+          "label": "straight",
+          "confidence": 0.4181789457798004,
+          "top2_label": "fitted",
+          "top2_score": 0.35672131180763245,
+          "margin": 0.06145763397216797,
+          "entropy": 0.8789333316209138,
+          "top3": [
+            {
+              "label": "straight",
+              "score": 0.4181789457798004
+            },
+            {
+              "label": "fitted",
+              "score": 0.35672131180763245
+            },
+            {
+              "label": "flared",
+              "score": 0.13740482926368713
+            }
+          ],
+          "confidence_note": "candidate-relative CLIP softmax; not calibrated probability"
+        },
+        "fashion_style": {
+          "label": "streetwear",
+          "confidence": 0.6193391680717468,
+          "top2_label": "casual",
+          "top2_score": 0.1632755547761917,
+          "margin": 0.4560636132955551,
+          "entropy": 0.6034667132696931,
+          "top3": [
+            {
+              "label": "streetwear",
+              "score": 0.6193391680717468
+            },
+            {
+              "label": "casual",
+              "score": 0.1632755547761917
+            },
+            {
+              "label": "vintage",
+              "score": 0.08195631951093674
+            }
+          ],
+          "confidence_note": "candidate-relative CLIP softmax; not calibrated probability"
+        }
+      },
+      "continuous_style_features": {},
+      "style_quality": {},
+      "geometry_gate": {
+        "upper_geometry_quality": null,
+        "upper_geometry_valid_for_downstream": null,
+        "trouser_geometry_quality": null,
+        "trouser_geometry_valid_for_downstream": null
+      }
+    },
+    {
+      "source_image": "../fashion_data/raw/train/train/image/114238.jpg",
+      "garment_id": "item1_long_sleeve_outwear",
+      "garment_category": "outerwear",
+      "design_attributes": {
+        "sleeve_length": {
+          "label": "long",
+          "confidence": 0.2912087142467499,
+          "top2_label": "elbow",
+          "top2_score": 0.23078064620494843,
+          "margin": 0.06042806804180145,
+          "entropy": 0.9265374054022701,
+          "top3": [
+            {
+              "label": "long",
+              "score": 0.2912087142467499
+            },
+            {
+              "label": "elbow",
+              "score": 0.23078064620494843
+            },
+            {
+              "label": "three_quarter",
+              "score": 0.21248631179332733
+            }
+          ],
+          "confidence_note": "candidate-relative CLIP softmax; not calibrated probability"
+        },
+        "neckline": {
+          "label": "hooded",
+          "confidence": 0.2807524800300598,
+          "top2_label": "off_shoulder",
+          "top2_score": 0.18689310550689697,
+          "margin": 0.09385937452316284,
+          "entropy": 0.8348641905439997,
+          "top3": [
+            {
+              "label": "hooded",
+              "score": 0.2807524800300598
+            },
+            {
+              "label": "off_shoulder",
+              "score": 0.18689310550689697
+            },
+            {
+              "label": "other",
+              "score": 0.11097153276205063
+            }
+          ],
+          "confidence_note": "candidate-relative CLIP softmax; not calibrated probability"
+        },
+        "silhouette_fit": {
+          "label": "loose_oversized",
+          "confidence": 0.6856215000152588,
+          "top2_label": "slim_fitted",
+          "top2_score": 0.2893330752849579,
+          "margin": 0.3962884247303009,
+          "entropy": 0.6462170417587916,
+          "top3": [
+            {
+              "label": "loose_oversized",
+              "score": 0.6856215000152588
+            },
+            {
+              "label": "slim_fitted",
+              "score": 0.2893330752849579
+            },
+            {
+              "label": "regular_straight",
+              "score": 0.025045407935976982
+            }
+          ],
+          "confidence_note": "candidate-relative CLIP softmax; not calibrated probability"
+        },
+        "fashion_style": {
+          "label": "vintage",
+          "confidence": 0.5569186210632324,
+          "top2_label": "formal",
+          "top2_score": 0.09688949584960938,
+          "margin": 0.46002912521362305,
+          "entropy": 0.7018945054778392,
+          "top3": [
+            {
+              "label": "vintage",
+              "score": 0.5569186210632324
+            },
+            {
+              "label": "formal",
+              "score": 0.09688949584960938
+            },
+            {
+              "label": "casual",
+              "score": 0.09520996361970901
+            }
+          ],
+          "confidence_note": "candidate-relative CLIP softmax; not calibrated probability"
+        }
+      },
+      "continuous_style_features": {},
+      "style_quality": {},
+      "geometry_gate": {
+        "upper_geometry_quality": null,
+        "upper_geometry_valid_for_downstream": null,
+        "trouser_geometry_quality": null,
+        "trouser_geometry_valid_for_downstream": null
+      }
+    },
+    {
+      "source_image": "../fashion_data/raw/train/train/image/142658.jpg",
+      "garment_id": "item1_long_sleeve_top",
+      "garment_category": "top",
+      "design_attributes": {
+        "sleeve_length": {
+          "label": "cap",
+          "confidence": 0.3937526047229767,
+          "top2_label": "sleeveless",
+          "top2_score": 0.3046499490737915,
+          "margin": 0.08910265564918518,
+          "entropy": 0.8124463185569316,
+          "top3": [
+            {
+              "label": "cap",
+              "score": 0.3937526047229767
+            },
+            {
+              "label": "sleeveless",
+              "score": 0.3046499490737915
+            },
+            {
+              "label": "short",
+              "score": 0.13174553215503693
+            }
+          ],
+          "confidence_note": "candidate-relative CLIP softmax; not calibrated probability"
+        },
+        "neckline": {
+          "label": "hooded",
+          "confidence": 0.21341930329799652,
+          "top2_label": "other",
+          "top2_score": 0.1749218851327896,
+          "margin": 0.03849741816520691,
+          "entropy": 0.8825585246662746,
+          "top3": [
+            {
+              "label": "hooded",
+              "score": 0.21341930329799652
+            },
+            {
+              "label": "other",
+              "score": 0.1749218851327896
+            },
+            {
+              "label": "round_scoop",
+              "score": 0.1113152727484703
+            }
+          ],
+          "confidence_note": "candidate-relative CLIP softmax; not calibrated probability"
+        },
+        "silhouette_fit": {
+          "label": "slim_fitted",
+          "confidence": 0.921091616153717,
+          "top2_label": "regular_straight",
+          "top2_score": 0.06659473478794098,
+          "margin": 0.8544968813657761,
+          "entropy": 0.2824174395386635,
+          "top3": [
+            {
+              "label": "slim_fitted",
+              "score": 0.921091616153717
+            },
+            {
+              "label": "regular_straight",
+              "score": 0.06659473478794098
+            },
+            {
+              "label": "loose_oversized",
+              "score": 0.012313641607761383
+            }
+          ],
+          "confidence_note": "candidate-relative CLIP softmax; not calibrated probability"
+        },
+        "fashion_style": {
+          "label": "formal",
+          "confidence": 0.2649863660335541,
+          "top2_label": "sporty",
+          "top2_score": 0.21161358058452606,
+          "margin": 0.053372785449028015,
+          "entropy": 0.8749404677433823,
+          "top3": [
+            {
+              "label": "formal",
+              "score": 0.2649863660335541
+            },
+            {
+              "label": "sporty",
+              "score": 0.21161358058452606
+            },
+            {
+              "label": "streetwear",
+              "score": 0.17519140243530273
+            }
+          ],
+          "confidence_note": "candidate-relative CLIP softmax; not calibrated probability"
+        }
+      },
+      "continuous_style_features": {},
+      "style_quality": {},
+      "geometry_gate": {
+        "upper_geometry_quality": null,
+        "upper_geometry_valid_for_downstream": null,
+        "trouser_geometry_quality": null,
+        "trouser_geometry_valid_for_downstream": null
+      }
+    },
+    {
+      "source_image": "../fashion_data/raw/train/train/image/073497.jpg",
+      "garment_id": "item1_trousers",
+      "garment_category": "pants",
+      "design_attributes": {
+        "sleeve_length": null,
+        "neckline": null,
+        "silhouette_fit": {
+          "label": "straight",
+          "confidence": 0.6800681352615356,
+          "top2_label": "flared",
+          "top2_score": 0.20522114634513855,
+          "margin": 0.4748469889163971,
+          "entropy": 0.6288568846456465,
+          "top3": [
+            {
+              "label": "straight",
+              "score": 0.6800681352615356
+            },
+            {
+              "label": "flared",
+              "score": 0.20522114634513855
+            },
+            {
+              "label": "slim_tapered",
+              "score": 0.10373851656913757
+            }
+          ],
+          "confidence_note": "candidate-relative CLIP softmax; not calibrated probability"
+        },
+        "fashion_style": {
+          "label": "casual",
+          "confidence": 0.46375274658203125,
+          "top2_label": "streetwear",
+          "top2_score": 0.2564791142940521,
+          "margin": 0.20727363228797913,
+          "entropy": 0.6888826994064111,
+          "top3": [
+            {
+              "label": "casual",
+              "score": 0.46375274658203125
+            },
+            {
+              "label": "streetwear",
+              "score": 0.2564791142940521
+            },
+            {
+              "label": "formal",
+              "score": 0.1450914442539215
+            }
+          ],
+          "confidence_note": "candidate-relative CLIP softmax; not calibrated probability"
+        }
+      },
+      "continuous_style_features": {},
+      "style_quality": {},
+      "geometry_gate": {
+        "upper_geometry_quality": null,
+        "upper_geometry_valid_for_downstream": null,
+        "trouser_geometry_quality": null,
+        "trouser_geometry_valid_for_downstream": null
+      }
+    },
+    {
+      "source_image": "../fashion_data/raw/train/train/image/142658.jpg",
+      "garment_id": "item2_skirt",
+      "garment_category": "skirt",
+      "design_attributes": {
+        "sleeve_length": null,
+        "neckline": null,
+        "silhouette_fit": {
+          "label": "flared",
+          "confidence": 0.5767314434051514,
+          "top2_label": "a_line",
+          "top2_score": 0.24634982645511627,
+          "margin": 0.3303816169500351,
+          "entropy": 0.8820146325159208,
+          "top3": [
+            {
+              "label": "flared",
+              "score": 0.5767314434051514
+            },
+            {
+              "label": "a_line",
+              "score": 0.24634982645511627
+            },
+            {
+              "label": "straight",
+              "score": 0.17691871523857117
+            }
+          ],
+          "confidence_note": "candidate-relative CLIP softmax; not calibrated probability"
+        },
+        "fashion_style": {
+          "label": "romantic",
+          "confidence": 0.6731512546539307,
+          "top2_label": "formal",
+          "top2_score": 0.2058626264333725,
+          "margin": 0.46728862822055817,
+          "entropy": 0.4814129190543694,
+          "top3": [
+            {
+              "label": "romantic",
+              "score": 0.6731512546539307
+            },
+            {
+              "label": "formal",
+              "score": 0.2058626264333725
+            },
+            {
+              "label": "vintage",
+              "score": 0.06290429085493088
+            }
+          ],
+          "confidence_note": "candidate-relative CLIP softmax; not calibrated probability"
+        }
+      },
+      "continuous_style_features": {},
+      "style_quality": {},
+      "geometry_gate": {
+        "upper_geometry_quality": null,
+        "upper_geometry_valid_for_downstream": null,
+        "trouser_geometry_quality": null,
+        "trouser_geometry_valid_for_downstream": null
+      }
+    },
+    {
+      "source_image": "../fashion_data/raw/train/train/image/184087.jpg",
+      "garment_id": "item1_long_sleeve_dress",
+      "garment_category": "dress",
+      "design_attributes": {
+        "sleeve_length": {
+          "label": "cap",
+          "confidence": 0.33021724224090576,
+          "top2_label": "sleeveless",
+          "top2_score": 0.21567797660827637,
+          "margin": 0.1145392656326294,
+          "entropy": 0.9172081593251774,
+          "top3": [
+            {
+              "label": "cap",
+              "score": 0.33021724224090576
+            },
+            {
+              "label": "sleeveless",
+              "score": 0.21567797660827637
+            },
+            {
+              "label": "short",
+              "score": 0.17291614413261414
+            }
+          ],
+          "confidence_note": "candidate-relative CLIP softmax; not calibrated probability"
+        },
+        "neckline": {
+          "label": "other",
+          "confidence": 0.19166575372219086,
+          "top2_label": "halter",
+          "top2_score": 0.17644518613815308,
+          "margin": 0.01522056758403778,
+          "entropy": 0.824770603765957,
+          "top3": [
+            {
+              "label": "other",
+              "score": 0.19166575372219086
+            },
+            {
+              "label": "halter",
+              "score": 0.17644518613815308
+            },
+            {
+              "label": "square",
+              "score": 0.12879493832588196
+            }
+          ],
+          "confidence_note": "candidate-relative CLIP softmax; not calibrated probability"
+        },
+        "silhouette_fit": {
+          "label": "fitted",
+          "confidence": 0.667052149772644,
+          "top2_label": "flared",
+          "top2_score": 0.21804310381412506,
+          "margin": 0.449009045958519,
+          "entropy": 0.666413939993114,
+          "top3": [
+            {
+              "label": "fitted",
+              "score": 0.667052149772644
+            },
+            {
+              "label": "flared",
+              "score": 0.21804310381412506
+            },
+            {
+              "label": "a_line",
+              "score": 0.0767187848687172
+            }
+          ],
+          "confidence_note": "candidate-relative CLIP softmax; not calibrated probability"
+        },
+        "fashion_style": {
+          "label": "romantic",
+          "confidence": 0.5999650955200195,
+          "top2_label": "vintage",
+          "top2_score": 0.1437956541776657,
+          "margin": 0.4561694413423538,
+          "entropy": 0.5850771243608857,
+          "top3": [
+            {
+              "label": "romantic",
+              "score": 0.5999650955200195
+            },
+            {
+              "label": "vintage",
+              "score": 0.1437956541776657
+            },
+            {
+              "label": "formal",
+              "score": 0.13175790011882782
+            }
+          ],
+          "confidence_note": "candidate-relative CLIP softmax; not calibrated probability"
+        }
+      },
+      "continuous_style_features": {},
+      "style_quality": {},
+      "geometry_gate": {
+        "upper_geometry_quality": null,
+        "upper_geometry_valid_for_downstream": null,
+        "trouser_geometry_quality": null,
+        "trouser_geometry_valid_for_downstream": null
+      }
+    },
+    {
+      "source_image": "../fashion_data/raw/train/train/image/124892.jpg",
+      "garment_id": "item2_shorts",
+      "garment_category": "pants",
+      "design_attributes": {
+        "sleeve_length": null,
+        "neckline": null,
+        "silhouette_fit": {
+          "label": "straight",
+          "confidence": 0.5033706426620483,
+          "top2_label": "flared",
+          "top2_score": 0.3289368748664856,
+          "margin": 0.17443376779556274,
+          "entropy": 0.7884400163378738,
+          "top3": [
+            {
+              "label": "straight",
+              "score": 0.5033706426620483
+            },
+            {
+              "label": "flared",
+              "score": 0.3289368748664856
+            },
+            {
+              "label": "slim_tapered",
+              "score": 0.1352967619895935
+            }
+          ],
+          "confidence_note": "candidate-relative CLIP softmax; not calibrated probability"
+        },
+        "fashion_style": {
+          "label": "casual",
+          "confidence": 0.4495604336261749,
+          "top2_label": "vintage",
+          "top2_score": 0.3281547725200653,
+          "margin": 0.12140566110610962,
+          "entropy": 0.6566199579831042,
+          "top3": [
+            {
+              "label": "casual",
+              "score": 0.4495604336261749
+            },
+            {
+              "label": "vintage",
+              "score": 0.3281547725200653
+            },
+            {
+              "label": "streetwear",
+              "score": 0.11793635040521622
+            }
+          ],
+          "confidence_note": "candidate-relative CLIP softmax; not calibrated probability"
+        }
+      },
+      "continuous_style_features": {},
+      "style_quality": {},
+      "geometry_gate": {
+        "upper_geometry_quality": null,
+        "upper_geometry_valid_for_downstream": null,
+        "trouser_geometry_quality": null,
+        "trouser_geometry_valid_for_downstream": null
+      }
+    },
+    {
+      "source_image": "../fashion_data/raw/train/train/image/101034.jpg",
+      "garment_id": "item1_short_sleeve_top",
+      "garment_category": "top",
+      "design_attributes": {
+        "sleeve_length": {
+          "label": "short",
+          "confidence": 0.45528826117515564,
+          "top2_label": "cap",
+          "top2_score": 0.18702857196331024,
+          "margin": 0.2682596892118454,
+          "entropy": 0.8176835157403302,
+          "top3": [
+            {
+              "label": "short",
+              "score": 0.45528826117515564
+            },
+            {
+              "label": "cap",
+              "score": 0.18702857196331024
+            },
+            {
+              "label": "long",
+              "score": 0.15952366590499878
+            }
+          ],
+          "confidence_note": "candidate-relative CLIP softmax; not calibrated probability"
+        },
+        "neckline": {
+          "label": "shirt_collar",
+          "confidence": 0.3216433525085449,
+          "top2_label": "polo",
+          "top2_score": 0.16208665072917938,
+          "margin": 0.15955670177936554,
+          "entropy": 0.8022101372909524,
+          "top3": [
+            {
+              "label": "shirt_collar",
+              "score": 0.3216433525085449
+            },
+            {
+              "label": "polo",
+              "score": 0.16208665072917938
+            },
+            {
+              "label": "other",
+              "score": 0.13862499594688416
+            }
+          ],
+          "confidence_note": "candidate-relative CLIP softmax; not calibrated probability"
+        },
+        "silhouette_fit": {
+          "label": "slim_fitted",
+          "confidence": 0.5597236752510071,
+          "top2_label": "regular_straight",
+          "top2_score": 0.26771044731140137,
+          "margin": 0.2920132279396057,
+          "entropy": 0.892772211953151,
+          "top3": [
+            {
+              "label": "slim_fitted",
+              "score": 0.5597236752510071
+            },
+            {
+              "label": "regular_straight",
+              "score": 0.26771044731140137
+            },
+            {
+              "label": "loose_oversized",
+              "score": 0.17256586253643036
+            }
+          ],
+          "confidence_note": "candidate-relative CLIP softmax; not calibrated probability"
+        },
+        "fashion_style": {
+          "label": "streetwear",
+          "confidence": 0.4783532917499542,
+          "top2_label": "vintage",
+          "top2_score": 0.24742814898490906,
+          "margin": 0.23092514276504517,
+          "entropy": 0.7084791479038732,
+          "top3": [
+            {
+              "label": "streetwear",
+              "score": 0.4783532917499542
+            },
+            {
+              "label": "vintage",
+              "score": 0.24742814898490906
+            },
+            {
+              "label": "formal",
+              "score": 0.08612236380577087
+            }
+          ],
+          "confidence_note": "candidate-relative CLIP softmax; not calibrated probability"
+        }
+      },
+      "continuous_style_features": {},
+      "style_quality": {},
+      "geometry_gate": {
+        "upper_geometry_quality": null,
+        "upper_geometry_valid_for_downstream": null,
+        "trouser_geometry_quality": null,
+        "trouser_geometry_valid_for_downstream": null
+      }
+    },
+    {
+      "source_image": "../fashion_data/raw/train/train/image/051719.jpg",
+      "garment_id": "item1_trousers",
+      "garment_category": "pants",
+      "design_attributes": {
+        "sleeve_length": null,
+        "neckline": null,
+        "silhouette_fit": {
+          "label": "straight",
+          "confidence": 0.6058515906333923,
+          "top2_label": "slim_tapered",
+          "top2_score": 0.2193859964609146,
+          "margin": 0.3864655941724777,
+          "entropy": 0.6974160485855965,
+          "top3": [
+            {
+              "label": "straight",
+              "score": 0.6058515906333923
+            },
+            {
+              "label": "slim_tapered",
+              "score": 0.2193859964609146
+            },
+            {
+              "label": "flared",
+              "score": 0.16892379522323608
+            }
+          ],
+          "confidence_note": "candidate-relative CLIP softmax; not calibrated probability"
+        },
+        "fashion_style": {
+          "label": "casual",
+          "confidence": 0.526944637298584,
+          "top2_label": "streetwear",
+          "top2_score": 0.2790384292602539,
+          "margin": 0.24790620803833008,
+          "entropy": 0.6327761112848336,
+          "top3": [
+            {
+              "label": "casual",
+              "score": 0.526944637298584
+            },
+            {
+              "label": "streetwear",
+              "score": 0.2790384292602539
+            },
+            {
+              "label": "formal",
+              "score": 0.06112673506140709
+            }
+          ],
+          "confidence_note": "candidate-relative CLIP softmax; not calibrated probability"
+        }
+      },
+      "continuous_style_features": {},
+      "style_quality": {},
+      "geometry_gate": {
+        "upper_geometry_quality": null,
+        "upper_geometry_valid_for_downstream": null,
+        "trouser_geometry_quality": null,
+        "trouser_geometry_valid_for_downstream": null
+      }
+    },
+    {
+      "source_image": "../fashion_data/raw/train/train/image/178287.jpg",
+      "garment_id": "item2_shorts",
+      "garment_category": "pants",
+      "design_attributes": {
+        "sleeve_length": null,
+        "neckline": null,
+        "silhouette_fit": {
+          "label": "straight",
+          "confidence": 0.4519147574901581,
+          "top2_label": "flared",
+          "top2_score": 0.33473074436187744,
+          "margin": 0.11718401312828064,
+          "entropy": 0.8610111055658259,
+          "top3": [
+            {
+              "label": "straight",
+              "score": 0.4519147574901581
+            },
+            {
+              "label": "flared",
+              "score": 0.33473074436187744
+            },
+            {
+              "label": "wide_leg",
+              "score": 0.1376756727695465
+            }
+          ],
+          "confidence_note": "candidate-relative CLIP softmax; not calibrated probability"
+        },
+        "fashion_style": {
+          "label": "formal",
+          "confidence": 0.3680587410926819,
+          "top2_label": "elegant",
+          "top2_score": 0.15200302004814148,
+          "margin": 0.2160557210445404,
+          "entropy": 0.8808288097436231,
+          "top3": [
+            {
+              "label": "formal",
+              "score": 0.3680587410926819
+            },
+            {
+              "label": "elegant",
+              "score": 0.15200302004814148
+            },
+            {
+              "label": "streetwear",
+              "score": 0.12867888808250427
+            }
+          ],
+          "confidence_note": "candidate-relative CLIP softmax; not calibrated probability"
+        }
+      },
+      "continuous_style_features": {},
+      "style_quality": {},
+      "geometry_gate": {
+        "upper_geometry_quality": null,
+        "upper_geometry_valid_for_downstream": null,
+        "trouser_geometry_quality": null,
+        "trouser_geometry_valid_for_downstream": null
+      }
+    }
+  ]
+}

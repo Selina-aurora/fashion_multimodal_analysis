@@ -1,0 +1,41 @@
+﻿candidate_id,region,image_name,prompt,detected,top_score,top_box_area_ratio,localization_quality,review_note
+collar_001,collar,000371.jpg,the collar or neckline area of the garment,yes,0.3474553525447845,0.876526926582457,coarse,"Neckline is present, but the box covers almost the whole top."
+collar_003,collar,000308.jpg,the collar or neckline area of the garment,yes,0.3205883502960205,0.8798838771129907,coarse,"Neckline is present, but the box covers almost the whole top."
+collar_010,collar,000096.jpg,the collar or neckline area of the garment,yes,0.3603705167770386,0.8635766181990265,coarse,"Lapel/collar is present, but the box covers most of the coat."
+collar_012,collar,000222.jpg,the collar or neckline area of the garment,yes,0.3569766879081726,0.9644216478300042,coarse,"Collar is present, but the box covers almost the entire dress."
+collar_020,collar,000225.jpg,the collar or neckline area of the garment,yes,0.3771876394748688,0.8819650601432512,coarse,"Collar is present, but the box covers most of the dress."
+cuff_006,cuff,000103.jpg,the cuff at the end of the sleeve,yes,0.3891080617904663,0.905240499899442,coarse,"Sleeve ends are present, but detections cover the shirt/sleeve broadly rather than the cuff."
+cuff_008,cuff,000439.jpg,the cuff at the end of the sleeve,no,,,missed,No prediction returned for a visible sleeve ending.
+cuff_013,cuff,000092.jpg,the cuff at the end of the sleeve,yes,0.3863299489021301,0.8426055144689936,coarse,"Cuff is visible, but the box covers a large portion of the outerwear."
+cuff_015,cuff,000095.jpg,the cuff at the end of the sleeve,yes,0.4206715822219848,0.8921323633178385,coarse,"Cuff is visible, but the box covers most of the coat."
+cuff_019,cuff,000338.jpg,the cuff at the end of the sleeve,yes,0.4513689875602722,0.7292118990159152,coarse,"Sleeve ending is visible, but the box spans a long sleeve/outerwear region."
+hem_003,hem,000323.jpg,the bottom hem edge of the garment,yes,0.313364565372467,0.6891822257190244,coarse,"Trouser hems are visible, but the box covers most of the trousers."
+hem_005,hem,000308.jpg,the bottom hem edge of the garment,no,,,missed,No prediction returned for a visible top hem.
+hem_008,hem,000497.jpg,the bottom hem edge of the garment,no,,,missed,No prediction returned for a visible skirt hem.
+hem_017,hem,000473.jpg,the bottom hem edge of the garment,yes,0.3719868957996368,0.99812588812305,coarse,"Trouser hems are visible, but the box covers almost the entire trousers."
+hem_023,hem,000431.jpg,the bottom hem edge of the garment,yes,0.304900586605072,0.9059510241777138,coarse,"Bottom hem is visible, but the box covers nearly the whole top."
+pocket_010,pocket,000135.jpg,the pocket on the garment,no,,,missed,No prediction returned for a visible trouser pocket.
+pocket_012,pocket,000393.jpg,the pocket on the garment,no,,,missed,No prediction returned for a visible pocket.
+pocket_016,pocket,000400.jpg,the pocket on the garment,no,,,missed,No prediction returned for clear rear pockets.
+pocket_020,pocket,000098.jpg,the pocket on the garment,no,,,missed,No prediction returned for a visible coat pocket.
+pocket_021,pocket,000097.jpg,the pocket on the garment,no,,,missed,No prediction returned for a visible coat pocket.
+shoulder_008,shoulder,000419.jpg,the shoulder area of the garment,yes,0.302731841802597,0.9998338916002454,coarse,"Shoulder region is present, but the box covers essentially the whole garment crop."
+shoulder_012,shoulder,000251.jpg,the shoulder area of the garment,no,,,missed,No prediction returned for a clear shoulder line.
+shoulder_015,shoulder,000006.jpg,the shoulder area of the garment,yes,0.3508577048778534,0.9999988600788592,coarse,"Shoulder region is present, but the box covers essentially the whole garment crop."
+shoulder_021,shoulder,000439.jpg,the shoulder area of the garment,no,,,missed,No prediction returned for a visible shoulder region.
+shoulder_024,shoulder,000207.jpg,the shoulder area of the garment,no,,,missed,No prediction returned for a visible shoulder region.
+waist_001,waist,000499.jpg,the waist area of the garment,yes,0.3140007853507995,0.9991202162190852,coarse,"Waistline is visible, but the box covers almost the whole skirt."
+waist_005,waist,000217.jpg,the waist area of the garment,yes,0.3850712478160858,0.908699346233756,coarse,"Fitted waist is visible, but the box covers most of the dress."
+waist_008,waist,000158.jpg,the waist area of the garment,yes,0.4142920076847076,0.9999410126088936,coarse,"Waist detail is visible, but the box covers essentially the whole dress."
+waist_014,waist,000256.jpg,the waist area of the garment,no,,,missed,No prediction returned for a clear dress waist.
+waist_019,waist,000277.jpg,the waist area of the garment,no,,,missed,No prediction returned for a clear fitted waist.
+pattern_007,pattern,000051.jpg,the visible pattern or print on the garment,no,,,missed,No prediction returned despite a clear garment pattern.
+pattern_012,pattern,000214.jpg,the visible pattern or print on the garment,yes,0.4213583767414093,0.9861068153726036,coarse,"A visible pattern is present, but the box covers almost the whole garment rather than the patterned area."
+pattern_018,pattern,000059.jpg,the visible pattern or print on the garment,no,,,missed,No prediction returned despite a clear garment pattern.
+pattern_019,pattern,000126.jpg,the visible pattern or print on the garment,yes,0.4124245047569275,0.9999999494589682,correct,"The striped pattern spans essentially the whole trouser region, and the box matches that extent."
+pattern_021,pattern,000195.jpg,the visible pattern or print on the garment,yes,0.3849889039993286,0.9500511228621784,coarse,"Pattern/print is visible, but the box covers almost the whole garment combination."
+decoration_005,decoration,000366.jpg,the decorative detail or embellishment on the garment,no,,,missed,No prediction returned for a large decorative print.
+decoration_006,decoration,000109.jpg,the decorative detail or embellishment on the garment,no,,,missed,No prediction returned for a visible logo decoration.
+decoration_007,decoration,000205.jpg,the decorative detail or embellishment on the garment,no,,,missed,No prediction returned for visible decorative text/detail.
+decoration_009,decoration,000052.jpg,the decorative detail or embellishment on the garment,no,,,missed,No prediction returned for a clear graphic decoration.
+decoration_016,decoration,000354.jpg,the decorative detail or embellishment on the garment,no,,,missed,No prediction returned for a large decorative print.

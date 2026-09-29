@@ -1,0 +1,54 @@
+PRD 3.1 Small Object Crop Analysis
+
+Experiment purpose:
+Evaluate whether local crop and resize can improve recognition of small objects with insufficient pixel information.
+
+Model:
+Mask R-CNN ResNet50-FPN
+Checkpoint:
+maskrcnn_8class_v3_b1_dataexp/checkpoint_last.pth
+
+Test cases:
+
+1. Shoe
+Original:
+- Outcome: missed
+- Object: shoe
+
+Crop + resize inference:
+- Top prediction:
+  class 8, score 0.1069
+- Result:
+  Prediction appears after crop, but confidence remains low.
+
+
+2. Bag
+Original:
+- Outcome: missed
+- Object: bag
+
+Crop + resize inference:
+- Top prediction:
+  class 1, score 0.1327
+- Result:
+  Prediction appears after crop, but confidence improvement is limited.
+
+
+3. Accessory
+Original:
+- Outcome: missed
+- Object: accessory
+
+Crop + resize inference:
+- Top prediction:
+  class 4, score 0.4626
+- Second prediction:
+  class 1, score 0.4577
+
+Result:
+Local crop improves model response on this small object.
+However, category discrimination is still uncertain.
+
+Conclusion:
+Local crop and resize can partially improve model sensitivity for some small objects, but the improvement is not consistent across all cases.
+The main limitation remains insufficient visual information and category ambiguity for very small objects.

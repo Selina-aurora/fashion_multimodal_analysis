@@ -1,0 +1,11 @@
+﻿candidate_id,region,target_present,visibility,baseline_quality,selected_detected,selected_score,selected_condition,selected_box_area_ratio_parent,diagnostic_quality,review_note
+pocket_010,pocket,yes,clear,missed,yes,0.771529,full__baseline_prompt,0.940352,,
+pocket_012,pocket,yes,clear,missed,yes,0.716302,full__baseline_prompt,0.989953,,
+pocket_016,pocket,yes,clear,missed,yes,0.711226,full__baseline_prompt,0.957641,,
+pocket_020,pocket,yes,clear,missed,yes,0.82484,full__baseline_prompt,0.96514,,
+pocket_021,pocket,yes,clear,missed,yes,0.813888,full__baseline_prompt,0.950335,,
+decoration_005,decoration,yes,clear,missed,yes,0.614848,full__baseline_prompt,0.221527,,
+decoration_006,decoration,yes,clear,missed,yes,0.620991,full__baseline_prompt,0.956274,,
+decoration_007,decoration,yes,clear,missed,yes,0.623585,full__baseline_prompt,0.976216,,
+decoration_009,decoration,yes,clear,missed,yes,0.53317,full__baseline_prompt,0.943526,,
+decoration_016,decoration,yes,clear,missed,yes,0.588638,full__baseline_prompt,0.989221,,

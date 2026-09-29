@@ -1,0 +1,27 @@
+PRD 3.1.1 Benchmark Difficulty / Geometry Audit v1
+===================================================
+
+Current review pool
+-------------------
+top: n=60 median_area_ratio=0.130979 tiny=0 small=0 medium=20 large=40 minside<20px=0 geometry_flags=0
+pants: n=60 median_area_ratio=0.149649 tiny=0 small=0 medium=21 large=39 minside<20px=0 geometry_flags=0
+skirt: n=60 median_area_ratio=0.159611 tiny=0 small=0 medium=18 large=42 minside<20px=0 geometry_flags=0
+outerwear: n=60 median_area_ratio=0.341924 tiny=0 small=0 medium=8 large=52 minside<20px=0 geometry_flags=0
+dress: n=60 median_area_ratio=0.288020 tiny=0 small=0 medium=3 large=57 minside<20px=0 geometry_flags=1
+shoe: n=60 median_area_ratio=0.005733 tiny=25 small=34 medium=1 large=0 minside<20px=5 geometry_flags=25
+bag: n=60 median_area_ratio=0.035853 tiny=1 small=17 medium=34 large=8 minside<20px=0 geometry_flags=5
+accessory: n=60 median_area_ratio=0.010343 tiny=23 small=17 medium=20 large=0 minside<20px=5 geometry_flags=25
+
+Fashionpedia raw leakage-safe pool
+----------------------------------
+shoe: instances=1078 unique_images=556 tiny=402 small=631 medium=45 large=0 minside<20px=68
+bag: instances=68 unique_images=67 tiny=1 small=19 medium=38 large=10 minside<20px=0
+accessory: instances=465 unique_images=317 tiny=191 small=151 medium=113 large=10 minside<20px=63
+
+Decision principle
+------------------
+- Do NOT freeze the current 480 solely because class counts are balanced.
+- Check whether class is confounded with object size/source dataset.
+- Prefer a Core Acceptance set with reviewable/product-representative visibility.
+- Preserve tiny/small cases as a separate Stress subset rather than letting them dominate one category.
+- After difficulty design is fixed, generate mask-overlay review assets and perform human annotation review.

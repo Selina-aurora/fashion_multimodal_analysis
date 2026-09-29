@@ -1,0 +1,9 @@
+﻿region,condition,N,correct,coarse,wrong,missed,strict_accuracy_pct,usable_rate_pct,missed_rate_pct
+collar,BASELINE,5,0,5,0,0,0.0,100.0,0.0
+collar,SPATIAL_HR,5,0,4,0,1,0.0,80.0,20.0
+cuff,BASELINE,5,0,4,0,1,0.0,80.0,20.0
+cuff,SPATIAL_HR,5,0,5,0,0,0.0,100.0,0.0
+hem,BASELINE,5,0,3,0,2,0.0,60.0,40.0
+hem,SPATIAL_HR,5,0,0,0,5,0.0,0.0,100.0
+OVERALL,BASELINE,15,0,12,0,3,0.0,80.0,20.0
+OVERALL,SPATIAL_HR,15,0,9,0,6,0.0,60.0,40.0

@@ -1,0 +1,3181 @@
+{
+  "schema_version": "3.1.3-style-v1-gated",
+  "instances": [
+    {
+      "source_image": "../fashion_data/raw/train/train/image/002278.jpg",
+      "garment_id": "item1_sling_dress",
+      "garment_category": "dress",
+      "style_features": {
+        "sleeve_length_ratio": 0.2530782222747803,
+        "lower_garment_length_score": 0.6624217629432678,
+        "neckline_depth_score": 0.4684890806674957,
+        "neckline_width_score": 0.441840261220932,
+        "collar_height_score": 0.4039967656135559
+      },
+      "quality": {
+        "sleeve_entropy": 0.8679259987694954,
+        "lower_garment_length_entropy": 0.7387443963258779,
+        "depth_entropy": 0.8339639221056745,
+        "width_entropy": 0.9451039303921536,
+        "collar_entropy": 0.9537204391469141
+      }
+    },
+    {
+      "source_image": "../fashion_data/raw/train/train/image/004648.jpg",
+      "garment_id": "item1_vest_dress",
+      "garment_category": "dress",
+      "style_features": {
+        "sleeve_length_ratio": 0.2140238732099533,
+        "lower_garment_length_score": 0.482392281293869,
+        "neckline_depth_score": 0.3454766571521759,
+        "neckline_width_score": 0.6507964134216309,
+        "collar_height_score": 0.4145823121070862
+      },
+      "quality": {
+        "sleeve_entropy": 0.6796287438827574,
+        "lower_garment_length_entropy": 0.7900471993813629,
+        "depth_entropy": 0.9136442037289084,
+        "width_entropy": 0.7686113055415787,
+        "collar_entropy": 0.9096287066634501
+      }
+    },
+    {
+      "source_image": "../fashion_data/raw/train/train/image/006491.jpg",
+      "garment_id": "item1_sling_dress",
+      "garment_category": "dress",
+      "style_features": {
+        "sleeve_length_ratio": 0.45344722270965576,
+        "lower_garment_length_score": 0.8539331555366516,
+        "neckline_depth_score": 0.42937758564949036,
+        "neckline_width_score": 0.5852495431900024,
+        "collar_height_score": 0.4727153778076172
+      },
+      "quality": {
+        "sleeve_entropy": 0.9470232646796848,
+        "lower_garment_length_entropy": 0.6319635098251397,
+        "depth_entropy": 0.9066262498902514,
+        "width_entropy": 0.9272296243800088,
+        "collar_entropy": 0.9295440551771308
+      }
+    },
+    {
+      "source_image": "../fashion_data/raw/train/train/image/007984.jpg",
+      "garment_id": "item1_short_sleeve_dress",
+      "garment_category": "dress",
+      "style_features": {
+        "sleeve_length_ratio": 0.2932620644569397,
+        "lower_garment_length_score": 0.6523911952972412,
+        "neckline_depth_score": 0.42415088415145874,
+        "neckline_width_score": 0.5183212757110596,
+        "collar_height_score": 0.3034473657608032
+      },
+      "quality": {
+        "sleeve_entropy": 0.867027950221132,
+        "lower_garment_length_entropy": 0.8282495246315824,
+        "depth_entropy": 0.8848939913546997,
+        "width_entropy": 0.9736686001815769,
+        "collar_entropy": 0.8725312259718842
+      }
+    },
+    {
+      "source_image": "../fashion_data/raw/train/train/image/011261.jpg",
+      "garment_id": "item1_trousers",
+      "garment_category": "pants",
+      "style_features": {
+        "pants_length_ratio": 0.8673639893531799,
+        "trouser_thigh_width_ratio": 0.8071748878923767,
+        "trouser_knee_width_ratio": 0.9327354260089686,
+        "trouser_hem_width_ratio": 0.7847533632286996,
+        "trouser_hem_to_thigh_ratio": 0.9722222222222223,
+        "trouser_lower_leg_fullness": 0.7955297818890428,
+        "trouser_lower_width_slope": -0.4307256750973807
+      },
+      "quality": {
+        "pants_length_entropy": 0.6532501445732303,
+        "trouser_geometry_quality": "good",
+        "trouser_geometry_valid": true
+      }
+    },
+    {
+      "source_image": "../fashion_data/raw/train/train/image/011261.jpg",
+      "garment_id": "item2_long_sleeve_top",
+      "garment_category": "top",
+      "style_features": {
+        "sleeve_length_ratio": 0.6412513852119446,
+        "neckline_depth_score": 0.4121588468551636,
+        "neckline_width_score": 0.5593016147613525,
+        "collar_height_score": 0.3742958903312683,
+        "garment_length_proxy": 0.5123287671232877,
+        "waist_to_chest_ratio": 1.045801526717557,
+        "hem_to_chest_ratio": 0.19083969465648856,
+        "lower_taper_slope": -1.7473211773994897
+      },
+      "quality": {
+        "sleeve_entropy": 0.8505091927953442,
+        "depth_entropy": 0.7988974105457718,
+        "width_entropy": 0.9013718764682577,
+        "collar_entropy": 0.9274709408435741,
+        "arm_contamination_ratio": 0.0,
+        "upper_geometry_quality": "usable",
+        "upper_geometry_valid": true
+      }
+    },
+    {
+      "source_image": "../fashion_data/raw/train/train/image/012116.jpg",
+      "garment_id": "item1_short_sleeve_top",
+      "garment_category": "top",
+      "style_features": {
+        "sleeve_length_ratio": 0.3676729202270508,
+        "neckline_depth_score": 0.4428984522819519,
+        "neckline_width_score": 0.6497796177864075,
+        "collar_height_score": 0.38953647017478943,
+        "garment_length_proxy": 0.576036866359447,
+        "waist_to_chest_ratio": 0.9459459459459459,
+        "hem_to_chest_ratio": 0.26126126126126126,
+        "lower_taper_slope": -1.2954115499502163
+      },
+      "quality": {
+        "sleeve_entropy": 0.8727550888410506,
+        "depth_entropy": 0.8098447933925935,
+        "width_entropy": 0.7893109695962947,
+        "collar_entropy": 0.9475167987522216,
+        "arm_contamination_ratio": 0.2073170731707317,
+        "upper_geometry_quality": "usable",
+        "upper_geometry_valid": true
+      }
+    },
+    {
+      "source_image": "../fashion_data/raw/train/train/image/012116.jpg",
+      "garment_id": "item2_trousers",
+      "garment_category": "pants",
+      "style_features": {
+        "pants_length_ratio": 0.8858734369277954,
+        "trouser_thigh_width_ratio": 0.575268817204301,
+        "trouser_knee_width_ratio": 0.20430107526881722,
+        "trouser_hem_width_ratio": 0.15053763440860216,
+        "trouser_hem_to_thigh_ratio": 0.26168224299065423,
+        "trouser_lower_leg_fullness": 0.1755471456318456,
+        "trouser_lower_width_slope": -0.8174446335319233
+      },
+      "quality": {
+        "pants_length_entropy": 0.6658058025638486,
+        "trouser_geometry_quality": "usable",
+        "trouser_geometry_valid": true
+      }
+    },
+    {
+      "source_image": "../fashion_data/raw/train/train/image/012707.jpg",
+      "garment_id": "item1_long_sleeve_top",
+      "garment_category": "top",
+      "style_features": {
+        "sleeve_length_ratio": 0.3236835300922394,
+        "neckline_depth_score": 0.6445474028587341,
+        "neckline_width_score": 0.42342865467071533,
+        "collar_height_score": 0.8193328976631165,
+        "garment_length_proxy": 0.3638968481375358,
+        "waist_to_chest_ratio": 0.8617021276595744,
+        "hem_to_chest_ratio": 0.38829787234042556,
+        "lower_taper_slope": -1.469597768105231
+      },
+      "quality": {
+        "sleeve_entropy": 0.8931478698906419,
+        "depth_entropy": 0.698456728373002,
+        "width_entropy": 0.920112714496133,
+        "collar_entropy": 0.5422379454933381,
+        "arm_contamination_ratio": 0.0,
+        "upper_geometry_quality": "good",
+        "upper_geometry_valid": true
+      }
+    },
+    {
+      "source_image": "../fashion_data/raw/train/train/image/012707.jpg",
+      "garment_id": "item2_trousers",
+      "garment_category": "pants",
+      "style_features": {
+        "pants_length_ratio": 0.8900370001792908,
+        "trouser_thigh_width_ratio": 0.9302325581395349,
+        "trouser_knee_width_ratio": 0.6627906976744186,
+        "trouser_hem_width_ratio": 0.22674418604651161,
+        "trouser_hem_to_thigh_ratio": 0.24375,
+        "trouser_lower_leg_fullness": 0.4507210317863308,
+        "trouser_lower_width_slope": -1.2375830310093712
+      },
+      "quality": {
+        "pants_length_entropy": 0.6032037005590618,
+        "trouser_geometry_quality": "good",
+        "trouser_geometry_valid": true
+      }
+    },
+    {
+      "source_image": "../fashion_data/raw/train/train/image/013010.jpg",
+      "garment_id": "item1_short_sleeve_top",
+      "garment_category": "top",
+      "style_features": {
+        "sleeve_length_ratio": 0.3724660575389862,
+        "neckline_depth_score": 0.4488016366958618,
+        "neckline_width_score": 0.5817772150039673,
+        "collar_height_score": 0.6041098237037659,
+        "garment_length_proxy": 0.5912162162162162,
+        "waist_to_chest_ratio": 0.8504672897196262,
+        "hem_to_chest_ratio": 0.8130841121495327,
+        "lower_taper_slope": -0.7065266749061224
+      },
+      "quality": {
+        "sleeve_entropy": 0.8292691270914778,
+        "depth_entropy": 0.8621786904298178,
+        "width_entropy": 0.9362101817592087,
+        "collar_entropy": 0.9130102480470008,
+        "arm_contamination_ratio": 0.0,
+        "upper_geometry_quality": "good",
+        "upper_geometry_valid": true
+      }
+    },
+    {
+      "source_image": "../fashion_data/raw/train/train/image/013010.jpg",
+      "garment_id": "item2_trousers",
+      "garment_category": "pants",
+      "style_features": {
+        "pants_length_ratio": 0.858562171459198,
+        "trouser_thigh_width_ratio": 0.5686274509803921,
+        "trouser_knee_width_ratio": 0.6535947712418301,
+        "trouser_hem_width_ratio": 0.2679738562091503,
+        "trouser_hem_to_thigh_ratio": 0.47126436781609193,
+        "trouser_lower_leg_fullness": 0.4896811249752426,
+        "trouser_lower_width_slope": -0.5148492406181194
+      },
+      "quality": {
+        "pants_length_entropy": 0.5767740992998083,
+        "trouser_geometry_quality": "good",
+        "trouser_geometry_valid": true
+      }
+    },
+    {
+      "source_image": "../fashion_data/raw/train/train/image/014031.jpg",
+      "garment_id": "item1_short_sleeve_top",
+      "garment_category": "top",
+      "style_features": {
+        "sleeve_length_ratio": 0.5078872442245483,
+        "neckline_depth_score": 0.3965919315814972,
+        "neckline_width_score": 0.6432896256446838,
+        "collar_height_score": 0.45047110319137573,
+        "garment_length_proxy": 0.46959459459459457,
+        "waist_to_chest_ratio": 0.7946127946127947,
+        "hem_to_chest_ratio": 0.16835016835016833,
+        "lower_taper_slope": -1.6259537216166375
+      },
+      "quality": {
+        "sleeve_entropy": 0.9410892116290794,
+        "depth_entropy": 0.9051791658667172,
+        "width_entropy": 0.9283239923202103,
+        "collar_entropy": 0.8312916644713874,
+        "arm_contamination_ratio": 0.0,
+        "upper_geometry_quality": "usable",
+        "upper_geometry_valid": true
+      }
+    },
+    {
+      "source_image": "../fashion_data/raw/train/train/image/014031.jpg",
+      "garment_id": "item2_skirt",
+      "garment_category": "skirt",
+      "style_features": {
+        "lower_garment_length_score": 0.9374209642410278,
+        "skirt_flare_score": 0.2120295698924731,
+        "skirt_hem_to_waist_ratio": 1.239247311827957
+      },
+      "quality": {
+        "lower_garment_length_entropy": 0.40553751404842003
+      }
+    },
+    {
+      "source_image": "../fashion_data/raw/train/train/image/015031.jpg",
+      "garment_id": "item1_short_sleeve_dress",
+      "garment_category": "dress",
+      "style_features": {
+        "sleeve_length_ratio": 0.2503562569618225,
+        "lower_garment_length_score": 0.4648681879043579,
+        "neckline_depth_score": 0.5404391288757324,
+        "neckline_width_score": 0.6227954626083374,
+        "collar_height_score": 0.4168233275413513
+      },
+      "quality": {
+        "sleeve_entropy": 0.8662454677068855,
+        "lower_garment_length_entropy": 0.6385018727708986,
+        "depth_entropy": 0.8187722433732739,
+        "width_entropy": 0.8946332364368765,
+        "collar_entropy": 0.8978376050209036
+      }
+    },
+    {
+      "source_image": "../fashion_data/raw/train/train/image/019779.jpg",
+      "garment_id": "item1_short_sleeve_dress",
+      "garment_category": "dress",
+      "style_features": {
+        "sleeve_length_ratio": 0.36584895849227905,
+        "lower_garment_length_score": 0.6769126653671265,
+        "neckline_depth_score": 0.39317092299461365,
+        "neckline_width_score": 0.49427738785743713,
+        "collar_height_score": 0.7321087718009949
+      },
+      "quality": {
+        "sleeve_entropy": 0.7424391828190477,
+        "lower_garment_length_entropy": 0.8299872066575235,
+        "depth_entropy": 0.8942597810626297,
+        "width_entropy": 0.9791622902069406,
+        "collar_entropy": 0.7828577910905674
+      }
+    },
+    {
+      "source_image": "../fashion_data/raw/train/train/image/019817.jpg",
+      "garment_id": "item1_short_sleeve_top",
+      "garment_category": "top",
+      "style_features": {
+        "sleeve_length_ratio": 0.4133278727531433,
+        "neckline_depth_score": 0.3212534189224243,
+        "neckline_width_score": 0.5441594123840332,
+        "collar_height_score": 0.3897213935852051,
+        "garment_length_proxy": 0.5,
+        "waist_to_chest_ratio": 1.0483870967741937,
+        "hem_to_chest_ratio": 1.185483870967742,
+        "lower_taper_slope": 0.324952493008185
+      },
+      "quality": {
+        "sleeve_entropy": 0.8350632634064773,
+        "depth_entropy": 0.8668467344701103,
+        "width_entropy": 0.9448699467493044,
+        "collar_entropy": 0.8979375239617721,
+        "arm_contamination_ratio": 0.0,
+        "upper_geometry_quality": "good",
+        "upper_geometry_valid": true
+      }
+    },
+    {
+      "source_image": "../fashion_data/raw/train/train/image/024726.jpg",
+      "garment_id": "item1_vest_dress",
+      "garment_category": "dress",
+      "style_features": {
+        "sleeve_length_ratio": 0.5291061997413635,
+        "lower_garment_length_score": 0.6445716619491577,
+        "neckline_depth_score": 0.4059431552886963,
+        "neckline_width_score": 0.5426479578018188,
+        "collar_height_score": 0.47551214694976807
+      },
+      "quality": {
+        "sleeve_entropy": 0.9381695226013439,
+        "lower_garment_length_entropy": 0.8735013114309486,
+        "depth_entropy": 0.8710143690482031,
+        "width_entropy": 0.9617389156343862,
+        "collar_entropy": 0.9517268748077923
+      }
+    },
+    {
+      "source_image": "../fashion_data/raw/train/train/image/028454.jpg",
+      "garment_id": "item1_short_sleeve_dress",
+      "garment_category": "dress",
+      "style_features": {
+        "sleeve_length_ratio": 0.7253024578094482,
+        "lower_garment_length_score": 0.6241779923439026,
+        "neckline_depth_score": 0.5559446811676025,
+        "neckline_width_score": 0.4814828634262085,
+        "collar_height_score": 0.326923131942749
+      },
+      "quality": {
+        "sleeve_entropy": 0.7930041463130164,
+        "lower_garment_length_entropy": 0.7980319673827907,
+        "depth_entropy": 0.7294173788141776,
+        "width_entropy": 0.9437873557635862,
+        "collar_entropy": 0.8975933998703896
+      }
+    },
+    {
+      "source_image": "../fashion_data/raw/train/train/image/028454.jpg",
+      "garment_id": "item2_trousers",
+      "garment_category": "pants",
+      "style_features": {
+        "pants_length_ratio": 0.8009907007217407,
+        "trouser_thigh_width_ratio": 0.66875,
+        "trouser_knee_width_ratio": 0.384375,
+        "trouser_hem_width_ratio": 0.1875,
+        "trouser_hem_to_thigh_ratio": 0.28037383177570097,
+        "trouser_lower_leg_fullness": 0.3683360927152317,
+        "trouser_lower_width_slope": -0.6867852386589437
+      },
+      "quality": {
+        "pants_length_entropy": 0.829606561883101,
+        "trouser_geometry_quality": "good",
+        "trouser_geometry_valid": true
+      }
+    },
+    {
+      "source_image": "../fashion_data/raw/train/train/image/030559.jpg",
+      "garment_id": "item1_long_sleeve_dress",
+      "garment_category": "dress",
+      "style_features": {
+        "sleeve_length_ratio": 0.5755668878555298,
+        "lower_garment_length_score": 0.43197810649871826,
+        "neckline_depth_score": 0.38630053400993347,
+        "neckline_width_score": 0.50663161277771,
+        "collar_height_score": 0.713375449180603
+      },
+      "quality": {
+        "sleeve_entropy": 0.9202198620691958,
+        "lower_garment_length_entropy": 0.7788108808794453,
+        "depth_entropy": 0.9119972818236373,
+        "width_entropy": 0.8957569356599423,
+        "collar_entropy": 0.7333415489307176
+      }
+    },
+    {
+      "source_image": "../fashion_data/raw/train/train/image/030559.jpg",
+      "garment_id": "item2_long_sleeve_dress",
+      "garment_category": "dress",
+      "style_features": {
+        "sleeve_length_ratio": 0.5364465713500977,
+        "lower_garment_length_score": 0.4008921980857849,
+        "neckline_depth_score": 0.3453219532966614,
+        "neckline_width_score": 0.38944923877716064,
+        "collar_height_score": 0.4653802514076233
+      },
+      "quality": {
+        "sleeve_entropy": 0.9488493011634882,
+        "lower_garment_length_entropy": 0.6969772880543732,
+        "depth_entropy": 0.8396080460590618,
+        "width_entropy": 0.8841134533273668,
+        "collar_entropy": 0.9462239261704133
+      }
+    },
+    {
+      "source_image": "../fashion_data/raw/train/train/image/030847.jpg",
+      "garment_id": "item1_sling_dress",
+      "garment_category": "dress",
+      "style_features": {
+        "sleeve_length_ratio": 0.24765658378601074,
+        "lower_garment_length_score": 0.5832908153533936,
+        "neckline_depth_score": 0.590424120426178,
+        "neckline_width_score": 0.4997750222682953,
+        "collar_height_score": 0.3811202645301819
+      },
+      "quality": {
+        "sleeve_entropy": 0.8446622966271182,
+        "lower_garment_length_entropy": 0.8469287747608079,
+        "depth_entropy": 0.7691069005255305,
+        "width_entropy": 0.9869650780689055,
+        "collar_entropy": 0.8236110162191275
+      }
+    },
+    {
+      "source_image": "../fashion_data/raw/train/train/image/032014.jpg",
+      "garment_id": "item1_skirt",
+      "garment_category": "skirt",
+      "style_features": {
+        "lower_garment_length_score": 0.7700360417366028,
+        "skirt_flare_score": 0.5629980079681274,
+        "skirt_hem_to_waist_ratio": 1.800796812749004
+      },
+      "quality": {
+        "lower_garment_length_entropy": 0.8237093163793332
+      }
+    },
+    {
+      "source_image": "../fashion_data/raw/train/train/image/033528.jpg",
+      "garment_id": "item1_trousers",
+      "garment_category": "pants",
+      "style_features": {
+        "pants_length_ratio": 0.8008161187171936,
+        "trouser_thigh_width_ratio": 0.7629107981220657,
+        "trouser_knee_width_ratio": 0.5610328638497653,
+        "trouser_hem_width_ratio": 0.3051643192488263,
+        "trouser_hem_to_thigh_ratio": 0.4,
+        "trouser_lower_leg_fullness": 0.3842212696468667,
+        "trouser_lower_width_slope": -0.9659325853892489
+      },
+      "quality": {
+        "pants_length_entropy": 0.8360656022661315,
+        "trouser_geometry_quality": "good",
+        "trouser_geometry_valid": true
+      }
+    },
+    {
+      "source_image": "../fashion_data/raw/train/train/image/033528.jpg",
+      "garment_id": "item2_short_sleeve_top",
+      "garment_category": "top",
+      "style_features": {
+        "sleeve_length_ratio": 0.6222695708274841,
+        "neckline_depth_score": 0.45064449310302734,
+        "neckline_width_score": 0.46726715564727783,
+        "collar_height_score": 0.5128650665283203,
+        "garment_length_proxy": 0.5346020761245674,
+        "waist_to_chest_ratio": 0.8090452261306532,
+        "hem_to_chest_ratio": 0.19597989949748743,
+        "lower_taper_slope": -1.5507129644595297
+      },
+      "quality": {
+        "sleeve_entropy": 0.8896933968777422,
+        "depth_entropy": 0.9450832651701355,
+        "width_entropy": 0.9161589168211441,
+        "collar_entropy": 0.9358795382069204,
+        "arm_contamination_ratio": 0.0,
+        "upper_geometry_quality": "usable",
+        "upper_geometry_valid": true
+      }
+    },
+    {
+      "source_image": "../fashion_data/raw/train/train/image/033828.jpg",
+      "garment_id": "item1_shorts",
+      "garment_category": "pants",
+      "style_features": {
+        "pants_length_ratio": 0.6855628490447998
+      },
+      "quality": {
+        "pants_length_entropy": 0.8258712058469561
+      }
+    },
+    {
+      "source_image": "../fashion_data/raw/train/train/image/033828.jpg",
+      "garment_id": "item2_long_sleeve_outwear",
+      "garment_category": "outerwear",
+      "style_features": {
+        "sleeve_length_ratio": 0.5836045742034912,
+        "neckline_depth_score": 0.5131174921989441,
+        "neckline_width_score": 0.44795310497283936,
+        "collar_height_score": 0.5800637602806091,
+        "garment_length_proxy": null,
+        "waist_to_chest_ratio": null,
+        "hem_to_chest_ratio": null,
+        "lower_taper_slope": null
+      },
+      "quality": {
+        "sleeve_entropy": 0.8934412093520238,
+        "depth_entropy": 0.9737451874201669,
+        "width_entropy": 0.963345618129063,
+        "collar_entropy": 0.9362763993523416,
+        "arm_contamination_ratio": 1.0,
+        "upper_geometry_quality": "weak",
+        "upper_geometry_valid": false,
+        "validity_gating_applied": [
+          "upper_geometry"
+        ]
+      }
+    },
+    {
+      "source_image": "../fashion_data/raw/train/train/image/039388.jpg",
+      "garment_id": "item1_trousers",
+      "garment_category": "pants",
+      "style_features": {
+        "pants_length_ratio": 0.9473832249641418,
+        "trouser_thigh_width_ratio": 0.9416342412451362,
+        "trouser_knee_width_ratio": 0.8813229571984436,
+        "trouser_hem_width_ratio": 0.5058365758754864,
+        "trouser_hem_to_thigh_ratio": 0.5371900826446281,
+        "trouser_lower_leg_fullness": 0.6334961503435714,
+        "trouser_lower_width_slope": -1.0239616760445756
+      },
+      "quality": {
+        "pants_length_entropy": 0.4490660476792645,
+        "trouser_geometry_quality": "good",
+        "trouser_geometry_valid": true
+      }
+    },
+    {
+      "source_image": "../fashion_data/raw/train/train/image/039388.jpg",
+      "garment_id": "item2_short_sleeve_top",
+      "garment_category": "top",
+      "style_features": {
+        "sleeve_length_ratio": 0.36796218156814575,
+        "neckline_depth_score": 0.33654695749282837,
+        "neckline_width_score": 0.45683878660202026,
+        "collar_height_score": 0.6039744019508362,
+        "garment_length_proxy": 0.3287671232876712,
+        "waist_to_chest_ratio": 0.7478813559322035,
+        "hem_to_chest_ratio": 0.2542372881355932,
+        "lower_taper_slope": -1.4536624379481522
+      },
+      "quality": {
+        "sleeve_entropy": 0.9073040770162089,
+        "depth_entropy": 0.9083636099176875,
+        "width_entropy": 0.979069630017892,
+        "collar_entropy": 0.8502205634265162,
+        "arm_contamination_ratio": 0.0,
+        "upper_geometry_quality": "good",
+        "upper_geometry_valid": true
+      }
+    },
+    {
+      "source_image": "../fashion_data/raw/train/train/image/041727.jpg",
+      "garment_id": "item1_short_sleeve_top",
+      "garment_category": "top",
+      "style_features": {
+        "sleeve_length_ratio": 0.5927658081054688,
+        "neckline_depth_score": 0.4042389988899231,
+        "neckline_width_score": 0.4552339017391205,
+        "collar_height_score": 0.41510558128356934,
+        "garment_length_proxy": 0.59875,
+        "waist_to_chest_ratio": 1.0282485875706215,
+        "hem_to_chest_ratio": 0.7655367231638419,
+        "lower_taper_slope": -0.7182272169776478
+      },
+      "quality": {
+        "sleeve_entropy": 0.8802299558145739,
+        "depth_entropy": 0.8960269908552029,
+        "width_entropy": 0.89367552561002,
+        "collar_entropy": 0.9126382740506764,
+        "arm_contamination_ratio": 0.2974683544303797,
+        "upper_geometry_quality": "good",
+        "upper_geometry_valid": true
+      }
+    },
+    {
+      "source_image": "../fashion_data/raw/train/train/image/041727.jpg",
+      "garment_id": "item2_trousers",
+      "garment_category": "pants",
+      "style_features": {
+        "pants_length_ratio": 0.8293390870094299,
+        "trouser_thigh_width_ratio": 0.8333333333333334,
+        "trouser_knee_width_ratio": 0.8125,
+        "trouser_hem_width_ratio": 0.675,
+        "trouser_hem_to_thigh_ratio": 0.81,
+        "trouser_lower_leg_fullness": 0.7408700980392157,
+        "trouser_lower_width_slope": -0.31252404261196826
+      },
+      "quality": {
+        "pants_length_entropy": 0.7929475839131275,
+        "trouser_geometry_quality": "good",
+        "trouser_geometry_valid": true
+      }
+    },
+    {
+      "source_image": "../fashion_data/raw/train/train/image/043479.jpg",
+      "garment_id": "item1_vest_dress",
+      "garment_category": "dress",
+      "style_features": {
+        "sleeve_length_ratio": 0.35548168420791626,
+        "lower_garment_length_score": 0.530222475528717,
+        "neckline_depth_score": 0.3246948719024658,
+        "neckline_width_score": 0.403606653213501,
+        "collar_height_score": 0.3252473473548889
+      },
+      "quality": {
+        "sleeve_entropy": 0.833623378483994,
+        "lower_garment_length_entropy": 0.8549037625624573,
+        "depth_entropy": 0.8847087450454988,
+        "width_entropy": 0.8730860020038373,
+        "collar_entropy": 0.8942239317169067
+      }
+    },
+    {
+      "source_image": "../fashion_data/raw/train/train/image/043667.jpg",
+      "garment_id": "item1_long_sleeve_outwear",
+      "garment_category": "outerwear",
+      "style_features": {
+        "sleeve_length_ratio": 0.5118163824081421,
+        "neckline_depth_score": 0.2965880036354065,
+        "neckline_width_score": 0.4832814335823059,
+        "collar_height_score": 0.7478182315826416,
+        "garment_length_proxy": null,
+        "waist_to_chest_ratio": null,
+        "hem_to_chest_ratio": null,
+        "lower_taper_slope": null
+      },
+      "quality": {
+        "sleeve_entropy": 0.962252366374144,
+        "depth_entropy": 0.8857768925964732,
+        "width_entropy": 0.9672589001178732,
+        "collar_entropy": 0.801630478743775,
+        "arm_contamination_ratio": 1.0,
+        "upper_geometry_quality": "weak",
+        "upper_geometry_valid": false,
+        "validity_gating_applied": [
+          "upper_geometry"
+        ]
+      }
+    },
+    {
+      "source_image": "../fashion_data/raw/train/train/image/043667.jpg",
+      "garment_id": "item2_shorts",
+      "garment_category": "pants",
+      "style_features": {
+        "pants_length_ratio": 0.4789378345012665
+      },
+      "quality": {
+        "pants_length_entropy": 0.8536110671334519
+      }
+    },
+    {
+      "source_image": "../fashion_data/raw/train/train/image/045372.jpg",
+      "garment_id": "item1_long_sleeve_outwear",
+      "garment_category": "outerwear",
+      "style_features": {
+        "sleeve_length_ratio": 0.6044260859489441,
+        "neckline_depth_score": 0.670832633972168,
+        "neckline_width_score": 0.47522813081741333,
+        "collar_height_score": 0.6248471140861511,
+        "garment_length_proxy": null,
+        "waist_to_chest_ratio": null,
+        "hem_to_chest_ratio": null,
+        "lower_taper_slope": null
+      },
+      "quality": {
+        "sleeve_entropy": 0.9153685503192324,
+        "depth_entropy": 0.7079176966124487,
+        "width_entropy": 0.9282311839933696,
+        "collar_entropy": 0.7960910141406079,
+        "arm_contamination_ratio": 1.0,
+        "upper_geometry_quality": "weak",
+        "upper_geometry_valid": false,
+        "validity_gating_applied": [
+          "upper_geometry"
+        ]
+      }
+    },
+    {
+      "source_image": "../fashion_data/raw/train/train/image/045372.jpg",
+      "garment_id": "item2_trousers",
+      "garment_category": "pants",
+      "style_features": {
+        "pants_length_ratio": 0.9076537489891052,
+        "trouser_thigh_width_ratio": 0.7723577235772358,
+        "trouser_knee_width_ratio": 0.6280487804878049,
+        "trouser_hem_width_ratio": 0.3333333333333333,
+        "trouser_hem_to_thigh_ratio": 0.43157894736842106,
+        "trouser_lower_leg_fullness": 0.4351019825987733,
+        "trouser_lower_width_slope": -0.9851554004805964
+      },
+      "quality": {
+        "pants_length_entropy": 0.6291186443239793,
+        "trouser_geometry_quality": "good",
+        "trouser_geometry_valid": true
+      }
+    },
+    {
+      "source_image": "../fashion_data/raw/train/train/image/047774.jpg",
+      "garment_id": "item1_long_sleeve_dress",
+      "garment_category": "dress",
+      "style_features": {
+        "sleeve_length_ratio": 0.4640462100505829,
+        "lower_garment_length_score": 0.4453814923763275,
+        "neckline_depth_score": 0.4530736804008484,
+        "neckline_width_score": 0.6084215641021729,
+        "collar_height_score": 0.5273922085762024
+      },
+      "quality": {
+        "sleeve_entropy": 0.7422876229884675,
+        "lower_garment_length_entropy": 0.6676112735060188,
+        "depth_entropy": 0.8174240413260625,
+        "width_entropy": 0.8551416268159613,
+        "collar_entropy": 0.9736186036766945
+      }
+    },
+    {
+      "source_image": "../fashion_data/raw/train/train/image/049798.jpg",
+      "garment_id": "item1_skirt",
+      "garment_category": "skirt",
+      "style_features": {
+        "lower_garment_length_score": 0.6401858925819397,
+        "skirt_flare_score": 0.045234806629834284,
+        "skirt_hem_to_waist_ratio": 0.9723756906077349
+      },
+      "quality": {
+        "lower_garment_length_entropy": 0.8469298392723484
+      }
+    },
+    {
+      "source_image": "../fashion_data/raw/train/train/image/049798.jpg",
+      "garment_id": "item2_trousers",
+      "garment_category": "pants",
+      "style_features": {
+        "pants_length_ratio": 0.9108685255050659,
+        "trouser_thigh_width_ratio": 0.8383233532934131,
+        "trouser_knee_width_ratio": 0.6497005988023952,
+        "trouser_hem_width_ratio": 0.4491017964071856,
+        "trouser_hem_to_thigh_ratio": 0.5357142857142857,
+        "trouser_lower_leg_fullness": 0.5395121087873515,
+        "trouser_lower_width_slope": -0.7094192173536763
+      },
+      "quality": {
+        "pants_length_entropy": 0.5883510442646541,
+        "trouser_geometry_quality": "good",
+        "trouser_geometry_valid": true
+      }
+    },
+    {
+      "source_image": "../fashion_data/raw/train/train/image/051719.jpg",
+      "garment_id": "item1_trousers",
+      "garment_category": "pants",
+      "style_features": {
+        "pants_length_ratio": 0.7962942719459534,
+        "trouser_thigh_width_ratio": 0.689328743545611,
+        "trouser_knee_width_ratio": 0.46815834767641995,
+        "trouser_hem_width_ratio": 0.3132530120481928,
+        "trouser_hem_to_thigh_ratio": 0.4544319600499376,
+        "trouser_lower_leg_fullness": 0.3736349591442318,
+        "trouser_lower_width_slope": -0.7557600570951131
+      },
+      "quality": {
+        "pants_length_entropy": 0.815635335421869,
+        "trouser_geometry_quality": "good",
+        "trouser_geometry_valid": true
+      }
+    },
+    {
+      "source_image": "../fashion_data/raw/train/train/image/056556.jpg",
+      "garment_id": "item1_long_sleeve_outwear",
+      "garment_category": "outerwear",
+      "style_features": {
+        "sleeve_length_ratio": 0.6038385629653931,
+        "neckline_depth_score": 0.484515905380249,
+        "neckline_width_score": 0.5491017699241638,
+        "collar_height_score": 0.5997182130813599,
+        "garment_length_proxy": null,
+        "waist_to_chest_ratio": null,
+        "hem_to_chest_ratio": null,
+        "lower_taper_slope": null
+      },
+      "quality": {
+        "sleeve_entropy": 0.9239695374386734,
+        "depth_entropy": 0.8828379869361471,
+        "width_entropy": 0.9377125211792497,
+        "collar_entropy": 0.9209701360376404,
+        "arm_contamination_ratio": 1.0,
+        "upper_geometry_quality": "weak",
+        "upper_geometry_valid": false,
+        "validity_gating_applied": [
+          "upper_geometry"
+        ]
+      }
+    },
+    {
+      "source_image": "../fashion_data/raw/train/train/image/058225.jpg",
+      "garment_id": "item1_trousers",
+      "garment_category": "pants",
+      "style_features": {
+        "pants_length_ratio": 0.8488408923149109,
+        "trouser_thigh_width_ratio": 0.7329842931937173,
+        "trouser_knee_width_ratio": 0.6596858638743456,
+        "trouser_hem_width_ratio": 0.6178010471204188,
+        "trouser_hem_to_thigh_ratio": 0.8428571428571429,
+        "trouser_lower_leg_fullness": 0.7539770438985098,
+        "trouser_lower_width_slope": -0.12079174629088482
+      },
+      "quality": {
+        "pants_length_entropy": 0.6681262027439427,
+        "trouser_geometry_quality": "good",
+        "trouser_geometry_valid": true
+      }
+    },
+    {
+      "source_image": "../fashion_data/raw/train/train/image/063238.jpg",
+      "garment_id": "item1_trousers",
+      "garment_category": "pants",
+      "style_features": {
+        "pants_length_ratio": 0.8634946346282959,
+        "trouser_thigh_width_ratio": 0.6140350877192983,
+        "trouser_knee_width_ratio": 0.34210526315789475,
+        "trouser_hem_width_ratio": 0.17763157894736842,
+        "trouser_hem_to_thigh_ratio": 0.28928571428571426,
+        "trouser_lower_leg_fullness": 0.24944743749136625,
+        "trouser_lower_width_slope": -0.8196240952474898
+      },
+      "quality": {
+        "pants_length_entropy": 0.7355737183729438,
+        "trouser_geometry_quality": "good",
+        "trouser_geometry_valid": true
+      }
+    },
+    {
+      "source_image": "../fashion_data/raw/train/train/image/063238.jpg",
+      "garment_id": "item2_long_sleeve_top",
+      "garment_category": "top",
+      "style_features": {
+        "sleeve_length_ratio": 0.42568132281303406,
+        "neckline_depth_score": 0.2469957172870636,
+        "neckline_width_score": 0.5151504874229431,
+        "collar_height_score": 0.4815857708454132,
+        "garment_length_proxy": 0.478125,
+        "waist_to_chest_ratio": 1.0279720279720281,
+        "hem_to_chest_ratio": 0.8181818181818183,
+        "lower_taper_slope": -0.8665695332260925
+      },
+      "quality": {
+        "sleeve_entropy": 0.8969862989098094,
+        "depth_entropy": 0.807241567969492,
+        "width_entropy": 0.8989320470300012,
+        "collar_entropy": 0.8856872692321657,
+        "arm_contamination_ratio": 0.0,
+        "upper_geometry_quality": "good",
+        "upper_geometry_valid": true
+      }
+    },
+    {
+      "source_image": "../fashion_data/raw/train/train/image/063723.jpg",
+      "garment_id": "item1_vest_dress",
+      "garment_category": "dress",
+      "style_features": {
+        "sleeve_length_ratio": 0.2618269622325897,
+        "lower_garment_length_score": 0.8426764607429504,
+        "neckline_depth_score": 0.44484037160873413,
+        "neckline_width_score": 0.6455058455467224,
+        "collar_height_score": 0.379459023475647
+      },
+      "quality": {
+        "sleeve_entropy": 0.7610886266251389,
+        "lower_garment_length_entropy": 0.6808902565902337,
+        "depth_entropy": 0.7983774468949959,
+        "width_entropy": 0.869224790449001,
+        "collar_entropy": 0.9111283796032309
+      }
+    },
+    {
+      "source_image": "../fashion_data/raw/train/train/image/065162.jpg",
+      "garment_id": "item1_trousers",
+      "garment_category": "pants",
+      "style_features": {
+        "pants_length_ratio": 0.8352247476577759,
+        "trouser_thigh_width_ratio": 0.9371428571428572,
+        "trouser_knee_width_ratio": 0.6342857142857142,
+        "trouser_hem_width_ratio": 0.3942857142857143,
+        "trouser_hem_to_thigh_ratio": 0.42073170731707316,
+        "trouser_lower_leg_fullness": 0.49200828157349896,
+        "trouser_lower_width_slope": -1.07561195686963
+      },
+      "quality": {
+        "pants_length_entropy": 0.7931094366806595,
+        "trouser_geometry_quality": "good",
+        "trouser_geometry_valid": true
+      }
+    },
+    {
+      "source_image": "../fashion_data/raw/train/train/image/068031.jpg",
+      "garment_id": "item1_long_sleeve_top",
+      "garment_category": "top",
+      "style_features": {
+        "sleeve_length_ratio": 0.4893404245376587,
+        "neckline_depth_score": 0.3883216977119446,
+        "neckline_width_score": 0.5802202224731445,
+        "collar_height_score": 0.5554819107055664,
+        "garment_length_proxy": 0.4794007490636704,
+        "waist_to_chest_ratio": 1.6455696202531644,
+        "hem_to_chest_ratio": 0.43037974683544306,
+        "lower_taper_slope": -1.431541270296078
+      },
+      "quality": {
+        "sleeve_entropy": 0.9498374340009672,
+        "depth_entropy": 0.9008724299017075,
+        "width_entropy": 0.954178407131636,
+        "collar_entropy": 0.9266015201408948,
+        "arm_contamination_ratio": 0.0,
+        "upper_geometry_quality": "good",
+        "upper_geometry_valid": true
+      }
+    },
+    {
+      "source_image": "../fashion_data/raw/train/train/image/068031.jpg",
+      "garment_id": "item2_trousers",
+      "garment_category": "pants",
+      "style_features": {
+        "pants_length_ratio": 0.861879289150238,
+        "trouser_thigh_width_ratio": 0.7008196721311475,
+        "trouser_knee_width_ratio": 0.22950819672131148,
+        "trouser_hem_width_ratio": 0.1885245901639344,
+        "trouser_hem_to_thigh_ratio": 0.26900584795321636,
+        "trouser_lower_leg_fullness": 0.20917711346833814,
+        "trouser_lower_width_slope": -0.8777438546912607
+      },
+      "quality": {
+        "pants_length_entropy": 0.7316263364365612,
+        "trouser_geometry_quality": "usable",
+        "trouser_geometry_valid": true
+      }
+    },
+    {
+      "source_image": "../fashion_data/raw/train/train/image/070475.jpg",
+      "garment_id": "item1_shorts",
+      "garment_category": "pants",
+      "style_features": {
+        "pants_length_ratio": 0.8518258929252625
+      },
+      "quality": {
+        "pants_length_entropy": 0.7299078300645676
+      }
+    },
+    {
+      "source_image": "../fashion_data/raw/train/train/image/070475.jpg",
+      "garment_id": "item2_short_sleeve_top",
+      "garment_category": "top",
+      "style_features": {
+        "sleeve_length_ratio": 0.4437078535556793,
+        "neckline_depth_score": 0.48918092250823975,
+        "neckline_width_score": 0.38416793942451477,
+        "collar_height_score": 0.6245648264884949,
+        "garment_length_proxy": 0.44545454545454544,
+        "waist_to_chest_ratio": 0.7911764705882353,
+        "hem_to_chest_ratio": 0.2,
+        "lower_taper_slope": -1.9899438611431708
+      },
+      "quality": {
+        "sleeve_entropy": 0.9499440182189609,
+        "depth_entropy": 0.9247604636588881,
+        "width_entropy": 0.9102546629045766,
+        "collar_entropy": 0.8112155864531221,
+        "arm_contamination_ratio": 0.0,
+        "upper_geometry_quality": "usable",
+        "upper_geometry_valid": true
+      }
+    },
+    {
+      "source_image": "../fashion_data/raw/train/train/image/073497.jpg",
+      "garment_id": "item1_trousers",
+      "garment_category": "pants",
+      "style_features": {
+        "pants_length_ratio": 0.8765238523483276,
+        "trouser_thigh_width_ratio": 0.8803191489361701,
+        "trouser_knee_width_ratio": 0.7101063829787234,
+        "trouser_hem_width_ratio": 0.5372340425531915,
+        "trouser_hem_to_thigh_ratio": 0.610271903323263,
+        "trouser_lower_leg_fullness": 0.6096563011456628,
+        "trouser_lower_width_slope": -0.6920378079724064
+      },
+      "quality": {
+        "pants_length_entropy": 0.689351582029461,
+        "trouser_geometry_quality": "good",
+        "trouser_geometry_valid": true
+      }
+    },
+    {
+      "source_image": "../fashion_data/raw/train/train/image/073497.jpg",
+      "garment_id": "item2_short_sleeve_top",
+      "garment_category": "top",
+      "style_features": {
+        "sleeve_length_ratio": 0.5461874604225159,
+        "neckline_depth_score": 0.35861361026763916,
+        "neckline_width_score": 0.4345918297767639,
+        "collar_height_score": 0.6878646612167358,
+        "garment_length_proxy": 0.5179640718562875,
+        "waist_to_chest_ratio": 1.05,
+        "hem_to_chest_ratio": 1.1214285714285714,
+        "lower_taper_slope": -0.3637847066976808
+      },
+      "quality": {
+        "sleeve_entropy": 0.916304655155169,
+        "depth_entropy": 0.9271243724786196,
+        "width_entropy": 0.974283446088285,
+        "collar_entropy": 0.8035093844317001,
+        "arm_contamination_ratio": 0.0,
+        "upper_geometry_quality": "good",
+        "upper_geometry_valid": true
+      }
+    },
+    {
+      "source_image": "../fashion_data/raw/train/train/image/078693.jpg",
+      "garment_id": "item1_short_sleeve_top",
+      "garment_category": "top",
+      "style_features": {
+        "sleeve_length_ratio": 0.455962210893631,
+        "neckline_depth_score": 0.4582887291908264,
+        "neckline_width_score": 0.48345088958740234,
+        "collar_height_score": 0.3655661344528198,
+        "garment_length_proxy": 0.4185022026431718,
+        "waist_to_chest_ratio": 0.9230769230769231,
+        "hem_to_chest_ratio": 0.517094017094017,
+        "lower_taper_slope": -1.5215348288075563
+      },
+      "quality": {
+        "sleeve_entropy": 0.8995065299819683,
+        "depth_entropy": 0.8577442596878937,
+        "width_entropy": 0.9829463960409139,
+        "collar_entropy": 0.8854295094736613,
+        "arm_contamination_ratio": 0.0,
+        "upper_geometry_quality": "usable",
+        "upper_geometry_valid": true
+      }
+    },
+    {
+      "source_image": "../fashion_data/raw/train/train/image/078693.jpg",
+      "garment_id": "item2_skirt",
+      "garment_category": "skirt",
+      "style_features": {
+        "lower_garment_length_score": 0.5680780410766602,
+        "skirt_flare_score": 0.08010563380281686,
+        "skirt_hem_to_waist_ratio": 1.028169014084507
+      },
+      "quality": {
+        "lower_garment_length_entropy": 0.7989833745721221
+      }
+    },
+    {
+      "source_image": "../fashion_data/raw/train/train/image/079537.jpg",
+      "garment_id": "item1_shorts",
+      "garment_category": "pants",
+      "style_features": {
+        "pants_length_ratio": 0.7340024709701538
+      },
+      "quality": {
+        "pants_length_entropy": 0.8426650539069905
+      }
+    },
+    {
+      "source_image": "../fashion_data/raw/train/train/image/079537.jpg",
+      "garment_id": "item2_vest",
+      "garment_category": "top",
+      "style_features": {
+        "sleeve_length_ratio": 0.4577547013759613,
+        "neckline_depth_score": 0.45183297991752625,
+        "neckline_width_score": 0.5471343994140625,
+        "collar_height_score": 0.3899015188217163,
+        "garment_length_proxy": 0.6116279069767442,
+        "waist_to_chest_ratio": 1.0,
+        "hem_to_chest_ratio": 1.1605839416058392,
+        "lower_taper_slope": -0.08481761438386645
+      },
+      "quality": {
+        "sleeve_entropy": 0.9644495847257293,
+        "depth_entropy": 0.858724857803652,
+        "width_entropy": 0.9537788795059543,
+        "collar_entropy": 0.9379135441633247,
+        "arm_contamination_ratio": 0.0,
+        "upper_geometry_quality": "good",
+        "upper_geometry_valid": true
+      }
+    },
+    {
+      "source_image": "../fashion_data/raw/train/train/image/085026.jpg",
+      "garment_id": "item1_vest_dress",
+      "garment_category": "dress",
+      "style_features": {
+        "sleeve_length_ratio": 0.3531918227672577,
+        "lower_garment_length_score": 0.6615478992462158,
+        "neckline_depth_score": 0.21535177528858185,
+        "neckline_width_score": 0.5616166591644287,
+        "collar_height_score": 0.37627387046813965
+      },
+      "quality": {
+        "sleeve_entropy": 0.9434659997711546,
+        "lower_garment_length_entropy": 0.7331194508138482,
+        "depth_entropy": 0.7661497739167585,
+        "width_entropy": 0.938340773556156,
+        "collar_entropy": 0.917323279868181
+      }
+    },
+    {
+      "source_image": "../fashion_data/raw/train/train/image/089313.jpg",
+      "garment_id": "item1_sling_dress",
+      "garment_category": "dress",
+      "style_features": {
+        "sleeve_length_ratio": 0.32777488231658936,
+        "lower_garment_length_score": 0.7387988567352295,
+        "neckline_depth_score": 0.3700783848762512,
+        "neckline_width_score": 0.44706258177757263,
+        "collar_height_score": 0.4226807951927185
+      },
+      "quality": {
+        "sleeve_entropy": 0.838312684883886,
+        "lower_garment_length_entropy": 0.8286879703223302,
+        "depth_entropy": 0.8268916757661601,
+        "width_entropy": 0.9610317058142139,
+        "collar_entropy": 0.9317978976172251
+      }
+    },
+    {
+      "source_image": "../fashion_data/raw/train/train/image/092719.jpg",
+      "garment_id": "item1_long_sleeve_outwear",
+      "garment_category": "outerwear",
+      "style_features": {
+        "sleeve_length_ratio": 0.5303479433059692,
+        "neckline_depth_score": 0.4447152614593506,
+        "neckline_width_score": 0.4951450824737549,
+        "collar_height_score": 0.4694448709487915,
+        "garment_length_proxy": 0.5490196078431373,
+        "waist_to_chest_ratio": 1.1703470031545742,
+        "hem_to_chest_ratio": 0.3659305993690852,
+        "lower_taper_slope": -1.8129286070430235
+      },
+      "quality": {
+        "sleeve_entropy": 0.9098928360187882,
+        "depth_entropy": 0.8652215147514029,
+        "width_entropy": 0.9980940778490182,
+        "collar_entropy": 0.9416332100576721,
+        "arm_contamination_ratio": 0.0,
+        "upper_geometry_quality": "usable",
+        "upper_geometry_valid": true
+      }
+    },
+    {
+      "source_image": "../fashion_data/raw/train/train/image/095730.jpg",
+      "garment_id": "item1_shorts",
+      "garment_category": "pants",
+      "style_features": {
+        "pants_length_ratio": 0.4470367133617401
+      },
+      "quality": {
+        "pants_length_entropy": 0.8200094646628041
+      }
+    },
+    {
+      "source_image": "../fashion_data/raw/train/train/image/096778.jpg",
+      "garment_id": "item1_short_sleeve_top",
+      "garment_category": "top",
+      "style_features": {
+        "sleeve_length_ratio": 0.39105215668678284,
+        "neckline_depth_score": 0.30510473251342773,
+        "neckline_width_score": 0.4036526083946228,
+        "collar_height_score": 0.3570190668106079,
+        "garment_length_proxy": 0.41294642857142855,
+        "waist_to_chest_ratio": 1.05175983436853,
+        "hem_to_chest_ratio": 0.6480331262939959,
+        "lower_taper_slope": -1.2357987988669497
+      },
+      "quality": {
+        "sleeve_entropy": 0.9142084323359897,
+        "depth_entropy": 0.8618350107518119,
+        "width_entropy": 0.9537430301602313,
+        "collar_entropy": 0.8953833321479033,
+        "arm_contamination_ratio": 0.0,
+        "upper_geometry_quality": "good",
+        "upper_geometry_valid": true
+      }
+    },
+    {
+      "source_image": "../fashion_data/raw/train/train/image/096778.jpg",
+      "garment_id": "item2_sling_dress",
+      "garment_category": "dress",
+      "style_features": {
+        "sleeve_length_ratio": 0.15469776093959808,
+        "lower_garment_length_score": 0.5649734139442444,
+        "neckline_depth_score": 0.3520394563674927,
+        "neckline_width_score": 0.4844626188278198,
+        "collar_height_score": 0.4784829616546631
+      },
+      "quality": {
+        "sleeve_entropy": 0.682243317290194,
+        "lower_garment_length_entropy": 0.8825573772339578,
+        "depth_entropy": 0.8926417460268461,
+        "width_entropy": 0.8850239822673938,
+        "collar_entropy": 0.8939010653987112
+      }
+    },
+    {
+      "source_image": "../fashion_data/raw/train/train/image/096870.jpg",
+      "garment_id": "item1_long_sleeve_top",
+      "garment_category": "top",
+      "style_features": {
+        "sleeve_length_ratio": 0.5902000665664673,
+        "neckline_depth_score": 0.3936900794506073,
+        "neckline_width_score": 0.468092143535614,
+        "collar_height_score": 0.40053537487983704,
+        "garment_length_proxy": 0.5887096774193549,
+        "waist_to_chest_ratio": 0.8740740740740741,
+        "hem_to_chest_ratio": 0.5481481481481482,
+        "lower_taper_slope": -1.2870763317848837
+      },
+      "quality": {
+        "sleeve_entropy": 0.8611282276677081,
+        "depth_entropy": 0.8395828626343804,
+        "width_entropy": 0.914479182394891,
+        "collar_entropy": 0.898642733921749,
+        "arm_contamination_ratio": 0.0,
+        "upper_geometry_quality": "good",
+        "upper_geometry_valid": true
+      }
+    },
+    {
+      "source_image": "../fashion_data/raw/train/train/image/096870.jpg",
+      "garment_id": "item2_trousers",
+      "garment_category": "pants",
+      "style_features": {
+        "pants_length_ratio": 0.7206740379333496,
+        "trouser_thigh_width_ratio": 0.9534883720930233,
+        "trouser_knee_width_ratio": 0.9922480620155039,
+        "trouser_hem_width_ratio": 0.875968992248062,
+        "trouser_hem_to_thigh_ratio": 0.9186991869918699,
+        "trouser_lower_leg_fullness": 0.934154126766986,
+        "trouser_lower_width_slope": -0.1732368747676782
+      },
+      "quality": {
+        "pants_length_entropy": 0.755017185679203,
+        "trouser_geometry_quality": "good",
+        "trouser_geometry_valid": true
+      }
+    },
+    {
+      "source_image": "../fashion_data/raw/train/train/image/098901.jpg",
+      "garment_id": "item1_trousers",
+      "garment_category": "pants",
+      "style_features": {
+        "pants_length_ratio": 0.8930113911628723,
+        "trouser_thigh_width_ratio": 0.5903614457831325,
+        "trouser_knee_width_ratio": 0.3704819277108434,
+        "trouser_hem_width_ratio": 0.23493975903614459,
+        "trouser_hem_to_thigh_ratio": 0.3979591836734694,
+        "trouser_lower_leg_fullness": 0.2867160951498301,
+        "trouser_lower_width_slope": -0.7202383743456335
+      },
+      "quality": {
+        "pants_length_entropy": 0.660652366337382,
+        "trouser_geometry_quality": "good",
+        "trouser_geometry_valid": true
+      }
+    },
+    {
+      "source_image": "../fashion_data/raw/train/train/image/098901.jpg",
+      "garment_id": "item2_long_sleeve_dress",
+      "garment_category": "dress",
+      "style_features": {
+        "sleeve_length_ratio": 0.5582953691482544,
+        "lower_garment_length_score": 0.7445089221000671,
+        "neckline_depth_score": 0.3045746684074402,
+        "neckline_width_score": 0.4935612082481384,
+        "collar_height_score": 0.3620801270008087
+      },
+      "quality": {
+        "sleeve_entropy": 0.8148028144477657,
+        "lower_garment_length_entropy": 0.8481663359586228,
+        "depth_entropy": 0.8487745163675278,
+        "width_entropy": 0.9868404941856285,
+        "collar_entropy": 0.9018467321612954
+      }
+    },
+    {
+      "source_image": "../fashion_data/raw/train/train/image/100266.jpg",
+      "garment_id": "item1_short_sleeve_top",
+      "garment_category": "top",
+      "style_features": {
+        "sleeve_length_ratio": 0.35717514157295227,
+        "neckline_depth_score": 0.4129762649536133,
+        "neckline_width_score": 0.5221267938613892,
+        "collar_height_score": 0.3302757143974304,
+        "garment_length_proxy": 0.5025553662691652,
+        "waist_to_chest_ratio": 1.0701357466063348,
+        "hem_to_chest_ratio": 1.0271493212669682,
+        "lower_taper_slope": -0.5558061102136341
+      },
+      "quality": {
+        "sleeve_entropy": 0.8658498686056432,
+        "depth_entropy": 0.7683182149196243,
+        "width_entropy": 0.8316230487126369,
+        "collar_entropy": 0.8620886226521335,
+        "arm_contamination_ratio": 0.0,
+        "upper_geometry_quality": "good",
+        "upper_geometry_valid": true
+      }
+    },
+    {
+      "source_image": "../fashion_data/raw/train/train/image/100266.jpg",
+      "garment_id": "item2_skirt",
+      "garment_category": "skirt",
+      "style_features": {
+        "lower_garment_length_score": 0.7050961256027222,
+        "skirt_flare_score": 0.1863610478359908,
+        "skirt_hem_to_waist_ratio": 1.1981776765375853
+      },
+      "quality": {
+        "lower_garment_length_entropy": 0.8390868509017224
+      }
+    },
+    {
+      "source_image": "../fashion_data/raw/train/train/image/100840.jpg",
+      "garment_id": "item1_short_sleeve_dress",
+      "garment_category": "dress",
+      "style_features": {
+        "sleeve_length_ratio": 0.6879627108573914,
+        "lower_garment_length_score": 0.7442172169685364,
+        "neckline_depth_score": 0.7903530597686768,
+        "neckline_width_score": 0.5228086709976196,
+        "collar_height_score": 0.42302215099334717
+      },
+      "quality": {
+        "sleeve_entropy": 0.847106747783987,
+        "lower_garment_length_entropy": 0.8777750591382137,
+        "depth_entropy": 0.7344533230615078,
+        "width_entropy": 0.9077163218344779,
+        "collar_entropy": 0.8748250656158842
+      }
+    },
+    {
+      "source_image": "../fashion_data/raw/train/train/image/100840.jpg",
+      "garment_id": "item2_short_sleeve_dress",
+      "garment_category": "dress",
+      "style_features": {
+        "sleeve_length_ratio": 0.6066305637359619,
+        "lower_garment_length_score": 0.5715159177780151,
+        "neckline_depth_score": 0.6312330961227417,
+        "neckline_width_score": 0.5015251636505127,
+        "collar_height_score": 0.4592446982860565
+      },
+      "quality": {
+        "sleeve_entropy": 0.9062057007023158,
+        "lower_garment_length_entropy": 0.8898882024896557,
+        "depth_entropy": 0.9435058939583228,
+        "width_entropy": 0.98734201468127,
+        "collar_entropy": 0.9042175293883662
+      }
+    },
+    {
+      "source_image": "../fashion_data/raw/train/train/image/101034.jpg",
+      "garment_id": "item1_short_sleeve_top",
+      "garment_category": "top",
+      "style_features": {
+        "sleeve_length_ratio": 0.49070024490356445,
+        "neckline_depth_score": 0.3546134829521179,
+        "neckline_width_score": 0.46598517894744873,
+        "collar_height_score": 0.2834746837615967,
+        "garment_length_proxy": 0.509765625,
+        "waist_to_chest_ratio": 0.7165178571428571,
+        "hem_to_chest_ratio": 0.6138392857142857,
+        "lower_taper_slope": -0.8911277270575153
+      },
+      "quality": {
+        "sleeve_entropy": 0.8853407422525368,
+        "depth_entropy": 0.8564193893429607,
+        "width_entropy": 0.9634226497810299,
+        "collar_entropy": 0.8561189659002901,
+        "arm_contamination_ratio": 0.27906976744186046,
+        "upper_geometry_quality": "usable",
+        "upper_geometry_valid": true
+      }
+    },
+    {
+      "source_image": "../fashion_data/raw/train/train/image/101034.jpg",
+      "garment_id": "item2_sling_dress",
+      "garment_category": "dress",
+      "style_features": {
+        "sleeve_length_ratio": 0.12389831244945526,
+        "lower_garment_length_score": 0.45859479904174805,
+        "neckline_depth_score": 0.29430481791496277,
+        "neckline_width_score": 0.3561643064022064,
+        "collar_height_score": 0.41625547409057617
+      },
+      "quality": {
+        "sleeve_entropy": 0.6095663200767382,
+        "lower_garment_length_entropy": 0.8506676719509377,
+        "depth_entropy": 0.8180540713564756,
+        "width_entropy": 0.8614020039850832,
+        "collar_entropy": 0.9189757569406612
+      }
+    },
+    {
+      "source_image": "../fashion_data/raw/train/train/image/106191.jpg",
+      "garment_id": "item1_short_sleeve_top",
+      "garment_category": "top",
+      "style_features": {
+        "sleeve_length_ratio": 0.5275041460990906,
+        "neckline_depth_score": 0.49751943349838257,
+        "neckline_width_score": 0.48302173614501953,
+        "collar_height_score": 0.48643702268600464,
+        "garment_length_proxy": 0.558645707376058,
+        "waist_to_chest_ratio": 1.977272727272727,
+        "hem_to_chest_ratio": 1.7244318181818183,
+        "lower_taper_slope": -1.2211197278681818
+      },
+      "quality": {
+        "sleeve_entropy": 0.9379071870385792,
+        "depth_entropy": 0.9270322307718438,
+        "width_entropy": 0.949528287764205,
+        "collar_entropy": 0.9769130400384058,
+        "arm_contamination_ratio": 0.0,
+        "upper_geometry_quality": "usable",
+        "upper_geometry_valid": true
+      }
+    },
+    {
+      "source_image": "../fashion_data/raw/train/train/image/106191.jpg",
+      "garment_id": "item2_skirt",
+      "garment_category": "skirt",
+      "style_features": {
+        "lower_garment_length_score": 0.6347243785858154,
+        "skirt_flare_score": 1.0,
+        "skirt_hem_to_waist_ratio": 5.72093023255814
+      },
+      "quality": {
+        "lower_garment_length_entropy": 0.9390045653729032
+      }
+    },
+    {
+      "source_image": "../fashion_data/raw/train/train/image/106726.jpg",
+      "garment_id": "item1_short_sleeve_top",
+      "garment_category": "top",
+      "style_features": {
+        "sleeve_length_ratio": 0.47465717792510986,
+        "neckline_depth_score": 0.4356558918952942,
+        "neckline_width_score": 0.46770477294921875,
+        "collar_height_score": 0.4668162167072296,
+        "garment_length_proxy": 0.5425950196592398,
+        "waist_to_chest_ratio": 0.878003696857671,
+        "hem_to_chest_ratio": 0.7356746765249538,
+        "lower_taper_slope": -1.0164063001129064
+      },
+      "quality": {
+        "sleeve_entropy": 0.9224273263443585,
+        "depth_entropy": 0.8393311024564619,
+        "width_entropy": 0.9210794617283163,
+        "collar_entropy": 0.9580562841880997,
+        "arm_contamination_ratio": 0.0,
+        "upper_geometry_quality": "good",
+        "upper_geometry_valid": true
+      }
+    },
+    {
+      "source_image": "../fashion_data/raw/train/train/image/107966.jpg",
+      "garment_id": "item1_vest_dress",
+      "garment_category": "dress",
+      "style_features": {
+        "sleeve_length_ratio": 0.4438059628009796,
+        "lower_garment_length_score": 0.5918242931365967,
+        "neckline_depth_score": 0.797956109046936,
+        "neckline_width_score": 0.46478384733200073,
+        "collar_height_score": 0.6776601672172546
+      },
+      "quality": {
+        "sleeve_entropy": 0.9029834908011612,
+        "lower_garment_length_entropy": 0.952116885869057,
+        "depth_entropy": 0.6570843613417587,
+        "width_entropy": 0.860413036084063,
+        "collar_entropy": 0.7389864135730662
+      }
+    },
+    {
+      "source_image": "../fashion_data/raw/train/train/image/109289.jpg",
+      "garment_id": "item1_vest_dress",
+      "garment_category": "dress",
+      "style_features": {
+        "sleeve_length_ratio": 0.4224313497543335,
+        "lower_garment_length_score": 0.6252684593200684,
+        "neckline_depth_score": 0.4095260500907898,
+        "neckline_width_score": 0.5026246905326843,
+        "collar_height_score": 0.4486139714717865
+      },
+      "quality": {
+        "sleeve_entropy": 0.9250750992054649,
+        "lower_garment_length_entropy": 0.8635622333050857,
+        "depth_entropy": 0.9260144500702324,
+        "width_entropy": 0.9153377890387364,
+        "collar_entropy": 0.8921079314924953
+      }
+    },
+    {
+      "source_image": "../fashion_data/raw/train/train/image/114238.jpg",
+      "garment_id": "item1_long_sleeve_outwear",
+      "garment_category": "outerwear",
+      "style_features": {
+        "sleeve_length_ratio": 0.5411843657493591,
+        "neckline_depth_score": 0.7220467329025269,
+        "neckline_width_score": 0.39229968190193176,
+        "collar_height_score": 0.5168951153755188,
+        "garment_length_proxy": null,
+        "waist_to_chest_ratio": null,
+        "hem_to_chest_ratio": null,
+        "lower_taper_slope": null
+      },
+      "quality": {
+        "sleeve_entropy": 0.9106027986843376,
+        "depth_entropy": 0.8113146906361333,
+        "width_entropy": 0.8918771328121794,
+        "collar_entropy": 0.9637267766685066,
+        "arm_contamination_ratio": 1.0,
+        "upper_geometry_quality": "weak",
+        "upper_geometry_valid": false,
+        "validity_gating_applied": [
+          "upper_geometry"
+        ]
+      }
+    },
+    {
+      "source_image": "../fashion_data/raw/train/train/image/114238.jpg",
+      "garment_id": "item2_skirt",
+      "garment_category": "skirt",
+      "style_features": {
+        "lower_garment_length_score": 0.6041522026062012,
+        "skirt_flare_score": 0.0,
+        "skirt_hem_to_waist_ratio": 0.7055702917771883
+      },
+      "quality": {
+        "lower_garment_length_entropy": 0.7905948905689556
+      }
+    },
+    {
+      "source_image": "../fashion_data/raw/train/train/image/114612.jpg",
+      "garment_id": "item1_long_sleeve_outwear",
+      "garment_category": "outerwear",
+      "style_features": {
+        "sleeve_length_ratio": 0.48961126804351807,
+        "neckline_depth_score": 0.41655436158180237,
+        "neckline_width_score": 0.5777584314346313,
+        "collar_height_score": 0.7018526792526245,
+        "garment_length_proxy": 0.44654088050314467,
+        "waist_to_chest_ratio": 1.6383763837638377,
+        "hem_to_chest_ratio": 0.981549815498155,
+        "lower_taper_slope": -0.5004512020331771
+      },
+      "quality": {
+        "sleeve_entropy": 0.9275126975692918,
+        "depth_entropy": 0.9018601386314935,
+        "width_entropy": 0.9419591132006085,
+        "collar_entropy": 0.8495831265064908,
+        "arm_contamination_ratio": 0.5376344086021505,
+        "upper_geometry_quality": "usable",
+        "upper_geometry_valid": true
+      }
+    },
+    {
+      "source_image": "../fashion_data/raw/train/train/image/114803.jpg",
+      "garment_id": "item1_short_sleeve_top",
+      "garment_category": "top",
+      "style_features": {
+        "sleeve_length_ratio": 0.5455273389816284,
+        "neckline_depth_score": 0.44291937351226807,
+        "neckline_width_score": 0.475885808467865,
+        "collar_height_score": 0.5047705769538879,
+        "garment_length_proxy": 0.6151288445552785,
+        "waist_to_chest_ratio": 0.9632034632034632,
+        "hem_to_chest_ratio": 0.9696969696969697,
+        "lower_taper_slope": -0.7114448973918576
+      },
+      "quality": {
+        "sleeve_entropy": 0.8696640799872641,
+        "depth_entropy": 0.9199237647421259,
+        "width_entropy": 0.9323113432051423,
+        "collar_entropy": 0.885620681294552,
+        "arm_contamination_ratio": 0.0,
+        "upper_geometry_quality": "good",
+        "upper_geometry_valid": true
+      }
+    },
+    {
+      "source_image": "../fashion_data/raw/train/train/image/115186.jpg",
+      "garment_id": "item1_short_sleeve_top",
+      "garment_category": "top",
+      "style_features": {
+        "sleeve_length_ratio": 0.36962196230888367,
+        "neckline_depth_score": 0.3670941889286041,
+        "neckline_width_score": 0.5139262676239014,
+        "collar_height_score": 0.7400757074356079,
+        "garment_length_proxy": 0.6220657276995305,
+        "waist_to_chest_ratio": 0.8676470588235294,
+        "hem_to_chest_ratio": 0.6176470588235293,
+        "lower_taper_slope": -1.029722448714608
+      },
+      "quality": {
+        "sleeve_entropy": 0.8444193883999679,
+        "depth_entropy": 0.906993483477224,
+        "width_entropy": 0.9417112786741846,
+        "collar_entropy": 0.7211737328824949,
+        "arm_contamination_ratio": 0.0,
+        "upper_geometry_quality": "good",
+        "upper_geometry_valid": true
+      }
+    },
+    {
+      "source_image": "../fashion_data/raw/train/train/image/115186.jpg",
+      "garment_id": "item2_trousers",
+      "garment_category": "pants",
+      "style_features": {
+        "pants_length_ratio": 0.8514972925186157,
+        "trouser_thigh_width_ratio": 0.5512367491166078,
+        "trouser_knee_width_ratio": 0.5406360424028268,
+        "trouser_hem_width_ratio": 0.5017667844522968,
+        "trouser_hem_to_thigh_ratio": 0.9102564102564102,
+        "trouser_lower_leg_fullness": 0.5146082909592347,
+        "trouser_lower_width_slope": -0.11360562285323028
+      },
+      "quality": {
+        "pants_length_entropy": 0.693363165972041,
+        "trouser_geometry_quality": "good",
+        "trouser_geometry_valid": true
+      }
+    },
+    {
+      "source_image": "../fashion_data/raw/train/train/image/117170.jpg",
+      "garment_id": "item1_long_sleeve_outwear",
+      "garment_category": "outerwear",
+      "style_features": {
+        "sleeve_length_ratio": 0.5779293775558472,
+        "neckline_depth_score": 0.4222763776779175,
+        "neckline_width_score": 0.5369566082954407,
+        "collar_height_score": 0.7504266500473022,
+        "garment_length_proxy": null,
+        "waist_to_chest_ratio": null,
+        "hem_to_chest_ratio": null,
+        "lower_taper_slope": null
+      },
+      "quality": {
+        "sleeve_entropy": 0.9036725624277281,
+        "depth_entropy": 0.9308917387420694,
+        "width_entropy": 0.8927001123169902,
+        "collar_entropy": 0.7926302190382067,
+        "arm_contamination_ratio": 1.0,
+        "upper_geometry_quality": "weak",
+        "upper_geometry_valid": false,
+        "validity_gating_applied": [
+          "upper_geometry"
+        ]
+      }
+    },
+    {
+      "source_image": "../fashion_data/raw/train/train/image/117170.jpg",
+      "garment_id": "item2_trousers",
+      "garment_category": "pants",
+      "style_features": {
+        "pants_length_ratio": 0.8536207675933838,
+        "trouser_thigh_width_ratio": 0.867816091954023,
+        "trouser_knee_width_ratio": 0.6091954022988506,
+        "trouser_hem_width_ratio": 0.3850574712643678,
+        "trouser_hem_to_thigh_ratio": 0.44370860927152317,
+        "trouser_lower_leg_fullness": 0.4738020600089565,
+        "trouser_lower_width_slope": -0.9221244702466108
+      },
+      "quality": {
+        "pants_length_entropy": 0.752864090536251,
+        "trouser_geometry_quality": "good",
+        "trouser_geometry_valid": true
+      }
+    },
+    {
+      "source_image": "../fashion_data/raw/train/train/image/117350.jpg",
+      "garment_id": "item1_trousers",
+      "garment_category": "pants",
+      "style_features": {
+        "pants_length_ratio": 0.7760740518569946,
+        "trouser_thigh_width_ratio": 0.868020304568528,
+        "trouser_knee_width_ratio": 0.7055837563451777,
+        "trouser_hem_width_ratio": 0.467005076142132,
+        "trouser_hem_to_thigh_ratio": 0.5380116959064327,
+        "trouser_lower_leg_fullness": 0.5641232240217011,
+        "trouser_lower_width_slope": -0.8551642021560332
+      },
+      "quality": {
+        "pants_length_entropy": 0.7123643255638485,
+        "trouser_geometry_quality": "good",
+        "trouser_geometry_valid": true
+      }
+    },
+    {
+      "source_image": "../fashion_data/raw/train/train/image/117350.jpg",
+      "garment_id": "item2_short_sleeve_top",
+      "garment_category": "top",
+      "style_features": {
+        "sleeve_length_ratio": 0.3816239535808563,
+        "neckline_depth_score": 0.614386796951294,
+        "neckline_width_score": 0.4130084812641144,
+        "collar_height_score": 0.8348290324211121,
+        "garment_length_proxy": null,
+        "waist_to_chest_ratio": null,
+        "hem_to_chest_ratio": null,
+        "lower_taper_slope": null
+      },
+      "quality": {
+        "sleeve_entropy": 0.8427987361115117,
+        "depth_entropy": 0.759252404240988,
+        "width_entropy": 0.8893699747473481,
+        "collar_entropy": 0.5768342306662106,
+        "arm_contamination_ratio": 0.9,
+        "upper_geometry_quality": "weak",
+        "upper_geometry_valid": false,
+        "validity_gating_applied": [
+          "upper_geometry"
+        ]
+      }
+    },
+    {
+      "source_image": "../fashion_data/raw/train/train/image/118838.jpg",
+      "garment_id": "item1_short_sleeve_top",
+      "garment_category": "top",
+      "style_features": {
+        "sleeve_length_ratio": 0.47545126080513,
+        "neckline_depth_score": 0.560718297958374,
+        "neckline_width_score": 0.6140553951263428,
+        "collar_height_score": 0.46611881256103516,
+        "garment_length_proxy": 0.5457627118644067,
+        "waist_to_chest_ratio": 1.0,
+        "hem_to_chest_ratio": 1.056338028169014,
+        "lower_taper_slope": -0.16136388020412273
+      },
+      "quality": {
+        "sleeve_entropy": 0.7960873709261629,
+        "depth_entropy": 0.9233136018420423,
+        "width_entropy": 0.8857079344541836,
+        "collar_entropy": 0.9285361256387036,
+        "arm_contamination_ratio": 0.20754716981132076,
+        "upper_geometry_quality": "good",
+        "upper_geometry_valid": true
+      }
+    },
+    {
+      "source_image": "../fashion_data/raw/train/train/image/118838.jpg",
+      "garment_id": "item2_skirt",
+      "garment_category": "skirt",
+      "style_features": {
+        "lower_garment_length_score": 0.39842137694358826,
+        "skirt_flare_score": 0.0,
+        "skirt_hem_to_waist_ratio": 0.7441860465116279
+      },
+      "quality": {
+        "lower_garment_length_entropy": 0.7596975096376053
+      }
+    },
+    {
+      "source_image": "../fashion_data/raw/train/train/image/120729.jpg",
+      "garment_id": "item1_long_sleeve_top",
+      "garment_category": "top",
+      "style_features": {
+        "sleeve_length_ratio": 0.8314129114151001,
+        "neckline_depth_score": 0.5398520827293396,
+        "neckline_width_score": 0.4921911656856537,
+        "collar_height_score": 0.4851708710193634,
+        "garment_length_proxy": 0.504,
+        "waist_to_chest_ratio": 1.0986547085201794,
+        "hem_to_chest_ratio": 0.8116591928251121,
+        "lower_taper_slope": -1.176048563600892
+      },
+      "quality": {
+        "sleeve_entropy": 0.6224808410222709,
+        "depth_entropy": 0.7705397633210094,
+        "width_entropy": 0.8855161700821239,
+        "collar_entropy": 0.9574513635134719,
+        "arm_contamination_ratio": 0.0,
+        "upper_geometry_quality": "good",
+        "upper_geometry_valid": true
+      }
+    },
+    {
+      "source_image": "../fashion_data/raw/train/train/image/120729.jpg",
+      "garment_id": "item2_sling_dress",
+      "garment_category": "dress",
+      "style_features": {
+        "sleeve_length_ratio": 0.5637562274932861,
+        "lower_garment_length_score": 0.8253901600837708,
+        "neckline_depth_score": 0.6171350479125977,
+        "neckline_width_score": 0.4986337125301361,
+        "collar_height_score": 0.6426825523376465
+      },
+      "quality": {
+        "sleeve_entropy": 0.9031536795837004,
+        "lower_garment_length_entropy": 0.682234335474071,
+        "depth_entropy": 0.7674739035727304,
+        "width_entropy": 0.915099435331016,
+        "collar_entropy": 0.7966362352849615
+      }
+    },
+    {
+      "source_image": "../fashion_data/raw/train/train/image/124892.jpg",
+      "garment_id": "item1_short_sleeve_top",
+      "garment_category": "top",
+      "style_features": {
+        "sleeve_length_ratio": 0.24074703454971313,
+        "neckline_depth_score": 0.5934795141220093,
+        "neckline_width_score": 0.44027191400527954,
+        "collar_height_score": 0.624549388885498,
+        "garment_length_proxy": 0.2543859649122807,
+        "waist_to_chest_ratio": 0.9557235421166307,
+        "hem_to_chest_ratio": 0.8909287257019438,
+        "lower_taper_slope": -0.618666195374722
+      },
+      "quality": {
+        "sleeve_entropy": 0.7834103025861354,
+        "depth_entropy": 0.8871117622423826,
+        "width_entropy": 0.9116608608974515,
+        "collar_entropy": 0.7970889443780588,
+        "arm_contamination_ratio": 0.0,
+        "upper_geometry_quality": "good",
+        "upper_geometry_valid": true
+      }
+    },
+    {
+      "source_image": "../fashion_data/raw/train/train/image/124892.jpg",
+      "garment_id": "item2_shorts",
+      "garment_category": "pants",
+      "style_features": {
+        "pants_length_ratio": 0.26440683007240295
+      },
+      "quality": {
+        "pants_length_entropy": 0.5387696972266791
+      }
+    },
+    {
+      "source_image": "../fashion_data/raw/train/train/image/125082.jpg",
+      "garment_id": "item1_vest",
+      "garment_category": "top",
+      "style_features": {
+        "sleeve_length_ratio": 0.2572024464607239,
+        "neckline_depth_score": 0.5222062468528748,
+        "neckline_width_score": 0.5593299865722656,
+        "collar_height_score": 0.23867569863796234,
+        "garment_length_proxy": 0.571583514099783,
+        "waist_to_chest_ratio": 1.1390845070422537,
+        "hem_to_chest_ratio": 1.3309859154929577,
+        "lower_taper_slope": 0.13198436341446662
+      },
+      "quality": {
+        "sleeve_entropy": 0.7055177976119189,
+        "depth_entropy": 0.7216492551955976,
+        "width_entropy": 0.9362472902761657,
+        "collar_entropy": 0.762530841721137,
+        "arm_contamination_ratio": 0.0,
+        "upper_geometry_quality": "good",
+        "upper_geometry_valid": true
+      }
+    },
+    {
+      "source_image": "../fashion_data/raw/train/train/image/125605.jpg",
+      "garment_id": "item1_sling_dress",
+      "garment_category": "dress",
+      "style_features": {
+        "sleeve_length_ratio": 0.16956986486911774,
+        "lower_garment_length_score": 0.5234538316726685,
+        "neckline_depth_score": 0.3759220242500305,
+        "neckline_width_score": 0.5005488395690918,
+        "collar_height_score": 0.493582159280777
+      },
+      "quality": {
+        "sleeve_entropy": 0.6710760589744671,
+        "lower_garment_length_entropy": 0.8843969862399028,
+        "depth_entropy": 0.8597548598731236,
+        "width_entropy": 0.898324459875113,
+        "collar_entropy": 0.9580698387960901
+      }
+    },
+    {
+      "source_image": "../fashion_data/raw/train/train/image/125887.jpg",
+      "garment_id": "item1_long_sleeve_outwear",
+      "garment_category": "outerwear",
+      "style_features": {
+        "sleeve_length_ratio": 0.29779693484306335,
+        "neckline_depth_score": 0.34999880194664,
+        "neckline_width_score": 0.5751783847808838,
+        "collar_height_score": 0.690426766872406,
+        "garment_length_proxy": 0.5598705501618123,
+        "waist_to_chest_ratio": 0.8726708074534162,
+        "hem_to_chest_ratio": 0.15217391304347827,
+        "lower_taper_slope": -1.8998133643046469
+      },
+      "quality": {
+        "sleeve_entropy": 0.867797791660835,
+        "depth_entropy": 0.8985426668430883,
+        "width_entropy": 0.9766106908044361,
+        "collar_entropy": 0.8581368989062361,
+        "arm_contamination_ratio": 0.0,
+        "upper_geometry_quality": "usable",
+        "upper_geometry_valid": true
+      }
+    },
+    {
+      "source_image": "../fashion_data/raw/train/train/image/127027.jpg",
+      "garment_id": "item1_long_sleeve_outwear",
+      "garment_category": "outerwear",
+      "style_features": {
+        "sleeve_length_ratio": 0.3958774507045746,
+        "neckline_depth_score": 0.44557878375053406,
+        "neckline_width_score": 0.4965285658836365,
+        "collar_height_score": 0.32037872076034546,
+        "garment_length_proxy": 0.6716899892357373,
+        "waist_to_chest_ratio": 0.8582677165354331,
+        "hem_to_chest_ratio": 0.531496062992126,
+        "lower_taper_slope": -1.025600924150993
+      },
+      "quality": {
+        "sleeve_entropy": 0.9621568929953545,
+        "depth_entropy": 0.9100012732109435,
+        "width_entropy": 0.9665160631586663,
+        "collar_entropy": 0.8741912580717689,
+        "arm_contamination_ratio": 0.0,
+        "upper_geometry_quality": "good",
+        "upper_geometry_valid": true
+      }
+    },
+    {
+      "source_image": "../fashion_data/raw/train/train/image/129463.jpg",
+      "garment_id": "item1_short_sleeve_outwear",
+      "garment_category": "outerwear",
+      "style_features": {
+        "sleeve_length_ratio": 0.7057418823242188,
+        "neckline_depth_score": 0.4596412181854248,
+        "neckline_width_score": 0.4561748504638672,
+        "collar_height_score": 0.6212643980979919,
+        "garment_length_proxy": null,
+        "waist_to_chest_ratio": null,
+        "hem_to_chest_ratio": null,
+        "lower_taper_slope": null
+      },
+      "quality": {
+        "sleeve_entropy": 0.8454952769075678,
+        "depth_entropy": 0.9145538438421819,
+        "width_entropy": 0.9231062089329009,
+        "collar_entropy": 0.9486362019793124,
+        "arm_contamination_ratio": 1.0,
+        "upper_geometry_quality": "weak",
+        "upper_geometry_valid": false,
+        "validity_gating_applied": [
+          "upper_geometry"
+        ]
+      }
+    },
+    {
+      "source_image": "../fashion_data/raw/train/train/image/129463.jpg",
+      "garment_id": "item2_skirt",
+      "garment_category": "skirt",
+      "style_features": {
+        "lower_garment_length_score": 0.39059627056121826,
+        "skirt_flare_score": 0.07175925925925926,
+        "skirt_hem_to_waist_ratio": 1.0148148148148148
+      },
+      "quality": {
+        "lower_garment_length_entropy": 0.7004415412670513
+      }
+    },
+    {
+      "source_image": "../fashion_data/raw/train/train/image/131316.jpg",
+      "garment_id": "item1_short_sleeve_top",
+      "garment_category": "top",
+      "style_features": {
+        "sleeve_length_ratio": 0.4664093554019928,
+        "neckline_depth_score": 0.5937763452529907,
+        "neckline_width_score": 0.37922632694244385,
+        "collar_height_score": 0.5711923837661743,
+        "garment_length_proxy": 0.4793152639087018,
+        "waist_to_chest_ratio": 0.9365671641791045,
+        "hem_to_chest_ratio": 0.7238805970149255,
+        "lower_taper_slope": -0.7374402026881957
+      },
+      "quality": {
+        "sleeve_entropy": 0.9945747290664103,
+        "depth_entropy": 0.8687588230234979,
+        "width_entropy": 0.8625934021792044,
+        "collar_entropy": 0.8543601258929787,
+        "arm_contamination_ratio": 0.10810810810810811,
+        "upper_geometry_quality": "good",
+        "upper_geometry_valid": true
+      }
+    },
+    {
+      "source_image": "../fashion_data/raw/train/train/image/131316.jpg",
+      "garment_id": "item2_trousers",
+      "garment_category": "pants",
+      "style_features": {
+        "pants_length_ratio": 0.8549045324325562,
+        "trouser_thigh_width_ratio": 0.7568181818181818,
+        "trouser_knee_width_ratio": 0.7568181818181818,
+        "trouser_hem_width_ratio": 0.4318181818181818,
+        "trouser_hem_to_thigh_ratio": 0.5705705705705706,
+        "trouser_lower_leg_fullness": 0.5652777777777778,
+        "trouser_lower_width_slope": -0.7191735894710591
+      },
+      "quality": {
+        "pants_length_entropy": 0.7159946794639034,
+        "trouser_geometry_quality": "good",
+        "trouser_geometry_valid": true
+      }
+    },
+    {
+      "source_image": "../fashion_data/raw/train/train/image/132240.jpg",
+      "garment_id": "item1_long_sleeve_top",
+      "garment_category": "top",
+      "style_features": {
+        "sleeve_length_ratio": 0.3886990249156952,
+        "neckline_depth_score": 0.2672854959964752,
+        "neckline_width_score": 0.42986664175987244,
+        "collar_height_score": 0.41967713832855225,
+        "garment_length_proxy": 0.5341772151898734,
+        "waist_to_chest_ratio": 0.6614906832298136,
+        "hem_to_chest_ratio": 0.6521739130434783,
+        "lower_taper_slope": -0.7697160481364717
+      },
+      "quality": {
+        "sleeve_entropy": 0.8187848194609597,
+        "depth_entropy": 0.825017584556483,
+        "width_entropy": 0.971837172656066,
+        "collar_entropy": 0.9439385303805711,
+        "arm_contamination_ratio": 0.0,
+        "upper_geometry_quality": "good",
+        "upper_geometry_valid": true
+      }
+    },
+    {
+      "source_image": "../fashion_data/raw/train/train/image/132240.jpg",
+      "garment_id": "item2_shorts",
+      "garment_category": "pants",
+      "style_features": {
+        "pants_length_ratio": 0.6259332299232483
+      },
+      "quality": {
+        "pants_length_entropy": 0.902424011725116
+      }
+    },
+    {
+      "source_image": "../fashion_data/raw/train/train/image/138773.jpg",
+      "garment_id": "item1_skirt",
+      "garment_category": "skirt",
+      "style_features": {
+        "lower_garment_length_score": 0.4401366710662842,
+        "skirt_flare_score": 0.03952205882352941,
+        "skirt_hem_to_waist_ratio": 0.9632352941176471
+      },
+      "quality": {
+        "lower_garment_length_entropy": 0.6371393645310164
+      }
+    },
+    {
+      "source_image": "../fashion_data/raw/train/train/image/138773.jpg",
+      "garment_id": "item2_long_sleeve_top",
+      "garment_category": "top",
+      "style_features": {
+        "sleeve_length_ratio": 0.5208708643913269,
+        "neckline_depth_score": 0.44012755155563354,
+        "neckline_width_score": 0.5067095756530762,
+        "collar_height_score": 0.6170995235443115,
+        "garment_length_proxy": null,
+        "waist_to_chest_ratio": null,
+        "hem_to_chest_ratio": null,
+        "lower_taper_slope": null
+      },
+      "quality": {
+        "sleeve_entropy": 0.8759634600921784,
+        "depth_entropy": 0.8232372645692962,
+        "width_entropy": 0.9381431577413027,
+        "collar_entropy": 0.9252520589224493,
+        "arm_contamination_ratio": 0.6956521739130435,
+        "upper_geometry_quality": "weak",
+        "upper_geometry_valid": false,
+        "validity_gating_applied": [
+          "upper_geometry"
+        ]
+      }
+    },
+    {
+      "source_image": "../fashion_data/raw/train/train/image/139090.jpg",
+      "garment_id": "item1_vest_dress",
+      "garment_category": "dress",
+      "style_features": {
+        "sleeve_length_ratio": 0.385558158159256,
+        "lower_garment_length_score": 0.759462833404541,
+        "neckline_depth_score": 0.33666157722473145,
+        "neckline_width_score": 0.5920072793960571,
+        "collar_height_score": 0.49417227506637573
+      },
+      "quality": {
+        "sleeve_entropy": 0.933885928162329,
+        "lower_garment_length_entropy": 0.8287182423692635,
+        "depth_entropy": 0.8585902746193984,
+        "width_entropy": 0.9092840640897948,
+        "collar_entropy": 0.9135805785471397
+      }
+    },
+    {
+      "source_image": "../fashion_data/raw/train/train/image/139963.jpg",
+      "garment_id": "item1_long_sleeve_top",
+      "garment_category": "top",
+      "style_features": {
+        "sleeve_length_ratio": 0.47730812430381775,
+        "neckline_depth_score": 0.3007296323776245,
+        "neckline_width_score": 0.5720244646072388,
+        "collar_height_score": 0.7278143167495728,
+        "garment_length_proxy": 0.6768558951965066,
+        "waist_to_chest_ratio": 1.025,
+        "hem_to_chest_ratio": 0.9833333333333333,
+        "lower_taper_slope": -0.4650003662198782
+      },
+      "quality": {
+        "sleeve_entropy": 0.9033048402224529,
+        "depth_entropy": 0.8528790442461246,
+        "width_entropy": 0.9484074772280878,
+        "collar_entropy": 0.7455715828516827,
+        "arm_contamination_ratio": 0.0,
+        "upper_geometry_quality": "good",
+        "upper_geometry_valid": true
+      }
+    },
+    {
+      "source_image": "../fashion_data/raw/train/train/image/140224.jpg",
+      "garment_id": "item1_long_sleeve_outwear",
+      "garment_category": "outerwear",
+      "style_features": {
+        "sleeve_length_ratio": 0.5718467235565186,
+        "neckline_depth_score": 0.3016606867313385,
+        "neckline_width_score": 0.41615891456604004,
+        "collar_height_score": 0.6002669334411621,
+        "garment_length_proxy": null,
+        "waist_to_chest_ratio": null,
+        "hem_to_chest_ratio": null,
+        "lower_taper_slope": null
+      },
+      "quality": {
+        "sleeve_entropy": 0.9441691761756331,
+        "depth_entropy": 0.848056048075145,
+        "width_entropy": 0.9726735586310747,
+        "collar_entropy": 0.8759966874147409,
+        "arm_contamination_ratio": 1.0,
+        "upper_geometry_quality": "weak",
+        "upper_geometry_valid": false,
+        "validity_gating_applied": [
+          "upper_geometry"
+        ]
+      }
+    },
+    {
+      "source_image": "../fashion_data/raw/train/train/image/140224.jpg",
+      "garment_id": "item2_skirt",
+      "garment_category": "skirt",
+      "style_features": {
+        "lower_garment_length_score": 0.7024415731430054,
+        "skirt_flare_score": 0.0,
+        "skirt_hem_to_waist_ratio": 0.761904761904762
+      },
+      "quality": {
+        "lower_garment_length_entropy": 0.9233566449192243
+      }
+    },
+    {
+      "source_image": "../fashion_data/raw/train/train/image/141698.jpg",
+      "garment_id": "item1_short_sleeve_dress",
+      "garment_category": "dress",
+      "style_features": {
+        "sleeve_length_ratio": 0.32343852519989014,
+        "lower_garment_length_score": 0.5439280867576599,
+        "neckline_depth_score": 0.3525589406490326,
+        "neckline_width_score": 0.4864065647125244,
+        "collar_height_score": 0.3936760425567627
+      },
+      "quality": {
+        "sleeve_entropy": 0.9154061408830066,
+        "lower_garment_length_entropy": 0.9058737726975903,
+        "depth_entropy": 0.8724194560076362,
+        "width_entropy": 0.9732098915078937,
+        "collar_entropy": 0.9505135522204189
+      }
+    },
+    {
+      "source_image": "../fashion_data/raw/train/train/image/142658.jpg",
+      "garment_id": "item1_long_sleeve_top",
+      "garment_category": "top",
+      "style_features": {
+        "sleeve_length_ratio": 0.46267348527908325,
+        "neckline_depth_score": 0.33949124813079834,
+        "neckline_width_score": 0.5094059705734253,
+        "collar_height_score": 0.5967710018157959,
+        "garment_length_proxy": 0.5459882583170255,
+        "waist_to_chest_ratio": 0.9113924050632912,
+        "hem_to_chest_ratio": 0.6987341772151899,
+        "lower_taper_slope": -0.791605449046851
+      },
+      "quality": {
+        "sleeve_entropy": 0.9687781547773306,
+        "depth_entropy": 0.8794056342898567,
+        "width_entropy": 0.994352635699211,
+        "collar_entropy": 0.8738662437555859,
+        "arm_contamination_ratio": 0.0,
+        "upper_geometry_quality": "good",
+        "upper_geometry_valid": true
+      }
+    },
+    {
+      "source_image": "../fashion_data/raw/train/train/image/142658.jpg",
+      "garment_id": "item2_skirt",
+      "garment_category": "skirt",
+      "style_features": {
+        "lower_garment_length_score": 0.7865855693817139,
+        "skirt_flare_score": 0.0,
+        "skirt_hem_to_waist_ratio": 0.8415492957746478
+      },
+      "quality": {
+        "lower_garment_length_entropy": 0.7414832514556692
+      }
+    },
+    {
+      "source_image": "../fashion_data/raw/train/train/image/146128.jpg",
+      "garment_id": "item1_long_sleeve_outwear",
+      "garment_category": "outerwear",
+      "style_features": {
+        "sleeve_length_ratio": 0.340261310338974,
+        "neckline_depth_score": 0.42958101630210876,
+        "neckline_width_score": 0.5125465393066406,
+        "collar_height_score": 0.7168436050415039,
+        "garment_length_proxy": null,
+        "waist_to_chest_ratio": null,
+        "hem_to_chest_ratio": null,
+        "lower_taper_slope": null
+      },
+      "quality": {
+        "sleeve_entropy": 0.9223560040711443,
+        "depth_entropy": 0.9347801335817825,
+        "width_entropy": 0.927930760550699,
+        "collar_entropy": 0.8390823791032845,
+        "arm_contamination_ratio": 0.7159090909090909,
+        "upper_geometry_quality": "weak",
+        "upper_geometry_valid": false,
+        "validity_gating_applied": [
+          "upper_geometry"
+        ]
+      }
+    },
+    {
+      "source_image": "../fashion_data/raw/train/train/image/147222.jpg",
+      "garment_id": "item1_short_sleeve_top",
+      "garment_category": "top",
+      "style_features": {
+        "sleeve_length_ratio": 0.3315809667110443,
+        "neckline_depth_score": 0.4247831106185913,
+        "neckline_width_score": 0.5233994722366333,
+        "collar_height_score": 0.28193411231040955,
+        "garment_length_proxy": 0.4416,
+        "waist_to_chest_ratio": 0.8919354838709677,
+        "hem_to_chest_ratio": 0.7838709677419354,
+        "lower_taper_slope": -0.9831535218725219
+      },
+      "quality": {
+        "sleeve_entropy": 0.8843905991706597,
+        "depth_entropy": 0.8332001236488651,
+        "width_entropy": 0.9824305802483209,
+        "collar_entropy": 0.8293236539014276,
+        "arm_contamination_ratio": 0.0,
+        "upper_geometry_quality": "good",
+        "upper_geometry_valid": true
+      }
+    },
+    {
+      "source_image": "../fashion_data/raw/train/train/image/147222.jpg",
+      "garment_id": "item2_skirt",
+      "garment_category": "skirt",
+      "style_features": {
+        "lower_garment_length_score": 0.4270065426826477,
+        "skirt_flare_score": 0.37353286384976514,
+        "skirt_hem_to_waist_ratio": 1.4976525821596243
+      },
+      "quality": {
+        "lower_garment_length_entropy": 0.8077593407760345
+      }
+    },
+    {
+      "source_image": "../fashion_data/raw/train/train/image/150224.jpg",
+      "garment_id": "item1_short_sleeve_top",
+      "garment_category": "top",
+      "style_features": {
+        "sleeve_length_ratio": 0.32910072803497314,
+        "neckline_depth_score": 0.3704996705055237,
+        "neckline_width_score": 0.5763754844665527,
+        "collar_height_score": 0.19144251942634583,
+        "garment_length_proxy": 0.581081081081081,
+        "waist_to_chest_ratio": 1.0166666666666666,
+        "hem_to_chest_ratio": 1.1333333333333333,
+        "lower_taper_slope": 0.02152202847030918
+      },
+      "quality": {
+        "sleeve_entropy": 0.5161269567132201,
+        "depth_entropy": 0.8541993963883941,
+        "width_entropy": 0.9631345217751156,
+        "collar_entropy": 0.7116792855020011,
+        "arm_contamination_ratio": 0.0,
+        "upper_geometry_quality": "good",
+        "upper_geometry_valid": true
+      }
+    },
+    {
+      "source_image": "../fashion_data/raw/train/train/image/150224.jpg",
+      "garment_id": "item2_trousers",
+      "garment_category": "pants",
+      "style_features": {
+        "pants_length_ratio": 0.7167655825614929,
+        "trouser_thigh_width_ratio": 0.975609756097561,
+        "trouser_knee_width_ratio": 0.8932926829268293,
+        "trouser_hem_width_ratio": 0.5975609756097561,
+        "trouser_hem_to_thigh_ratio": 0.6124999999999999,
+        "trouser_lower_leg_fullness": 0.7303353658536585,
+        "trouser_lower_width_slope": -0.850902415958453
+      },
+      "quality": {
+        "pants_length_entropy": 0.5971780237178638,
+        "trouser_geometry_quality": "good",
+        "trouser_geometry_valid": true
+      }
+    },
+    {
+      "source_image": "../fashion_data/raw/train/train/image/151092.jpg",
+      "garment_id": "item1_long_sleeve_top",
+      "garment_category": "top",
+      "style_features": {
+        "sleeve_length_ratio": 0.4707507789134979,
+        "neckline_depth_score": 0.3376948833465576,
+        "neckline_width_score": 0.3987928330898285,
+        "collar_height_score": 0.32892635464668274,
+        "garment_length_proxy": 0.5907429963459196,
+        "waist_to_chest_ratio": 1.0081967213114753,
+        "hem_to_chest_ratio": 0.2377049180327869,
+        "lower_taper_slope": -1.432785912448009
+      },
+      "quality": {
+        "sleeve_entropy": 0.8882800582118004,
+        "depth_entropy": 0.8452642432425171,
+        "width_entropy": 0.8847818510459712,
+        "collar_entropy": 0.8890620703461692,
+        "arm_contamination_ratio": 0.0,
+        "upper_geometry_quality": "usable",
+        "upper_geometry_valid": true
+      }
+    },
+    {
+      "source_image": "../fashion_data/raw/train/train/image/151092.jpg",
+      "garment_id": "item2_trousers",
+      "garment_category": "pants",
+      "style_features": {
+        "pants_length_ratio": 0.7082439661026001,
+        "trouser_thigh_width_ratio": 0.8461538461538461,
+        "trouser_knee_width_ratio": 0.8923076923076924,
+        "trouser_hem_width_ratio": 0.7576923076923077,
+        "trouser_hem_to_thigh_ratio": 0.8954545454545454,
+        "trouser_lower_leg_fullness": 0.8150277557494051,
+        "trouser_lower_width_slope": -0.23322304220646417
+      },
+      "quality": {
+        "pants_length_entropy": 0.9420960731615138,
+        "trouser_geometry_quality": "good",
+        "trouser_geometry_valid": true
+      }
+    },
+    {
+      "source_image": "../fashion_data/raw/train/train/image/152326.jpg",
+      "garment_id": "item1_short_sleeve_top",
+      "garment_category": "top",
+      "style_features": {
+        "sleeve_length_ratio": 0.3374076783657074,
+        "neckline_depth_score": 0.548897922039032,
+        "neckline_width_score": 0.45219555497169495,
+        "collar_height_score": 0.48108914494514465,
+        "garment_length_proxy": 0.6044711951848667,
+        "waist_to_chest_ratio": 0.9643652561247216,
+        "hem_to_chest_ratio": 0.8930957683741647,
+        "lower_taper_slope": -1.1161514426513104
+      },
+      "quality": {
+        "sleeve_entropy": 0.902320499707337,
+        "depth_entropy": 0.8505757237834208,
+        "width_entropy": 0.9537856197755014,
+        "collar_entropy": 0.7892754905950522,
+        "arm_contamination_ratio": 0.0,
+        "upper_geometry_quality": "good",
+        "upper_geometry_valid": true
+      }
+    },
+    {
+      "source_image": "../fashion_data/raw/train/train/image/152326.jpg",
+      "garment_id": "item2_trousers",
+      "garment_category": "pants",
+      "style_features": {
+        "pants_length_ratio": 0.8021165132522583,
+        "trouser_thigh_width_ratio": 0.7165071770334928,
+        "trouser_knee_width_ratio": 0.9904306220095693,
+        "trouser_hem_width_ratio": 0.9354066985645934,
+        "trouser_hem_to_thigh_ratio": 1.30550918196995,
+        "trouser_lower_leg_fullness": 0.9413021189336979,
+        "trouser_lower_width_slope": 0.16384761310390603
+      },
+      "quality": {
+        "pants_length_entropy": 0.8037997445885445,
+        "trouser_geometry_quality": "good",
+        "trouser_geometry_valid": true
+      }
+    },
+    {
+      "source_image": "../fashion_data/raw/train/train/image/153938.jpg",
+      "garment_id": "item1_vest_dress",
+      "garment_category": "dress",
+      "style_features": {
+        "sleeve_length_ratio": 0.25474652647972107,
+        "lower_garment_length_score": 0.7115666270256042,
+        "neckline_depth_score": 0.37216314673423767,
+        "neckline_width_score": 0.6139074563980103,
+        "collar_height_score": 0.4021109938621521
+      },
+      "quality": {
+        "sleeve_entropy": 0.8712624440653408,
+        "lower_garment_length_entropy": 0.8721445249405965,
+        "depth_entropy": 0.9303334074031022,
+        "width_entropy": 0.9133928879643667,
+        "collar_entropy": 0.8881756878662781
+      }
+    },
+    {
+      "source_image": "../fashion_data/raw/train/train/image/153938.jpg",
+      "garment_id": "item2_short_sleeve_top",
+      "garment_category": "top",
+      "style_features": {
+        "sleeve_length_ratio": 0.49010369181632996,
+        "neckline_depth_score": 0.3780461549758911,
+        "neckline_width_score": 0.5649175643920898,
+        "collar_height_score": 0.3774280250072479,
+        "garment_length_proxy": 0.4226618705035971,
+        "waist_to_chest_ratio": 0.7142857142857142,
+        "hem_to_chest_ratio": 0.645021645021645,
+        "lower_taper_slope": -0.610940176335428
+      },
+      "quality": {
+        "sleeve_entropy": 0.9620471817747105,
+        "depth_entropy": 0.8548864594688212,
+        "width_entropy": 0.9181198167770762,
+        "collar_entropy": 0.9204282479936123,
+        "arm_contamination_ratio": 0.0641025641025641,
+        "upper_geometry_quality": "usable",
+        "upper_geometry_valid": true
+      }
+    },
+    {
+      "source_image": "../fashion_data/raw/train/train/image/154649.jpg",
+      "garment_id": "item1_short_sleeve_top",
+      "garment_category": "top",
+      "style_features": {
+        "sleeve_length_ratio": 0.42595812678337097,
+        "neckline_depth_score": 0.5818575620651245,
+        "neckline_width_score": 0.4414323568344116,
+        "collar_height_score": 0.7214973568916321,
+        "garment_length_proxy": null,
+        "waist_to_chest_ratio": null,
+        "hem_to_chest_ratio": null,
+        "lower_taper_slope": null
+      },
+      "quality": {
+        "sleeve_entropy": 0.9127757993983762,
+        "depth_entropy": 0.7629654780035806,
+        "width_entropy": 0.9273913908491391,
+        "collar_entropy": 0.7172057139794507,
+        "arm_contamination_ratio": 0.6666666666666666,
+        "upper_geometry_quality": "weak",
+        "upper_geometry_valid": false,
+        "validity_gating_applied": [
+          "upper_geometry"
+        ]
+      }
+    },
+    {
+      "source_image": "../fashion_data/raw/train/train/image/154649.jpg",
+      "garment_id": "item2_skirt",
+      "garment_category": "skirt",
+      "style_features": {
+        "lower_garment_length_score": 0.3575551509857178,
+        "skirt_flare_score": 0.0,
+        "skirt_hem_to_waist_ratio": 0.815068493150685
+      },
+      "quality": {
+        "lower_garment_length_entropy": 0.6115289466975834
+      }
+    },
+    {
+      "source_image": "../fashion_data/raw/train/train/image/156436.jpg",
+      "garment_id": "item1_short_sleeve_dress",
+      "garment_category": "dress",
+      "style_features": {
+        "sleeve_length_ratio": 0.4082547724246979,
+        "lower_garment_length_score": 0.5980342626571655,
+        "neckline_depth_score": 0.34171587228775024,
+        "neckline_width_score": 0.638526439666748,
+        "collar_height_score": 0.756967306137085
+      },
+      "quality": {
+        "sleeve_entropy": 0.8875064909817056,
+        "lower_garment_length_entropy": 0.9362559300433334,
+        "depth_entropy": 0.864216251693236,
+        "width_entropy": 0.7632186454905253,
+        "collar_entropy": 0.7566962125669241
+      }
+    },
+    {
+      "source_image": "../fashion_data/raw/train/train/image/158098.jpg",
+      "garment_id": "item1_long_sleeve_dress",
+      "garment_category": "dress",
+      "style_features": {
+        "sleeve_length_ratio": 0.40739333629608154,
+        "lower_garment_length_score": 0.7105548977851868,
+        "neckline_depth_score": 0.26650989055633545,
+        "neckline_width_score": 0.5426897406578064,
+        "collar_height_score": 0.6472057104110718
+      },
+      "quality": {
+        "sleeve_entropy": 0.7623027685690625,
+        "lower_garment_length_entropy": 0.8348124378747445,
+        "depth_entropy": 0.8353950813165425,
+        "width_entropy": 0.9782089494449552,
+        "collar_entropy": 0.8195227834976774
+      }
+    },
+    {
+      "source_image": "../fashion_data/raw/train/train/image/159352.jpg",
+      "garment_id": "item1_short_sleeve_top",
+      "garment_category": "top",
+      "style_features": {
+        "sleeve_length_ratio": 0.318477600812912,
+        "neckline_depth_score": 0.33126407861709595,
+        "neckline_width_score": 0.5780103206634521,
+        "collar_height_score": 0.6987869739532471,
+        "garment_length_proxy": 0.5015974440894568,
+        "waist_to_chest_ratio": 0.9888888888888889,
+        "hem_to_chest_ratio": 1.0722222222222224,
+        "lower_taper_slope": -0.11231919548111134
+      },
+      "quality": {
+        "sleeve_entropy": 0.6524605464737296,
+        "depth_entropy": 0.8466955505911773,
+        "width_entropy": 0.9104687220143689,
+        "collar_entropy": 0.8546187004093404,
+        "arm_contamination_ratio": 0.11764705882352941,
+        "upper_geometry_quality": "good",
+        "upper_geometry_valid": true
+      }
+    },
+    {
+      "source_image": "../fashion_data/raw/train/train/image/159352.jpg",
+      "garment_id": "item2_skirt",
+      "garment_category": "skirt",
+      "style_features": {
+        "lower_garment_length_score": 0.5899509191513062,
+        "skirt_flare_score": 0.5457713754646839,
+        "skirt_hem_to_waist_ratio": 1.7732342007434942
+      },
+      "quality": {
+        "lower_garment_length_entropy": 0.76503882935606
+      }
+    },
+    {
+      "source_image": "../fashion_data/raw/train/train/image/160585.jpg",
+      "garment_id": "item1_short_sleeve_top",
+      "garment_category": "top",
+      "style_features": {
+        "sleeve_length_ratio": 0.7544767260551453,
+        "neckline_depth_score": 0.4239431619644165,
+        "neckline_width_score": 0.5522645115852356,
+        "collar_height_score": 0.6276975274085999,
+        "garment_length_proxy": 0.4913194444444444,
+        "waist_to_chest_ratio": 0.9326145552560647,
+        "hem_to_chest_ratio": 0.6361185983827493,
+        "lower_taper_slope": -0.8807078409945042
+      },
+      "quality": {
+        "sleeve_entropy": 0.7309464500998096,
+        "depth_entropy": 0.899151216893626,
+        "width_entropy": 0.9801659978182888,
+        "collar_entropy": 0.885345515345459,
+        "arm_contamination_ratio": 0.1595744680851064,
+        "upper_geometry_quality": "good",
+        "upper_geometry_valid": true
+      }
+    },
+    {
+      "source_image": "../fashion_data/raw/train/train/image/160585.jpg",
+      "garment_id": "item2_skirt",
+      "garment_category": "skirt",
+      "style_features": {
+        "lower_garment_length_score": 0.48529252409935,
+        "skirt_flare_score": 0.12037037037037034,
+        "skirt_hem_to_waist_ratio": 1.0925925925925926
+      },
+      "quality": {
+        "lower_garment_length_entropy": 0.7643640621033189
+      }
+    },
+    {
+      "source_image": "../fashion_data/raw/train/train/image/160642.jpg",
+      "garment_id": "item1_long_sleeve_dress",
+      "garment_category": "dress",
+      "style_features": {
+        "sleeve_length_ratio": 0.5181573629379272,
+        "lower_garment_length_score": 0.6022375822067261,
+        "neckline_depth_score": 0.468003511428833,
+        "neckline_width_score": 0.5203306674957275,
+        "collar_height_score": 0.5854960083961487
+      },
+      "quality": {
+        "sleeve_entropy": 0.8144117395205707,
+        "lower_garment_length_entropy": 0.7930246381601712,
+        "depth_entropy": 0.8557631389233205,
+        "width_entropy": 0.9193417313563997,
+        "collar_entropy": 0.9354855657484478
+      }
+    },
+    {
+      "source_image": "../fashion_data/raw/train/train/image/163017.jpg",
+      "garment_id": "item1_trousers",
+      "garment_category": "pants",
+      "style_features": {
+        "pants_length_ratio": 0.6708782911300659,
+        "trouser_thigh_width_ratio": 0.9586776859504132,
+        "trouser_knee_width_ratio": 0.9504132231404959,
+        "trouser_hem_width_ratio": 0.8223140495867769,
+        "trouser_hem_to_thigh_ratio": 0.8577586206896551,
+        "trouser_lower_leg_fullness": 0.8746855910887531,
+        "trouser_lower_width_slope": -0.30108346699293276
+      },
+      "quality": {
+        "pants_length_entropy": 0.8454453438394929,
+        "trouser_geometry_quality": "good",
+        "trouser_geometry_valid": true
+      }
+    },
+    {
+      "source_image": "../fashion_data/raw/train/train/image/163017.jpg",
+      "garment_id": "item2_vest",
+      "garment_category": "top",
+      "style_features": {
+        "sleeve_length_ratio": 0.6454311609268188,
+        "neckline_depth_score": 0.47877272963523865,
+        "neckline_width_score": 0.3756704330444336,
+        "collar_height_score": 0.28736209869384766,
+        "garment_length_proxy": 0.5386313465783664,
+        "waist_to_chest_ratio": 0.8993506493506493,
+        "hem_to_chest_ratio": 0.6785714285714286,
+        "lower_taper_slope": -0.770873374471975
+      },
+      "quality": {
+        "sleeve_entropy": 0.7706601821416404,
+        "depth_entropy": 0.8394233923010299,
+        "width_entropy": 0.8953941462067371,
+        "collar_entropy": 0.8658465821657758,
+        "arm_contamination_ratio": 0.0,
+        "upper_geometry_quality": "good",
+        "upper_geometry_valid": true
+      }
+    },
+    {
+      "source_image": "../fashion_data/raw/train/train/image/165021.jpg",
+      "garment_id": "item1_long_sleeve_top",
+      "garment_category": "top",
+      "style_features": {
+        "sleeve_length_ratio": 0.40465670824050903,
+        "neckline_depth_score": 0.46490687131881714,
+        "neckline_width_score": 0.5608828663825989,
+        "collar_height_score": 0.33225569128990173,
+        "garment_length_proxy": 0.534,
+        "waist_to_chest_ratio": 1.0887978142076502,
+        "hem_to_chest_ratio": 1.2295081967213115,
+        "lower_taper_slope": 0.11641306640798302
+      },
+      "quality": {
+        "sleeve_entropy": 0.8986101447328871,
+        "depth_entropy": 0.8458610904074676,
+        "width_entropy": 0.9539624962994405,
+        "collar_entropy": 0.9076792133175209,
+        "arm_contamination_ratio": 0.0,
+        "upper_geometry_quality": "good",
+        "upper_geometry_valid": true
+      }
+    },
+    {
+      "source_image": "../fashion_data/raw/train/train/image/166948.jpg",
+      "garment_id": "item1_short_sleeve_dress",
+      "garment_category": "dress",
+      "style_features": {
+        "sleeve_length_ratio": 0.47820621728897095,
+        "lower_garment_length_score": 0.740609347820282,
+        "neckline_depth_score": 0.3729485869407654,
+        "neckline_width_score": 0.5511353015899658,
+        "collar_height_score": 0.33698511123657227
+      },
+      "quality": {
+        "sleeve_entropy": 0.8441468069136259,
+        "lower_garment_length_entropy": 0.7996700510477228,
+        "depth_entropy": 0.8912223637704615,
+        "width_entropy": 0.9485680585948802,
+        "collar_entropy": 0.9084255315148454
+      }
+    },
+    {
+      "source_image": "../fashion_data/raw/train/train/image/167373.jpg",
+      "garment_id": "item1_sling_dress",
+      "garment_category": "dress",
+      "style_features": {
+        "sleeve_length_ratio": 0.8082759976387024,
+        "lower_garment_length_score": 0.6634833812713623,
+        "neckline_depth_score": 0.42923617362976074,
+        "neckline_width_score": 0.6000591516494751,
+        "collar_height_score": 0.5431452393531799
+      },
+      "quality": {
+        "sleeve_entropy": 0.6291898584743679,
+        "lower_garment_length_entropy": 0.8588220964791344,
+        "depth_entropy": 0.9076326239818602,
+        "width_entropy": 0.8646312597182072,
+        "collar_entropy": 0.7800574683348854
+      }
+    },
+    {
+      "source_image": "../fashion_data/raw/train/train/image/168724.jpg",
+      "garment_id": "item1_short_sleeve_top",
+      "garment_category": "top",
+      "style_features": {
+        "sleeve_length_ratio": 0.4106464087963104,
+        "neckline_depth_score": 0.5398678779602051,
+        "neckline_width_score": 0.5364411473274231,
+        "collar_height_score": 0.5118607878684998,
+        "garment_length_proxy": 0.4742014742014742,
+        "waist_to_chest_ratio": 1.0454545454545454,
+        "hem_to_chest_ratio": 1.0151515151515151,
+        "lower_taper_slope": -0.736551561698227
+      },
+      "quality": {
+        "sleeve_entropy": 0.681877990235885,
+        "depth_entropy": 0.7816419501607258,
+        "width_entropy": 0.9172821716308333,
+        "collar_entropy": 0.9723343230868363,
+        "arm_contamination_ratio": 0.046875,
+        "upper_geometry_quality": "good",
+        "upper_geometry_valid": true
+      }
+    },
+    {
+      "source_image": "../fashion_data/raw/train/train/image/168724.jpg",
+      "garment_id": "item2_shorts",
+      "garment_category": "pants",
+      "style_features": {
+        "pants_length_ratio": 0.7973383665084839
+      },
+      "quality": {
+        "pants_length_entropy": 0.7420942039966384
+      }
+    },
+    {
+      "source_image": "../fashion_data/raw/train/train/image/171259.jpg",
+      "garment_id": "item1_short_sleeve_top",
+      "garment_category": "top",
+      "style_features": {
+        "sleeve_length_ratio": 0.5133576989173889,
+        "neckline_depth_score": 0.4614912271499634,
+        "neckline_width_score": 0.47449183464050293,
+        "collar_height_score": 0.2177172303199768,
+        "garment_length_proxy": 0.5528913963328632,
+        "waist_to_chest_ratio": 0.9887640449438203,
+        "hem_to_chest_ratio": 1.1179775280898878,
+        "lower_taper_slope": -0.19774889317011743
+      },
+      "quality": {
+        "sleeve_entropy": 0.7901622996916806,
+        "depth_entropy": 0.8652248478517283,
+        "width_entropy": 0.9526452550508081,
+        "collar_entropy": 0.7518742533604902,
+        "arm_contamination_ratio": 0.3178294573643411,
+        "upper_geometry_quality": "usable",
+        "upper_geometry_valid": true
+      }
+    },
+    {
+      "source_image": "../fashion_data/raw/train/train/image/171259.jpg",
+      "garment_id": "item2_shorts",
+      "garment_category": "pants",
+      "style_features": {
+        "pants_length_ratio": 0.5622091293334961
+      },
+      "quality": {
+        "pants_length_entropy": 0.9377908017974544
+      }
+    },
+    {
+      "source_image": "../fashion_data/raw/train/train/image/173201.jpg",
+      "garment_id": "item1_long_sleeve_top",
+      "garment_category": "top",
+      "style_features": {
+        "sleeve_length_ratio": 0.5147416591644287,
+        "neckline_depth_score": 0.361755907535553,
+        "neckline_width_score": 0.4812864661216736,
+        "collar_height_score": 0.41496968269348145,
+        "garment_length_proxy": 0.5149911816578483,
+        "waist_to_chest_ratio": 0.891304347826087,
+        "hem_to_chest_ratio": 0.591304347826087,
+        "lower_taper_slope": -1.233903612840935
+      },
+      "quality": {
+        "sleeve_entropy": 0.9569913507450265,
+        "depth_entropy": 0.7445071387455143,
+        "width_entropy": 0.9110229795640493,
+        "collar_entropy": 0.9309965462300819,
+        "arm_contamination_ratio": 0.0,
+        "upper_geometry_quality": "good",
+        "upper_geometry_valid": true
+      }
+    },
+    {
+      "source_image": "../fashion_data/raw/train/train/image/173201.jpg",
+      "garment_id": "item2_trousers",
+      "garment_category": "pants",
+      "style_features": {
+        "pants_length_ratio": 0.9013689756393433,
+        "trouser_thigh_width_ratio": 0.8756756756756757,
+        "trouser_knee_width_ratio": 0.9081081081081082,
+        "trouser_hem_width_ratio": 0.7513513513513513,
+        "trouser_hem_to_thigh_ratio": 0.8580246913580246,
+        "trouser_lower_leg_fullness": 0.8226474649832315,
+        "trouser_lower_width_slope": -0.2720152943503199
+      },
+      "quality": {
+        "pants_length_entropy": 0.6525445963810782,
+        "trouser_geometry_quality": "good",
+        "trouser_geometry_valid": true
+      }
+    },
+    {
+      "source_image": "../fashion_data/raw/train/train/image/173508.jpg",
+      "garment_id": "item1_short_sleeve_top",
+      "garment_category": "top",
+      "style_features": {
+        "sleeve_length_ratio": 0.41152501106262207,
+        "neckline_depth_score": 0.5122860670089722,
+        "neckline_width_score": 0.5676218271255493,
+        "collar_height_score": 0.3657572269439697,
+        "garment_length_proxy": 0.5323435843054083,
+        "waist_to_chest_ratio": 0.9221635883905013,
+        "hem_to_chest_ratio": 0.9762532981530343,
+        "lower_taper_slope": -0.1894627865522465
+      },
+      "quality": {
+        "sleeve_entropy": 0.9164071143909431,
+        "depth_entropy": 0.7824758177932666,
+        "width_entropy": 0.9472951846150248,
+        "collar_entropy": 0.9182098845547605,
+        "arm_contamination_ratio": 0.0,
+        "upper_geometry_quality": "good",
+        "upper_geometry_valid": true
+      }
+    },
+    {
+      "source_image": "../fashion_data/raw/train/train/image/173669.jpg",
+      "garment_id": "item1_short_sleeve_dress",
+      "garment_category": "dress",
+      "style_features": {
+        "sleeve_length_ratio": 0.31538140773773193,
+        "lower_garment_length_score": 0.9031521081924438,
+        "neckline_depth_score": 0.2499317228794098,
+        "neckline_width_score": 0.5209745168685913,
+        "collar_height_score": 0.6902705430984497
+      },
+      "quality": {
+        "sleeve_entropy": 0.9096460024053323,
+        "lower_garment_length_entropy": 0.530575305724686,
+        "depth_entropy": 0.8281741046336153,
+        "width_entropy": 0.9692726852656363,
+        "collar_entropy": 0.8568109175278613
+      }
+    },
+    {
+      "source_image": "../fashion_data/raw/train/train/image/174323.jpg",
+      "garment_id": "item1_long_sleeve_top",
+      "garment_category": "top",
+      "style_features": {
+        "sleeve_length_ratio": 0.4947146773338318,
+        "neckline_depth_score": 0.47678181529045105,
+        "neckline_width_score": 0.5024238228797913,
+        "collar_height_score": 0.6348792314529419,
+        "garment_length_proxy": 0.5362190812720848,
+        "waist_to_chest_ratio": 0.8954248366013071,
+        "hem_to_chest_ratio": 0.7973856209150327,
+        "lower_taper_slope": -0.6501923304161737
+      },
+      "quality": {
+        "sleeve_entropy": 0.9143174782369207,
+        "depth_entropy": 0.8585003549795064,
+        "width_entropy": 0.9310626897543188,
+        "collar_entropy": 0.8428955940134338,
+        "arm_contamination_ratio": 0.165,
+        "upper_geometry_quality": "good",
+        "upper_geometry_valid": true
+      }
+    },
+    {
+      "source_image": "../fashion_data/raw/train/train/image/174323.jpg",
+      "garment_id": "item2_trousers",
+      "garment_category": "pants",
+      "style_features": {
+        "pants_length_ratio": 0.5856614112854004,
+        "trouser_thigh_width_ratio": 0.7359050445103857,
+        "trouser_knee_width_ratio": 0.7893175074183977,
+        "trouser_hem_width_ratio": 0.6261127596439169,
+        "trouser_hem_to_thigh_ratio": 0.8508064516129032,
+        "trouser_lower_leg_fullness": 0.7041812786619908,
+        "trouser_lower_width_slope": -0.2512751197893585
+      },
+      "quality": {
+        "pants_length_entropy": 0.6767581257203085,
+        "trouser_geometry_quality": "good",
+        "trouser_geometry_valid": true
+      }
+    },
+    {
+      "source_image": "../fashion_data/raw/train/train/image/175635.jpg",
+      "garment_id": "item1_trousers",
+      "garment_category": "pants",
+      "style_features": {
+        "pants_length_ratio": 0.8440201878547668,
+        "trouser_thigh_width_ratio": 0.7450199203187251,
+        "trouser_knee_width_ratio": 0.5677290836653387,
+        "trouser_hem_width_ratio": 0.2868525896414343,
+        "trouser_hem_to_thigh_ratio": 0.3850267379679145,
+        "trouser_lower_leg_fullness": 0.39588672337676317,
+        "trouser_lower_width_slope": -0.9625818124591973
+      },
+      "quality": {
+        "pants_length_entropy": 0.6600352184266639,
+        "trouser_geometry_quality": "good",
+        "trouser_geometry_valid": true
+      }
+    },
+    {
+      "source_image": "../fashion_data/raw/train/train/image/175635.jpg",
+      "garment_id": "item2_long_sleeve_top",
+      "garment_category": "top",
+      "style_features": {
+        "sleeve_length_ratio": 0.5162054896354675,
+        "neckline_depth_score": 0.4596012234687805,
+        "neckline_width_score": 0.4791592061519623,
+        "collar_height_score": 0.35649192333221436,
+        "garment_length_proxy": 0.5274102079395085,
+        "waist_to_chest_ratio": 1.0198863636363638,
+        "hem_to_chest_ratio": 0.3494318181818182,
+        "lower_taper_slope": -1.4448120925838444
+      },
+      "quality": {
+        "sleeve_entropy": 0.9185760566547335,
+        "depth_entropy": 0.8438726368221783,
+        "width_entropy": 0.9419500767952816,
+        "collar_entropy": 0.943327387918669,
+        "arm_contamination_ratio": 0.18478260869565216,
+        "upper_geometry_quality": "usable",
+        "upper_geometry_valid": true
+      }
+    },
+    {
+      "source_image": "../fashion_data/raw/train/train/image/178287.jpg",
+      "garment_id": "item1_short_sleeve_top",
+      "garment_category": "top",
+      "style_features": {
+        "sleeve_length_ratio": 0.4594743549823761,
+        "neckline_depth_score": 0.5348077416419983,
+        "neckline_width_score": 0.4751134216785431,
+        "collar_height_score": 0.5471286773681641,
+        "garment_length_proxy": 0.4144981412639405,
+        "waist_to_chest_ratio": 0.9138576779026217,
+        "hem_to_chest_ratio": 0.35580524344569286,
+        "lower_taper_slope": -1.5454775908748923
+      },
+      "quality": {
+        "sleeve_entropy": 0.9619358072547847,
+        "depth_entropy": 0.9109038027101892,
+        "width_entropy": 0.8910935579601055,
+        "collar_entropy": 0.8447924243742204,
+        "arm_contamination_ratio": 0.0,
+        "upper_geometry_quality": "usable",
+        "upper_geometry_valid": true
+      }
+    },
+    {
+      "source_image": "../fashion_data/raw/train/train/image/178287.jpg",
+      "garment_id": "item2_shorts",
+      "garment_category": "pants",
+      "style_features": {
+        "pants_length_ratio": 0.7041046023368835
+      },
+      "quality": {
+        "pants_length_entropy": 0.7623780559603553
+      }
+    },
+    {
+      "source_image": "../fashion_data/raw/train/train/image/178920.jpg",
+      "garment_id": "item1_short_sleeve_top",
+      "garment_category": "top",
+      "style_features": {
+        "sleeve_length_ratio": 0.3694364130496979,
+        "neckline_depth_score": 0.19456186890602112,
+        "neckline_width_score": 0.49983450770378113,
+        "collar_height_score": 0.5866144895553589,
+        "garment_length_proxy": 0.6035087719298246,
+        "waist_to_chest_ratio": 0.8888888888888888,
+        "hem_to_chest_ratio": 0.7638888888888888,
+        "lower_taper_slope": -0.47093385882289135
+      },
+      "quality": {
+        "sleeve_entropy": 0.823790219256412,
+        "depth_entropy": 0.7319307586662831,
+        "width_entropy": 0.7581746277335178,
+        "collar_entropy": 0.8669303582538319,
+        "arm_contamination_ratio": 0.0,
+        "upper_geometry_quality": "good",
+        "upper_geometry_valid": true
+      }
+    },
+    {
+      "source_image": "../fashion_data/raw/train/train/image/178920.jpg",
+      "garment_id": "item2_sling_dress",
+      "garment_category": "dress",
+      "style_features": {
+        "sleeve_length_ratio": 0.49777403473854065,
+        "lower_garment_length_score": 0.8603512048721313,
+        "neckline_depth_score": 0.2654050588607788,
+        "neckline_width_score": 0.5036271810531616,
+        "collar_height_score": 0.5946650505065918
+      },
+      "quality": {
+        "sleeve_entropy": 0.8393536441065629,
+        "lower_garment_length_entropy": 0.6119312655279252,
+        "depth_entropy": 0.8508439272562784,
+        "width_entropy": 0.9527588767374592,
+        "collar_entropy": 0.9125831667919617
+      }
+    },
+    {
+      "source_image": "../fashion_data/raw/train/train/image/184087.jpg",
+      "garment_id": "item1_long_sleeve_dress",
+      "garment_category": "dress",
+      "style_features": {
+        "sleeve_length_ratio": 0.30178552865982056,
+        "lower_garment_length_score": 0.5559768676757812,
+        "neckline_depth_score": 0.3674129545688629,
+        "neckline_width_score": 0.5710599422454834,
+        "collar_height_score": 0.4521351456642151
+      },
+      "quality": {
+        "sleeve_entropy": 0.8992459907824284,
+        "lower_garment_length_entropy": 0.9187209632881855,
+        "depth_entropy": 0.8648264312594884,
+        "width_entropy": 0.9433110927615221,
+        "collar_entropy": 0.9472493359683253
+      }
+    },
+    {
+      "source_image": "../fashion_data/raw/train/train/image/186959.jpg",
+      "garment_id": "item1_long_sleeve_top",
+      "garment_category": "top",
+      "style_features": {
+        "sleeve_length_ratio": 0.5710323452949524,
+        "neckline_depth_score": 0.5510272979736328,
+        "neckline_width_score": 0.48646876215934753,
+        "collar_height_score": 0.6580032110214233,
+        "garment_length_proxy": 0.5878136200716846,
+        "waist_to_chest_ratio": 0.7767857142857142,
+        "hem_to_chest_ratio": 0.7142857142857142,
+        "lower_taper_slope": -0.6233207073473854
+      },
+      "quality": {
+        "sleeve_entropy": 0.9277021140915314,
+        "depth_entropy": 0.7876961935919403,
+        "width_entropy": 0.9156168806393239,
+        "collar_entropy": 0.9011184867746246,
+        "arm_contamination_ratio": 0.0,
+        "upper_geometry_quality": "good",
+        "upper_geometry_valid": true
+      }
+    }
+  ],
+  "gating_policy": {
+    "upper_geometry_quality": {
+      "good": "retain",
+      "usable": "retain_with_quality_flag",
+      "weak": "set_upper_geometry_features_to_null",
+      "features": [
+        "garment_length_proxy",
+        "waist_to_chest_ratio",
+        "hem_to_chest_ratio",
+        "lower_taper_slope"
+      ]
+    },
+    "trouser_geometry_quality": {
+      "good": "retain",
+      "usable": "retain_with_quality_flag",
+      "weak": "set_trouser_geometry_features_to_null",
+      "features": [
+        "trouser_thigh_width_ratio",
+        "trouser_knee_width_ratio",
+        "trouser_hem_width_ratio",
+        "trouser_hem_to_thigh_ratio",
+        "trouser_lower_leg_fullness",
+        "trouser_lower_width_slope"
+      ]
+    },
+    "semantic_entropy": "retained_as_quality_metadata_only; no gating threshold because no calibrated threshold has been established"
+  }
+}

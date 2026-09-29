@@ -1,0 +1,4 @@
+﻿garment_category,eligible_instances_after_used_image_exclusion,unique_source_images,tiny_lt_0_5pct,small_0_5_to_2pct,medium_2_to_10pct,large_ge_10pct,minside_lt_20px,minside_20_49px,minside_50_99px,minside_ge_100px,fine_category_distribution
+shoe,1078,556,402,631,45,0,68,462,494,54,shoe=1078
+bag,68,67,1,19,38,10,0,6,23,39,"bag, wallet=68"
+accessory,465,317,191,151,113,10,63,172,142,88,"belt=105; glasses=77; glove=4; hat=38; headband, head covering, hair accessory=74; leg warmer=2; scarf=24; sock=41; tights, stockings=50; watch=50"

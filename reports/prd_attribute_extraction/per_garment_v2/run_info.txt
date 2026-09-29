@@ -1,0 +1,6 @@
+PRD 3.1.3 per-garment baseline v2
+model_for_semantic_attributes=openai/clip-vit-base-patch32
+color_method=masked_pixel_adaptive_quantization
+instances=2
+unit_of_analysis=one garment instance per row
+material_and_craftsmanship=excluded

@@ -1,0 +1,71 @@
+fashion_data/
+outputs/
+*.pth
+*.pt
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+*.zip
+backup/
+data/
+docker/
+
+# large experiment outputs
+reports/**/visualizations/
+reports/**/img_*.jpg
+reports/**/img_*.png
+
+# temporary resize/crop images
+reports/**/resize640/
+
+# zip packages
+*.zip
+
+# datasets
+fashion_data/
+
+# model checkpoints
+*.pth
+*.pt
+
+# cache
+__pycache__/
+*.pyc
+
+# benchmark generated images
+benchmark/**/contact_sheets/
+benchmark/**/human_review_packet_v1/
+benchmark/**/review_packet/
+benchmark/**/*.jpg
+benchmark/**/*.png
+
+
+# documentation images
+docs/assets/**/*.jpg
+docs/assets/**/*.png
+
+# small object visualization images
+reports/**/small_object_analysis/*.jpg
+reports/**/small_object_analysis/*.png
+
+
+# all generated images
+*.jpg
+*.jpeg
+*.png
+
+# data
+fashion_data/
+
+# checkpoints
+*.pth
+*.pt
+outputs/
+
+# archives
+*.zip
+
+# cache
+__pycache__/
+*.pyc
+

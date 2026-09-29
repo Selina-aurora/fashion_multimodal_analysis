@@ -1,0 +1,134 @@
+{
+  "schema_version": "3.1.3-style-v1",
+  "scope": "continuous visual style / silhouette features",
+  "excluded_current_scope": [
+    "material",
+    "fabric_composition",
+    "craftsmanship",
+    "process"
+  ],
+  "principles": [
+    "prefer continuous descriptors over hard style labels",
+    "do not apply business thresholds at this stage",
+    "retain feature provenance and quality diagnostics",
+    "treat semantic scores as relative descriptors rather than calibrated physical measurements"
+  ],
+  "feature_groups": {
+    "upper_garment": {
+      "sleeve_length_ratio": {
+        "range": [
+          0,
+          1
+        ],
+        "method": "CLIP ordered semantic anchors",
+        "status": "baseline_supported"
+      },
+      "garment_length_proxy": {
+        "range": [
+          0,
+          1
+        ],
+        "method": "image-space garment-mask geometry",
+        "status": "exploratory"
+      },
+      "waist_to_chest_ratio": {
+        "range": "positive",
+        "method": "torso-centered garment-mask geometry",
+        "status": "exploratory"
+      },
+      "hem_to_chest_ratio": {
+        "range": "positive",
+        "method": "torso-centered garment-mask geometry",
+        "status": "exploratory"
+      },
+      "neckline_depth_score": {
+        "range": [
+          0,
+          1
+        ],
+        "method": "local neckline crop + CLIP ordered semantic anchors",
+        "status": "exploratory"
+      },
+      "neckline_width_score": {
+        "range": [
+          0,
+          1
+        ],
+        "method": "local neckline crop + CLIP ordered semantic anchors",
+        "status": "exploratory"
+      },
+      "collar_height_score": {
+        "range": [
+          0,
+          1
+        ],
+        "method": "local neckline crop + CLIP ordered semantic anchors",
+        "status": "exploratory"
+      }
+    },
+    "pants": {
+      "pants_length_ratio": {
+        "range": [
+          0,
+          1
+        ],
+        "method": "CLIP ordered semantic anchors",
+        "status": "baseline_supported"
+      },
+      "trouser_hem_to_thigh_ratio": {
+        "range": "positive",
+        "method": "long-trouser garment-mask geometry",
+        "status": "qualitative_supported"
+      },
+      "trouser_lower_leg_fullness": {
+        "range": [
+          0,
+          1
+        ],
+        "method": "long-trouser garment-mask geometry",
+        "status": "qualitative_supported"
+      },
+      "trouser_hem_width_ratio": {
+        "range": [
+          0,
+          1
+        ],
+        "method": "long-trouser garment-mask geometry",
+        "status": "auxiliary"
+      }
+    },
+    "skirt_dress": {
+      "lower_garment_length_score": {
+        "range": [
+          0,
+          1
+        ],
+        "method": "CLIP ordered semantic anchors",
+        "status": "qualitative_supported"
+      },
+      "skirt_flare_score": {
+        "range": [
+          0,
+          1
+        ],
+        "method": "garment-mask hem/waist geometry",
+        "status": "exploratory"
+      },
+      "skirt_hem_to_waist_ratio": {
+        "range": "positive",
+        "method": "garment-mask geometry",
+        "status": "auxiliary"
+      }
+    }
+  },
+  "quality_fields": {
+    "upper_geometry_quality": "good / usable / weak",
+    "trouser_geometry_quality": "good / usable / weak"
+  },
+  "notes": [
+    "pants length and long-trouser fit are intentionally separated",
+    "neckline whole-mask geometry is not part of the retained feature set",
+    "simple full-garment sleeve geometry is not part of the retained feature set",
+    "threshold-to-label mapping belongs to a later calibrated business layer"
+  ]
+}

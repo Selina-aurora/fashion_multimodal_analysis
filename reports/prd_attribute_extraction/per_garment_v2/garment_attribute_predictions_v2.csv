@@ -1,0 +1,3 @@
+﻿source_image,garment_id,garment_category,primary_color,primary_color_share,secondary_colors,color_mode,pattern,sleeve_length,neckline
+../fashion_data/raw/train/train/image/000001.jpg,item1_short_sleeve_top,top,gray,0.7445166666666667,,single_color,graphic,short,shirt_collar
+../fashion_data/raw/train/train/image/000001.jpg,item2_trousers,pants,gray,0.8075155348016325,blue,multicolor,solid,not_applicable,not_applicable

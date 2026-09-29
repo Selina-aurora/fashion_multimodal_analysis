@@ -1,0 +1,13 @@
+﻿condition,attribute,comparable_pairs,same_as_A_pairs,agreement_with_A
+B_predbbox_predmask,sleeve_length,13,8,0.6154
+B_predbbox_predmask,neckline,13,7,0.5385
+B_predbbox_predmask,silhouette_fit,18,16,0.8889
+B_predbbox_predmask,fashion_style,18,11,0.6111
+C_gtbbox_predmask,sleeve_length,13,9,0.6923
+C_gtbbox_predmask,neckline,13,7,0.5385
+C_gtbbox_predmask,silhouette_fit,18,16,0.8889
+C_gtbbox_predmask,fashion_style,18,11,0.6111
+D_predbbox_gtmask,sleeve_length,13,12,0.9231
+D_predbbox_gtmask,neckline,13,10,0.7692
+D_predbbox_gtmask,silhouette_fit,18,15,0.8333
+D_predbbox_gtmask,fashion_style,18,14,0.7778

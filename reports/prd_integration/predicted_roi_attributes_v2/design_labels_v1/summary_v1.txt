@@ -1,0 +1,40 @@
+PRD 3.1.3 design attribute categorical baseline v1
+================================================
+model=openai/clip-vit-base-patch32
+records=12
+audit_rows=38
+audit_seed=20260917
+
+Label distributions
+-------------------
+sleeve_length:
+  sleeveless=2
+  long=2
+  cap=2
+  short=1
+neckline:
+  crew=2
+  hooded=2
+  mock_neck=1
+  other=1
+  shirt_collar=1
+silhouette_fit:
+  straight=5
+  slim_fitted=3
+  fitted=2
+  loose_oversized=1
+  flared=1
+fashion_style:
+  casual=4
+  vintage=2
+  streetwear=2
+  formal=2
+  romantic=2
+
+Important
+---------
+- baseline only; not PRD acceptance
+- CLIP confidence is candidate-relative, not calibrated
+- do not tune on the manual holdout and reuse it as final validation
+- weak geometry is gated from trusted downstream geometry use
+- replace neckline proxy with real 3.1.2 ROI in final end-to-end integration

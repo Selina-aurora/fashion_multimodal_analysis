@@ -1,0 +1,87 @@
+{
+  "schema_version": "3.1.3-v1",
+  "scope_note": "First-stage visually observable attributes only. Material/fabric composition and manufacturing process are intentionally excluded per mentor guidance.",
+  "attributes": {
+    "color": {
+      "type": "single_label",
+      "allowed_values": [
+        "black",
+        "white",
+        "gray",
+        "red",
+        "orange",
+        "yellow",
+        "green",
+        "blue",
+        "purple",
+        "pink",
+        "brown",
+        "beige",
+        "multicolor",
+        "unknown"
+      ]
+    },
+    "pattern": {
+      "type": "single_label",
+      "allowed_values": [
+        "solid",
+        "striped",
+        "checked",
+        "floral",
+        "graphic",
+        "polka_dot",
+        "animal",
+        "camouflage",
+        "geometric",
+        "abstract",
+        "other",
+        "unknown"
+      ]
+    },
+    "sleeve_length": {
+      "type": "single_label",
+      "allowed_values": [
+        "sleeveless",
+        "cap",
+        "short",
+        "elbow",
+        "three_quarter",
+        "long",
+        "unknown",
+        "not_applicable"
+      ]
+    },
+    "neckline": {
+      "type": "single_label",
+      "allowed_values": [
+        "crew",
+        "v_neck",
+        "round",
+        "square",
+        "boat",
+        "halter",
+        "off_shoulder",
+        "one_shoulder",
+        "turtleneck",
+        "mock_neck",
+        "polo",
+        "shirt_collar",
+        "hooded",
+        "other",
+        "unknown",
+        "not_applicable"
+      ]
+    }
+  },
+  "output_format": {
+    "image": "string",
+    "region": "whole_garment|roi|local_region",
+    "predictions": {
+      "<attribute_name>": {
+        "label": "string",
+        "confidence": "float_0_to_1",
+        "evidence": "short_visual_reason"
+      }
+    }
+  }
+}

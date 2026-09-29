@@ -1,0 +1,34 @@
+PRD 3.1 Raw Benchmark Pool Discovery v1
+======================================
+
+data_root=/workspace/fashion_data
+used_registry_samples=635
+
+DeepFashion2
+------------
+status=OK
+annotation_files_scanned=191961
+parse_errors=0
+missing_images=0
+unused_total=311993
+unused_fine_distribution={'long_sleeve_dress': 7900, 'long_sleeve_outwear': 13442, 'long_sleeve_top': 36042, 'short_sleeve_dress': 17199, 'short_sleeve_outwear': 542, 'short_sleeve_top': 71603, 'shorts': 36602, 'skirt': 30817, 'sling': 1985, 'sling_dress': 6481, 'trousers': 55349, 'vest': 16092, 'vest_dress': 17939}
+
+Unused DeepFashion2 candidates by PRD class
+top: raw_total=125789 already_used=67 unused=125722
+pants: raw_total=92003 already_used=52 unused=91951
+skirt: raw_total=30835 already_used=18 unused=30817
+outerwear: raw_total=14000 already_used=16 unused=13984
+dress: raw_total=49559 already_used=40 unused=49519
+
+Fashionpedia
+------------
+status=OK
+json_files_found=1
+json_files_inspected=1
+parse_errors=0
+
+Next decision
+-------------
+- Use unused DeepFashion2 for top/pants/skirt/outerwear/dress.
+- Inspect fashionpedia_annotation_inventory.csv before defining the shoe/bag/accessory mapping.
+- Do not freeze or sample the blind benchmark until both source pools are confirmed.

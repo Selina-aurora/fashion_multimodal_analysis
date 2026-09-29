@@ -1,0 +1,14 @@
+﻿prd_class,fashionpedia_category_id,fashionpedia_category_name,fashionpedia_supercategory,unique_used_garment_count,example_garment_ids
+accessory,15,"headband, head covering, hair accessory",head,13,fashionpedia_ann_1055 | fashionpedia_ann_1244 | fashionpedia_ann_206 | fashionpedia_ann_2367 | fashionpedia_ann_245
+accessory,22,sock,legs and feet,13,fashionpedia_ann_1079 | fashionpedia_ann_1670 | fashionpedia_ann_173 | fashionpedia_ann_2422 | fashionpedia_ann_2826
+accessory,25,scarf,others,13,fashionpedia_ann_1542 | fashionpedia_ann_1646 | fashionpedia_ann_2742 | fashionpedia_ann_3323 | fashionpedia_ann_4478
+accessory,13,glasses,head,12,fashionpedia_ann_1408 | fashionpedia_ann_1837 | fashionpedia_ann_2235 | fashionpedia_ann_2578 | fashionpedia_ann_2696
+accessory,14,hat,head,12,fashionpedia_ann_188 | fashionpedia_ann_4665 | fashionpedia_ann_4907 | fashionpedia_ann_5582 | fashionpedia_ann_5773
+accessory,17,glove,arms and hands,12,fashionpedia_ann_1381 | fashionpedia_ann_2160 | fashionpedia_ann_2259 | fashionpedia_ann_4109 | fashionpedia_ann_5070
+accessory,19,belt,waist,12,fashionpedia_ann_2110 | fashionpedia_ann_2611 | fashionpedia_ann_2759 | fashionpedia_ann_3899 | fashionpedia_ann_4023
+accessory,21,"tights, stockings",legs and feet,11,fashionpedia_ann_2303 | fashionpedia_ann_2346 | fashionpedia_ann_3414 | fashionpedia_ann_3430 | fashionpedia_ann_3874
+accessory,18,watch,arms and hands,10,fashionpedia_ann_1353 | fashionpedia_ann_1919 | fashionpedia_ann_1959 | fashionpedia_ann_3054 | fashionpedia_ann_393
+accessory,20,leg warmer,legs and feet,6,fashionpedia_ann_1775 | fashionpedia_ann_241 | fashionpedia_ann_2539 | fashionpedia_ann_7582 | fashionpedia_ann_7971
+accessory,16,tie,neck,3,fashionpedia_ann_3850 | fashionpedia_ann_4280 | fashionpedia_ann_5556
+bag,24,"bag, wallet",others,116,fashionpedia_ann_1106 | fashionpedia_ann_1253 | fashionpedia_ann_1263 | fashionpedia_ann_1292 | fashionpedia_ann_130
+shoe,23,shoe,legs and feet,117,fashionpedia_ann_1015 | fashionpedia_ann_1019 | fashionpedia_ann_1070 | fashionpedia_ann_1077 | fashionpedia_ann_1107

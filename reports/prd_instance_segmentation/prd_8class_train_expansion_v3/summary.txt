@@ -1,0 +1,66 @@
+PRD 3.1.1 train v3 - unique-data expansion
+===========================================
+
+Experiment
+----------
+name=V3-B1 unique-data expansion
+seed=20260921
+base_manifest=configs/prd_8class_train_v2.csv
+output_manifest=configs/prd_8class_train_v3.csv
+validation_manifest=configs/prd_8class_val_v1.csv
+
+Data integrity
+--------------
+base_train_v2_rows=425
+new_rows_added=155
+unique_new_source_images=155
+total_train_v3_rows=580
+frozen_fashionpedia_val_images=12
+train_val_source_image_overlap=0
+reused_v2_fashionpedia_source_images=0
+validation_manifest_modified=False
+
+Class counts
+------------
+top: before=42, added=18, final=60
+pants: before=31, added=29, final=60
+skirt: before=13, added=37, final=50
+outerwear: before=10, added=40, final=50
+dress: before=29, added=31, final=60
+shoe: before=100, added=0, final=100
+bag: before=100, added=0, final=100
+accessory: before=100, added=0, final=100
+
+Candidate diagnostics
+---------------------
+top: available_after_exclusion=450, needed=18, attempted=18, valid_added=18, decode_skipped=0, excluded_val=4, excluded_existing_image=168, excluded_existing_ann=0
+pants: available_after_exclusion=294, needed=29, attempted=29, valid_added=29, decode_skipped=0, excluded_val=5, excluded_existing_image=121, excluded_existing_ann=0
+skirt: available_after_exclusion=118, needed=37, attempted=37, valid_added=37, decode_skipped=0, excluded_val=0, excluded_existing_image=44, excluded_existing_ann=0
+outerwear: available_after_exclusion=202, needed=40, attempted=40, valid_added=40, decode_skipped=0, excluded_val=4, excluded_existing_image=98, excluded_existing_ann=0
+dress: available_after_exclusion=407, needed=31, attempted=31, valid_added=31, decode_skipped=0, excluded_val=5, excluded_existing_image=96, excluded_existing_ann=0
+
+New Fashionpedia fine-category counts
+------------------------------------
+dress <- dress: 31
+outerwear <- cape: 2
+outerwear <- cardigan: 5
+outerwear <- coat: 18
+outerwear <- jacket: 15
+pants <- pants: 14
+pants <- shorts: 15
+skirt <- skirt: 37
+top <- shirt, blouse: 4
+top <- sweater: 4
+top <- top, t-shirt, sweatshirt: 5
+top <- vest: 5
+
+Notes
+-----
+- V2 training rows were preserved and V3 only appends new Fashionpedia annotations.
+- Existing V2 Fashionpedia source images were excluded before sampling.
+- Frozen Fashionpedia validation source images were excluded before sampling.
+- New source images were preferred across target classes to maximize visual diversity.
+- Jumpsuit and garment-part/decorative categories were intentionally excluded.
+- V2 shoe, bag, and accessory rows were retained without targeted expansion.
+- Full-image masks were generated from Fashionpedia segmentation annotations.
+- Review the V3 contact sheets before starting training.

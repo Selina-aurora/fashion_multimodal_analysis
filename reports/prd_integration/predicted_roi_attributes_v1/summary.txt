@@ -1,0 +1,32 @@
+PRD 3.1 Predicted-ROI -> 3.1.3 Attribute Propagation Pilot v1
+=============================================================
+
+manifest=configs/prd_3_1_predicted_roi_matched_v1.csv
+matched_roi_pairs=13
+
+Matched category distribution
+-----------------------------
+top=5
+pants=3
+skirt=0
+outerwear=1
+dress=3
+shoe=0
+bag=0
+accessory=1
+
+GT-ROI vs predicted-ROI label agreement
+---------------------------------------
+primary_color: 11/12 agreement=0.9167
+pattern: 8/12 agreement=0.6667
+sleeve_length: 4/9 agreement=0.4444
+neckline: 4/9 agreement=0.4444
+silhouette_fit: 10/12 agreement=0.8333
+fashion_style: 7/12 agreement=0.5833
+
+Interpretation
+--------------
+- This is propagation consistency, NOT attribute accuracy against human GT.
+- A disagreement means the 3.1.3 label changed when GT ROI was replaced by matched predicted ROI.
+- No GT continuous style geometry was injected into predicted-ROI categorical inference.
+- Small matched pilot with incomplete class coverage; not final 8-class acceptance.

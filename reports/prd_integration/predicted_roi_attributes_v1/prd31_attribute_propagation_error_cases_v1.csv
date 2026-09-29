@@ -1,0 +1,11 @@
+﻿image,garment_id,category,bbox_iou,det_score,changed_attributes,changed_count,diagnostic_interpretation
+101034.jpg,item2_sling_dress,dress,0.9161,0.5741,pattern: solid → graphic_logo | sleeve_length: sleeveless → short | neckline: halter → crew | silhouette_fit: straight → fitted | fashion_style: casual → streetwear,5,局部结构敏感；整体框匹配较高，差异更可能来自预测 mask/ROI 对领口、袖部细节覆盖变化
+096778.jpg,item2_sling_dress,dress,0.8585,0.7718,pattern: solid → graphic_logo | sleeve_length: sleeveless → short | neckline: boat → crew,3,局部结构敏感；整体框匹配较高，差异更可能来自预测 mask/ROI 对领口、袖部细节覆盖变化
+101034.jpg,item1_short_sleeve_top,top,0.7957,0.7562,primary_color: black → beige | neckline: crew → shirt_collar | silhouette_fit: slim_fitted → loose_oversized,3,局部结构敏感；ROI 匹配相对较低，领口/袖部细节更容易因裁剪或 mask 偏移而改变
+073497.jpg,item2_short_sleeve_top,top,0.7809,0.6503,sleeve_length: short → cap | neckline: other → crew | fashion_style: sporty → formal,3,局部结构敏感；ROI 匹配相对较低，领口/袖部细节更容易因裁剪或 mask 偏移而改变
+124892.jpg,item1_short_sleeve_top,top,0.9454,0.8685,pattern: graphic_logo → animal_print | fashion_style: formal → casual,2,ROI 内容/形状变化可能影响多个属性；建议保留为代表性传播误差案例
+114238.jpg,item1_long_sleeve_outwear,outerwear,0.9055,0.4084,sleeve_length: elbow → long | neckline: other → hooded,2,局部结构敏感；整体框匹配较高，差异更可能来自预测 mask/ROI 对领口、袖部细节覆盖变化
+073497.jpg,item1_trousers,pants,0.9035,0.7734,fashion_style: casual → streetwear,1,风格语义稳定性不足；高/中 IoU 下仍变标签，不能只归因于 ROI 偏移
+142658.jpg,item1_long_sleeve_top,top,0.8401,0.7424,sleeve_length: elbow → cap,1,局部结构敏感；ROI 匹配相对较低，领口/袖部细节更容易因裁剪或 mask 偏移而改变
+184087.jpg,item1_long_sleeve_dress,dress,0.828,0.6173,pattern: camouflage → polka_dot,1,图案分类对局部纹理/可见面积敏感；并非明显由 bbox 严重偏移造成
+051719.jpg,item1_trousers,pants,0.788,0.4489,fashion_style: casual → streetwear,1,风格语义稳定性不足；高/中 IoU 下仍变标签，不能只归因于 ROI 偏移

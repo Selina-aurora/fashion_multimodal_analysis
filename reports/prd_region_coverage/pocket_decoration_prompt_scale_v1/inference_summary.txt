@@ -1,0 +1,19 @@
+PRD 3.1.2 Pocket / Decoration Prompt-Scale Diagnostic v1
+========================================================
+
+model=IDEA-Research/grounding-dino-tiny
+device=cuda
+text_threshold=0.25
+
+Conditions per case:
+1) full garment + inherited baseline prompt
+2) full garment + one concise/semantic prompt
+3) four overlapping 60%-size tiles + the concise/semantic prompt
+
+pocket: N=5, any_condition_non_empty=5, non_empty_rate=100.0%
+decoration: N=5, any_condition_non_empty=5, non_empty_rate=100.0%
+
+Important:
+- Non-empty prediction is not localization correctness.
+- Final correct/coarse/wrong/missed must be assigned by visual review.
+- This is a diagnostic only; do not tune more prompts/tiles after this run unless there is a clear failure mode worth testing.

@@ -1,0 +1,40 @@
+PRD 3.1.3 pattern v3 fresh-holdout manual review
+=================================================
+
+holdout_rows=40
+provisional_overall_correct=34
+provisional_overall_accuracy=0.8500
+
+high_confidence_rows=38
+high_confidence_correct=32
+high_confidence_accuracy=0.8421
+
+provisional_stage1_gate_correct=35
+provisional_stage1_gate_accuracy=0.8750
+
+high_confidence_stage1_gate_correct=33
+high_confidence_stage1_gate_accuracy=0.8684
+
+stage2_correct_given_correct_visible_pattern_route=6
+correctly_routed_visible_pattern_rows=7
+stage2_subtype_accuracy_given_correct_route=0.8571
+
+borderline_rows=1,27
+
+Important
+---------
+- Rows 1 and 27 remain visual-borderline cases and should be checked against the original images if available.
+- The fresh v3 holdout excludes the earlier v1 and v2 audit sets.
+- These are holdout manual-audit results, not production accuracy certification.
+
+Error distribution
+------------------
+false_pattern_presence=3
+missed_pattern_presence=2
+subtype_confusion=1
+
+Interpretation
+--------------
+- V3's Stage-1 gate is provisionally much better than v2's 70.0% holdout gate result.
+- Remaining errors are concentrated in pattern-presence boundary cases plus one floral subtype confusion.
+- If rows 1 and 27 are resolved without changing the overall conclusion, V3 is a reasonable stopping point for the pattern baseline.

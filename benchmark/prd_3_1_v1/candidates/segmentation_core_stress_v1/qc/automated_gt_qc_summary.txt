@@ -1,0 +1,40 @@
+PRD 3.1.1 Automated GT Annotation QC v1
+======================================
+
+cases=520
+PASS=289
+FLAG=231
+FAIL=0
+
+Thresholds
+----------
+mask_bbox_iou_min=0.9
+mask_inside_bbox_ratio_min=0.98
+mask_fill_ratio_min=0.03
+
+Important
+---------
+- PASS means machine geometry/integrity checks passed.
+- PASS does NOT mean human annotation review is complete.
+- Category semantics and image quality still require human review.
+- FLAG cases should be reviewed first.
+- FAIL cases contain structural annotation/file issues and must not be frozen until resolved.
+
+By subset/class
+---------------
+core top: n=55 pass=19 flag=36 fail=0 reasons=(LOW_MASK_BBOX_IOU=36; MASK_OUTSIDE_BBOX=3)
+core pants: n=55 pass=16 flag=39 fail=0 reasons=(LOW_MASK_BBOX_IOU=39)
+core skirt: n=55 pass=23 flag=32 fail=0 reasons=(LOW_MASK_BBOX_IOU=32)
+core outerwear: n=55 pass=24 flag=31 fail=0 reasons=(LOW_MASK_BBOX_IOU=31)
+core dress: n=55 pass=26 flag=29 fail=0 reasons=(LOW_MASK_BBOX_IOU=29)
+core shoe: n=55 pass=54 flag=1 fail=0 reasons=(MASK_OUTSIDE_BBOX=1)
+core bag: n=55 pass=54 flag=1 fail=0 reasons=(VERY_LOW_MASK_FILL=1)
+core accessory: n=55 pass=55 flag=0 fail=0 reasons=()
+stress top: n=10 pass=3 flag=7 fail=0 reasons=(LOW_MASK_BBOX_IOU=7; MASK_OUTSIDE_BBOX=3)
+stress pants: n=10 pass=2 flag=8 fail=0 reasons=(LOW_MASK_BBOX_IOU=7; MASK_OUTSIDE_BBOX=1)
+stress skirt: n=10 pass=1 flag=9 fail=0 reasons=(LOW_MASK_BBOX_IOU=9)
+stress outerwear: n=10 pass=1 flag=9 fail=0 reasons=(LOW_MASK_BBOX_IOU=9)
+stress dress: n=10 pass=2 flag=8 fail=0 reasons=(LOW_MASK_BBOX_IOU=8)
+stress shoe: n=10 pass=0 flag=10 fail=0 reasons=(LOW_MASK_BBOX_IOU=10; MASK_OUTSIDE_BBOX=9)
+stress bag: n=10 pass=9 flag=1 fail=0 reasons=(MASK_OUTSIDE_BBOX=1)
+stress accessory: n=10 pass=0 flag=10 fail=0 reasons=(LOW_MASK_BBOX_IOU=10; MASK_OUTSIDE_BBOX=10)

@@ -1,0 +1,9 @@
+﻿gt_class,n,correct,missed,wrong_class,low_mask_iou,correct_rate,miss_rate,wrong_class_rate,low_mask_iou_rate
+accessory,50,4,42,4,0,0.08,0.84,0.08,0.0
+bag,50,19,25,1,5,0.38,0.5,0.02,0.1
+dress,50,9,31,10,0,0.18,0.62,0.2,0.0
+outerwear,50,2,34,14,0,0.04,0.68,0.28,0.0
+pants,50,15,29,4,2,0.3,0.58,0.08,0.04
+shoe,50,19,24,2,5,0.38,0.48,0.04,0.1
+skirt,50,5,33,12,0,0.1,0.66,0.24,0.0
+top,50,11,37,2,0,0.22,0.74,0.04,0.0

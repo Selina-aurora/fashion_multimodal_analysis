@@ -1,0 +1,8 @@
+﻿source,relative_path,exists,rows,unique_garments,duplicates_removed,status
+sleeve_semantic,reports\prd_attribute_extraction\continuous_v1\sleeve_continuous_predictions.csv,True,101,101,0,loaded
+pants_length_semantic,reports\prd_attribute_extraction\pants_continuous_v1\pants_continuous_predictions.csv,True,39,39,0,loaded
+skirt_dress_length_semantic,reports\prd_attribute_extraction\skirt_dress_length_v1\skirt_dress_length_predictions.csv,True,52,52,0,loaded
+skirt_flare_geometry,reports\prd_attribute_extraction\skirt_flare_v1\skirt_flare_features.csv,True,16,16,0,loaded
+neckline_semantic,reports\prd_attribute_extraction\neckline_semantic_v2\neckline_semantic_predictions.csv,True,101,101,0,loaded
+upper_silhouette_geometry,reports\prd_attribute_extraction\upper_silhouette_v2\upper_silhouette_features_v2.csv,True,65,65,0,loaded
+trouser_fit_geometry,reports\prd_attribute_extraction\trouser_fit_v2\trouser_fit_features_v2.csv,True,29,29,0,loaded

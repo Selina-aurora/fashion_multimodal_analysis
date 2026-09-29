@@ -1,0 +1,19 @@
+﻿config_file,read_status,rows,has_source_image,has_garment_id,unique_images,unique_garments,role,category_distribution,source_distribution
+configs/fashionpedia_missing3_pilot_manifest_v1.csv,OK,60,1,1,59,60,development_or_diagnostic,accessory=20; bag=20; shoe=20,Fashionpedia=60
+configs/garment_instances_gt_pilot.csv,OK,2,1,1,1,2,development_or_diagnostic,pants=1; top=1,
+configs/garment_instances_gt_pilot_100.csv,OK,156,1,1,100,156,development_or_diagnostic,dress=36; outerwear=13; pants=39; skirt=16; top=52,
+configs/garment_instances_gt_pilot_20.csv,OK,35,1,1,20,35,development_or_diagnostic,dress=4; outerwear=3; pants=12; skirt=2; top=14,
+configs/garment_instances_template.csv,OK,2,1,1,1,2,unknown_or_auxiliary,pants=1; top=1,
+configs/prd_3_1_ablation_A_gtbbox_gtmask_v1.csv,OK,22,1,1,19,22,development_or_diagnostic,accessory=1; bag=2; dress=5; outerwear=1; pants=5; shoe=1; top=7,DeepFashion2=18; Fashionpedia=4
+configs/prd_3_1_ablation_B_predbbox_predmask_v1.csv,OK,22,1,1,19,22,development_or_diagnostic,accessory=1; bag=2; dress=5; outerwear=1; pants=5; shoe=1; top=7,DeepFashion2=18; Fashionpedia=4
+configs/prd_3_1_ablation_C_gtbbox_predmask_v1.csv,OK,22,1,1,19,22,development_or_diagnostic,accessory=1; bag=2; dress=5; outerwear=1; pants=5; shoe=1; top=7,DeepFashion2=18; Fashionpedia=4
+configs/prd_3_1_ablation_D_predbbox_gtmask_v1.csv,OK,22,1,1,19,22,development_or_diagnostic,accessory=1; bag=2; dress=5; outerwear=1; pants=5; shoe=1; top=7,DeepFashion2=18; Fashionpedia=4
+configs/prd_3_1_predicted_roi_fullval_matched_v1.csv,OK,22,1,1,19,22,development_or_diagnostic,accessory=1; bag=2; dress=5; outerwear=1; pants=5; shoe=1; top=7,DeepFashion2=18; Fashionpedia=4
+configs/prd_3_1_predicted_roi_fullval_v1.csv,OK,57,1,1,29,57,development_or_diagnostic,accessory=5; bag=8; dress=7; outerwear=2; pants=11; shoe=10; skirt=3; top=11,DeepFashion2=32; Fashionpedia=25
+configs/prd_3_1_predicted_roi_matched_v1.csv,OK,13,1,1,11,13,development_or_diagnostic,accessory=1; dress=3; outerwear=1; pants=3; top=5,DeepFashion2=12; Fashionpedia=1
+configs/prd_3_1_predicted_roi_pilot20_v1.csv,OK,33,1,1,18,33,development_or_diagnostic,accessory=4; bag=3; dress=5; outerwear=2; pants=8; shoe=4; skirt=1; top=6,DeepFashion2=21; Fashionpedia=12
+configs/prd_8class_train_v1.csv,OK,173,1,1,127,173,train_or_training_source,accessory=16; bag=16; dress=29; outerwear=10; pants=31; shoe=16; skirt=13; top=42,DeepFashion2=125; Fashionpedia=48
+configs/prd_8class_train_v2.csv,OK,425,1,1,353,425,train_or_training_source,accessory=100; bag=100; dress=29; outerwear=10; pants=31; shoe=100; skirt=13; top=42,DeepFashion2=125; Fashionpedia=300
+configs/prd_8class_unified_manifest_v1.csv,OK,216,1,1,159,216,unknown_or_auxiliary,accessory=20; bag=20; dress=36; outerwear=13; pants=39; shoe=20; skirt=16; top=52,DeepFashion2=156; Fashionpedia=60
+configs/prd_8class_unified_manifest_v2.csv,OK,216,1,1,159,216,unknown_or_auxiliary,accessory=20; bag=20; dress=36; outerwear=13; pants=39; shoe=20; skirt=16; top=52,DeepFashion2=156; Fashionpedia=60
+configs/prd_8class_val_v1.csv,OK,43,1,1,32,43,development_or_diagnostic,accessory=4; bag=4; dress=7; outerwear=3; pants=8; shoe=4; skirt=3; top=10,DeepFashion2=31; Fashionpedia=12

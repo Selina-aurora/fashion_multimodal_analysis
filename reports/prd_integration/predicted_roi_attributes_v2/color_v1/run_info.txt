@@ -1,0 +1,13 @@
+PRD 3.1.3 primary color baseline v1
+model=openai/clip-vit-base-patch32
+manifest=/workspace/fashion_multimodal_analysis/configs/prd_3_1_predicted_roi_matched_v2.csv
+instances=12
+attribute=primary_color
+method=CLIP_multi_background_embedding_average
+backgrounds=white,midgray,black
+color_taxonomy=black,white,gray,beige,brown,red,orange,yellow,green,blue,purple,pink
+secondary_colors=out_of_scope
+holdout_size=0
+seed=20260918
+gt_available=false_until_holdout_manual_audit
+material_and_craftsmanship=excluded

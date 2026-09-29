@@ -1,0 +1,12 @@
+PRD 3.1.3 garment pattern hierarchical baseline v2
+model=openai/clip-vit-base-patch32
+manifest=configs/garment_instances_gt_pilot_100.csv
+instances=156
+stage1=non_pattern_vs_visible_pattern
+stage2=striped,checked_plaid,floral,graphic_logo,polka_dot,animal_print,camouflage,geometric_abstract,other_pattern
+exclude_audit=reports/prd_attribute_extraction/pattern_v1/pattern_manual_audit_focus_v1_final.csv
+holdout_size=40
+seed=20260916
+transformers_compatibility=explicit_text_and_vision_tower_projection
+gt_available=false_until_manual_holdout_audit
+material_and_craftsmanship=excluded_as_targets

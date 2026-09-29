@@ -1,0 +1,17 @@
+﻿review_subset,garment_category,n,qc_pass,qc_flag,qc_fail,flag_reasons
+core,top,55,19,36,0,LOW_MASK_BBOX_IOU=36; MASK_OUTSIDE_BBOX=3
+core,pants,55,16,39,0,LOW_MASK_BBOX_IOU=39
+core,skirt,55,23,32,0,LOW_MASK_BBOX_IOU=32
+core,outerwear,55,24,31,0,LOW_MASK_BBOX_IOU=31
+core,dress,55,26,29,0,LOW_MASK_BBOX_IOU=29
+core,shoe,55,54,1,0,MASK_OUTSIDE_BBOX=1
+core,bag,55,54,1,0,VERY_LOW_MASK_FILL=1
+core,accessory,55,55,0,0,
+stress,top,10,3,7,0,LOW_MASK_BBOX_IOU=7; MASK_OUTSIDE_BBOX=3
+stress,pants,10,2,8,0,LOW_MASK_BBOX_IOU=7; MASK_OUTSIDE_BBOX=1
+stress,skirt,10,1,9,0,LOW_MASK_BBOX_IOU=9
+stress,outerwear,10,1,9,0,LOW_MASK_BBOX_IOU=9
+stress,dress,10,2,8,0,LOW_MASK_BBOX_IOU=8
+stress,shoe,10,0,10,0,LOW_MASK_BBOX_IOU=10; MASK_OUTSIDE_BBOX=9
+stress,bag,10,9,1,0,MASK_OUTSIDE_BBOX=1
+stress,accessory,10,0,10,0,LOW_MASK_BBOX_IOU=10; MASK_OUTSIDE_BBOX=10

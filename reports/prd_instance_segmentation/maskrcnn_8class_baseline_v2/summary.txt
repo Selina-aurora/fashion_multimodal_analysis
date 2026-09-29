@@ -1,0 +1,47 @@
+PRD 3.1.1 Mask R-CNN 8-class baseline v2
+=========================================
+
+[Controlled comparison]
+initialization=COCO DEFAULT (same as v1; no warm-start from v1)
+train_manifest=configs/prd_8class_train_v2.csv
+fixed_val_manifest=configs/prd_8class_val_v1.csv
+balanced_sampler=True
+sampler_alpha=0.5
+
+[Training setup]
+device=cuda
+gpu=NVIDIA GeForce RTX 4090
+epochs=15
+batch_size=1
+lr=0.0025
+momentum=0.9
+weight_decay=0.0005
+step_size=5
+gamma=0.1
+min_size=640
+max_size=1024
+hflip=True
+seed=20260921
+
+[Dataset]
+train_instances=425
+train_image_groups=353
+val_instances=43
+val_image_groups=32
+train_top=42
+train_pants=31
+train_skirt=13
+train_outerwear=10
+train_dress=29
+train_shoe=100
+train_bag=100
+train_accessory=100
+
+[Result]
+final_train_loss=0.256529
+total_training_seconds=354.73
+
+[Next evaluation]
+Use the SAME val_v1 split.
+Use score_threshold=0.40 as the frozen v1-selected development threshold.
+Do not choose a new threshold from v2 validation results before the primary v1-v2 comparison.

@@ -1,0 +1,44 @@
+PRD 3.1.3 garment pattern hierarchical baseline v2
+=================================================
+model=openai/clip-vit-base-patch32
+instances=156
+pipeline=pattern_presence_then_pattern_subtype
+gt_available=false
+
+Stage-1 distribution
+--------------------
+non_pattern=82
+visible_pattern=74
+
+Final distribution
+------------------
+solid=82
+striped=10
+checked_plaid=3
+floral=4
+graphic_logo=38
+polka_dot=8
+animal_print=3
+camouflage=7
+geometric_abstract=1
+other_pattern=0
+
+Uncertainty
+-----------
+stage1_margin: mean=0.3825, median=0.3636, min=0.0156, max=0.9359
+stage2_margin_visible_pattern_only: mean=0.4281, median=0.3708, min=0.0019, max=0.9862
+
+Validation policy
+-----------------
+v1_tuning_audit_excluded_from_holdout=True
+excluded_instances=42
+new_holdout_audit_rows=40
+- Do not claim v2 improvement from the same 42 focused v1 cases used to design the hierarchy.
+- Manually label the new holdout audit before reporting v2 accuracy.
+
+Interpretation
+--------------
+- Stage 1 separates true visible patterns from non-pattern texture/craftsmanship/structure effects.
+- Stage 2 predicts subtype only for garments routed as visible_pattern.
+- Scores are candidate-relative CLIP similarities, not calibrated probabilities.
+- material/fabric and craftsmanship remain excluded as target attributes.

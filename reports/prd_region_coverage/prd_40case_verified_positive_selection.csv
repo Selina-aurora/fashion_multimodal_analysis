@@ -1,0 +1,41 @@
+﻿candidate_id,region,target_present,visibility,usable_for_evaluation,review_note
+collar_001,collar,yes,clear,yes,clear neckline
+collar_003,collar,yes,clear,yes,clear neckline
+collar_010,collar,yes,clear,yes,clear lapel/collar
+collar_012,collar,yes,clear,yes,clear collar
+collar_020,collar,yes,clear,yes,clear collar
+cuff_006,cuff,yes,clear,yes,clear sleeve ending
+cuff_008,cuff,yes,clear,yes,clear sleeve ending
+cuff_013,cuff,yes,clear,yes,clear long-sleeve cuff
+cuff_015,cuff,yes,clear,yes,clear long-sleeve cuff
+cuff_019,cuff,yes,clear,yes,clear sleeve ending
+hem_003,hem,yes,clear,yes,clear trouser hem
+hem_005,hem,yes,clear,yes,clear top hem
+hem_008,hem,yes,clear,yes,clear skirt hem
+hem_017,hem,yes,clear,yes,clear trouser hem
+hem_023,hem,yes,clear,yes,clear top hem
+pocket_010,pocket,yes,clear,yes,visible trouser pocket
+pocket_012,pocket,yes,clear,yes,visible pocket
+pocket_016,pocket,yes,clear,yes,clear rear pockets
+pocket_020,pocket,yes,clear,yes,visible coat pocket
+pocket_021,pocket,yes,clear,yes,visible coat pocket
+shoulder_008,shoulder,yes,clear,yes,clear shoulder region
+shoulder_012,shoulder,yes,clear,yes,clear shoulder line
+shoulder_015,shoulder,yes,clear,yes,clear shoulder region
+shoulder_021,shoulder,yes,clear,yes,clear shoulder region
+shoulder_024,shoulder,yes,clear,yes,clear shoulder region
+waist_001,waist,yes,clear,yes,clear waistline
+waist_005,waist,yes,clear,yes,clear fitted waist
+waist_008,waist,yes,clear,yes,clear waist detail
+waist_014,waist,yes,clear,yes,clear dress waist
+waist_019,waist,yes,clear,yes,clear fitted waist
+pattern_007,pattern,yes,clear,yes,visible garment pattern
+pattern_012,pattern,yes,clear,yes,visible garment pattern
+pattern_018,pattern,yes,clear,yes,visible garment pattern
+pattern_019,pattern,yes,clear,yes,visible garment pattern
+pattern_021,pattern,yes,clear,yes,visible garment pattern
+decoration_005,decoration,yes,clear,yes,large decorative print
+decoration_006,decoration,yes,clear,yes,visible logo decoration
+decoration_007,decoration,yes,clear,yes,decorative text/detail
+decoration_009,decoration,yes,clear,yes,graphic decoration
+decoration_016,decoration,yes,clear,yes,large decorative print

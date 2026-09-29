@@ -1,0 +1,17 @@
+PRD 3.1.2 Shoulder / Waist / Pattern Spatial Refinement v1
+==========================================================
+
+model=IDEA-Research/grounding-dino-tiny
+device=cuda
+text_threshold=0.25
+box_threshold=per-case value inherited from baseline manifest
+
+shoulder: N=5, non_empty=5, non_empty_rate=100.0%
+waist: N=5, non_empty=5, non_empty_rate=100.0%
+pattern: N=5, non_empty=5, non_empty_rate=100.0%
+
+Important:
+- This file reports automatic detection availability only.
+- Correct/coarse/wrong/missed must be assigned by manual visual review.
+- Shoulder uses two side windows per source case; the highest-score detected window is selected.
+- Waist and pattern use one fixed spatial window each.

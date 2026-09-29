@@ -1,0 +1,21 @@
+PRD 3.1.3 skirt/dress continuous length semantic v1
+===================================================
+model=openai/clip-vit-base-patch32
+instances=52
+hard_classification=false
+gt_available=false
+
+lower_garment_length_score
+--------------------------
+mean=0.6237
+median=0.6247
+min=0.3576
+max=0.9374
+
+Interpretation
+--------------
+- The score is an ordered semantic continuous descriptor, not physical length ground truth.
+- DeepFashion2 provides no mini/midi/maxi GT for this pilot.
+- Validate qualitatively using the contact sheet sorted from short to long.
+- Do not define business thresholds from this pilot alone.
+- Material/fabric and craftsmanship remain excluded.

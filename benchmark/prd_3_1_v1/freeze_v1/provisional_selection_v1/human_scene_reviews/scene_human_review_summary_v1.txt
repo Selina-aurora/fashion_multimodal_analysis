@@ -1,0 +1,33 @@
+PRD 3.1.1 Scene Human Review Summary v1
+=======================================
+
+low_confidence_reviewed=45
+low_confidence_suggestion_matches=17
+high_confidence_spotchecked=16
+high_confidence_spotcheck_matches=10
+high_confidence_spotcheck_agreement=0.6250
+
+Interpretation
+--------------
+- Low-confidence Core scene cases were manually assigned one of the frozen four scene labels.
+- High-confidence CLIP scene suggestions were spot-checked manually.
+- Scene metadata is coverage metadata, not segmentation ground truth.
+- CLIP suggestions should not be treated as human labels; retain scene_label_source in the frozen metadata.
+
+Frozen human scene taxonomy
+---------------------------
+- worn_person: ordinary person-wearing/carrying scene.
+- product_display: product displayed without being worn/carried by a person.
+- partial_view: close/cropped view where only part of wearer/item is visible.
+- complex_scene: runway/crowd/heavy clutter/wide difficult context.
+
+Low-confidence human labels by class
+------------------------------------
+top: complex_scene=2, partial_view=2, worn_person=6
+pants: complex_scene=1, worn_person=5
+skirt: complex_scene=2, worn_person=2
+outerwear: product_display=1
+dress: complex_scene=1, worn_person=1
+shoe: complex_scene=5, worn_person=5
+bag: complex_scene=3, worn_person=2
+accessory: complex_scene=3, partial_view=1, worn_person=3

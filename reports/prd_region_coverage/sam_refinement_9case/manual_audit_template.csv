@@ -1,0 +1,10 @@
+﻿candidate_id,region,proposal_source,proposal_box_area_ratio,sam_bbox_area_ratio,sam_mask_area_ratio,sam_predicted_iou,sam_localization_quality,review_note
+collar_001,collar,spatial_hr,0.313721,0.242626,0.128876,0.636599,,
+collar_010,collar,spatial_hr,0.313913,0.28084,0.066126,0.621418,,
+collar_020,collar,spatial_hr,0.260165,0.259887,0.168251,0.790182,,
+cuff_006,cuff,spatial_hr,0.143077,0.085033,0.026519,0.983408,,
+cuff_008,cuff,spatial_hr,0.433684,0.412825,0.124705,0.853655,,
+cuff_019,cuff,spatial_hr,0.119006,0.110059,0.046464,0.979029,,
+hem_003,hem,baseline,0.689182,0.657368,0.493365,0.953058,,
+hem_008,hem,fixed_spatial_prior,0.448276,0.298522,0.03883,0.940433,,
+hem_023,hem,baseline,0.905951,0.933137,0.82201,0.917535,,

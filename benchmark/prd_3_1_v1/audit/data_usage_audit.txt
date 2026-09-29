@@ -1,0 +1,36 @@
+PRD 3.1 Benchmark Data-Usage Audit v1
+====================================
+
+configs_scanned=18
+unique_used_garment_samples=635
+
+Important
+---------
+- Existing validation / pilot / matched / ablation samples have already been seen during development.
+- They should remain useful as development/regression diagnostics, but should not be promoted to the final blind product acceptance benchmark.
+- Any new benchmark_test builder should exclude every source_image + garment_id listed in used_sample_registry.csv.
+
+Unique used samples by inferred role
+------------------------------------
+development_or_diagnostic=343
+train_or_training_source=463
+unknown_or_auxiliary=218
+
+Unique used samples by category
+-------------------------------
+top=85
+pants=72
+skirt=22
+outerwear=20
+dress=52
+shoe=131
+bag=127
+accessory=126
+other_or_unknown=0
+
+Next step
+---------
+- Build a NEW untouched segmentation benchmark candidate pool from raw data.
+- Exclude used_sample_registry.csv.
+- Balance all 8 categories and source datasets as far as possible.
+- Human-review GT/masks before freezing benchmark_test.

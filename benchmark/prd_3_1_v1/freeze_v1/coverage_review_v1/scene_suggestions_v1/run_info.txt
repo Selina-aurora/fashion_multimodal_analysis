@@ -1,0 +1,23 @@
+PRD 3.1.1 Core Coverage Metadata Suggestions v1
+================================================
+
+model=openai/clip-vit-base-patch32
+device=cuda
+cases=437
+low_confidence_cases=191
+
+IMPORTANT
+---------
+- Suggestions are CLIP-assisted review metadata only.
+- Confidence is relative softmax over the prompt candidates, not a calibrated probability.
+- Human-final scene_type / occlusion_level / visibility_level fields remain blank.
+- Do not freeze Core directly from these suggestions.
+- Review low-confidence cases first, then spot-check high-confidence suggestions.
+- Final 400-case membership must be chosen without looking at candidate-model performance.
+
+Thresholds
+----------
+scene_confidence_min=0.4
+scene_margin_min=0.08
+attribute_confidence_min=0.45
+attribute_margin_min=0.08

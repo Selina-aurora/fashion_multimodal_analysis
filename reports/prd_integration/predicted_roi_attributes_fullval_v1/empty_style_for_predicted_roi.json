@@ -1,0 +1,5 @@
+{
+  "schema_version": "predicted-roi-empty-style-fullval-v1",
+  "records": [],
+  "note": "Intentionally empty to prevent GT continuous-style geometry leakage."
+}

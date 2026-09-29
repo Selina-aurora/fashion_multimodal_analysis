@@ -1,0 +1,14 @@
+PRD 3.1.3 garment pattern hierarchical baseline v3
+model=openai/clip-vit-base-patch32
+manifest=/workspace/fashion_multimodal_analysis/configs/prd_3_1_predicted_roi_matched_v1.csv
+instances=13
+stage1=plain_non_pattern,texture_structure_non_pattern,local_graphic_pattern,repeated_surface_pattern
+binary_mapping=first_two_to_non_pattern,last_two_to_visible_pattern
+stage2=unchanged_v2_subtype_classifier
+exclude_audit_count=0
+excluded_unique_instances=0
+holdout_size=0
+seed=20260917
+transformers_compatibility=explicit_text_and_vision_tower_projection
+gt_available=false_until_new_holdout_manual_audit
+material_and_craftsmanship=excluded_as_targets

@@ -1,0 +1,32 @@
+PRD 3.1.3 unified garment attribute output v1
+=============================================
+style_records=156
+pattern_records=156
+color_records=156
+union_records=156
+complete_records=156
+incomplete_records=0
+
+Category distribution
+---------------------
+top=52
+pants=39
+dress=36
+skirt=16
+outerwear=13
+
+Integration
+-----------
+- key=(source_image, garment_id)
+- continuous style descriptors are preserved as numeric features
+- pattern uses the final v3 hierarchical output
+- primary color uses the multi-background CLIP baseline
+- uncertainty / quality fields are preserved rather than collapsed
+- secondary colors remain out of scope
+- material and craftsmanship remain excluded
+
+Downstream use
+--------------
+- garment_attribute_vector_v1.json is the structured input for later 3.2 multimodal reasoning integration.
+- garment_attribute_vector_v1_flat.csv is for inspection, debugging and simple analysis.
+- unmatched_records.csv must be empty or explicitly explained before calling integration complete.

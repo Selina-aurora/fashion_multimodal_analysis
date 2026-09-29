@@ -1,0 +1,17 @@
+Category,Prompt,Total Images,Detected Images,Detection Rate,Matched Images,Matched Label Rate,Average Confidence,Best Confidence,Total Detections
+sleeve,sleeve,10,8,0.8,8,0.8,0.3152,0.3741,9
+sleeve,shirt sleeve,10,9,0.9,8,0.8,0.3612,0.4478,10
+sleeve,long sleeve part of a shirt,10,10,1.0,10,1.0,0.3633,0.4406,15
+sleeve,upper arm clothing sleeve,10,10,1.0,10,1.0,0.3507,0.4171,19
+collar,collar,10,9,0.9,9,0.9,0.3213,0.4313,10
+collar,shirt collar area,10,10,1.0,9,0.9,0.3359,0.4002,14
+collar,collar part of clothing,10,10,1.0,10,1.0,0.3427,0.4472,13
+collar,upper clothing collar,10,10,1.0,10,1.0,0.3301,0.4343,14
+button,button,10,4,0.4,4,0.4,0.2797,0.3093,4
+button,small button on clothing,10,6,0.6,6,0.6,0.3048,0.3566,6
+button,shirt button detail,10,9,0.9,3,0.3,0.2953,0.3923,13
+button,clothing fastener button,10,6,0.6,6,0.6,0.3044,0.359,6
+zipper,zipper,10,2,0.2,2,0.2,0.2761,0.2841,3
+zipper,zipper on a jacket or shirt,10,10,1.0,2,0.2,0.2977,0.3704,18
+zipper,clothing zipper detail,10,3,0.3,2,0.2,0.2671,0.2969,3
+zipper,front zipper closure,10,10,1.0,3,0.3,0.3589,0.4407,13

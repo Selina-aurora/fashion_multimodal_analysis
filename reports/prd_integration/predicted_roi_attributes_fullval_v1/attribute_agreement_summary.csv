@@ -1,0 +1,7 @@
+﻿attribute,comparable_pairs,same_label_pairs,gt_vs_predroi_label_agreement
+primary_color,18,15,0.8333
+pattern,18,14,0.7778
+sleeve_length,13,8,0.6154
+neckline,13,7,0.5385
+silhouette_fit,18,16,0.8889
+fashion_style,18,11,0.6111

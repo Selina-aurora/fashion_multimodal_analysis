@@ -1,0 +1,3 @@
+﻿source_dataset,gt_count,prediction_count,bbox50_recall,bbox50_precision,category_accuracy_on_localized,end_to_end_bbox50_class_recall,mean_bbox_iou_localized,mean_mask_iou_localized,mean_mask_iou_correct_class,mask_iou_ge_0_50_rate,mask_iou_ge_0_85_rate,missed_gt_count,wrong_class_localized_count,false_positive_count
+DeepFashion2,31,39,0.8064516129032258,0.6410256410256411,0.72,0.5806451612903226,0.8203287574071062,0.838166474402805,0.8497642697866302,0.5806451612903226,0.3225806451612903,6,7,14
+Fashionpedia,12,23,0.16666666666666666,0.08695652173913043,1.0,0.16666666666666666,0.7782573255280997,0.6735832910597233,0.6735832910597233,0.08333333333333333,0.08333333333333333,10,0,21

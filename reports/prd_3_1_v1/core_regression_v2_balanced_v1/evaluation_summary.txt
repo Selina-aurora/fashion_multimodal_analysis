@@ -1,0 +1,40 @@
+PRD 3.1.1 Mask R-CNN 8-Class Baseline Evaluation v1
+====================================================
+
+checkpoint=/workspace/fashion_multimodal_analysis/outputs/prd_instance_segmentation/maskrcnn_8class_baseline_v2/checkpoint_last.pth
+checkpoint_epoch=15
+device=cuda
+gpu=NVIDIA GeForce RTX 4090
+score_threshold=0.5
+match_bbox_iou=0.5
+mask_threshold=0.5
+validation_images=32
+gt_instances=43
+predictions_above_threshold=45
+
+bbox50_recall=0.4419
+bbox50_precision=0.4222
+mean_bbox_iou_localized=0.8392
+category_accuracy_on_localized=0.8421
+end_to_end_bbox50_class_recall=0.3721
+mean_mask_iou_localized=0.8006
+mean_mask_iou_correct_class=0.7941
+mask_iou_ge_0_50_rate=0.3721
+mask_iou_ge_0_85_rate=0.1163
+
+mean_inference_ms_per_image=44.3748
+median_inference_ms_per_image=25.3787
+p95_inference_ms_per_image=84.3811
+mean_inference_time_le_50ms=True
+
+correct=16
+low_mask_iou=0
+wrong_class=3
+missed=24
+
+Notes:
+- Matching is one-to-one by bbox IoU >= 0.50, independent of class.
+- Wrong-class localized predictions are counted as wrong_class rather than missed.
+- Mask IoU >= 0.85 is reported as a PRD-reference pass rate.
+- Timing excludes file I/O and visualization and is measured after warm-up.
+- Do not run another GPU-heavy job during timing if you need trustworthy speed numbers.

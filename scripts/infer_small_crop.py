@@ -1,0 +1,90 @@
+import torch
+from pathlib import Path
+from PIL import Image
+import torchvision.transforms as T
+from torchvision.models.detection import maskrcnn_resnet50_fpn
+from torchvision.models.detection.faster_rcnn import FastRCNNPredictor
+from torchvision.models.detection.mask_rcnn import MaskRCNNPredictor
+
+
+ROOT=Path("/workspace/fashion_multimodal_analysis")
+
+IMG_DIR=ROOT/"reports/prd_3_1_v1/small_object_analysis"
+
+CKPT=ROOT/"outputs/prd_instance_segmentation/maskrcnn_8class_v3_b1_dataexp/checkpoint_last.pth"
+
+
+device="cuda"
+
+classes=[
+    "background",
+    "top",
+    "pants",
+    "skirt",
+    "outerwear",
+    "dress",
+    "shoe",
+    "bag",
+    "accessory"
+]
+
+
+model=maskrcnn_resnet50_fpn(weights=None)
+
+in_features=model.roi_heads.box_predictor.cls_score.in_features
+model.roi_heads.box_predictor=FastRCNNPredictor(
+    in_features,
+    len(classes)
+)
+
+in_features_mask=model.roi_heads.mask_predictor.conv5_mask.in_channels
+
+model.roi_heads.mask_predictor=MaskRCNNPredictor(
+    in_features_mask,
+    256,
+    len(classes)
+)
+
+
+ckpt=torch.load(CKPT,map_location=device)
+
+model.load_state_dict(ckpt["model_state_dict"])
+
+model.to(device)
+model.eval()
+
+
+transform=T.Compose([
+    T.ToTensor()
+])
+
+
+for img_path in IMG_DIR.glob("*.jpg"):
+
+    img=Image.open(img_path).convert("RGB")
+
+    x=transform(img).to(device)
+
+    with torch.no_grad():
+        pred=model([x])[0]
+
+
+    print("\nIMAGE:",img_path.name)
+
+    if len(pred["scores"])==0:
+        print("no prediction")
+        continue
+
+
+    for i,s in enumerate(pred["scores"][:5]):
+
+        score=float(s)
+
+        label=int(pred["labels"][i])
+
+        print(
+            "class:",
+            classes[label],
+            "score:",
+            round(score,3)
+        )

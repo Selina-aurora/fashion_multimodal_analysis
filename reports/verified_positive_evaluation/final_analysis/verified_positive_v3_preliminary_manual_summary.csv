@@ -1,0 +1,13 @@
+﻿target,condition,n,correct,coarse,wrong,missed,correct_rate,usable_localization_rate_correct_plus_coarse
+sleeve,full_image,22,0,9,0,13,0.0,0.4090909090909091
+sleeve,roi_conditioned,22,0,9,0,13,0.0,0.4090909090909091
+sleeve,local_enlarged,22,2,6,0,14,0.09090909090909091,0.36363636363636365
+collar,full_image,22,0,14,1,7,0.0,0.6363636363636364
+collar,roi_conditioned,22,0,14,1,7,0.0,0.6363636363636364
+collar,local_enlarged,22,2,8,0,12,0.09090909090909091,0.45454545454545453
+button,full_image,22,0,4,0,18,0.0,0.18181818181818182
+button,roi_conditioned,22,0,4,0,18,0.0,0.18181818181818182
+button,local_enlarged,22,0,2,0,20,0.0,0.09090909090909091
+zipper,full_image,22,0,1,0,21,0.0,0.045454545454545456
+zipper,roi_conditioned,22,0,1,0,21,0.0,0.045454545454545456
+zipper,local_enlarged,22,1,1,0,20,0.045454545454545456,0.09090909090909091

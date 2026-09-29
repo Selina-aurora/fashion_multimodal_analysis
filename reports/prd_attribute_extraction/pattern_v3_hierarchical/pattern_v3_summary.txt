@@ -1,0 +1,53 @@
+PRD 3.1.3 garment pattern hierarchical baseline v3
+=================================================
+model=openai/clip-vit-base-patch32
+instances=156
+stage1=4_semantic_buckets_then_binary_mapping
+stage2=unchanged_from_v2
+gt_available=false_until_new_holdout_manual_audit
+
+Stage-1 bucket distribution
+---------------------------
+plain_non_pattern=44
+texture_structure_non_pattern=53
+local_graphic_pattern=34
+repeated_surface_pattern=25
+
+Binary pattern-presence distribution
+------------------------------------
+non_pattern=97
+visible_pattern=59
+
+Final distribution
+------------------
+solid=97
+striped=14
+checked_plaid=2
+floral=0
+graphic_logo=30
+polka_dot=6
+animal_print=1
+camouflage=5
+geometric_abstract=1
+other_pattern=0
+
+Uncertainty
+-----------
+stage1_margin: mean=0.2611, median=0.1995, min=0.0020, max=0.9181
+stage2_margin_visible_pattern_only: mean=0.5481, median=0.5611, min=0.0163, max=0.9862
+
+Validation policy
+-----------------
+prior_audit_files_excluded=2
+excluded_unique_instances=82
+new_holdout_audit_rows=40
+- v1 focused audit and v2 holdout must not be reused as official v3 validation.
+- manually label the fresh v3 holdout before reporting v3 accuracy.
+
+Interpretation
+--------------
+- V3 modifies Stage 1 only.
+- plain and texture/structure effects are both mapped to non_pattern.
+- prominent local graphics and repeated surface patterns are mapped to visible_pattern.
+- Stage 2 taxonomy remains unchanged because v2 subtype performance was already strong after correct routing.
+- material/fabric and craftsmanship remain excluded as target attributes.

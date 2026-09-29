@@ -1,0 +1,84 @@
+import sys
+from pathlib import Path
+
+# 加入 scripts 路径
+sys.path.append(str(Path("scripts").resolve()))
+
+import torch
+from PIL import Image
+import torchvision.transforms as T
+
+from eval_prd_8class_maskrcnn_v3_b1_dataexp import build_model
+
+
+device = "cuda"
+
+
+# =========================
+# 1. 加载训练好的8类Mask R-CNN
+# =========================
+
+model = build_model(640, 1024)
+
+checkpoint = torch.load(
+    "outputs/prd_instance_segmentation/maskrcnn_8class_v3_b1_dataexp/checkpoint_last.pth",
+    map_location="cpu"
+)
+
+model.load_state_dict(checkpoint["model_state_dict"])
+
+model.to(device)
+model.eval()
+
+print("model loaded")
+
+
+# =========================
+# 2. 测试图片
+# =========================
+
+imgs = [
+    "reports/prd_3_1_v1/small_object_analysis/resize640/prd8_0175_shoe.jpg",
+    "reports/prd_3_1_v1/small_object_analysis/resize640/prd8_0181_bag.jpg",
+    "reports/prd_3_1_v1/small_object_analysis/resize640/prd8_0192_accessory.jpg"
+]
+
+
+transform = T.ToTensor()
+
+
+# =========================
+# 3. inference
+# =========================
+
+for img_path in imgs:
+
+    img = Image.open(img_path).convert("RGB")
+
+    x = transform(img).to(device)
+
+
+    with torch.no_grad():
+        pred = model([x])[0]
+
+
+    print("\n====================")
+    print("IMAGE:", img_path)
+
+
+    if len(pred["scores"]) == 0:
+        print("no prediction")
+        continue
+
+
+    scores = pred["scores"].cpu()
+    labels = pred["labels"].cpu()
+
+
+    for s, l in zip(scores[:5], labels[:5]):
+        print(
+            "class:",
+            int(l),
+            "score:",
+            round(float(s),4)
+        )
