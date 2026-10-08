@@ -28,7 +28,9 @@ def build_training_model(
         max_size: 图像预处理的最长边限制。
 
     Returns:
-        返回 model，由函数体中同名变量的计算/收集过程得到。
+        Mask R-CNN ResNet50-FPN；保留 COCO 预训练的特征提取与提案参数，
+        分类头和掩码头替换为 NUM_CLASSES（8 个前景类别 + 背景）的新头。
+        调用方负责设备迁移、train() 和优化器配置。首次初始化可能下载预训练权重。
     """
     weights = MaskRCNN_ResNet50_FPN_Weights.DEFAULT
 
@@ -38,6 +40,7 @@ def build_training_model(
 
     in_features = model.roi_heads.box_predictor.cls_score.in_features
 
+    # COCO 原分类数与 PRD8 不同：框分类/回归头和掩码头必须一起替换。
     model.roi_heads.box_predictor = FastRCNNPredictor(
         in_features,
         NUM_CLASSES,
@@ -65,8 +68,10 @@ def build_evaluation_model(min_size: int, max_size: int) -> Any:
         max_size: 图像预处理的最长边限制。
 
     Returns:
-        返回 m，由函数体中同名变量的计算/收集过程得到。
+        未加载预训练权重的八类 Mask R-CNN。调用方必须加载匹配的 checkpoint，
+        再设置设备和 eval()；本函数本身不执行推理，也不保证任意消融模型兼容。
     """
+    # 评估权重全部来自 checkpoint，避免下载或混入另一套 backbone 初始化。
     m = maskrcnn_resnet50_fpn(weights=None, weights_backbone=None)
     inf = m.roi_heads.box_predictor.cls_score.in_features
     m.roi_heads.box_predictor = FastRCNNPredictor(inf, NUM_CLASSES)

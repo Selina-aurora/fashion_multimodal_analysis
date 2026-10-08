@@ -1,6 +1,16 @@
 # 服饰多模态分析实习项目
 
-本次交付日期：2026-10-08。整理上传过的可取得项目文件、补丁、评估结果和审核材料，进度截至 V8 全量一轮训练及回归完成。保留 3.1.1 实例分割 → 3.1.2 局部区域 → 3.1.3 属性提取的分类，旧实验与新实验分别留档。
+本项目面向电商服饰图片的结构化解析，结合视觉模型与文本语义信息，开展服饰实例分割、局部区域定位和可见属性提取。当前主要工作集中在 PRD 3.1 模块，连接实例预测、ROI 处理与属性分析，并通过版本对照、人工审核和错误案例分析定位质量问题。
+
+## 模块与当前范围
+
+| 模块 | 作用与输出 | 当前状态 |
+|---|---|---|
+| 3.1.1 实例分割 | 八类服饰的类别、置信度、边界框与实例掩码 | 已保存基线、V5/V8 对照及全量一轮训练结果；质量仍需优化 |
+| 3.1.2 局部区域 | 基于服饰实例开展细粒度区域定位、裁剪与区域评估 | 已有定位实验和审核材料，覆盖与边界质量继续验证 |
+| 3.1.3 属性提取 | 基于 ROI 提取颜色、图案及适用的设计标签 | 已有基线与预测 ROI 联调；当前不以面料、材质、工艺为重点 |
+
+流程基本连接不等于全部 PRD 验收通过；其他需求范围以 [项目 PRD](docs/standards/product_requirements.pdf) 为准，不能由本页推断其已实现。
 
 **最新状态：V8 训练及回归完成；正式验收未宣称通过。** V8 使用 187,311 张图片、305,452 个实例，从 V5 epoch 15 微调一轮。实际范围是 DF2 原始 train 加 395 张既有 Fashionpedia 训练图片，不是两套原始训练集都全量。
 
@@ -13,6 +23,27 @@
 3. [模块说明](docs/module_guide.md)：输入输出、坐标系统、采样、掩码和计时设计。
 4. [GPU 恢复与运行](docs/gpu_restore_and_run.md)、[GitHub 上传](docs/github_upload.md)：按工作副本执行的操作步骤。
 5. [编码规范落实](docs/coding_standard_compliance.md)、[验证报告](docs/validation_report.md)：具体检查范围与未做的 GPU 检查。
+
+## 从哪里阅读核心代码
+
+`scripts/` 是可运行的薄入口，所以多个脚本结构相似；训练、数据处理和属性逻辑位于 `src/fashion_multimodal_analysis/`。阅读时从对应实现开始，运行时仍使用原 scripts 命令。
+
+| 阅读内容 | 核心实现 |
+|---|---|
+| V8 数据准备、训练、恢复与回归 | [全量工作流](src/fashion_multimodal_analysis/segmentation/training/run_prd31_v8_full_dataset.py) |
+| 类别权重、逐图采样及 V8 的差别 | [采样实现](src/fashion_multimodal_analysis/segmentation/sampling.py) |
+| COCO 初始化与八类预测头 | [模型构造](src/fashion_multimodal_analysis/segmentation/modeling.py) |
+| 二值掩码与裁剪到整图坐标转换 | [掩码处理](src/fashion_multimodal_analysis/image_processing/masks.py) |
+| 预测 ROI 属性传递及一致性统计 | [属性联调](src/fashion_multimodal_analysis/integration/run_prd31_predicted_roi_attributes_v2.py) |
+
+## 错误分析入口
+
+- [V8 全量报告](docs/full_dataset_training_v8_report.md)：训练类别分布、V5/V8 逐类变化及解释限制。
+- [V8 逐类别指标](reports/reruns/recovery_v2/v8_full_dataset/eval_core400_regression_v8_epoch_01/per_class_metrics.csv)：定位漏检、定位后错类及误检计数。
+- [V8 逐实例结果](reports/reruns/recovery_v2/v8_full_dataset/eval_core400_regression_v8_epoch_01/per_gt_results.csv) 与 [错误案例](reports/reruns/recovery_v2/v8_full_dataset/eval_core400_regression_v8_epoch_01/error_cases.csv)：实例类别、匹配、预测类别及掩码表现。
+- [历史 grounding 错误分析](reports/grounding_failure_analysis/failure_analysis_summary.md)：属于此前定位实验，不作为 V8 错误分析的替代。
+
+V8 的鞋、包、配饰主要表现为漏检，外套主要表现为定位后错类。类别不平衡是待验证的解释，尚未通过单因素实验确认。CSV 中的历史 visualization_path 不代表对应图片已包含在当前备份中。
 
 ## 分类与命名
 

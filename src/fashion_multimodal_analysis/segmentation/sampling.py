@@ -39,7 +39,9 @@ def build_sampler_weights(
         alpha: 权重指数。0 不做均衡；0.5 对实例数量比取平方根。
 
     Returns:
-        逐图权重列表和审计行。类别权重为 (最大类别实例数 / 本类实例数) ** alpha；
+        与 dataset.samples 顺序一致的逐图权重列表，以及包含类别和权重的审计行。
+        权重不是已归一化的概率，WeightedRandomSampler 按相对权重抽样。
+        类别权重为 (最大类别实例数 / 本类实例数) ** alpha；
         多类别图片取其中最大权重，避免相乘后过度放大某张图片的采样概率。
 
     Raises:
@@ -77,8 +79,8 @@ def build_sampler_weights(
             {str(r["garment_category"]).strip().lower() for r in sample["instances"]}
         )
 
-        # Use max weight so an image containing any rare class gets the
-        # appropriate boost without multiplying weights for multi-instance imgs.
+        # 采样单位是原图，不是独立实例；稀有类所在图被提高权重时，
+        # 同图的常见类也会一起训练，因此该策略不保证八类最终曝光次数相等。
         weight = max(class_weight[c] for c in classes)
 
         image_weights.append(float(weight))

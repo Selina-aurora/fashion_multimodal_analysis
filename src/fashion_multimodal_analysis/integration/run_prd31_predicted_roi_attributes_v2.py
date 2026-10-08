@@ -105,7 +105,7 @@ def resolve_path(raw: Any) -> Path:
     """将清单或配置中的相对路径解析到当前项目/数据目录。
 
     Args:
-        raw: 本步骤使用的原始值，转换/筛选规则见函数体。
+        raw: 清单中的路径字段；由公共路径解析器处理项目根目录与外部数据根目录。
 
     Returns:
         当前工作副本可使用的路径。
@@ -162,10 +162,10 @@ def norm_source(v: str) -> str:
     """规范化来源标识，使不同表格中的同一原图可连接。
 
     Args:
-        v: 本步骤使用的原始值，转换/筛选规则见函数体。
+        v: 原图路径标识；将反斜杠改为正斜杠并移除首尾空白。
 
     Returns:
-        本步骤计算或解析得到的结果；函数体保留了具体结构和空值处理规则。
+        用于跨表匹配的字符串；不解析绝对路径、不检查文件是否存在。
     """
     return str(v).replace("\\", "/").strip()
 
@@ -177,7 +177,7 @@ def key_of(row: dict[str, str]) -> tuple[str, str]:
         row: 一条实例、预测或审核记录。
 
     Returns:
-        本步骤计算或解析得到的结果；函数体保留了具体结构和空值处理规则。
+        (规范化 source_image, garment_id) 二元组；字段缺失时对应位置为空字符串。
     """
     return (
         norm_source(row.get("source_image", "")),
@@ -189,8 +189,8 @@ def run_module_main(module: str, argv: list[str]) -> None:
     """调用目标实验模块，保留命令行入口的运行语义。
 
     Args:
-        module: 要执行的 Python 模块名称。
-        argv: argv。
+        module: 已导入且提供 main() 的属性模块对象。
+        argv: 临时命令行参数列表，第一项为程序名；退出或异常时恢复原 sys.argv。
     """
     old = sys.argv[:]
     try:
@@ -201,14 +201,14 @@ def run_module_main(module: str, argv: list[str]) -> None:
 
 
 def first_existing(row: dict[str, str], names: list[str]) -> str:
-    """按优先顺序返回存在的候选路径。
+    """按字段优先级选择第一个非空标签值，不检查文件路径是否存在。
 
     Args:
         row: 一条实例、预测或审核记录。
-        names: names。
+        names: 按优先级排列的候选字段名，用于兼容历史结果表的不同列名。
 
     Returns:
-        本步骤计算或解析得到的结果；函数体保留了具体结构和空值处理规则。
+        第一个去除首尾空白后的非空值；全部候选缺失或为空时返回空字符串。
     """
     for name in names:
         value = str(row.get(name, "")).strip()
@@ -221,11 +221,12 @@ def agreement(a: str, b: str) -> str:
     """计算两套预测在可比较样本上的一致性；不是人工真值准确率。
 
     Args:
-        a: 当前函数的第一个输入，含义随运算而定。
-        b: 当前函数的第二个输入，含义随运算而定。
+        a: GT ROI 上的属性预测标签，不是人工审核的属性真值。
+        b: 预测 ROI 上的属性预测标签。
 
     Returns:
-        本步骤计算或解析得到的结果；函数体保留了具体结构和空值处理规则。
+        两者非空且相等时为 "1"，非空且不同为 "0"；任一为空则返回空字符串，
+        后续统计将其排除，不当作预测错误。
     """
     if not a or not b:
         return ""
@@ -240,7 +241,8 @@ def summarize_binary(rows: list[dict[str, Any]], field: str) -> tuple[int, int, 
         field: 本次读取或统计的字段名。
 
     Returns:
-        按顺序返回 n, c 等结果。
+        (可比较行数 n, 标签相同行数 c, c/n)。仅统计字符串 "0" 或 "1"；
+        空值不进入分母，n=0 时比例为 NaN。此比例衡量传播一致性，不是准确率。
     """
     vals = []
     for row in rows:
@@ -267,7 +269,7 @@ def main() -> None:
     REPORT_ROOT.mkdir(parents=True, exist_ok=True)
     OUTPUT_ROOT.mkdir(parents=True, exist_ok=True)
 
-    # Imports are local because this wrapper lives in scripts/.
+    # 属性模块在执行入口内导入；实现位于 src，命令入口位于 scripts/integration。
     import fashion_multimodal_analysis.attributes.color.run_primary_color_baseline_v1 as color_mod
     import fashion_multimodal_analysis.attributes.design.run_design_attribute_labels_v1 as design_mod
     import fashion_multimodal_analysis.attributes.pattern.run_pattern_hierarchical_v3 as pattern_mod
@@ -371,6 +373,8 @@ def main() -> None:
 
     manifest_rows = read_csv(manifest)
 
+    # 按原图与实例 ID 配对，避免多件服饰串行；同一键重复时字典保留最后一行。
+    # 这里的 GT 表是 GT ROI 上的模型输出，一致性不能替代人工真值准确率。
     pred_color = {key_of(r): r for r in read_csv(pred_color_path)}
     pred_pattern = {key_of(r): r for r in read_csv(pred_pattern_path)}
     pred_design = {key_of(r): r for r in read_csv(pred_design_path)}
