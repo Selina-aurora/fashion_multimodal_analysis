@@ -1,0 +1,161 @@
+{
+  "benchmark_version": "prd_3_1_v2",
+  "status": "DRAFT_REQUIRES_HUMAN_REVIEW",
+  "seed": 20260930,
+  "required_regions": [
+    "collar",
+    "cuff",
+    "hem",
+    "pocket",
+    "shoulder",
+    "waist",
+    "pattern",
+    "decoration"
+  ],
+  "required_attributes": [
+    "primary_color",
+    "pattern",
+    "sleeve_length",
+    "neckline",
+    "silhouette_fit",
+    "fashion_style"
+  ],
+  "required_prd_classes": [
+    "top",
+    "pants",
+    "skirt",
+    "outerwear",
+    "dress",
+    "shoe",
+    "bag",
+    "accessory"
+  ],
+  "min_reviewed_positive_per_region": 5,
+  "attribute_taxonomy": {
+    "primary_color": [
+      "black",
+      "white",
+      "gray",
+      "red",
+      "orange",
+      "yellow",
+      "green",
+      "blue",
+      "purple",
+      "pink",
+      "brown",
+      "beige"
+    ],
+    "pattern": [
+      "solid",
+      "striped",
+      "checked_plaid",
+      "polka_dot",
+      "floral",
+      "animal_print",
+      "geometric_abstract",
+      "graphic_logo",
+      "camouflage",
+      "other_pattern"
+    ],
+    "sleeve_length": [
+      "sleeveless",
+      "cap",
+      "short",
+      "elbow",
+      "three_quarter",
+      "long"
+    ],
+    "neckline": [
+      "crew",
+      "v_neck",
+      "round_scoop",
+      "square",
+      "boat",
+      "halter",
+      "off_shoulder",
+      "one_shoulder",
+      "turtleneck",
+      "mock_neck",
+      "polo",
+      "shirt_collar",
+      "hooded",
+      "other"
+    ],
+    "silhouette_fit": [
+      "slim_fitted",
+      "regular_straight",
+      "loose_oversized",
+      "slim_tapered",
+      "straight",
+      "wide_leg",
+      "flared",
+      "a_line",
+      "fitted"
+    ],
+    "fashion_style": [
+      "casual",
+      "formal",
+      "sporty",
+      "streetwear",
+      "elegant",
+      "minimalist",
+      "vintage",
+      "romantic"
+    ]
+  },
+  "segmentation_checkpoint": "outputs/prd_instance_segmentation/maskrcnn_8class_v4_clean/checkpoint_last.pth",
+  "train_manifest": "configs/prd_8class_train_v4_clean.csv",
+  "val_manifest": "configs/prd_8class_val_v1.csv",
+  "grounding_model": "IDEA-Research/grounding-dino-tiny",
+  "sam_model": "facebook/sam-vit-base",
+  "clip_model": "openai/clip-vit-base-patch32",
+  "score_threshold": 0.4,
+  "mask_threshold": 0.5,
+  "bbox_match_iou": 0.5,
+  "grounding_box_threshold": 0.3,
+  "grounding_text_threshold": 0.25,
+  "warmup_runs": 10,
+  "timed_passes": 5,
+  "accuracy_targets": {
+    "mask_iou": 0.85,
+    "grounding": 0.92,
+    "attributes": 0.88
+  },
+  "latency_targets_ms": {
+    "segmentation": 50,
+    "grounding": 30,
+    "attributes": 20
+  },
+  "test_isolation_note": "Core source images have prior segmentation regression history. New labels are not automatically a pristine blind holdout.",
+  "category_fit_taxonomy": {
+    "top": [
+      "slim_fitted",
+      "regular_straight",
+      "loose_oversized"
+    ],
+    "outerwear": [
+      "slim_fitted",
+      "regular_straight",
+      "loose_oversized"
+    ],
+    "pants": [
+      "slim_tapered",
+      "straight",
+      "wide_leg",
+      "flared"
+    ],
+    "skirt": [
+      "straight",
+      "a_line",
+      "flared"
+    ],
+    "dress": [
+      "fitted",
+      "straight",
+      "a_line",
+      "flared"
+    ]
+  },
+  "reference_segmentation_sha256": "c83204aca87c9c4dee304b774fd459bf5a18a2d1d65f0a3a9a79b92721224b89"
+}

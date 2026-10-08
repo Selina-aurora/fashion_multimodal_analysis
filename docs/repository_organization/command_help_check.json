@@ -1,0 +1,897 @@
+[
+  {
+    "command": "analyze_deepfashion2_categories",
+    "exit_code": 0,
+    "error": ""
+  },
+  {
+    "command": "analyze_grounding_bbox_quality",
+    "exit_code": 0,
+    "error": ""
+  },
+  {
+    "command": "analyze_grounding_failure_patterns",
+    "exit_code": 0,
+    "error": ""
+  },
+  {
+    "command": "analyze_prd31_roi_quality_vs_attributes_v2",
+    "exit_code": 0,
+    "error": ""
+  },
+  {
+    "command": "analyze_visibility_filtering",
+    "exit_code": 0,
+    "error": ""
+  },
+  {
+    "command": "annotate_core_part_boxes",
+    "exit_code": 0,
+    "error": ""
+  },
+  {
+    "command": "apply_style_feature_validity_gating_v1",
+    "exit_code": 0,
+    "error": ""
+  },
+  {
+    "command": "audit_dataset_overlap",
+    "exit_code": 0,
+    "error": ""
+  },
+  {
+    "command": "audit_fashionpedia_prd_mapping_v1",
+    "exit_code": 0,
+    "error": ""
+  },
+  {
+    "command": "audit_prd31_benchmark_difficulty_v1",
+    "exit_code": 0,
+    "error": ""
+  },
+  {
+    "command": "audit_prd31_data_for_benchmark_v1",
+    "exit_code": 0,
+    "error": ""
+  },
+  {
+    "command": "audit_prd31_segmentation_gt_qc_v1",
+    "exit_code": 0,
+    "error": ""
+  },
+  {
+    "command": "build_deepfashion2_sample",
+    "exit_code": 0,
+    "error": ""
+  },
+  {
+    "command": "build_design_audit_contact_sheets_v1",
+    "exit_code": 0,
+    "error": ""
+  },
+  {
+    "command": "build_fashionpedia_missing3_pilot_v1",
+    "exit_code": 0,
+    "error": ""
+  },
+  {
+    "command": "build_fashionpedia_missing3_pilot_v2",
+    "exit_code": 0,
+    "error": ""
+  },
+  {
+    "command": "build_gpu_bundle_v3",
+    "exit_code": 0,
+    "error": ""
+  },
+  {
+    "command": "build_gpu_upload_bundle",
+    "exit_code": 0,
+    "error": ""
+  },
+  {
+    "command": "build_grounding_annotation_sheet",
+    "exit_code": 0,
+    "error": ""
+  },
+  {
+    "command": "build_grounding_eval_samples",
+    "exit_code": 0,
+    "error": ""
+  },
+  {
+    "command": "build_grounding_manual_audit",
+    "exit_code": 0,
+    "error": ""
+  },
+  {
+    "command": "build_pattern_focus_audit_pack",
+    "exit_code": 0,
+    "error": ""
+  },
+  {
+    "command": "build_pattern_v2_holdout_audit_pack",
+    "exit_code": 0,
+    "error": ""
+  },
+  {
+    "command": "build_pattern_v3_holdout_audit_pack",
+    "exit_code": 0,
+    "error": ""
+  },
+  {
+    "command": "build_prd31_core_coverage_review_v1",
+    "exit_code": 0,
+    "error": ""
+  },
+  {
+    "command": "build_prd31_core_stress_review_pool_v1",
+    "exit_code": 0,
+    "error": ""
+  },
+  {
+    "command": "build_prd31_human_review_packet_v1",
+    "exit_code": 0,
+    "error": ""
+  },
+  {
+    "command": "build_prd31_matched_roi_manifest_v1",
+    "exit_code": 0,
+    "error": ""
+  },
+  {
+    "command": "build_prd31_matched_roi_manifest_v2",
+    "exit_code": 0,
+    "error": ""
+  },
+  {
+    "command": "build_prd31_minority_scene_review_packet_v1",
+    "exit_code": 0,
+    "error": ""
+  },
+  {
+    "command": "build_prd31_predicted_roi_pilot_v1",
+    "exit_code": 0,
+    "error": ""
+  },
+  {
+    "command": "build_prd31_predicted_roi_pilot_v2",
+    "exit_code": 0,
+    "error": ""
+  },
+  {
+    "command": "build_prd31_provisional_core_selection_v1",
+    "exit_code": 0,
+    "error": ""
+  },
+  {
+    "command": "build_prd31_review_packet",
+    "exit_code": 0,
+    "error": ""
+  },
+  {
+    "command": "build_prd31_segmentation_review_pool_v1",
+    "exit_code": 0,
+    "error": ""
+  },
+  {
+    "command": "build_prd31_segmentation_review_pool_v2",
+    "exit_code": 0,
+    "error": ""
+  },
+  {
+    "command": "build_prd_3_1_2_final_summary_v1",
+    "exit_code": 0,
+    "error": ""
+  },
+  {
+    "command": "build_prd_8class_train_v2_expand_fashionpedia",
+    "exit_code": 0,
+    "error": ""
+  },
+  {
+    "command": "build_prd_8class_train_v2_expand_fashionpedia_fixed",
+    "exit_code": 0,
+    "error": ""
+  },
+  {
+    "command": "build_prd_8class_train_v3_expand_underrepresented",
+    "exit_code": 0,
+    "error": ""
+  },
+  {
+    "command": "build_prd_8class_train_val_split_v1",
+    "exit_code": 0,
+    "error": ""
+  },
+  {
+    "command": "build_prd_8class_unified_manifest_v1",
+    "exit_code": 0,
+    "error": ""
+  },
+  {
+    "command": "build_prd_8class_unified_manifest_v2",
+    "exit_code": 0,
+    "error": ""
+  },
+  {
+    "command": "build_prd_region_candidate_sheets",
+    "exit_code": 0,
+    "error": ""
+  },
+  {
+    "command": "build_remaining5_region_diagnostic_v1",
+    "exit_code": 0,
+    "error": ""
+  },
+  {
+    "command": "build_shoulder_waist_pattern_refinement_inputs_v1",
+    "exit_code": 0,
+    "error": ""
+  },
+  {
+    "command": "build_shoulder_waist_pattern_refinement_inputs_v1_fixed",
+    "exit_code": 0,
+    "error": ""
+  },
+  {
+    "command": "build_shoulder_waist_pattern_refinement_inputs_v1_v2",
+    "exit_code": 0,
+    "error": ""
+  },
+  {
+    "command": "build_small_object_crop",
+    "exit_code": 0,
+    "error": ""
+  },
+  {
+    "command": "build_style_feature_vector_v1",
+    "exit_code": 0,
+    "error": ""
+  },
+  {
+    "command": "build_style_feature_vector_v1_nopandas",
+    "exit_code": 0,
+    "error": ""
+  },
+  {
+    "command": "build_target_balanced_candidates",
+    "exit_code": 0,
+    "error": ""
+  },
+  {
+    "command": "build_unified_garment_attribute_vector_v1",
+    "exit_code": 0,
+    "error": ""
+  },
+  {
+    "command": "build_unified_garment_attribute_vector_v1_fixed",
+    "exit_code": 0,
+    "error": ""
+  },
+  {
+    "command": "build_verified_positive_benchmark",
+    "exit_code": 0,
+    "error": ""
+  },
+  {
+    "command": "check_assets",
+    "exit_code": 0,
+    "error": ""
+  },
+  {
+    "command": "check_deepfashion2_dataloader",
+    "exit_code": 0,
+    "error": ""
+  },
+  {
+    "command": "check_deepfashion2_dataset",
+    "exit_code": 0,
+    "error": ""
+  },
+  {
+    "command": "check_mask2former_forward",
+    "exit_code": 0,
+    "error": ""
+  },
+  {
+    "command": "check_mask2former_train_step",
+    "exit_code": 0,
+    "error": ""
+  },
+  {
+    "command": "check_project",
+    "exit_code": 0,
+    "error": ""
+  },
+  {
+    "command": "compare_prd_8class_balanced_vs_nobalance",
+    "exit_code": 0,
+    "error": ""
+  },
+  {
+    "command": "convert_annotation_to_masks",
+    "exit_code": 0,
+    "error": ""
+  },
+  {
+    "command": "diagnose_core_part_detector_topk",
+    "exit_code": 0,
+    "error": ""
+  },
+  {
+    "command": "diagnose_core_part_detector_train_vs_val",
+    "exit_code": 0,
+    "error": ""
+  },
+  {
+    "command": "diagnose_core_part_detector_v1",
+    "exit_code": 0,
+    "error": ""
+  },
+  {
+    "command": "diagnose_prd31_v4",
+    "exit_code": 0,
+    "error": ""
+  },
+  {
+    "command": "diagnose_prd31_v6_regressions",
+    "exit_code": 0,
+    "error": ""
+  },
+  {
+    "command": "discover_prd31_raw_benchmark_pool_v1",
+    "exit_code": 0,
+    "error": ""
+  },
+  {
+    "command": "eval_prd31_core_regression_v2_balanced_v1",
+    "exit_code": 0,
+    "error": ""
+  },
+  {
+    "command": "eval_prd_8class_maskrcnn_baseline_v1",
+    "exit_code": 0,
+    "error": ""
+  },
+  {
+    "command": "eval_prd_8class_maskrcnn_baseline_v2",
+    "exit_code": 0,
+    "error": ""
+  },
+  {
+    "command": "eval_prd_8class_maskrcnn_v3_a1_highres",
+    "exit_code": 0,
+    "error": ""
+  },
+  {
+    "command": "eval_prd_8class_maskrcnn_v3_a2_smallanchors",
+    "exit_code": 0,
+    "error": ""
+  },
+  {
+    "command": "eval_prd_8class_maskrcnn_v3_a2b_p2small",
+    "exit_code": 0,
+    "error": ""
+  },
+  {
+    "command": "eval_prd_8class_maskrcnn_v3_a3_smallsampling",
+    "exit_code": 0,
+    "error": ""
+  },
+  {
+    "command": "eval_prd_8class_maskrcnn_v3_b1_dataexp",
+    "exit_code": 0,
+    "error": ""
+  },
+  {
+    "command": "evaluate_core_regions_spatial_hr",
+    "exit_code": 0,
+    "error": ""
+  },
+  {
+    "command": "evaluate_grounding_results",
+    "exit_code": 0,
+    "error": ""
+  },
+  {
+    "command": "evaluate_person_roi_adaptive_batch",
+    "exit_code": 0,
+    "error": ""
+  },
+  {
+    "command": "evaluate_person_roi_batch",
+    "exit_code": 0,
+    "error": ""
+  },
+  {
+    "command": "evaluate_person_roi_fallback_batch",
+    "exit_code": 0,
+    "error": ""
+  },
+  {
+    "command": "evaluate_person_roi_quality_batch",
+    "exit_code": 0,
+    "error": ""
+  },
+  {
+    "command": "evaluate_prd_40case_coverage",
+    "exit_code": 0,
+    "error": ""
+  },
+  {
+    "command": "evaluate_prompt_variants",
+    "exit_code": 0,
+    "error": ""
+  },
+  {
+    "command": "evaluate_sam_refinement_9case",
+    "exit_code": 0,
+    "error": ""
+  },
+  {
+    "command": "evaluate_verified_positive_benchmark",
+    "exit_code": 0,
+    "error": ""
+  },
+  {
+    "command": "evaluate_verified_positive_benchmark_v2",
+    "exit_code": 0,
+    "error": ""
+  },
+  {
+    "command": "evaluate_verified_positive_benchmark_v3",
+    "exit_code": 0,
+    "error": ""
+  },
+  {
+    "command": "extract_neckline_geometry_continuous_v1",
+    "exit_code": 0,
+    "error": ""
+  },
+  {
+    "command": "extract_pants_silhouette_continuous_v1",
+    "exit_code": 0,
+    "error": ""
+  },
+  {
+    "command": "extract_skirt_flare_continuous_v1",
+    "exit_code": 0,
+    "error": ""
+  },
+  {
+    "command": "extract_sleeve_geometry_features_v2",
+    "exit_code": 0,
+    "error": ""
+  },
+  {
+    "command": "extract_trouser_fit_continuous_v2",
+    "exit_code": 0,
+    "error": ""
+  },
+  {
+    "command": "extract_upper_silhouette_continuous_v1",
+    "exit_code": 0,
+    "error": ""
+  },
+  {
+    "command": "extract_upper_silhouette_continuous_v2",
+    "exit_code": 0,
+    "error": ""
+  },
+  {
+    "command": "finalize_prd_3_1_1_v1",
+    "exit_code": 0,
+    "error": ""
+  },
+  {
+    "command": "freeze_prd31_reviewed_tests",
+    "exit_code": 0,
+    "error": ""
+  },
+  {
+    "command": "freeze_prd31_segmentation_test_v1",
+    "exit_code": 0,
+    "error": ""
+  },
+  {
+    "command": "generate_grounding_contact_sheets",
+    "exit_code": 0,
+    "error": ""
+  },
+  {
+    "command": "infer_small_crop",
+    "exit_code": 0,
+    "error": ""
+  },
+  {
+    "command": "prepare_core_part_annotation_pilot",
+    "exit_code": 0,
+    "error": ""
+  },
+  {
+    "command": "prepare_garment_instances_from_deepfashion2",
+    "exit_code": 0,
+    "error": ""
+  },
+  {
+    "command": "prepare_prd31_core_freeze_and_protocol_v1",
+    "exit_code": 0,
+    "error": ""
+  },
+  {
+    "command": "prepare_prd31_recovery",
+    "exit_code": 0,
+    "error": ""
+  },
+  {
+    "command": "prepare_prd8_gpu_package_v1",
+    "exit_code": 0,
+    "error": ""
+  },
+  {
+    "command": "record_maskrcnn_8class_experiment_config_v1",
+    "exit_code": 0,
+    "error": ""
+  },
+  {
+    "command": "refine_prd31_segmentation_gt_qc_v2",
+    "exit_code": 0,
+    "error": ""
+  },
+  {
+    "command": "repair_design_labels_v1_outputs",
+    "exit_code": 0,
+    "error": ""
+  },
+  {
+    "command": "review_flagged_core_part_boxes",
+    "exit_code": 0,
+    "error": ""
+  },
+  {
+    "command": "run_attribute_baseline_clip",
+    "exit_code": 0,
+    "error": ""
+  },
+  {
+    "command": "run_attribute_baseline_clip_batch",
+    "exit_code": 0,
+    "error": ""
+  },
+  {
+    "command": "run_attribute_baseline_clip_instances",
+    "exit_code": 0,
+    "error": ""
+  },
+  {
+    "command": "run_attribute_baseline_clip_instances_v2",
+    "exit_code": 0,
+    "error": ""
+  },
+  {
+    "command": "run_attribute_baseline_cpu",
+    "exit_code": 0,
+    "error": ""
+  },
+  {
+    "command": "run_attribute_baseline_cpu_v2",
+    "exit_code": 0,
+    "error": ""
+  },
+  {
+    "command": "run_attribute_baseline_instances_v3",
+    "exit_code": 0,
+    "error": ""
+  },
+  {
+    "command": "run_attribute_baseline_v1",
+    "exit_code": 0,
+    "error": ""
+  },
+  {
+    "command": "run_attribute_baseline_v2",
+    "exit_code": 0,
+    "error": ""
+  },
+  {
+    "command": "run_design_attribute_labels_v1",
+    "exit_code": 0,
+    "error": ""
+  },
+  {
+    "command": "run_grounding_dino_baseline",
+    "exit_code": 0,
+    "error": ""
+  },
+  {
+    "command": "run_grounding_dino_multi_test",
+    "exit_code": 0,
+    "error": ""
+  },
+  {
+    "command": "run_grounding_dino_prompt_optimization",
+    "exit_code": 0,
+    "error": ""
+  },
+  {
+    "command": "run_grounding_group_evaluation",
+    "exit_code": 0,
+    "error": ""
+  },
+  {
+    "command": "run_mask2former_baseline",
+    "exit_code": 0,
+    "error": ""
+  },
+  {
+    "command": "run_neckline_semantic_continuous_v2",
+    "exit_code": 0,
+    "error": ""
+  },
+  {
+    "command": "run_pants_length_continuous_v1",
+    "exit_code": 0,
+    "error": ""
+  },
+  {
+    "command": "run_pattern_baseline_v1_fixed",
+    "exit_code": 0,
+    "error": ""
+  },
+  {
+    "command": "run_pattern_hierarchical_v2",
+    "exit_code": 0,
+    "error": ""
+  },
+  {
+    "command": "run_pattern_hierarchical_v2_fixed",
+    "exit_code": 0,
+    "error": ""
+  },
+  {
+    "command": "run_pattern_hierarchical_v3",
+    "exit_code": 0,
+    "error": ""
+  },
+  {
+    "command": "run_pocket_decoration_prompt_scale_diagnostic_v1",
+    "exit_code": 0,
+    "error": ""
+  },
+  {
+    "command": "run_prd31_acceptance",
+    "exit_code": 0,
+    "error": ""
+  },
+  {
+    "command": "run_prd31_bbox_mask_isolation_ablation_v1",
+    "exit_code": 0,
+    "error": ""
+  },
+  {
+    "command": "run_prd31_fullval_expansion_stage1",
+    "exit_code": 0,
+    "error": ""
+  },
+  {
+    "command": "run_prd31_predicted_roi_attributes_fullval_v1",
+    "exit_code": 0,
+    "error": ""
+  },
+  {
+    "command": "run_prd31_predicted_roi_attributes_v1",
+    "exit_code": 0,
+    "error": ""
+  },
+  {
+    "command": "run_prd31_predicted_roi_attributes_v1_fixed",
+    "exit_code": 0,
+    "error": ""
+  },
+  {
+    "command": "run_prd31_predicted_roi_attributes_v2",
+    "exit_code": 0,
+    "error": ""
+  },
+  {
+    "command": "run_prd31_recovery",
+    "exit_code": 0,
+    "error": ""
+  },
+  {
+    "command": "run_prd31_v5_full_targets",
+    "exit_code": 0,
+    "error": ""
+  },
+  {
+    "command": "run_prd31_v6_coverage",
+    "exit_code": 0,
+    "error": ""
+  },
+  {
+    "command": "run_prd31_v7_fp_heads",
+    "exit_code": 0,
+    "error": ""
+  },
+  {
+    "command": "run_prd31_v8_full_dataset",
+    "exit_code": 0,
+    "error": ""
+  },
+  {
+    "command": "run_primary_color_baseline_v1",
+    "exit_code": 0,
+    "error": ""
+  },
+  {
+    "command": "run_roi_conditioned_grounding",
+    "exit_code": 0,
+    "error": ""
+  },
+  {
+    "command": "run_segmentation_first_diagnostic",
+    "exit_code": 0,
+    "error": ""
+  },
+  {
+    "command": "run_shoulder_waist_pattern_groundingdino_refinement_v1",
+    "exit_code": 0,
+    "error": ""
+  },
+  {
+    "command": "run_skirt_dress_length_continuous_v1",
+    "exit_code": 0,
+    "error": ""
+  },
+  {
+    "command": "run_sleeve_length_continuous_v1",
+    "exit_code": 0,
+    "error": ""
+  },
+  {
+    "command": "run_verified_positive_prompt_diagnostic",
+    "exit_code": 0,
+    "error": ""
+  },
+  {
+    "command": "setup_prd31_benchmark_v1",
+    "exit_code": 0,
+    "error": ""
+  },
+  {
+    "command": "suggest_prd31_core_scene_metadata_v1",
+    "exit_code": 0,
+    "error": ""
+  },
+  {
+    "command": "suggest_prd31_core_scene_metadata_v1_fixed",
+    "exit_code": 0,
+    "error": ""
+  },
+  {
+    "command": "summarize_attribute_manual_audit",
+    "exit_code": 0,
+    "error": ""
+  },
+  {
+    "command": "summarize_prd31_acceptance",
+    "exit_code": 0,
+    "error": ""
+  },
+  {
+    "command": "summarize_prompt_diagnostic_no_pandas",
+    "exit_code": 0,
+    "error": ""
+  },
+  {
+    "command": "summarize_saved_results",
+    "exit_code": 0,
+    "error": ""
+  },
+  {
+    "command": "sweep_prd_8class_maskrcnn_thresholds_v1",
+    "exit_code": 0,
+    "error": ""
+  },
+  {
+    "command": "test_language_prompts",
+    "exit_code": 0,
+    "error": ""
+  },
+  {
+    "command": "test_mask2former_training_input",
+    "exit_code": 0,
+    "error": ""
+  },
+  {
+    "command": "test_prompt_variants",
+    "exit_code": 0,
+    "error": ""
+  },
+  {
+    "command": "test_resize_crop_infer",
+    "exit_code": 0,
+    "error": ""
+  },
+  {
+    "command": "test_small_crop_resize",
+    "exit_code": 0,
+    "error": ""
+  },
+  {
+    "command": "train_core_part_detector_v1",
+    "exit_code": 0,
+    "error": ""
+  },
+  {
+    "command": "train_prd_8class_maskrcnn_baseline_v1",
+    "exit_code": 0,
+    "error": ""
+  },
+  {
+    "command": "train_prd_8class_maskrcnn_baseline_v2_balanced",
+    "exit_code": 0,
+    "error": ""
+  },
+  {
+    "command": "train_prd_8class_maskrcnn_baseline_v2_nobalance",
+    "exit_code": 0,
+    "error": ""
+  },
+  {
+    "command": "train_prd_8class_maskrcnn_v3_a1_highres",
+    "exit_code": 0,
+    "error": ""
+  },
+  {
+    "command": "train_prd_8class_maskrcnn_v3_a2_smallanchors",
+    "exit_code": 0,
+    "error": ""
+  },
+  {
+    "command": "train_prd_8class_maskrcnn_v3_a2b_p2small",
+    "exit_code": 0,
+    "error": ""
+  },
+  {
+    "command": "train_prd_8class_maskrcnn_v3_a3_smallsampling",
+    "exit_code": 0,
+    "error": ""
+  },
+  {
+    "command": "train_prd_8class_maskrcnn_v3_b1_dataexp",
+    "exit_code": 0,
+    "error": ""
+  },
+  {
+    "command": "train_prd_8class_maskrcnn_v4_clean",
+    "exit_code": 0,
+    "error": ""
+  },
+  {
+    "command": "verify_prd31_v5_speed",
+    "exit_code": 0,
+    "error": ""
+  },
+  {
+    "command": "visualize_annotation",
+    "exit_code": 0,
+    "error": ""
+  },
+  {
+    "command": "visualize_core_part_annotations",
+    "exit_code": 0,
+    "error": ""
+  },
+  {
+    "command": "visualize_grounding_group_results",
+    "exit_code": 0,
+    "error": ""
+  },
+  {
+    "command": "visualize_result",
+    "exit_code": 0,
+    "error": ""
+  }
+]

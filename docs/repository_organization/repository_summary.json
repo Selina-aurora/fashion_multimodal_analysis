@@ -1,0 +1,21 @@
+{
+  "delivery_date": "2026-10-08",
+  "active_python_files": 408,
+  "documented_modules": 408,
+  "documented_class_and_function_definitions": 2042,
+  "public_functions_with_parameter_and_return_hints": 1944,
+  "registered_commands": 179,
+  "static_help_checks_passed": 179,
+  "result_identity_counts": {
+    "PRIMARY_MATCH": 324
+  },
+  "runtime_sha256": "ff85ca020695498ab287d73e8afd915b44345ecd2168b38eb24410fb8ddddfb8",
+  "gpu_training_rerun": false,
+  "missing_assets": [
+    "v5_checkpoint",
+    "v8_checkpoint",
+    "v8_dataset_sqlite",
+    "full_target_development_manifest",
+    "external_raw_data_and_v5_masks"
+  ]
+}

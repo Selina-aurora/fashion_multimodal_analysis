@@ -1,0 +1,106 @@
+[
+  {
+    "path": "docs/Grounding_DINO_Baseline_Analysis_update.md",
+    "source": "recovered_original"
+  },
+  {
+    "path": "docs/PRD_3_1_2_Attribute_Grounding_Error_Analysis.md",
+    "source": "recovered_original"
+  },
+  {
+    "path": "docs/PRD_3_1_3_Attribute_Propagation_Analysis.md",
+    "source": "recovered_original"
+  },
+  {
+    "path": "docs/PRD_3_1_FINAL_SUMMARY.md",
+    "source": "recovered_original"
+  },
+  {
+    "path": "docs/PRD_3_1_Final_Summary (2).md",
+    "source": "recovered_original"
+  },
+  {
+    "path": "docs/experiments/grounding_localization_evaluation_2026-09-10.md",
+    "source": "recovered_original"
+  },
+  {
+    "path": "docs/gpu_experiment_plan.md",
+    "source": "recovered_original"
+  },
+  {
+    "path": "docs/grounding_dino_baseline_analysis.md",
+    "source": "recovered_original"
+  },
+  {
+    "path": "docs/grounding_dino_experiment_results.md",
+    "source": "recovered_original"
+  },
+  {
+    "path": "docs/instance_segmentation_development.md",
+    "source": "recovered_original"
+  },
+  {
+    "path": "docs/language_guided_localization.md",
+    "source": "recovered_original"
+  },
+  {
+    "path": "docs/prompt_ablation_analysis.md",
+    "source": "recovered_original"
+  },
+  {
+    "path": "docs/prompt_optimization_analysis.md",
+    "source": "recovered_original"
+  },
+  {
+    "path": "docs/gpu_experiment_plan.md",
+    "source": "docs.zip"
+  },
+  {
+    "path": "docs/grounding_dino_baseline_analysis.md",
+    "source": "docs.zip"
+  },
+  {
+    "path": "docs/Grounding_DINO_Baseline_Analysis_update.md",
+    "source": "docs.zip"
+  },
+  {
+    "path": "docs/grounding_dino_experiment_results.md",
+    "source": "docs.zip"
+  },
+  {
+    "path": "docs/instance_segmentation_development.md",
+    "source": "docs.zip"
+  },
+  {
+    "path": "docs/language_guided_localization.md",
+    "source": "docs.zip"
+  },
+  {
+    "path": "docs/prompt_ablation_analysis.md",
+    "source": "docs.zip"
+  },
+  {
+    "path": "docs/prompt_optimization_analysis.md",
+    "source": "docs.zip"
+  },
+  {
+    "path": "docs/experiments/grounding_localization_evaluation_2026-09-10.md",
+    "source": "docs.zip"
+  },
+  {
+    "path": "docs/PRD_3_1_FINAL_SUMMARY.md",
+    "source": "docs.zip"
+  },
+  {
+    "path": "docs/PRD_3_1_2_Attribute_Grounding_Error_Analysis.md",
+    "source": "docs.zip"
+  },
+  {
+    "path": "docs/PRD_3_1_Final_Summary (2).md",
+    "source": "docs.zip"
+  },
+  {
+    "path": "docs/PRD_3_1_3_Attribute_Propagation_Analysis.md",
+    "source": "docs.zip"
+  }
+]

@@ -1,0 +1,51 @@
+[
+  {
+    "uploaded_name": "DIAGNOSE_PRD31_V4.py",
+    "implementation": "src/fashion_multimodal_analysis/analysis/diagnose_prd31_v4.py",
+    "entrypoint": "scripts/analysis/diagnose_prd31_v4.py",
+    "source_sha256": "51629161b217080771280b337779a4e4a1bcabdc46401f860183726a8a244a7a",
+    "change": "relative_defaults_and_package_imports"
+  },
+  {
+    "uploaded_name": "DIAGNOSE_PRD31_V6_REGRESSIONS.py",
+    "implementation": "src/fashion_multimodal_analysis/analysis/diagnose_prd31_v6_regressions.py",
+    "entrypoint": "scripts/analysis/diagnose_prd31_v6_regressions.py",
+    "source_sha256": "7f2aa84cbe80488f16e635735c99c9a46e546d7cd9b48a34d99b216a184ca3b0",
+    "change": "relative_defaults_and_package_imports"
+  },
+  {
+    "uploaded_name": "RUN_PRD31_V5_FULL_TARGETS.py",
+    "implementation": "src/fashion_multimodal_analysis/segmentation/training/run_prd31_v5_full_targets.py",
+    "entrypoint": "scripts/segmentation/training/run_prd31_v5_full_targets.py",
+    "source_sha256": "bed94606e2fb885552bfcffbc85a5188d5541fa391645702d8cf59d9c7e337cf",
+    "change": "relative_defaults_and_package_imports"
+  },
+  {
+    "uploaded_name": "RUN_PRD31_V6_COVERAGE.py",
+    "implementation": "src/fashion_multimodal_analysis/segmentation/training/run_prd31_v6_coverage.py",
+    "entrypoint": "scripts/segmentation/training/run_prd31_v6_coverage.py",
+    "source_sha256": "1a13076724cf4bd5aaec95efcc44fcf612c48ecca688d6502e53d564733f29f4",
+    "change": "relative_defaults_and_package_imports"
+  },
+  {
+    "uploaded_name": "RUN_PRD31_V7_FP_HEADS.py",
+    "implementation": "src/fashion_multimodal_analysis/segmentation/training/run_prd31_v7_fp_heads.py",
+    "entrypoint": "scripts/segmentation/training/run_prd31_v7_fp_heads.py",
+    "source_sha256": "33613d8442203412b910e26c5036bf77203913a93bc19d3929f0b6f79f77883f",
+    "change": "relative_defaults_and_package_imports"
+  },
+  {
+    "uploaded_name": "run_prd31_v8_full_dataset.py",
+    "implementation": "src/fashion_multimodal_analysis/segmentation/training/run_prd31_v8_full_dataset.py",
+    "entrypoint": "scripts/segmentation/training/run_prd31_v8_full_dataset.py",
+    "source_sha256": "531dc7e50a66dbddbd0be06c4bf3424284f46f6523ba2189371b5eb93ba78ff1",
+    "change": "relative_defaults_and_package_imports"
+  },
+  {
+    "uploaded_name": "FIX_PRD31_V5_SPEED.py",
+    "implementation": "src/fashion_multimodal_analysis/maintenance/verify_prd31_v5_speed.py",
+    "entrypoint": "scripts/maintenance/verify_prd31_v5_speed.py",
+    "source_sha256": "4eb24169319827aacb7767a04aeaa2256e8a3f47da95e82439a3bad51ac15cc3",
+    "change": "relative_defaults_and_package_imports"
+  }
+]

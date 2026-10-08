@@ -1,0 +1,7 @@
+{
+  "historical_uploaded_runtime_sha256": "60021df022b16fbe42c88ed57635e180cfd397077803403cbb6513169daabaca",
+  "documented_release_runtime_sha256": "ff85ca020695498ab287d73e8afd915b44345ecd2168b38eb24410fb8ddddfb8",
+  "historical_receipts_preserved": true,
+  "semantic_verification": "test_documented_runtime_preserves_uploaded_filtered_transfer_logic",
+  "fresh_run_directory_required": true
+}

@@ -1,0 +1,91 @@
+PRD 3.1.1 Mask R-CNN 8-Class Baseline Experiment Configuration
+================================================================
+
+recorded_at=2026-09-21T07:16:08
+
+[Task / Model]
+task=PRD 3.1.1 8-class instance segmentation
+model=Mask R-CNN ResNet50-FPN
+pretrained_weights=MaskRCNN_ResNet50_FPN_Weights.DEFAULT
+foreground_classes=8
+classes_with_background=9
+
+[Class Mapping]
+1=top
+2=pants
+3=skirt
+4=outerwear
+5=dress
+6=shoe
+7=bag
+8=accessory
+
+[Dataset Split]
+train_instances=173
+train_image_groups=127
+val_instances=43
+val_image_groups=32
+
+[Train Class Counts]
+top=42
+pants=31
+skirt=13
+outerwear=10
+dress=29
+shoe=16
+bag=16
+accessory=16
+
+[Validation Class Counts]
+top=10
+pants=8
+skirt=3
+outerwear=3
+dress=7
+shoe=4
+bag=4
+accessory=4
+
+[Dataset Sources]
+train_DeepFashion2=125
+train_Fashionpedia=48
+val_DeepFashion2=31
+val_Fashionpedia=12
+
+[Training Hyperparameters]
+epochs=15
+batch_size=1
+optimizer=SGD
+learning_rate=0.0025
+momentum=0.9
+weight_decay=0.0005
+lr_scheduler=StepLR
+lr_step_size=5
+lr_gamma=0.1
+input_min_size=640
+input_max_size=1024
+random_horizontal_flip=True
+random_horizontal_flip_probability=0.5
+seed=20260918
+num_workers=0
+device_requested=cuda
+
+[Runtime Environment]
+python=3.12.11
+platform=Linux-6.12.101-compshare-x86_64-with-glibc2.35
+pytorch=2.13.0+cu132
+torchvision=0.28.0+cu132
+cuda_available=True
+pytorch_cuda=13.2
+gpu=NVIDIA GeForce RTX 4090
+vram_gb=23.54
+cudnn=92000
+
+[Training Command]
+python scripts/train_prd_8class_maskrcnn_baseline_v1.py --epochs 15 --device cuda
+
+[Notes]
+- Train/validation split is grouped by source image to avoid leakage.
+- DeepFashion2 provides top/pants/skirt/outerwear/dress.
+- Fashionpedia provides shoe/bag/accessory.
+- This file records the baseline configuration; evaluation metrics are reported separately.

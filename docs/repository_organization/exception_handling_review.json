@@ -1,0 +1,57 @@
+[
+  {
+    "file": "src/fashion_multimodal_analysis/data_tools/build_prd_8class_train_v2_expand_fashionpedia.py",
+    "line_before_final_format": 302,
+    "policy": "EXPECTED_PATH_FALLBACK"
+  },
+  {
+    "file": "src/fashion_multimodal_analysis/data_tools/build_prd_8class_train_v2_expand_fashionpedia_fixed.py",
+    "line_before_final_format": 228,
+    "policy": "EXPECTED_PATH_FALLBACK"
+  },
+  {
+    "file": "src/fashion_multimodal_analysis/data_tools/build_fashionpedia_missing3_pilot_v2.py",
+    "line_before_final_format": 246,
+    "policy": "EXPECTED_PATH_FALLBACK"
+  },
+  {
+    "file": "src/fashion_multimodal_analysis/data_tools/build_fashionpedia_missing3_pilot_v1.py",
+    "line_before_final_format": 220,
+    "policy": "EXPECTED_PATH_FALLBACK"
+  },
+  {
+    "file": "src/fashion_multimodal_analysis/data_tools/build_prd_8class_train_v3_expand_underrepresented.py",
+    "line_before_final_format": 237,
+    "policy": "EXPECTED_PATH_FALLBACK"
+  },
+  {
+    "file": "src/fashion_multimodal_analysis/benchmarking/discover_prd31_raw_benchmark_pool_v1.py",
+    "line_before_final_format": 383,
+    "policy": "INVALID_ANNOTATION_LOGGED"
+  },
+  {
+    "file": "src/fashion_multimodal_analysis/grounding/refinement/build_shoulder_waist_pattern_refinement_inputs_v1_v2.py",
+    "line_before_final_format": 119,
+    "policy": "EXPECTED_PATH_FALLBACK"
+  },
+  {
+    "file": "src/fashion_multimodal_analysis/grounding/refinement/build_shoulder_waist_pattern_refinement_inputs_v1_v2.py",
+    "line_before_final_format": 366,
+    "policy": "INVALID_ANNOTATION_LOGGED"
+  },
+  {
+    "file": "src/fashion_multimodal_analysis/grounding/refinement/run_pocket_decoration_prompt_scale_diagnostic_v1.py",
+    "line_before_final_format": 167,
+    "policy": "EXPECTED_PATH_FALLBACK"
+  },
+  {
+    "file": "src/fashion_multimodal_analysis/grounding/refinement/run_pocket_decoration_prompt_scale_diagnostic_v1.py",
+    "line_before_final_format": 299,
+    "policy": "INVALID_ANNOTATION_LOGGED"
+  },
+  {
+    "file": "src/fashion_multimodal_analysis/grounding/refinement/build_shoulder_waist_pattern_refinement_inputs_v1_fixed.py",
+    "line_before_final_format": 113,
+    "policy": "EXPECTED_PATH_FALLBACK"
+  }
+]

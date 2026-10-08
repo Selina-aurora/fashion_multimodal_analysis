@@ -1,0 +1,665 @@
+{
+  "date": "2026-09-30",
+  "source_scripts": 164,
+  "command_entries": 161,
+  "shared_extractions": [
+    {
+      "source": "eval_prd31_core_regression_v2_balanced_v1.py",
+      "symbol": "build_model",
+      "shared_module": "segmentation.modeling",
+      "shared_symbol": "build_evaluation_model",
+      "original_ast_sha256": "d084423c0d51e70b42d3204e404857586bb89da7534455d1353c87de2de9afcb"
+    },
+    {
+      "source": "eval_prd31_core_regression_v2_balanced_v1.py",
+      "symbol": "box_iou",
+      "shared_module": "evaluation.metrics",
+      "shared_symbol": "box_iou",
+      "original_ast_sha256": "7e969f4d7d5593db92dfd88379c2563c96567c11587767cabb607ed8cc0c6f5f"
+    },
+    {
+      "source": "eval_prd31_core_regression_v2_balanced_v1.py",
+      "symbol": "mask_iou",
+      "shared_module": "evaluation.metrics",
+      "shared_symbol": "mask_iou",
+      "original_ast_sha256": "b9b94ec38fa42ce03c8d97f98460624dea24b20fb1a48273039b4e1dfe3f1b62"
+    },
+    {
+      "source": "eval_prd_8class_maskrcnn_baseline_v1.py",
+      "symbol": "build_model",
+      "shared_module": "segmentation.modeling",
+      "shared_symbol": "build_evaluation_model",
+      "original_ast_sha256": "d084423c0d51e70b42d3204e404857586bb89da7534455d1353c87de2de9afcb"
+    },
+    {
+      "source": "eval_prd_8class_maskrcnn_baseline_v1.py",
+      "symbol": "box_iou",
+      "shared_module": "evaluation.metrics",
+      "shared_symbol": "box_iou",
+      "original_ast_sha256": "7e969f4d7d5593db92dfd88379c2563c96567c11587767cabb607ed8cc0c6f5f"
+    },
+    {
+      "source": "eval_prd_8class_maskrcnn_baseline_v1.py",
+      "symbol": "mask_iou",
+      "shared_module": "evaluation.metrics",
+      "shared_symbol": "mask_iou",
+      "original_ast_sha256": "b9b94ec38fa42ce03c8d97f98460624dea24b20fb1a48273039b4e1dfe3f1b62"
+    },
+    {
+      "source": "eval_prd_8class_maskrcnn_baseline_v2.py",
+      "symbol": "build_model",
+      "shared_module": "segmentation.modeling",
+      "shared_symbol": "build_evaluation_model",
+      "original_ast_sha256": "d084423c0d51e70b42d3204e404857586bb89da7534455d1353c87de2de9afcb"
+    },
+    {
+      "source": "eval_prd_8class_maskrcnn_baseline_v2.py",
+      "symbol": "box_iou",
+      "shared_module": "evaluation.metrics",
+      "shared_symbol": "box_iou",
+      "original_ast_sha256": "7e969f4d7d5593db92dfd88379c2563c96567c11587767cabb607ed8cc0c6f5f"
+    },
+    {
+      "source": "eval_prd_8class_maskrcnn_baseline_v2.py",
+      "symbol": "mask_iou",
+      "shared_module": "evaluation.metrics",
+      "shared_symbol": "mask_iou",
+      "original_ast_sha256": "b9b94ec38fa42ce03c8d97f98460624dea24b20fb1a48273039b4e1dfe3f1b62"
+    },
+    {
+      "source": "eval_prd_8class_maskrcnn_v3_a1_highres.py",
+      "symbol": "build_model",
+      "shared_module": "segmentation.modeling",
+      "shared_symbol": "build_evaluation_model",
+      "original_ast_sha256": "d084423c0d51e70b42d3204e404857586bb89da7534455d1353c87de2de9afcb"
+    },
+    {
+      "source": "eval_prd_8class_maskrcnn_v3_a1_highres.py",
+      "symbol": "box_iou",
+      "shared_module": "evaluation.metrics",
+      "shared_symbol": "box_iou",
+      "original_ast_sha256": "7e969f4d7d5593db92dfd88379c2563c96567c11587767cabb607ed8cc0c6f5f"
+    },
+    {
+      "source": "eval_prd_8class_maskrcnn_v3_a1_highres.py",
+      "symbol": "mask_iou",
+      "shared_module": "evaluation.metrics",
+      "shared_symbol": "mask_iou",
+      "original_ast_sha256": "b9b94ec38fa42ce03c8d97f98460624dea24b20fb1a48273039b4e1dfe3f1b62"
+    },
+    {
+      "source": "eval_prd_8class_maskrcnn_v3_a2_smallanchors.py",
+      "symbol": "box_iou",
+      "shared_module": "evaluation.metrics",
+      "shared_symbol": "box_iou",
+      "original_ast_sha256": "7e969f4d7d5593db92dfd88379c2563c96567c11587767cabb607ed8cc0c6f5f"
+    },
+    {
+      "source": "eval_prd_8class_maskrcnn_v3_a2_smallanchors.py",
+      "symbol": "mask_iou",
+      "shared_module": "evaluation.metrics",
+      "shared_symbol": "mask_iou",
+      "original_ast_sha256": "b9b94ec38fa42ce03c8d97f98460624dea24b20fb1a48273039b4e1dfe3f1b62"
+    },
+    {
+      "source": "eval_prd_8class_maskrcnn_v3_a2b_p2small.py",
+      "symbol": "box_iou",
+      "shared_module": "evaluation.metrics",
+      "shared_symbol": "box_iou",
+      "original_ast_sha256": "7e969f4d7d5593db92dfd88379c2563c96567c11587767cabb607ed8cc0c6f5f"
+    },
+    {
+      "source": "eval_prd_8class_maskrcnn_v3_a2b_p2small.py",
+      "symbol": "mask_iou",
+      "shared_module": "evaluation.metrics",
+      "shared_symbol": "mask_iou",
+      "original_ast_sha256": "b9b94ec38fa42ce03c8d97f98460624dea24b20fb1a48273039b4e1dfe3f1b62"
+    },
+    {
+      "source": "eval_prd_8class_maskrcnn_v3_a3_smallsampling.py",
+      "symbol": "build_model",
+      "shared_module": "segmentation.modeling",
+      "shared_symbol": "build_evaluation_model",
+      "original_ast_sha256": "d084423c0d51e70b42d3204e404857586bb89da7534455d1353c87de2de9afcb"
+    },
+    {
+      "source": "eval_prd_8class_maskrcnn_v3_a3_smallsampling.py",
+      "symbol": "box_iou",
+      "shared_module": "evaluation.metrics",
+      "shared_symbol": "box_iou",
+      "original_ast_sha256": "7e969f4d7d5593db92dfd88379c2563c96567c11587767cabb607ed8cc0c6f5f"
+    },
+    {
+      "source": "eval_prd_8class_maskrcnn_v3_a3_smallsampling.py",
+      "symbol": "mask_iou",
+      "shared_module": "evaluation.metrics",
+      "shared_symbol": "mask_iou",
+      "original_ast_sha256": "b9b94ec38fa42ce03c8d97f98460624dea24b20fb1a48273039b4e1dfe3f1b62"
+    },
+    {
+      "source": "eval_prd_8class_maskrcnn_v3_b1_dataexp.py",
+      "symbol": "build_model",
+      "shared_module": "segmentation.modeling",
+      "shared_symbol": "build_evaluation_model",
+      "original_ast_sha256": "d084423c0d51e70b42d3204e404857586bb89da7534455d1353c87de2de9afcb"
+    },
+    {
+      "source": "eval_prd_8class_maskrcnn_v3_b1_dataexp.py",
+      "symbol": "box_iou",
+      "shared_module": "evaluation.metrics",
+      "shared_symbol": "box_iou",
+      "original_ast_sha256": "7e969f4d7d5593db92dfd88379c2563c96567c11587767cabb607ed8cc0c6f5f"
+    },
+    {
+      "source": "eval_prd_8class_maskrcnn_v3_b1_dataexp.py",
+      "symbol": "mask_iou",
+      "shared_module": "evaluation.metrics",
+      "shared_symbol": "mask_iou",
+      "original_ast_sha256": "b9b94ec38fa42ce03c8d97f98460624dea24b20fb1a48273039b4e1dfe3f1b62"
+    },
+    {
+      "source": "train_prd_8class_maskrcnn_baseline_v1.py",
+      "symbol": "read_manifest",
+      "shared_module": "datasets.prd8",
+      "shared_symbol": "read_manifest",
+      "original_ast_sha256": "1e9f3f1ce9abf139c6cd3e90dc9e2fea83bcd56620f16b9c28aed3cd9e7c0b2d"
+    },
+    {
+      "source": "train_prd_8class_maskrcnn_baseline_v1.py",
+      "symbol": "open_binary_mask",
+      "shared_module": "image_processing.masks",
+      "shared_symbol": "open_binary_mask",
+      "original_ast_sha256": "5416e6eb4ed4a432c6e8cc3c5ee0d653c8730e65cfbc0b0ff0f3cd9ca2b900dd"
+    },
+    {
+      "source": "train_prd_8class_maskrcnn_baseline_v1.py",
+      "symbol": "collate_fn",
+      "shared_module": "datasets.prd8",
+      "shared_symbol": "collate_fn",
+      "original_ast_sha256": "d640cfedc809285b36079f412f96580b5b964c19453fe4fc5f5ec8775601a0bc"
+    },
+    {
+      "source": "train_prd_8class_maskrcnn_baseline_v2_balanced.py",
+      "symbol": "read_manifest",
+      "shared_module": "datasets.prd8",
+      "shared_symbol": "read_manifest",
+      "original_ast_sha256": "1e9f3f1ce9abf139c6cd3e90dc9e2fea83bcd56620f16b9c28aed3cd9e7c0b2d"
+    },
+    {
+      "source": "train_prd_8class_maskrcnn_baseline_v2_balanced.py",
+      "symbol": "group_manifest",
+      "shared_module": "datasets.prd8",
+      "shared_symbol": "group_manifest",
+      "original_ast_sha256": "9103e0aefcbf4000e62925a6c578ab5dbe080bb40e135d4d50ade1c52966b95a"
+    },
+    {
+      "source": "train_prd_8class_maskrcnn_baseline_v2_balanced.py",
+      "symbol": "open_binary_mask",
+      "shared_module": "image_processing.masks",
+      "shared_symbol": "open_binary_mask",
+      "original_ast_sha256": "5416e6eb4ed4a432c6e8cc3c5ee0d653c8730e65cfbc0b0ff0f3cd9ca2b900dd"
+    },
+    {
+      "source": "train_prd_8class_maskrcnn_baseline_v2_balanced.py",
+      "symbol": "reconstruct_full_mask",
+      "shared_module": "image_processing.masks",
+      "shared_symbol": "reconstruct_full_mask",
+      "original_ast_sha256": "f4267da5b6f694d2db664468eed1a76c6f8ebcd56f6acf8c5d091bfce0183916"
+    },
+    {
+      "source": "train_prd_8class_maskrcnn_baseline_v2_balanced.py",
+      "symbol": "PRD8MaskDataset",
+      "shared_module": "datasets.prd8",
+      "shared_symbol": "PRD8MaskDataset",
+      "original_ast_sha256": "9beb08186ac91724de43f0f43547529f14149ff12b444944ccf6f7aee2ff1f30"
+    },
+    {
+      "source": "train_prd_8class_maskrcnn_baseline_v2_balanced.py",
+      "symbol": "collate_fn",
+      "shared_module": "datasets.prd8",
+      "shared_symbol": "collate_fn",
+      "original_ast_sha256": "d640cfedc809285b36079f412f96580b5b964c19453fe4fc5f5ec8775601a0bc"
+    },
+    {
+      "source": "train_prd_8class_maskrcnn_baseline_v2_balanced.py",
+      "symbol": "build_model",
+      "shared_module": "segmentation.modeling",
+      "shared_symbol": "build_training_model",
+      "original_ast_sha256": "e59571272f094fc21f49feba2012259156117e1e1b007b8d9f312526967723b3"
+    },
+    {
+      "source": "train_prd_8class_maskrcnn_baseline_v2_balanced.py",
+      "symbol": "instance_class_counts",
+      "shared_module": "segmentation.sampling",
+      "shared_symbol": "instance_class_counts",
+      "original_ast_sha256": "a455133933da616f75c659cb29ae7ed336ad55e7737d183b150407e100aece4b"
+    },
+    {
+      "source": "train_prd_8class_maskrcnn_baseline_v2_balanced.py",
+      "symbol": "build_sampler_weights",
+      "shared_module": "segmentation.sampling",
+      "shared_symbol": "build_sampler_weights",
+      "original_ast_sha256": "87046d0434952cc0ea32cbdc95f4481ef17d1bf51773fd37800ccff94fb01033"
+    },
+    {
+      "source": "train_prd_8class_maskrcnn_baseline_v2_nobalance.py",
+      "symbol": "read_manifest",
+      "shared_module": "datasets.prd8",
+      "shared_symbol": "read_manifest",
+      "original_ast_sha256": "1e9f3f1ce9abf139c6cd3e90dc9e2fea83bcd56620f16b9c28aed3cd9e7c0b2d"
+    },
+    {
+      "source": "train_prd_8class_maskrcnn_baseline_v2_nobalance.py",
+      "symbol": "group_manifest",
+      "shared_module": "datasets.prd8",
+      "shared_symbol": "group_manifest",
+      "original_ast_sha256": "9103e0aefcbf4000e62925a6c578ab5dbe080bb40e135d4d50ade1c52966b95a"
+    },
+    {
+      "source": "train_prd_8class_maskrcnn_baseline_v2_nobalance.py",
+      "symbol": "open_binary_mask",
+      "shared_module": "image_processing.masks",
+      "shared_symbol": "open_binary_mask",
+      "original_ast_sha256": "5416e6eb4ed4a432c6e8cc3c5ee0d653c8730e65cfbc0b0ff0f3cd9ca2b900dd"
+    },
+    {
+      "source": "train_prd_8class_maskrcnn_baseline_v2_nobalance.py",
+      "symbol": "reconstruct_full_mask",
+      "shared_module": "image_processing.masks",
+      "shared_symbol": "reconstruct_full_mask",
+      "original_ast_sha256": "f4267da5b6f694d2db664468eed1a76c6f8ebcd56f6acf8c5d091bfce0183916"
+    },
+    {
+      "source": "train_prd_8class_maskrcnn_baseline_v2_nobalance.py",
+      "symbol": "PRD8MaskDataset",
+      "shared_module": "datasets.prd8",
+      "shared_symbol": "PRD8MaskDataset",
+      "original_ast_sha256": "9beb08186ac91724de43f0f43547529f14149ff12b444944ccf6f7aee2ff1f30"
+    },
+    {
+      "source": "train_prd_8class_maskrcnn_baseline_v2_nobalance.py",
+      "symbol": "collate_fn",
+      "shared_module": "datasets.prd8",
+      "shared_symbol": "collate_fn",
+      "original_ast_sha256": "d640cfedc809285b36079f412f96580b5b964c19453fe4fc5f5ec8775601a0bc"
+    },
+    {
+      "source": "train_prd_8class_maskrcnn_baseline_v2_nobalance.py",
+      "symbol": "build_model",
+      "shared_module": "segmentation.modeling",
+      "shared_symbol": "build_training_model",
+      "original_ast_sha256": "e59571272f094fc21f49feba2012259156117e1e1b007b8d9f312526967723b3"
+    },
+    {
+      "source": "train_prd_8class_maskrcnn_baseline_v2_nobalance.py",
+      "symbol": "instance_class_counts",
+      "shared_module": "segmentation.sampling",
+      "shared_symbol": "instance_class_counts",
+      "original_ast_sha256": "a455133933da616f75c659cb29ae7ed336ad55e7737d183b150407e100aece4b"
+    },
+    {
+      "source": "train_prd_8class_maskrcnn_baseline_v2_nobalance.py",
+      "symbol": "build_sampler_weights",
+      "shared_module": "segmentation.sampling",
+      "shared_symbol": "build_sampler_weights",
+      "original_ast_sha256": "87046d0434952cc0ea32cbdc95f4481ef17d1bf51773fd37800ccff94fb01033"
+    },
+    {
+      "source": "train_prd_8class_maskrcnn_v3_a1_highres.py",
+      "symbol": "read_manifest",
+      "shared_module": "datasets.prd8",
+      "shared_symbol": "read_manifest",
+      "original_ast_sha256": "1e9f3f1ce9abf139c6cd3e90dc9e2fea83bcd56620f16b9c28aed3cd9e7c0b2d"
+    },
+    {
+      "source": "train_prd_8class_maskrcnn_v3_a1_highres.py",
+      "symbol": "group_manifest",
+      "shared_module": "datasets.prd8",
+      "shared_symbol": "group_manifest",
+      "original_ast_sha256": "9103e0aefcbf4000e62925a6c578ab5dbe080bb40e135d4d50ade1c52966b95a"
+    },
+    {
+      "source": "train_prd_8class_maskrcnn_v3_a1_highres.py",
+      "symbol": "open_binary_mask",
+      "shared_module": "image_processing.masks",
+      "shared_symbol": "open_binary_mask",
+      "original_ast_sha256": "5416e6eb4ed4a432c6e8cc3c5ee0d653c8730e65cfbc0b0ff0f3cd9ca2b900dd"
+    },
+    {
+      "source": "train_prd_8class_maskrcnn_v3_a1_highres.py",
+      "symbol": "reconstruct_full_mask",
+      "shared_module": "image_processing.masks",
+      "shared_symbol": "reconstruct_full_mask",
+      "original_ast_sha256": "f4267da5b6f694d2db664468eed1a76c6f8ebcd56f6acf8c5d091bfce0183916"
+    },
+    {
+      "source": "train_prd_8class_maskrcnn_v3_a1_highres.py",
+      "symbol": "PRD8MaskDataset",
+      "shared_module": "datasets.prd8",
+      "shared_symbol": "PRD8MaskDataset",
+      "original_ast_sha256": "9beb08186ac91724de43f0f43547529f14149ff12b444944ccf6f7aee2ff1f30"
+    },
+    {
+      "source": "train_prd_8class_maskrcnn_v3_a1_highres.py",
+      "symbol": "collate_fn",
+      "shared_module": "datasets.prd8",
+      "shared_symbol": "collate_fn",
+      "original_ast_sha256": "d640cfedc809285b36079f412f96580b5b964c19453fe4fc5f5ec8775601a0bc"
+    },
+    {
+      "source": "train_prd_8class_maskrcnn_v3_a1_highres.py",
+      "symbol": "build_model",
+      "shared_module": "segmentation.modeling",
+      "shared_symbol": "build_training_model",
+      "original_ast_sha256": "e59571272f094fc21f49feba2012259156117e1e1b007b8d9f312526967723b3"
+    },
+    {
+      "source": "train_prd_8class_maskrcnn_v3_a1_highres.py",
+      "symbol": "instance_class_counts",
+      "shared_module": "segmentation.sampling",
+      "shared_symbol": "instance_class_counts",
+      "original_ast_sha256": "a455133933da616f75c659cb29ae7ed336ad55e7737d183b150407e100aece4b"
+    },
+    {
+      "source": "train_prd_8class_maskrcnn_v3_a1_highres.py",
+      "symbol": "build_sampler_weights",
+      "shared_module": "segmentation.sampling",
+      "shared_symbol": "build_sampler_weights",
+      "original_ast_sha256": "87046d0434952cc0ea32cbdc95f4481ef17d1bf51773fd37800ccff94fb01033"
+    },
+    {
+      "source": "train_prd_8class_maskrcnn_v3_a2_smallanchors.py",
+      "symbol": "read_manifest",
+      "shared_module": "datasets.prd8",
+      "shared_symbol": "read_manifest",
+      "original_ast_sha256": "1e9f3f1ce9abf139c6cd3e90dc9e2fea83bcd56620f16b9c28aed3cd9e7c0b2d"
+    },
+    {
+      "source": "train_prd_8class_maskrcnn_v3_a2_smallanchors.py",
+      "symbol": "group_manifest",
+      "shared_module": "datasets.prd8",
+      "shared_symbol": "group_manifest",
+      "original_ast_sha256": "9103e0aefcbf4000e62925a6c578ab5dbe080bb40e135d4d50ade1c52966b95a"
+    },
+    {
+      "source": "train_prd_8class_maskrcnn_v3_a2_smallanchors.py",
+      "symbol": "open_binary_mask",
+      "shared_module": "image_processing.masks",
+      "shared_symbol": "open_binary_mask",
+      "original_ast_sha256": "5416e6eb4ed4a432c6e8cc3c5ee0d653c8730e65cfbc0b0ff0f3cd9ca2b900dd"
+    },
+    {
+      "source": "train_prd_8class_maskrcnn_v3_a2_smallanchors.py",
+      "symbol": "reconstruct_full_mask",
+      "shared_module": "image_processing.masks",
+      "shared_symbol": "reconstruct_full_mask",
+      "original_ast_sha256": "f4267da5b6f694d2db664468eed1a76c6f8ebcd56f6acf8c5d091bfce0183916"
+    },
+    {
+      "source": "train_prd_8class_maskrcnn_v3_a2_smallanchors.py",
+      "symbol": "PRD8MaskDataset",
+      "shared_module": "datasets.prd8",
+      "shared_symbol": "PRD8MaskDataset",
+      "original_ast_sha256": "9beb08186ac91724de43f0f43547529f14149ff12b444944ccf6f7aee2ff1f30"
+    },
+    {
+      "source": "train_prd_8class_maskrcnn_v3_a2_smallanchors.py",
+      "symbol": "collate_fn",
+      "shared_module": "datasets.prd8",
+      "shared_symbol": "collate_fn",
+      "original_ast_sha256": "d640cfedc809285b36079f412f96580b5b964c19453fe4fc5f5ec8775601a0bc"
+    },
+    {
+      "source": "train_prd_8class_maskrcnn_v3_a2_smallanchors.py",
+      "symbol": "instance_class_counts",
+      "shared_module": "segmentation.sampling",
+      "shared_symbol": "instance_class_counts",
+      "original_ast_sha256": "a455133933da616f75c659cb29ae7ed336ad55e7737d183b150407e100aece4b"
+    },
+    {
+      "source": "train_prd_8class_maskrcnn_v3_a2_smallanchors.py",
+      "symbol": "build_sampler_weights",
+      "shared_module": "segmentation.sampling",
+      "shared_symbol": "build_sampler_weights",
+      "original_ast_sha256": "87046d0434952cc0ea32cbdc95f4481ef17d1bf51773fd37800ccff94fb01033"
+    },
+    {
+      "source": "train_prd_8class_maskrcnn_v3_a2b_p2small.py",
+      "symbol": "read_manifest",
+      "shared_module": "datasets.prd8",
+      "shared_symbol": "read_manifest",
+      "original_ast_sha256": "1e9f3f1ce9abf139c6cd3e90dc9e2fea83bcd56620f16b9c28aed3cd9e7c0b2d"
+    },
+    {
+      "source": "train_prd_8class_maskrcnn_v3_a2b_p2small.py",
+      "symbol": "group_manifest",
+      "shared_module": "datasets.prd8",
+      "shared_symbol": "group_manifest",
+      "original_ast_sha256": "9103e0aefcbf4000e62925a6c578ab5dbe080bb40e135d4d50ade1c52966b95a"
+    },
+    {
+      "source": "train_prd_8class_maskrcnn_v3_a2b_p2small.py",
+      "symbol": "open_binary_mask",
+      "shared_module": "image_processing.masks",
+      "shared_symbol": "open_binary_mask",
+      "original_ast_sha256": "5416e6eb4ed4a432c6e8cc3c5ee0d653c8730e65cfbc0b0ff0f3cd9ca2b900dd"
+    },
+    {
+      "source": "train_prd_8class_maskrcnn_v3_a2b_p2small.py",
+      "symbol": "reconstruct_full_mask",
+      "shared_module": "image_processing.masks",
+      "shared_symbol": "reconstruct_full_mask",
+      "original_ast_sha256": "f4267da5b6f694d2db664468eed1a76c6f8ebcd56f6acf8c5d091bfce0183916"
+    },
+    {
+      "source": "train_prd_8class_maskrcnn_v3_a2b_p2small.py",
+      "symbol": "PRD8MaskDataset",
+      "shared_module": "datasets.prd8",
+      "shared_symbol": "PRD8MaskDataset",
+      "original_ast_sha256": "9beb08186ac91724de43f0f43547529f14149ff12b444944ccf6f7aee2ff1f30"
+    },
+    {
+      "source": "train_prd_8class_maskrcnn_v3_a2b_p2small.py",
+      "symbol": "collate_fn",
+      "shared_module": "datasets.prd8",
+      "shared_symbol": "collate_fn",
+      "original_ast_sha256": "d640cfedc809285b36079f412f96580b5b964c19453fe4fc5f5ec8775601a0bc"
+    },
+    {
+      "source": "train_prd_8class_maskrcnn_v3_a2b_p2small.py",
+      "symbol": "instance_class_counts",
+      "shared_module": "segmentation.sampling",
+      "shared_symbol": "instance_class_counts",
+      "original_ast_sha256": "a455133933da616f75c659cb29ae7ed336ad55e7737d183b150407e100aece4b"
+    },
+    {
+      "source": "train_prd_8class_maskrcnn_v3_a2b_p2small.py",
+      "symbol": "build_sampler_weights",
+      "shared_module": "segmentation.sampling",
+      "shared_symbol": "build_sampler_weights",
+      "original_ast_sha256": "87046d0434952cc0ea32cbdc95f4481ef17d1bf51773fd37800ccff94fb01033"
+    },
+    {
+      "source": "train_prd_8class_maskrcnn_v3_a3_smallsampling.py",
+      "symbol": "read_manifest",
+      "shared_module": "datasets.prd8",
+      "shared_symbol": "read_manifest",
+      "original_ast_sha256": "1e9f3f1ce9abf139c6cd3e90dc9e2fea83bcd56620f16b9c28aed3cd9e7c0b2d"
+    },
+    {
+      "source": "train_prd_8class_maskrcnn_v3_a3_smallsampling.py",
+      "symbol": "group_manifest",
+      "shared_module": "datasets.prd8",
+      "shared_symbol": "group_manifest",
+      "original_ast_sha256": "9103e0aefcbf4000e62925a6c578ab5dbe080bb40e135d4d50ade1c52966b95a"
+    },
+    {
+      "source": "train_prd_8class_maskrcnn_v3_a3_smallsampling.py",
+      "symbol": "open_binary_mask",
+      "shared_module": "image_processing.masks",
+      "shared_symbol": "open_binary_mask",
+      "original_ast_sha256": "5416e6eb4ed4a432c6e8cc3c5ee0d653c8730e65cfbc0b0ff0f3cd9ca2b900dd"
+    },
+    {
+      "source": "train_prd_8class_maskrcnn_v3_a3_smallsampling.py",
+      "symbol": "reconstruct_full_mask",
+      "shared_module": "image_processing.masks",
+      "shared_symbol": "reconstruct_full_mask",
+      "original_ast_sha256": "f4267da5b6f694d2db664468eed1a76c6f8ebcd56f6acf8c5d091bfce0183916"
+    },
+    {
+      "source": "train_prd_8class_maskrcnn_v3_a3_smallsampling.py",
+      "symbol": "PRD8MaskDataset",
+      "shared_module": "datasets.prd8",
+      "shared_symbol": "PRD8MaskDataset",
+      "original_ast_sha256": "9beb08186ac91724de43f0f43547529f14149ff12b444944ccf6f7aee2ff1f30"
+    },
+    {
+      "source": "train_prd_8class_maskrcnn_v3_a3_smallsampling.py",
+      "symbol": "collate_fn",
+      "shared_module": "datasets.prd8",
+      "shared_symbol": "collate_fn",
+      "original_ast_sha256": "d640cfedc809285b36079f412f96580b5b964c19453fe4fc5f5ec8775601a0bc"
+    },
+    {
+      "source": "train_prd_8class_maskrcnn_v3_a3_smallsampling.py",
+      "symbol": "build_model",
+      "shared_module": "segmentation.modeling",
+      "shared_symbol": "build_training_model",
+      "original_ast_sha256": "e59571272f094fc21f49feba2012259156117e1e1b007b8d9f312526967723b3"
+    },
+    {
+      "source": "train_prd_8class_maskrcnn_v3_a3_smallsampling.py",
+      "symbol": "instance_class_counts",
+      "shared_module": "segmentation.sampling",
+      "shared_symbol": "instance_class_counts",
+      "original_ast_sha256": "a455133933da616f75c659cb29ae7ed336ad55e7737d183b150407e100aece4b"
+    },
+    {
+      "source": "train_prd_8class_maskrcnn_v3_b1_dataexp.py",
+      "symbol": "read_manifest",
+      "shared_module": "datasets.prd8",
+      "shared_symbol": "read_manifest",
+      "original_ast_sha256": "1e9f3f1ce9abf139c6cd3e90dc9e2fea83bcd56620f16b9c28aed3cd9e7c0b2d"
+    },
+    {
+      "source": "train_prd_8class_maskrcnn_v3_b1_dataexp.py",
+      "symbol": "group_manifest",
+      "shared_module": "datasets.prd8",
+      "shared_symbol": "group_manifest",
+      "original_ast_sha256": "9103e0aefcbf4000e62925a6c578ab5dbe080bb40e135d4d50ade1c52966b95a"
+    },
+    {
+      "source": "train_prd_8class_maskrcnn_v3_b1_dataexp.py",
+      "symbol": "open_binary_mask",
+      "shared_module": "image_processing.masks",
+      "shared_symbol": "open_binary_mask",
+      "original_ast_sha256": "5416e6eb4ed4a432c6e8cc3c5ee0d653c8730e65cfbc0b0ff0f3cd9ca2b900dd"
+    },
+    {
+      "source": "train_prd_8class_maskrcnn_v3_b1_dataexp.py",
+      "symbol": "reconstruct_full_mask",
+      "shared_module": "image_processing.masks",
+      "shared_symbol": "reconstruct_full_mask",
+      "original_ast_sha256": "f4267da5b6f694d2db664468eed1a76c6f8ebcd56f6acf8c5d091bfce0183916"
+    },
+    {
+      "source": "train_prd_8class_maskrcnn_v3_b1_dataexp.py",
+      "symbol": "PRD8MaskDataset",
+      "shared_module": "datasets.prd8",
+      "shared_symbol": "PRD8MaskDataset",
+      "original_ast_sha256": "9beb08186ac91724de43f0f43547529f14149ff12b444944ccf6f7aee2ff1f30"
+    },
+    {
+      "source": "train_prd_8class_maskrcnn_v3_b1_dataexp.py",
+      "symbol": "collate_fn",
+      "shared_module": "datasets.prd8",
+      "shared_symbol": "collate_fn",
+      "original_ast_sha256": "d640cfedc809285b36079f412f96580b5b964c19453fe4fc5f5ec8775601a0bc"
+    },
+    {
+      "source": "train_prd_8class_maskrcnn_v3_b1_dataexp.py",
+      "symbol": "build_model",
+      "shared_module": "segmentation.modeling",
+      "shared_symbol": "build_training_model",
+      "original_ast_sha256": "e59571272f094fc21f49feba2012259156117e1e1b007b8d9f312526967723b3"
+    },
+    {
+      "source": "train_prd_8class_maskrcnn_v3_b1_dataexp.py",
+      "symbol": "instance_class_counts",
+      "shared_module": "segmentation.sampling",
+      "shared_symbol": "instance_class_counts",
+      "original_ast_sha256": "a455133933da616f75c659cb29ae7ed336ad55e7737d183b150407e100aece4b"
+    },
+    {
+      "source": "train_prd_8class_maskrcnn_v3_b1_dataexp.py",
+      "symbol": "build_sampler_weights",
+      "shared_module": "segmentation.sampling",
+      "shared_symbol": "build_sampler_weights",
+      "original_ast_sha256": "87046d0434952cc0ea32cbdc95f4481ef17d1bf51773fd37800ccff94fb01033"
+    }
+  ],
+  "default_fixes": [
+    {
+      "file": "eval_prd31_core_regression_v2_balanced_v1.py",
+      "change": "default checkpoint now matches experiment variant",
+      "checkpoint": "maskrcnn_8class_baseline_v2"
+    },
+    {
+      "file": "eval_prd_8class_maskrcnn_baseline_v2.py",
+      "change": "default checkpoint now matches experiment variant",
+      "checkpoint": "maskrcnn_8class_baseline_v2"
+    },
+    {
+      "file": "eval_prd_8class_maskrcnn_v3_a1_highres.py",
+      "change": "default checkpoint now matches experiment variant",
+      "checkpoint": "maskrcnn_8class_v3_a1_highres"
+    },
+    {
+      "file": "eval_prd_8class_maskrcnn_v3_a2_smallanchors.py",
+      "change": "default checkpoint now matches experiment variant",
+      "checkpoint": "maskrcnn_8class_v3_a2_smallanchors"
+    },
+    {
+      "file": "eval_prd_8class_maskrcnn_v3_a2b_p2small.py",
+      "change": "default checkpoint now matches experiment variant",
+      "checkpoint": "maskrcnn_8class_v3_a2b_p2small"
+    },
+    {
+      "file": "eval_prd_8class_maskrcnn_v3_a3_smallsampling.py",
+      "change": "default checkpoint now matches experiment variant",
+      "checkpoint": "maskrcnn_8class_v3_a3_smallsampling"
+    },
+    {
+      "file": "eval_prd_8class_maskrcnn_v3_b1_dataexp.py",
+      "change": "default checkpoint now matches experiment variant",
+      "checkpoint": "maskrcnn_8class_v3_b1_dataexp"
+    }
+  ],
+  "categories": {
+    "analysis": 9,
+    "integration": 11,
+    "grounding/core_parts": 8,
+    "attributes/geometry": 14,
+    "benchmarking": 18,
+    "data_tools": 14,
+    "visualization": 11,
+    "maintenance/packaging": 3,
+    "grounding/baselines": 9,
+    "grounding/refinement": 9,
+    "image_processing": 1,
+    "attributes/design": 13,
+    "segmentation/baselines": 4,
+    "segmentation/evaluation": 10,
+    "grounding/evaluation": 11,
+    "segmentation/diagnostics": 3,
+    "attributes/pattern": 4,
+    "attributes/color": 1,
+    "segmentation/training": 8
+  },
+  "added_commands": [
+    "audit_dataset_overlap",
+    "check_project"
+  ],
+  "total_commands": 163
+}

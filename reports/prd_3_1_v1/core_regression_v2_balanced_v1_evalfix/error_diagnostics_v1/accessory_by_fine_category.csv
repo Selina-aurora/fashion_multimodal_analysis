@@ -1,0 +1,10 @@
+﻿fine_or_source_category,n,correct,missed,wrong_class,low_mask_iou,correct_rate,miss_rate,wrong_class_rate,low_mask_iou_rate
+belt,9,0,8,1,0,0.0,0.8888888888888888,0.1111111111111111,0.0
+glasses,5,1,4,0,0,0.2,0.8,0.0,0.0
+glove,3,0,3,0,0,0.0,1.0,0.0,0.0
+hat,6,1,5,0,0,0.16666666666666666,0.8333333333333334,0.0,0.0
+"headband, head covering, hair accessory",8,1,6,1,0,0.125,0.75,0.125,0.0
+scarf,7,1,5,1,0,0.14285714285714285,0.7142857142857143,0.14285714285714285,0.0
+sock,5,0,4,1,0,0.0,0.8,0.2,0.0
+"tights, stockings",5,0,5,0,0,0.0,1.0,0.0,0.0
+watch,2,0,2,0,0,0.0,1.0,0.0,0.0
