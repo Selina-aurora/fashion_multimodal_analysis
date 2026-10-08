@@ -1,3 +1,5 @@
+> 历史阶段记录：正文保留当时的实验背景；当前模型归属、指标修正和限制见项目根 README 与 docs/corrections.md。文中的运行入口已按新目录调整。
+
 # 服饰实例分割模块开发记录
 
 ## 1. 文档说明
@@ -96,7 +98,7 @@ landmarks
 编写：
 
 ```text
-scripts/visualize_annotation.py
+scripts/visualization/visualize_annotation.py
 ```
 
 实现：
@@ -117,7 +119,7 @@ scripts/visualize_annotation.py
 编写：
 
 ```text
-scripts/analyze_deepfashion2_categories.py
+scripts/analysis/analyze_deepfashion2_categories.py
 ```
 
 统计训练 annotation。

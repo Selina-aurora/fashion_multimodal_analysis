@@ -1,0 +1,9 @@
+PRD 3.1.3 skirt flare continuous geometry pilot v1
+manifest=configs/garment_instances_gt_pilot_100.csv
+skirt_instances=16
+input=garment_instance_mask
+output_feature=skirt_flare_score_[0,1]
+primary_raw_feature=hem_to_waist_ratio
+hard_classification=false
+gt_available=false
+material_and_craftsmanship=excluded

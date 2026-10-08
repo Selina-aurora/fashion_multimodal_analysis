@@ -1,0 +1,19 @@
+PRD 3.1.2 Remaining-Five Region Diagnostic v1
+=============================================
+
+Source: existing 40-case formal Grounding-DINO pilot.
+No model rerun and no new samples are introduced.
+
+pocket: N=5, correct=0, coarse=0, wrong=0, missed=5, usable=0.0%, missed_rate=100.0%
+shoulder: N=5, correct=0, coarse=2, wrong=0, missed=3, usable=40.0%, missed_rate=60.0%
+waist: N=5, correct=0, coarse=3, wrong=0, missed=2, usable=60.0%, missed_rate=40.0%
+pattern: N=5, correct=1, coarse=2, wrong=0, missed=2, usable=60.0%, missed_rate=40.0%
+decoration: N=5, correct=0, coarse=0, wrong=0, missed=5, usable=0.0%, missed_rate=100.0%
+
+Interpretation:
+- correct = tight/semantically correct localization.
+- coarse = target is included but the box is too broad.
+- wrong = response is present but points to the wrong region.
+- missed = no usable localization response.
+- usable = correct + coarse.
+- pattern here means LOCAL PATTERN REGION localization, not 3.1.3 pattern semantic classification.

@@ -1,0 +1,100 @@
+from __future__ import annotations
+
+import argparse
+import json
+import sys
+from pathlib import Path
+
+from fashion_mm.utils.fashionai_final_release import create_final_release_manifest
+from fashion_mm.utils.fashionai_final_release import FinalReleaseError
+from fashion_mm.utils.fashionai_final_release import FinalReleaseVerificationError
+from fashion_mm.utils.fashionai_final_release import verify_final_release_manifest
+
+
+EXIT_OK = 0
+EXIT_RELEASE_EXISTS = 3
+EXIT_VERIFICATION_FAILED = 4
+EXIT_INPUT_ERROR = 5
+
+
+def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
+    parser = argparse.ArgumentParser(
+        description=(
+            "Create or verify a versioned FashionAI attribute final-release "
+            "manifest."
+        ),
+        epilog=(
+            "Exit codes: 0 success; 2 invalid CLI usage; 3 existing release "
+            "refused; 4 hash or semantic verification mismatch; "
+            "5 missing, malformed, or unreadable input."
+        ),
+    )
+    subparsers = parser.add_subparsers(dest="command", required=True)
+
+    create_parser = subparsers.add_parser(
+        "create",
+        help="Validate inputs and create a final-release manifest.",
+    )
+    create_parser.add_argument("--split-seal", required=True, type=Path)
+    create_parser.add_argument("--checkpoint", required=True, type=Path)
+    create_parser.add_argument("--held-out-eval", required=True, type=Path)
+    create_parser.add_argument("--latency", required=True, type=Path)
+    create_parser.add_argument("--output", required=True, type=Path)
+    create_parser.add_argument(
+        "--force",
+        action="store_true",
+        help="Explicitly replace an existing release manifest.",
+    )
+
+    verify_parser = subparsers.add_parser(
+        "verify",
+        help="Revalidate one final-release manifest and all frozen inputs.",
+    )
+    verify_parser.add_argument("manifest", type=Path)
+    return parser.parse_args(argv)
+
+
+def main(argv: list[str] | None = None) -> int:
+    args = parse_args(argv)
+    try:
+        if args.command == "create":
+            manifest_path, payload = create_final_release_manifest(
+                split_seal=args.split_seal,
+                checkpoint=args.checkpoint,
+                held_out_evaluation=args.held_out_eval,
+                latency_benchmark=args.latency,
+                output_path=args.output,
+                overwrite=args.force,
+            )
+            result = {
+                "action": "create",
+                "status": "ok",
+                "release_status": payload["status"],
+                "manifest_file": str(manifest_path),
+                "acceptance": payload["acceptance"],
+            }
+        else:
+            result = {
+                "action": "verify",
+                **verify_final_release_manifest(args.manifest),
+            }
+    except FileExistsError as error:
+        _print_error(str(error))
+        return EXIT_RELEASE_EXISTS
+    except FinalReleaseVerificationError as error:
+        print(json.dumps(error.report, ensure_ascii=False, indent=2), file=sys.stderr)
+        return EXIT_VERIFICATION_FAILED
+    except (FileNotFoundError, FinalReleaseError, OSError) as error:
+        _print_error(str(error))
+        return EXIT_INPUT_ERROR
+
+    print(json.dumps(result, ensure_ascii=False, indent=2))
+    return EXIT_OK
+
+
+def _print_error(message: str) -> None:
+    print(f"ERROR: {message}", file=sys.stderr)
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())

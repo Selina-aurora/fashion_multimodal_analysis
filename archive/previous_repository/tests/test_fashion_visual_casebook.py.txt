@@ -1,0 +1,351 @@
+from __future__ import annotations
+
+import importlib.util
+import json
+from pathlib import Path
+
+import numpy as np
+import pytest
+from PIL import Image
+
+from fashion_mm.models.attributes import AttributeExtractionResult
+from fashion_mm.models.attributes import AttributeValuePrediction
+from fashion_mm.models.attributes import FineGrainedAttributePrediction
+from fashion_mm.models.instance_segmentation import FashionInstance
+from fashion_mm.models.instance_segmentation import SegmentationResult
+
+
+SCRIPT_PATH = (
+    Path(__file__).resolve().parents[1]
+    / "scripts"
+    / "inference"
+    / "build_fashion_visual_casebook.py"
+)
+SCRIPT_SPEC = importlib.util.spec_from_file_location(
+    "build_fashion_visual_casebook",
+    SCRIPT_PATH,
+)
+assert SCRIPT_SPEC is not None
+assert SCRIPT_SPEC.loader is not None
+casebook_cli = importlib.util.module_from_spec(SCRIPT_SPEC)
+SCRIPT_SPEC.loader.exec_module(casebook_cli)
+ROOT = Path(__file__).resolve().parents[1]
+
+
+def case_record(
+    index: int,
+    category: str,
+    *,
+    review_status: str = "confirmed",
+) -> dict:
+    return {
+        "id": f"case_{index:02d}",
+        "title": f"Case {index}",
+        "category": category,
+        "review_status": review_status,
+        "review_note": f"Reviewed case {index}.",
+        "image": f"/dataset/{index:06d}.jpg",
+        "query": "这件衣服的领口",
+        "attributes": ["collar_design_labels"],
+        "expected": {
+            "pipeline_status": "ok",
+            "region": "neckline",
+        },
+    }
+
+
+def manifest(cases: list[dict]) -> dict:
+    return {
+        "schema": {
+            "name": casebook_cli.MANIFEST_SCHEMA_NAME,
+            "version": casebook_cli.SCHEMA_VERSION,
+        },
+        "title": "Qualitative casebook",
+        "cases": cases,
+    }
+
+
+def test_final_manifest_requires_10_to_20_confirmed_cases_and_all_categories():
+    cases = [
+        case_record(index, category)
+        for index, category in enumerate(
+            [
+                "success",
+                "success",
+                "success",
+                "success",
+                "boundary",
+                "boundary",
+                "boundary",
+                "failure",
+                "failure",
+                "failure",
+            ],
+            start=1,
+        )
+    ]
+
+    casebook_cli.validate_casebook_manifest(manifest(cases), draft=False)
+
+    with pytest.raises(ValueError, match="10-20"):
+        casebook_cli.validate_casebook_manifest(
+            manifest(cases[:9]),
+            draft=False,
+        )
+
+    no_failure = [
+        {**case, "category": "boundary"} if case["category"] == "failure" else case
+        for case in cases
+    ]
+    with pytest.raises(ValueError, match="missing.*failure"):
+        casebook_cli.validate_casebook_manifest(
+            manifest(no_failure),
+            draft=False,
+        )
+
+    pending = [{**case, "review_status": "pending"} for case in cases]
+    with pytest.raises(ValueError, match="review_status='confirmed'"):
+        casebook_cli.validate_casebook_manifest(
+            manifest(pending),
+            draft=False,
+        )
+
+
+def test_draft_manifest_allows_unreviewed_candidates():
+    payload = manifest(
+        [
+            {
+                **case_record(1, "success", review_status="pending"),
+                "category": "unreviewed",
+            }
+        ]
+    )
+
+    casebook_cli.validate_casebook_manifest(payload, draft=True)
+
+
+def test_checked_in_candidate_manifest_contains_18_unreviewed_cases():
+    payload = casebook_cli.load_casebook_manifest(
+        ROOT / "configs" / "demo" / "fashion_visual_casebook_candidates.json",
+        draft=True,
+    )
+
+    assert len(payload["cases"]) == 18
+    assert {case["category"] for case in payload["cases"]} == {"unreviewed"}
+    assert {case["review_status"] for case in payload["cases"]} == {"pending"}
+
+
+def test_build_casebook_writes_portable_gallery_and_retains_pipeline_failure(
+    tmp_path,
+    monkeypatch,
+):
+    image_paths = []
+    for index in range(3):
+        image_path = tmp_path / f"image_{index}.jpg"
+        Image.new("RGB", (40, 48), (240 - index * 10, 240, 240)).save(image_path)
+        image_paths.append(image_path)
+
+    cases = [
+        {
+            **case_record(1, "success", review_status="pending"),
+            "title": "Clear & correct",
+            "image": str(image_paths[0]),
+        },
+        {
+            **case_record(2, "boundary", review_status="pending"),
+            "image": str(image_paths[1]),
+        },
+        {
+            **case_record(3, "failure", review_status="pending"),
+            "id": "failure_no_garment",
+            "image": str(image_paths[2]),
+        },
+    ]
+    manifest_path = tmp_path / "manifest.json"
+    manifest_path.write_text(
+        json.dumps(manifest(cases), ensure_ascii=False),
+        encoding="utf-8",
+    )
+    config_path = tmp_path / "segmentation.yaml"
+    config_path.write_text("model: fake\n", encoding="utf-8")
+    segmentation_checkpoint = tmp_path / "segmentation.pt"
+    attribute_checkpoint = tmp_path / "attribute.pt"
+    segmentation_checkpoint.write_bytes(b"segmentation")
+    attribute_checkpoint.write_bytes(b"attributes")
+
+    constructor_counts = {"segmentation": 0, "attribute": 0}
+
+    class FakeSegmentationPredictor:
+        def __init__(self, config, checkpoint_path=None, device=None):
+            constructor_counts["segmentation"] += 1
+
+        def predict(self, image):
+            if "failure_no_garment" in str(image):
+                return SegmentationResult(
+                    image_size=(40, 48),
+                    instances=[],
+                    inference_time_ms=0.5,
+                )
+            garment_mask = np.zeros((48, 40), dtype=bool)
+            garment_mask[4:44, 6:35] = True
+            return SegmentationResult(
+                image_size=(40, 48),
+                instances=[
+                    FashionInstance(
+                        mask=garment_mask,
+                        box=(6.0, 4.0, 35.0, 44.0),
+                        label_id=1,
+                        label_name="top",
+                        score=0.95,
+                    )
+                ],
+                inference_time_ms=1.25,
+            )
+
+    class FakeAttributePredictor:
+        def __init__(
+            self,
+            checkpoint_path,
+            *,
+            device,
+            top_k=None,
+            confidence_threshold=None,
+        ):
+            constructor_counts["attribute"] += 1
+
+        def predict(self, image, mask, *, attributes=None):
+            return AttributeExtractionResult(
+                image_size=(40, 48),
+                region_box=(10, 4, 31, 13),
+                mask_area=int(np.asarray(mask, dtype=bool).sum()),
+                mask_coverage=0.75,
+                predictions=(
+                    FineGrainedAttributePrediction(
+                        attribute_name="collar_design_labels",
+                        value=AttributeValuePrediction(
+                            label_index=1,
+                            label="Shirt Collar",
+                            confidence=0.91,
+                        ),
+                        alternatives=(),
+                        is_confident=True,
+                    ),
+                ),
+                preprocessing_time_ms=0.5,
+                inference_time_ms=1.0,
+                total_time_ms=1.5,
+                backend="fake_attribute_predictor",
+            )
+
+    monkeypatch.setattr(
+        casebook_cli,
+        "FashionInstanceSegmentationPredictor",
+        FakeSegmentationPredictor,
+    )
+    monkeypatch.setattr(
+        casebook_cli,
+        "FashionAttributePredictor",
+        FakeAttributePredictor,
+    )
+    monkeypatch.setattr(casebook_cli, "load_config", lambda path: {"fake": True})
+    output_dir = tmp_path / "casebook"
+
+    summary = casebook_cli.build_casebook(
+        manifest_path=manifest_path,
+        segmentation_config_path=config_path,
+        segmentation_checkpoint=segmentation_checkpoint,
+        attribute_checkpoint=attribute_checkpoint,
+        output_dir=output_dir,
+        device="cpu",
+        draft=True,
+    )
+
+    assert constructor_counts == {"segmentation": 1, "attribute": 1}
+    assert summary["curation_status"] == "draft"
+    assert summary["counts"]["total"] == 3
+    assert summary["counts"]["by_category"] == {
+        "boundary": 1,
+        "failure": 1,
+        "success": 1,
+    }
+    assert summary["counts"]["by_pipeline_status"] == {
+        "no_garment_instance": 1,
+        "ok": 2,
+    }
+    assert summary["cases"][2]["observed"]["status"] == "no_garment_instance"
+    assert summary["cases"][2]["artifacts"]["local_region_mask"] is None
+
+    for filename in (
+        "casebook_manifest.json",
+        "gallery.json",
+        "gallery.csv",
+        "index.html",
+        "checksums.sha256",
+    ):
+        assert (output_dir / filename).is_file()
+    assert len(list((output_dir / "cases").glob("*/input.jpg"))) == 3
+    assert (
+        len(list((output_dir / "cases").glob("*/segmentation_visualization.jpg"))) == 3
+    )
+    assert len(list((output_dir / "cases").glob("*/local_region_mask.png"))) == 2
+
+    html = (output_dir / "index.html").read_text(encoding="utf-8")
+    assert "Clear &amp; correct" in html
+    assert "成功案例" in html
+    assert "边界案例" in html
+    assert "典型失败" in html
+    assert "cases/01_case_01/input.jpg" in html
+    assert 'id="export-manifest"' in html
+    assert "fashion_visual_casebook_final_manifest.json" in html
+    assert 'data-case-id="failure_no_garment"' in html
+    checksums = (output_dir / "checksums.sha256").read_text(encoding="utf-8")
+    assert "gallery.json" in checksums
+    assert "cases/03_failure_no_garment/result.json" in checksums
+
+    final_html_path = tmp_path / "final_index.html"
+    casebook_cli.write_gallery_html(
+        {**summary, "curation_status": "ready_for_presentation"},
+        final_html_path,
+    )
+    final_html = final_html_path.read_text(encoding="utf-8")
+    assert 'id="export-manifest"' not in final_html
+    assert '<div class="curation-controls">' not in final_html
+
+
+def test_run_case_retains_execution_error(tmp_path):
+    image_path = tmp_path / "broken.jpg"
+    Image.new("RGB", (16, 16), "white").save(image_path)
+
+    class RaisingPipeline:
+        def predict(self, image, query, *, attributes=None):
+            raise RuntimeError("synthetic failure")
+
+    case = {
+        "id": "execution_failure",
+        "title": "Execution failure",
+        "category": "failure",
+        "review_status": "pending",
+        "review_note": "Retain the error.",
+        "query": "这件衣服的领口",
+    }
+
+    record = casebook_cli.run_case(
+        RaisingPipeline(),
+        case,
+        image_path=image_path,
+        case_index=1,
+        output_dir=tmp_path,
+        attributes=["collar_design_labels"],
+        fail_fast=False,
+    )
+
+    assert record["observed"]["status"] == "execution_error"
+    assert record["error"] == {
+        "type": "RuntimeError",
+        "message": "synthetic failure",
+    }
+    result_path = tmp_path / record["artifacts"]["result_json"]
+    assert result_path.is_file()
+    payload = json.loads(result_path.read_text(encoding="utf-8"))
+    assert payload["status"] == "execution_error"
+    assert payload["artifacts"]["result_json"] == str(result_path.resolve())

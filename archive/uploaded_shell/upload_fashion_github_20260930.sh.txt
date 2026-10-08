@@ -1,0 +1,76 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+# 第一个参数可以指定实际项目目录；默认使用今天的新目录。
+src="${1:-/workspace/prd31_recovery_20260930/fashion_multimodal_analysis}"
+repo="${FASHION_GITHUB_REPO_URL:-https://github.com/Selina-aurora/fashion_multimodal_analysis.git}"
+if [[ ! -d "$src/scripts" ]]; then
+  echo "找不到项目的 scripts 目录：$src"
+  echo "请把 src 改成今天上传并解压后的项目目录。"
+  exit 1
+fi
+
+# 在独立目录操作，原项目中的训练可以继续。
+dst="$(mktemp -d "${FASHION_GITHUB_UPLOAD_BASE:-/workspace}/github_upload_20260930_XXXXXX")"
+echo "源项目：$src"
+echo "上传副本：$dst"
+git clone "$repo" "$dst"
+
+for key in user.name user.email; do
+  value="$(git -C "$src" config --get "$key" || true)"
+  if [[ -z "$value" && -d /workspace/fashion_multimodal_analysis ]]; then
+    value="$(git -C /workspace/fashion_multimodal_analysis config --get "$key" || true)"
+  fi
+  if [[ -z "$value" ]]; then
+    read -r -p "填写提交信息 $key（姓名或GitHub邮箱）：" value </dev/tty
+  fi
+  [[ -n "$value" ]] || { echo "提交信息不能为空。"; exit 1; }
+  git -C "$dst" config "$key" "$value"
+done
+
+python3 - "$src" "$dst" <<'PY'
+import os, shutil, sys
+from pathlib import Path
+src, dst = map(lambda p: Path(p).resolve(), sys.argv[1:])
+skip_dirs = {'.git', '.venv', 'venv', 'env', '__pycache__', 'node_modules',
+             '.cache', '.pytest_cache', '.mypy_cache', '.ruff_cache',
+             '.ipynb_checkpoints', 'data', 'fashion_data', 'datasets',
+             'raw', 'processed', 'checkpoints', 'weights', 'backups'}
+skip_ext = {'.pth', '.pt', '.ckpt', '.safetensors', '.onnx', '.bin', '.h5',
+            '.hdf5', '.pkl', '.npy', '.npz', '.zip', '.tar', '.gz', '.bz2',
+            '.xz', '.7z', '.rar', '.pyc', '.pem', '.key'}
+count = 0
+for root, dirs, files in os.walk(src, followlinks=False):
+    dirs[:] = [n for n in dirs if n not in skip_dirs
+               and not n.startswith('.') and not (Path(root) / n).is_symlink()]
+    for name in files:
+        p = Path(root) / name
+        if p.is_symlink() or (name.startswith('.') and name not in
+                             {'.gitignore', '.gitattributes', '.editorconfig'}):
+            continue
+        if p.suffix.lower() in skip_ext:
+            continue
+        if p.stat().st_size > 50 * 1024 * 1024:
+            print('跳过大文件：', p.relative_to(src))
+            continue
+        target = dst / p.relative_to(src)
+        if target.is_symlink() or any(q.is_symlink() for q in target.parents):
+            raise SystemExit('目标路径包含符号链接，请检查：' + str(target))
+        target.parent.mkdir(parents=True, exist_ok=True)
+        shutil.copy2(p, target)
+        count += 1
+print(f'已同步 {count} 个文件；Git 暂存还会遵守 .gitignore。')
+PY
+
+cd "$dst"
+git add -A
+if git diff --cached --quiet; then
+  echo "按筛选规则和 .gitignore，没有需要提交的新内容。"
+  exit 0
+fi
+git diff --cached --stat
+git commit -m "Update PRD 3.1 code and reports on 2026-09-30"
+branch="$(git symbolic-ref --short HEAD)"
+git pull --rebase origin "$branch"
+git push origin "HEAD:$branch"
+echo "上传成功！刷新 GitHub 仓库即可查看。"

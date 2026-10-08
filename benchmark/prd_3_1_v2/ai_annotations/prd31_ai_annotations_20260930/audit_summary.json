@@ -1,0 +1,74 @@
+{
+  "audit_date": "2026-09-30",
+  "method": "AI-assisted visual pre-review of embedded image previews; no human sign-off",
+  "reviewer": "ChatGPT_AI_visual_pre_review",
+  "source_file": "PRD31_review(2).html",
+  "source_sha256": "b3d4b3759ae6745a561c9d39c6980af703908b0099ac5f4d7e171b1951e77061",
+  "fingerprint": "c2a9c00ba1280b7c35fd71ba099aff4f75c0c3e5df7b02511cd3611f98e0c043f58457ef0f499140ee5096576f7513520006b3c0451cf0211118dc8cab0b3378",
+  "cases": 101,
+  "grounding_tasks": 80,
+  "grounding": {
+    "ambiguous": 35,
+    "no": 10,
+    "yes": 35
+  },
+  "eligible_attribute_tasks": 160,
+  "attributes": {
+    "labelled": 112,
+    "ambiguous": 48
+  },
+  "not_applicable_attributes": 80,
+  "completed_ai_tasks": 240,
+  "human_reviewed_tasks": 0,
+  "human_review_required": true,
+  "priority_tasks": 87,
+  "priority_cases": 57,
+  "source_issues": [
+    {
+      "sample_id": "SEGTEST1_0256",
+      "issue": "GT鞋框主要覆盖小腿/踝部，未完整覆盖鞋身；不更改冻结benchmark原框，先人工确认来源标注。"
+    },
+    {
+      "sample_id": "SEGTEST1_0313",
+      "issue": "GT包框主要包含长肩带和白色外套，包身只露窄侧面；局部装饰不可判，需确认候选质量。"
+    }
+  ],
+  "downscaled_previews": [
+    {
+      "sample_id": "SEGTEST1_0010",
+      "embedded_size": [
+        800,
+        1200
+      ],
+      "declared_original_size": [
+        880,
+        1320
+      ]
+    },
+    {
+      "sample_id": "SEGTEST1_0104",
+      "embedded_size": [
+        432,
+        1200
+      ],
+      "declared_original_size": [
+        468,
+        1299
+      ]
+    },
+    {
+      "sample_id": "SEGTEST1_0179",
+      "embedded_size": [
+        800,
+        1200
+      ],
+      "declared_original_size": [
+        880,
+        1320
+      ]
+    }
+  ],
+  "coordinate_system": "Declared original-image coordinates; x1,y1,x2,y2; axis-aligned boxes",
+  "masks_created": false,
+  "model_performance_evaluated": false
+}

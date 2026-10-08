@@ -1,0 +1,43 @@
+{
+  "status": "V7_FP_TRAINING_SUBSET_READY",
+  "images": 395,
+  "instances": 1914,
+  "class_counts": {
+    "accessory": 416,
+    "bag": 135,
+    "dress": 135,
+    "outerwear": 145,
+    "pants": 168,
+    "shoe": 586,
+    "skirt": 75,
+    "top": 254
+  },
+  "train_manifest_sha256": "994dcde4e6d56b9f68765f32c6245a58e0ed95ca3327ac4996c45dcea450a30e",
+  "source_manifest_sha256": "36ff78831b20e492d787c66161f05747433f8e85f7a089fd5df981c2bdf476e6",
+  "development_manifest_sha256": "39141f545ea5512d16ed074788b6f98474b33baff111d3b663ec0ffcc4c40b93",
+  "core_manifest_sha256": "c83204aca87c9c4dee304b774fd459bf5a18a2d1d65f0a3a9a79b92721224b89",
+  "initialization_checkpoint_sha256": "ea5a4ddf0f002256f1ce5164fc1b4b5b4d2263698f9525c9fbe7d8cf98bc1a65",
+  "training_settings": {
+    "batch_size": 1,
+    "workers": 0,
+    "min_size": 640,
+    "max_size": 1024,
+    "seed": 20260930,
+    "lr": 0.0001,
+    "momentum": 0.9,
+    "weight_decay": 0.0005,
+    "step_size": 2,
+    "gamma": 0.1,
+    "sampler_alpha": 0.5,
+    "no_hflip": false,
+    "no_balanced_sampler": false
+  },
+  "epochs": 3,
+  "trainable_prefix": "roi_heads.",
+  "frozen_prefixes": [
+    "backbone.",
+    "rpn."
+  ],
+  "scope": "Existing V5 Fashionpedia training images only; all usable eight-class target rows retained. No new images or GT edits. Source-path isolation only; no untouched blind test claimed.",
+  "rationale": "Test short ROI-head adaptation without the expanded DF2 training source. Source mixing is a hypothesis; the seven regression cases do not establish its cause."
+}

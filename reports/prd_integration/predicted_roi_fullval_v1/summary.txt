@@ -1,0 +1,40 @@
+PRD 3.1 Predicted ROI Integration Pilot v1
+==========================================
+
+checkpoint=outputs/prd_instance_segmentation/maskrcnn_8class_baseline_v2/checkpoint_last.pth
+checkpoint_epoch=15
+device=cuda
+validation_manifest=configs/prd_8class_val_v1.csv
+selected_images=32
+predicted_instances=57
+score_threshold=0.4
+mask_threshold=0.5
+
+Predicted category counts
+-------------------------
+top=11
+pants=11
+skirt=3
+outerwear=2
+dress=7
+shoe=10
+bag=8
+accessory=5
+
+Source counts
+-------------
+DeepFashion2=32
+Fashionpedia=25
+
+Diagnostic matching (GT used only for analysis)
+-----------------------------------------------
+predictions_with_bbox50_match=30
+predictions_with_bbox50_and_class_match=22
+
+Important
+---------
+- crop_path and mask_path are generated from v2-balanced predictions.
+- GT crops/masks are NOT used as attribute input.
+- GT annotations are retained only as diagnostic metadata for later comparison.
+- This manifest can now be passed to existing 3.1.3 scripts that accept --manifest.
+- shoe/bag/accessory may be unsupported by some style-specific attribute scripts; those scripts should skip or mark not_applicable rather than invent labels.

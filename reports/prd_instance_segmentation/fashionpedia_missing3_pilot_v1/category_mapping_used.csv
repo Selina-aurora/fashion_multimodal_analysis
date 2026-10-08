@@ -1,0 +1,47 @@
+﻿source_category_id,source_category_name,mapped_prd_category
+0,"shirt, blouse",
+1,"top, t-shirt, sweatshirt",
+2,sweater,
+3,cardigan,
+4,jacket,
+5,vest,
+6,pants,
+7,shorts,
+8,skirt,
+9,coat,
+10,dress,
+11,jumpsuit,
+12,cape,
+13,glasses,accessory
+14,hat,accessory
+15,"headband, head covering, hair accessory",accessory
+16,tie,accessory
+17,glove,accessory
+18,watch,accessory
+19,belt,accessory
+20,leg warmer,accessory
+21,"tights, stockings",accessory
+22,sock,accessory
+23,shoe,shoe
+24,"bag, wallet",bag
+25,scarf,accessory
+26,umbrella,
+27,hood,
+28,collar,
+29,lapel,
+30,epaulette,
+31,sleeve,
+32,pocket,
+33,neckline,
+34,buckle,
+35,zipper,
+36,applique,
+37,bead,
+38,bow,
+39,flower,
+40,fringe,
+41,ribbon,
+42,rivet,
+43,ruffle,
+44,sequin,
+45,tassel,

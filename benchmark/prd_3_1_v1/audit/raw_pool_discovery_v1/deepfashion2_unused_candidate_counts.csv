@@ -1,0 +1,6 @@
+﻿source_dataset,garment_category,raw_total,already_used,unused_candidates
+DeepFashion2,top,125789,67,125722
+DeepFashion2,pants,92003,52,91951
+DeepFashion2,skirt,30835,18,30817
+DeepFashion2,outerwear,14000,16,13984
+DeepFashion2,dress,49559,40,49519

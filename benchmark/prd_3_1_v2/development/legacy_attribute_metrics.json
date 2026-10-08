@@ -1,0 +1,20 @@
+{
+  "primary_color": {
+    "reviewed_rows": 40,
+    "eligible_rows": 37,
+    "correct": 32,
+    "accuracy": 0.8648648648648649,
+    "split": "development",
+    "formal_acceptance": "NOT_CLAIMED",
+    "reason": "Previously inspected/tuned research holdout, retained as development evidence."
+  },
+  "pattern": {
+    "reviewed_rows": 40,
+    "eligible_rows": 40,
+    "correct": 34,
+    "accuracy": 0.85,
+    "split": "development",
+    "formal_acceptance": "NOT_CLAIMED",
+    "reason": "Previously inspected/tuned research holdout, retained as development evidence."
+  }
+}

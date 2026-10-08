@@ -1,0 +1,36 @@
+PRD 3.1.1 Mask R-CNN baseline data check
+========================================
+
+train: image_groups=127
+train: instances=173
+train: source_image_groups={'DeepFashion2': 80, 'Fashionpedia': 47}
+train: top=42
+train: pants=31
+train: skirt=13
+train: outerwear=10
+train: dress=29
+train: shoe=16
+train: bag=16
+train: accessory=16
+loaded[train][0]: source=DeepFashion2, shape=(3, 699, 468), instances=1, mask_shape=(1, 699, 468)
+loaded[train][1]: source=DeepFashion2, shape=(3, 1125, 750), instances=1, mask_shape=(1, 1125, 750)
+loaded[train][2]: source=DeepFashion2, shape=(3, 702, 468), instances=2, mask_shape=(2, 702, 468)
+loaded[train][3]: source=DeepFashion2, shape=(3, 963, 750), instances=2, mask_shape=(2, 963, 750)
+loaded[train][80]: source=Fashionpedia, shape=(3, 1024, 682), instances=1, mask_shape=(1, 1024, 682)
+
+val: image_groups=32
+val: instances=43
+val: source_image_groups={'DeepFashion2': 20, 'Fashionpedia': 12}
+val: top=10
+val: pants=8
+val: skirt=3
+val: outerwear=3
+val: dress=7
+val: shoe=4
+val: bag=4
+val: accessory=4
+loaded[val][0]: source=DeepFashion2, shape=(3, 624, 468), instances=1, mask_shape=(1, 624, 468)
+loaded[val][1]: source=DeepFashion2, shape=(3, 590, 658), instances=1, mask_shape=(1, 590, 658)
+loaded[val][2]: source=DeepFashion2, shape=(3, 585, 747), instances=2, mask_shape=(2, 585, 747)
+loaded[val][3]: source=DeepFashion2, shape=(3, 702, 468), instances=1, mask_shape=(1, 702, 468)
+loaded[val][20]: source=Fashionpedia, shape=(3, 1024, 680), instances=1, mask_shape=(1, 1024, 680)

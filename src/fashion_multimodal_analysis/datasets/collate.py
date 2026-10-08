@@ -1,6 +1,11 @@
-"""Batch collation utilities for fashion segmentation datasets."""
+"""数据处理：保存原图来源和实例标识，避免同一图片的不同实例跨训练与评估划分。
 
-from typing import TypedDict
+Batch collation utilities for fashion segmentation datasets.
+"""
+
+from __future__ import annotations
+
+from typing import Any, Iterator, TypedDict
 
 import torch
 from torch import Tensor

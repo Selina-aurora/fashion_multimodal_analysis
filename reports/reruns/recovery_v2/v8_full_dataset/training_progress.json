@@ -1,0 +1,9 @@
+{
+  "status": "TRAINING",
+  "completed_epochs": 1,
+  "next_image_offset": 0,
+  "global_step": 187311,
+  "total_images": 187311,
+  "target_epochs": 1,
+  "checkpoint": "/workspace/prd31_recovery_20260930/fashion_multimodal_analysis/outputs/prd_instance_segmentation/maskrcnn_8class_v8_full_dataset/checkpoint_last.pth"
+}

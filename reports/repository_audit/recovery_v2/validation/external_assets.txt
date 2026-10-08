@@ -1,0 +1,18 @@
+Commands: 170; missing entrypoints/implementations: 0
+configs/prd_8class_train_v3.csv: 1088 unique required files; 963 missing
+configs/prd_8class_val_v1.csv: 75 unique required files; 44 missing
+benchmark/prd_3_1_v1/manifests/segmentation_test_v1.csv: 800 unique required files; 400 missing
+Missing files (first 12):
+  /workspace/scratch/65892f8a4bfd/deliverables/fashion_data/processed/fashionpedia_train_expanded_v2/full_masks/accessory_ann1055_img16275.png
+  /workspace/scratch/65892f8a4bfd/deliverables/fashion_data/processed/fashionpedia_train_expanded_v2/full_masks/accessory_ann1079_img16327.png
+  /workspace/scratch/65892f8a4bfd/deliverables/fashion_data/processed/fashionpedia_train_expanded_v2/full_masks/accessory_ann1244_img16528.png
+  /workspace/scratch/65892f8a4bfd/deliverables/fashion_data/processed/fashionpedia_train_expanded_v2/full_masks/accessory_ann1353_img16668.png
+  /workspace/scratch/65892f8a4bfd/deliverables/fashion_data/processed/fashionpedia_train_expanded_v2/full_masks/accessory_ann1381_img16673.png
+  /workspace/scratch/65892f8a4bfd/deliverables/fashion_data/processed/fashionpedia_train_expanded_v2/full_masks/accessory_ann1408_img16711.png
+  /workspace/scratch/65892f8a4bfd/deliverables/fashion_data/processed/fashionpedia_train_expanded_v2/full_masks/accessory_ann1542_img16932.png
+  /workspace/scratch/65892f8a4bfd/deliverables/fashion_data/processed/fashionpedia_train_expanded_v2/full_masks/accessory_ann1646_img16953.png
+  /workspace/scratch/65892f8a4bfd/deliverables/fashion_data/processed/fashionpedia_train_expanded_v2/full_masks/accessory_ann1670_img17050.png
+  /workspace/scratch/65892f8a4bfd/deliverables/fashion_data/processed/fashionpedia_train_expanded_v2/full_masks/accessory_ann173_img15229.png
+  /workspace/scratch/65892f8a4bfd/deliverables/fashion_data/processed/fashionpedia_train_expanded_v2/full_masks/accessory_ann1775_img17163.png
+  /workspace/scratch/65892f8a4bfd/deliverables/fashion_data/processed/fashionpedia_train_expanded_v2/full_masks/accessory_ann1837_img17229.png
+See docs/DATA_AND_WEIGHTS.md. External datasets and model weights are not embedded in this repository.

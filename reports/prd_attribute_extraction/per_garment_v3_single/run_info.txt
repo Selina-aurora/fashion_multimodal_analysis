@@ -1,0 +1,11 @@
+PRD 3.1.3 per-garment baseline v3
+model=openai/clip-vit-base-patch32
+instances=2
+unit_of_analysis=one garment instance per row
+primary_color=CLIP dominant-color classification
+secondary_colors=not included in current v1 scope
+pattern=CLIP on garment instance
+sleeve_length=CLIP on garment instance
+neckline=CLIP on top-center local proxy crop
+neckline_whole=retained for diagnostic comparison
+material_and_craftsmanship=excluded

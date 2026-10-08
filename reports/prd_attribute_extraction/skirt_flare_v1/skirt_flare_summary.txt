@@ -1,0 +1,26 @@
+PRD 3.1.3 skirt flare continuous geometry v1
+=============================================
+skirt_instances=16
+hard_classification=false
+gt_available=false
+
+flare_score summary
+-------------------
+mean=0.2024
+median=0.0759
+min=0.0000
+max=1.0000
+
+hem_to_waist_ratio summary
+---------------------------
+mean=1.3856
+median=1.0215
+min=0.7056
+max=5.7209
+
+Interpretation
+--------------
+- Larger hem_to_waist_ratio means stronger hem expansion geometrically.
+- flare_score is only a normalized continuous descriptor, not a skirt-style label.
+- DeepFashion2 provides no skirt-flare GT here, so validate qualitatively on the sorted contact sheet.
+- Do not define business thresholds from this pilot alone.

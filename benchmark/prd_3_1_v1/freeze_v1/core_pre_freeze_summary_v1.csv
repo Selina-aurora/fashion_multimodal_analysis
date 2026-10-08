@@ -1,0 +1,9 @@
+﻿garment_category,candidate_count,known_human_pass,known_human_excluded,pending_final_confirmation,eligible_after_known_exclusions,planned_final_count,planned_final_class_share,tiny,small,medium,large,coverage_status
+top,55,2,1,52,54,50,12.5%,0,20,17,17,ENOUGH_FOR_50
+pants,55,1,0,54,55,50,12.5%,0,18,18,19,ENOUGH_FOR_50
+skirt,55,2,0,53,55,50,12.5%,0,18,19,18,ENOUGH_FOR_50
+outerwear,55,3,1,51,54,50,12.5%,0,10,22,22,ENOUGH_FOR_50
+dress,55,0,0,55,55,50,12.5%,0,16,20,19,ENOUGH_FOR_50
+shoe,55,0,0,55,55,50,12.5%,0,27,28,0,ENOUGH_FOR_50
+bag,55,0,1,54,54,50,12.5%,0,13,31,10,ENOUGH_FOR_50
+accessory,55,0,0,55,55,50,12.5%,0,25,20,10,ENOUGH_FOR_50

@@ -1,0 +1,95 @@
+{
+  "method": "Exact normalized source_image path; no content/perceptual duplicate-image detection.",
+  "core_instances": 400,
+  "core_images": 400,
+  "core_class_counts": {
+    "top": 50,
+    "pants": 50,
+    "skirt": 50,
+    "outerwear": 50,
+    "dress": 50,
+    "shoe": 50,
+    "bag": 50,
+    "accessory": 50
+  },
+  "core_source_counts": {
+    "DeepFashion2": 250,
+    "Fashionpedia": 150
+  },
+  "validation_instances": 43,
+  "validation_images": 32,
+  "validation_core_overlap_images": 0,
+  "training": {
+    "v1": {
+      "manifest": "configs/prd_8class_train_v1.csv",
+      "instances": 173,
+      "images": 127,
+      "class_counts": {
+        "dress": 29,
+        "pants": 31,
+        "top": 42,
+        "skirt": 13,
+        "outerwear": 10,
+        "shoe": 16,
+        "bag": 16,
+        "accessory": 16
+      },
+      "source_counts": {
+        "DeepFashion2": 125,
+        "Fashionpedia": 48
+      },
+      "core_overlap_images": 0,
+      "train_validation_overlap_images": 0,
+      "overlapping_core_class_counts": {}
+    },
+    "v2": {
+      "manifest": "configs/prd_8class_train_v2.csv",
+      "instances": 425,
+      "images": 353,
+      "class_counts": {
+        "dress": 29,
+        "pants": 31,
+        "top": 42,
+        "skirt": 13,
+        "outerwear": 10,
+        "shoe": 100,
+        "bag": 100,
+        "accessory": 100
+      },
+      "source_counts": {
+        "DeepFashion2": 125,
+        "Fashionpedia": 300
+      },
+      "core_overlap_images": 0,
+      "train_validation_overlap_images": 0,
+      "overlapping_core_class_counts": {}
+    },
+    "v3": {
+      "manifest": "configs/prd_8class_train_v3.csv",
+      "instances": 580,
+      "images": 508,
+      "class_counts": {
+        "dress": 60,
+        "pants": 60,
+        "top": 60,
+        "skirt": 50,
+        "outerwear": 50,
+        "shoe": 100,
+        "bag": 100,
+        "accessory": 100
+      },
+      "source_counts": {
+        "DeepFashion2": 125,
+        "Fashionpedia": 455
+      },
+      "core_overlap_images": 33,
+      "train_validation_overlap_images": 0,
+      "overlapping_core_class_counts": {
+        "shoe": 12,
+        "accessory": 12,
+        "bag": 9
+      }
+    }
+  },
+  "status": "OVERLAP_FOUND"
+}

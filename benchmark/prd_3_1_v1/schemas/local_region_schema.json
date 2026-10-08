@@ -1,0 +1,48 @@
+{
+  "schema_version": "prd_3_1_local_region_v1",
+  "regions": [
+    {
+      "id": "collar",
+      "display_zh": "领口"
+    },
+    {
+      "id": "cuff",
+      "display_zh": "袖口"
+    },
+    {
+      "id": "hem",
+      "display_zh": "下摆"
+    },
+    {
+      "id": "pocket",
+      "display_zh": "口袋"
+    },
+    {
+      "id": "shoulder",
+      "display_zh": "肩部"
+    },
+    {
+      "id": "waist",
+      "display_zh": "腰部"
+    },
+    {
+      "id": "pattern",
+      "display_zh": "图案"
+    },
+    {
+      "id": "decoration",
+      "display_zh": "装饰"
+    }
+  ],
+  "strict_success": {
+    "semantic_target_correct": true,
+    "bbox_iou_min": 0.5
+  },
+  "diagnostic_status": [
+    "correct",
+    "coarse",
+    "wrong",
+    "missed",
+    "ambiguous"
+  ]
+}

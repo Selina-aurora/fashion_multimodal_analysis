@@ -1,0 +1,40 @@
+PRD 3.1.3 pattern focused manual audit - final
+===============================================
+focused_hard_cases=42
+correct=19
+incorrect=23
+focused_hard_case_accuracy=0.4524
+
+IMPORTANT
+---------
+This is NOT overall pattern accuracy.
+The 42 cases were intentionally selected from low-margin/high-entropy and rare-category cases.
+
+Manual-label distribution
+-------------------------
+solid=23
+graphic_logo=6
+floral=5
+checked_plaid=4
+striped=2
+camouflage=2
+
+Error-type distribution
+-----------------------
+texture_or_wash=9
+model_confusion=9
+taxonomy_overlap=4
+small_graphic=1
+
+Most common prediction -> manual confusions
+-------------------------------------------
+striped -> solid: 8
+graphic_logo -> solid: 4
+other_pattern -> solid: 2
+solid -> graphic_logo: 1
+polka_dot -> striped: 1
+floral -> graphic_logo: 1
+polka_dot -> floral: 1
+polka_dot -> checked_plaid: 1
+polka_dot -> solid: 1
+geometric_abstract -> checked_plaid: 1

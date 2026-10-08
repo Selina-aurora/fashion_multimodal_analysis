@@ -1,0 +1,8 @@
+PRD 3.1.3 sleeve continuous geometry pilot v2
+manifest=configs/garment_instances_gt_pilot_100.csv
+upper_body_instances=101
+input=garment_instance_mask
+output=continuous_geometry_feature_vector
+hard_classification=false
+gt_source=DeepFashion2_fine_category_name_for_diagnostic_only
+material_and_craftsmanship=excluded

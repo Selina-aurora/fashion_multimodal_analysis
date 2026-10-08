@@ -1,0 +1,1234 @@
+from __future__ import annotations
+
+import argparse
+import csv
+import hashlib
+import html
+import json
+import shutil
+import sys
+from collections import Counter
+from pathlib import Path
+from typing import Any
+
+ROOT = Path(__file__).resolve().parents[2]
+if str(ROOT) not in sys.path:
+    sys.path.insert(0, str(ROOT))
+
+from fashion_mm.models.attributes import FashionAttributePredictor
+from fashion_mm.models.instance_segmentation import FashionInstanceSegmentationPredictor
+from fashion_mm.pipelines import FashionVisualPipeline
+from fashion_mm.utils.config import load_config
+from scripts.inference.predict_fashion_visual_pipeline import PACKAGE_FILENAMES
+from scripts.inference.predict_fashion_visual_pipeline import RESULT_SCHEMA_NAME
+from scripts.inference.predict_fashion_visual_pipeline import RESULT_SCHEMA_VERSION
+from scripts.inference.predict_fashion_visual_pipeline import write_delivery_artifacts
+
+
+MANIFEST_SCHEMA_NAME = "fashion_mm.fashion_visual_casebook_manifest"
+CASEBOOK_SCHEMA_NAME = "fashion_mm.fashion_visual_casebook"
+SCHEMA_VERSION = "1.0.0"
+FINAL_CATEGORIES = ("success", "boundary", "failure")
+DRAFT_CATEGORY = "unreviewed"
+REVIEW_STATUSES = {"pending", "confirmed"}
+
+
+def parse_args() -> argparse.Namespace:
+    parser = argparse.ArgumentParser(
+        description=(
+            "Build a self-contained 3.1.1 -> 3.1.2 -> 3.1.3 qualitative "
+            "casebook with JSON, CSV, HTML, images, and checksums."
+        )
+    )
+    parser.add_argument("--manifest", required=True)
+    parser.add_argument(
+        "--segmentation-config",
+        default="configs/model/instance_segmentation_deepfashion2.yaml",
+    )
+    parser.add_argument("--segmentation-checkpoint", required=True)
+    parser.add_argument("--attribute-checkpoint", required=True)
+    parser.add_argument("--device", default="cuda")
+    parser.add_argument("--top-k", type=int, default=None)
+    parser.add_argument("--confidence-threshold", type=float, default=None)
+    parser.add_argument("--output-dir", required=True)
+    parser.add_argument(
+        "--draft",
+        action="store_true",
+        help=(
+            "Allow pending or unreviewed candidates and any positive case count. "
+            "Final mode requires 10-20 confirmed cases covering all three classes."
+        ),
+    )
+    parser.add_argument(
+        "--fail-fast",
+        action="store_true",
+        help="Stop on the first per-case execution error instead of retaining it.",
+    )
+    return parser.parse_args()
+
+
+def load_casebook_manifest(
+    manifest_path: str | Path,
+    *,
+    draft: bool,
+) -> dict[str, Any]:
+    path = Path(manifest_path)
+    payload = json.loads(path.read_text(encoding="utf-8"))
+    validate_casebook_manifest(payload, draft=draft)
+    return payload
+
+
+def validate_casebook_manifest(payload: Any, *, draft: bool) -> None:
+    """Validate the structural and curation requirements of one casebook."""
+    if not isinstance(payload, dict):
+        raise ValueError("Casebook manifest must be a JSON object.")
+    expected_schema = {
+        "name": MANIFEST_SCHEMA_NAME,
+        "version": SCHEMA_VERSION,
+    }
+    if payload.get("schema") != expected_schema:
+        raise ValueError(f"Manifest schema must be {expected_schema}.")
+
+    cases = payload.get("cases")
+    if not isinstance(cases, list) or not cases:
+        raise ValueError("Casebook manifest must contain a non-empty cases list.")
+    if not draft and not 10 <= len(cases) <= 20:
+        raise ValueError(
+            f"Final casebook must contain 10-20 cases, found {len(cases)}."
+        )
+
+    validate_attribute_names(
+        payload.get("default_attributes"),
+        field="default_attributes",
+        optional=True,
+    )
+    seen_ids: set[str] = set()
+    category_counts: Counter[str] = Counter()
+    for index, case in enumerate(cases):
+        if not isinstance(case, dict):
+            raise ValueError(f"cases[{index}] must be a JSON object.")
+        case_id = require_nonempty_string(case.get("id"), f"cases[{index}].id")
+        if not is_safe_case_id(case_id):
+            raise ValueError(
+                f"cases[{index}].id must use only letters, digits, '-' or '_'."
+            )
+        if case_id in seen_ids:
+            raise ValueError(f"Duplicate case id: {case_id}")
+        seen_ids.add(case_id)
+
+        require_nonempty_string(case.get("title"), f"cases[{index}].title")
+        require_nonempty_string(case.get("image"), f"cases[{index}].image")
+        require_nonempty_string(case.get("query"), f"cases[{index}].query")
+        category = require_nonempty_string(
+            case.get("category"),
+            f"cases[{index}].category",
+        )
+        allowed_categories = set(FINAL_CATEGORIES)
+        if draft:
+            allowed_categories.add(DRAFT_CATEGORY)
+        if category not in allowed_categories:
+            raise ValueError(
+                f"cases[{index}].category must be one of "
+                f"{sorted(allowed_categories)}, got {category!r}."
+            )
+        category_counts[category] += 1
+
+        review_status = case.get("review_status", "pending")
+        if review_status not in REVIEW_STATUSES:
+            raise ValueError(
+                f"cases[{index}].review_status must be pending or confirmed."
+            )
+        if not draft and review_status != "confirmed":
+            raise ValueError(
+                f"Final case {case_id} must have review_status='confirmed'."
+            )
+        review_note = case.get("review_note")
+        if not draft:
+            require_nonempty_string(
+                review_note,
+                f"cases[{index}].review_note",
+            )
+        elif review_note is not None and not isinstance(review_note, str):
+            raise ValueError(f"cases[{index}].review_note must be a string.")
+
+        validate_attribute_names(
+            case.get("attributes"),
+            field=f"cases[{index}].attributes",
+            optional=True,
+        )
+        validate_expected(case.get("expected"), index=index)
+
+    if not draft:
+        missing = set(FINAL_CATEGORIES) - set(category_counts)
+        if missing:
+            raise ValueError(
+                "Final casebook must cover success, boundary, and failure; "
+                f"missing {sorted(missing)}."
+            )
+
+
+def validate_attribute_names(
+    value: Any,
+    *,
+    field: str,
+    optional: bool,
+) -> None:
+    if value is None and optional:
+        return
+    if not isinstance(value, list) or not value:
+        raise ValueError(f"{field} must be a non-empty list of strings.")
+    if any(not isinstance(item, str) or not item.strip() for item in value):
+        raise ValueError(f"{field} must contain non-empty strings.")
+    if len(set(value)) != len(value):
+        raise ValueError(f"{field} must not contain duplicate attributes.")
+
+
+def validate_expected(value: Any, *, index: int) -> None:
+    if value is None:
+        return
+    if not isinstance(value, dict):
+        raise ValueError(f"cases[{index}].expected must be a JSON object.")
+    for field in ("pipeline_status", "region"):
+        item = value.get(field)
+        if item is not None and (not isinstance(item, str) or not item.strip()):
+            raise ValueError(
+                f"cases[{index}].expected.{field} must be a non-empty string."
+            )
+    attributes = value.get("attributes")
+    if attributes is not None:
+        if not isinstance(attributes, dict):
+            raise ValueError(
+                f"cases[{index}].expected.attributes must be a JSON object."
+            )
+        for name, label in attributes.items():
+            if not isinstance(name, str) or not name.strip():
+                raise ValueError(
+                    f"cases[{index}].expected.attributes has an invalid name."
+                )
+            if not isinstance(label, str) or not label.strip():
+                raise ValueError(
+                    f"cases[{index}].expected.attributes[{name!r}] "
+                    "must be a non-empty string."
+                )
+
+
+def require_nonempty_string(value: Any, field: str) -> str:
+    if not isinstance(value, str) or not value.strip():
+        raise ValueError(f"{field} must be a non-empty string.")
+    return value
+
+
+def is_safe_case_id(value: str) -> bool:
+    return (
+        len(value) <= 64
+        and value[0].isalnum()
+        and all(char.isalnum() or char in {"-", "_"} for char in value)
+    )
+
+
+def resolve_case_image(case: dict[str, Any], manifest_path: Path) -> Path:
+    image_path = Path(str(case["image"])).expanduser()
+    if not image_path.is_absolute():
+        image_path = manifest_path.parent / image_path
+    return image_path.resolve()
+
+
+def case_attributes(
+    case: dict[str, Any],
+    default_attributes: list[str] | None,
+) -> list[str] | None:
+    value = case.get("attributes")
+    return list(value) if value is not None else default_attributes
+
+
+def delivery_paths(output_dir: Path) -> dict[str, Path | None]:
+    return {
+        "output_dir": output_dir,
+        "result_json": output_dir / PACKAGE_FILENAMES["result_json"],
+        "segmentation_visualization": (
+            output_dir / PACKAGE_FILENAMES["segmentation_visualization"]
+        ),
+        "local_region_mask": output_dir / PACKAGE_FILENAMES["local_region_mask"],
+        "local_region_visualization": (
+            output_dir / PACKAGE_FILENAMES["local_region_visualization"]
+        ),
+    }
+
+
+def build_casebook(
+    *,
+    manifest_path: str | Path,
+    segmentation_config_path: str | Path,
+    segmentation_checkpoint: str | Path,
+    attribute_checkpoint: str | Path,
+    output_dir: str | Path,
+    device: str,
+    top_k: int | None = None,
+    confidence_threshold: float | None = None,
+    draft: bool = False,
+    fail_fast: bool = False,
+) -> dict[str, Any]:
+    """Run all manifest cases once and create a portable qualitative casebook."""
+    manifest_file = Path(manifest_path).resolve()
+    manifest = load_casebook_manifest(manifest_file, draft=draft)
+    cases = manifest["cases"]
+    resolved_images = [resolve_case_image(case, manifest_file) for case in cases]
+    missing_images = [str(path) for path in resolved_images if not path.is_file()]
+    if missing_images:
+        raise FileNotFoundError(
+            "Casebook images not found:\n" + "\n".join(missing_images)
+        )
+
+    segmentation_config_file = Path(segmentation_config_path).resolve()
+    segmentation_checkpoint_file = Path(segmentation_checkpoint).resolve()
+    attribute_checkpoint_file = Path(attribute_checkpoint).resolve()
+    for label, path in (
+        ("segmentation config", segmentation_config_file),
+        ("segmentation checkpoint", segmentation_checkpoint_file),
+        ("attribute checkpoint", attribute_checkpoint_file),
+    ):
+        if not path.is_file():
+            raise FileNotFoundError(f"{label.title()} not found: {path}")
+
+    output = Path(output_dir).resolve()
+    if output.exists():
+        if not output.is_dir() or any(output.iterdir()):
+            raise FileExistsError(
+                f"Casebook output directory must be empty or absent: {output}"
+            )
+    output.mkdir(parents=True, exist_ok=True)
+    snapshot_path = output / "casebook_manifest.json"
+    snapshot_path.write_text(
+        json.dumps(manifest, ensure_ascii=False, indent=2),
+        encoding="utf-8",
+    )
+
+    segmentation_config = load_config(segmentation_config_file)
+    segmentation_predictor = FashionInstanceSegmentationPredictor(
+        segmentation_config,
+        checkpoint_path=segmentation_checkpoint_file,
+        device=device,
+    )
+    attribute_predictor = FashionAttributePredictor(
+        attribute_checkpoint_file,
+        device=device,
+        top_k=top_k,
+        confidence_threshold=confidence_threshold,
+    )
+    pipeline = FashionVisualPipeline(segmentation_predictor, attribute_predictor)
+
+    default_attributes = manifest.get("default_attributes")
+    case_records = []
+    for index, (case, image_path) in enumerate(zip(cases, resolved_images), start=1):
+        case_records.append(
+            run_case(
+                pipeline,
+                case,
+                image_path=image_path,
+                case_index=index,
+                output_dir=output,
+                attributes=case_attributes(case, default_attributes),
+                fail_fast=fail_fast,
+            )
+        )
+
+    consistency_warnings = collect_consistency_warnings(case_records)
+    execution_errors = sum(
+        record["observed"]["status"] == "execution_error" for record in case_records
+    )
+    curation_status = "draft"
+    if not draft:
+        curation_status = (
+            "ready_for_presentation"
+            if not execution_errors and not consistency_warnings
+            else "needs_review"
+        )
+
+    category_counts = Counter(record["category"] for record in case_records)
+    status_counts = Counter(record["observed"]["status"] for record in case_records)
+    summary = {
+        "schema": {
+            "name": CASEBOOK_SCHEMA_NAME,
+            "version": SCHEMA_VERSION,
+        },
+        "title": manifest.get("title") or "Fashion Visual Pipeline Casebook",
+        "description": manifest.get("description"),
+        "curation_status": curation_status,
+        "source_manifest": str(manifest_file),
+        "manifest_snapshot": "casebook_manifest.json",
+        "configuration": {
+            "device": device,
+            "top_k": top_k,
+            "confidence_threshold": confidence_threshold,
+            "segmentation_config": file_identity(segmentation_config_file),
+            "segmentation_checkpoint": file_identity(segmentation_checkpoint_file),
+            "attribute_checkpoint": file_identity(attribute_checkpoint_file),
+        },
+        "counts": {
+            "total": len(case_records),
+            "by_category": dict(sorted(category_counts.items())),
+            "by_pipeline_status": dict(sorted(status_counts.items())),
+            "execution_errors": execution_errors,
+        },
+        "consistency_warnings": consistency_warnings,
+        "artifacts": {
+            "gallery_json": "gallery.json",
+            "gallery_csv": "gallery.csv",
+            "index_html": "index.html",
+            "checksums": "checksums.sha256",
+        },
+        "cases": case_records,
+    }
+    write_gallery_json(summary, output / "gallery.json")
+    write_gallery_csv(case_records, output / "gallery.csv")
+    write_gallery_html(summary, output / "index.html")
+    write_checksums(output, output / "checksums.sha256")
+    return summary
+
+
+def run_case(
+    pipeline: FashionVisualPipeline,
+    case: dict[str, Any],
+    *,
+    image_path: Path,
+    case_index: int,
+    output_dir: Path,
+    attributes: list[str] | None,
+    fail_fast: bool,
+) -> dict[str, Any]:
+    case_dir = output_dir / "cases" / f"{case_index:02d}_{case['id']}"
+    case_dir.mkdir(parents=True, exist_ok=False)
+    suffix = image_path.suffix.lower() or ".jpg"
+    copied_image = case_dir / f"input{suffix}"
+    shutil.copy2(image_path, copied_image)
+    artifact_paths = delivery_paths(case_dir)
+
+    error_payload: dict[str, str] | None = None
+    try:
+        result = pipeline.predict(
+            copied_image,
+            str(case["query"]),
+            attributes=attributes,
+        )
+        payload = write_delivery_artifacts(
+            image=copied_image,
+            query=str(case["query"]),
+            result=result,
+            artifact_paths=artifact_paths,
+        )
+    except Exception as error:
+        if fail_fast:
+            raise
+        error_payload = {
+            "type": type(error).__name__,
+            "message": str(error),
+        }
+        payload = build_error_payload(
+            image=copied_image,
+            query=str(case["query"]),
+            artifact_paths=artifact_paths,
+            error=error_payload,
+        )
+        result_path = artifact_paths["result_json"]
+        assert result_path is not None
+        result_path.write_text(
+            json.dumps(payload, ensure_ascii=False, indent=2),
+            encoding="utf-8",
+        )
+
+    observed = observed_result(payload)
+    expected = case.get("expected") or {}
+    record = {
+        "id": case["id"],
+        "title": case["title"],
+        "category": case["category"],
+        "review_status": case.get("review_status", "pending"),
+        "review_note": case.get("review_note"),
+        "query": case["query"],
+        "requested_attributes": attributes,
+        "source_image": str(image_path),
+        "expected": expected,
+        "observed": observed,
+        "expectation_checks": compare_expected(expected, observed),
+        "error": error_payload,
+        "artifacts": relative_case_artifacts(
+            output_dir,
+            copied_image=copied_image,
+            artifact_paths=artifact_paths,
+        ),
+    }
+    record["artifact_sha256"] = {
+        name: sha256_file(output_dir / relative_path)
+        for name, relative_path in record["artifacts"].items()
+        if relative_path is not None
+    }
+    return record
+
+
+def build_error_payload(
+    *,
+    image: Path,
+    query: str,
+    artifact_paths: dict[str, Path | None],
+    error: dict[str, str],
+) -> dict[str, Any]:
+    output_directory = artifact_paths["output_dir"]
+    result_json = artifact_paths["result_json"]
+    return {
+        "schema": {
+            "name": RESULT_SCHEMA_NAME,
+            "version": RESULT_SCHEMA_VERSION,
+        },
+        "image": str(image.resolve()),
+        "query": query,
+        "artifacts": {
+            "output_dir": (
+                str(output_directory.resolve())
+                if output_directory is not None
+                else None
+            ),
+            "result_json": (
+                str(result_json.resolve()) if result_json is not None else None
+            ),
+            "segmentation_visualization": existing_absolute_path(
+                artifact_paths["segmentation_visualization"]
+            ),
+            "local_region_mask": existing_absolute_path(
+                artifact_paths["local_region_mask"]
+            ),
+            "local_region_visualization": existing_absolute_path(
+                artifact_paths["local_region_visualization"]
+            ),
+        },
+        "status": "execution_error",
+        "segmentation": None,
+        "local_region": None,
+        "attribute_extraction": None,
+        "total_pipeline_time_ms": None,
+        "error": error,
+    }
+
+
+def existing_absolute_path(path: Path | None) -> str | None:
+    return str(path.resolve()) if path is not None and path.is_file() else None
+
+
+def observed_result(payload: dict[str, Any]) -> dict[str, Any]:
+    segmentation = payload.get("segmentation") or {}
+    local_region = payload.get("local_region") or {}
+    query = local_region.get("query") or {}
+    selected_region = local_region.get("region") or {}
+    extraction = payload.get("attribute_extraction") or {}
+    predictions = extraction.get("attributes") or []
+    attributes = {
+        str(prediction["attribute_name"]): {
+            "label": prediction.get("label"),
+            "confidence": prediction.get("confidence"),
+            "is_confident": prediction.get("is_confident"),
+        }
+        for prediction in predictions
+    }
+    confidences = [
+        float(value["confidence"])
+        for value in attributes.values()
+        if value.get("confidence") is not None
+    ]
+    return {
+        "status": payload.get("status"),
+        "instances": len(segmentation.get("instances") or []),
+        "parsed_region": query.get("region"),
+        "selected_region": selected_region.get("region"),
+        "region_status": local_region.get("status"),
+        "region_box": selected_region.get("box"),
+        "region_confidence": selected_region.get("match_score"),
+        "attributes": attributes,
+        "min_attribute_confidence": min(confidences) if confidences else None,
+        "total_pipeline_time_ms": payload.get("total_pipeline_time_ms"),
+    }
+
+
+def compare_expected(
+    expected: dict[str, Any],
+    observed: dict[str, Any],
+) -> dict[str, Any]:
+    checks: dict[str, Any] = {}
+    if "pipeline_status" in expected:
+        checks["pipeline_status"] = {
+            "expected": expected["pipeline_status"],
+            "observed": observed.get("status"),
+            "matched": expected["pipeline_status"] == observed.get("status"),
+        }
+    if "region" in expected:
+        checks["region"] = {
+            "expected": expected["region"],
+            "observed": observed.get("selected_region"),
+            "matched": expected["region"] == observed.get("selected_region"),
+        }
+    expected_attributes = expected.get("attributes") or {}
+    if expected_attributes:
+        observed_attributes = observed.get("attributes") or {}
+        checks["attributes"] = {
+            name: {
+                "expected": label,
+                "observed": (observed_attributes.get(name) or {}).get("label"),
+                "matched": label == (observed_attributes.get(name) or {}).get("label"),
+            }
+            for name, label in expected_attributes.items()
+        }
+
+    flattened = []
+    for name, check in checks.items():
+        if name == "attributes":
+            flattened.extend(value["matched"] for value in check.values())
+        else:
+            flattened.append(check["matched"])
+    return {
+        "overall_matched": all(flattened) if flattened else None,
+        "details": checks,
+    }
+
+
+def collect_consistency_warnings(
+    case_records: list[dict[str, Any]],
+) -> list[str]:
+    warnings = []
+    for record in case_records:
+        if record["category"] != "success":
+            continue
+        if record["observed"]["status"] != "ok":
+            warnings.append(
+                f"{record['id']}: success case has pipeline status "
+                f"{record['observed']['status']!r}."
+            )
+        if record["expectation_checks"]["overall_matched"] is False:
+            warnings.append(
+                f"{record['id']}: success case does not match its expectations."
+            )
+    return warnings
+
+
+def relative_case_artifacts(
+    output_dir: Path,
+    *,
+    copied_image: Path,
+    artifact_paths: dict[str, Path | None],
+) -> dict[str, str | None]:
+    payload = {
+        "input_image": copied_image.relative_to(output_dir).as_posix(),
+    }
+    for key in (
+        "result_json",
+        "segmentation_visualization",
+        "local_region_mask",
+        "local_region_visualization",
+    ):
+        path = artifact_paths[key]
+        payload[key] = (
+            path.relative_to(output_dir).as_posix()
+            if path is not None and path.is_file()
+            else None
+        )
+    return payload
+
+
+def file_identity(path: Path) -> dict[str, Any]:
+    return {
+        "path": str(path),
+        "size_bytes": path.stat().st_size,
+        "sha256": sha256_file(path),
+    }
+
+
+def sha256_file(path: str | Path) -> str:
+    digest = hashlib.sha256()
+    with Path(path).open("rb") as handle:
+        for block in iter(lambda: handle.read(1024 * 1024), b""):
+            digest.update(block)
+    return digest.hexdigest()
+
+
+def write_gallery_json(summary: dict[str, Any], output_path: Path) -> None:
+    output_path.write_text(
+        json.dumps(summary, ensure_ascii=False, indent=2),
+        encoding="utf-8",
+    )
+
+
+def write_gallery_csv(
+    case_records: list[dict[str, Any]],
+    output_path: Path,
+) -> None:
+    fieldnames = [
+        "id",
+        "title",
+        "category",
+        "review_status",
+        "query",
+        "pipeline_status",
+        "instances",
+        "parsed_region",
+        "selected_region",
+        "min_attribute_confidence",
+        "expectation_matched",
+        "attribute_labels",
+        "review_note",
+        "case_dir",
+    ]
+    with output_path.open("w", encoding="utf-8", newline="") as handle:
+        writer = csv.DictWriter(handle, fieldnames=fieldnames)
+        writer.writeheader()
+        for record in case_records:
+            observed = record["observed"]
+            labels = {
+                name: value.get("label")
+                for name, value in observed["attributes"].items()
+            }
+            writer.writerow(
+                {
+                    "id": record["id"],
+                    "title": record["title"],
+                    "category": record["category"],
+                    "review_status": record["review_status"],
+                    "query": record["query"],
+                    "pipeline_status": observed["status"],
+                    "instances": observed["instances"],
+                    "parsed_region": observed["parsed_region"],
+                    "selected_region": observed["selected_region"],
+                    "min_attribute_confidence": (
+                        f"{observed['min_attribute_confidence']:.4f}"
+                        if observed["min_attribute_confidence"] is not None
+                        else ""
+                    ),
+                    "expectation_matched": record["expectation_checks"][
+                        "overall_matched"
+                    ],
+                    "attribute_labels": json.dumps(
+                        labels,
+                        ensure_ascii=False,
+                        sort_keys=True,
+                    ),
+                    "review_note": record.get("review_note") or "",
+                    "case_dir": str(Path(record["artifacts"]["result_json"]).parent),
+                }
+            )
+
+
+def write_gallery_html(summary: dict[str, Any], output_path: Path) -> None:
+    sections = []
+    case_records = summary["cases"]
+    is_draft = summary["curation_status"] == "draft"
+    for category in (*FINAL_CATEGORIES, DRAFT_CATEGORY):
+        records = [record for record in case_records if record["category"] == category]
+        if not records:
+            continue
+        cards = "\n".join(
+            render_case_card(record, draft=is_draft) for record in records
+        )
+        sections.append(
+            f"""
+            <section>
+              <div class="section-heading">
+                <h2>{escape(category_label(category))}</h2>
+                <span>{len(records)} 个样例</span>
+              </div>
+              <div class="grid">{cards}</div>
+            </section>
+            """
+        )
+
+    warning_html = ""
+    if summary["consistency_warnings"]:
+        items = "".join(
+            f"<li>{escape(item)}</li>" for item in summary["consistency_warnings"]
+        )
+        warning_html = (
+            f'<aside class="warnings"><strong>需要复核</strong><ul>{items}</ul></aside>'
+        )
+
+    counts = summary["counts"]["by_category"]
+    curation_toolbar = ""
+    curation_script = ""
+    if is_draft:
+        curation_toolbar = """
+          <div class="curation-toolbar">
+            <button type="button" id="export-manifest">导出已整理清单</button>
+            <output id="curation-message" aria-live="polite"></output>
+          </div>
+        """
+        curation_script = draft_curation_script(summary)
+    page = f"""<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{escape(summary["title"])}</title>
+  <style>
+    :root {{
+      color-scheme: light;
+      --ink: #202124;
+      --muted: #656b73;
+      --line: #d9dde3;
+      --surface: #ffffff;
+      --page: #f4f5f7;
+      --success: #16794a;
+      --boundary: #9a5b00;
+      --failure: #b42318;
+      --unreviewed: #59636e;
+    }}
+    * {{ box-sizing: border-box; }}
+    body {{
+      margin: 0;
+      color: var(--ink);
+      background: var(--page);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }}
+    main {{ width: min(1480px, calc(100% - 32px)); margin: 28px auto 56px; }}
+    h1 {{ margin: 0 0 8px; font-size: 28px; letter-spacing: 0; }}
+    h2 {{ margin: 0; font-size: 20px; letter-spacing: 0; }}
+    .subtitle {{ margin: 0; color: var(--muted); line-height: 1.55; }}
+    .summary {{
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      margin: 18px 0 28px;
+      padding: 14px 0;
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }}
+    .summary span {{ color: var(--muted); }}
+    .summary strong {{ color: var(--ink); }}
+    .warnings {{
+      margin-bottom: 24px;
+      padding: 12px 14px;
+      border-left: 4px solid var(--failure);
+      background: #fff5f4;
+    }}
+    .warnings ul {{ margin: 8px 0 0; padding-left: 20px; }}
+    .curation-toolbar {{
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin: 0 0 24px;
+    }}
+    button {{
+      min-height: 36px;
+      padding: 0 14px;
+      border: 1px solid #0969da;
+      border-radius: 6px;
+      color: #fff;
+      background: #0969da;
+      font: inherit;
+      font-weight: 650;
+      cursor: pointer;
+    }}
+    output {{ color: var(--muted); font-size: 13px; }}
+    section {{ margin: 30px 0; }}
+    .section-heading {{
+      display: flex;
+      align-items: baseline;
+      gap: 10px;
+      margin-bottom: 12px;
+    }}
+    .section-heading span {{ color: var(--muted); font-size: 14px; }}
+    .grid {{
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(430px, 1fr));
+      gap: 16px;
+    }}
+    .card {{
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--surface);
+    }}
+    .card-head {{ padding: 14px 16px 10px; }}
+    .card-title {{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+    }}
+    .card-title h3 {{ margin: 0; font-size: 17px; letter-spacing: 0; }}
+    .badge {{ font-size: 12px; font-weight: 700; text-transform: uppercase; }}
+    .badge.success {{ color: var(--success); }}
+    .badge.boundary {{ color: var(--boundary); }}
+    .badge.failure {{ color: var(--failure); }}
+    .badge.unreviewed {{ color: var(--unreviewed); }}
+    .query {{ margin: 8px 0 0; font-weight: 600; }}
+    .media {{
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1px;
+      background: var(--line);
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }}
+    figure {{ margin: 0; background: #fff; min-width: 0; }}
+    figure img {{
+      display: block;
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      object-fit: contain;
+      background: #f8f9fa;
+    }}
+    figcaption {{ padding: 5px 8px; color: var(--muted); font-size: 11px; }}
+    .details {{
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+      gap: 12px;
+      padding: 12px 16px 16px;
+      font-size: 13px;
+      line-height: 1.5;
+    }}
+    .details p {{ margin: 0 0 6px; }}
+    .details strong {{ font-weight: 650; }}
+    .attributes {{ width: 100%; border-collapse: collapse; }}
+    .attributes td {{ padding: 2px 0; vertical-align: top; }}
+    .attributes td:last-child {{ text-align: right; }}
+    .note {{
+      grid-column: 1 / -1;
+      margin: 0;
+      padding-top: 10px;
+      border-top: 1px solid var(--line);
+    }}
+    .curation-controls {{
+      grid-column: 1 / -1;
+      display: grid;
+      grid-template-columns: auto minmax(150px, 1fr) auto;
+      gap: 10px 14px;
+      align-items: center;
+      padding-top: 10px;
+      border-top: 1px solid var(--line);
+    }}
+    .curation-controls label {{
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      color: var(--muted);
+    }}
+    .curation-controls select,
+    .curation-controls textarea {{
+      width: 100%;
+      border: 1px solid var(--line);
+      border-radius: 4px;
+      color: var(--ink);
+      background: #fff;
+      font: inherit;
+    }}
+    .curation-controls select {{ min-height: 34px; padding: 0 8px; }}
+    .curation-controls textarea {{
+      grid-column: 1 / -1;
+      min-height: 68px;
+      padding: 8px;
+      resize: vertical;
+    }}
+    .links {{ grid-column: 1 / -1; color: var(--muted); }}
+    a {{ color: #0969da; }}
+    code {{ font-size: 12px; overflow-wrap: anywhere; }}
+    @media (max-width: 760px) {{
+      main {{ width: min(100% - 20px, 1480px); margin-top: 18px; }}
+      .grid {{ grid-template-columns: 1fr; }}
+      .media {{ grid-template-columns: 1fr; }}
+      .details {{ grid-template-columns: 1fr; }}
+      .curation-controls {{ grid-template-columns: 1fr; }}
+      .curation-controls textarea {{ grid-column: 1; }}
+    }}
+    @media print {{
+      body {{ background: #fff; }}
+      main {{ width: 100%; margin: 0; }}
+      .card {{ break-inside: avoid; }}
+      a {{ color: inherit; text-decoration: none; }}
+    }}
+  </style>
+</head>
+<body>
+  <main>
+    <h1>{escape(summary["title"])}</h1>
+    <p class="subtitle">{escape(summary.get("description") or "")}</p>
+    <div class="summary">
+      <span>状态 <strong>{escape(summary["curation_status"])}</strong></span>
+      <span>总数 <strong>{summary["counts"]["total"]}</strong></span>
+      <span>成功 <strong>{counts.get("success", 0)}</strong></span>
+      <span>边界 <strong>{counts.get("boundary", 0)}</strong></span>
+      <span>失败 <strong>{counts.get("failure", 0)}</strong></span>
+      <span>待复核 <strong>{counts.get("unreviewed", 0)}</strong></span>
+    </div>
+    {warning_html}
+    {curation_toolbar}
+    {"".join(sections)}
+  </main>
+  {curation_script}
+</body>
+</html>
+"""
+    output_path.write_text(page, encoding="utf-8")
+
+
+def render_case_card(record: dict[str, Any], *, draft: bool) -> str:
+    artifacts = record["artifacts"]
+    observed = record["observed"]
+    input_figure = render_figure(
+        artifacts.get("input_image"),
+        "输入图",
+        record["id"],
+    )
+    segmentation_figure = render_figure(
+        artifacts.get("segmentation_visualization"),
+        "3.1.1 实例分割",
+        record["id"],
+    )
+    region_figure = render_figure(
+        artifacts.get("local_region_visualization"),
+        "3.1.2 局部区域",
+        record["id"],
+    )
+    attribute_rows = "".join(
+        f"""
+        <tr>
+          <td><code>{escape(name)}</code></td>
+          <td>{escape(value.get("label") or "-")} ({format_number(value.get("confidence"))})</td>
+        </tr>
+        """
+        for name, value in observed["attributes"].items()
+    )
+    if not attribute_rows:
+        attribute_rows = '<tr><td colspan="2">No attribute output</td></tr>'
+    expected_match = record["expectation_checks"]["overall_matched"]
+    result_link = artifacts.get("result_json")
+    mask_link = artifacts.get("local_region_mask")
+    links = []
+    if result_link:
+        links.append(f'<a href="{escape(result_link)}">result.json</a>')
+    if mask_link:
+        links.append(f'<a href="{escape(mask_link)}">region mask</a>')
+    error_html = ""
+    if record.get("error"):
+        error_html = (
+            f"<p><strong>异常：</strong> "
+            f"{escape(record['error']['type'])}: "
+            f"{escape(record['error']['message'])}</p>"
+        )
+    controls = render_curation_controls(record) if draft else ""
+    return f"""
+      <article class="card" data-case-id="{escape(record["id"])}">
+        <div class="card-head">
+          <div class="card-title">
+            <h3>{escape(record["title"])}</h3>
+            <span class="badge {escape(record["category"])}">{escape(category_label(record["category"]))}</span>
+          </div>
+          <p class="query">{escape(record["query"])}</p>
+        </div>
+        <div class="media">{input_figure}{segmentation_figure}{region_figure}</div>
+        <div class="details">
+          <div>
+            <p><strong>管线状态：</strong> <code>{escape(observed["status"])}</code></p>
+            <p><strong>实例数：</strong> {observed["instances"]}</p>
+            <p><strong>区域：</strong> 解析 <code>{escape(observed.get("parsed_region") or "-")}</code>，选中 <code>{escape(observed.get("selected_region") or "-")}</code></p>
+            <p><strong>预期对照：</strong> {escape(format_match(expected_match))}</p>
+            <p><strong>总耗时：</strong> {format_number(observed.get("total_pipeline_time_ms"))} ms</p>
+            {error_html}
+          </div>
+          <div>
+            <table class="attributes">{attribute_rows}</table>
+          </div>
+          <p class="note"><strong>复核结论：</strong> {escape(record.get("review_note") or "待人工复核")}</p>
+          {controls}
+          <div class="links">{" · ".join(links)}</div>
+        </div>
+      </article>
+    """
+
+
+def render_curation_controls(record: dict[str, Any]) -> str:
+    options = []
+    for category in (*FINAL_CATEGORIES, DRAFT_CATEGORY):
+        selected = " selected" if record["category"] == category else ""
+        options.append(
+            f'<option value="{escape(category)}"{selected}>'
+            f"{escape(category_label(category))}</option>"
+        )
+    confirmed = " checked" if record.get("review_status") == "confirmed" else ""
+    return f"""
+      <div class="curation-controls">
+        <label><input class="include-case" type="checkbox" checked> 保留</label>
+        <label>类别
+          <select class="case-category">{"".join(options)}</select>
+        </label>
+        <label><input class="confirm-case" type="checkbox"{confirmed}> 已确认</label>
+        <textarea class="review-note" aria-label="Review note">{escape(record.get("review_note") or "")}</textarea>
+      </div>
+    """
+
+
+def draft_curation_script(summary: dict[str, Any]) -> str:
+    export_manifest = {
+        "schema": {
+            "name": MANIFEST_SCHEMA_NAME,
+            "version": SCHEMA_VERSION,
+        },
+        "title": summary["title"],
+        "description": summary.get("description"),
+        "cases": [
+            {
+                "id": record["id"],
+                "title": record["title"],
+                "category": record["category"],
+                "review_status": record["review_status"],
+                "review_note": record.get("review_note"),
+                "image": record["source_image"],
+                "query": record["query"],
+                "attributes": record["requested_attributes"],
+                "expected": record["expected"],
+            }
+            for record in summary["cases"]
+        ],
+    }
+    embedded = json.dumps(export_manifest, ensure_ascii=False).replace(
+        "</",
+        "<\\/",
+    )
+    template = """
+<script>
+  const sourceManifest = __CASEBOOK_MANIFEST__;
+  const sourceCases = new Map(sourceManifest.cases.map(item => [item.id, item]));
+  const message = document.getElementById("curation-message");
+
+  document.getElementById("export-manifest").addEventListener("click", () => {
+    const cases = [];
+    for (const card of document.querySelectorAll("[data-case-id]")) {
+      if (!card.querySelector(".include-case").checked) continue;
+      const id = card.dataset.caseId;
+      cases.push({
+        ...sourceCases.get(id),
+        category: card.querySelector(".case-category").value,
+        review_status: card.querySelector(".confirm-case").checked
+          ? "confirmed"
+          : "pending",
+        review_note: card.querySelector(".review-note").value.trim()
+      });
+    }
+
+    const categories = new Set(cases.map(item => item.category));
+    const missing = ["success", "boundary", "failure"].filter(
+      category => !categories.has(category)
+    );
+    let problem = "";
+    if (cases.length < 10 || cases.length > 20) {
+      problem = `需要保留 10-20 个样例，当前为 ${cases.length} 个。`;
+    } else if (cases.some(item => item.category === "unreviewed")) {
+      problem = "每个保留样例都需要选择最终类别。";
+    } else if (missing.length) {
+      problem = `缺少类别：${missing.join(", ")}。`;
+    } else if (cases.some(item => item.review_status !== "confirmed")) {
+      problem = "请确认每个保留样例。";
+    } else if (cases.some(item => !item.review_note)) {
+      problem = "每个保留样例都需要复核说明。";
+    }
+    if (problem) {
+      message.textContent = problem;
+      return;
+    }
+
+    const manifest = {...sourceManifest, cases};
+    const blob = new Blob(
+      [JSON.stringify(manifest, null, 2)],
+      {type: "application/json;charset=utf-8"}
+    );
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement("a");
+    link.href = url;
+    link.download = "fashion_visual_casebook_final_manifest.json";
+    link.click();
+    URL.revokeObjectURL(url);
+    message.textContent = `已导出 ${cases.length} 个确认样例。`;
+  });
+</script>
+"""
+    return template.replace("__CASEBOOK_MANIFEST__", embedded)
+
+
+def render_figure(path: str | None, caption: str, case_id: str) -> str:
+    if path is None:
+        return (
+            '<figure><div style="aspect-ratio:4/3;display:grid;'
+            'place-items:center;background:#f8f9fa;color:#656b73">'
+            "Not produced</div>"
+            f"<figcaption>{escape(caption)}</figcaption></figure>"
+        )
+    return f"""
+      <figure>
+        <img src="{escape(path)}" alt="{escape(case_id)} {escape(caption)}">
+        <figcaption>{escape(caption)}</figcaption>
+      </figure>
+    """
+
+
+def category_label(category: str) -> str:
+    return {
+        "success": "成功案例",
+        "boundary": "边界案例",
+        "failure": "典型失败",
+        "unreviewed": "待复核",
+    }.get(category, category)
+
+
+def format_match(value: bool | None) -> str:
+    if value is True:
+        return "一致"
+    if value is False:
+        return "不一致"
+    return "未指定"
+
+
+def format_number(value: Any) -> str:
+    if value is None:
+        return "-"
+    try:
+        return f"{float(value):.3f}"
+    except (TypeError, ValueError):
+        return escape(value)
+
+
+def escape(value: Any) -> str:
+    return html.escape(str(value), quote=True)
+
+
+def write_checksums(output_dir: Path, output_path: Path) -> None:
+    lines = []
+    for path in sorted(output_dir.rglob("*")):
+        if not path.is_file() or path == output_path:
+            continue
+        relative = path.relative_to(output_dir).as_posix()
+        lines.append(f"{sha256_file(path)}  {relative}")
+    output_path.write_text("\n".join(lines) + "\n", encoding="utf-8")
+
+
+def main() -> None:
+    args = parse_args()
+    summary = build_casebook(
+        manifest_path=args.manifest,
+        segmentation_config_path=args.segmentation_config,
+        segmentation_checkpoint=args.segmentation_checkpoint,
+        attribute_checkpoint=args.attribute_checkpoint,
+        output_dir=args.output_dir,
+        device=args.device,
+        top_k=args.top_k,
+        confidence_threshold=args.confidence_threshold,
+        draft=args.draft,
+        fail_fast=args.fail_fast,
+    )
+    compact = {
+        "status": "ok",
+        "curation_status": summary["curation_status"],
+        "counts": summary["counts"],
+        "consistency_warnings": summary["consistency_warnings"],
+        "output_dir": str(Path(args.output_dir).resolve()),
+        "artifacts": summary["artifacts"],
+    }
+    print(json.dumps(compact, ensure_ascii=False, indent=2))
+    if not args.draft and summary["curation_status"] != "ready_for_presentation":
+        raise SystemExit(2)
+
+
+if __name__ == "__main__":
+    main()

@@ -1,0 +1,9 @@
+﻿garment_category,core_raw_pool,core_eligible_visibility_floor,core_review_selected,core_planned_freeze,core_area_bins,stress_eligible_remaining,stress_selected,stress_area_bins
+top,125721,125349,55,50,large_>=10%=18; medium_2-10%=17; small_0.5-2%=20,125516,10,tiny_<0.5%=10
+pants,91951,91723,55,50,large_>=10%=19; medium_2-10%=18; small_0.5-2%=18,91805,10,tiny_<0.5%=10
+skirt,30817,30743,55,50,large_>=10%=18; medium_2-10%=19; small_0.5-2%=18,30727,10,small_0.5-2%=6; tiny_<0.5%=4
+outerwear,13984,13977,55,50,large_>=10%=22; medium_2-10%=22; small_0.5-2%=11,13917,10,large_>=10%=4; medium_2-10%=5; small_0.5-2%=1
+dress,49519,49451,55,50,large_>=10%=19; medium_2-10%=20; small_0.5-2%=16,49437,10,small_0.5-2%=9; tiny_<0.5%=1
+shoe,1078,442,55,50,medium_2-10%=28; small_0.5-2%=27,791,10,tiny_<0.5%=10
+bag,68,62,55,50,large_>=10%=10; medium_2-10%=32; small_0.5-2%=13,10,10,medium_2-10%=4; small_0.5-2%=5; tiny_<0.5%=1
+accessory,465,196,55,50,large_>=10%=10; medium_2-10%=20; small_0.5-2%=25,266,10,tiny_<0.5%=10

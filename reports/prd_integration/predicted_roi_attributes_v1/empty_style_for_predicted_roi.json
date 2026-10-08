@@ -1,0 +1,5 @@
+{
+  "schema_version": "predicted-roi-empty-style-v1",
+  "records": [],
+  "note": "Intentionally empty to avoid GT continuous-style leakage."
+}

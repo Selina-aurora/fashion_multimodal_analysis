@@ -1,0 +1,1 @@
+﻿source_image,garment_id,garment_category,predicted_color,top1_score,top2_color,top2_score,top1_top2_margin,normalized_entropy,manual_color,manual_correct,error_type,notes

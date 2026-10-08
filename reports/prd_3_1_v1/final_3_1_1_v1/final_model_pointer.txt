@@ -1,0 +1,16 @@
+PRD 3.1.1 FINAL MODEL POINTER
+=============================
+
+selected_model=V3-B1-dataexp
+checkpoint=outputs/prd_instance_segmentation/maskrcnn_8class_v3_b1_dataexp/checkpoint_last.pth
+train_manifest=configs/prd_8class_train_v3.csv
+core_manifest=benchmark/prd_3_1_v1/manifests/segmentation_test_v1.csv
+score_threshold=0.40
+mask_threshold=0.50
+bbox_match_iou=0.50
+mask_reference_iou=0.85
+
+Important:
+- Do not overwrite the V2 reference baseline.
+- Core-400 remains frozen.
+- V3-B1 is the selected final model for PRD 3.1.1.

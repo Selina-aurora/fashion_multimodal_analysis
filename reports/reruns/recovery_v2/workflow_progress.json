@@ -1,0 +1,6 @@
+{
+  "stage": "BLOCKED_GPU_OR_ASSETS",
+  "detail": "本次运行已结束；详细结果见 workflow_status.json",
+  "updated_at": "2026-09-30T03:58:53.525483+00:00",
+  "workflow_pid": 2
+}

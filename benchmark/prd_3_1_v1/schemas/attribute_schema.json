@@ -1,0 +1,86 @@
+{
+  "schema_version": "prd_3_1_attribute_v1",
+  "scope": "visible/design attributes; material/process are not primary v1 acceptance scope",
+  "attributes": [
+    {
+      "id": "primary_color",
+      "status": "active",
+      "applicability": "all_visible_garments",
+      "requires_human_gt": true
+    },
+    {
+      "id": "pattern",
+      "status": "active",
+      "applicability": "all_visible_garments",
+      "requires_human_gt": true
+    },
+    {
+      "id": "sleeve_length",
+      "status": "active",
+      "applicability": [
+        "top",
+        "outerwear",
+        "dress"
+      ],
+      "requires_human_gt": true
+    },
+    {
+      "id": "neckline",
+      "status": "active",
+      "applicability": [
+        "top",
+        "outerwear",
+        "dress"
+      ],
+      "requires_human_gt": true
+    },
+    {
+      "id": "silhouette_fit",
+      "status": "active",
+      "applicability": [
+        "top",
+        "pants",
+        "skirt",
+        "outerwear",
+        "dress"
+      ],
+      "requires_human_gt": true
+    },
+    {
+      "id": "fashion_style",
+      "status": "active",
+      "applicability": [
+        "top",
+        "pants",
+        "skirt",
+        "outerwear",
+        "dress"
+      ],
+      "requires_human_gt": true
+    },
+    {
+      "id": "pants_length",
+      "status": "planned",
+      "applicability": [
+        "pants"
+      ],
+      "requires_human_gt": true
+    },
+    {
+      "id": "skirt_length_or_hem_style",
+      "status": "planned",
+      "applicability": [
+        "skirt",
+        "dress"
+      ],
+      "requires_human_gt": true
+    }
+  ],
+  "eligibility_values": [
+    "eligible",
+    "not_applicable",
+    "ambiguous",
+    "excluded"
+  ],
+  "denominator_rule": "Only eligible and non-ambiguous human-reviewed cases enter primary accuracy denominators."
+}

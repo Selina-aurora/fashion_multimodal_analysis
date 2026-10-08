@@ -1,0 +1,166 @@
+from __future__ import annotations
+
+import argparse
+import json
+import os
+import subprocess
+import sys
+from pathlib import Path
+
+import pytest
+
+from fashion_mm.utils.fashionai_manifest_seal import create_manifest_seal
+from fashion_mm.utils.fashionai_manifest_seal import MANIFEST_FILENAMES
+from fashion_mm.utils.fashionai_manifest_seal import ManifestSealVerificationError
+from fashion_mm.utils.fashionai_manifest_seal import SEAL_FILENAME
+from fashion_mm.utils.fashionai_manifest_seal import verify_manifest_seal
+
+
+ROOT = Path(__file__).resolve().parents[1]
+SEAL_SCRIPT = ROOT / "scripts" / "data" / "seal_fashionai_manifests.py"
+
+
+def test_manifest_seal_create_and_verify(tmp_path):
+    _write_manifest_fixture(tmp_path)
+
+    seal_path, payload = create_manifest_seal(tmp_path)
+    report = verify_manifest_seal(tmp_path)
+
+    assert seal_path == tmp_path / SEAL_FILENAME
+    assert set(payload["files"]) == set(MANIFEST_FILENAMES)
+    assert all(
+        len(entry["sha256"]) == 64 and entry["size_bytes"] > 0
+        for entry in payload["files"].values()
+    )
+    assert report["status"] == "ok"
+    assert set(report["files"]) == set(MANIFEST_FILENAMES)
+
+
+def test_manifest_seal_refuses_existing_seal_by_default(tmp_path):
+    _write_manifest_fixture(tmp_path)
+    seal_path, _ = create_manifest_seal(tmp_path)
+    original = seal_path.read_bytes()
+
+    with pytest.raises(FileExistsError, match="will not be overwritten"):
+        create_manifest_seal(tmp_path)
+
+    assert seal_path.read_bytes() == original
+
+
+def test_manifest_seal_detects_modified_test_manifest(tmp_path):
+    _write_manifest_fixture(tmp_path)
+    create_manifest_seal(tmp_path)
+    (tmp_path / "test.csv").write_text("tampered\n", encoding="utf-8")
+
+    with pytest.raises(ManifestSealVerificationError) as caught:
+        verify_manifest_seal(tmp_path)
+
+    assert caught.value.report["status"] == "failed"
+    assert caught.value.report["files"]["test.csv"]["status"] == "mismatch"
+    assert caught.value.report["files"]["train.csv"]["status"] == "ok"
+
+
+def test_manifest_seal_cli_uses_distinct_nonzero_exit_codes(tmp_path):
+    _write_manifest_fixture(tmp_path)
+    created = _run_seal_cli("create", tmp_path)
+    duplicate = _run_seal_cli("create", tmp_path)
+    (tmp_path / "validation.csv").write_text("tampered\n", encoding="utf-8")
+    invalid = _run_seal_cli("verify", tmp_path)
+
+    assert created.returncode == 0
+    assert json.loads(created.stdout)["status"] == "ok"
+    assert duplicate.returncode == 3
+    assert "will not be overwritten" in duplicate.stderr
+    assert invalid.returncode == 4
+    assert json.loads(invalid.stderr)["status"] == "failed"
+
+
+def test_full_preparation_optional_seal_and_rerun_protection(tmp_path, monkeypatch):
+    monkeypatch.syspath_prepend(str(ROOT))
+    from scripts.data import prepare_fashionai_full_attributes
+
+    source_root = tmp_path / "source"
+    output_dir = tmp_path / "manifests"
+    source_root.mkdir()
+    annotation_path = source_root / "label.csv"
+    annotation_path.write_text("unused\n", encoding="utf-8")
+    args = argparse.Namespace(
+        root=source_root,
+        output_dir=output_dir,
+        label_map=None,
+        train_fraction=0.8,
+        validation_fraction=0.1,
+        test_fraction=0.1,
+        seed=42,
+        list_sources=False,
+        skip_image_validation=False,
+        skip_content_hash=False,
+        seal=True,
+    )
+
+    monkeypatch.setattr(
+        prepare_fashionai_full_attributes,
+        "parse_args",
+        lambda: args,
+    )
+    monkeypatch.setattr(
+        prepare_fashionai_full_attributes,
+        "discover_fashionai_training_sources",
+        lambda root: [("source", source_root, annotation_path)],
+    )
+
+    def fake_prepare(**kwargs):
+        _write_manifest_fixture(kwargs["output_dir"])
+        return {"summary_file": str(kwargs["output_dir"] / "split_summary.json")}
+
+    monkeypatch.setattr(
+        prepare_fashionai_full_attributes,
+        "prepare_fashionai_source_splits",
+        fake_prepare,
+    )
+
+    prepare_fashionai_full_attributes.main()
+
+    assert verify_manifest_seal(output_dir)["status"] == "ok"
+    args.seal = False
+    with pytest.raises(FileExistsError, match="already sealed"):
+        prepare_fashionai_full_attributes.main()
+
+
+def _write_manifest_fixture(directory: Path) -> None:
+    directory.mkdir(parents=True, exist_ok=True)
+    (directory / "train.csv").write_text(
+        "image,attribute,label\ntrain,a,yn\n",
+        encoding="utf-8",
+    )
+    (directory / "validation.csv").write_text(
+        "image,attribute,label\nvalidation,a,yn\n",
+        encoding="utf-8",
+    )
+    (directory / "test.csv").write_text(
+        "image,attribute,label\ntest,a,yn\n",
+        encoding="utf-8",
+    )
+    (directory / "split_summary.json").write_text(
+        json.dumps({"split_overlap_counts": {"train_test": 0}}),
+        encoding="utf-8",
+    )
+
+
+def _run_seal_cli(
+    command: str,
+    manifest_dir: Path,
+) -> subprocess.CompletedProcess[str]:
+    environment = {
+        **os.environ,
+        "PYTHONPATH": str(ROOT / "src"),
+        "PYTHONDONTWRITEBYTECODE": "1",
+    }
+    return subprocess.run(
+        [sys.executable, str(SEAL_SCRIPT), command, str(manifest_dir)],
+        cwd=ROOT,
+        env=environment,
+        check=False,
+        capture_output=True,
+        text=True,
+    )

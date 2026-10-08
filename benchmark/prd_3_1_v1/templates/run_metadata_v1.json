@@ -1,0 +1,35 @@
+{
+  "schema_version": "prd_3_1_run_metadata_v1",
+  "run_id": "",
+  "run_timestamp": "",
+  "benchmark_version": "prd_3_1_v1",
+  "git_commit": "",
+  "model_name": "",
+  "checkpoint_path": "",
+  "checkpoint_hash": "",
+  "random_seed": 20260922,
+  "device": {
+    "gpu": "",
+    "cpu": "",
+    "precision": "",
+    "cuda_version": "",
+    "torch_version": "",
+    "transformers_version": ""
+  },
+  "evaluation": {
+    "batch_size": 1,
+    "warmup_inferences": 10,
+    "timed_passes": 5,
+    "include_preprocess": true,
+    "include_postprocess": true,
+    "exclude_model_load": true,
+    "cuda_synchronize": true
+  },
+  "thresholds": {
+    "segmentation_score": 0.4,
+    "mask_binary": 0.5,
+    "bbox_match_iou": 0.5,
+    "localization_bbox_iou": 0.5
+  },
+  "notes": ""
+}

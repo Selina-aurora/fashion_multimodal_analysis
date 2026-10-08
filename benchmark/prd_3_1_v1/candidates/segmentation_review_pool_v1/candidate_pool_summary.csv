@@ -1,0 +1,9 @@
+﻿garment_category,eligible_raw_candidates,selected_review_candidates,unique_selected_images,fine_or_source_distribution,size_distribution
+top,125721,60,60,long_sleeve_top=15; short_sleeve_top=15; sling=15; vest=15,large=40; medium=20
+pants,91951,60,60,shorts=30; trousers=30,large=39; medium=21
+skirt,30817,60,60,skirt=60,large=42; medium=18
+outerwear,13984,60,60,long_sleeve_outwear=30; short_sleeve_outwear=30,large=52; medium=8
+dress,49519,60,60,long_sleeve_dress=15; short_sleeve_dress=15; sling_dress=15; vest_dress=15,large=57; medium=3
+shoe,1078,60,60,shoe=60,medium=1; small=59
+bag,68,60,60,"bag, wallet=60",large=8; medium=34; small=18
+accessory,465,60,60,"belt=7; glasses=7; glove=3; hat=7; headband, head covering, hair accessory=7; leg warmer=1; scarf=7; sock=7; tights, stockings=7; watch=7",medium=20; small=40

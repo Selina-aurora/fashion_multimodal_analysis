@@ -1,0 +1,7 @@
+run_id,benchmark_version,module,metric,scope,n,value,prd_target,status,baseline_value,delta_vs_baseline,notes
+,,3.1.1,mean_latency_ms,overall,,,<=50,,,,
+,,3.1.1,mean_mask_iou,overall,,,>=0.85,,,,
+,,3.1.2,strict_localization_accuracy,overall,,,>=0.92,,,,
+,,3.1.2,mean_latency_ms,overall,,,<=30,,,,
+,,3.1.3,attribute_accuracy,macro,,,>=0.88,,,,
+,,3.1.3,mean_latency_ms,overall,,,<=20,,,,

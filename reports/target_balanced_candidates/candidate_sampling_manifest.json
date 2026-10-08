@@ -1,0 +1,19 @@
+{
+    "seed": 42,
+    "min_bbox_area_ratio": 0.08,
+    "requested_counts": {
+        "sleeve": 50,
+        "collar": 80,
+        "button": 120,
+        "zipper": 200
+    },
+    "generated_counts": {
+        "sleeve": 50,
+        "collar": 80,
+        "button": 120,
+        "zipper": 200
+    },
+    "contact_sheet_page_size": 20,
+    "candidate_policy": "Target-specific garment-category priority sampling.",
+    "important_note": "Candidate samples are not verified target-positive examples. Manual review is mandatory."
+}

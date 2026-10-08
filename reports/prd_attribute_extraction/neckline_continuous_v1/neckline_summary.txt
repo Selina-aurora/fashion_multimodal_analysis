@@ -1,0 +1,35 @@
+PRD 3.1.3 neckline continuous geometry pilot v1
+================================================
+upper_body_instances=101
+geometry_reliable_instances=101
+gt_available=false
+hard_classification=false
+
+neckline_depth_ratio
+--------------------
+mean=0.0356
+median=0.0000
+min=0.0000
+max=0.4157
+
+neckline_width_ratio
+--------------------
+mean=0.1701
+median=0.1619
+min=0.0000
+max=0.4609
+
+neckline_open_area_ratio
+------------------------
+mean=0.1450
+median=0.0786
+min=0.0000
+max=0.8428
+
+Interpretation
+--------------
+- Neckline is represented as multiple continuous dimensions, not one scalar.
+- Larger depth ratio means the center opening extends farther downward.
+- Larger width ratio means the upper-center opening spans more garment width.
+- DeepFashion2 provides no neckline geometry GT, so inspect sorted contact sheets qualitatively.
+- Do not define business thresholds from this pilot alone.

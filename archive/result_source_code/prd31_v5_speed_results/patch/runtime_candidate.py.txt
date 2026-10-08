@@ -1,0 +1,31 @@
+"""Time preprocessing, model forward and CPU postprocessing, excluding disk/GT/report I/O."""
+from __future__ import annotations
+import time
+
+def postprocess_filtered(output, score_threshold, mask_threshold):
+    import numpy as np
+    import torch
+    score_tensor = output['scores'].detach()
+    keep = torch.isfinite(score_tensor) & (score_tensor >= score_threshold)
+    boxes = output['boxes'].detach()[keep].cpu().numpy()
+    labels = output['labels'].detach()[keep].cpu().numpy()
+    scores = score_tensor[keep].cpu().numpy()
+    # Keep the original NumPy mask threshold operation; transfer retained masks only.
+    masks = (output['masks'].detach()[keep, 0].cpu().numpy() >= mask_threshold).astype(np.uint8)
+    return boxes, labels, scores, masks
+
+def predict_timed(raw_image, model, device, score_threshold, mask_threshold):
+    import torch
+    from torchvision.transforms import functional as F
+    if device.type == 'cuda':
+        torch.cuda.synchronize()
+    start = time.perf_counter()
+    image = raw_image.convert('RGB')
+    tensor = F.to_tensor(image).to(device)
+    with torch.inference_mode():
+        output = model([tensor])[0]
+    result = postprocess_filtered(output, score_threshold, mask_threshold)
+    if device.type == 'cuda':
+        torch.cuda.synchronize()
+    elapsed_ms = (time.perf_counter() - start) * 1000
+    return (*result, elapsed_ms)

@@ -1,0 +1,36 @@
+PRD 3.1.1 Core Coverage Review Plan v1
+======================================
+
+eligible_after_known_exclusions=437
+final_target=400
+final_target_per_class=50
+class_share=12.5% each
+
+Recommended proportional size allocation
+----------------------------------------
+top: small=18, medium=16, large=16
+pants: small=17, medium=16, large=17
+skirt: small=17, medium=17, large=16
+outerwear: small=9, medium=21, large=20
+dress: small=15, medium=18, large=17
+shoe: small=25, medium=25
+bag: small=12, medium=29, large=9
+accessory: small=23, medium=18, large=9
+
+Scene coverage fields to review
+-------------------------------
+scene_type: worn_person | product_display | partial_view | complex_scene
+occlusion_level: none | partial | heavy
+visibility_level: full | partial
+
+Freeze principle
+----------------
+- Exactly 50 final cases per class.
+- Keep final size distribution close to the recommended proportional allocation.
+- Avoid letting one scene type dominate a class when alternative reviewed cases exist.
+- Preserve meaningful occlusion/partial-view coverage, but do not move Stress-like ambiguous cases into Core.
+- Final membership must be decided without looking at candidate-model performance.
+
+Next
+----
+Complete scene/occlusion/visibility labels in core_coverage_review_v1.csv, then run the final freeze selector.

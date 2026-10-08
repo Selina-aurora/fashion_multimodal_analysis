@@ -1,0 +1,5435 @@
+{
+  "analyze_deepfashion2_categories": {
+    "name": "analyze_deepfashion2_categories",
+    "old_path": "scripts/analyze_deepfashion2_categories.py",
+    "entrypoint": "scripts/analysis/analyze_deepfashion2_categories.py",
+    "module": "fashion_multimodal_analysis.analysis.analyze_deepfashion2_categories",
+    "implementation": "src/fashion_multimodal_analysis/analysis/analyze_deepfashion2_categories.py",
+    "category": "analysis",
+    "description": "Analyze category distribution in DeepFashion2 annotations.",
+    "options": []
+  },
+  "analyze_grounding_bbox_quality": {
+    "name": "analyze_grounding_bbox_quality",
+    "old_path": "scripts/analyze_grounding_bbox_quality.py",
+    "entrypoint": "scripts/analysis/analyze_grounding_bbox_quality.py",
+    "module": "fashion_multimodal_analysis.analysis.analyze_grounding_bbox_quality",
+    "implementation": "src/fashion_multimodal_analysis/analysis/analyze_grounding_bbox_quality.py",
+    "category": "analysis",
+    "description": "Analyze Grounding DINO bounding-box size quality.",
+    "options": []
+  },
+  "analyze_grounding_failure_patterns": {
+    "name": "analyze_grounding_failure_patterns",
+    "old_path": "scripts/analyze_grounding_failure_patterns.py",
+    "entrypoint": "scripts/analysis/analyze_grounding_failure_patterns.py",
+    "module": "fashion_multimodal_analysis.analysis.analyze_grounding_failure_patterns",
+    "implementation": "src/fashion_multimodal_analysis/analysis/analyze_grounding_failure_patterns.py",
+    "category": "analysis",
+    "description": "Analyze Grounding DINO localization failure patterns.",
+    "options": [
+      {
+        "flags": [
+          "--audit-file"
+        ],
+        "default": "None",
+        "help": "'Reviewed manual localization audit CSV. ' + 'If omitted, the script first looks for ' + 'manual_localization_audit_reviewed.csv.'"
+      },
+      {
+        "flags": [
+          "--output-dir"
+        ],
+        "default": "OUTPUT_DIR",
+        "help": "'Directory used for generated reports.'"
+      }
+    ]
+  },
+  "analyze_prd31_roi_quality_vs_attributes_v2": {
+    "name": "analyze_prd31_roi_quality_vs_attributes_v2",
+    "old_path": "scripts/analyze_prd31_roi_quality_vs_attributes_v2.py",
+    "entrypoint": "scripts/integration/analyze_prd31_roi_quality_vs_attributes_v2.py",
+    "module": "fashion_multimodal_analysis.integration.analyze_prd31_roi_quality_vs_attributes_v2",
+    "implementation": "src/fashion_multimodal_analysis/integration/analyze_prd31_roi_quality_vs_attributes_v2.py",
+    "category": "integration",
+    "description": "PRD 3.1 propagation diagnosis v2:",
+    "options": []
+  },
+  "analyze_visibility_filtering": {
+    "name": "analyze_visibility_filtering",
+    "old_path": "scripts/analyze_visibility_filtering.py",
+    "entrypoint": "scripts/analysis/analyze_visibility_filtering.py",
+    "module": "fashion_multimodal_analysis.analysis.analyze_visibility_filtering",
+    "implementation": "src/fashion_multimodal_analysis/analysis/analyze_visibility_filtering.py",
+    "category": "analysis",
+    "description": "analyze visibility filtering",
+    "options": []
+  },
+  "annotate_core_part_boxes": {
+    "name": "annotate_core_part_boxes",
+    "old_path": "scripts/annotate_core_part_boxes.py",
+    "entrypoint": "scripts/grounding/core_parts/annotate_core_part_boxes.py",
+    "module": "fashion_multimodal_analysis.grounding.core_parts.annotate_core_part_boxes",
+    "implementation": "src/fashion_multimodal_analysis/grounding/core_parts/annotate_core_part_boxes.py",
+    "category": "grounding/core_parts",
+    "description": "OpenCV bbox annotator with previous/next navigation for the core part pilot.",
+    "options": []
+  },
+  "apply_style_feature_validity_gating_v1": {
+    "name": "apply_style_feature_validity_gating_v1",
+    "old_path": "scripts/apply_style_feature_validity_gating_v1.py",
+    "entrypoint": "scripts/attributes/geometry/apply_style_feature_validity_gating_v1.py",
+    "module": "fashion_multimodal_analysis.attributes.geometry.apply_style_feature_validity_gating_v1",
+    "implementation": "src/fashion_multimodal_analysis/attributes/geometry/apply_style_feature_validity_gating_v1.py",
+    "category": "attributes/geometry",
+    "description": "Apply validity/quality gating to PRD 3.1.3 style feature vector v1.",
+    "options": []
+  },
+  "audit_dataset_overlap": {
+    "name": "audit_dataset_overlap",
+    "old_path": "",
+    "entrypoint": "scripts/analysis/audit_dataset_overlap.py",
+    "implementation": "src/fashion_multimodal_analysis/analysis/audit_dataset_overlap.py",
+    "module": "fashion_multimodal_analysis.analysis.audit_dataset_overlap",
+    "category": "analysis",
+    "description": "Audit train/validation/Core overlap by normalized source image path.",
+    "options": [
+      {
+        "flags": [
+          "--output-dir"
+        ],
+        "default": "'reports/repository_audit/data_overlap'"
+      },
+      {
+        "flags": [
+          "--fail-on-overlap"
+        ],
+        "action": "'store_true'",
+        "help": "'Return exit code 2 if any train/Core source image overlaps'"
+      }
+    ]
+  },
+  "audit_fashionpedia_prd_mapping_v1": {
+    "name": "audit_fashionpedia_prd_mapping_v1",
+    "old_path": "scripts/audit_fashionpedia_prd_mapping_v1.py",
+    "entrypoint": "scripts/benchmarking/audit_fashionpedia_prd_mapping_v1.py",
+    "module": "fashion_multimodal_analysis.benchmarking.audit_fashionpedia_prd_mapping_v1",
+    "implementation": "src/fashion_multimodal_analysis/benchmarking/audit_fashionpedia_prd_mapping_v1.py",
+    "category": "benchmarking",
+    "description": "Audit the EXACT Fashionpedia -> PRD class mapping already used by this project.",
+    "options": []
+  },
+  "audit_prd31_benchmark_difficulty_v1": {
+    "name": "audit_prd31_benchmark_difficulty_v1",
+    "old_path": "scripts/audit_prd31_benchmark_difficulty_v1.py",
+    "entrypoint": "scripts/benchmarking/audit_prd31_benchmark_difficulty_v1.py",
+    "module": "fashion_multimodal_analysis.benchmarking.audit_prd31_benchmark_difficulty_v1",
+    "implementation": "src/fashion_multimodal_analysis/benchmarking/audit_prd31_benchmark_difficulty_v1.py",
+    "category": "benchmarking",
+    "description": "Audit geometry / difficulty bias before freezing PRD 3.1.1 benchmark.",
+    "options": []
+  },
+  "audit_prd31_data_for_benchmark_v1": {
+    "name": "audit_prd31_data_for_benchmark_v1",
+    "old_path": "scripts/audit_prd31_data_for_benchmark_v1.py",
+    "entrypoint": "scripts/benchmarking/audit_prd31_data_for_benchmark_v1.py",
+    "module": "fashion_multimodal_analysis.benchmarking.audit_prd31_data_for_benchmark_v1",
+    "implementation": "src/fashion_multimodal_analysis/benchmarking/audit_prd31_data_for_benchmark_v1.py",
+    "category": "benchmarking",
+    "description": "Audit PRD 3.1 data usage before freezing a real benchmark_test split.",
+    "options": []
+  },
+  "audit_prd31_segmentation_gt_qc_v1": {
+    "name": "audit_prd31_segmentation_gt_qc_v1",
+    "old_path": "scripts/audit_prd31_segmentation_gt_qc_v1.py",
+    "entrypoint": "scripts/benchmarking/audit_prd31_segmentation_gt_qc_v1.py",
+    "module": "fashion_multimodal_analysis.benchmarking.audit_prd31_segmentation_gt_qc_v1",
+    "implementation": "src/fashion_multimodal_analysis/benchmarking/audit_prd31_segmentation_gt_qc_v1.py",
+    "category": "benchmarking",
+    "description": "Automated GT annotation QC for PRD 3.1.1 Core + Stress review pools.",
+    "options": [
+      {
+        "flags": [
+          "--mask-bbox-iou-min"
+        ],
+        "default": "0.9"
+      },
+      {
+        "flags": [
+          "--mask-inside-bbox-ratio-min"
+        ],
+        "default": "0.98"
+      },
+      {
+        "flags": [
+          "--mask-fill-ratio-min"
+        ],
+        "default": "0.03"
+      }
+    ]
+  },
+  "build_deepfashion2_sample": {
+    "name": "build_deepfashion2_sample",
+    "old_path": "scripts/build_deepfashion2_sample.py",
+    "entrypoint": "scripts/data_tools/build_deepfashion2_sample.py",
+    "module": "fashion_multimodal_analysis.data_tools.build_deepfashion2_sample",
+    "implementation": "src/fashion_multimodal_analysis/data_tools/build_deepfashion2_sample.py",
+    "category": "data_tools",
+    "description": "Build one DeepFashion2 training sample.",
+    "options": []
+  },
+  "build_design_audit_contact_sheets_v1": {
+    "name": "build_design_audit_contact_sheets_v1",
+    "old_path": "scripts/build_design_audit_contact_sheets_v1.py",
+    "entrypoint": "scripts/visualization/build_design_audit_contact_sheets_v1.py",
+    "module": "fashion_multimodal_analysis.visualization.build_design_audit_contact_sheets_v1",
+    "implementation": "src/fashion_multimodal_analysis/visualization/build_design_audit_contact_sheets_v1.py",
+    "category": "visualization",
+    "description": "Build visual contact sheets for the 40-row design-attribute manual audit.",
+    "options": [
+      {
+        "flags": [
+          "--audit"
+        ],
+        "default": "str(DEFAULT_AUDIT.relative_to(PROJECT_ROOT))"
+      },
+      {
+        "flags": [
+          "--manifest"
+        ],
+        "default": "str(DEFAULT_MANIFEST.relative_to(PROJECT_ROOT))"
+      }
+    ]
+  },
+  "build_fashionpedia_missing3_pilot_v1": {
+    "name": "build_fashionpedia_missing3_pilot_v1",
+    "old_path": "scripts/build_fashionpedia_missing3_pilot_v1.py",
+    "entrypoint": "scripts/data_tools/build_fashionpedia_missing3_pilot_v1.py",
+    "module": "fashion_multimodal_analysis.data_tools.build_fashionpedia_missing3_pilot_v1",
+    "implementation": "src/fashion_multimodal_analysis/data_tools/build_fashionpedia_missing3_pilot_v1.py",
+    "category": "data_tools",
+    "description": "Build a small Fashionpedia pilot for the 3 PRD 3.1.1 categories",
+    "options": [
+      {
+        "flags": [
+          "--per-class"
+        ],
+        "default": "20",
+        "help": "'Maximum pilot instances per PRD class.'"
+      },
+      {
+        "flags": [
+          "--seed"
+        ],
+        "default": "20260917"
+      },
+      {
+        "flags": [
+          "--annotations"
+        ],
+        "default": "str(ANN_PATH)"
+      },
+      {
+        "flags": [
+          "--images-dir"
+        ],
+        "default": "str(IMAGES_DIR)"
+      }
+    ]
+  },
+  "build_fashionpedia_missing3_pilot_v2": {
+    "name": "build_fashionpedia_missing3_pilot_v2",
+    "old_path": "scripts/build_fashionpedia_missing3_pilot_v2.py",
+    "entrypoint": "scripts/data_tools/build_fashionpedia_missing3_pilot_v2.py",
+    "module": "fashion_multimodal_analysis.data_tools.build_fashionpedia_missing3_pilot_v2",
+    "implementation": "src/fashion_multimodal_analysis/data_tools/build_fashionpedia_missing3_pilot_v2.py",
+    "category": "data_tools",
+    "description": "Fashionpedia -> PRD 3.1.1 missing-3-class pilot",
+    "options": [
+      {
+        "flags": [
+          "--annotations"
+        ],
+        "default": "str(DEFAULT_ANN_PATH)"
+      },
+      {
+        "flags": [
+          "--images-dir"
+        ],
+        "default": "str(DEFAULT_IMAGES_DIR)"
+      },
+      {
+        "flags": [
+          "--mapping"
+        ],
+        "default": "str(DEFAULT_MAPPING_PATH)"
+      },
+      {
+        "flags": [
+          "--per-class"
+        ],
+        "default": "20"
+      },
+      {
+        "flags": [
+          "--seed"
+        ],
+        "default": "20260917"
+      }
+    ]
+  },
+  "build_gpu_bundle_v3": {
+    "name": "build_gpu_bundle_v3",
+    "old_path": "scripts/build_gpu_bundle_v3.py",
+    "entrypoint": "scripts/maintenance/packaging/build_gpu_bundle_v3.py",
+    "module": "fashion_multimodal_analysis.maintenance.packaging.build_gpu_bundle_v3",
+    "implementation": "src/fashion_multimodal_analysis/maintenance/packaging/build_gpu_bundle_v3.py",
+    "category": "maintenance/packaging",
+    "description": "build gpu bundle v3",
+    "options": []
+  },
+  "build_gpu_upload_bundle": {
+    "name": "build_gpu_upload_bundle",
+    "old_path": "scripts/build_gpu_upload_bundle.py",
+    "entrypoint": "scripts/maintenance/packaging/build_gpu_upload_bundle.py",
+    "module": "fashion_multimodal_analysis.maintenance.packaging.build_gpu_upload_bundle",
+    "implementation": "src/fashion_multimodal_analysis/maintenance/packaging/build_gpu_upload_bundle.py",
+    "category": "maintenance/packaging",
+    "description": "build gpu upload bundle",
+    "options": []
+  },
+  "build_grounding_annotation_sheet": {
+    "name": "build_grounding_annotation_sheet",
+    "old_path": "scripts/build_grounding_annotation_sheet.py",
+    "entrypoint": "scripts/visualization/build_grounding_annotation_sheet.py",
+    "module": "fashion_multimodal_analysis.visualization.build_grounding_annotation_sheet",
+    "implementation": "src/fashion_multimodal_analysis/visualization/build_grounding_annotation_sheet.py",
+    "category": "visualization",
+    "description": "Build a manual annotation sheet for grounding evaluation.",
+    "options": []
+  },
+  "build_grounding_eval_samples": {
+    "name": "build_grounding_eval_samples",
+    "old_path": "scripts/build_grounding_eval_samples.py",
+    "entrypoint": "scripts/grounding/baselines/build_grounding_eval_samples.py",
+    "module": "fashion_multimodal_analysis.grounding.baselines.build_grounding_eval_samples",
+    "implementation": "src/fashion_multimodal_analysis/grounding/baselines/build_grounding_eval_samples.py",
+    "category": "grounding/baselines",
+    "description": "Build reproducible evaluation samples from DeepFashion2.",
+    "options": []
+  },
+  "build_grounding_manual_audit": {
+    "name": "build_grounding_manual_audit",
+    "old_path": "scripts/build_grounding_manual_audit.py",
+    "entrypoint": "scripts/visualization/build_grounding_manual_audit.py",
+    "module": "fashion_multimodal_analysis.visualization.build_grounding_manual_audit",
+    "implementation": "src/fashion_multimodal_analysis/visualization/build_grounding_manual_audit.py",
+    "category": "visualization",
+    "description": "Build a stratified manual audit set for grounding localization.",
+    "options": []
+  },
+  "build_pattern_focus_audit_pack": {
+    "name": "build_pattern_focus_audit_pack",
+    "old_path": "scripts/build_pattern_focus_audit_pack.py",
+    "entrypoint": "scripts/visualization/build_pattern_focus_audit_pack.py",
+    "module": "fashion_multimodal_analysis.visualization.build_pattern_focus_audit_pack",
+    "implementation": "src/fashion_multimodal_analysis/visualization/build_pattern_focus_audit_pack.py",
+    "category": "visualization",
+    "description": "Build an ordered focused-audit image pack for pattern baseline v1.",
+    "options": []
+  },
+  "build_pattern_v2_holdout_audit_pack": {
+    "name": "build_pattern_v2_holdout_audit_pack",
+    "old_path": "scripts/build_pattern_v2_holdout_audit_pack.py",
+    "entrypoint": "scripts/visualization/build_pattern_v2_holdout_audit_pack.py",
+    "module": "fashion_multimodal_analysis.visualization.build_pattern_v2_holdout_audit_pack",
+    "implementation": "src/fashion_multimodal_analysis/visualization/build_pattern_v2_holdout_audit_pack.py",
+    "category": "visualization",
+    "description": "Build a row-numbered image pack for the NEW pattern-v2 holdout audit.",
+    "options": []
+  },
+  "build_pattern_v3_holdout_audit_pack": {
+    "name": "build_pattern_v3_holdout_audit_pack",
+    "old_path": "scripts/build_pattern_v3_holdout_audit_pack.py",
+    "entrypoint": "scripts/visualization/build_pattern_v3_holdout_audit_pack.py",
+    "module": "fashion_multimodal_analysis.visualization.build_pattern_v3_holdout_audit_pack",
+    "implementation": "src/fashion_multimodal_analysis/visualization/build_pattern_v3_holdout_audit_pack.py",
+    "category": "visualization",
+    "description": "Build a row-numbered image pack for the fresh pattern-v3 holdout audit.",
+    "options": []
+  },
+  "build_prd31_core_coverage_review_v1": {
+    "name": "build_prd31_core_coverage_review_v1",
+    "old_path": "scripts/build_prd31_core_coverage_review_v1.py",
+    "entrypoint": "scripts/benchmarking/build_prd31_core_coverage_review_v1.py",
+    "module": "fashion_multimodal_analysis.benchmarking.build_prd31_core_coverage_review_v1",
+    "implementation": "src/fashion_multimodal_analysis/benchmarking/build_prd31_core_coverage_review_v1.py",
+    "category": "benchmarking",
+    "description": "Build PRD 3.1.1 Core coverage review packet v1.",
+    "options": []
+  },
+  "build_prd31_core_stress_review_pool_v1": {
+    "name": "build_prd31_core_stress_review_pool_v1",
+    "old_path": "scripts/build_prd31_core_stress_review_pool_v1.py",
+    "entrypoint": "scripts/benchmarking/build_prd31_core_stress_review_pool_v1.py",
+    "module": "fashion_multimodal_analysis.benchmarking.build_prd31_core_stress_review_pool_v1",
+    "implementation": "src/fashion_multimodal_analysis/benchmarking/build_prd31_core_stress_review_pool_v1.py",
+    "category": "benchmarking",
+    "description": "Build PRD 3.1.1 difficulty-controlled Core + Stress review pools.",
+    "options": [
+      {
+        "flags": [
+          "--core-review-per-class"
+        ],
+        "default": "55"
+      },
+      {
+        "flags": [
+          "--core-freeze-per-class"
+        ],
+        "default": "50"
+      },
+      {
+        "flags": [
+          "--stress-per-class"
+        ],
+        "default": "10"
+      },
+      {
+        "flags": [
+          "--core-min-area-ratio"
+        ],
+        "default": "0.005"
+      },
+      {
+        "flags": [
+          "--core-min-side-px"
+        ],
+        "default": "50.0"
+      },
+      {
+        "flags": [
+          "--stress-min-side-px"
+        ],
+        "default": "10.0"
+      },
+      {
+        "flags": [
+          "--seed"
+        ],
+        "default": "20260922"
+      },
+      {
+        "flags": [
+          "--core-sheet-items"
+        ],
+        "default": "55"
+      },
+      {
+        "flags": [
+          "--stress-sheet-items"
+        ],
+        "default": "10"
+      }
+    ]
+  },
+  "build_prd31_human_review_packet_v1": {
+    "name": "build_prd31_human_review_packet_v1",
+    "old_path": "scripts/build_prd31_human_review_packet_v1.py",
+    "entrypoint": "scripts/benchmarking/build_prd31_human_review_packet_v1.py",
+    "module": "fashion_multimodal_analysis.benchmarking.build_prd31_human_review_packet_v1",
+    "implementation": "src/fashion_multimodal_analysis/benchmarking/build_prd31_human_review_packet_v1.py",
+    "category": "benchmarking",
+    "description": "Build a focused human-review packet for PRD 3.1.1 QC v2.",
+    "options": []
+  },
+  "build_prd31_matched_roi_manifest_v1": {
+    "name": "build_prd31_matched_roi_manifest_v1",
+    "old_path": "scripts/build_prd31_matched_roi_manifest_v1.py",
+    "entrypoint": "scripts/integration/build_prd31_matched_roi_manifest_v1.py",
+    "module": "fashion_multimodal_analysis.integration.build_prd31_matched_roi_manifest_v1",
+    "implementation": "src/fashion_multimodal_analysis/integration/build_prd31_matched_roi_manifest_v1.py",
+    "category": "integration",
+    "description": "Build a paired predicted-ROI manifest for PRD 3.1 propagation analysis.",
+    "options": [
+      {
+        "flags": [
+          "--predicted"
+        ],
+        "default": "str(DEFAULT_PREDICTED)"
+      },
+      {
+        "flags": [
+          "--gt"
+        ],
+        "default": "str(DEFAULT_GT)"
+      },
+      {
+        "flags": [
+          "--output"
+        ],
+        "default": "str(DEFAULT_OUTPUT)"
+      },
+      {
+        "flags": [
+          "--iou-threshold"
+        ],
+        "default": "0.5"
+      }
+    ]
+  },
+  "build_prd31_matched_roi_manifest_v2": {
+    "name": "build_prd31_matched_roi_manifest_v2",
+    "old_path": "scripts/build_prd31_matched_roi_manifest_v2.py",
+    "entrypoint": "scripts/integration/build_prd31_matched_roi_manifest_v2.py",
+    "module": "fashion_multimodal_analysis.integration.build_prd31_matched_roi_manifest_v2",
+    "implementation": "src/fashion_multimodal_analysis/integration/build_prd31_matched_roi_manifest_v2.py",
+    "category": "integration",
+    "description": "Build a paired predicted-ROI manifest for PRD 3.1 propagation analysis.",
+    "options": [
+      {
+        "flags": [
+          "--predicted"
+        ],
+        "default": "str(DEFAULT_PREDICTED)"
+      },
+      {
+        "flags": [
+          "--gt"
+        ],
+        "default": "str(DEFAULT_GT)"
+      },
+      {
+        "flags": [
+          "--output"
+        ],
+        "default": "str(DEFAULT_OUTPUT)"
+      },
+      {
+        "flags": [
+          "--iou-threshold"
+        ],
+        "default": "0.5"
+      }
+    ]
+  },
+  "build_prd31_minority_scene_review_packet_v1": {
+    "name": "build_prd31_minority_scene_review_packet_v1",
+    "old_path": "scripts/build_prd31_minority_scene_review_packet_v1.py",
+    "entrypoint": "scripts/benchmarking/build_prd31_minority_scene_review_packet_v1.py",
+    "module": "fashion_multimodal_analysis.benchmarking.build_prd31_minority_scene_review_packet_v1",
+    "implementation": "src/fashion_multimodal_analysis/benchmarking/build_prd31_minority_scene_review_packet_v1.py",
+    "category": "benchmarking",
+    "description": "Build targeted human-review packet for remaining minority-scene Core cases.",
+    "options": []
+  },
+  "build_prd31_predicted_roi_pilot_v1": {
+    "name": "build_prd31_predicted_roi_pilot_v1",
+    "old_path": "scripts/build_prd31_predicted_roi_pilot_v1.py",
+    "entrypoint": "scripts/integration/build_prd31_predicted_roi_pilot_v1.py",
+    "module": "fashion_multimodal_analysis.integration.build_prd31_predicted_roi_pilot_v1",
+    "implementation": "src/fashion_multimodal_analysis/integration/build_prd31_predicted_roi_pilot_v1.py",
+    "category": "integration",
+    "description": "PRD 3.1 end-to-end integration pilot v1:",
+    "options": [
+      {
+        "flags": [
+          "--checkpoint"
+        ],
+        "default": "str(DEFAULT_CKPT)"
+      },
+      {
+        "flags": [
+          "--val-csv"
+        ],
+        "default": "str(VAL_CSV)"
+      },
+      {
+        "flags": [
+          "--device"
+        ],
+        "choices": "['auto', 'cuda', 'cpu']",
+        "default": "'cuda'"
+      },
+      {
+        "flags": [
+          "--num-images"
+        ],
+        "default": "20"
+      },
+      {
+        "flags": [
+          "--seed"
+        ],
+        "default": "20260922"
+      },
+      {
+        "flags": [
+          "--score-threshold"
+        ],
+        "default": "0.4"
+      },
+      {
+        "flags": [
+          "--mask-threshold"
+        ],
+        "default": "0.5"
+      },
+      {
+        "flags": [
+          "--match-bbox-iou"
+        ],
+        "default": "0.5"
+      },
+      {
+        "flags": [
+          "--max-predictions-per-image"
+        ],
+        "default": "10"
+      }
+    ]
+  },
+  "build_prd31_predicted_roi_pilot_v2": {
+    "name": "build_prd31_predicted_roi_pilot_v2",
+    "old_path": "scripts/build_prd31_predicted_roi_pilot_v2.py",
+    "entrypoint": "scripts/integration/build_prd31_predicted_roi_pilot_v2.py",
+    "module": "fashion_multimodal_analysis.integration.build_prd31_predicted_roi_pilot_v2",
+    "implementation": "src/fashion_multimodal_analysis/integration/build_prd31_predicted_roi_pilot_v2.py",
+    "category": "integration",
+    "description": "PRD 3.1 end-to-end integration pilot v2:",
+    "options": [
+      {
+        "flags": [
+          "--checkpoint"
+        ],
+        "default": "str(DEFAULT_CKPT)"
+      },
+      {
+        "flags": [
+          "--val-csv"
+        ],
+        "default": "str(VAL_CSV)"
+      },
+      {
+        "flags": [
+          "--device"
+        ],
+        "choices": "['auto', 'cuda', 'cpu']",
+        "default": "'cuda'"
+      },
+      {
+        "flags": [
+          "--num-images"
+        ],
+        "default": "20"
+      },
+      {
+        "flags": [
+          "--seed"
+        ],
+        "default": "20260922"
+      },
+      {
+        "flags": [
+          "--score-threshold"
+        ],
+        "default": "0.4"
+      },
+      {
+        "flags": [
+          "--mask-threshold"
+        ],
+        "default": "0.5"
+      },
+      {
+        "flags": [
+          "--match-bbox-iou"
+        ],
+        "default": "0.5"
+      },
+      {
+        "flags": [
+          "--max-predictions-per-image"
+        ],
+        "default": "10"
+      }
+    ]
+  },
+  "build_prd31_provisional_core_selection_v1": {
+    "name": "build_prd31_provisional_core_selection_v1",
+    "old_path": "scripts/build_prd31_provisional_core_selection_v1.py",
+    "entrypoint": "scripts/benchmarking/build_prd31_provisional_core_selection_v1.py",
+    "module": "fashion_multimodal_analysis.benchmarking.build_prd31_provisional_core_selection_v1",
+    "implementation": "src/fashion_multimodal_analysis/benchmarking/build_prd31_provisional_core_selection_v1.py",
+    "category": "benchmarking",
+    "description": "Build a PROVISIONAL 400-case Core selection for PRD 3.1.1.",
+    "options": []
+  },
+  "build_prd31_review_packet": {
+    "name": "build_prd31_review_packet",
+    "old_path": "",
+    "entrypoint": "scripts/benchmarking/build_prd31_review_packet.py",
+    "module": "fashion_multimodal_analysis.benchmarking.build_prd31_review_packet",
+    "implementation": "src/fashion_multimodal_analysis/benchmarking/build_prd31_review_packet.py",
+    "category": "benchmarking",
+    "description": "Build an offline human GT review page. Color labels require untinted source images.",
+    "options": [
+      {
+        "flags": [
+          "--output"
+        ]
+      }
+    ]
+  },
+  "build_prd31_segmentation_review_pool_v1": {
+    "name": "build_prd31_segmentation_review_pool_v1",
+    "old_path": "scripts/build_prd31_segmentation_review_pool_v1.py",
+    "entrypoint": "scripts/benchmarking/build_prd31_segmentation_review_pool_v1.py",
+    "module": "fashion_multimodal_analysis.benchmarking.build_prd31_segmentation_review_pool_v1",
+    "implementation": "src/fashion_multimodal_analysis/benchmarking/build_prd31_segmentation_review_pool_v1.py",
+    "category": "benchmarking",
+    "description": "Freeze the Fashionpedia -> PRD mapping and build a LEAKAGE-SAFE",
+    "options": [
+      {
+        "flags": [
+          "--per-class"
+        ],
+        "default": "150"
+      },
+      {
+        "flags": [
+          "--contact-sheet-items"
+        ],
+        "default": "48"
+      },
+      {
+        "flags": [
+          "--seed"
+        ],
+        "default": "20260922"
+      }
+    ]
+  },
+  "build_prd31_segmentation_review_pool_v2": {
+    "name": "build_prd31_segmentation_review_pool_v2",
+    "old_path": "scripts/build_prd31_segmentation_review_pool_v2.py",
+    "entrypoint": "scripts/benchmarking/build_prd31_segmentation_review_pool_v2.py",
+    "module": "fashion_multimodal_analysis.benchmarking.build_prd31_segmentation_review_pool_v2",
+    "implementation": "src/fashion_multimodal_analysis/benchmarking/build_prd31_segmentation_review_pool_v2.py",
+    "category": "benchmarking",
+    "description": "Freeze the Fashionpedia -> PRD mapping and build a LEAKAGE-SAFE",
+    "options": [
+      {
+        "flags": [
+          "--per-class"
+        ],
+        "default": "60"
+      },
+      {
+        "flags": [
+          "--freeze-target"
+        ],
+        "default": "50",
+        "help": "'Planned reviewed PASS instances per class for final benchmark freeze.'"
+      },
+      {
+        "flags": [
+          "--contact-sheet-items"
+        ],
+        "default": "48"
+      },
+      {
+        "flags": [
+          "--seed"
+        ],
+        "default": "20260922"
+      }
+    ]
+  },
+  "build_prd_3_1_2_final_summary_v1": {
+    "name": "build_prd_3_1_2_final_summary_v1",
+    "old_path": "scripts/build_prd_3_1_2_final_summary_v1.py",
+    "entrypoint": "scripts/analysis/build_prd_3_1_2_final_summary_v1.py",
+    "module": "fashion_multimodal_analysis.analysis.build_prd_3_1_2_final_summary_v1",
+    "implementation": "src/fashion_multimodal_analysis/analysis/build_prd_3_1_2_final_summary_v1.py",
+    "category": "analysis",
+    "description": "build prd 3 1 2 final summary v1",
+    "options": []
+  },
+  "build_prd_8class_train_v2_expand_fashionpedia": {
+    "name": "build_prd_8class_train_v2_expand_fashionpedia",
+    "old_path": "scripts/build_prd_8class_train_v2_expand_fashionpedia.py",
+    "entrypoint": "scripts/data_tools/build_prd_8class_train_v2_expand_fashionpedia.py",
+    "module": "fashion_multimodal_analysis.data_tools.build_prd_8class_train_v2_expand_fashionpedia",
+    "implementation": "src/fashion_multimodal_analysis/data_tools/build_prd_8class_train_v2_expand_fashionpedia.py",
+    "category": "data_tools",
+    "description": "Expand the Fashionpedia training portion for PRD 3.1.1 baseline v2.",
+    "options": [
+      {
+        "flags": [
+          "--per-class"
+        ],
+        "default": "100",
+        "help": "'Number of Fashionpedia TRAIN instances for each PRD class.'"
+      },
+      {
+        "flags": [
+          "--seed"
+        ],
+        "default": "20260921"
+      },
+      {
+        "flags": [
+          "--contact-sheet-items"
+        ],
+        "default": "25",
+        "help": "'Representative examples per class in contact sheets.'"
+      }
+    ]
+  },
+  "build_prd_8class_train_v2_expand_fashionpedia_fixed": {
+    "name": "build_prd_8class_train_v2_expand_fashionpedia_fixed",
+    "old_path": "scripts/build_prd_8class_train_v2_expand_fashionpedia_fixed.py",
+    "entrypoint": "scripts/data_tools/build_prd_8class_train_v2_expand_fashionpedia_fixed.py",
+    "module": "fashion_multimodal_analysis.data_tools.build_prd_8class_train_v2_expand_fashionpedia_fixed",
+    "implementation": "src/fashion_multimodal_analysis/data_tools/build_prd_8class_train_v2_expand_fashionpedia_fixed.py",
+    "category": "data_tools",
+    "description": "Build PRD 3.1.1 train_v2 with exactly 100 VALID Fashionpedia training",
+    "options": [
+      {
+        "flags": [
+          "--per-class"
+        ],
+        "default": "100"
+      },
+      {
+        "flags": [
+          "--seed"
+        ],
+        "default": "20260921"
+      },
+      {
+        "flags": [
+          "--contact-sheet-items"
+        ],
+        "default": "25"
+      }
+    ]
+  },
+  "build_prd_8class_train_v3_expand_underrepresented": {
+    "name": "build_prd_8class_train_v3_expand_underrepresented",
+    "old_path": "scripts/build_prd_8class_train_v3_expand_underrepresented.py",
+    "entrypoint": "scripts/data_tools/build_prd_8class_train_v3_expand_underrepresented.py",
+    "module": "fashion_multimodal_analysis.data_tools.build_prd_8class_train_v3_expand_underrepresented",
+    "implementation": "src/fashion_multimodal_analysis/data_tools/build_prd_8class_train_v3_expand_underrepresented.py",
+    "category": "data_tools",
+    "description": "Build PRD 3.1.1 train_v2 with exactly 100 VALID Fashionpedia training",
+    "options": [
+      {
+        "flags": [
+          "--seed"
+        ],
+        "default": "20260921"
+      },
+      {
+        "flags": [
+          "--contact-sheet-items"
+        ],
+        "default": "25"
+      }
+    ]
+  },
+  "build_prd_8class_train_val_split_v1": {
+    "name": "build_prd_8class_train_val_split_v1",
+    "old_path": "scripts/build_prd_8class_train_val_split_v1.py",
+    "entrypoint": "scripts/data_tools/build_prd_8class_train_val_split_v1.py",
+    "module": "fashion_multimodal_analysis.data_tools.build_prd_8class_train_val_split_v1",
+    "implementation": "src/fashion_multimodal_analysis/data_tools/build_prd_8class_train_val_split_v1.py",
+    "category": "data_tools",
+    "description": "Build an image-grouped train/validation split for the unified PRD 3.1.1",
+    "options": [
+      {
+        "flags": [
+          "--val-ratio"
+        ],
+        "default": "0.2",
+        "help": "'Target fraction of instances in validation.'"
+      },
+      {
+        "flags": [
+          "--seed"
+        ],
+        "default": "20260918"
+      },
+      {
+        "flags": [
+          "--search-trials"
+        ],
+        "default": "4000",
+        "help": "'Randomized grouped-split search trials.'"
+      }
+    ]
+  },
+  "build_prd_8class_unified_manifest_v1": {
+    "name": "build_prd_8class_unified_manifest_v1",
+    "old_path": "scripts/build_prd_8class_unified_manifest_v1.py",
+    "entrypoint": "scripts/data_tools/build_prd_8class_unified_manifest_v1.py",
+    "module": "fashion_multimodal_analysis.data_tools.build_prd_8class_unified_manifest_v1",
+    "implementation": "src/fashion_multimodal_analysis/data_tools/build_prd_8class_unified_manifest_v1.py",
+    "category": "data_tools",
+    "description": "Build a unified PRD 3.1.1 8-class manifest from:",
+    "options": []
+  },
+  "build_prd_8class_unified_manifest_v2": {
+    "name": "build_prd_8class_unified_manifest_v2",
+    "old_path": "scripts/build_prd_8class_unified_manifest_v2.py",
+    "entrypoint": "scripts/data_tools/build_prd_8class_unified_manifest_v2.py",
+    "module": "fashion_multimodal_analysis.data_tools.build_prd_8class_unified_manifest_v2",
+    "implementation": "src/fashion_multimodal_analysis/data_tools/build_prd_8class_unified_manifest_v2.py",
+    "category": "data_tools",
+    "description": "Corrected PRD 3.1.1 8-class unified manifest validator.",
+    "options": []
+  },
+  "build_prd_region_candidate_sheets": {
+    "name": "build_prd_region_candidate_sheets",
+    "old_path": "scripts/build_prd_region_candidate_sheets.py",
+    "entrypoint": "scripts/visualization/build_prd_region_candidate_sheets.py",
+    "module": "fashion_multimodal_analysis.visualization.build_prd_region_candidate_sheets",
+    "implementation": "src/fashion_multimodal_analysis/visualization/build_prd_region_candidate_sheets.py",
+    "category": "visualization",
+    "description": "Build manual-screening candidate sheets for PRD 3.1.2 regions.",
+    "options": [
+      {
+        "flags": [
+          "--per-region"
+        ],
+        "default": "DEFAULT_PER_REGION",
+        "help": "f'Candidate count per region (default: {DEFAULT_PER_REGION}).'"
+      },
+      {
+        "flags": [
+          "--seed"
+        ],
+        "default": "DEFAULT_SEED",
+        "help": "f'Random seed (default: {DEFAULT_SEED}).'"
+      },
+      {
+        "flags": [
+          "--max-annotations"
+        ],
+        "default": "None",
+        "help": "'Optional annotation-file limit for a quick smoke test.'"
+      }
+    ]
+  },
+  "build_remaining5_region_diagnostic_v1": {
+    "name": "build_remaining5_region_diagnostic_v1",
+    "old_path": "scripts/build_remaining5_region_diagnostic_v1.py",
+    "entrypoint": "scripts/grounding/refinement/build_remaining5_region_diagnostic_v1.py",
+    "module": "fashion_multimodal_analysis.grounding.refinement.build_remaining5_region_diagnostic_v1",
+    "implementation": "src/fashion_multimodal_analysis/grounding/refinement/build_remaining5_region_diagnostic_v1.py",
+    "category": "grounding/refinement",
+    "description": "build remaining5 region diagnostic v1",
+    "options": []
+  },
+  "build_shoulder_waist_pattern_refinement_inputs_v1": {
+    "name": "build_shoulder_waist_pattern_refinement_inputs_v1",
+    "old_path": "scripts/build_shoulder_waist_pattern_refinement_inputs_v1.py",
+    "entrypoint": "scripts/grounding/refinement/build_shoulder_waist_pattern_refinement_inputs_v1.py",
+    "module": "fashion_multimodal_analysis.grounding.refinement.build_shoulder_waist_pattern_refinement_inputs_v1",
+    "implementation": "src/fashion_multimodal_analysis/grounding/refinement/build_shoulder_waist_pattern_refinement_inputs_v1.py",
+    "category": "grounding/refinement",
+    "description": "build shoulder waist pattern refinement inputs v1",
+    "options": []
+  },
+  "build_shoulder_waist_pattern_refinement_inputs_v1_fixed": {
+    "name": "build_shoulder_waist_pattern_refinement_inputs_v1_fixed",
+    "old_path": "scripts/build_shoulder_waist_pattern_refinement_inputs_v1_fixed.py",
+    "entrypoint": "scripts/grounding/refinement/build_shoulder_waist_pattern_refinement_inputs_v1_fixed.py",
+    "module": "fashion_multimodal_analysis.grounding.refinement.build_shoulder_waist_pattern_refinement_inputs_v1_fixed",
+    "implementation": "src/fashion_multimodal_analysis/grounding/refinement/build_shoulder_waist_pattern_refinement_inputs_v1_fixed.py",
+    "category": "grounding/refinement",
+    "description": "build shoulder waist pattern refinement inputs v1 fixed",
+    "options": []
+  },
+  "build_shoulder_waist_pattern_refinement_inputs_v1_v2": {
+    "name": "build_shoulder_waist_pattern_refinement_inputs_v1_v2",
+    "old_path": "scripts/build_shoulder_waist_pattern_refinement_inputs_v1_v2.py",
+    "entrypoint": "scripts/grounding/refinement/build_shoulder_waist_pattern_refinement_inputs_v1_v2.py",
+    "module": "fashion_multimodal_analysis.grounding.refinement.build_shoulder_waist_pattern_refinement_inputs_v1_v2",
+    "implementation": "src/fashion_multimodal_analysis/grounding/refinement/build_shoulder_waist_pattern_refinement_inputs_v1_v2.py",
+    "category": "grounding/refinement",
+    "description": "build shoulder waist pattern refinement inputs v1 v2",
+    "options": []
+  },
+  "build_small_object_crop": {
+    "name": "build_small_object_crop",
+    "old_path": "scripts/build_small_object_crop.py",
+    "entrypoint": "scripts/image_processing/build_small_object_crop.py",
+    "module": "fashion_multimodal_analysis.image_processing.build_small_object_crop",
+    "implementation": "src/fashion_multimodal_analysis/image_processing/build_small_object_crop.py",
+    "category": "image_processing",
+    "description": "build small object crop",
+    "options": []
+  },
+  "build_style_feature_vector_v1": {
+    "name": "build_style_feature_vector_v1",
+    "old_path": "scripts/build_style_feature_vector_v1.py",
+    "entrypoint": "scripts/attributes/geometry/build_style_feature_vector_v1.py",
+    "module": "fashion_multimodal_analysis.attributes.geometry.build_style_feature_vector_v1",
+    "implementation": "src/fashion_multimodal_analysis/attributes/geometry/build_style_feature_vector_v1.py",
+    "category": "attributes/geometry",
+    "description": "Build PRD 3.1.3 unified continuous style feature vector v1.",
+    "options": []
+  },
+  "build_style_feature_vector_v1_nopandas": {
+    "name": "build_style_feature_vector_v1_nopandas",
+    "old_path": "scripts/build_style_feature_vector_v1_nopandas.py",
+    "entrypoint": "scripts/attributes/geometry/build_style_feature_vector_v1_nopandas.py",
+    "module": "fashion_multimodal_analysis.attributes.geometry.build_style_feature_vector_v1_nopandas",
+    "implementation": "src/fashion_multimodal_analysis/attributes/geometry/build_style_feature_vector_v1_nopandas.py",
+    "category": "attributes/geometry",
+    "description": "Build PRD 3.1.3 unified continuous style feature vector v1 (no pandas).",
+    "options": []
+  },
+  "build_target_balanced_candidates": {
+    "name": "build_target_balanced_candidates",
+    "old_path": "scripts/build_target_balanced_candidates.py",
+    "entrypoint": "scripts/data_tools/build_target_balanced_candidates.py",
+    "module": "fashion_multimodal_analysis.data_tools.build_target_balanced_candidates",
+    "implementation": "src/fashion_multimodal_analysis/data_tools/build_target_balanced_candidates.py",
+    "category": "data_tools",
+    "description": "Build target-balanced candidate pools for manual verification.",
+    "options": [
+      {
+        "flags": [
+          "--sleeve-count"
+        ],
+        "default": "DEFAULT_TARGET_COUNTS['sleeve']"
+      },
+      {
+        "flags": [
+          "--collar-count"
+        ],
+        "default": "DEFAULT_TARGET_COUNTS['collar']"
+      },
+      {
+        "flags": [
+          "--button-count"
+        ],
+        "default": "DEFAULT_TARGET_COUNTS['button']"
+      },
+      {
+        "flags": [
+          "--zipper-count"
+        ],
+        "default": "DEFAULT_TARGET_COUNTS['zipper']"
+      },
+      {
+        "flags": [
+          "--seed"
+        ],
+        "default": "RANDOM_SEED"
+      },
+      {
+        "flags": [
+          "--min-bbox-area-ratio"
+        ],
+        "default": "DEFAULT_MIN_BBOX_AREA_RATIO"
+      },
+      {
+        "flags": [
+          "--limit-annotations"
+        ],
+        "default": "None",
+        "help": "'Optional annotation scan limit. ' + 'Useful for smoke tests.'"
+      }
+    ]
+  },
+  "build_unified_garment_attribute_vector_v1": {
+    "name": "build_unified_garment_attribute_vector_v1",
+    "old_path": "scripts/build_unified_garment_attribute_vector_v1.py",
+    "entrypoint": "scripts/attributes/design/build_unified_garment_attribute_vector_v1.py",
+    "module": "fashion_multimodal_analysis.attributes.design.build_unified_garment_attribute_vector_v1",
+    "implementation": "src/fashion_multimodal_analysis/attributes/design/build_unified_garment_attribute_vector_v1.py",
+    "category": "attributes/design",
+    "description": "PRD 3.1.3 unified garment attribute output v1.",
+    "options": [
+      {
+        "flags": [
+          "--style-json"
+        ],
+        "required": "True"
+      },
+      {
+        "flags": [
+          "--pattern-csv"
+        ],
+        "required": "True"
+      },
+      {
+        "flags": [
+          "--color-csv"
+        ],
+        "required": "True"
+      }
+    ]
+  },
+  "build_unified_garment_attribute_vector_v1_fixed": {
+    "name": "build_unified_garment_attribute_vector_v1_fixed",
+    "old_path": "scripts/build_unified_garment_attribute_vector_v1_fixed.py",
+    "entrypoint": "scripts/attributes/design/build_unified_garment_attribute_vector_v1_fixed.py",
+    "module": "fashion_multimodal_analysis.attributes.design.build_unified_garment_attribute_vector_v1_fixed",
+    "implementation": "src/fashion_multimodal_analysis/attributes/design/build_unified_garment_attribute_vector_v1_fixed.py",
+    "category": "attributes/design",
+    "description": "PRD 3.1.3 unified garment attribute output v1.",
+    "options": [
+      {
+        "flags": [
+          "--style-json"
+        ],
+        "required": "True"
+      },
+      {
+        "flags": [
+          "--pattern-csv"
+        ],
+        "required": "True"
+      },
+      {
+        "flags": [
+          "--color-csv"
+        ],
+        "required": "True"
+      }
+    ]
+  },
+  "build_verified_positive_benchmark": {
+    "name": "build_verified_positive_benchmark",
+    "old_path": "scripts/build_verified_positive_benchmark.py",
+    "entrypoint": "scripts/grounding/baselines/build_verified_positive_benchmark.py",
+    "module": "fashion_multimodal_analysis.grounding.baselines.build_verified_positive_benchmark",
+    "implementation": "src/fashion_multimodal_analysis/grounding/baselines/build_verified_positive_benchmark.py",
+    "category": "grounding/baselines",
+    "description": "Build the final verified-positive localization benchmark.",
+    "options": []
+  },
+  "check_assets": {
+    "category": "maintenance",
+    "description": "只读检查 V5/V8 权重、冻结清单、SQLite 索引及外部数据。",
+    "entrypoint": "scripts/maintenance/check_assets.py",
+    "implementation": "src/fashion_multimodal_analysis/maintenance/check_assets.py",
+    "module": "fashion_multimodal_analysis.maintenance.check_assets",
+    "options": [
+      {
+        "flags": [
+          "--project"
+        ],
+        "default": "None",
+        "help": "'项目目录，默认自动定位'"
+      },
+      {
+        "flags": [
+          "--data-root"
+        ],
+        "default": "None",
+        "help": "'数据目录，默认同级 fashion_data'"
+      },
+      {
+        "flags": [
+          "--hash-weights"
+        ],
+        "action": "'store_true'",
+        "help": "'核对模型完整字节'"
+      },
+      {
+        "flags": [
+          "--json-out"
+        ],
+        "default": "None",
+        "help": "'可选的新检查报告路径'"
+      },
+      {
+        "flags": [
+          "--require-ready"
+        ],
+        "action": "'store_true'",
+        "help": "'缺资产时返回退出码 2'"
+      }
+    ],
+    "name": "check_assets",
+    "old_path": "scripts/maintenance/check_assets.py"
+  },
+  "check_deepfashion2_dataloader": {
+    "name": "check_deepfashion2_dataloader",
+    "old_path": "scripts/check_deepfashion2_dataloader.py",
+    "entrypoint": "scripts/data_tools/check_deepfashion2_dataloader.py",
+    "module": "fashion_multimodal_analysis.data_tools.check_deepfashion2_dataloader",
+    "implementation": "src/fashion_multimodal_analysis/data_tools/check_deepfashion2_dataloader.py",
+    "category": "data_tools",
+    "description": "Check batched DeepFashion2 data loading.",
+    "options": []
+  },
+  "check_deepfashion2_dataset": {
+    "name": "check_deepfashion2_dataset",
+    "old_path": "scripts/check_deepfashion2_dataset.py",
+    "entrypoint": "scripts/data_tools/check_deepfashion2_dataset.py",
+    "module": "fashion_multimodal_analysis.data_tools.check_deepfashion2_dataset",
+    "implementation": "src/fashion_multimodal_analysis/data_tools/check_deepfashion2_dataset.py",
+    "category": "data_tools",
+    "description": "Check DeepFashion2Dataset output with one sample.",
+    "options": []
+  },
+  "check_mask2former_forward": {
+    "name": "check_mask2former_forward",
+    "old_path": "scripts/check_mask2former_forward.py",
+    "entrypoint": "scripts/segmentation/baselines/check_mask2former_forward.py",
+    "module": "fashion_multimodal_analysis.segmentation.baselines.check_mask2former_forward",
+    "implementation": "src/fashion_multimodal_analysis/segmentation/baselines/check_mask2former_forward.py",
+    "category": "segmentation/baselines",
+    "description": "Check one Mask2Former training forward pass on DeepFashion2.",
+    "options": []
+  },
+  "check_mask2former_train_step": {
+    "name": "check_mask2former_train_step",
+    "old_path": "scripts/check_mask2former_train_step.py",
+    "entrypoint": "scripts/segmentation/baselines/check_mask2former_train_step.py",
+    "module": "fashion_multimodal_analysis.segmentation.baselines.check_mask2former_train_step",
+    "implementation": "src/fashion_multimodal_analysis/segmentation/baselines/check_mask2former_train_step.py",
+    "category": "segmentation/baselines",
+    "description": "Check one Mask2Former optimization step on DeepFashion2.",
+    "options": []
+  },
+  "check_project": {
+    "name": "check_project",
+    "old_path": "",
+    "entrypoint": "scripts/maintenance/check_project.py",
+    "implementation": "src/fashion_multimodal_analysis/maintenance/check_project.py",
+    "module": "fashion_multimodal_analysis.maintenance.check_project",
+    "category": "maintenance",
+    "description": "Check package structure and optional manifest asset availability without loading models.",
+    "options": [
+      {
+        "flags": [
+          "--assets"
+        ],
+        "action": "'store_true'",
+        "help": "'Also verify B1 train/validation/Core source images and masks'"
+      },
+      {
+        "flags": [
+          "--checkpoint"
+        ],
+        "default": "''",
+        "help": "'Optional checkpoint path to check'"
+      }
+    ]
+  },
+  "compare_prd_8class_balanced_vs_nobalance": {
+    "name": "compare_prd_8class_balanced_vs_nobalance",
+    "old_path": "scripts/compare_prd_8class_balanced_vs_nobalance.py",
+    "entrypoint": "scripts/segmentation/evaluation/compare_prd_8class_balanced_vs_nobalance.py",
+    "module": "fashion_multimodal_analysis.segmentation.evaluation.compare_prd_8class_balanced_vs_nobalance",
+    "implementation": "src/fashion_multimodal_analysis/segmentation/evaluation/compare_prd_8class_balanced_vs_nobalance.py",
+    "category": "segmentation/evaluation",
+    "description": "compare prd 8class balanced vs nobalance",
+    "options": [
+      {
+        "flags": [
+          "--device"
+        ],
+        "choices": "['auto', 'cuda', 'cpu']",
+        "default": "'cuda'"
+      },
+      {
+        "flags": [
+          "--score-threshold"
+        ],
+        "default": "0.4"
+      },
+      {
+        "flags": [
+          "--mask-threshold"
+        ],
+        "default": "0.5"
+      },
+      {
+        "flags": [
+          "--match-bbox-iou"
+        ],
+        "default": "0.5"
+      }
+    ]
+  },
+  "convert_annotation_to_masks": {
+    "name": "convert_annotation_to_masks",
+    "old_path": "scripts/convert_annotation_to_masks.py",
+    "entrypoint": "scripts/data_tools/convert_annotation_to_masks.py",
+    "module": "fashion_multimodal_analysis.data_tools.convert_annotation_to_masks",
+    "implementation": "src/fashion_multimodal_analysis/data_tools/convert_annotation_to_masks.py",
+    "category": "data_tools",
+    "description": "Convert DeepFashion2 polygon annotations to binary instance masks.",
+    "options": []
+  },
+  "diagnose_core_part_detector_topk": {
+    "name": "diagnose_core_part_detector_topk",
+    "old_path": "scripts/diagnose_core_part_detector_topk.py",
+    "entrypoint": "scripts/grounding/core_parts/diagnose_core_part_detector_topk.py",
+    "module": "fashion_multimodal_analysis.grounding.core_parts.diagnose_core_part_detector_topk",
+    "implementation": "src/fashion_multimodal_analysis/grounding/core_parts/diagnose_core_part_detector_topk.py",
+    "category": "grounding/core_parts",
+    "description": "Top-k candidate-ranking diagnostic for core_part_detector_v1.",
+    "options": []
+  },
+  "diagnose_core_part_detector_train_vs_val": {
+    "name": "diagnose_core_part_detector_train_vs_val",
+    "old_path": "scripts/diagnose_core_part_detector_train_vs_val.py",
+    "entrypoint": "scripts/grounding/core_parts/diagnose_core_part_detector_train_vs_val.py",
+    "module": "fashion_multimodal_analysis.grounding.core_parts.diagnose_core_part_detector_train_vs_val",
+    "implementation": "src/fashion_multimodal_analysis/grounding/core_parts/diagnose_core_part_detector_train_vs_val.py",
+    "category": "grounding/core_parts",
+    "description": "Train-vs-validation diagnosis for core_part_detector_v1.",
+    "options": []
+  },
+  "diagnose_core_part_detector_v1": {
+    "name": "diagnose_core_part_detector_v1",
+    "old_path": "scripts/diagnose_core_part_detector_v1.py",
+    "entrypoint": "scripts/grounding/core_parts/diagnose_core_part_detector_v1.py",
+    "module": "fashion_multimodal_analysis.grounding.core_parts.diagnose_core_part_detector_v1",
+    "implementation": "src/fashion_multimodal_analysis/grounding/core_parts/diagnose_core_part_detector_v1.py",
+    "category": "grounding/core_parts",
+    "description": "Diagnose validation predictions for core_part_detector_v1.",
+    "options": []
+  },
+  "diagnose_prd31_v4": {
+    "name": "diagnose_prd31_v4",
+    "old_path": "scripts/DIAGNOSE_PRD31_V4.py",
+    "entrypoint": "scripts/analysis/diagnose_prd31_v4.py",
+    "module": "fashion_multimodal_analysis.analysis.diagnose_prd31_v4",
+    "implementation": "src/fashion_multimodal_analysis/analysis/diagnose_prd31_v4.py",
+    "category": "analysis",
+    "description": "Read-only PRD31 result analysis and native-annotation completeness audit.",
+    "options": [
+      {
+        "flags": [
+          "--project"
+        ],
+        "default": "'.'"
+      },
+      {
+        "flags": [
+          "--data-root"
+        ],
+        "default": "os.environ.get('FASHION_DATA_ROOT', '../fashion_data')"
+      },
+      {
+        "flags": [
+          "--results-dir"
+        ],
+        "default": "'reports/reruns/recovery_v2'"
+      },
+      {
+        "flags": [
+          "--output-dir"
+        ],
+        "default": "''",
+        "help": "'New, non-existing output directory'"
+      }
+    ]
+  },
+  "diagnose_prd31_v6_regressions": {
+    "name": "diagnose_prd31_v6_regressions",
+    "old_path": "scripts/DIAGNOSE_PRD31_V6_REGRESSIONS.py",
+    "entrypoint": "scripts/analysis/diagnose_prd31_v6_regressions.py",
+    "module": "fashion_multimodal_analysis.analysis.diagnose_prd31_v6_regressions",
+    "implementation": "src/fashion_multimodal_analysis/analysis/diagnose_prd31_v6_regressions.py",
+    "category": "analysis",
+    "description": "Read-only inference diagnosis of development cases that regressed from V5 to V6.",
+    "options": [
+      {
+        "flags": [
+          "--project"
+        ],
+        "default": "'.'"
+      },
+      {
+        "flags": [
+          "--data-root"
+        ],
+        "default": "os.environ.get('FASHION_DATA_ROOT', '../fashion_data')"
+      }
+    ]
+  },
+  "discover_prd31_raw_benchmark_pool_v1": {
+    "name": "discover_prd31_raw_benchmark_pool_v1",
+    "old_path": "scripts/discover_prd31_raw_benchmark_pool_v1.py",
+    "entrypoint": "scripts/benchmarking/discover_prd31_raw_benchmark_pool_v1.py",
+    "module": "fashion_multimodal_analysis.benchmarking.discover_prd31_raw_benchmark_pool_v1",
+    "implementation": "src/fashion_multimodal_analysis/benchmarking/discover_prd31_raw_benchmark_pool_v1.py",
+    "category": "benchmarking",
+    "description": "Discover untouched raw-data pools for PRD 3.1 benchmark_test v1.",
+    "options": [
+      {
+        "flags": [
+          "--max-df2-files"
+        ],
+        "default": "0",
+        "help": "'0 = scan all DeepFashion2 annotation files.'"
+      },
+      {
+        "flags": [
+          "--max-fashionpedia-jsons"
+        ],
+        "default": "0",
+        "help": "'0 = inspect all JSON files under raw/fashionpedia.'"
+      }
+    ]
+  },
+  "eval_prd31_core_regression_v2_balanced_v1": {
+    "name": "eval_prd31_core_regression_v2_balanced_v1",
+    "old_path": "scripts/eval_prd31_core_regression_v2_balanced_v1.py",
+    "entrypoint": "scripts/segmentation/evaluation/eval_prd31_core_regression_v2_balanced_v1.py",
+    "module": "fashion_multimodal_analysis.segmentation.evaluation.eval_prd31_core_regression_v2_balanced_v1",
+    "implementation": "src/fashion_multimodal_analysis/segmentation/evaluation/eval_prd31_core_regression_v2_balanced_v1.py",
+    "category": "segmentation/evaluation",
+    "description": "eval prd31 core regression v2 balanced v1",
+    "options": [
+      {
+        "flags": [
+          "--checkpoint"
+        ],
+        "default": "str(DEFAULT_CKPT)"
+      },
+      {
+        "flags": [
+          "--val-csv"
+        ],
+        "default": "str(VAL_CSV)"
+      },
+      {
+        "flags": [
+          "--device"
+        ],
+        "choices": "['auto', 'cuda', 'cpu']",
+        "default": "'auto'"
+      },
+      {
+        "flags": [
+          "--score-threshold"
+        ],
+        "default": "0.4"
+      },
+      {
+        "flags": [
+          "--match-bbox-iou"
+        ],
+        "default": "0.5"
+      },
+      {
+        "flags": [
+          "--mask-threshold"
+        ],
+        "default": "0.5"
+      },
+      {
+        "flags": [
+          "--warmup-runs"
+        ],
+        "default": "10"
+      },
+      {
+        "flags": [
+          "--max-visualizations"
+        ],
+        "default": "32"
+      },
+      {
+        "flags": [
+          "--report-dir"
+        ],
+        "default": "str(REPORT_DIR)",
+        "help": "'Output directory for this evaluation run'"
+      },
+      {
+        "flags": [
+          "--timed-passes"
+        ],
+        "default": "5"
+      }
+    ]
+  },
+  "eval_prd_8class_maskrcnn_baseline_v1": {
+    "name": "eval_prd_8class_maskrcnn_baseline_v1",
+    "old_path": "scripts/eval_prd_8class_maskrcnn_baseline_v1.py",
+    "entrypoint": "scripts/segmentation/evaluation/eval_prd_8class_maskrcnn_baseline_v1.py",
+    "module": "fashion_multimodal_analysis.segmentation.evaluation.eval_prd_8class_maskrcnn_baseline_v1",
+    "implementation": "src/fashion_multimodal_analysis/segmentation/evaluation/eval_prd_8class_maskrcnn_baseline_v1.py",
+    "category": "segmentation/evaluation",
+    "description": "eval prd 8class maskrcnn baseline v1",
+    "options": [
+      {
+        "flags": [
+          "--checkpoint"
+        ],
+        "default": "str(DEFAULT_CKPT)"
+      },
+      {
+        "flags": [
+          "--val-csv"
+        ],
+        "default": "str(VAL_CSV)"
+      },
+      {
+        "flags": [
+          "--device"
+        ],
+        "choices": "['auto', 'cuda', 'cpu']",
+        "default": "'auto'"
+      },
+      {
+        "flags": [
+          "--score-threshold"
+        ],
+        "default": "0.4"
+      },
+      {
+        "flags": [
+          "--match-bbox-iou"
+        ],
+        "default": "0.5"
+      },
+      {
+        "flags": [
+          "--mask-threshold"
+        ],
+        "default": "0.5"
+      },
+      {
+        "flags": [
+          "--warmup-runs"
+        ],
+        "default": "10"
+      },
+      {
+        "flags": [
+          "--max-visualizations"
+        ],
+        "default": "32"
+      },
+      {
+        "flags": [
+          "--report-dir"
+        ],
+        "default": "str(REPORT_DIR)",
+        "help": "'Output directory for this evaluation run'"
+      },
+      {
+        "flags": [
+          "--timed-passes"
+        ],
+        "default": "5"
+      }
+    ]
+  },
+  "eval_prd_8class_maskrcnn_baseline_v2": {
+    "name": "eval_prd_8class_maskrcnn_baseline_v2",
+    "old_path": "scripts/eval_prd_8class_maskrcnn_baseline_v2.py",
+    "entrypoint": "scripts/segmentation/evaluation/eval_prd_8class_maskrcnn_baseline_v2.py",
+    "module": "fashion_multimodal_analysis.segmentation.evaluation.eval_prd_8class_maskrcnn_baseline_v2",
+    "implementation": "src/fashion_multimodal_analysis/segmentation/evaluation/eval_prd_8class_maskrcnn_baseline_v2.py",
+    "category": "segmentation/evaluation",
+    "description": "eval prd 8class maskrcnn baseline v2",
+    "options": [
+      {
+        "flags": [
+          "--checkpoint"
+        ],
+        "default": "str(DEFAULT_CKPT)"
+      },
+      {
+        "flags": [
+          "--val-csv"
+        ],
+        "default": "str(VAL_CSV)"
+      },
+      {
+        "flags": [
+          "--device"
+        ],
+        "choices": "['auto', 'cuda', 'cpu']",
+        "default": "'auto'"
+      },
+      {
+        "flags": [
+          "--score-threshold"
+        ],
+        "default": "0.4"
+      },
+      {
+        "flags": [
+          "--match-bbox-iou"
+        ],
+        "default": "0.5"
+      },
+      {
+        "flags": [
+          "--mask-threshold"
+        ],
+        "default": "0.5"
+      },
+      {
+        "flags": [
+          "--warmup-runs"
+        ],
+        "default": "10"
+      },
+      {
+        "flags": [
+          "--max-visualizations"
+        ],
+        "default": "32"
+      },
+      {
+        "flags": [
+          "--report-dir"
+        ],
+        "default": "str(REPORT_DIR)",
+        "help": "'Output directory for this evaluation run'"
+      },
+      {
+        "flags": [
+          "--timed-passes"
+        ],
+        "default": "5"
+      }
+    ]
+  },
+  "eval_prd_8class_maskrcnn_v3_a1_highres": {
+    "name": "eval_prd_8class_maskrcnn_v3_a1_highres",
+    "old_path": "scripts/eval_prd_8class_maskrcnn_v3_a1_highres.py",
+    "entrypoint": "scripts/segmentation/evaluation/eval_prd_8class_maskrcnn_v3_a1_highres.py",
+    "module": "fashion_multimodal_analysis.segmentation.evaluation.eval_prd_8class_maskrcnn_v3_a1_highres",
+    "implementation": "src/fashion_multimodal_analysis/segmentation/evaluation/eval_prd_8class_maskrcnn_v3_a1_highres.py",
+    "category": "segmentation/evaluation",
+    "description": "eval prd 8class maskrcnn v3 a1 highres",
+    "options": [
+      {
+        "flags": [
+          "--checkpoint"
+        ],
+        "default": "str(DEFAULT_CKPT)"
+      },
+      {
+        "flags": [
+          "--val-csv"
+        ],
+        "default": "str(VAL_CSV)"
+      },
+      {
+        "flags": [
+          "--device"
+        ],
+        "choices": "['auto', 'cuda', 'cpu']",
+        "default": "'auto'"
+      },
+      {
+        "flags": [
+          "--score-threshold"
+        ],
+        "default": "0.4"
+      },
+      {
+        "flags": [
+          "--match-bbox-iou"
+        ],
+        "default": "0.5"
+      },
+      {
+        "flags": [
+          "--mask-threshold"
+        ],
+        "default": "0.5"
+      },
+      {
+        "flags": [
+          "--warmup-runs"
+        ],
+        "default": "10"
+      },
+      {
+        "flags": [
+          "--max-visualizations"
+        ],
+        "default": "32"
+      },
+      {
+        "flags": [
+          "--report-dir"
+        ],
+        "default": "str(REPORT_DIR)",
+        "help": "'Output directory for this evaluation run'"
+      },
+      {
+        "flags": [
+          "--timed-passes"
+        ],
+        "default": "5"
+      }
+    ]
+  },
+  "eval_prd_8class_maskrcnn_v3_a2_smallanchors": {
+    "name": "eval_prd_8class_maskrcnn_v3_a2_smallanchors",
+    "old_path": "scripts/eval_prd_8class_maskrcnn_v3_a2_smallanchors.py",
+    "entrypoint": "scripts/segmentation/evaluation/eval_prd_8class_maskrcnn_v3_a2_smallanchors.py",
+    "module": "fashion_multimodal_analysis.segmentation.evaluation.eval_prd_8class_maskrcnn_v3_a2_smallanchors",
+    "implementation": "src/fashion_multimodal_analysis/segmentation/evaluation/eval_prd_8class_maskrcnn_v3_a2_smallanchors.py",
+    "category": "segmentation/evaluation",
+    "description": "eval prd 8class maskrcnn v3 a2 smallanchors",
+    "options": [
+      {
+        "flags": [
+          "--checkpoint"
+        ],
+        "default": "str(DEFAULT_CKPT)"
+      },
+      {
+        "flags": [
+          "--val-csv"
+        ],
+        "default": "str(VAL_CSV)"
+      },
+      {
+        "flags": [
+          "--device"
+        ],
+        "choices": "['auto', 'cuda', 'cpu']",
+        "default": "'auto'"
+      },
+      {
+        "flags": [
+          "--score-threshold"
+        ],
+        "default": "0.4"
+      },
+      {
+        "flags": [
+          "--match-bbox-iou"
+        ],
+        "default": "0.5"
+      },
+      {
+        "flags": [
+          "--mask-threshold"
+        ],
+        "default": "0.5"
+      },
+      {
+        "flags": [
+          "--warmup-runs"
+        ],
+        "default": "10"
+      },
+      {
+        "flags": [
+          "--max-visualizations"
+        ],
+        "default": "32"
+      },
+      {
+        "flags": [
+          "--report-dir"
+        ],
+        "default": "str(REPORT_DIR)",
+        "help": "'Output directory for this evaluation run'"
+      },
+      {
+        "flags": [
+          "--timed-passes"
+        ],
+        "default": "5"
+      }
+    ]
+  },
+  "eval_prd_8class_maskrcnn_v3_a2b_p2small": {
+    "name": "eval_prd_8class_maskrcnn_v3_a2b_p2small",
+    "old_path": "scripts/eval_prd_8class_maskrcnn_v3_a2b_p2small.py",
+    "entrypoint": "scripts/segmentation/evaluation/eval_prd_8class_maskrcnn_v3_a2b_p2small.py",
+    "module": "fashion_multimodal_analysis.segmentation.evaluation.eval_prd_8class_maskrcnn_v3_a2b_p2small",
+    "implementation": "src/fashion_multimodal_analysis/segmentation/evaluation/eval_prd_8class_maskrcnn_v3_a2b_p2small.py",
+    "category": "segmentation/evaluation",
+    "description": "eval prd 8class maskrcnn v3 a2b p2small",
+    "options": [
+      {
+        "flags": [
+          "--checkpoint"
+        ],
+        "default": "str(DEFAULT_CKPT)"
+      },
+      {
+        "flags": [
+          "--val-csv"
+        ],
+        "default": "str(VAL_CSV)"
+      },
+      {
+        "flags": [
+          "--device"
+        ],
+        "choices": "['auto', 'cuda', 'cpu']",
+        "default": "'auto'"
+      },
+      {
+        "flags": [
+          "--score-threshold"
+        ],
+        "default": "0.4"
+      },
+      {
+        "flags": [
+          "--match-bbox-iou"
+        ],
+        "default": "0.5"
+      },
+      {
+        "flags": [
+          "--mask-threshold"
+        ],
+        "default": "0.5"
+      },
+      {
+        "flags": [
+          "--warmup-runs"
+        ],
+        "default": "10"
+      },
+      {
+        "flags": [
+          "--max-visualizations"
+        ],
+        "default": "32"
+      },
+      {
+        "flags": [
+          "--report-dir"
+        ],
+        "default": "str(REPORT_DIR)",
+        "help": "'Output directory for this evaluation run'"
+      },
+      {
+        "flags": [
+          "--timed-passes"
+        ],
+        "default": "5"
+      }
+    ]
+  },
+  "eval_prd_8class_maskrcnn_v3_a3_smallsampling": {
+    "name": "eval_prd_8class_maskrcnn_v3_a3_smallsampling",
+    "old_path": "scripts/eval_prd_8class_maskrcnn_v3_a3_smallsampling.py",
+    "entrypoint": "scripts/segmentation/evaluation/eval_prd_8class_maskrcnn_v3_a3_smallsampling.py",
+    "module": "fashion_multimodal_analysis.segmentation.evaluation.eval_prd_8class_maskrcnn_v3_a3_smallsampling",
+    "implementation": "src/fashion_multimodal_analysis/segmentation/evaluation/eval_prd_8class_maskrcnn_v3_a3_smallsampling.py",
+    "category": "segmentation/evaluation",
+    "description": "eval prd 8class maskrcnn v3 a3 smallsampling",
+    "options": [
+      {
+        "flags": [
+          "--checkpoint"
+        ],
+        "default": "str(DEFAULT_CKPT)"
+      },
+      {
+        "flags": [
+          "--val-csv"
+        ],
+        "default": "str(VAL_CSV)"
+      },
+      {
+        "flags": [
+          "--device"
+        ],
+        "choices": "['auto', 'cuda', 'cpu']",
+        "default": "'auto'"
+      },
+      {
+        "flags": [
+          "--score-threshold"
+        ],
+        "default": "0.4"
+      },
+      {
+        "flags": [
+          "--match-bbox-iou"
+        ],
+        "default": "0.5"
+      },
+      {
+        "flags": [
+          "--mask-threshold"
+        ],
+        "default": "0.5"
+      },
+      {
+        "flags": [
+          "--warmup-runs"
+        ],
+        "default": "10"
+      },
+      {
+        "flags": [
+          "--max-visualizations"
+        ],
+        "default": "32"
+      },
+      {
+        "flags": [
+          "--report-dir"
+        ],
+        "default": "str(REPORT_DIR)",
+        "help": "'Output directory for this evaluation run'"
+      },
+      {
+        "flags": [
+          "--timed-passes"
+        ],
+        "default": "5"
+      }
+    ]
+  },
+  "eval_prd_8class_maskrcnn_v3_b1_dataexp": {
+    "name": "eval_prd_8class_maskrcnn_v3_b1_dataexp",
+    "old_path": "scripts/eval_prd_8class_maskrcnn_v3_b1_dataexp.py",
+    "entrypoint": "scripts/segmentation/evaluation/eval_prd_8class_maskrcnn_v3_b1_dataexp.py",
+    "module": "fashion_multimodal_analysis.segmentation.evaluation.eval_prd_8class_maskrcnn_v3_b1_dataexp",
+    "implementation": "src/fashion_multimodal_analysis/segmentation/evaluation/eval_prd_8class_maskrcnn_v3_b1_dataexp.py",
+    "category": "segmentation/evaluation",
+    "description": "eval prd 8class maskrcnn v3 b1 dataexp",
+    "options": [
+      {
+        "flags": [
+          "--checkpoint"
+        ],
+        "default": "str(DEFAULT_CKPT)"
+      },
+      {
+        "flags": [
+          "--val-csv"
+        ],
+        "default": "str(VAL_CSV)"
+      },
+      {
+        "flags": [
+          "--device"
+        ],
+        "choices": "['auto', 'cuda', 'cpu']",
+        "default": "'auto'"
+      },
+      {
+        "flags": [
+          "--score-threshold"
+        ],
+        "default": "0.4"
+      },
+      {
+        "flags": [
+          "--match-bbox-iou"
+        ],
+        "default": "0.5"
+      },
+      {
+        "flags": [
+          "--mask-threshold"
+        ],
+        "default": "0.5"
+      },
+      {
+        "flags": [
+          "--warmup-runs"
+        ],
+        "default": "10"
+      },
+      {
+        "flags": [
+          "--max-visualizations"
+        ],
+        "default": "32"
+      },
+      {
+        "flags": [
+          "--report-dir"
+        ],
+        "default": "str(REPORT_DIR)",
+        "help": "'Output directory for this evaluation run'"
+      },
+      {
+        "flags": [
+          "--timed-passes"
+        ],
+        "default": "5"
+      }
+    ]
+  },
+  "evaluate_core_regions_spatial_hr": {
+    "name": "evaluate_core_regions_spatial_hr",
+    "old_path": "scripts/evaluate_core_regions_spatial_hr.py",
+    "entrypoint": "scripts/grounding/refinement/evaluate_core_regions_spatial_hr.py",
+    "module": "fashion_multimodal_analysis.grounding.refinement.evaluate_core_regions_spatial_hr",
+    "implementation": "src/fashion_multimodal_analysis/grounding/refinement/evaluate_core_regions_spatial_hr.py",
+    "category": "grounding/refinement",
+    "description": "Compare BASELINE vs target-specific SPATIAL_HR on 15 core-region cases.",
+    "options": [
+      {
+        "flags": [
+          "--threshold"
+        ],
+        "default": "DEFAULT_THRESHOLD",
+        "help": "f'Detection threshold (default: {DEFAULT_THRESHOLD}).'"
+      },
+      {
+        "flags": [
+          "--hr-short-edge"
+        ],
+        "default": "DEFAULT_HR_SHORT_EDGE",
+        "help": "'SPATIAL_HR processor shortest edge ' + f'(default: {DEFAULT_HR_SHORT_EDGE}).'"
+      },
+      {
+        "flags": [
+          "--hr-long-edge"
+        ],
+        "default": "DEFAULT_HR_LONG_EDGE",
+        "help": "'SPATIAL_HR processor longest edge ' + f'(default: {DEFAULT_HR_LONG_EDGE}).'"
+      },
+      {
+        "flags": [
+          "--limit"
+        ],
+        "default": "None",
+        "help": "'Optional number of cases for a smoke test.'"
+      },
+      {
+        "flags": [
+          "--skip-visuals"
+        ],
+        "action": "'store_true'",
+        "help": "'Skip per-case comparison images and contact sheets.'"
+      }
+    ]
+  },
+  "evaluate_grounding_results": {
+    "name": "evaluate_grounding_results",
+    "old_path": "scripts/evaluate_grounding_results.py",
+    "entrypoint": "scripts/grounding/evaluation/evaluate_grounding_results.py",
+    "module": "fashion_multimodal_analysis.grounding.evaluation.evaluate_grounding_results",
+    "implementation": "src/fashion_multimodal_analysis/grounding/evaluation/evaluate_grounding_results.py",
+    "category": "grounding/evaluation",
+    "description": "evaluate grounding results",
+    "options": [
+      {
+        "flags": [
+          "--input"
+        ],
+        "required": "True",
+        "help": "'Folder containing json result files'"
+      },
+      {
+        "flags": [
+          "--output"
+        ],
+        "default": "'reports/grounding_evaluation_summary.md'",
+        "help": "'Output markdown report path'"
+      }
+    ]
+  },
+  "evaluate_person_roi_adaptive_batch": {
+    "name": "evaluate_person_roi_adaptive_batch",
+    "old_path": "scripts/evaluate_person_roi_adaptive_batch.py",
+    "entrypoint": "scripts/grounding/evaluation/evaluate_person_roi_adaptive_batch.py",
+    "module": "fashion_multimodal_analysis.grounding.evaluation.evaluate_person_roi_adaptive_batch",
+    "implementation": "src/fashion_multimodal_analysis/grounding/evaluation/evaluate_person_roi_adaptive_batch.py",
+    "category": "grounding/evaluation",
+    "description": "Evaluate adaptive person ROI extraction on DeepFashion2 samples.",
+    "options": []
+  },
+  "evaluate_person_roi_batch": {
+    "name": "evaluate_person_roi_batch",
+    "old_path": "scripts/evaluate_person_roi_batch.py",
+    "entrypoint": "scripts/grounding/evaluation/evaluate_person_roi_batch.py",
+    "module": "fashion_multimodal_analysis.grounding.evaluation.evaluate_person_roi_batch",
+    "implementation": "src/fashion_multimodal_analysis/grounding/evaluation/evaluate_person_roi_batch.py",
+    "category": "grounding/evaluation",
+    "description": "Evaluate person ROI extraction on a batch of DeepFashion2 images.",
+    "options": []
+  },
+  "evaluate_person_roi_fallback_batch": {
+    "name": "evaluate_person_roi_fallback_batch",
+    "old_path": "scripts/evaluate_person_roi_fallback_batch.py",
+    "entrypoint": "scripts/grounding/evaluation/evaluate_person_roi_fallback_batch.py",
+    "module": "fashion_multimodal_analysis.grounding.evaluation.evaluate_person_roi_fallback_batch",
+    "implementation": "src/fashion_multimodal_analysis/grounding/evaluation/evaluate_person_roi_fallback_batch.py",
+    "category": "grounding/evaluation",
+    "description": "Evaluate person ROI extraction with a large-person fallback rule.",
+    "options": []
+  },
+  "evaluate_person_roi_quality_batch": {
+    "name": "evaluate_person_roi_quality_batch",
+    "old_path": "scripts/evaluate_person_roi_quality_batch.py",
+    "entrypoint": "scripts/grounding/evaluation/evaluate_person_roi_quality_batch.py",
+    "module": "fashion_multimodal_analysis.grounding.evaluation.evaluate_person_roi_quality_batch",
+    "implementation": "src/fashion_multimodal_analysis/grounding/evaluation/evaluate_person_roi_quality_batch.py",
+    "category": "grounding/evaluation",
+    "description": "Evaluate person ROI quality using connected-component diagnostics.",
+    "options": []
+  },
+  "evaluate_prd_40case_coverage": {
+    "name": "evaluate_prd_40case_coverage",
+    "old_path": "scripts/evaluate_prd_40case_coverage.py",
+    "entrypoint": "scripts/grounding/evaluation/evaluate_prd_40case_coverage.py",
+    "module": "fashion_multimodal_analysis.grounding.evaluation.evaluate_prd_40case_coverage",
+    "implementation": "src/fashion_multimodal_analysis/grounding/evaluation/evaluate_prd_40case_coverage.py",
+    "category": "grounding/evaluation",
+    "description": "Evaluate the 40-case PRD 3.1.2 region-coverage pilot with Grounding DINO.",
+    "options": [
+      {
+        "flags": [
+          "--threshold"
+        ],
+        "default": "DEFAULT_THRESHOLD",
+        "help": "f'Detection threshold (default: {DEFAULT_THRESHOLD}).'"
+      },
+      {
+        "flags": [
+          "--limit"
+        ],
+        "default": "None",
+        "help": "'Optional case limit for a quick smoke test.'"
+      },
+      {
+        "flags": [
+          "--skip-visuals"
+        ],
+        "action": "'store_true'",
+        "help": "'Skip annotated-image generation.'"
+      }
+    ]
+  },
+  "evaluate_prompt_variants": {
+    "name": "evaluate_prompt_variants",
+    "old_path": "scripts/evaluate_prompt_variants.py",
+    "entrypoint": "scripts/grounding/evaluation/evaluate_prompt_variants.py",
+    "module": "fashion_multimodal_analysis.grounding.evaluation.evaluate_prompt_variants",
+    "implementation": "src/fashion_multimodal_analysis/grounding/evaluation/evaluate_prompt_variants.py",
+    "category": "grounding/evaluation",
+    "description": "evaluate prompt variants",
+    "options": []
+  },
+  "evaluate_sam_refinement_9case": {
+    "name": "evaluate_sam_refinement_9case",
+    "old_path": "scripts/evaluate_sam_refinement_9case.py",
+    "entrypoint": "scripts/grounding/refinement/evaluate_sam_refinement_9case.py",
+    "module": "fashion_multimodal_analysis.grounding.refinement.evaluate_sam_refinement_9case",
+    "implementation": "src/fashion_multimodal_analysis/grounding/refinement/evaluate_sam_refinement_9case.py",
+    "category": "grounding/refinement",
+    "description": "Run a 9-case SAM refinement pilot on Grounding DINO region proposals.",
+    "options": [
+      {
+        "flags": [
+          "--model-id"
+        ],
+        "default": "DEFAULT_MODEL_ID",
+        "help": "f'SAM checkpoint (default: {DEFAULT_MODEL_ID}).'"
+      },
+      {
+        "flags": [
+          "--limit"
+        ],
+        "default": "None",
+        "help": "'Optional case limit for a smoke test.'"
+      },
+      {
+        "flags": [
+          "--skip-visuals"
+        ],
+        "action": "'store_true'",
+        "help": "'Skip visualization generation.'"
+      }
+    ]
+  },
+  "evaluate_verified_positive_benchmark": {
+    "name": "evaluate_verified_positive_benchmark",
+    "old_path": "scripts/evaluate_verified_positive_benchmark.py",
+    "entrypoint": "scripts/grounding/evaluation/evaluate_verified_positive_benchmark.py",
+    "module": "fashion_multimodal_analysis.grounding.evaluation.evaluate_verified_positive_benchmark",
+    "implementation": "src/fashion_multimodal_analysis/grounding/evaluation/evaluate_verified_positive_benchmark.py",
+    "category": "grounding/evaluation",
+    "description": "Evaluate the verified-positive benchmark with Grounding DINO.",
+    "options": [
+      {
+        "flags": [
+          "--benchmark-file"
+        ],
+        "default": "DEFAULT_BENCHMARK_FILE",
+        "help": "'Verified-positive benchmark CSV.'"
+      },
+      {
+        "flags": [
+          "--threshold"
+        ],
+        "default": "DEFAULT_THRESHOLD",
+        "help": "'Grounding DINO detection threshold ' + f'(default: {DEFAULT_THRESHOLD}).'"
+      },
+      {
+        "flags": [
+          "--roi-margin-ratio"
+        ],
+        "default": "DEFAULT_ROI_MARGIN_RATIO",
+        "help": "'Relative margin added around the annotated garment ROI ' + f'(default: {DEFAULT_ROI_MARGIN_RATIO}).'"
+      },
+      {
+        "flags": [
+          "--limit"
+        ],
+        "default": "None",
+        "help": "'Optional case limit for smoke testing.'"
+      },
+      {
+        "flags": [
+          "--skip-visuals"
+        ],
+        "action": "'store_true'",
+        "help": "'Skip visualization and paired contact-sheet generation.'"
+      }
+    ]
+  },
+  "evaluate_verified_positive_benchmark_v2": {
+    "name": "evaluate_verified_positive_benchmark_v2",
+    "old_path": "scripts/evaluate_verified_positive_benchmark_v2.py",
+    "entrypoint": "scripts/grounding/evaluation/evaluate_verified_positive_benchmark_v2.py",
+    "module": "fashion_multimodal_analysis.grounding.evaluation.evaluate_verified_positive_benchmark_v2",
+    "implementation": "src/fashion_multimodal_analysis/grounding/evaluation/evaluate_verified_positive_benchmark_v2.py",
+    "category": "grounding/evaluation",
+    "description": "Evaluate the verified-positive benchmark with Grounding DINO.",
+    "options": [
+      {
+        "flags": [
+          "--benchmark-file"
+        ],
+        "default": "DEFAULT_BENCHMARK_FILE",
+        "help": "'Verified-positive benchmark CSV.'"
+      },
+      {
+        "flags": [
+          "--threshold"
+        ],
+        "default": "DEFAULT_THRESHOLD",
+        "help": "'Grounding DINO detection threshold ' + f'(default: {DEFAULT_THRESHOLD}).'"
+      },
+      {
+        "flags": [
+          "--roi-margin-ratio"
+        ],
+        "default": "DEFAULT_ROI_MARGIN_RATIO",
+        "help": "'Relative margin added around annotated garment ROI ' + f'(default: {DEFAULT_ROI_MARGIN_RATIO}).'"
+      },
+      {
+        "flags": [
+          "--local-enlarge-factor"
+        ],
+        "default": "DEFAULT_LOCAL_ENLARGE_FACTOR",
+        "help": "'Pixel enlargement factor applied to each local crop ' + f'before inference (default: {DEFAULT_LOCAL_ENLARGE_FACTOR}).'"
+      },
+      {
+        "flags": [
+          "--local-nms-iou"
+        ],
+        "default": "DEFAULT_LOCAL_NMS_IOU",
+        "help": "'IoU threshold used to merge duplicate detections from ' + f'multiple local windows (default: {DEFAULT_LOCAL_NMS_IOU}).'"
+      },
+      {
+        "flags": [
+          "--limit"
+        ],
+        "default": "None",
+        "help": "'Optional global case limit.'"
+      },
+      {
+        "flags": [
+          "--per-target-limit"
+        ],
+        "default": "None",
+        "help": "'Optional per-target case limit. ' + 'Use --per-target-limit 1 for a four-target smoke test.'"
+      },
+      {
+        "flags": [
+          "--skip-visuals"
+        ],
+        "action": "'store_true'",
+        "help": "'Skip visualization and triplet contact-sheet generation.'"
+      }
+    ]
+  },
+  "evaluate_verified_positive_benchmark_v3": {
+    "name": "evaluate_verified_positive_benchmark_v3",
+    "old_path": "scripts/evaluate_verified_positive_benchmark_v3.py",
+    "entrypoint": "scripts/grounding/evaluation/evaluate_verified_positive_benchmark_v3.py",
+    "module": "fashion_multimodal_analysis.grounding.evaluation.evaluate_verified_positive_benchmark_v3",
+    "implementation": "src/fashion_multimodal_analysis/grounding/evaluation/evaluate_verified_positive_benchmark_v3.py",
+    "category": "grounding/evaluation",
+    "description": "Evaluate the verified-positive benchmark with Grounding DINO.",
+    "options": [
+      {
+        "flags": [
+          "--benchmark-file"
+        ],
+        "default": "DEFAULT_BENCHMARK_FILE",
+        "help": "'Verified-positive benchmark CSV.'"
+      },
+      {
+        "flags": [
+          "--threshold"
+        ],
+        "default": "DEFAULT_THRESHOLD",
+        "help": "'Grounding DINO detection threshold ' + f'(default: {DEFAULT_THRESHOLD}).'"
+      },
+      {
+        "flags": [
+          "--roi-margin-ratio"
+        ],
+        "default": "DEFAULT_ROI_MARGIN_RATIO",
+        "help": "'Relative margin added around annotated garment ROI ' + f'(default: {DEFAULT_ROI_MARGIN_RATIO}).'"
+      },
+      {
+        "flags": [
+          "--local-enlarge-factor"
+        ],
+        "default": "DEFAULT_LOCAL_ENLARGE_FACTOR",
+        "help": "'Pixel enlargement factor applied to each local crop ' + f'before inference (default: {DEFAULT_LOCAL_ENLARGE_FACTOR}).'"
+      },
+      {
+        "flags": [
+          "--local-nms-iou"
+        ],
+        "default": "DEFAULT_LOCAL_NMS_IOU",
+        "help": "'IoU threshold used to merge duplicate detections from ' + f'multiple local windows (default: {DEFAULT_LOCAL_NMS_IOU}).'"
+      },
+      {
+        "flags": [
+          "--limit"
+        ],
+        "default": "None",
+        "help": "'Optional global case limit.'"
+      },
+      {
+        "flags": [
+          "--per-target-limit"
+        ],
+        "default": "None",
+        "help": "'Optional per-target case limit. ' + 'Use --per-target-limit 1 for a four-target smoke test.'"
+      },
+      {
+        "flags": [
+          "--skip-visuals"
+        ],
+        "action": "'store_true'",
+        "help": "'Skip visualization and triplet contact-sheet generation.'"
+      }
+    ]
+  },
+  "extract_neckline_geometry_continuous_v1": {
+    "name": "extract_neckline_geometry_continuous_v1",
+    "old_path": "scripts/extract_neckline_geometry_continuous_v1.py",
+    "entrypoint": "scripts/attributes/geometry/extract_neckline_geometry_continuous_v1.py",
+    "module": "fashion_multimodal_analysis.attributes.geometry.extract_neckline_geometry_continuous_v1",
+    "implementation": "src/fashion_multimodal_analysis/attributes/geometry/extract_neckline_geometry_continuous_v1.py",
+    "category": "attributes/geometry",
+    "description": "PRD 3.1.3 continuous neckline geometry pilot v1.",
+    "options": [
+      {
+        "flags": [
+          "--manifest"
+        ],
+        "required": "True"
+      }
+    ]
+  },
+  "extract_pants_silhouette_continuous_v1": {
+    "name": "extract_pants_silhouette_continuous_v1",
+    "old_path": "scripts/extract_pants_silhouette_continuous_v1.py",
+    "entrypoint": "scripts/attributes/geometry/extract_pants_silhouette_continuous_v1.py",
+    "module": "fashion_multimodal_analysis.attributes.geometry.extract_pants_silhouette_continuous_v1",
+    "implementation": "src/fashion_multimodal_analysis/attributes/geometry/extract_pants_silhouette_continuous_v1.py",
+    "category": "attributes/geometry",
+    "description": "PRD 3.1.3 pants silhouette continuous geometry v1.",
+    "options": [
+      {
+        "flags": [
+          "--manifest"
+        ],
+        "required": "True"
+      }
+    ]
+  },
+  "extract_skirt_flare_continuous_v1": {
+    "name": "extract_skirt_flare_continuous_v1",
+    "old_path": "scripts/extract_skirt_flare_continuous_v1.py",
+    "entrypoint": "scripts/attributes/geometry/extract_skirt_flare_continuous_v1.py",
+    "module": "fashion_multimodal_analysis.attributes.geometry.extract_skirt_flare_continuous_v1",
+    "implementation": "src/fashion_multimodal_analysis/attributes/geometry/extract_skirt_flare_continuous_v1.py",
+    "category": "attributes/geometry",
+    "description": "PRD 3.1.3 continuous skirt-flare geometry feature pilot v1.",
+    "options": [
+      {
+        "flags": [
+          "--manifest"
+        ],
+        "required": "True"
+      }
+    ]
+  },
+  "extract_sleeve_geometry_features_v2": {
+    "name": "extract_sleeve_geometry_features_v2",
+    "old_path": "scripts/extract_sleeve_geometry_features_v2.py",
+    "entrypoint": "scripts/attributes/geometry/extract_sleeve_geometry_features_v2.py",
+    "module": "fashion_multimodal_analysis.attributes.geometry.extract_sleeve_geometry_features_v2",
+    "implementation": "src/fashion_multimodal_analysis/attributes/geometry/extract_sleeve_geometry_features_v2.py",
+    "category": "attributes/geometry",
+    "description": "PRD 3.1.3 sleeve continuous geometry feature pilot v2.",
+    "options": [
+      {
+        "flags": [
+          "--manifest"
+        ],
+        "required": "True"
+      }
+    ]
+  },
+  "extract_trouser_fit_continuous_v2": {
+    "name": "extract_trouser_fit_continuous_v2",
+    "old_path": "scripts/extract_trouser_fit_continuous_v2.py",
+    "entrypoint": "scripts/attributes/geometry/extract_trouser_fit_continuous_v2.py",
+    "module": "fashion_multimodal_analysis.attributes.geometry.extract_trouser_fit_continuous_v2",
+    "implementation": "src/fashion_multimodal_analysis/attributes/geometry/extract_trouser_fit_continuous_v2.py",
+    "category": "attributes/geometry",
+    "description": "PRD 3.1.3 long-trouser fit continuous geometry v2.",
+    "options": [
+      {
+        "flags": [
+          "--manifest"
+        ],
+        "required": "True"
+      }
+    ]
+  },
+  "extract_upper_silhouette_continuous_v1": {
+    "name": "extract_upper_silhouette_continuous_v1",
+    "old_path": "scripts/extract_upper_silhouette_continuous_v1.py",
+    "entrypoint": "scripts/attributes/geometry/extract_upper_silhouette_continuous_v1.py",
+    "module": "fashion_multimodal_analysis.attributes.geometry.extract_upper_silhouette_continuous_v1",
+    "implementation": "src/fashion_multimodal_analysis/attributes/geometry/extract_upper_silhouette_continuous_v1.py",
+    "category": "attributes/geometry",
+    "description": "PRD 3.1.3 upper-garment silhouette continuous features v1.",
+    "options": [
+      {
+        "flags": [
+          "--manifest"
+        ],
+        "required": "True"
+      }
+    ]
+  },
+  "extract_upper_silhouette_continuous_v2": {
+    "name": "extract_upper_silhouette_continuous_v2",
+    "old_path": "scripts/extract_upper_silhouette_continuous_v2.py",
+    "entrypoint": "scripts/attributes/geometry/extract_upper_silhouette_continuous_v2.py",
+    "module": "fashion_multimodal_analysis.attributes.geometry.extract_upper_silhouette_continuous_v2",
+    "implementation": "src/fashion_multimodal_analysis/attributes/geometry/extract_upper_silhouette_continuous_v2.py",
+    "category": "attributes/geometry",
+    "description": "PRD 3.1.3 upper-garment silhouette continuous features v2.",
+    "options": [
+      {
+        "flags": [
+          "--manifest"
+        ],
+        "required": "True"
+      }
+    ]
+  },
+  "finalize_prd_3_1_1_v1": {
+    "name": "finalize_prd_3_1_1_v1",
+    "old_path": "scripts/finalize_prd_3_1_1_v1.py",
+    "entrypoint": "scripts/analysis/finalize_prd_3_1_1_v1.py",
+    "module": "fashion_multimodal_analysis.analysis.finalize_prd_3_1_1_v1",
+    "implementation": "src/fashion_multimodal_analysis/analysis/finalize_prd_3_1_1_v1.py",
+    "category": "analysis",
+    "description": "finalize prd 3 1 1 v1",
+    "options": []
+  },
+  "freeze_prd31_reviewed_tests": {
+    "name": "freeze_prd31_reviewed_tests",
+    "old_path": "",
+    "entrypoint": "scripts/benchmarking/freeze_prd31_reviewed_tests.py",
+    "module": "fashion_multimodal_analysis.benchmarking.freeze_prd31_reviewed_tests",
+    "implementation": "src/fashion_multimodal_analysis/benchmarking/freeze_prd31_reviewed_tests.py",
+    "category": "benchmarking",
+    "description": "Validate human reviews and freeze v2 manifests without replacing frozen v1.",
+    "options": [
+      {
+        "flags": [
+          "--grounding-review"
+        ]
+      },
+      {
+        "flags": [
+          "--attribute-review"
+        ]
+      }
+    ]
+  },
+  "freeze_prd31_segmentation_test_v1": {
+    "name": "freeze_prd31_segmentation_test_v1",
+    "old_path": "scripts/freeze_prd31_segmentation_test_v1.py",
+    "entrypoint": "scripts/benchmarking/freeze_prd31_segmentation_test_v1.py",
+    "module": "fashion_multimodal_analysis.benchmarking.freeze_prd31_segmentation_test_v1",
+    "implementation": "src/fashion_multimodal_analysis/benchmarking/freeze_prd31_segmentation_test_v1.py",
+    "category": "benchmarking",
+    "description": "Freeze PRD 3.1.1 Core benchmark v1 after full scene review.",
+    "options": []
+  },
+  "generate_grounding_contact_sheets": {
+    "name": "generate_grounding_contact_sheets",
+    "old_path": "scripts/generate_grounding_contact_sheets.py",
+    "entrypoint": "scripts/visualization/generate_grounding_contact_sheets.py",
+    "module": "fashion_multimodal_analysis.visualization.generate_grounding_contact_sheets",
+    "implementation": "src/fashion_multimodal_analysis/visualization/generate_grounding_contact_sheets.py",
+    "category": "visualization",
+    "description": "Generate contact sheets for manual grounding annotations.",
+    "options": []
+  },
+  "infer_small_crop": {
+    "name": "infer_small_crop",
+    "old_path": "scripts/infer_small_crop.py",
+    "entrypoint": "scripts/segmentation/diagnostics/infer_small_crop.py",
+    "module": "fashion_multimodal_analysis.segmentation.diagnostics.infer_small_crop",
+    "implementation": "src/fashion_multimodal_analysis/segmentation/diagnostics/infer_small_crop.py",
+    "category": "segmentation/diagnostics",
+    "description": "infer small crop",
+    "options": []
+  },
+  "prepare_core_part_annotation_pilot": {
+    "name": "prepare_core_part_annotation_pilot",
+    "old_path": "scripts/prepare_core_part_annotation_pilot.py",
+    "entrypoint": "scripts/grounding/core_parts/prepare_core_part_annotation_pilot.py",
+    "module": "fashion_multimodal_analysis.grounding.core_parts.prepare_core_part_annotation_pilot",
+    "implementation": "src/fashion_multimodal_analysis/grounding/core_parts/prepare_core_part_annotation_pilot.py",
+    "category": "grounding/core_parts",
+    "description": "Prepare a leakage-safe core part annotation pilot.",
+    "options": [
+      {
+        "flags": [
+          "--per-region"
+        ],
+        "default": "DEFAULT_PER_REGION",
+        "help": "f'New annotation images per region (default: {DEFAULT_PER_REGION}).'"
+      },
+      {
+        "flags": [
+          "--seed"
+        ],
+        "default": "DEFAULT_SEED",
+        "help": "f'Random seed (default: {DEFAULT_SEED}).'"
+      }
+    ]
+  },
+  "prepare_garment_instances_from_deepfashion2": {
+    "name": "prepare_garment_instances_from_deepfashion2",
+    "old_path": "scripts/prepare_garment_instances_from_deepfashion2.py",
+    "entrypoint": "scripts/data_tools/prepare_garment_instances_from_deepfashion2.py",
+    "module": "fashion_multimodal_analysis.data_tools.prepare_garment_instances_from_deepfashion2",
+    "implementation": "src/fashion_multimodal_analysis/data_tools/prepare_garment_instances_from_deepfashion2.py",
+    "category": "data_tools",
+    "description": "Prepare per-garment crops/masks from DeepFashion2 annotations.",
+    "options": [
+      {
+        "flags": [
+          "--image"
+        ],
+        "default": "None",
+        "help": "'One image filename, e.g. 000001.jpg'"
+      },
+      {
+        "flags": [
+          "--sample-size"
+        ],
+        "default": "None",
+        "help": "'Deterministically sample N source images.'"
+      },
+      {
+        "flags": [
+          "--seed"
+        ],
+        "default": "20260915"
+      },
+      {
+        "flags": [
+          "--image-dir"
+        ],
+        "default": "str(DEFAULT_IMAGE_DIR)"
+      },
+      {
+        "flags": [
+          "--anno-dir"
+        ],
+        "default": "str(DEFAULT_ANNO_DIR)"
+      },
+      {
+        "flags": [
+          "--manifest"
+        ],
+        "default": "str(DEFAULT_MANIFEST)"
+      }
+    ]
+  },
+  "prepare_prd31_core_freeze_and_protocol_v1": {
+    "name": "prepare_prd31_core_freeze_and_protocol_v1",
+    "old_path": "scripts/prepare_prd31_core_freeze_and_protocol_v1.py",
+    "entrypoint": "scripts/benchmarking/prepare_prd31_core_freeze_and_protocol_v1.py",
+    "module": "fashion_multimodal_analysis.benchmarking.prepare_prd31_core_freeze_and_protocol_v1",
+    "implementation": "src/fashion_multimodal_analysis/benchmarking/prepare_prd31_core_freeze_and_protocol_v1.py",
+    "category": "benchmarking",
+    "description": "Prepare PRD 3.1.1 final Core-freeze review + freeze Evaluation Protocol v1.",
+    "options": []
+  },
+  "prepare_prd31_recovery": {
+    "name": "prepare_prd31_recovery",
+    "old_path": "",
+    "entrypoint": "scripts/benchmarking/prepare_prd31_recovery.py",
+    "module": "fashion_multimodal_analysis.benchmarking.prepare_prd31_recovery",
+    "implementation": "src/fashion_multimodal_analysis/benchmarking/prepare_prd31_recovery.py",
+    "category": "benchmarking",
+    "description": "Prepare clean training, reusable legacy reviews and new review candidates.",
+    "options": [
+      {
+        "flags": [
+          "--extra-grounding"
+        ],
+        "default": "0",
+        "help": "'Append unused candidate images when human positive coverage is insufficient'"
+      },
+      {
+        "flags": [
+          "--region"
+        ],
+        "choices": "REGIONS",
+        "help": "'Expand only this region; otherwise expand all eight'"
+      }
+    ]
+  },
+  "prepare_prd8_gpu_package_v1": {
+    "name": "prepare_prd8_gpu_package_v1",
+    "old_path": "scripts/prepare_prd8_gpu_package_v1.py",
+    "entrypoint": "scripts/maintenance/packaging/prepare_prd8_gpu_package_v1.py",
+    "module": "fashion_multimodal_analysis.maintenance.packaging.prepare_prd8_gpu_package_v1",
+    "implementation": "src/fashion_multimodal_analysis/maintenance/packaging/prepare_prd8_gpu_package_v1.py",
+    "category": "maintenance/packaging",
+    "description": "Prepare a compact, portable GPU package for the PRD 3.1.1 Mask R-CNN baseline.",
+    "options": []
+  },
+  "record_maskrcnn_8class_experiment_config_v1": {
+    "name": "record_maskrcnn_8class_experiment_config_v1",
+    "old_path": "scripts/record_maskrcnn_8class_experiment_config_v1.py",
+    "entrypoint": "scripts/analysis/record_maskrcnn_8class_experiment_config_v1.py",
+    "module": "fashion_multimodal_analysis.analysis.record_maskrcnn_8class_experiment_config_v1",
+    "implementation": "src/fashion_multimodal_analysis/analysis/record_maskrcnn_8class_experiment_config_v1.py",
+    "category": "analysis",
+    "description": "record maskrcnn 8class experiment config v1",
+    "options": []
+  },
+  "refine_prd31_segmentation_gt_qc_v2": {
+    "name": "refine_prd31_segmentation_gt_qc_v2",
+    "old_path": "scripts/refine_prd31_segmentation_gt_qc_v2.py",
+    "entrypoint": "scripts/benchmarking/refine_prd31_segmentation_gt_qc_v2.py",
+    "module": "fashion_multimodal_analysis.benchmarking.refine_prd31_segmentation_gt_qc_v2",
+    "implementation": "src/fashion_multimodal_analysis/benchmarking/refine_prd31_segmentation_gt_qc_v2.py",
+    "category": "benchmarking",
+    "description": "Refine PRD 3.1.1 automated GT QC after diagnosing an overly strict v1 rule.",
+    "options": [
+      {
+        "flags": [
+          "--mask-inside-bbox-ratio-min"
+        ],
+        "default": "0.95"
+      },
+      {
+        "flags": [
+          "--mask-fill-ratio-min"
+        ],
+        "default": "0.03"
+      },
+      {
+        "flags": [
+          "--loose-bbox-review-iou"
+        ],
+        "default": "0.6"
+      }
+    ]
+  },
+  "repair_design_labels_v1_outputs": {
+    "name": "repair_design_labels_v1_outputs",
+    "old_path": "scripts/repair_design_labels_v1_outputs.py",
+    "entrypoint": "scripts/attributes/design/repair_design_labels_v1_outputs.py",
+    "module": "fashion_multimodal_analysis.attributes.design.repair_design_labels_v1_outputs",
+    "implementation": "src/fashion_multimodal_analysis/attributes/design/repair_design_labels_v1_outputs.py",
+    "category": "attributes/design",
+    "description": "Repair PRD 3.1.3 design-label v1 outputs without rerunning CLIP.",
+    "options": [
+      {
+        "flags": [
+          "--predictions"
+        ],
+        "default": "str(DEFAULT_PREDICTIONS.relative_to(PROJECT_ROOT))"
+      },
+      {
+        "flags": [
+          "--style-json"
+        ],
+        "default": "str(DEFAULT_STYLE_JSON.relative_to(PROJECT_ROOT))"
+      },
+      {
+        "flags": [
+          "--audit-size"
+        ],
+        "default": "40"
+      },
+      {
+        "flags": [
+          "--seed"
+        ],
+        "default": "20260917"
+      }
+    ]
+  },
+  "review_flagged_core_part_boxes": {
+    "name": "review_flagged_core_part_boxes",
+    "old_path": "scripts/review_flagged_core_part_boxes.py",
+    "entrypoint": "scripts/grounding/core_parts/review_flagged_core_part_boxes.py",
+    "module": "fashion_multimodal_analysis.grounding.core_parts.review_flagged_core_part_boxes",
+    "implementation": "src/fashion_multimodal_analysis/grounding/core_parts/review_flagged_core_part_boxes.py",
+    "category": "grounding/core_parts",
+    "description": "Review only the semantic-QC flagged core-part annotations.",
+    "options": []
+  },
+  "run_attribute_baseline_clip": {
+    "name": "run_attribute_baseline_clip",
+    "old_path": "scripts/run_attribute_baseline_clip.py",
+    "entrypoint": "scripts/attributes/design/run_attribute_baseline_clip.py",
+    "module": "fashion_multimodal_analysis.attributes.design.run_attribute_baseline_clip",
+    "implementation": "src/fashion_multimodal_analysis/attributes/design/run_attribute_baseline_clip.py",
+    "category": "attributes/design",
+    "description": "PRD 3.1.3 local CPU baseline using CLIP.",
+    "options": [
+      {
+        "flags": [
+          "--image"
+        ],
+        "required": "True"
+      },
+      {
+        "flags": [
+          "--region"
+        ],
+        "default": "'whole_garment'",
+        "choices": "['whole_garment', 'roi', 'local_region']"
+      },
+      {
+        "flags": [
+          "--threads"
+        ],
+        "default": "4"
+      }
+    ]
+  },
+  "run_attribute_baseline_clip_batch": {
+    "name": "run_attribute_baseline_clip_batch",
+    "old_path": "scripts/run_attribute_baseline_clip_batch.py",
+    "entrypoint": "scripts/attributes/design/run_attribute_baseline_clip_batch.py",
+    "module": "fashion_multimodal_analysis.attributes.design.run_attribute_baseline_clip_batch",
+    "implementation": "src/fashion_multimodal_analysis/attributes/design/run_attribute_baseline_clip_batch.py",
+    "category": "attributes/design",
+    "description": "PRD 3.1.3 CLIP batch pilot.",
+    "options": [
+      {
+        "flags": [
+          "--image-dir"
+        ],
+        "required": "True"
+      },
+      {
+        "flags": [
+          "--sample-size"
+        ],
+        "default": "20"
+      },
+      {
+        "flags": [
+          "--seed"
+        ],
+        "default": "20260915"
+      },
+      {
+        "flags": [
+          "--threads"
+        ],
+        "default": "4"
+      }
+    ]
+  },
+  "run_attribute_baseline_clip_instances": {
+    "name": "run_attribute_baseline_clip_instances",
+    "old_path": "scripts/run_attribute_baseline_clip_instances.py",
+    "entrypoint": "scripts/attributes/design/run_attribute_baseline_clip_instances.py",
+    "module": "fashion_multimodal_analysis.attributes.design.run_attribute_baseline_clip_instances",
+    "implementation": "src/fashion_multimodal_analysis/attributes/design/run_attribute_baseline_clip_instances.py",
+    "category": "attributes/design",
+    "description": "PRD 3.1.3 per-garment CLIP attribute baseline.",
+    "options": [
+      {
+        "flags": [
+          "--manifest"
+        ],
+        "required": "True"
+      },
+      {
+        "flags": [
+          "--threads"
+        ],
+        "default": "4"
+      }
+    ]
+  },
+  "run_attribute_baseline_clip_instances_v2": {
+    "name": "run_attribute_baseline_clip_instances_v2",
+    "old_path": "scripts/run_attribute_baseline_clip_instances_v2.py",
+    "entrypoint": "scripts/attributes/design/run_attribute_baseline_clip_instances_v2.py",
+    "module": "fashion_multimodal_analysis.attributes.design.run_attribute_baseline_clip_instances_v2",
+    "implementation": "src/fashion_multimodal_analysis/attributes/design/run_attribute_baseline_clip_instances_v2.py",
+    "category": "attributes/design",
+    "description": "PRD 3.1.3 per-garment attribute baseline v2.",
+    "options": [
+      {
+        "flags": [
+          "--manifest"
+        ],
+        "required": "True"
+      },
+      {
+        "flags": [
+          "--threads"
+        ],
+        "default": "4"
+      }
+    ]
+  },
+  "run_attribute_baseline_cpu": {
+    "name": "run_attribute_baseline_cpu",
+    "old_path": "scripts/run_attribute_baseline_cpu.py",
+    "entrypoint": "scripts/attributes/design/run_attribute_baseline_cpu.py",
+    "module": "fashion_multimodal_analysis.attributes.design.run_attribute_baseline_cpu",
+    "implementation": "src/fashion_multimodal_analysis/attributes/design/run_attribute_baseline_cpu.py",
+    "category": "attributes/design",
+    "description": "PRD 3.1.3 local CPU attribute baseline.",
+    "options": [
+      {
+        "flags": [
+          "--image"
+        ],
+        "required": "True",
+        "help": "'Input image path. Relative paths are recommended.'"
+      },
+      {
+        "flags": [
+          "--region"
+        ],
+        "default": "'whole_garment'",
+        "choices": "['whole_garment', 'roi', 'local_region']"
+      },
+      {
+        "flags": [
+          "--model"
+        ],
+        "default": "DEFAULT_MODEL"
+      },
+      {
+        "flags": [
+          "--max-new-tokens"
+        ],
+        "default": "256"
+      },
+      {
+        "flags": [
+          "--threads"
+        ],
+        "default": "4",
+        "help": "'CPU inference threads.'"
+      }
+    ]
+  },
+  "run_attribute_baseline_cpu_v2": {
+    "name": "run_attribute_baseline_cpu_v2",
+    "old_path": "scripts/run_attribute_baseline_cpu_v2.py",
+    "entrypoint": "scripts/attributes/design/run_attribute_baseline_cpu_v2.py",
+    "module": "fashion_multimodal_analysis.attributes.design.run_attribute_baseline_cpu_v2",
+    "implementation": "src/fashion_multimodal_analysis/attributes/design/run_attribute_baseline_cpu_v2.py",
+    "category": "attributes/design",
+    "description": "PRD 3.1.3 lightweight local CPU baseline (isolated-env version).",
+    "options": [
+      {
+        "flags": [
+          "--image"
+        ],
+        "required": "True"
+      },
+      {
+        "flags": [
+          "--region"
+        ],
+        "default": "'whole_garment'",
+        "choices": "['whole_garment', 'roi', 'local_region']"
+      },
+      {
+        "flags": [
+          "--max-new-tokens"
+        ],
+        "default": "256"
+      }
+    ]
+  },
+  "run_attribute_baseline_instances_v3": {
+    "name": "run_attribute_baseline_instances_v3",
+    "old_path": "scripts/run_attribute_baseline_instances_v3.py",
+    "entrypoint": "scripts/attributes/design/run_attribute_baseline_instances_v3.py",
+    "module": "fashion_multimodal_analysis.attributes.design.run_attribute_baseline_instances_v3",
+    "implementation": "src/fashion_multimodal_analysis/attributes/design/run_attribute_baseline_instances_v3.py",
+    "category": "attributes/design",
+    "description": "PRD 3.1.3 per-garment baseline v3.",
+    "options": [
+      {
+        "flags": [
+          "--manifest"
+        ],
+        "required": "True"
+      },
+      {
+        "flags": [
+          "--threads"
+        ],
+        "default": "4"
+      }
+    ]
+  },
+  "run_attribute_baseline_v1": {
+    "name": "run_attribute_baseline_v1",
+    "old_path": "scripts/run_attribute_baseline_v1.py",
+    "entrypoint": "scripts/attributes/design/run_attribute_baseline_v1.py",
+    "module": "fashion_multimodal_analysis.attributes.design.run_attribute_baseline_v1",
+    "implementation": "src/fashion_multimodal_analysis/attributes/design/run_attribute_baseline_v1.py",
+    "category": "attributes/design",
+    "description": "PRD 3.1.3 fine-grained attribute extraction baseline v1.",
+    "options": [
+      {
+        "flags": [
+          "--image"
+        ],
+        "required": "True"
+      },
+      {
+        "flags": [
+          "--region"
+        ],
+        "default": "'whole_garment'",
+        "choices": "['whole_garment', 'roi', 'local_region']"
+      },
+      {
+        "flags": [
+          "--output"
+        ],
+        "default": "''"
+      },
+      {
+        "flags": [
+          "--model"
+        ],
+        "default": "DEFAULT_MODEL"
+      },
+      {
+        "flags": [
+          "--max-new-tokens"
+        ],
+        "default": "384"
+      }
+    ]
+  },
+  "run_attribute_baseline_v2": {
+    "name": "run_attribute_baseline_v2",
+    "old_path": "scripts/run_attribute_baseline_v2.py",
+    "entrypoint": "scripts/attributes/design/run_attribute_baseline_v2.py",
+    "module": "fashion_multimodal_analysis.attributes.design.run_attribute_baseline_v2",
+    "implementation": "src/fashion_multimodal_analysis/attributes/design/run_attribute_baseline_v2.py",
+    "category": "attributes/design",
+    "description": "PRD 3.1.3 attribute extraction baseline v2.",
+    "options": [
+      {
+        "flags": [
+          "--image"
+        ],
+        "required": "True"
+      },
+      {
+        "flags": [
+          "--region"
+        ],
+        "default": "'whole_garment'",
+        "choices": "['whole_garment', 'roi', 'local_region']"
+      },
+      {
+        "flags": [
+          "--output"
+        ],
+        "default": "''"
+      },
+      {
+        "flags": [
+          "--model"
+        ],
+        "default": "DEFAULT_MODEL"
+      },
+      {
+        "flags": [
+          "--max-new-tokens"
+        ],
+        "default": "384"
+      }
+    ]
+  },
+  "run_design_attribute_labels_v1": {
+    "name": "run_design_attribute_labels_v1",
+    "old_path": "scripts/run_design_attribute_labels_v1.py",
+    "entrypoint": "scripts/attributes/design/run_design_attribute_labels_v1.py",
+    "module": "fashion_multimodal_analysis.attributes.design.run_design_attribute_labels_v1",
+    "implementation": "src/fashion_multimodal_analysis/attributes/design/run_design_attribute_labels_v1.py",
+    "category": "attributes/design",
+    "description": "run design attribute labels v1",
+    "options": [
+      {
+        "flags": [
+          "--manifest"
+        ],
+        "default": "'configs/garment_instances_gt_pilot_100.csv'"
+      },
+      {
+        "flags": [
+          "--style-json"
+        ],
+        "default": "'reports/prd_attribute_extraction/style_v1/style_feature_vector_v1.json'"
+      },
+      {
+        "flags": [
+          "--audit-size"
+        ],
+        "default": "40"
+      },
+      {
+        "flags": [
+          "--seed"
+        ],
+        "default": "20260917"
+      },
+      {
+        "flags": [
+          "--device"
+        ],
+        "choices": "['auto', 'cpu', 'cuda']",
+        "default": "'auto'"
+      }
+    ]
+  },
+  "run_grounding_dino_baseline": {
+    "name": "run_grounding_dino_baseline",
+    "old_path": "scripts/run_grounding_dino_baseline.py",
+    "entrypoint": "scripts/grounding/baselines/run_grounding_dino_baseline.py",
+    "module": "fashion_multimodal_analysis.grounding.baselines.run_grounding_dino_baseline",
+    "implementation": "src/fashion_multimodal_analysis/grounding/baselines/run_grounding_dino_baseline.py",
+    "category": "grounding/baselines",
+    "description": "run grounding dino baseline",
+    "options": []
+  },
+  "run_grounding_dino_multi_test": {
+    "name": "run_grounding_dino_multi_test",
+    "old_path": "scripts/run_grounding_dino_multi_test.py",
+    "entrypoint": "scripts/grounding/baselines/run_grounding_dino_multi_test.py",
+    "module": "fashion_multimodal_analysis.grounding.baselines.run_grounding_dino_multi_test",
+    "implementation": "src/fashion_multimodal_analysis/grounding/baselines/run_grounding_dino_multi_test.py",
+    "category": "grounding/baselines",
+    "description": "run grounding dino multi test",
+    "options": []
+  },
+  "run_grounding_dino_prompt_optimization": {
+    "name": "run_grounding_dino_prompt_optimization",
+    "old_path": "scripts/run_grounding_dino_prompt_optimization.py",
+    "entrypoint": "scripts/grounding/baselines/run_grounding_dino_prompt_optimization.py",
+    "module": "fashion_multimodal_analysis.grounding.baselines.run_grounding_dino_prompt_optimization",
+    "implementation": "src/fashion_multimodal_analysis/grounding/baselines/run_grounding_dino_prompt_optimization.py",
+    "category": "grounding/baselines",
+    "description": "run grounding dino prompt optimization",
+    "options": []
+  },
+  "run_grounding_group_evaluation": {
+    "name": "run_grounding_group_evaluation",
+    "old_path": "scripts/run_grounding_group_evaluation.py",
+    "entrypoint": "scripts/grounding/evaluation/run_grounding_group_evaluation.py",
+    "module": "fashion_multimodal_analysis.grounding.evaluation.run_grounding_group_evaluation",
+    "implementation": "src/fashion_multimodal_analysis/grounding/evaluation/run_grounding_group_evaluation.py",
+    "category": "grounding/evaluation",
+    "description": "Run Grounding DINO evaluation on a sampled image group.",
+    "options": [
+      {
+        "flags": [
+          "--group"
+        ],
+        "choices": "[1, 2, 3]",
+        "default": "1",
+        "help": "'Evaluation group identifier.'"
+      },
+      {
+        "flags": [
+          "--limit"
+        ],
+        "default": "None",
+        "help": "'Optional number of images to process. ' + 'Useful for smoke tests.'"
+      }
+    ]
+  },
+  "run_mask2former_baseline": {
+    "name": "run_mask2former_baseline",
+    "old_path": "scripts/run_mask2former_baseline.py",
+    "entrypoint": "scripts/segmentation/baselines/run_mask2former_baseline.py",
+    "module": "fashion_multimodal_analysis.segmentation.baselines.run_mask2former_baseline",
+    "implementation": "src/fashion_multimodal_analysis/segmentation/baselines/run_mask2former_baseline.py",
+    "category": "segmentation/baselines",
+    "description": "Run a Mask2Former pretrained baseline on one DeepFashion2 image.",
+    "options": []
+  },
+  "run_neckline_semantic_continuous_v2": {
+    "name": "run_neckline_semantic_continuous_v2",
+    "old_path": "scripts/run_neckline_semantic_continuous_v2.py",
+    "entrypoint": "scripts/attributes/geometry/run_neckline_semantic_continuous_v2.py",
+    "module": "fashion_multimodal_analysis.attributes.geometry.run_neckline_semantic_continuous_v2",
+    "implementation": "src/fashion_multimodal_analysis/attributes/geometry/run_neckline_semantic_continuous_v2.py",
+    "category": "attributes/geometry",
+    "description": "PRD 3.1.3 local-neckline continuous semantic pilot v2.",
+    "options": [
+      {
+        "flags": [
+          "--manifest"
+        ],
+        "required": "True"
+      },
+      {
+        "flags": [
+          "--threads"
+        ],
+        "default": "4"
+      }
+    ]
+  },
+  "run_pants_length_continuous_v1": {
+    "name": "run_pants_length_continuous_v1",
+    "old_path": "scripts/run_pants_length_continuous_v1.py",
+    "entrypoint": "scripts/attributes/geometry/run_pants_length_continuous_v1.py",
+    "module": "fashion_multimodal_analysis.attributes.geometry.run_pants_length_continuous_v1",
+    "implementation": "src/fashion_multimodal_analysis/attributes/geometry/run_pants_length_continuous_v1.py",
+    "category": "attributes/geometry",
+    "description": "PRD 3.1.3 continuous pants-length feature baseline v1.",
+    "options": [
+      {
+        "flags": [
+          "--manifest"
+        ],
+        "required": "True"
+      },
+      {
+        "flags": [
+          "--threads"
+        ],
+        "default": "4"
+      }
+    ]
+  },
+  "run_pattern_baseline_v1_fixed": {
+    "name": "run_pattern_baseline_v1_fixed",
+    "old_path": "scripts/run_pattern_baseline_v1_fixed.py",
+    "entrypoint": "scripts/attributes/pattern/run_pattern_baseline_v1_fixed.py",
+    "module": "fashion_multimodal_analysis.attributes.pattern.run_pattern_baseline_v1_fixed",
+    "implementation": "src/fashion_multimodal_analysis/attributes/pattern/run_pattern_baseline_v1_fixed.py",
+    "category": "attributes/pattern",
+    "description": "PRD 3.1.3 garment pattern baseline v1.",
+    "options": [
+      {
+        "flags": [
+          "--manifest"
+        ],
+        "required": "True"
+      },
+      {
+        "flags": [
+          "--threads"
+        ],
+        "default": "4"
+      }
+    ]
+  },
+  "run_pattern_hierarchical_v2": {
+    "name": "run_pattern_hierarchical_v2",
+    "old_path": "scripts/run_pattern_hierarchical_v2.py",
+    "entrypoint": "scripts/attributes/pattern/run_pattern_hierarchical_v2.py",
+    "module": "fashion_multimodal_analysis.attributes.pattern.run_pattern_hierarchical_v2",
+    "implementation": "src/fashion_multimodal_analysis/attributes/pattern/run_pattern_hierarchical_v2.py",
+    "category": "attributes/pattern",
+    "description": "PRD 3.1.3 pattern recognition v2: hierarchical CLIP baseline.",
+    "options": [
+      {
+        "flags": [
+          "--manifest"
+        ],
+        "required": "True"
+      },
+      {
+        "flags": [
+          "--exclude-audit"
+        ],
+        "default": "None",
+        "help": "'Optional v1 tuning/focused-audit CSV. ' + 'These garments are excluded from the new v2 holdout audit.'"
+      },
+      {
+        "flags": [
+          "--holdout-size"
+        ],
+        "default": "40"
+      },
+      {
+        "flags": [
+          "--seed"
+        ],
+        "default": "20260916"
+      },
+      {
+        "flags": [
+          "--threads"
+        ],
+        "default": "4"
+      }
+    ]
+  },
+  "run_pattern_hierarchical_v2_fixed": {
+    "name": "run_pattern_hierarchical_v2_fixed",
+    "old_path": "scripts/run_pattern_hierarchical_v2_fixed.py",
+    "entrypoint": "scripts/attributes/pattern/run_pattern_hierarchical_v2_fixed.py",
+    "module": "fashion_multimodal_analysis.attributes.pattern.run_pattern_hierarchical_v2_fixed",
+    "implementation": "src/fashion_multimodal_analysis/attributes/pattern/run_pattern_hierarchical_v2_fixed.py",
+    "category": "attributes/pattern",
+    "description": "PRD 3.1.3 pattern recognition v2 - fixed for newer Transformers CLIP APIs.",
+    "options": [
+      {
+        "flags": [
+          "--manifest"
+        ],
+        "required": "True"
+      },
+      {
+        "flags": [
+          "--exclude-audit"
+        ],
+        "default": "None",
+        "help": "'Optional v1 tuning/focused-audit CSV. ' + 'These garments are excluded from the new v2 holdout audit.'"
+      },
+      {
+        "flags": [
+          "--holdout-size"
+        ],
+        "default": "40"
+      },
+      {
+        "flags": [
+          "--seed"
+        ],
+        "default": "20260916"
+      },
+      {
+        "flags": [
+          "--threads"
+        ],
+        "default": "4"
+      }
+    ]
+  },
+  "run_pattern_hierarchical_v3": {
+    "name": "run_pattern_hierarchical_v3",
+    "old_path": "scripts/run_pattern_hierarchical_v3.py",
+    "entrypoint": "scripts/attributes/pattern/run_pattern_hierarchical_v3.py",
+    "module": "fashion_multimodal_analysis.attributes.pattern.run_pattern_hierarchical_v3",
+    "implementation": "src/fashion_multimodal_analysis/attributes/pattern/run_pattern_hierarchical_v3.py",
+    "category": "attributes/pattern",
+    "description": "PRD 3.1.3 pattern recognition v3: four-way presence gate + subtype classifier.",
+    "options": [
+      {
+        "flags": [
+          "--manifest"
+        ],
+        "required": "True"
+      },
+      {
+        "flags": [
+          "--exclude-audit"
+        ],
+        "action": "'append'",
+        "default": "[]",
+        "help": "'Audit CSV to exclude from the fresh v3 holdout. ' + 'Repeat this option for multiple prior audit sets.'"
+      },
+      {
+        "flags": [
+          "--holdout-size"
+        ],
+        "default": "40"
+      },
+      {
+        "flags": [
+          "--seed"
+        ],
+        "default": "20260917"
+      },
+      {
+        "flags": [
+          "--threads"
+        ],
+        "default": "4"
+      }
+    ]
+  },
+  "run_pocket_decoration_prompt_scale_diagnostic_v1": {
+    "name": "run_pocket_decoration_prompt_scale_diagnostic_v1",
+    "old_path": "scripts/run_pocket_decoration_prompt_scale_diagnostic_v1.py",
+    "entrypoint": "scripts/grounding/refinement/run_pocket_decoration_prompt_scale_diagnostic_v1.py",
+    "module": "fashion_multimodal_analysis.grounding.refinement.run_pocket_decoration_prompt_scale_diagnostic_v1",
+    "implementation": "src/fashion_multimodal_analysis/grounding/refinement/run_pocket_decoration_prompt_scale_diagnostic_v1.py",
+    "category": "grounding/refinement",
+    "description": "run pocket decoration prompt scale diagnostic v1",
+    "options": [
+      {
+        "flags": [
+          "--device"
+        ],
+        "choices": "['auto', 'cuda', 'cpu']",
+        "default": "'auto'"
+      },
+      {
+        "flags": [
+          "--text-threshold"
+        ],
+        "default": "0.25"
+      }
+    ]
+  },
+  "run_prd31_acceptance": {
+    "name": "run_prd31_acceptance",
+    "old_path": "",
+    "entrypoint": "scripts/integration/run_prd31_acceptance.py",
+    "module": "fashion_multimodal_analysis.integration.run_prd31_acceptance",
+    "implementation": "src/fashion_multimodal_analysis/integration/run_prd31_acceptance.py",
+    "category": "integration",
+    "description": "Run frozen v2 Track A and complete Track B; leave semantic grading to humans.",
+    "options": [
+      {
+        "flags": [
+          "--report-dir"
+        ]
+      }
+    ]
+  },
+  "run_prd31_bbox_mask_isolation_ablation_v1": {
+    "name": "run_prd31_bbox_mask_isolation_ablation_v1",
+    "old_path": "scripts/run_prd31_bbox_mask_isolation_ablation_v1.py",
+    "entrypoint": "scripts/integration/run_prd31_bbox_mask_isolation_ablation_v1.py",
+    "module": "fashion_multimodal_analysis.integration.run_prd31_bbox_mask_isolation_ablation_v1",
+    "implementation": "src/fashion_multimodal_analysis/integration/run_prd31_bbox_mask_isolation_ablation_v1.py",
+    "category": "integration",
+    "description": "PRD 3.1 bbox/mask isolation ablation v1",
+    "options": [
+      {
+        "flags": [
+          "--device"
+        ],
+        "choices": "['auto', 'cpu', 'cuda']",
+        "default": "'cuda'"
+      }
+    ]
+  },
+  "run_prd31_fullval_expansion_stage1": {
+    "name": "run_prd31_fullval_expansion_stage1",
+    "old_path": "scripts/run_prd31_fullval_expansion_stage1.py",
+    "entrypoint": "scripts/integration/run_prd31_fullval_expansion_stage1.py",
+    "module": "fashion_multimodal_analysis.integration.run_prd31_fullval_expansion_stage1",
+    "implementation": "src/fashion_multimodal_analysis/integration/run_prd31_fullval_expansion_stage1.py",
+    "category": "integration",
+    "description": "PRD 3.1 full-validation propagation expansion — Stage 1",
+    "options": [
+      {
+        "flags": [
+          "--device"
+        ],
+        "choices": "['auto', 'cuda', 'cpu']",
+        "default": "'cuda'"
+      },
+      {
+        "flags": [
+          "--score-threshold"
+        ],
+        "default": "0.4"
+      },
+      {
+        "flags": [
+          "--mask-threshold"
+        ],
+        "default": "0.5"
+      },
+      {
+        "flags": [
+          "--match-bbox-iou"
+        ],
+        "default": "0.5"
+      }
+    ]
+  },
+  "run_prd31_predicted_roi_attributes_fullval_v1": {
+    "name": "run_prd31_predicted_roi_attributes_fullval_v1",
+    "old_path": "scripts/run_prd31_predicted_roi_attributes_fullval_v1.py",
+    "entrypoint": "scripts/integration/run_prd31_predicted_roi_attributes_fullval_v1.py",
+    "module": "fashion_multimodal_analysis.integration.run_prd31_predicted_roi_attributes_fullval_v1",
+    "implementation": "src/fashion_multimodal_analysis/integration/run_prd31_predicted_roi_attributes_fullval_v1.py",
+    "category": "integration",
+    "description": "PRD 3.1 full-validation predicted-ROI -> 3.1.3 attribute propagation.",
+    "options": [
+      {
+        "flags": [
+          "--manifest"
+        ],
+        "default": "str(DEFAULT_MANIFEST)"
+      },
+      {
+        "flags": [
+          "--device"
+        ],
+        "choices": "['auto', 'cpu', 'cuda']",
+        "default": "'cuda'"
+      },
+      {
+        "flags": [
+          "--threads"
+        ],
+        "default": "4"
+      }
+    ]
+  },
+  "run_prd31_predicted_roi_attributes_v1": {
+    "name": "run_prd31_predicted_roi_attributes_v1",
+    "old_path": "scripts/run_prd31_predicted_roi_attributes_v1.py",
+    "entrypoint": "scripts/integration/run_prd31_predicted_roi_attributes_v1.py",
+    "module": "fashion_multimodal_analysis.integration.run_prd31_predicted_roi_attributes_v1",
+    "implementation": "src/fashion_multimodal_analysis/integration/run_prd31_predicted_roi_attributes_v1.py",
+    "category": "integration",
+    "description": "Run 3.1.3 attributes on the matched PREDICTED ROI manifest without overwriting",
+    "options": [
+      {
+        "flags": [
+          "--manifest"
+        ],
+        "default": "str(DEFAULT_MANIFEST)"
+      },
+      {
+        "flags": [
+          "--device"
+        ],
+        "choices": "['auto', 'cpu', 'cuda']",
+        "default": "'cuda'"
+      },
+      {
+        "flags": [
+          "--threads"
+        ],
+        "default": "4"
+      }
+    ]
+  },
+  "run_prd31_predicted_roi_attributes_v1_fixed": {
+    "name": "run_prd31_predicted_roi_attributes_v1_fixed",
+    "old_path": "scripts/run_prd31_predicted_roi_attributes_v1_fixed.py",
+    "entrypoint": "scripts/integration/run_prd31_predicted_roi_attributes_v1_fixed.py",
+    "module": "fashion_multimodal_analysis.integration.run_prd31_predicted_roi_attributes_v1_fixed",
+    "implementation": "src/fashion_multimodal_analysis/integration/run_prd31_predicted_roi_attributes_v1_fixed.py",
+    "category": "integration",
+    "description": "Compatibility-fixed wrapper for PRD 3.1 predicted-ROI attribute pilot.",
+    "options": [
+      {
+        "flags": [
+          "--manifest"
+        ],
+        "default": "str(DEFAULT_MANIFEST)"
+      },
+      {
+        "flags": [
+          "--device"
+        ],
+        "choices": "['auto', 'cpu', 'cuda']",
+        "default": "'cuda'"
+      },
+      {
+        "flags": [
+          "--threads"
+        ],
+        "default": "4"
+      }
+    ]
+  },
+  "run_prd31_predicted_roi_attributes_v2": {
+    "name": "run_prd31_predicted_roi_attributes_v2",
+    "old_path": "scripts/run_prd31_predicted_roi_attributes_v2.py",
+    "entrypoint": "scripts/integration/run_prd31_predicted_roi_attributes_v2.py",
+    "module": "fashion_multimodal_analysis.integration.run_prd31_predicted_roi_attributes_v2",
+    "implementation": "src/fashion_multimodal_analysis/integration/run_prd31_predicted_roi_attributes_v2.py",
+    "category": "integration",
+    "description": "Run 3.1.3 attributes on the matched PREDICTED ROI manifest (v2) without overwriting",
+    "options": [
+      {
+        "flags": [
+          "--manifest"
+        ],
+        "default": "str(DEFAULT_MANIFEST)"
+      },
+      {
+        "flags": [
+          "--device"
+        ],
+        "choices": "['auto', 'cpu', 'cuda']",
+        "default": "'cuda'"
+      },
+      {
+        "flags": [
+          "--threads"
+        ],
+        "default": "4"
+      }
+    ]
+  },
+  "run_prd31_recovery": {
+    "name": "run_prd31_recovery",
+    "old_path": "",
+    "entrypoint": "scripts/maintenance/run_prd31_recovery.py",
+    "module": "fashion_multimodal_analysis.maintenance.run_prd31_recovery",
+    "implementation": "src/fashion_multimodal_analysis/maintenance/run_prd31_recovery.py",
+    "category": "maintenance",
+    "description": "One workflow for clean retraining, reviewed tests and reproducible PRD reports.",
+    "options": [
+      {
+        "flags": [
+          "--phase"
+        ],
+        "choices": "['all', 'prepare', 'check', 'gpu', 'finish', 'report']",
+        "default": "'all'"
+      },
+      {
+        "flags": [
+          "--status"
+        ],
+        "action": "'store_true'",
+        "help": "'Read saved stages and recent log without starting any work'"
+      },
+      {
+        "flags": [
+          "--report-dir"
+        ],
+        "default": "'reports/reruns/recovery_v2/acceptance'"
+      }
+    ]
+  },
+  "run_prd31_v5_full_targets": {
+    "name": "run_prd31_v5_full_targets",
+    "old_path": "scripts/RUN_PRD31_V5_FULL_TARGETS.py",
+    "entrypoint": "scripts/segmentation/training/run_prd31_v5_full_targets.py",
+    "module": "fashion_multimodal_analysis.segmentation.training.run_prd31_v5_full_targets",
+    "implementation": "src/fashion_multimodal_analysis/segmentation/training/run_prd31_v5_full_targets.py",
+    "category": "segmentation/training",
+    "description": "Complete annotations on existing training images, train v5, compare on development images.",
+    "options": [
+      {
+        "flags": [
+          "--project"
+        ],
+        "default": "'.'"
+      },
+      {
+        "flags": [
+          "--data-root"
+        ],
+        "default": "os.environ.get('FASHION_DATA_ROOT', '../fashion_data')"
+      },
+      {
+        "flags": [
+          "--phase"
+        ],
+        "choices": "('prepare', 'all', 'compare')",
+        "default": "'all'"
+      }
+    ]
+  },
+  "run_prd31_v6_coverage": {
+    "name": "run_prd31_v6_coverage",
+    "old_path": "scripts/RUN_PRD31_V6_COVERAGE.py",
+    "entrypoint": "scripts/segmentation/training/run_prd31_v6_coverage.py",
+    "module": "fashion_multimodal_analysis.segmentation.training.run_prd31_v6_coverage",
+    "implementation": "src/fashion_multimodal_analysis/segmentation/training/run_prd31_v6_coverage.py",
+    "category": "segmentation/training",
+    "description": "Add complete DF2 training images for all 13 native labels; compare V5/V6 on development.",
+    "options": [
+      {
+        "flags": [
+          "--project"
+        ],
+        "default": "'.'"
+      },
+      {
+        "flags": [
+          "--data-root"
+        ],
+        "default": "os.environ.get('FASHION_DATA_ROOT', '../fashion_data')"
+      },
+      {
+        "flags": [
+          "--phase"
+        ],
+        "choices": "('all', 'prepare', 'compare')",
+        "default": "'all'"
+      },
+      {
+        "flags": [
+          "--images-per-fine"
+        ],
+        "default": "40"
+      },
+      {
+        "flags": [
+          "--selection-seed"
+        ],
+        "default": "20260930"
+      },
+      {
+        "flags": [
+          "--max-scan"
+        ],
+        "default": "50000",
+        "help": "'0 scans the full native training annotation directory'"
+      }
+    ]
+  },
+  "run_prd31_v7_fp_heads": {
+    "name": "run_prd31_v7_fp_heads",
+    "old_path": "scripts/RUN_PRD31_V7_FP_HEADS.py",
+    "entrypoint": "scripts/segmentation/training/run_prd31_v7_fp_heads.py",
+    "module": "fashion_multimodal_analysis.segmentation.training.run_prd31_v7_fp_heads",
+    "implementation": "src/fashion_multimodal_analysis/segmentation/training/run_prd31_v7_fp_heads.py",
+    "category": "segmentation/training",
+    "description": "Fine-tune V5 ROI heads for 3 epochs on its existing Fashionpedia training images.",
+    "options": [
+      {
+        "flags": [
+          "--project"
+        ],
+        "default": "'.'"
+      },
+      {
+        "flags": [
+          "--data-root"
+        ],
+        "default": "os.environ.get('FASHION_DATA_ROOT', '../fashion_data')"
+      },
+      {
+        "flags": [
+          "--phase"
+        ],
+        "choices": "('all', 'prepare', 'compare')",
+        "default": "'all'"
+      }
+    ]
+  },
+  "run_prd31_v8_full_dataset": {
+    "name": "run_prd31_v8_full_dataset",
+    "old_path": "scripts/run_prd31_v8_full_dataset.py",
+    "entrypoint": "scripts/segmentation/training/run_prd31_v8_full_dataset.py",
+    "module": "fashion_multimodal_analysis.segmentation.training.run_prd31_v8_full_dataset",
+    "implementation": "src/fashion_multimodal_analysis/segmentation/training/run_prd31_v8_full_dataset.py",
+    "category": "segmentation/training",
+    "description": "八类原始训练数据：准备索引、从 V5 微调、断点续跑、固定口径评估。",
+    "options": [
+      {
+        "flags": [
+          "--phase"
+        ],
+        "choices": "['prepare', 'all', 'train', 'evaluate', 'core']",
+        "default": "'all'",
+        "help": "'all=准备+训练+开发/Core400对照；evaluate=开发；core=开发和固定Core回归'"
+      },
+      {
+        "flags": [
+          "--project"
+        ],
+        "default": "''"
+      },
+      {
+        "flags": [
+          "--data-root"
+        ],
+        "default": "os.environ.get('FASHION_DATA_ROOT', '../fashion_data')"
+      },
+      {
+        "flags": [
+          "--df2-train"
+        ],
+        "default": "''"
+      },
+      {
+        "flags": [
+          "--fp-mode"
+        ],
+        "choices": "['auto', 'native-train', 'existing-train']",
+        "default": "'auto'"
+      },
+      {
+        "flags": [
+          "--fp-annotations"
+        ],
+        "default": "''"
+      },
+      {
+        "flags": [
+          "--fp-images"
+        ],
+        "default": "''"
+      },
+      {
+        "flags": [
+          "--allow-bad-images"
+        ],
+        "action": "'store_true'",
+        "help": "'显式记录并排除无效整张图；默认原始数据无效时不训练'"
+      },
+      {
+        "flags": [
+          "--run-name"
+        ],
+        "default": "'v8_full_dataset_recovery_20261008'"
+      },
+      {
+        "flags": [
+          "--init-checkpoint"
+        ],
+        "default": "''"
+      },
+      {
+        "flags": [
+          "--epochs"
+        ],
+        "default": "1",
+        "help": "'总轮数，续跑不会从头重来'"
+      },
+      {
+        "flags": [
+          "--batch-size"
+        ],
+        "default": "1"
+      },
+      {
+        "flags": [
+          "--workers"
+        ],
+        "default": "2"
+      },
+      {
+        "flags": [
+          "--prepare-workers"
+        ],
+        "default": "4"
+      },
+      {
+        "flags": [
+          "--lr"
+        ],
+        "default": "0.0001"
+      },
+      {
+        "flags": [
+          "--warmup-steps"
+        ],
+        "default": "1000"
+      },
+      {
+        "flags": [
+          "--seed"
+        ],
+        "default": "20260930"
+      },
+      {
+        "flags": [
+          "--min-size"
+        ],
+        "default": "640"
+      },
+      {
+        "flags": [
+          "--max-size"
+        ],
+        "default": "1024"
+      },
+      {
+        "flags": [
+          "--no-hflip"
+        ],
+        "action": "'store_true'"
+      },
+      {
+        "flags": [
+          "--no-amp"
+        ],
+        "action": "'store_true'"
+      },
+      {
+        "flags": [
+          "--save-every-steps"
+        ],
+        "default": "1000"
+      },
+      {
+        "flags": [
+          "--log-every"
+        ],
+        "default": "100"
+      }
+    ]
+  },
+  "run_primary_color_baseline_v1": {
+    "name": "run_primary_color_baseline_v1",
+    "old_path": "scripts/run_primary_color_baseline_v1.py",
+    "entrypoint": "scripts/attributes/color/run_primary_color_baseline_v1.py",
+    "module": "fashion_multimodal_analysis.attributes.color.run_primary_color_baseline_v1",
+    "implementation": "src/fashion_multimodal_analysis/attributes/color/run_primary_color_baseline_v1.py",
+    "category": "attributes/color",
+    "description": "PRD 3.1.3 primary color baseline v1.",
+    "options": [
+      {
+        "flags": [
+          "--manifest"
+        ],
+        "required": "True"
+      },
+      {
+        "flags": [
+          "--holdout-size"
+        ],
+        "default": "40"
+      },
+      {
+        "flags": [
+          "--seed"
+        ],
+        "default": "20260918"
+      },
+      {
+        "flags": [
+          "--threads"
+        ],
+        "default": "4"
+      }
+    ]
+  },
+  "run_roi_conditioned_grounding": {
+    "name": "run_roi_conditioned_grounding",
+    "old_path": "scripts/run_roi_conditioned_grounding.py",
+    "entrypoint": "scripts/grounding/baselines/run_roi_conditioned_grounding.py",
+    "module": "fashion_multimodal_analysis.grounding.baselines.run_roi_conditioned_grounding",
+    "implementation": "src/fashion_multimodal_analysis/grounding/baselines/run_roi_conditioned_grounding.py",
+    "category": "grounding/baselines",
+    "description": "Run annotation-assisted ROI-conditioned Grounding DINO evaluation.",
+    "options": [
+      {
+        "flags": [
+          "--audit-file"
+        ],
+        "default": "DEFAULT_AUDIT_FILE",
+        "help": "'Manual localization audit CSV.'"
+      },
+      {
+        "flags": [
+          "--limit"
+        ],
+        "default": "None",
+        "help": "'Optional maximum number of audit cases. ' + 'Useful for smoke tests.'"
+      },
+      {
+        "flags": [
+          "--threshold"
+        ],
+        "default": "DEFAULT_THRESHOLD",
+        "help": "'Grounding DINO detection threshold.'"
+      }
+    ]
+  },
+  "run_segmentation_first_diagnostic": {
+    "name": "run_segmentation_first_diagnostic",
+    "old_path": "scripts/run_segmentation_first_diagnostic.py",
+    "entrypoint": "scripts/grounding/refinement/run_segmentation_first_diagnostic.py",
+    "module": "fashion_multimodal_analysis.grounding.refinement.run_segmentation_first_diagnostic",
+    "implementation": "src/fashion_multimodal_analysis/grounding/refinement/run_segmentation_first_diagnostic.py",
+    "category": "grounding/refinement",
+    "description": "Run a segmentation-first tight-crop diagnostic for Grounding DINO.",
+    "options": [
+      {
+        "flags": [
+          "--threshold"
+        ],
+        "default": "DEFAULT_THRESHOLD",
+        "help": "f'Detection threshold (default: {DEFAULT_THRESHOLD}).'"
+      },
+      {
+        "flags": [
+          "--max-cases"
+        ],
+        "default": "None",
+        "help": "'Optional limit for a quick smoke test.'"
+      },
+      {
+        "flags": [
+          "--skip-visuals"
+        ],
+        "action": "'store_true'",
+        "help": "'Skip comparison image generation.'"
+      }
+    ]
+  },
+  "run_shoulder_waist_pattern_groundingdino_refinement_v1": {
+    "name": "run_shoulder_waist_pattern_groundingdino_refinement_v1",
+    "old_path": "scripts/run_shoulder_waist_pattern_groundingdino_refinement_v1.py",
+    "entrypoint": "scripts/grounding/refinement/run_shoulder_waist_pattern_groundingdino_refinement_v1.py",
+    "module": "fashion_multimodal_analysis.grounding.refinement.run_shoulder_waist_pattern_groundingdino_refinement_v1",
+    "implementation": "src/fashion_multimodal_analysis/grounding/refinement/run_shoulder_waist_pattern_groundingdino_refinement_v1.py",
+    "category": "grounding/refinement",
+    "description": "run shoulder waist pattern groundingdino refinement v1",
+    "options": [
+      {
+        "flags": [
+          "--model-id"
+        ],
+        "default": "'IDEA-Research/grounding-dino-tiny'"
+      },
+      {
+        "flags": [
+          "--device"
+        ],
+        "choices": "['auto', 'cuda', 'cpu']",
+        "default": "'auto'"
+      },
+      {
+        "flags": [
+          "--text-threshold"
+        ],
+        "default": "0.25"
+      }
+    ]
+  },
+  "run_skirt_dress_length_continuous_v1": {
+    "name": "run_skirt_dress_length_continuous_v1",
+    "old_path": "scripts/run_skirt_dress_length_continuous_v1.py",
+    "entrypoint": "scripts/attributes/geometry/run_skirt_dress_length_continuous_v1.py",
+    "module": "fashion_multimodal_analysis.attributes.geometry.run_skirt_dress_length_continuous_v1",
+    "implementation": "src/fashion_multimodal_analysis/attributes/geometry/run_skirt_dress_length_continuous_v1.py",
+    "category": "attributes/geometry",
+    "description": "PRD 3.1.3 skirt/dress length continuous semantic baseline v1.",
+    "options": [
+      {
+        "flags": [
+          "--manifest"
+        ],
+        "required": "True"
+      },
+      {
+        "flags": [
+          "--threads"
+        ],
+        "default": "4"
+      }
+    ]
+  },
+  "run_sleeve_length_continuous_v1": {
+    "name": "run_sleeve_length_continuous_v1",
+    "old_path": "scripts/run_sleeve_length_continuous_v1.py",
+    "entrypoint": "scripts/attributes/geometry/run_sleeve_length_continuous_v1.py",
+    "module": "fashion_multimodal_analysis.attributes.geometry.run_sleeve_length_continuous_v1",
+    "implementation": "src/fashion_multimodal_analysis/attributes/geometry/run_sleeve_length_continuous_v1.py",
+    "category": "attributes/geometry",
+    "description": "PRD 3.1.3 continuous sleeve-length feature baseline v1.",
+    "options": [
+      {
+        "flags": [
+          "--manifest"
+        ],
+        "required": "True"
+      },
+      {
+        "flags": [
+          "--short-threshold"
+        ],
+        "default": "0.3"
+      },
+      {
+        "flags": [
+          "--long-threshold"
+        ],
+        "default": "0.6"
+      },
+      {
+        "flags": [
+          "--threads"
+        ],
+        "default": "4"
+      }
+    ]
+  },
+  "run_verified_positive_prompt_diagnostic": {
+    "name": "run_verified_positive_prompt_diagnostic",
+    "old_path": "scripts/run_verified_positive_prompt_diagnostic.py",
+    "entrypoint": "scripts/grounding/baselines/run_verified_positive_prompt_diagnostic.py",
+    "module": "fashion_multimodal_analysis.grounding.baselines.run_verified_positive_prompt_diagnostic",
+    "implementation": "src/fashion_multimodal_analysis/grounding/baselines/run_verified_positive_prompt_diagnostic.py",
+    "category": "grounding/baselines",
+    "description": "Run a controlled prompt diagnostic on verified-positive cases.",
+    "options": [
+      {
+        "flags": [
+          "--per-target"
+        ],
+        "default": "DEFAULT_PER_TARGET",
+        "help": "f'Cases sampled per target (default: {DEFAULT_PER_TARGET}).'"
+      },
+      {
+        "flags": [
+          "--seed"
+        ],
+        "default": "DEFAULT_SEED",
+        "help": "f'Sampling seed (default: {DEFAULT_SEED}).'"
+      },
+      {
+        "flags": [
+          "--threshold"
+        ],
+        "default": "DEFAULT_THRESHOLD",
+        "help": "f'Detection threshold (default: {DEFAULT_THRESHOLD}).'"
+      },
+      {
+        "flags": [
+          "--skip-visuals"
+        ],
+        "action": "'store_true'",
+        "help": "'Skip annotated comparison images.'"
+      }
+    ]
+  },
+  "setup_prd31_benchmark_v1": {
+    "name": "setup_prd31_benchmark_v1",
+    "old_path": "scripts/setup_prd31_benchmark_v1.py",
+    "entrypoint": "scripts/benchmarking/setup_prd31_benchmark_v1.py",
+    "module": "fashion_multimodal_analysis.benchmarking.setup_prd31_benchmark_v1",
+    "implementation": "src/fashion_multimodal_analysis/benchmarking/setup_prd31_benchmark_v1.py",
+    "category": "benchmarking",
+    "description": "Install PRD 3.1 Standard Benchmark & Acceptance Suite v1",
+    "options": [
+      {
+        "flags": [
+          "--force"
+        ],
+        "action": "'store_true'"
+      }
+    ]
+  },
+  "suggest_prd31_core_scene_metadata_v1": {
+    "name": "suggest_prd31_core_scene_metadata_v1",
+    "old_path": "scripts/suggest_prd31_core_scene_metadata_v1.py",
+    "entrypoint": "scripts/benchmarking/suggest_prd31_core_scene_metadata_v1.py",
+    "module": "fashion_multimodal_analysis.benchmarking.suggest_prd31_core_scene_metadata_v1",
+    "implementation": "src/fashion_multimodal_analysis/benchmarking/suggest_prd31_core_scene_metadata_v1.py",
+    "category": "benchmarking",
+    "description": "Generate CLIP-assisted coverage metadata suggestions for PRD 3.1.1 Core.",
+    "options": [
+      {
+        "flags": [
+          "--device"
+        ],
+        "default": "'cuda' if torch.cuda.is_available() else 'cpu'"
+      },
+      {
+        "flags": [
+          "--model"
+        ],
+        "default": "'openai/clip-vit-base-patch32'"
+      },
+      {
+        "flags": [
+          "--batch-size"
+        ],
+        "default": "16"
+      },
+      {
+        "flags": [
+          "--scene-confidence-min"
+        ],
+        "default": "0.4"
+      },
+      {
+        "flags": [
+          "--scene-margin-min"
+        ],
+        "default": "0.08"
+      },
+      {
+        "flags": [
+          "--attribute-confidence-min"
+        ],
+        "default": "0.45"
+      },
+      {
+        "flags": [
+          "--attribute-margin-min"
+        ],
+        "default": "0.08"
+      }
+    ]
+  },
+  "suggest_prd31_core_scene_metadata_v1_fixed": {
+    "name": "suggest_prd31_core_scene_metadata_v1_fixed",
+    "old_path": "scripts/suggest_prd31_core_scene_metadata_v1_fixed.py",
+    "entrypoint": "scripts/benchmarking/suggest_prd31_core_scene_metadata_v1_fixed.py",
+    "module": "fashion_multimodal_analysis.benchmarking.suggest_prd31_core_scene_metadata_v1_fixed",
+    "implementation": "src/fashion_multimodal_analysis/benchmarking/suggest_prd31_core_scene_metadata_v1_fixed.py",
+    "category": "benchmarking",
+    "description": "Generate CLIP-assisted coverage metadata suggestions for PRD 3.1.1 Core.",
+    "options": [
+      {
+        "flags": [
+          "--device"
+        ],
+        "default": "'cuda' if torch.cuda.is_available() else 'cpu'"
+      },
+      {
+        "flags": [
+          "--model"
+        ],
+        "default": "'openai/clip-vit-base-patch32'"
+      },
+      {
+        "flags": [
+          "--batch-size"
+        ],
+        "default": "16"
+      },
+      {
+        "flags": [
+          "--scene-confidence-min"
+        ],
+        "default": "0.4"
+      },
+      {
+        "flags": [
+          "--scene-margin-min"
+        ],
+        "default": "0.08"
+      },
+      {
+        "flags": [
+          "--attribute-confidence-min"
+        ],
+        "default": "0.45"
+      },
+      {
+        "flags": [
+          "--attribute-margin-min"
+        ],
+        "default": "0.08"
+      }
+    ]
+  },
+  "summarize_attribute_manual_audit": {
+    "name": "summarize_attribute_manual_audit",
+    "old_path": "scripts/summarize_attribute_manual_audit.py",
+    "entrypoint": "scripts/analysis/summarize_attribute_manual_audit.py",
+    "module": "fashion_multimodal_analysis.analysis.summarize_attribute_manual_audit",
+    "implementation": "src/fashion_multimodal_analysis/analysis/summarize_attribute_manual_audit.py",
+    "category": "analysis",
+    "description": "Summarize a completed PRD 3.1.3 manual audit CSV.",
+    "options": [
+      {
+        "flags": [
+          "--audit"
+        ],
+        "required": "True"
+      }
+    ]
+  },
+  "summarize_prd31_acceptance": {
+    "name": "summarize_prd31_acceptance",
+    "old_path": "",
+    "entrypoint": "scripts/analysis/summarize_prd31_acceptance.py",
+    "module": "fashion_multimodal_analysis.analysis.summarize_prd31_acceptance",
+    "implementation": "src/fashion_multimodal_analysis/analysis/summarize_prd31_acceptance.py",
+    "category": "analysis",
+    "description": "Finalize strict semantic reviews, PRD gates and complete-chain failure attribution.",
+    "options": [
+      {
+        "flags": [
+          "--report-dir"
+        ],
+        "default": "'reports/reruns/recovery_v2/acceptance'"
+      },
+      {
+        "flags": [
+          "--grounding-audit"
+        ]
+      }
+    ]
+  },
+  "summarize_prompt_diagnostic_no_pandas": {
+    "name": "summarize_prompt_diagnostic_no_pandas",
+    "old_path": "scripts/summarize_prompt_diagnostic_no_pandas.py",
+    "entrypoint": "scripts/analysis/summarize_prompt_diagnostic_no_pandas.py",
+    "module": "fashion_multimodal_analysis.analysis.summarize_prompt_diagnostic_no_pandas",
+    "implementation": "src/fashion_multimodal_analysis/analysis/summarize_prompt_diagnostic_no_pandas.py",
+    "category": "analysis",
+    "description": "Summarize prompt diagnostic results without pandas.",
+    "options": []
+  },
+  "summarize_saved_results": {
+    "category": "maintenance",
+    "description": "从全部已保存评估建立独立汇总表，不重新运行 GPU。",
+    "entrypoint": "scripts/maintenance/summarize_saved_results.py",
+    "implementation": "src/fashion_multimodal_analysis/maintenance/summarize_saved_results.py",
+    "module": "fashion_multimodal_analysis.maintenance.summarize_saved_results",
+    "options": [
+      {
+        "flags": [
+          "--project"
+        ],
+        "default": "None",
+        "help": "'项目目录，默认自动定位'"
+      },
+      {
+        "flags": [
+          "--output"
+        ],
+        "default": "'reports/repository_summary/saved_evaluations.csv'",
+        "help": "'独立汇总表的相对路径'"
+      }
+    ],
+    "name": "summarize_saved_results",
+    "old_path": "scripts/maintenance/summarize_saved_results.py"
+  },
+  "sweep_prd_8class_maskrcnn_thresholds_v1": {
+    "name": "sweep_prd_8class_maskrcnn_thresholds_v1",
+    "old_path": "scripts/sweep_prd_8class_maskrcnn_thresholds_v1.py",
+    "entrypoint": "scripts/segmentation/evaluation/sweep_prd_8class_maskrcnn_thresholds_v1.py",
+    "module": "fashion_multimodal_analysis.segmentation.evaluation.sweep_prd_8class_maskrcnn_thresholds_v1",
+    "implementation": "src/fashion_multimodal_analysis/segmentation/evaluation/sweep_prd_8class_maskrcnn_thresholds_v1.py",
+    "category": "segmentation/evaluation",
+    "description": "Run a score-threshold sweep on the already-trained PRD 3.1.1 8-class",
+    "options": [
+      {
+        "flags": [
+          "--device"
+        ],
+        "choices": "['auto', 'cuda', 'cpu']",
+        "default": "'cuda'"
+      },
+      {
+        "flags": [
+          "--thresholds"
+        ],
+        "default": "DEFAULT_THRESHOLDS"
+      },
+      {
+        "flags": [
+          "--checkpoint"
+        ],
+        "default": "''",
+        "help": "'Optional checkpoint path. Empty = evaluator default checkpoint_last.pth.'"
+      }
+    ]
+  },
+  "test_language_prompts": {
+    "name": "check_language_prompts",
+    "old_path": "scripts/test_language_prompts.py",
+    "entrypoint": "scripts/grounding/baselines/check_language_prompts.py",
+    "module": "fashion_multimodal_analysis.grounding.baselines.check_language_prompts",
+    "implementation": "src/fashion_multimodal_analysis/grounding/baselines/check_language_prompts.py",
+    "category": "grounding/baselines",
+    "description": "test language prompts",
+    "options": []
+  },
+  "test_mask2former_training_input": {
+    "name": "check_mask2former_training_input",
+    "old_path": "scripts/test_mask2former_training_input.py",
+    "entrypoint": "scripts/segmentation/baselines/check_mask2former_training_input.py",
+    "module": "fashion_multimodal_analysis.segmentation.baselines.check_mask2former_training_input",
+    "implementation": "src/fashion_multimodal_analysis/segmentation/baselines/check_mask2former_training_input.py",
+    "category": "segmentation/baselines",
+    "description": "Test Mask2Former preprocessing with one DeepFashion2 sample.",
+    "options": []
+  },
+  "test_prompt_variants": {
+    "name": "diagnose_prompt_variants",
+    "old_path": "scripts/test_prompt_variants.py",
+    "entrypoint": "scripts/grounding/baselines/diagnose_prompt_variants.py",
+    "module": "fashion_multimodal_analysis.grounding.baselines.diagnose_prompt_variants",
+    "implementation": "src/fashion_multimodal_analysis/grounding/baselines/diagnose_prompt_variants.py",
+    "category": "grounding/baselines",
+    "description": "test prompt variants",
+    "options": []
+  },
+  "test_resize_crop_infer": {
+    "name": "diagnose_resized_crop_inference",
+    "old_path": "scripts/test_resize_crop_infer.py",
+    "entrypoint": "scripts/segmentation/diagnostics/diagnose_resized_crop_inference.py",
+    "module": "fashion_multimodal_analysis.segmentation.diagnostics.diagnose_resized_crop_inference",
+    "implementation": "src/fashion_multimodal_analysis/segmentation/diagnostics/diagnose_resized_crop_inference.py",
+    "category": "segmentation/diagnostics",
+    "description": "test resize crop infer",
+    "options": []
+  },
+  "test_small_crop_resize": {
+    "name": "diagnose_small_crop_resize",
+    "old_path": "scripts/test_small_crop_resize.py",
+    "entrypoint": "scripts/segmentation/diagnostics/diagnose_small_crop_resize.py",
+    "module": "fashion_multimodal_analysis.segmentation.diagnostics.diagnose_small_crop_resize",
+    "implementation": "src/fashion_multimodal_analysis/segmentation/diagnostics/diagnose_small_crop_resize.py",
+    "category": "segmentation/diagnostics",
+    "description": "test small crop resize",
+    "options": []
+  },
+  "train_core_part_detector_v1": {
+    "name": "train_core_part_detector_v1",
+    "old_path": "scripts/train_core_part_detector_v1.py",
+    "entrypoint": "scripts/grounding/core_parts/train_core_part_detector_v1.py",
+    "module": "fashion_multimodal_analysis.grounding.core_parts.train_core_part_detector_v1",
+    "implementation": "src/fashion_multimodal_analysis/grounding/core_parts/train_core_part_detector_v1.py",
+    "category": "grounding/core_parts",
+    "description": "Train a small supervised part detector for collar / cuff / hem.",
+    "options": [
+      {
+        "flags": [
+          "--epochs"
+        ],
+        "default": "20"
+      },
+      {
+        "flags": [
+          "--batch-size"
+        ],
+        "default": "2"
+      },
+      {
+        "flags": [
+          "--lr"
+        ],
+        "default": "0.001"
+      },
+      {
+        "flags": [
+          "--weight-decay"
+        ],
+        "default": "0.0005"
+      },
+      {
+        "flags": [
+          "--score-threshold"
+        ],
+        "default": "0.25"
+      },
+      {
+        "flags": [
+          "--iou-threshold"
+        ],
+        "default": "0.5"
+      },
+      {
+        "flags": [
+          "--seed"
+        ],
+        "default": "20260914"
+      },
+      {
+        "flags": [
+          "--num-workers"
+        ],
+        "default": "0"
+      },
+      {
+        "flags": [
+          "--max-train-batches"
+        ],
+        "default": "None",
+        "help": "'Optional smoke-test limit per epoch.'"
+      }
+    ]
+  },
+  "train_prd_8class_maskrcnn_baseline_v1": {
+    "name": "train_prd_8class_maskrcnn_baseline_v1",
+    "old_path": "scripts/train_prd_8class_maskrcnn_baseline_v1.py",
+    "entrypoint": "scripts/segmentation/training/train_prd_8class_maskrcnn_baseline_v1.py",
+    "module": "fashion_multimodal_analysis.segmentation.training.train_prd_8class_maskrcnn_baseline_v1",
+    "implementation": "src/fashion_multimodal_analysis/segmentation/training/train_prd_8class_maskrcnn_baseline_v1.py",
+    "category": "segmentation/training",
+    "description": "Train PRD 3.1.1 8-class Mask R-CNN baseline.",
+    "options": [
+      {
+        "flags": [
+          "--epochs"
+        ],
+        "default": "15"
+      },
+      {
+        "flags": [
+          "--batch-size"
+        ],
+        "default": "1"
+      },
+      {
+        "flags": [
+          "--workers"
+        ],
+        "default": "0"
+      },
+      {
+        "flags": [
+          "--lr"
+        ],
+        "default": "0.0025"
+      },
+      {
+        "flags": [
+          "--momentum"
+        ],
+        "default": "0.9"
+      },
+      {
+        "flags": [
+          "--weight-decay"
+        ],
+        "default": "0.0005"
+      },
+      {
+        "flags": [
+          "--step-size"
+        ],
+        "default": "5"
+      },
+      {
+        "flags": [
+          "--gamma"
+        ],
+        "default": "0.1"
+      },
+      {
+        "flags": [
+          "--device"
+        ],
+        "choices": "['auto', 'cuda', 'cpu']",
+        "default": "'auto'"
+      },
+      {
+        "flags": [
+          "--seed"
+        ],
+        "default": "20260918"
+      },
+      {
+        "flags": [
+          "--min-size"
+        ],
+        "default": "640",
+        "help": "'Mask R-CNN short-side resize.'"
+      },
+      {
+        "flags": [
+          "--max-size"
+        ],
+        "default": "1024",
+        "help": "'Mask R-CNN long-side resize cap.'"
+      },
+      {
+        "flags": [
+          "--save-every"
+        ],
+        "default": "5"
+      },
+      {
+        "flags": [
+          "--no-hflip"
+        ],
+        "action": "'store_true'",
+        "help": "'Disable random horizontal flip.'"
+      },
+      {
+        "flags": [
+          "--dry-run"
+        ],
+        "action": "'store_true'",
+        "help": "'Validate data loading only; do not train.'"
+      }
+    ]
+  },
+  "train_prd_8class_maskrcnn_baseline_v2_balanced": {
+    "name": "train_prd_8class_maskrcnn_baseline_v2_balanced",
+    "old_path": "scripts/train_prd_8class_maskrcnn_baseline_v2_balanced.py",
+    "entrypoint": "scripts/segmentation/training/train_prd_8class_maskrcnn_baseline_v2_balanced.py",
+    "module": "fashion_multimodal_analysis.segmentation.training.train_prd_8class_maskrcnn_baseline_v2_balanced",
+    "implementation": "src/fashion_multimodal_analysis/segmentation/training/train_prd_8class_maskrcnn_baseline_v2_balanced.py",
+    "category": "segmentation/training",
+    "description": "Train PRD 3.1.1 Mask R-CNN baseline v2 using the expanded train_v2 manifest.",
+    "options": [
+      {
+        "flags": [
+          "--epochs"
+        ],
+        "default": "15"
+      },
+      {
+        "flags": [
+          "--batch-size"
+        ],
+        "default": "1"
+      },
+      {
+        "flags": [
+          "--workers"
+        ],
+        "default": "0"
+      },
+      {
+        "flags": [
+          "--lr"
+        ],
+        "default": "0.0025"
+      },
+      {
+        "flags": [
+          "--momentum"
+        ],
+        "default": "0.9"
+      },
+      {
+        "flags": [
+          "--weight-decay"
+        ],
+        "default": "0.0005"
+      },
+      {
+        "flags": [
+          "--step-size"
+        ],
+        "default": "5"
+      },
+      {
+        "flags": [
+          "--gamma"
+        ],
+        "default": "0.1"
+      },
+      {
+        "flags": [
+          "--device"
+        ],
+        "choices": "['auto', 'cuda', 'cpu']",
+        "default": "'auto'"
+      },
+      {
+        "flags": [
+          "--seed"
+        ],
+        "default": "20260921"
+      },
+      {
+        "flags": [
+          "--min-size"
+        ],
+        "default": "640"
+      },
+      {
+        "flags": [
+          "--max-size"
+        ],
+        "default": "1024"
+      },
+      {
+        "flags": [
+          "--save-every"
+        ],
+        "default": "5"
+      },
+      {
+        "flags": [
+          "--sampler-alpha"
+        ],
+        "default": "0.5",
+        "help": "'Damped inverse-frequency exponent. ' + '0=no balancing, 0.5=sqrt balancing, 1=full inverse-frequency.'"
+      },
+      {
+        "flags": [
+          "--no-balanced-sampler"
+        ],
+        "action": "'store_true'",
+        "help": "'Disable class-aware weighted image-group sampling.'"
+      },
+      {
+        "flags": [
+          "--no-hflip"
+        ],
+        "action": "'store_true'"
+      },
+      {
+        "flags": [
+          "--dry-run"
+        ],
+        "action": "'store_true'",
+        "help": "'Validate manifests, masks and sampler only; do not train.'"
+      }
+    ]
+  },
+  "train_prd_8class_maskrcnn_baseline_v2_nobalance": {
+    "name": "train_prd_8class_maskrcnn_baseline_v2_nobalance",
+    "old_path": "scripts/train_prd_8class_maskrcnn_baseline_v2_nobalance.py",
+    "entrypoint": "scripts/segmentation/training/train_prd_8class_maskrcnn_baseline_v2_nobalance.py",
+    "module": "fashion_multimodal_analysis.segmentation.training.train_prd_8class_maskrcnn_baseline_v2_nobalance",
+    "implementation": "src/fashion_multimodal_analysis/segmentation/training/train_prd_8class_maskrcnn_baseline_v2_nobalance.py",
+    "category": "segmentation/training",
+    "description": "Train PRD 3.1.1 Mask R-CNN baseline v2 using the expanded train_v2 manifest.",
+    "options": [
+      {
+        "flags": [
+          "--epochs"
+        ],
+        "default": "15"
+      },
+      {
+        "flags": [
+          "--batch-size"
+        ],
+        "default": "1"
+      },
+      {
+        "flags": [
+          "--workers"
+        ],
+        "default": "0"
+      },
+      {
+        "flags": [
+          "--lr"
+        ],
+        "default": "0.0025"
+      },
+      {
+        "flags": [
+          "--momentum"
+        ],
+        "default": "0.9"
+      },
+      {
+        "flags": [
+          "--weight-decay"
+        ],
+        "default": "0.0005"
+      },
+      {
+        "flags": [
+          "--step-size"
+        ],
+        "default": "5"
+      },
+      {
+        "flags": [
+          "--gamma"
+        ],
+        "default": "0.1"
+      },
+      {
+        "flags": [
+          "--device"
+        ],
+        "choices": "['auto', 'cuda', 'cpu']",
+        "default": "'auto'"
+      },
+      {
+        "flags": [
+          "--seed"
+        ],
+        "default": "20260921"
+      },
+      {
+        "flags": [
+          "--min-size"
+        ],
+        "default": "640"
+      },
+      {
+        "flags": [
+          "--max-size"
+        ],
+        "default": "1024"
+      },
+      {
+        "flags": [
+          "--save-every"
+        ],
+        "default": "5"
+      },
+      {
+        "flags": [
+          "--sampler-alpha"
+        ],
+        "default": "0.5",
+        "help": "'Damped inverse-frequency exponent. ' + '0=no balancing, 0.5=sqrt balancing, 1=full inverse-frequency.'"
+      },
+      {
+        "flags": [
+          "--no-balanced-sampler"
+        ],
+        "action": "'store_true'",
+        "help": "'Disable class-aware weighted image-group sampling.'"
+      },
+      {
+        "flags": [
+          "--no-hflip"
+        ],
+        "action": "'store_true'"
+      },
+      {
+        "flags": [
+          "--dry-run"
+        ],
+        "action": "'store_true'",
+        "help": "'Validate manifests, masks and sampler only; do not train.'"
+      }
+    ]
+  },
+  "train_prd_8class_maskrcnn_v3_a1_highres": {
+    "name": "train_prd_8class_maskrcnn_v3_a1_highres",
+    "old_path": "scripts/train_prd_8class_maskrcnn_v3_a1_highres.py",
+    "entrypoint": "scripts/segmentation/training/train_prd_8class_maskrcnn_v3_a1_highres.py",
+    "module": "fashion_multimodal_analysis.segmentation.training.train_prd_8class_maskrcnn_v3_a1_highres",
+    "implementation": "src/fashion_multimodal_analysis/segmentation/training/train_prd_8class_maskrcnn_v3_a1_highres.py",
+    "category": "segmentation/training",
+    "description": "Train PRD 3.1.1 Mask R-CNN baseline v2 using the expanded train_v2 manifest.",
+    "options": [
+      {
+        "flags": [
+          "--epochs"
+        ],
+        "default": "15"
+      },
+      {
+        "flags": [
+          "--batch-size"
+        ],
+        "default": "1"
+      },
+      {
+        "flags": [
+          "--workers"
+        ],
+        "default": "0"
+      },
+      {
+        "flags": [
+          "--lr"
+        ],
+        "default": "0.0025"
+      },
+      {
+        "flags": [
+          "--momentum"
+        ],
+        "default": "0.9"
+      },
+      {
+        "flags": [
+          "--weight-decay"
+        ],
+        "default": "0.0005"
+      },
+      {
+        "flags": [
+          "--step-size"
+        ],
+        "default": "5"
+      },
+      {
+        "flags": [
+          "--gamma"
+        ],
+        "default": "0.1"
+      },
+      {
+        "flags": [
+          "--device"
+        ],
+        "choices": "['auto', 'cuda', 'cpu']",
+        "default": "'auto'"
+      },
+      {
+        "flags": [
+          "--seed"
+        ],
+        "default": "20260921"
+      },
+      {
+        "flags": [
+          "--min-size"
+        ],
+        "default": "640"
+      },
+      {
+        "flags": [
+          "--max-size"
+        ],
+        "default": "1024"
+      },
+      {
+        "flags": [
+          "--save-every"
+        ],
+        "default": "5"
+      },
+      {
+        "flags": [
+          "--sampler-alpha"
+        ],
+        "default": "0.5",
+        "help": "'Damped inverse-frequency exponent. ' + '0=no balancing, 0.5=sqrt balancing, 1=full inverse-frequency.'"
+      },
+      {
+        "flags": [
+          "--no-balanced-sampler"
+        ],
+        "action": "'store_true'",
+        "help": "'Disable class-aware weighted image-group sampling.'"
+      },
+      {
+        "flags": [
+          "--no-hflip"
+        ],
+        "action": "'store_true'"
+      },
+      {
+        "flags": [
+          "--dry-run"
+        ],
+        "action": "'store_true'",
+        "help": "'Validate manifests, masks and sampler only; do not train.'"
+      }
+    ]
+  },
+  "train_prd_8class_maskrcnn_v3_a2_smallanchors": {
+    "name": "train_prd_8class_maskrcnn_v3_a2_smallanchors",
+    "old_path": "scripts/train_prd_8class_maskrcnn_v3_a2_smallanchors.py",
+    "entrypoint": "scripts/segmentation/training/train_prd_8class_maskrcnn_v3_a2_smallanchors.py",
+    "module": "fashion_multimodal_analysis.segmentation.training.train_prd_8class_maskrcnn_v3_a2_smallanchors",
+    "implementation": "src/fashion_multimodal_analysis/segmentation/training/train_prd_8class_maskrcnn_v3_a2_smallanchors.py",
+    "category": "segmentation/training",
+    "description": "Train PRD 3.1.1 Mask R-CNN baseline v2 using the expanded train_v2 manifest.",
+    "options": [
+      {
+        "flags": [
+          "--epochs"
+        ],
+        "default": "15"
+      },
+      {
+        "flags": [
+          "--batch-size"
+        ],
+        "default": "1"
+      },
+      {
+        "flags": [
+          "--workers"
+        ],
+        "default": "0"
+      },
+      {
+        "flags": [
+          "--lr"
+        ],
+        "default": "0.0025"
+      },
+      {
+        "flags": [
+          "--momentum"
+        ],
+        "default": "0.9"
+      },
+      {
+        "flags": [
+          "--weight-decay"
+        ],
+        "default": "0.0005"
+      },
+      {
+        "flags": [
+          "--step-size"
+        ],
+        "default": "5"
+      },
+      {
+        "flags": [
+          "--gamma"
+        ],
+        "default": "0.1"
+      },
+      {
+        "flags": [
+          "--device"
+        ],
+        "choices": "['auto', 'cuda', 'cpu']",
+        "default": "'auto'"
+      },
+      {
+        "flags": [
+          "--seed"
+        ],
+        "default": "20260921"
+      },
+      {
+        "flags": [
+          "--min-size"
+        ],
+        "default": "640"
+      },
+      {
+        "flags": [
+          "--max-size"
+        ],
+        "default": "1024"
+      },
+      {
+        "flags": [
+          "--save-every"
+        ],
+        "default": "5"
+      },
+      {
+        "flags": [
+          "--sampler-alpha"
+        ],
+        "default": "0.5",
+        "help": "'Damped inverse-frequency exponent. ' + '0=no balancing, 0.5=sqrt balancing, 1=full inverse-frequency.'"
+      },
+      {
+        "flags": [
+          "--no-balanced-sampler"
+        ],
+        "action": "'store_true'",
+        "help": "'Disable class-aware weighted image-group sampling.'"
+      },
+      {
+        "flags": [
+          "--no-hflip"
+        ],
+        "action": "'store_true'"
+      },
+      {
+        "flags": [
+          "--dry-run"
+        ],
+        "action": "'store_true'",
+        "help": "'Validate manifests, masks and sampler only; do not train.'"
+      }
+    ]
+  },
+  "train_prd_8class_maskrcnn_v3_a2b_p2small": {
+    "name": "train_prd_8class_maskrcnn_v3_a2b_p2small",
+    "old_path": "scripts/train_prd_8class_maskrcnn_v3_a2b_p2small.py",
+    "entrypoint": "scripts/segmentation/training/train_prd_8class_maskrcnn_v3_a2b_p2small.py",
+    "module": "fashion_multimodal_analysis.segmentation.training.train_prd_8class_maskrcnn_v3_a2b_p2small",
+    "implementation": "src/fashion_multimodal_analysis/segmentation/training/train_prd_8class_maskrcnn_v3_a2b_p2small.py",
+    "category": "segmentation/training",
+    "description": "Train PRD 3.1.1 Mask R-CNN baseline v2 using the expanded train_v2 manifest.",
+    "options": [
+      {
+        "flags": [
+          "--epochs"
+        ],
+        "default": "15"
+      },
+      {
+        "flags": [
+          "--batch-size"
+        ],
+        "default": "1"
+      },
+      {
+        "flags": [
+          "--workers"
+        ],
+        "default": "0"
+      },
+      {
+        "flags": [
+          "--lr"
+        ],
+        "default": "0.0025"
+      },
+      {
+        "flags": [
+          "--momentum"
+        ],
+        "default": "0.9"
+      },
+      {
+        "flags": [
+          "--weight-decay"
+        ],
+        "default": "0.0005"
+      },
+      {
+        "flags": [
+          "--step-size"
+        ],
+        "default": "5"
+      },
+      {
+        "flags": [
+          "--gamma"
+        ],
+        "default": "0.1"
+      },
+      {
+        "flags": [
+          "--device"
+        ],
+        "choices": "['auto', 'cuda', 'cpu']",
+        "default": "'auto'"
+      },
+      {
+        "flags": [
+          "--seed"
+        ],
+        "default": "20260921"
+      },
+      {
+        "flags": [
+          "--min-size"
+        ],
+        "default": "640"
+      },
+      {
+        "flags": [
+          "--max-size"
+        ],
+        "default": "1024"
+      },
+      {
+        "flags": [
+          "--save-every"
+        ],
+        "default": "5"
+      },
+      {
+        "flags": [
+          "--sampler-alpha"
+        ],
+        "default": "0.5",
+        "help": "'Damped inverse-frequency exponent. ' + '0=no balancing, 0.5=sqrt balancing, 1=full inverse-frequency.'"
+      },
+      {
+        "flags": [
+          "--no-balanced-sampler"
+        ],
+        "action": "'store_true'",
+        "help": "'Disable class-aware weighted image-group sampling.'"
+      },
+      {
+        "flags": [
+          "--no-hflip"
+        ],
+        "action": "'store_true'"
+      },
+      {
+        "flags": [
+          "--dry-run"
+        ],
+        "action": "'store_true'",
+        "help": "'Validate manifests, masks and sampler only; do not train.'"
+      }
+    ]
+  },
+  "train_prd_8class_maskrcnn_v3_a3_smallsampling": {
+    "name": "train_prd_8class_maskrcnn_v3_a3_smallsampling",
+    "old_path": "scripts/train_prd_8class_maskrcnn_v3_a3_smallsampling.py",
+    "entrypoint": "scripts/segmentation/training/train_prd_8class_maskrcnn_v3_a3_smallsampling.py",
+    "module": "fashion_multimodal_analysis.segmentation.training.train_prd_8class_maskrcnn_v3_a3_smallsampling",
+    "implementation": "src/fashion_multimodal_analysis/segmentation/training/train_prd_8class_maskrcnn_v3_a3_smallsampling.py",
+    "category": "segmentation/training",
+    "description": "Train PRD 3.1.1 Mask R-CNN baseline v2 using the expanded train_v2 manifest.",
+    "options": [
+      {
+        "flags": [
+          "--epochs"
+        ],
+        "default": "15"
+      },
+      {
+        "flags": [
+          "--batch-size"
+        ],
+        "default": "1"
+      },
+      {
+        "flags": [
+          "--workers"
+        ],
+        "default": "0"
+      },
+      {
+        "flags": [
+          "--lr"
+        ],
+        "default": "0.0025"
+      },
+      {
+        "flags": [
+          "--momentum"
+        ],
+        "default": "0.9"
+      },
+      {
+        "flags": [
+          "--weight-decay"
+        ],
+        "default": "0.0005"
+      },
+      {
+        "flags": [
+          "--step-size"
+        ],
+        "default": "5"
+      },
+      {
+        "flags": [
+          "--gamma"
+        ],
+        "default": "0.1"
+      },
+      {
+        "flags": [
+          "--device"
+        ],
+        "choices": "['auto', 'cuda', 'cpu']",
+        "default": "'auto'"
+      },
+      {
+        "flags": [
+          "--seed"
+        ],
+        "default": "20260921"
+      },
+      {
+        "flags": [
+          "--min-size"
+        ],
+        "default": "640"
+      },
+      {
+        "flags": [
+          "--max-size"
+        ],
+        "default": "1024"
+      },
+      {
+        "flags": [
+          "--save-every"
+        ],
+        "default": "5"
+      },
+      {
+        "flags": [
+          "--sampler-alpha"
+        ],
+        "default": "0.5",
+        "help": "'Damped inverse-frequency exponent. ' + '0=no balancing, 0.5=sqrt balancing, 1=full inverse-frequency.'"
+      },
+      {
+        "flags": [
+          "--no-balanced-sampler"
+        ],
+        "action": "'store_true'",
+        "help": "'Disable class-aware weighted image-group sampling.'"
+      },
+      {
+        "flags": [
+          "--no-hflip"
+        ],
+        "action": "'store_true'"
+      },
+      {
+        "flags": [
+          "--dry-run"
+        ],
+        "action": "'store_true'",
+        "help": "'Validate manifests, masks and sampler only; do not train.'"
+      }
+    ]
+  },
+  "train_prd_8class_maskrcnn_v3_b1_dataexp": {
+    "name": "train_prd_8class_maskrcnn_v3_b1_dataexp",
+    "old_path": "scripts/train_prd_8class_maskrcnn_v3_b1_dataexp.py",
+    "entrypoint": "scripts/segmentation/training/train_prd_8class_maskrcnn_v3_b1_dataexp.py",
+    "module": "fashion_multimodal_analysis.segmentation.training.train_prd_8class_maskrcnn_v3_b1_dataexp",
+    "implementation": "src/fashion_multimodal_analysis/segmentation/training/train_prd_8class_maskrcnn_v3_b1_dataexp.py",
+    "category": "segmentation/training",
+    "description": "Train PRD 3.1.1 Mask R-CNN v3-b1 data expansion using the expanded train_v3 manifest.",
+    "options": [
+      {
+        "flags": [
+          "--epochs"
+        ],
+        "default": "15"
+      },
+      {
+        "flags": [
+          "--batch-size"
+        ],
+        "default": "1"
+      },
+      {
+        "flags": [
+          "--workers"
+        ],
+        "default": "0"
+      },
+      {
+        "flags": [
+          "--lr"
+        ],
+        "default": "0.0025"
+      },
+      {
+        "flags": [
+          "--momentum"
+        ],
+        "default": "0.9"
+      },
+      {
+        "flags": [
+          "--weight-decay"
+        ],
+        "default": "0.0005"
+      },
+      {
+        "flags": [
+          "--step-size"
+        ],
+        "default": "5"
+      },
+      {
+        "flags": [
+          "--gamma"
+        ],
+        "default": "0.1"
+      },
+      {
+        "flags": [
+          "--device"
+        ],
+        "choices": "['auto', 'cuda', 'cpu']",
+        "default": "'auto'"
+      },
+      {
+        "flags": [
+          "--seed"
+        ],
+        "default": "20260921"
+      },
+      {
+        "flags": [
+          "--min-size"
+        ],
+        "default": "640"
+      },
+      {
+        "flags": [
+          "--max-size"
+        ],
+        "default": "1024"
+      },
+      {
+        "flags": [
+          "--save-every"
+        ],
+        "default": "5"
+      },
+      {
+        "flags": [
+          "--sampler-alpha"
+        ],
+        "default": "0.5",
+        "help": "'Damped inverse-frequency exponent. ' + '0=no balancing, 0.5=sqrt balancing, 1=full inverse-frequency.'"
+      },
+      {
+        "flags": [
+          "--no-balanced-sampler"
+        ],
+        "action": "'store_true'",
+        "help": "'Disable class-aware weighted image-group sampling.'"
+      },
+      {
+        "flags": [
+          "--no-hflip"
+        ],
+        "action": "'store_true'"
+      },
+      {
+        "flags": [
+          "--dry-run"
+        ],
+        "action": "'store_true'",
+        "help": "'Validate manifests, masks and sampler only; do not train.'"
+      },
+      {
+        "flags": [
+          "--train-csv"
+        ],
+        "default": "str(TRAIN_CSV)"
+      },
+      {
+        "flags": [
+          "--val-csv"
+        ],
+        "default": "str(VAL_CSV)"
+      },
+      {
+        "flags": [
+          "--output-dir"
+        ],
+        "default": "str(OUTPUT_DIR)"
+      },
+      {
+        "flags": [
+          "--report-dir"
+        ],
+        "default": "str(REPORT_DIR)"
+      },
+      {
+        "flags": [
+          "--experiment-name"
+        ],
+        "default": "'v3-b1-dataexp-historical'"
+      },
+      {
+        "flags": [
+          "--verify-isolation"
+        ],
+        "action": "'store_true'",
+        "help": "'Reject training images used by frozen Core or validation'"
+      },
+      {
+        "flags": [
+          "--resume"
+        ],
+        "default": "''",
+        "help": "'Resume a matching checkpoint from its last completed epoch'"
+      }
+    ]
+  },
+  "train_prd_8class_maskrcnn_v4_clean": {
+    "name": "train_prd_8class_maskrcnn_v4_clean",
+    "old_path": "",
+    "entrypoint": "scripts/segmentation/training/train_prd_8class_maskrcnn_v4_clean.py",
+    "module": "fashion_multimodal_analysis.segmentation.training.train_prd_8class_maskrcnn_v4_clean",
+    "implementation": "src/fashion_multimodal_analysis/segmentation/training/train_prd_8class_maskrcnn_v4_clean.py",
+    "category": "segmentation/training",
+    "description": "Train the path-isolated v4 candidate using the existing B1 architecture/settings. Inherits B1 trainer options; --verify-isolation is enabled by default.",
+    "options": []
+  },
+  "verify_prd31_v5_speed": {
+    "name": "verify_prd31_v5_speed",
+    "old_path": "scripts/FIX_PRD31_V5_SPEED.py",
+    "entrypoint": "scripts/maintenance/verify_prd31_v5_speed.py",
+    "module": "fashion_multimodal_analysis.maintenance.verify_prd31_v5_speed",
+    "implementation": "src/fashion_multimodal_analysis/maintenance/verify_prd31_v5_speed.py",
+    "category": "maintenance",
+    "description": "Verify filtered mask transfers on CUDA, then evaluate the existing V5 checkpoint.",
+    "options": [
+      {
+        "flags": [
+          "--project"
+        ],
+        "default": "'.'"
+      },
+      {
+        "flags": [
+          "--data-root"
+        ],
+        "default": "os.environ.get('FASHION_DATA_ROOT', '../fashion_data')"
+      }
+    ]
+  },
+  "visualize_annotation": {
+    "name": "visualize_annotation",
+    "old_path": "scripts/visualize_annotation.py",
+    "entrypoint": "scripts/visualization/visualize_annotation.py",
+    "module": "fashion_multimodal_analysis.visualization.visualize_annotation",
+    "implementation": "src/fashion_multimodal_analysis/visualization/visualize_annotation.py",
+    "category": "visualization",
+    "description": "visualize annotation",
+    "options": []
+  },
+  "visualize_core_part_annotations": {
+    "name": "visualize_core_part_annotations",
+    "old_path": "scripts/visualize_core_part_annotations.py",
+    "entrypoint": "scripts/grounding/core_parts/visualize_core_part_annotations.py",
+    "module": "fashion_multimodal_analysis.grounding.core_parts.visualize_core_part_annotations",
+    "implementation": "src/fashion_multimodal_analysis/grounding/core_parts/visualize_core_part_annotations.py",
+    "category": "grounding/core_parts",
+    "description": "Generate visual QC sheets for the core part bbox annotations.",
+    "options": []
+  },
+  "visualize_grounding_group_results": {
+    "name": "visualize_grounding_group_results",
+    "old_path": "scripts/visualize_grounding_group_results.py",
+    "entrypoint": "scripts/visualization/visualize_grounding_group_results.py",
+    "module": "fashion_multimodal_analysis.visualization.visualize_grounding_group_results",
+    "implementation": "src/fashion_multimodal_analysis/visualization/visualize_grounding_group_results.py",
+    "category": "visualization",
+    "description": "Visualize Grounding DINO group evaluation predictions.",
+    "options": []
+  },
+  "visualize_result": {
+    "name": "visualize_result",
+    "old_path": "scripts/visualize_result.py",
+    "entrypoint": "scripts/visualization/visualize_result.py",
+    "module": "fashion_multimodal_analysis.visualization.visualize_result",
+    "implementation": "src/fashion_multimodal_analysis/visualization/visualize_result.py",
+    "category": "visualization",
+    "description": "visualize result",
+    "options": []
+  }
+}

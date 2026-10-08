@@ -1,0 +1,46 @@
+PRD 3.1.1 Segmentation Benchmark Review Pool v1
+================================================
+
+seed=20260922
+requested_per_class=60
+planned_freeze_per_class=50
+selected_total=480
+
+Leakage policy
+--------------
+- Entire source images already seen in project configs are excluded.
+- Selected candidates are source-image unique within each PRD class.
+- Review-pool rows are NOT benchmark_test yet.
+- Do not use this review pool for model/prompt/threshold tuning.
+- We intentionally reduce pool size instead of reusing multiple instances from the same unseen image.
+
+Planned freeze
+--------------
+- Human-review bbox/mask/category/image quality.
+- Freeze 50 reviewed PASS cases per class.
+- Final target = 400 segmentation benchmark instances.
+- Keep source-image uniqueness in the final benchmark.
+- If any class has fewer reviewed PASS cases than the freeze target, mark coverage insufficient instead of duplicating same-image samples.
+
+Class summary
+-------------
+top: eligible=125721 review_selected=60 size=(large=40; medium=20)
+pants: eligible=91951 review_selected=60 size=(large=39; medium=21)
+skirt: eligible=30817 review_selected=60 size=(large=42; medium=18)
+outerwear: eligible=13984 review_selected=60 size=(large=52; medium=8)
+dress: eligible=49519 review_selected=60 size=(large=57; medium=3)
+shoe: eligible=1078 review_selected=60 size=(medium=1; small=59)
+bag: eligible=68 review_selected=60 size=(large=8; medium=34; small=18)
+accessory: eligible=465 review_selected=60 size=(medium=20; small=40)
+
+Frozen Fashionpedia mapping
+---------------------------
+shoe <- id 23: shoe
+bag <- id 24: bag, wallet
+accessory <- ids 13,14,15,16,17,18,19,20,21,22,25
+
+Next
+----
+- Review contact sheets first.
+- Then complete segmentation_review_checklist_v1.csv.
+- Only after review will a separate script freeze segmentation_test_v1.csv.

@@ -1,0 +1,408 @@
+from __future__ import annotations
+
+from pathlib import Path
+
+from docx import Document
+from docx.enum.table import WD_CELL_VERTICAL_ALIGNMENT
+from docx.enum.table import WD_TABLE_ALIGNMENT
+from docx.enum.text import WD_ALIGN_PARAGRAPH
+from docx.oxml import OxmlElement
+from docx.oxml.ns import qn
+from docx.shared import Inches, Pt, RGBColor
+
+
+REFERENCE = Path("reports/服饰实例分割项目周报-第七周.docx")
+OUTPUT = Path("reports/服饰实例分割项目周报-第八周.docx")
+FONT_NAME = "Hiragino Sans GB"
+BLUE = RGBColor(46, 116, 181)
+GRAY = RGBColor(92, 92, 92)
+
+
+def set_run_font(run, size: float, *, bold: bool = False, color=None) -> None:
+    run.font.name = FONT_NAME
+    run._element.get_or_add_rPr().rFonts.set(qn("w:eastAsia"), FONT_NAME)
+    run.font.size = Pt(size)
+    run.bold = bold
+    if color is not None:
+        run.font.color.rgb = color
+
+
+def set_cell_shading(cell, fill: str) -> None:
+    tc_pr = cell._tc.get_or_add_tcPr()
+    shd = tc_pr.find(qn("w:shd"))
+    if shd is None:
+        shd = OxmlElement("w:shd")
+        tc_pr.append(shd)
+    shd.set(qn("w:fill"), fill)
+
+
+def set_cell_width(cell, width_inches: float) -> None:
+    tc_pr = cell._tc.get_or_add_tcPr()
+    tc_width = tc_pr.find(qn("w:tcW"))
+    if tc_width is None:
+        tc_width = OxmlElement("w:tcW")
+        tc_pr.append(tc_width)
+    tc_width.set(qn("w:type"), "dxa")
+    tc_width.set(qn("w:w"), str(round(width_inches * 1440)))
+
+
+def set_cell_margins(
+    cell,
+    *,
+    top: int = 50,
+    start: int = 70,
+    bottom: int = 50,
+    end: int = 70,
+) -> None:
+    tc_pr = cell._tc.get_or_add_tcPr()
+    tc_mar = tc_pr.first_child_found_in("w:tcMar")
+    if tc_mar is None:
+        tc_mar = OxmlElement("w:tcMar")
+        tc_pr.append(tc_mar)
+    for margin, value in (
+        ("top", top),
+        ("start", start),
+        ("bottom", bottom),
+        ("end", end),
+    ):
+        node = tc_mar.find(qn(f"w:{margin}"))
+        if node is None:
+            node = OxmlElement(f"w:{margin}")
+            tc_mar.append(node)
+        node.set(qn("w:w"), str(value))
+        node.set(qn("w:type"), "dxa")
+
+
+def configure_table(table, widths: list[float]) -> None:
+    table.autofit = False
+    table.alignment = WD_TABLE_ALIGNMENT.CENTER
+    tbl_pr = table._tbl.tblPr
+
+    layout = tbl_pr.find(qn("w:tblLayout"))
+    if layout is None:
+        layout = OxmlElement("w:tblLayout")
+        tbl_pr.append(layout)
+    layout.set(qn("w:type"), "fixed")
+
+    table_width = tbl_pr.find(qn("w:tblW"))
+    if table_width is None:
+        table_width = OxmlElement("w:tblW")
+        tbl_pr.append(table_width)
+    table_width.set(qn("w:type"), "dxa")
+    table_width.set(qn("w:w"), str(round(sum(widths) * 1440)))
+
+    grid = table._tbl.tblGrid
+    for child in list(grid):
+        grid.remove(child)
+    for width in widths:
+        grid_col = OxmlElement("w:gridCol")
+        grid_col.set(qn("w:w"), str(round(width * 1440)))
+        grid.append(grid_col)
+
+    for row in table.rows:
+        for cell, width in zip(row.cells, widths, strict=True):
+            set_cell_width(cell, width)
+            set_cell_margins(cell)
+            cell.vertical_alignment = WD_CELL_VERTICAL_ALIGNMENT.CENTER
+
+
+def set_cell_text(
+    cell,
+    text: str,
+    *,
+    bold: bool = False,
+    size: float = 8.6,
+    align=WD_ALIGN_PARAGRAPH.LEFT,
+) -> None:
+    cell.text = ""
+    paragraph = cell.paragraphs[0]
+    paragraph.alignment = align
+    paragraph.paragraph_format.space_before = Pt(0)
+    paragraph.paragraph_format.space_after = Pt(0)
+    paragraph.paragraph_format.line_spacing = 1.0
+    run = paragraph.add_run(text)
+    set_run_font(run, size, bold=bold)
+
+
+def add_paragraph(doc: Document, text: str, *, size: float = 10.8):
+    paragraph = doc.add_paragraph()
+    paragraph.paragraph_format.space_after = Pt(2.5)
+    paragraph.paragraph_format.line_spacing = 1.04
+    run = paragraph.add_run(text)
+    set_run_font(run, size)
+    return paragraph
+
+
+def add_bullet(doc: Document, text: str) -> None:
+    paragraph = doc.add_paragraph(style="List Bullet")
+    paragraph.paragraph_format.left_indent = Inches(0.25)
+    paragraph.paragraph_format.first_line_indent = Inches(-0.12)
+    paragraph.paragraph_format.space_after = Pt(1.5)
+    paragraph.paragraph_format.line_spacing = 1.02
+    run = paragraph.add_run(text)
+    set_run_font(run, 10.5)
+
+
+def configure_styles(doc: Document) -> None:
+    normal = doc.styles["Normal"]
+    normal.font.name = FONT_NAME
+    normal._element.get_or_add_rPr().rFonts.set(qn("w:eastAsia"), FONT_NAME)
+    normal.font.size = Pt(10.8)
+    normal.paragraph_format.line_spacing = 1.04
+    normal.paragraph_format.space_after = Pt(2.5)
+    for style_name, size in (("Heading 1", 14.2), ("Heading 2", 12.5)):
+        style = doc.styles[style_name]
+        style.font.name = FONT_NAME
+        style._element.get_or_add_rPr().rFonts.set(qn("w:eastAsia"), FONT_NAME)
+        style.font.size = Pt(size)
+        style.font.color.rgb = BLUE
+        style.font.bold = True
+        style.paragraph_format.space_before = Pt(4.5)
+        style.paragraph_format.space_after = Pt(1.5)
+        style.paragraph_format.keep_with_next = True
+
+
+def clear_template_body(doc: Document) -> None:
+    body = doc._element.body
+    for child in list(body):
+        if child.tag != qn("w:sectPr"):
+            body.remove(child)
+
+
+def add_title(doc: Document) -> None:
+    title = doc.add_paragraph()
+    title.alignment = WD_ALIGN_PARAGRAPH.CENTER
+    title.paragraph_format.space_after = Pt(1.5)
+    run = title.add_run(
+        "本周工作汇报：服饰细粒度视觉模块（3.1.3 属性识别）"
+    )
+    set_run_font(run, 16, bold=True)
+
+    meta = doc.add_paragraph()
+    meta.alignment = WD_ALIGN_PARAGRAPH.CENTER
+    meta.paragraph_format.space_after = Pt(4)
+    run = meta.add_run(
+        "汇报周期：第八周｜目标：属性识别准确率 ≥88%，单次提取 ≤20 ms"
+    )
+    set_run_font(run, 10.2, color=GRAY)
+
+
+def add_dataset_table(doc: Document) -> None:
+    table = doc.add_table(rows=2, cols=4)
+    table.style = "Table Grid"
+    widths = [1.0, 2.35, 1.0, 2.35]
+    values = [
+        (
+            "数据规模",
+            "25,122 条原始记录 → 19,916 条去重记录",
+            "划分结果",
+            "15,930 / 1,993 / 1,993",
+        ),
+        (
+            "分层键",
+            "属性头 + strict y 类别，seed=42",
+            "防泄漏",
+            "按稳定图像 ID 分组，三组重叠均为 0",
+        ),
+    ]
+    for row_cells, row_values in zip(table.rows, values, strict=True):
+        for index, (cell, value) in enumerate(
+            zip(row_cells.cells, row_values, strict=True)
+        ):
+            set_cell_text(cell, value, bold=index % 2 == 0, size=8.5)
+            if index % 2 == 0:
+                set_cell_shading(cell, "F2F4F7")
+    configure_table(table, widths)
+
+
+def add_experiment_table(doc: Document) -> None:
+    table = doc.add_table(rows=1, cols=6)
+    table.style = "Table Grid"
+    widths = [1.70, 1.75, 0.75, 0.85, 0.85, 0.80]
+    headers = ["方案", "核心变更", "epoch", "严格", "可接受", "判断"]
+    for cell, header in zip(table.rows[0].cells, headers, strict=True):
+        set_cell_text(
+            cell,
+            header,
+            bold=True,
+            size=8.1,
+            align=WD_ALIGN_PARAGRAPH.CENTER,
+        )
+        set_cell_shading(cell, "E9EEF5")
+    rows = [
+        ("MobileNet 基线", "crop + 固定学习率", "8", "0.6086", "0.6141", "起点"),
+        ("全图输入", "仅改 full-frame", "5", "0.6106", "0.6182", "微增"),
+        ("低 backbone LR", "backbone 3e-5", "10", "0.5610", "0.5680", "拒绝"),
+        ("MobileNet cosine", "加入余弦退火", "9", "0.6101", "0.6157", "持平"),
+        ("ResNet-18", "仅增大 backbone", "6", "0.6884", "0.6974", "+0.0798"),
+        ("ResNet-18 cosine", "保留 backbone，改调度", "9", "0.7105", "0.7220", "+0.0221"),
+        ("ResNet-50 cosine", "仅改为 ResNet-50", "10", "0.7802", "0.7873", "+0.0697"),
+        ("ResNet-50 15ep", "延长余弦训练周期", "13", "0.7852", "0.7943", "选中"),
+    ]
+    for row in rows:
+        cells = table.add_row().cells
+        for index, (cell, value) in enumerate(zip(cells, row, strict=True)):
+            set_cell_text(
+                cell,
+                value,
+                bold=value == "选中",
+                size=7.9,
+                align=(
+                    WD_ALIGN_PARAGRAPH.LEFT
+                    if index in (0, 1)
+                    else WD_ALIGN_PARAGRAPH.CENTER
+                ),
+            )
+    configure_table(table, widths)
+
+
+def add_acceptance_table(doc: Document) -> None:
+    table = doc.add_table(rows=1, cols=4)
+    table.style = "Table Grid"
+    widths = [2.0, 1.40, 1.35, 1.95]
+    headers = ["指标", "实测", "目标", "状态"]
+    for cell, header in zip(table.rows[0].cells, headers, strict=True):
+        set_cell_text(
+            cell,
+            header,
+            bold=True,
+            size=8.7,
+            align=WD_ALIGN_PARAGRAPH.CENTER,
+        )
+        set_cell_shading(cell, "E9EEF5")
+    rows = [
+        ("冻结测试 strict accuracy", "78.07%", "≥88%", "未通过"),
+        ("冻结测试 acceptable accuracy", "78.98%", "参考项", "已记录"),
+        ("3.1.3 p95 / 最大值", "12.600 / 13.245 ms", "≤20 ms", "通过"),
+        ("三阶段集成", "3 个状态均为 ok", "标签一致", "通过"),
+        ("完整管线耗时", "478.673 ms", "不属于 3.1.3 门槛", "单独报告"),
+    ]
+    for row in rows:
+        cells = table.add_row().cells
+        for index, (cell, value) in enumerate(zip(cells, row, strict=True)):
+            set_cell_text(
+                cell,
+                value,
+                bold=value in {"未通过", "通过"},
+                size=8.4,
+                align=(
+                    WD_ALIGN_PARAGRAPH.LEFT
+                    if index in (0, 3)
+                    else WD_ALIGN_PARAGRAPH.CENTER
+                ),
+            )
+    configure_table(table, widths)
+
+
+def add_head_table(doc: Document) -> None:
+    table = doc.add_table(rows=1, cols=4)
+    table.style = "Table Grid"
+    widths = [2.55, 1.10, 1.40, 1.65]
+    headers = ["属性头", "记录数", "严格准确率", "观察"]
+    for cell, header in zip(table.rows[0].cells, headers, strict=True):
+        set_cell_text(
+            cell,
+            header,
+            bold=True,
+            size=8.5,
+            align=WD_ALIGN_PARAGRAPH.CENTER,
+        )
+        set_cell_shading(cell, "E9EEF5")
+    rows = [
+        ("coat_length_labels", "286", "0.7832", "接近整体"),
+        ("collar_design_labels", "210", "0.7952", "较稳定"),
+        ("lapel_design_labels", "177", "0.8023", "当前最高"),
+        ("neck_design_labels", "141", "0.7447", "主要瓶颈"),
+        ("neckline_design_labels", "416", "0.7861", "样本最多"),
+        ("pant_length_labels", "193", "0.7617", "仍需提升"),
+        ("skirt_length_labels", "232", "0.7500", "主要瓶颈"),
+        ("sleeve_length_labels", "338", "0.7988", "较稳定"),
+    ]
+    for row in rows:
+        cells = table.add_row().cells
+        for index, (cell, value) in enumerate(zip(cells, row, strict=True)):
+            set_cell_text(
+                cell,
+                value,
+                bold=value in {"当前最高", "主要瓶颈"},
+                size=8.1,
+                align=(
+                    WD_ALIGN_PARAGRAPH.LEFT
+                    if index in (0, 3)
+                    else WD_ALIGN_PARAGRAPH.CENTER
+                ),
+            )
+    configure_table(table, widths)
+
+
+def build_report() -> None:
+    doc = Document(REFERENCE)
+    clear_template_body(doc)
+    section = doc.sections[0]
+    section.top_margin = Inches(0.75)
+    section.bottom_margin = Inches(0.75)
+    section.left_margin = Inches(0.9)
+    section.right_margin = Inches(0.9)
+    configure_styles(doc)
+    add_title(doc)
+
+    doc.add_heading("一、本周目标与数据协议", level=1)
+    add_paragraph(
+        doc,
+        "本周进入 3.1.3「细粒度属性提取」，目标是输入商品图像和目标区域 mask，输出属性标签及置信度，"
+        "并同时满足准确率 ≥88% 与单次提取 ≤20 ms。按照导师提出的分层采样要求，我先合并 FashionAI "
+        "Round1 A/B 人工答案，去重后按（属性头，strict y 类别）做确定性 80/10/10 划分；"
+        "所有同图记录绑定到同一分组，验证和测试不参与训练。",
+    )
+    add_dataset_table(doc)
+
+    doc.add_heading("二、固定验证集上的受控实验", level=1)
+    add_paragraph(
+        doc,
+        "在相同的 15,930/1,993 训练与验证清单、seed 和八个属性头上逐项消融。"
+        "输入方式、backbone、学习率调度和训练周期均一次只改一个因素；模型选择只看 validation strict accuracy。",
+    )
+    add_experiment_table(doc)
+
+    doc.add_heading("三、完成的工程与集成验证", level=1)
+    add_bullet(doc, "实现 8 个动态属性头、54 个语义值、y/m/n 歧义解析、checkpoint 加载及结构化置信度输出。")
+    add_bullet(doc, "跑通 standalone image+mask 推理和 3.1.1 → 3.1.2 → 3.1.3 完整管线，四个领口相关标签完全一致。")
+    add_bullet(doc, "补充官方 FashionAI mAP/BasicPrecision 统计、全量数据发现与内容哈希去重，以及可选的属性空间/通道注意力。")
+    add_bullet(doc, "本地完整测试达到 201 passed；旧 checkpoint 默认保持 global pooling，兼容现有推理链路。")
+
+    result_heading = doc.add_heading("四、选中模型与验收结果", level=1)
+    result_heading.paragraph_format.page_break_before = True
+    add_paragraph(
+        doc,
+        "选中 ResNet-50 + cosine 15ep 的 epoch 13。其 validation strict 为 0.7852，"
+        "单次冻结测试得到 strict 0.7807、acceptable 0.7898；相较最初 MobileNet 测试结果 0.6071，"
+        "严格准确率绝对提升 0.1736。RTX 5090 上 10 次预热、30 次测量后，3.1.3 wall-time p95 为 12.600 ms。",
+    )
+    add_acceptance_table(doc)
+
+    doc.add_heading("五、分属性结果与 88% 差距诊断", level=1)
+    add_head_table(doc)
+    add_paragraph(
+        doc,
+        "所有属性头均低于 88%，其中 neck、skirt 和 pant 最弱；选中轮次 train strict 为 0.9964、"
+        "validation 为 0.7852，差距 0.2112。PRD 记录的 FashionAI 约 8.2 万张，本轮仅 19,916 条。"
+        "AutoDL 检查为 sources=[]，只有 round1_fashionAI_attributes_test_a.zip，train1/train2 缺失。",
+    )
+    add_paragraph(
+        doc,
+        "因此，本周不把 78.07% 写成已完成目标：软件链路与 20 ms 门槛已通过，但 88% 质量门槛仍开放；"
+        "已查看的 Round1 test 固定为历史证据，不再用于调参。",
+    )
+
+    doc.add_heading("六、下周计划", level=1)
+    add_bullet(doc, "确认 AutoDL 数据盘空间，下载并解压 FashionAI attributes train1/train2。")
+    add_bullet(doc, "按 SHA-256 去重并生成分层 80/10/10 清单，核对零重叠后封存新 test。")
+    add_bullet(doc, "先做 ResNet-50 cosine 15ep 的 data-only 对照；若仍低于 88%，再运行属性注意力版本。")
+    add_bullet(doc, "只在 validation 上选模并复测 ≤20 ms；模型冻结后，对新 test 仅做一次最终评估。")
+
+    OUTPUT.parent.mkdir(parents=True, exist_ok=True)
+    doc.save(OUTPUT)
+
+
+if __name__ == "__main__":
+    build_report()

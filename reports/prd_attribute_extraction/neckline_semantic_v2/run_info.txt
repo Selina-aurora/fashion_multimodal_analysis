@@ -1,0 +1,11 @@
+PRD 3.1.3 local neckline continuous semantic pilot v2
+model=openai/clip-vit-base-patch32
+manifest=configs/garment_instances_gt_pilot_100.csv
+upper_body_instances=101
+input=local_top_center_proxy
+output_features=neckline_depth_score,neckline_width_score,collar_height_score
+aggregation=expected_value_over_ordered_CLIP_semantic_anchors
+hard_classification=false
+gt_available=false
+future_integration=replace_proxy_with_3.1.2_collar_roi
+material_and_craftsmanship=excluded

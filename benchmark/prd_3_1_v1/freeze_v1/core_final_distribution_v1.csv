@@ -1,0 +1,9 @@
+﻿garment_category,n,class_share,size_distribution,scene_distribution_human,scene_types_present,fine_category_distribution
+top,50,12.5%,large=16; medium=16; small=18,complex_scene=7; partial_view=15; worn_person=28,3,long_sleeve_top=13; short_sleeve_top=13; sling=11; vest=13
+pants,50,12.5%,large=17; medium=16; small=17,complex_scene=8; partial_view=15; product_display=1; worn_person=26,4,shorts=25; trousers=25
+skirt,50,12.5%,large=16; medium=17; small=17,complex_scene=15; partial_view=15; product_display=1; worn_person=19,4,skirt=50
+outerwear,50,12.5%,large=20; medium=21; small=9,complex_scene=8; partial_view=6; product_display=4; worn_person=32,4,long_sleeve_outwear=29; short_sleeve_outwear=21
+dress,50,12.5%,large=17; medium=18; small=15,complex_scene=11; partial_view=8; product_display=2; worn_person=29,4,long_sleeve_dress=12; short_sleeve_dress=13; sling_dress=12; vest_dress=13
+shoe,50,12.5%,medium=25; small=25,complex_scene=28; partial_view=1; worn_person=21,3,shoe=50
+bag,50,12.5%,large=9; medium=29; small=12,complex_scene=20; partial_view=3; worn_person=27,3,"bag, wallet=50"
+accessory,50,12.5%,large=9; medium=18; small=23,complex_scene=31; partial_view=9; worn_person=10,3,"belt=9; glasses=5; glove=3; hat=6; headband, head covering, hair accessory=8; scarf=7; sock=5; tights, stockings=5; watch=2"

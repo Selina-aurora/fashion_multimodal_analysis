@@ -1,0 +1,294 @@
+from __future__ import annotations
+
+import json
+import os
+import subprocess
+import sys
+from pathlib import Path
+
+import pytest
+
+from fashion_mm.utils.fashionai_final_release import create_final_release_manifest
+from fashion_mm.utils.fashionai_final_release import FinalReleaseError
+from fashion_mm.utils.fashionai_final_release import FinalReleaseVerificationError
+from fashion_mm.utils.fashionai_final_release import PRIMARY_LATENCY_TARGET_MS
+from fashion_mm.utils.fashionai_final_release import RELEASE_FILE_KEYS
+from fashion_mm.utils.fashionai_final_release import RELEASE_FORMAT
+from fashion_mm.utils.fashionai_final_release import RELEASE_VERSION
+from fashion_mm.utils.fashionai_final_release import STRICT_ACCURACY_TARGET
+from fashion_mm.utils.fashionai_final_release import verify_final_release_manifest
+from fashion_mm.utils.fashionai_manifest_seal import create_manifest_seal
+
+
+ROOT = Path(__file__).resolve().parents[1]
+RELEASE_SCRIPT = ROOT / "scripts" / "eval" / "freeze_fashionai_attribute_release.py"
+
+
+def test_final_release_freezes_failed_quality_with_explicit_status(tmp_path):
+    inputs = _write_release_fixture(tmp_path, strict_accuracy=0.7807)
+    output = tmp_path / "release-v1.json"
+
+    manifest_path, payload = create_final_release_manifest(
+        **inputs,
+        output_path=output,
+    )
+    report = verify_final_release_manifest(manifest_path)
+
+    assert payload["format"] == RELEASE_FORMAT
+    assert payload["version"] == RELEASE_VERSION
+    assert payload["status"] == "failed"
+    assert payload["targets"] == {
+        "strict_accuracy_min": STRICT_ACCURACY_TARGET,
+        "primary_latency_ms_max": PRIMARY_LATENCY_TARGET_MS,
+    }
+    assert payload["metrics"] == {
+        "split_role": "held_out_test",
+        "strict_accuracy": 0.7807,
+        "acceptable_accuracy": 0.7898,
+        "primary_latency_ms": 12.6,
+    }
+    assert payload["source_bindings"] == {
+        "checkpoint": str(inputs["checkpoint"].resolve()),
+        "held_out_annotations": str(
+            (inputs["split_seal"].parent / "test.csv").resolve()
+        ),
+        "latency_primary_metric": "wall_total_ms.p95",
+        "latency_threshold_ms": 20.0,
+    }
+    assert payload["acceptance"] == {
+        "quality_passed": False,
+        "latency_passed": True,
+        "overall_passed": False,
+    }
+    assert set(payload["files"]) == set(RELEASE_FILE_KEYS)
+    assert all(
+        len(entry["sha256"]) == 64 and entry["size_bytes"] > 0
+        for entry in payload["files"].values()
+    )
+    assert report["status"] == "ok"
+    assert report["release_status"] == "failed"
+
+
+def test_final_release_records_passed_status_only_when_both_gates_pass(tmp_path):
+    inputs = _write_release_fixture(
+        tmp_path,
+        strict_accuracy=0.91,
+        primary_latency_ms=19.5,
+    )
+
+    _, payload = create_final_release_manifest(
+        **inputs,
+        output_path=tmp_path / "release-v1.json",
+    )
+
+    assert payload["status"] == "passed"
+    assert payload["acceptance"]["overall_passed"] is True
+
+
+def test_final_release_requires_held_out_test_role(tmp_path):
+    inputs = _write_release_fixture(tmp_path, split_role="validation")
+
+    with pytest.raises(FinalReleaseError, match="split_role='held_out_test'"):
+        create_final_release_manifest(
+            **inputs,
+            output_path=tmp_path / "release-v1.json",
+        )
+
+
+def test_final_release_requires_source_metric_structure(tmp_path):
+    inputs = _write_release_fixture(tmp_path)
+    payload = json.loads(inputs["latency_benchmark"].read_text(encoding="utf-8"))
+    del payload["latency_target"]["primary_value_ms"]
+    inputs["latency_benchmark"].write_text(json.dumps(payload), encoding="utf-8")
+
+    with pytest.raises(FinalReleaseError, match="primary_value_ms"):
+        create_final_release_manifest(
+            **inputs,
+            output_path=tmp_path / "release-v1.json",
+        )
+
+
+@pytest.mark.parametrize(
+    ("source_key", "field_path", "replacement", "error_match"),
+    [
+        (
+            "held_out_evaluation",
+            ("checkpoint",),
+            "other.pt",
+            "checkpoint.*must reference",
+        ),
+        (
+            "held_out_evaluation",
+            ("annotations",),
+            "validation.csv",
+            "annotations.*must reference",
+        ),
+        (
+            "latency_benchmark",
+            ("checkpoint",),
+            "other.pt",
+            "checkpoint.*must reference",
+        ),
+        (
+            "latency_benchmark",
+            ("latency_target", "primary_metric"),
+            "wall_total_ms.mean",
+            "primary_metric",
+        ),
+        (
+            "latency_benchmark",
+            ("latency_target", "threshold_ms"),
+            19.0,
+            "threshold_ms must be 20.0",
+        ),
+    ],
+)
+def test_final_release_rejects_mismatched_source_bindings(
+    tmp_path,
+    source_key,
+    field_path,
+    replacement,
+    error_match,
+):
+    inputs = _write_release_fixture(tmp_path)
+    source_path = inputs[source_key]
+    payload = json.loads(source_path.read_text(encoding="utf-8"))
+    target = payload
+    for field in field_path[:-1]:
+        target = target[field]
+    target[field_path[-1]] = replacement
+    source_path.write_text(json.dumps(payload), encoding="utf-8")
+
+    with pytest.raises(FinalReleaseError, match=error_match):
+        create_final_release_manifest(
+            **inputs,
+            output_path=tmp_path / "release-v1.json",
+        )
+
+
+def test_final_release_refuses_overwrite_by_default(tmp_path):
+    inputs = _write_release_fixture(tmp_path)
+    output = tmp_path / "release-v1.json"
+    create_final_release_manifest(**inputs, output_path=output)
+    original = output.read_bytes()
+
+    with pytest.raises(FileExistsError, match="will not be overwritten"):
+        create_final_release_manifest(**inputs, output_path=output)
+
+    assert output.read_bytes() == original
+
+
+def test_final_release_verify_detects_tampered_checkpoint(tmp_path):
+    inputs = _write_release_fixture(tmp_path)
+    output = tmp_path / "release-v1.json"
+    create_final_release_manifest(**inputs, output_path=output)
+    inputs["checkpoint"].write_bytes(b"tampered checkpoint")
+
+    with pytest.raises(FinalReleaseVerificationError) as caught:
+        verify_final_release_manifest(output)
+
+    assert caught.value.report["status"] == "failed"
+    assert caught.value.report["files"]["checkpoint"]["status"] == "mismatch"
+    assert caught.value.report["files"]["split_seal"]["status"] == "ok"
+
+
+def test_final_release_cli_refuses_duplicate_and_verify_exits_nonzero(tmp_path):
+    inputs = _write_release_fixture(tmp_path)
+    output = tmp_path / "release-v1.json"
+    create_args = [
+        "create",
+        "--split-seal",
+        str(inputs["split_seal"]),
+        "--checkpoint",
+        str(inputs["checkpoint"]),
+        "--held-out-eval",
+        str(inputs["held_out_evaluation"]),
+        "--latency",
+        str(inputs["latency_benchmark"]),
+        "--output",
+        str(output),
+    ]
+    created = _run_release_cli(*create_args)
+    duplicate = _run_release_cli(*create_args)
+    inputs["held_out_evaluation"].write_text("tampered\n", encoding="utf-8")
+    invalid = _run_release_cli("verify", str(output))
+
+    assert created.returncode == 0
+    assert json.loads(created.stdout)["release_status"] == "failed"
+    assert duplicate.returncode == 3
+    assert "will not be overwritten" in duplicate.stderr
+    assert invalid.returncode == 4
+    assert json.loads(invalid.stderr)["status"] == "failed"
+
+
+def _write_release_fixture(
+    directory: Path,
+    *,
+    split_role: str = "held_out_test",
+    strict_accuracy: float = 0.7807,
+    primary_latency_ms: float = 12.6,
+) -> dict[str, Path]:
+    split_dir = directory / "splits"
+    split_dir.mkdir(parents=True)
+    (split_dir / "train.csv").write_text("train\n", encoding="utf-8")
+    (split_dir / "validation.csv").write_text("validation\n", encoding="utf-8")
+    (split_dir / "test.csv").write_text("test\n", encoding="utf-8")
+    (split_dir / "split_summary.json").write_text(
+        json.dumps({"split_overlap_counts": {"train_test": 0}}),
+        encoding="utf-8",
+    )
+    split_seal, _ = create_manifest_seal(split_dir)
+
+    checkpoint = directory / "best.pt"
+    checkpoint.write_bytes(b"cpu-only checkpoint fixture")
+    held_out_evaluation = directory / "held-out-eval.json"
+    held_out_evaluation.write_text(
+        json.dumps(
+            {
+                "annotations": str(split_dir / "test.csv"),
+                "checkpoint": str(checkpoint),
+                "split_role": split_role,
+                "metrics": {
+                    "strict_accuracy": strict_accuracy,
+                    "acceptable_accuracy": 0.7898,
+                },
+            }
+        ),
+        encoding="utf-8",
+    )
+    latency_benchmark = directory / "latency.json"
+    latency_benchmark.write_text(
+        json.dumps(
+            {
+                "checkpoint": str(checkpoint),
+                "latency_target": {
+                    "primary_metric": "wall_total_ms.p95",
+                    "primary_value_ms": primary_latency_ms,
+                    "threshold_ms": 20.0,
+                }
+            }
+        ),
+        encoding="utf-8",
+    )
+    return {
+        "split_seal": split_seal,
+        "checkpoint": checkpoint,
+        "held_out_evaluation": held_out_evaluation,
+        "latency_benchmark": latency_benchmark,
+    }
+
+
+def _run_release_cli(*arguments: str) -> subprocess.CompletedProcess[str]:
+    environment = {
+        **os.environ,
+        "PYTHONPATH": str(ROOT / "src"),
+        "PYTHONDONTWRITEBYTECODE": "1",
+    }
+    return subprocess.run(
+        [sys.executable, str(RELEASE_SCRIPT), *arguments],
+        cwd=ROOT,
+        env=environment,
+        check=False,
+        capture_output=True,
+        text=True,
+    )

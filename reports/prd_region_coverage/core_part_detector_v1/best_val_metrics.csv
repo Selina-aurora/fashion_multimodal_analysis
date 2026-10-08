@@ -1,0 +1,4 @@
+﻿best_epoch,macro_recall_at_iou_0_5,image_success_rate,class,tp,fp,fn,precision,recall,f1,mean_matched_iou
+1,0.0,0.0,collar,0,0,3,0.0,0.0,0.0,0.0
+1,0.0,0.0,cuff,0,0,5,0.0,0.0,0.0,0.0
+1,0.0,0.0,hem,0,0,2,0.0,0.0,0.0,0.0

@@ -1,0 +1,46 @@
+from __future__ import annotations
+
+from pathlib import Path
+
+from PIL import Image, ImageDraw
+
+from fashion_mm.models.instance_segmentation.result import SegmentationResult
+from fashion_mm.utils.image_io import ImageInput
+from fashion_mm.utils.image_io import load_rgb_image
+
+
+INSTANCE_COLORS = (
+    (0, 255, 80, 100),
+    (255, 80, 0, 100),
+    (80, 160, 255, 100),
+    (255, 220, 0, 100),
+    (220, 80, 255, 100),
+)
+
+
+def draw_segmentation_result(
+    image: ImageInput,
+    result: SegmentationResult,
+    output_path: str | Path,
+) -> None:
+    """Draw instance masks, boxes, labels, and confidence scores."""
+    rgba_image = load_rgb_image(image).convert("RGBA")
+    overlay = Image.new("RGBA", rgba_image.size, (0, 0, 0, 0))
+
+    for index, instance in enumerate(result.instances):
+        color = INSTANCE_COLORS[index % len(INSTANCE_COLORS)]
+        mask_image = Image.fromarray(instance.mask.astype("uint8") * 255)
+        color_layer = Image.new("RGBA", rgba_image.size, color)
+        overlay = Image.composite(color_layer, overlay, mask_image)
+        draw = ImageDraw.Draw(overlay)
+        x1, y1, x2, y2 = instance.box
+        draw.rectangle([x1, y1, x2, y2], outline=color[:3] + (255,), width=3)
+        draw.text(
+            (x1, max(0, y1 - 16)),
+            f"{instance.label_name} {instance.score:.2f}",
+            fill=color[:3] + (255,),
+        )
+
+    destination = Path(output_path)
+    destination.parent.mkdir(parents=True, exist_ok=True)
+    Image.alpha_composite(rgba_image, overlay).convert("RGB").save(destination)

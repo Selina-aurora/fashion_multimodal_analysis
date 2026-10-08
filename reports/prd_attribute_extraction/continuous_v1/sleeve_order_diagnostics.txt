@@ -1,0 +1,27 @@
+PRD 3.1.3 sleeve continuous feature v1
+=======================================
+model=openai/clip-vit-base-patch32
+evaluated_upper_body_instances=101
+short_threshold=0.3
+long_threshold=0.6
+
+Group means
+-----------
+sleeveless: 0.3718
+short: 0.4482
+long: 0.5010
+
+Ordinal diagnostics
+-------------------
+sleeveless < short: 635/968 pairwise-order accuracy=65.6%
+short < long: 1007/1540 pairwise-order accuracy=65.4%
+sleeveless < long: 590/770 pairwise-order accuracy=76.6%
+
+mean_order_sleeveless<short<long=True
+
+Interpretation
+--------------
+- Main question: does the scalar preserve sleeve-length order?
+- Threshold accuracy is secondary because 0.30/0.60 are provisional.
+- If ordering is weak, improve the feature representation before tuning thresholds.
+- DeepFashion2 categories provide weak ordinal supervision, not continuous GT.

@@ -1,0 +1,108 @@
+from __future__ import annotations
+
+import argparse
+import json
+import sys
+from pathlib import Path
+
+from fashion_mm.utils.fashionai_manifest_seal import create_manifest_seal
+from fashion_mm.utils.fashionai_manifest_seal import ManifestSealError
+from fashion_mm.utils.fashionai_manifest_seal import ManifestSealVerificationError
+from fashion_mm.utils.fashionai_manifest_seal import verify_manifest_seal
+
+
+EXIT_OK = 0
+EXIT_SEAL_EXISTS = 3
+EXIT_VERIFICATION_FAILED = 4
+EXIT_INPUT_ERROR = 5
+
+
+def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
+    parser = argparse.ArgumentParser(
+        description=(
+            "Create or verify a SHA-256 seal for FashionAI train/validation/test "
+            "manifests and split_summary.json."
+        ),
+        epilog=(
+            "Exit codes: 0 success; 2 invalid CLI usage; 3 existing seal refused; "
+            "4 verification mismatch; 5 missing, malformed, or unreadable input."
+        ),
+    )
+    subparsers = parser.add_subparsers(dest="command", required=True)
+
+    create_parser = subparsers.add_parser("create", help="Create a manifest seal.")
+    _add_common_arguments(create_parser)
+    create_parser.add_argument(
+        "--force",
+        action="store_true",
+        help="Explicitly replace an existing seal. The default is to refuse.",
+    )
+
+    verify_parser = subparsers.add_parser("verify", help="Verify a manifest seal.")
+    _add_common_arguments(verify_parser)
+    return parser.parse_args(argv)
+
+
+def main(argv: list[str] | None = None) -> int:
+    args = parse_args(argv)
+    try:
+        if args.command == "create":
+            seal_path, payload = create_manifest_seal(
+                args.manifest_dir,
+                seal_path=args.seal_file,
+                overwrite=args.force,
+            )
+            result = {
+                "action": "create",
+                "status": "ok",
+                "seal_file": str(seal_path),
+                "files": payload["files"],
+            }
+        else:
+            result = {
+                "action": "verify",
+                **verify_manifest_seal(
+                    args.manifest_dir,
+                    seal_path=args.seal_file,
+                ),
+            }
+    except FileExistsError as error:
+        _print_error(str(error))
+        return EXIT_SEAL_EXISTS
+    except ManifestSealVerificationError as error:
+        print(json.dumps(error.report, ensure_ascii=False, indent=2), file=sys.stderr)
+        return EXIT_VERIFICATION_FAILED
+    except (FileNotFoundError, ManifestSealError, OSError) as error:
+        _print_error(str(error))
+        return EXIT_INPUT_ERROR
+
+    print(json.dumps(result, ensure_ascii=False, indent=2))
+    return EXIT_OK
+
+
+def _add_common_arguments(parser: argparse.ArgumentParser) -> None:
+    parser.add_argument(
+        "manifest_dir",
+        type=Path,
+        help=(
+            "Directory containing train.csv, validation.csv, test.csv, and "
+            "split_summary.json."
+        ),
+    )
+    parser.add_argument(
+        "--seal-file",
+        type=Path,
+        default=None,
+        help=(
+            "Optional seal path. Defaults to "
+            "<manifest_dir>/fashionai_manifest_seal.json."
+        ),
+    )
+
+
+def _print_error(message: str) -> None:
+    print(f"ERROR: {message}", file=sys.stderr)
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())

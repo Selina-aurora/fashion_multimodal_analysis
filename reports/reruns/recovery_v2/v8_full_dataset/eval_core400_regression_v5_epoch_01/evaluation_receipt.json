@@ -1,0 +1,10 @@
+{
+  "checkpoint_sha256": "ea5a4ddf0f002256f1ce5164fc1b4b5b4d2263698f9525c9fbe7d8cf98bc1a65",
+  "manifest_sha256": "c83204aca87c9c4dee304b774fd459bf5a18a2d1d65f0a3a9a79b92721224b89",
+  "runtime_sha256": "60021df022b16fbe42c88ed57635e180cfd397077803403cbb6513169daabaca",
+  "score_threshold": 0.4,
+  "mask_threshold": 0.5,
+  "match_bbox_iou": 0.5,
+  "warmup_runs": 10,
+  "timed_passes": 5
+}

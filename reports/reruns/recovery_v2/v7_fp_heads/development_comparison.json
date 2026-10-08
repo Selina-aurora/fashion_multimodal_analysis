@@ -1,0 +1,76 @@
+{
+  "status": "V7_DEVELOPMENT_COMPARISON_COMPLETED",
+  "v5": {
+    "micro": {
+      "tp": 61,
+      "fp": 77,
+      "fn": 27,
+      "precision": 0.4420289855072464,
+      "recall": 0.6931818181818182,
+      "f1": 0.5398230088495576,
+      "localization_matches": 72,
+      "gt_count": 88,
+      "prediction_count": 138,
+      "bbox50_recall": 0.8181818181818182,
+      "localized_category_accuracy": 0.8472222222222222,
+      "mean_bbox_iou_localized": 0.8325011790890409,
+      "mean_mask_iou_correct_class": 0.8101662064753111,
+      "median_mask_iou_correct_class": 0.8375502349012283,
+      "mask_iou_ge_0_85_count": 27,
+      "mask_iou_ge_0_85_rate_all_gt": 0.3068181818181818,
+      "mask_iou_ge_0_85_rate_matched_class_correct": 0.4426229508196721
+    },
+    "outcome_counts": {
+      "correct": 61,
+      "wrong_class": 11,
+      "missed": 16
+    },
+    "mean_inference_ms": 33.62561998073943,
+    "median_inference_ms": 27.883986476808786,
+    "mean_inference_time_le_50ms": true
+  },
+  "v7": {
+    "micro": {
+      "tp": 61,
+      "fp": 76,
+      "fn": 27,
+      "precision": 0.44525547445255476,
+      "recall": 0.6931818181818182,
+      "f1": 0.5422222222222223,
+      "localization_matches": 72,
+      "gt_count": 88,
+      "prediction_count": 137,
+      "bbox50_recall": 0.8181818181818182,
+      "localized_category_accuracy": 0.8472222222222222,
+      "mean_bbox_iou_localized": 0.8362832582403563,
+      "mean_mask_iou_correct_class": 0.8094590038010142,
+      "median_mask_iou_correct_class": 0.8323699421965318,
+      "mask_iou_ge_0_85_count": 27,
+      "mask_iou_ge_0_85_rate_all_gt": 0.3068181818181818,
+      "mask_iou_ge_0_85_rate_matched_class_correct": 0.4426229508196721
+    },
+    "outcome_counts": {
+      "correct": 61,
+      "wrong_class": 11,
+      "missed": 16
+    },
+    "mean_inference_ms": 36.71615682542324,
+    "median_inference_ms": 31.58952295780182,
+    "mean_inference_time_le_50ms": true
+  },
+  "formal_acceptance": "NOT_CLAIMED",
+  "paired_instance_comparison": {
+    "common_class_correct_instances": 60,
+    "v5_mean_mask_iou_on_common": 0.8100444298973414,
+    "v7_mean_mask_iou_on_common": 0.8114711696704932,
+    "regressions": [
+      "v5_validation_00064"
+    ],
+    "gains": [
+      "v5_validation_00017"
+    ]
+  },
+  "default_candidate": "V5_UNCHANGED_PENDING_REVIEW",
+  "core_evaluation": "NOT_RUN",
+  "note": "Compare all classes, both sources, matched-instance mask IoU and misses. Three fixed epochs; no selection among epochs using this development split. Neither checkpoint nor acceptance configuration is automatically promoted."
+}

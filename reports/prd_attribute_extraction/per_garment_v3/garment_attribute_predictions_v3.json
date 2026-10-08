@@ -1,0 +1,3655 @@
+{
+  "schema_version": "3.1.3-v3-per-garment",
+  "model": "openai/clip-vit-base-patch32",
+  "scope": "one garment instance per record; dominant color only; material and craftsmanship excluded",
+  "neckline_note": "final neckline currently uses a top-center local proxy crop; replace with actual 3.1.2 collar ROI in integration stage",
+  "garments": [
+    {
+      "source_image": "../fashion_data/raw/train/train/image/004462.jpg",
+      "garment_id": "item1_vest_dress",
+      "garment_category": "dress",
+      "region_source": "mask",
+      "crop_path": "outputs/garment_instances/gt_pilot/004462/item1_vest_dress_crop.jpg",
+      "mask_path": "outputs/garment_instances/gt_pilot/004462/item1_vest_dress_mask.png",
+      "model": "openai/clip-vit-base-patch32",
+      "attributes": {
+        "primary_color": {
+          "label": "white",
+          "score": 0.6269292235374451,
+          "top3": [
+            {
+              "label": "white",
+              "score": 0.6269292235374451
+            },
+            {
+              "label": "pink",
+              "score": 0.12566260993480682
+            },
+            {
+              "label": "beige",
+              "score": 0.12480461597442627
+            }
+          ],
+          "score_note": "relative CLIP candidate-set score; not calibrated probability"
+        },
+        "pattern": {
+          "label": "other",
+          "score": 0.3058902323246002,
+          "top3": [
+            {
+              "label": "other",
+              "score": 0.3058902323246002
+            },
+            {
+              "label": "floral",
+              "score": 0.1961214244365692
+            },
+            {
+              "label": "geometric",
+              "score": 0.14629539847373962
+            }
+          ],
+          "score_note": "relative CLIP candidate-set score; not calibrated probability"
+        },
+        "sleeve_length": {
+          "label": "elbow",
+          "score": 0.3337211608886719,
+          "top3": [
+            {
+              "label": "elbow",
+              "score": 0.3337211608886719
+            },
+            {
+              "label": "short",
+              "score": 0.15293766558170319
+            },
+            {
+              "label": "sleeveless",
+              "score": 0.14453716576099396
+            }
+          ],
+          "score_note": "relative CLIP candidate-set score; not calibrated probability"
+        },
+        "neckline": {
+          "label": "halter",
+          "score": 0.29154205322265625,
+          "top3": [
+            {
+              "label": "halter",
+              "score": 0.29154205322265625
+            },
+            {
+              "label": "square",
+              "score": 0.12357223778963089
+            },
+            {
+              "label": "v_neck",
+              "score": 0.10290519893169403
+            }
+          ],
+          "score_note": "relative CLIP candidate-set score; not calibrated probability"
+        },
+        "neckline_whole": {
+          "label": "one_shoulder",
+          "score": 0.2413238137960434,
+          "top3": [
+            {
+              "label": "one_shoulder",
+              "score": 0.2413238137960434
+            },
+            {
+              "label": "off_shoulder",
+              "score": 0.1761166751384735
+            },
+            {
+              "label": "halter",
+              "score": 0.11645754426717758
+            }
+          ],
+          "score_note": "relative CLIP candidate-set score; not calibrated probability"
+        },
+        "neckline_local_proxy": {
+          "label": "halter",
+          "score": 0.29154205322265625,
+          "top3": [
+            {
+              "label": "halter",
+              "score": 0.29154205322265625
+            },
+            {
+              "label": "square",
+              "score": 0.12357223778963089
+            },
+            {
+              "label": "v_neck",
+              "score": 0.10290519893169403
+            }
+          ],
+          "score_note": "relative CLIP candidate-set score; not calibrated probability"
+        }
+      }
+    },
+    {
+      "source_image": "../fashion_data/raw/train/train/image/010492.jpg",
+      "garment_id": "item1_short_sleeve_top",
+      "garment_category": "top",
+      "region_source": "mask",
+      "crop_path": "outputs/garment_instances/gt_pilot/010492/item1_short_sleeve_top_crop.jpg",
+      "mask_path": "outputs/garment_instances/gt_pilot/010492/item1_short_sleeve_top_mask.png",
+      "model": "openai/clip-vit-base-patch32",
+      "attributes": {
+        "primary_color": {
+          "label": "green",
+          "score": 0.7153500914573669,
+          "top3": [
+            {
+              "label": "green",
+              "score": 0.7153500914573669
+            },
+            {
+              "label": "brown",
+              "score": 0.059871822595596313
+            },
+            {
+              "label": "gray",
+              "score": 0.047139815986156464
+            }
+          ],
+          "score_note": "relative CLIP candidate-set score; not calibrated probability"
+        },
+        "pattern": {
+          "label": "camouflage",
+          "score": 0.2162819504737854,
+          "top3": [
+            {
+              "label": "camouflage",
+              "score": 0.2162819504737854
+            },
+            {
+              "label": "solid",
+              "score": 0.19769242405891418
+            },
+            {
+              "label": "graphic",
+              "score": 0.12411502748727798
+            }
+          ],
+          "score_note": "relative CLIP candidate-set score; not calibrated probability"
+        },
+        "sleeve_length": {
+          "label": "short",
+          "score": 0.34064075350761414,
+          "top3": [
+            {
+              "label": "short",
+              "score": 0.34064075350761414
+            },
+            {
+              "label": "cap",
+              "score": 0.19801299273967743
+            },
+            {
+              "label": "three_quarter",
+              "score": 0.19563889503479004
+            }
+          ],
+          "score_note": "relative CLIP candidate-set score; not calibrated probability"
+        },
+        "neckline": {
+          "label": "round",
+          "score": 0.1846795231103897,
+          "top3": [
+            {
+              "label": "round",
+              "score": 0.1846795231103897
+            },
+            {
+              "label": "crew",
+              "score": 0.1820043921470642
+            },
+            {
+              "label": "mock_neck",
+              "score": 0.14865818619728088
+            }
+          ],
+          "score_note": "relative CLIP candidate-set score; not calibrated probability"
+        },
+        "neckline_whole": {
+          "label": "mock_neck",
+          "score": 0.19612398743629456,
+          "top3": [
+            {
+              "label": "mock_neck",
+              "score": 0.19612398743629456
+            },
+            {
+              "label": "crew",
+              "score": 0.1473221778869629
+            },
+            {
+              "label": "shirt_collar",
+              "score": 0.12934750318527222
+            }
+          ],
+          "score_note": "relative CLIP candidate-set score; not calibrated probability"
+        },
+        "neckline_local_proxy": {
+          "label": "round",
+          "score": 0.1846795231103897,
+          "top3": [
+            {
+              "label": "round",
+              "score": 0.1846795231103897
+            },
+            {
+              "label": "crew",
+              "score": 0.1820043921470642
+            },
+            {
+              "label": "mock_neck",
+              "score": 0.14865818619728088
+            }
+          ],
+          "score_note": "relative CLIP candidate-set score; not calibrated probability"
+        }
+      }
+    },
+    {
+      "source_image": "../fashion_data/raw/train/train/image/010492.jpg",
+      "garment_id": "item2_shorts",
+      "garment_category": "pants",
+      "region_source": "mask",
+      "crop_path": "outputs/garment_instances/gt_pilot/010492/item2_shorts_crop.jpg",
+      "mask_path": "outputs/garment_instances/gt_pilot/010492/item2_shorts_mask.png",
+      "model": "openai/clip-vit-base-patch32",
+      "attributes": {
+        "primary_color": {
+          "label": "green",
+          "score": 0.34674468636512756,
+          "top3": [
+            {
+              "label": "green",
+              "score": 0.34674468636512756
+            },
+            {
+              "label": "blue",
+              "score": 0.25063174962997437
+            },
+            {
+              "label": "gray",
+              "score": 0.10708693414926529
+            }
+          ],
+          "score_note": "relative CLIP candidate-set score; not calibrated probability"
+        },
+        "pattern": {
+          "label": "solid",
+          "score": 0.20805364847183228,
+          "top3": [
+            {
+              "label": "solid",
+              "score": 0.20805364847183228
+            },
+            {
+              "label": "unknown",
+              "score": 0.18612140417099
+            },
+            {
+              "label": "other",
+              "score": 0.1737832874059677
+            }
+          ],
+          "score_note": "relative CLIP candidate-set score; not calibrated probability"
+        },
+        "sleeve_length": {
+          "label": "not_applicable",
+          "score": 1.0,
+          "top3": [],
+          "score_note": "forced by garment category"
+        },
+        "neckline": {
+          "label": "not_applicable",
+          "score": 1.0,
+          "top3": [],
+          "score_note": "forced by garment category"
+        },
+        "neckline_whole": {
+          "label": "not_applicable",
+          "score": 1.0,
+          "top3": [],
+          "score_note": "forced by garment category"
+        },
+        "neckline_local_proxy": {
+          "label": "not_applicable",
+          "score": 1.0,
+          "top3": [],
+          "score_note": "forced by garment category"
+        }
+      }
+    },
+    {
+      "source_image": "../fashion_data/raw/train/train/image/016342.jpg",
+      "garment_id": "item1_long_sleeve_top",
+      "garment_category": "top",
+      "region_source": "mask",
+      "crop_path": "outputs/garment_instances/gt_pilot/016342/item1_long_sleeve_top_crop.jpg",
+      "mask_path": "outputs/garment_instances/gt_pilot/016342/item1_long_sleeve_top_mask.png",
+      "model": "openai/clip-vit-base-patch32",
+      "attributes": {
+        "primary_color": {
+          "label": "orange",
+          "score": 0.35939255356788635,
+          "top3": [
+            {
+              "label": "orange",
+              "score": 0.35939255356788635
+            },
+            {
+              "label": "beige",
+              "score": 0.24292033910751343
+            },
+            {
+              "label": "brown",
+              "score": 0.17801880836486816
+            }
+          ],
+          "score_note": "relative CLIP candidate-set score; not calibrated probability"
+        },
+        "pattern": {
+          "label": "solid",
+          "score": 0.5711438059806824,
+          "top3": [
+            {
+              "label": "solid",
+              "score": 0.5711438059806824
+            },
+            {
+              "label": "unknown",
+              "score": 0.11640642583370209
+            },
+            {
+              "label": "camouflage",
+              "score": 0.0703626200556755
+            }
+          ],
+          "score_note": "relative CLIP candidate-set score; not calibrated probability"
+        },
+        "sleeve_length": {
+          "label": "unknown",
+          "score": 0.41191598773002625,
+          "top3": [
+            {
+              "label": "unknown",
+              "score": 0.41191598773002625
+            },
+            {
+              "label": "sleeveless",
+              "score": 0.17829610407352448
+            },
+            {
+              "label": "elbow",
+              "score": 0.1633520871400833
+            }
+          ],
+          "score_note": "relative CLIP candidate-set score; not calibrated probability"
+        },
+        "neckline": {
+          "label": "hooded",
+          "score": 0.7543037533760071,
+          "top3": [
+            {
+              "label": "hooded",
+              "score": 0.7543037533760071
+            },
+            {
+              "label": "round",
+              "score": 0.06704295426607132
+            },
+            {
+              "label": "turtleneck",
+              "score": 0.04818461835384369
+            }
+          ],
+          "score_note": "relative CLIP candidate-set score; not calibrated probability"
+        },
+        "neckline_whole": {
+          "label": "hooded",
+          "score": 0.5618278384208679,
+          "top3": [
+            {
+              "label": "hooded",
+              "score": 0.5618278384208679
+            },
+            {
+              "label": "turtleneck",
+              "score": 0.10879653692245483
+            },
+            {
+              "label": "round",
+              "score": 0.053640540689229965
+            }
+          ],
+          "score_note": "relative CLIP candidate-set score; not calibrated probability"
+        },
+        "neckline_local_proxy": {
+          "label": "hooded",
+          "score": 0.7543037533760071,
+          "top3": [
+            {
+              "label": "hooded",
+              "score": 0.7543037533760071
+            },
+            {
+              "label": "round",
+              "score": 0.06704295426607132
+            },
+            {
+              "label": "turtleneck",
+              "score": 0.04818461835384369
+            }
+          ],
+          "score_note": "relative CLIP candidate-set score; not calibrated probability"
+        }
+      }
+    },
+    {
+      "source_image": "../fashion_data/raw/train/train/image/016342.jpg",
+      "garment_id": "item2_trousers",
+      "garment_category": "pants",
+      "region_source": "mask",
+      "crop_path": "outputs/garment_instances/gt_pilot/016342/item2_trousers_crop.jpg",
+      "mask_path": "outputs/garment_instances/gt_pilot/016342/item2_trousers_mask.png",
+      "model": "openai/clip-vit-base-patch32",
+      "attributes": {
+        "primary_color": {
+          "label": "beige",
+          "score": 0.46915706992149353,
+          "top3": [
+            {
+              "label": "beige",
+              "score": 0.46915706992149353
+            },
+            {
+              "label": "brown",
+              "score": 0.4226226806640625
+            },
+            {
+              "label": "orange",
+              "score": 0.045728035271167755
+            }
+          ],
+          "score_note": "relative CLIP candidate-set score; not calibrated probability"
+        },
+        "pattern": {
+          "label": "solid",
+          "score": 0.2678234577178955,
+          "top3": [
+            {
+              "label": "solid",
+              "score": 0.2678234577178955
+            },
+            {
+              "label": "unknown",
+              "score": 0.13101710379123688
+            },
+            {
+              "label": "other",
+              "score": 0.11175727844238281
+            }
+          ],
+          "score_note": "relative CLIP candidate-set score; not calibrated probability"
+        },
+        "sleeve_length": {
+          "label": "not_applicable",
+          "score": 1.0,
+          "top3": [],
+          "score_note": "forced by garment category"
+        },
+        "neckline": {
+          "label": "not_applicable",
+          "score": 1.0,
+          "top3": [],
+          "score_note": "forced by garment category"
+        },
+        "neckline_whole": {
+          "label": "not_applicable",
+          "score": 1.0,
+          "top3": [],
+          "score_note": "forced by garment category"
+        },
+        "neckline_local_proxy": {
+          "label": "not_applicable",
+          "score": 1.0,
+          "top3": [],
+          "score_note": "forced by garment category"
+        }
+      }
+    },
+    {
+      "source_image": "../fashion_data/raw/train/train/image/026915.jpg",
+      "garment_id": "item1_short_sleeve_top",
+      "garment_category": "top",
+      "region_source": "mask",
+      "crop_path": "outputs/garment_instances/gt_pilot/026915/item1_short_sleeve_top_crop.jpg",
+      "mask_path": "outputs/garment_instances/gt_pilot/026915/item1_short_sleeve_top_mask.png",
+      "model": "openai/clip-vit-base-patch32",
+      "attributes": {
+        "primary_color": {
+          "label": "beige",
+          "score": 0.3771757185459137,
+          "top3": [
+            {
+              "label": "beige",
+              "score": 0.3771757185459137
+            },
+            {
+              "label": "white",
+              "score": 0.27966946363449097
+            },
+            {
+              "label": "gray",
+              "score": 0.20287734270095825
+            }
+          ],
+          "score_note": "relative CLIP candidate-set score; not calibrated probability"
+        },
+        "pattern": {
+          "label": "graphic",
+          "score": 0.42512986063957214,
+          "top3": [
+            {
+              "label": "graphic",
+              "score": 0.42512986063957214
+            },
+            {
+              "label": "solid",
+              "score": 0.2896392345428467
+            },
+            {
+              "label": "camouflage",
+              "score": 0.064005546271801
+            }
+          ],
+          "score_note": "relative CLIP candidate-set score; not calibrated probability"
+        },
+        "sleeve_length": {
+          "label": "short",
+          "score": 0.4137198328971863,
+          "top3": [
+            {
+              "label": "short",
+              "score": 0.4137198328971863
+            },
+            {
+              "label": "cap",
+              "score": 0.386474609375
+            },
+            {
+              "label": "long",
+              "score": 0.07649004459381104
+            }
+          ],
+          "score_note": "relative CLIP candidate-set score; not calibrated probability"
+        },
+        "neckline": {
+          "label": "shirt_collar",
+          "score": 0.32596123218536377,
+          "top3": [
+            {
+              "label": "shirt_collar",
+              "score": 0.32596123218536377
+            },
+            {
+              "label": "turtleneck",
+              "score": 0.09810549020767212
+            },
+            {
+              "label": "other",
+              "score": 0.07740706950426102
+            }
+          ],
+          "score_note": "relative CLIP candidate-set score; not calibrated probability"
+        },
+        "neckline_whole": {
+          "label": "shirt_collar",
+          "score": 0.37923452258110046,
+          "top3": [
+            {
+              "label": "shirt_collar",
+              "score": 0.37923452258110046
+            },
+            {
+              "label": "mock_neck",
+              "score": 0.11686231195926666
+            },
+            {
+              "label": "polo",
+              "score": 0.0992189273238182
+            }
+          ],
+          "score_note": "relative CLIP candidate-set score; not calibrated probability"
+        },
+        "neckline_local_proxy": {
+          "label": "shirt_collar",
+          "score": 0.32596123218536377,
+          "top3": [
+            {
+              "label": "shirt_collar",
+              "score": 0.32596123218536377
+            },
+            {
+              "label": "turtleneck",
+              "score": 0.09810549020767212
+            },
+            {
+              "label": "other",
+              "score": 0.07740706950426102
+            }
+          ],
+          "score_note": "relative CLIP candidate-set score; not calibrated probability"
+        }
+      }
+    },
+    {
+      "source_image": "../fashion_data/raw/train/train/image/026915.jpg",
+      "garment_id": "item2_trousers",
+      "garment_category": "pants",
+      "region_source": "mask",
+      "crop_path": "outputs/garment_instances/gt_pilot/026915/item2_trousers_crop.jpg",
+      "mask_path": "outputs/garment_instances/gt_pilot/026915/item2_trousers_mask.png",
+      "model": "openai/clip-vit-base-patch32",
+      "attributes": {
+        "primary_color": {
+          "label": "blue",
+          "score": 0.1958189308643341,
+          "top3": [
+            {
+              "label": "blue",
+              "score": 0.1958189308643341
+            },
+            {
+              "label": "gray",
+              "score": 0.16921812295913696
+            },
+            {
+              "label": "beige",
+              "score": 0.15604276955127716
+            }
+          ],
+          "score_note": "relative CLIP candidate-set score; not calibrated probability"
+        },
+        "pattern": {
+          "label": "solid",
+          "score": 0.505994439125061,
+          "top3": [
+            {
+              "label": "solid",
+              "score": 0.505994439125061
+            },
+            {
+              "label": "unknown",
+              "score": 0.11099206656217575
+            },
+            {
+              "label": "graphic",
+              "score": 0.08245524764060974
+            }
+          ],
+          "score_note": "relative CLIP candidate-set score; not calibrated probability"
+        },
+        "sleeve_length": {
+          "label": "not_applicable",
+          "score": 1.0,
+          "top3": [],
+          "score_note": "forced by garment category"
+        },
+        "neckline": {
+          "label": "not_applicable",
+          "score": 1.0,
+          "top3": [],
+          "score_note": "forced by garment category"
+        },
+        "neckline_whole": {
+          "label": "not_applicable",
+          "score": 1.0,
+          "top3": [],
+          "score_note": "forced by garment category"
+        },
+        "neckline_local_proxy": {
+          "label": "not_applicable",
+          "score": 1.0,
+          "top3": [],
+          "score_note": "forced by garment category"
+        }
+      }
+    },
+    {
+      "source_image": "../fashion_data/raw/train/train/image/027157.jpg",
+      "garment_id": "item1_long_sleeve_top",
+      "garment_category": "top",
+      "region_source": "mask",
+      "crop_path": "outputs/garment_instances/gt_pilot/027157/item1_long_sleeve_top_crop.jpg",
+      "mask_path": "outputs/garment_instances/gt_pilot/027157/item1_long_sleeve_top_mask.png",
+      "model": "openai/clip-vit-base-patch32",
+      "attributes": {
+        "primary_color": {
+          "label": "beige",
+          "score": 0.4580771327018738,
+          "top3": [
+            {
+              "label": "beige",
+              "score": 0.4580771327018738
+            },
+            {
+              "label": "brown",
+              "score": 0.17026114463806152
+            },
+            {
+              "label": "white",
+              "score": 0.1447829157114029
+            }
+          ],
+          "score_note": "relative CLIP candidate-set score; not calibrated probability"
+        },
+        "pattern": {
+          "label": "floral",
+          "score": 0.33024510741233826,
+          "top3": [
+            {
+              "label": "floral",
+              "score": 0.33024510741233826
+            },
+            {
+              "label": "other",
+              "score": 0.32569989562034607
+            },
+            {
+              "label": "camouflage",
+              "score": 0.2529398202896118
+            }
+          ],
+          "score_note": "relative CLIP candidate-set score; not calibrated probability"
+        },
+        "sleeve_length": {
+          "label": "three_quarter",
+          "score": 0.36594390869140625,
+          "top3": [
+            {
+              "label": "three_quarter",
+              "score": 0.36594390869140625
+            },
+            {
+              "label": "elbow",
+              "score": 0.16721506416797638
+            },
+            {
+              "label": "long",
+              "score": 0.14588122069835663
+            }
+          ],
+          "score_note": "relative CLIP candidate-set score; not calibrated probability"
+        },
+        "neckline": {
+          "label": "unknown",
+          "score": 0.221934512257576,
+          "top3": [
+            {
+              "label": "unknown",
+              "score": 0.221934512257576
+            },
+            {
+              "label": "boat",
+              "score": 0.15705817937850952
+            },
+            {
+              "label": "other",
+              "score": 0.1183713898062706
+            }
+          ],
+          "score_note": "relative CLIP candidate-set score; not calibrated probability"
+        },
+        "neckline_whole": {
+          "label": "shirt_collar",
+          "score": 0.2346886247396469,
+          "top3": [
+            {
+              "label": "shirt_collar",
+              "score": 0.2346886247396469
+            },
+            {
+              "label": "boat",
+              "score": 0.16233135759830475
+            },
+            {
+              "label": "square",
+              "score": 0.14254961907863617
+            }
+          ],
+          "score_note": "relative CLIP candidate-set score; not calibrated probability"
+        },
+        "neckline_local_proxy": {
+          "label": "unknown",
+          "score": 0.221934512257576,
+          "top3": [
+            {
+              "label": "unknown",
+              "score": 0.221934512257576
+            },
+            {
+              "label": "boat",
+              "score": 0.15705817937850952
+            },
+            {
+              "label": "other",
+              "score": 0.1183713898062706
+            }
+          ],
+          "score_note": "relative CLIP candidate-set score; not calibrated probability"
+        }
+      }
+    },
+    {
+      "source_image": "../fashion_data/raw/train/train/image/029899.jpg",
+      "garment_id": "item1_short_sleeve_dress",
+      "garment_category": "dress",
+      "region_source": "mask",
+      "crop_path": "outputs/garment_instances/gt_pilot/029899/item1_short_sleeve_dress_crop.jpg",
+      "mask_path": "outputs/garment_instances/gt_pilot/029899/item1_short_sleeve_dress_mask.png",
+      "model": "openai/clip-vit-base-patch32",
+      "attributes": {
+        "primary_color": {
+          "label": "black",
+          "score": 0.3895028233528137,
+          "top3": [
+            {
+              "label": "black",
+              "score": 0.3895028233528137
+            },
+            {
+              "label": "brown",
+              "score": 0.11960671842098236
+            },
+            {
+              "label": "purple",
+              "score": 0.11873320490121841
+            }
+          ],
+          "score_note": "relative CLIP candidate-set score; not calibrated probability"
+        },
+        "pattern": {
+          "label": "solid",
+          "score": 0.527836799621582,
+          "top3": [
+            {
+              "label": "solid",
+              "score": 0.527836799621582
+            },
+            {
+              "label": "polka_dot",
+              "score": 0.14806224405765533
+            },
+            {
+              "label": "geometric",
+              "score": 0.08290297538042068
+            }
+          ],
+          "score_note": "relative CLIP candidate-set score; not calibrated probability"
+        },
+        "sleeve_length": {
+          "label": "short",
+          "score": 0.44497111439704895,
+          "top3": [
+            {
+              "label": "short",
+              "score": 0.44497111439704895
+            },
+            {
+              "label": "cap",
+              "score": 0.4121539294719696
+            },
+            {
+              "label": "three_quarter",
+              "score": 0.06750362366437912
+            }
+          ],
+          "score_note": "relative CLIP candidate-set score; not calibrated probability"
+        },
+        "neckline": {
+          "label": "polo",
+          "score": 0.272856742143631,
+          "top3": [
+            {
+              "label": "polo",
+              "score": 0.272856742143631
+            },
+            {
+              "label": "mock_neck",
+              "score": 0.20810967683792114
+            },
+            {
+              "label": "shirt_collar",
+              "score": 0.1515013724565506
+            }
+          ],
+          "score_note": "relative CLIP candidate-set score; not calibrated probability"
+        },
+        "neckline_whole": {
+          "label": "polo",
+          "score": 0.3124101758003235,
+          "top3": [
+            {
+              "label": "polo",
+              "score": 0.3124101758003235
+            },
+            {
+              "label": "shirt_collar",
+              "score": 0.23696796596050262
+            },
+            {
+              "label": "mock_neck",
+              "score": 0.12904556095600128
+            }
+          ],
+          "score_note": "relative CLIP candidate-set score; not calibrated probability"
+        },
+        "neckline_local_proxy": {
+          "label": "polo",
+          "score": 0.272856742143631,
+          "top3": [
+            {
+              "label": "polo",
+              "score": 0.272856742143631
+            },
+            {
+              "label": "mock_neck",
+              "score": 0.20810967683792114
+            },
+            {
+              "label": "shirt_collar",
+              "score": 0.1515013724565506
+            }
+          ],
+          "score_note": "relative CLIP candidate-set score; not calibrated probability"
+        }
+      }
+    },
+    {
+      "source_image": "../fashion_data/raw/train/train/image/034287.jpg",
+      "garment_id": "item1_long_sleeve_outwear",
+      "garment_category": "outerwear",
+      "region_source": "mask",
+      "crop_path": "outputs/garment_instances/gt_pilot/034287/item1_long_sleeve_outwear_crop.jpg",
+      "mask_path": "outputs/garment_instances/gt_pilot/034287/item1_long_sleeve_outwear_mask.png",
+      "model": "openai/clip-vit-base-patch32",
+      "attributes": {
+        "primary_color": {
+          "label": "black",
+          "score": 0.5222183465957642,
+          "top3": [
+            {
+              "label": "black",
+              "score": 0.5222183465957642
+            },
+            {
+              "label": "red",
+              "score": 0.22569149732589722
+            },
+            {
+              "label": "gray",
+              "score": 0.0674089565873146
+            }
+          ],
+          "score_note": "relative CLIP candidate-set score; not calibrated probability"
+        },
+        "pattern": {
+          "label": "graphic",
+          "score": 0.507072925567627,
+          "top3": [
+            {
+              "label": "graphic",
+              "score": 0.507072925567627
+            },
+            {
+              "label": "solid",
+              "score": 0.1775815635919571
+            },
+            {
+              "label": "other",
+              "score": 0.06461530178785324
+            }
+          ],
+          "score_note": "relative CLIP candidate-set score; not calibrated probability"
+        },
+        "sleeve_length": {
+          "label": "long",
+          "score": 0.30835309624671936,
+          "top3": [
+            {
+              "label": "long",
+              "score": 0.30835309624671936
+            },
+            {
+              "label": "three_quarter",
+              "score": 0.2284468412399292
+            },
+            {
+              "label": "unknown",
+              "score": 0.2087113857269287
+            }
+          ],
+          "score_note": "relative CLIP candidate-set score; not calibrated probability"
+        },
+        "neckline": {
+          "label": "turtleneck",
+          "score": 0.15315057337284088,
+          "top3": [
+            {
+              "label": "turtleneck",
+              "score": 0.15315057337284088
+            },
+            {
+              "label": "hooded",
+              "score": 0.15261054039001465
+            },
+            {
+              "label": "unknown",
+              "score": 0.14464758336544037
+            }
+          ],
+          "score_note": "relative CLIP candidate-set score; not calibrated probability"
+        },
+        "neckline_whole": {
+          "label": "crew",
+          "score": 0.30309078097343445,
+          "top3": [
+            {
+              "label": "crew",
+              "score": 0.30309078097343445
+            },
+            {
+              "label": "mock_neck",
+              "score": 0.19631442427635193
+            },
+            {
+              "label": "hooded",
+              "score": 0.12132542580366135
+            }
+          ],
+          "score_note": "relative CLIP candidate-set score; not calibrated probability"
+        },
+        "neckline_local_proxy": {
+          "label": "turtleneck",
+          "score": 0.15315057337284088,
+          "top3": [
+            {
+              "label": "turtleneck",
+              "score": 0.15315057337284088
+            },
+            {
+              "label": "hooded",
+              "score": 0.15261054039001465
+            },
+            {
+              "label": "unknown",
+              "score": 0.14464758336544037
+            }
+          ],
+          "score_note": "relative CLIP candidate-set score; not calibrated probability"
+        }
+      }
+    },
+    {
+      "source_image": "../fashion_data/raw/train/train/image/034287.jpg",
+      "garment_id": "item2_trousers",
+      "garment_category": "pants",
+      "region_source": "mask",
+      "crop_path": "outputs/garment_instances/gt_pilot/034287/item2_trousers_crop.jpg",
+      "mask_path": "outputs/garment_instances/gt_pilot/034287/item2_trousers_mask.png",
+      "model": "openai/clip-vit-base-patch32",
+      "attributes": {
+        "primary_color": {
+          "label": "gray",
+          "score": 0.2573016881942749,
+          "top3": [
+            {
+              "label": "gray",
+              "score": 0.2573016881942749
+            },
+            {
+              "label": "black",
+              "score": 0.12564782798290253
+            },
+            {
+              "label": "white",
+              "score": 0.1186487078666687
+            }
+          ],
+          "score_note": "relative CLIP candidate-set score; not calibrated probability"
+        },
+        "pattern": {
+          "label": "solid",
+          "score": 0.4958805441856384,
+          "top3": [
+            {
+              "label": "solid",
+              "score": 0.4958805441856384
+            },
+            {
+              "label": "graphic",
+              "score": 0.1483299434185028
+            },
+            {
+              "label": "unknown",
+              "score": 0.08758991211652756
+            }
+          ],
+          "score_note": "relative CLIP candidate-set score; not calibrated probability"
+        },
+        "sleeve_length": {
+          "label": "not_applicable",
+          "score": 1.0,
+          "top3": [],
+          "score_note": "forced by garment category"
+        },
+        "neckline": {
+          "label": "not_applicable",
+          "score": 1.0,
+          "top3": [],
+          "score_note": "forced by garment category"
+        },
+        "neckline_whole": {
+          "label": "not_applicable",
+          "score": 1.0,
+          "top3": [],
+          "score_note": "forced by garment category"
+        },
+        "neckline_local_proxy": {
+          "label": "not_applicable",
+          "score": 1.0,
+          "top3": [],
+          "score_note": "forced by garment category"
+        }
+      }
+    },
+    {
+      "source_image": "../fashion_data/raw/train/train/image/040285.jpg",
+      "garment_id": "item1_skirt",
+      "garment_category": "skirt",
+      "region_source": "mask",
+      "crop_path": "outputs/garment_instances/gt_pilot/040285/item1_skirt_crop.jpg",
+      "mask_path": "outputs/garment_instances/gt_pilot/040285/item1_skirt_mask.png",
+      "model": "openai/clip-vit-base-patch32",
+      "attributes": {
+        "primary_color": {
+          "label": "black",
+          "score": 0.31574547290802,
+          "top3": [
+            {
+              "label": "black",
+              "score": 0.31574547290802
+            },
+            {
+              "label": "gray",
+              "score": 0.18422821164131165
+            },
+            {
+              "label": "brown",
+              "score": 0.18214823305606842
+            }
+          ],
+          "score_note": "relative CLIP candidate-set score; not calibrated probability"
+        },
+        "pattern": {
+          "label": "camouflage",
+          "score": 0.2635211944580078,
+          "top3": [
+            {
+              "label": "camouflage",
+              "score": 0.2635211944580078
+            },
+            {
+              "label": "animal",
+              "score": 0.19165194034576416
+            },
+            {
+              "label": "striped",
+              "score": 0.1857905238866806
+            }
+          ],
+          "score_note": "relative CLIP candidate-set score; not calibrated probability"
+        },
+        "sleeve_length": {
+          "label": "not_applicable",
+          "score": 1.0,
+          "top3": [],
+          "score_note": "forced by garment category"
+        },
+        "neckline": {
+          "label": "not_applicable",
+          "score": 1.0,
+          "top3": [],
+          "score_note": "forced by garment category"
+        },
+        "neckline_whole": {
+          "label": "not_applicable",
+          "score": 1.0,
+          "top3": [],
+          "score_note": "forced by garment category"
+        },
+        "neckline_local_proxy": {
+          "label": "not_applicable",
+          "score": 1.0,
+          "top3": [],
+          "score_note": "forced by garment category"
+        }
+      }
+    },
+    {
+      "source_image": "../fashion_data/raw/train/train/image/040285.jpg",
+      "garment_id": "item2_long_sleeve_top",
+      "garment_category": "top",
+      "region_source": "mask",
+      "crop_path": "outputs/garment_instances/gt_pilot/040285/item2_long_sleeve_top_crop.jpg",
+      "mask_path": "outputs/garment_instances/gt_pilot/040285/item2_long_sleeve_top_mask.png",
+      "model": "openai/clip-vit-base-patch32",
+      "attributes": {
+        "primary_color": {
+          "label": "white",
+          "score": 0.18839029967784882,
+          "top3": [
+            {
+              "label": "white",
+              "score": 0.18839029967784882
+            },
+            {
+              "label": "beige",
+              "score": 0.17135800421237946
+            },
+            {
+              "label": "pink",
+              "score": 0.09784228354692459
+            }
+          ],
+          "score_note": "relative CLIP candidate-set score; not calibrated probability"
+        },
+        "pattern": {
+          "label": "solid",
+          "score": 0.24181480705738068,
+          "top3": [
+            {
+              "label": "solid",
+              "score": 0.24181480705738068
+            },
+            {
+              "label": "camouflage",
+              "score": 0.17704714834690094
+            },
+            {
+              "label": "unknown",
+              "score": 0.12519945204257965
+            }
+          ],
+          "score_note": "relative CLIP candidate-set score; not calibrated probability"
+        },
+        "sleeve_length": {
+          "label": "unknown",
+          "score": 0.2265925407409668,
+          "top3": [
+            {
+              "label": "unknown",
+              "score": 0.2265925407409668
+            },
+            {
+              "label": "short",
+              "score": 0.1948772668838501
+            },
+            {
+              "label": "three_quarter",
+              "score": 0.17898127436637878
+            }
+          ],
+          "score_note": "relative CLIP candidate-set score; not calibrated probability"
+        },
+        "neckline": {
+          "label": "one_shoulder",
+          "score": 0.14440858364105225,
+          "top3": [
+            {
+              "label": "one_shoulder",
+              "score": 0.14440858364105225
+            },
+            {
+              "label": "off_shoulder",
+              "score": 0.13845083117485046
+            },
+            {
+              "label": "boat",
+              "score": 0.09514905512332916
+            }
+          ],
+          "score_note": "relative CLIP candidate-set score; not calibrated probability"
+        },
+        "neckline_whole": {
+          "label": "one_shoulder",
+          "score": 0.11553428322076797,
+          "top3": [
+            {
+              "label": "one_shoulder",
+              "score": 0.11553428322076797
+            },
+            {
+              "label": "boat",
+              "score": 0.09373775124549866
+            },
+            {
+              "label": "hooded",
+              "score": 0.09210774302482605
+            }
+          ],
+          "score_note": "relative CLIP candidate-set score; not calibrated probability"
+        },
+        "neckline_local_proxy": {
+          "label": "one_shoulder",
+          "score": 0.14440858364105225,
+          "top3": [
+            {
+              "label": "one_shoulder",
+              "score": 0.14440858364105225
+            },
+            {
+              "label": "off_shoulder",
+              "score": 0.13845083117485046
+            },
+            {
+              "label": "boat",
+              "score": 0.09514905512332916
+            }
+          ],
+          "score_note": "relative CLIP candidate-set score; not calibrated probability"
+        }
+      }
+    },
+    {
+      "source_image": "../fashion_data/raw/train/train/image/041765.jpg",
+      "garment_id": "item1_short_sleeve_top",
+      "garment_category": "top",
+      "region_source": "mask",
+      "crop_path": "outputs/garment_instances/gt_pilot/041765/item1_short_sleeve_top_crop.jpg",
+      "mask_path": "outputs/garment_instances/gt_pilot/041765/item1_short_sleeve_top_mask.png",
+      "model": "openai/clip-vit-base-patch32",
+      "attributes": {
+        "primary_color": {
+          "label": "white",
+          "score": 0.7512872219085693,
+          "top3": [
+            {
+              "label": "white",
+              "score": 0.7512872219085693
+            },
+            {
+              "label": "green",
+              "score": 0.07572399079799652
+            },
+            {
+              "label": "gray",
+              "score": 0.03849748149514198
+            }
+          ],
+          "score_note": "relative CLIP candidate-set score; not calibrated probability"
+        },
+        "pattern": {
+          "label": "solid",
+          "score": 0.2218768298625946,
+          "top3": [
+            {
+              "label": "solid",
+              "score": 0.2218768298625946
+            },
+            {
+              "label": "graphic",
+              "score": 0.21882642805576324
+            },
+            {
+              "label": "geometric",
+              "score": 0.11709874123334885
+            }
+          ],
+          "score_note": "relative CLIP candidate-set score; not calibrated probability"
+        },
+        "sleeve_length": {
+          "label": "short",
+          "score": 0.4202553331851959,
+          "top3": [
+            {
+              "label": "short",
+              "score": 0.4202553331851959
+            },
+            {
+              "label": "elbow",
+              "score": 0.19581598043441772
+            },
+            {
+              "label": "three_quarter",
+              "score": 0.12412870675325394
+            }
+          ],
+          "score_note": "relative CLIP candidate-set score; not calibrated probability"
+        },
+        "neckline": {
+          "label": "round",
+          "score": 0.1408136636018753,
+          "top3": [
+            {
+              "label": "round",
+              "score": 0.1408136636018753
+            },
+            {
+              "label": "off_shoulder",
+              "score": 0.13133566081523895
+            },
+            {
+              "label": "v_neck",
+              "score": 0.08567554503679276
+            }
+          ],
+          "score_note": "relative CLIP candidate-set score; not calibrated probability"
+        },
+        "neckline_whole": {
+          "label": "shirt_collar",
+          "score": 0.4441162943840027,
+          "top3": [
+            {
+              "label": "shirt_collar",
+              "score": 0.4441162943840027
+            },
+            {
+              "label": "square",
+              "score": 0.1079513430595398
+            },
+            {
+              "label": "mock_neck",
+              "score": 0.0931028425693512
+            }
+          ],
+          "score_note": "relative CLIP candidate-set score; not calibrated probability"
+        },
+        "neckline_local_proxy": {
+          "label": "round",
+          "score": 0.1408136636018753,
+          "top3": [
+            {
+              "label": "round",
+              "score": 0.1408136636018753
+            },
+            {
+              "label": "off_shoulder",
+              "score": 0.13133566081523895
+            },
+            {
+              "label": "v_neck",
+              "score": 0.08567554503679276
+            }
+          ],
+          "score_note": "relative CLIP candidate-set score; not calibrated probability"
+        }
+      }
+    },
+    {
+      "source_image": "../fashion_data/raw/train/train/image/041765.jpg",
+      "garment_id": "item2_skirt",
+      "garment_category": "skirt",
+      "region_source": "mask",
+      "crop_path": "outputs/garment_instances/gt_pilot/041765/item2_skirt_crop.jpg",
+      "mask_path": "outputs/garment_instances/gt_pilot/041765/item2_skirt_mask.png",
+      "model": "openai/clip-vit-base-patch32",
+      "attributes": {
+        "primary_color": {
+          "label": "beige",
+          "score": 0.26145413517951965,
+          "top3": [
+            {
+              "label": "beige",
+              "score": 0.26145413517951965
+            },
+            {
+              "label": "yellow",
+              "score": 0.12661267817020416
+            },
+            {
+              "label": "green",
+              "score": 0.12279096245765686
+            }
+          ],
+          "score_note": "relative CLIP candidate-set score; not calibrated probability"
+        },
+        "pattern": {
+          "label": "floral",
+          "score": 0.8993613719940186,
+          "top3": [
+            {
+              "label": "floral",
+              "score": 0.8993613719940186
+            },
+            {
+              "label": "other",
+              "score": 0.047584109008312225
+            },
+            {
+              "label": "unknown",
+              "score": 0.018276261165738106
+            }
+          ],
+          "score_note": "relative CLIP candidate-set score; not calibrated probability"
+        },
+        "sleeve_length": {
+          "label": "not_applicable",
+          "score": 1.0,
+          "top3": [],
+          "score_note": "forced by garment category"
+        },
+        "neckline": {
+          "label": "not_applicable",
+          "score": 1.0,
+          "top3": [],
+          "score_note": "forced by garment category"
+        },
+        "neckline_whole": {
+          "label": "not_applicable",
+          "score": 1.0,
+          "top3": [],
+          "score_note": "forced by garment category"
+        },
+        "neckline_local_proxy": {
+          "label": "not_applicable",
+          "score": 1.0,
+          "top3": [],
+          "score_note": "forced by garment category"
+        }
+      }
+    },
+    {
+      "source_image": "../fashion_data/raw/train/train/image/054092.jpg",
+      "garment_id": "item1_shorts",
+      "garment_category": "pants",
+      "region_source": "mask",
+      "crop_path": "outputs/garment_instances/gt_pilot/054092/item1_shorts_crop.jpg",
+      "mask_path": "outputs/garment_instances/gt_pilot/054092/item1_shorts_mask.png",
+      "model": "openai/clip-vit-base-patch32",
+      "attributes": {
+        "primary_color": {
+          "label": "pink",
+          "score": 0.6498569250106812,
+          "top3": [
+            {
+              "label": "pink",
+              "score": 0.6498569250106812
+            },
+            {
+              "label": "beige",
+              "score": 0.14005304872989655
+            },
+            {
+              "label": "brown",
+              "score": 0.05691061541438103
+            }
+          ],
+          "score_note": "relative CLIP candidate-set score; not calibrated probability"
+        },
+        "pattern": {
+          "label": "solid",
+          "score": 0.43429338932037354,
+          "top3": [
+            {
+              "label": "solid",
+              "score": 0.43429338932037354
+            },
+            {
+              "label": "other",
+              "score": 0.22617517411708832
+            },
+            {
+              "label": "unknown",
+              "score": 0.12106654793024063
+            }
+          ],
+          "score_note": "relative CLIP candidate-set score; not calibrated probability"
+        },
+        "sleeve_length": {
+          "label": "not_applicable",
+          "score": 1.0,
+          "top3": [],
+          "score_note": "forced by garment category"
+        },
+        "neckline": {
+          "label": "not_applicable",
+          "score": 1.0,
+          "top3": [],
+          "score_note": "forced by garment category"
+        },
+        "neckline_whole": {
+          "label": "not_applicable",
+          "score": 1.0,
+          "top3": [],
+          "score_note": "forced by garment category"
+        },
+        "neckline_local_proxy": {
+          "label": "not_applicable",
+          "score": 1.0,
+          "top3": [],
+          "score_note": "forced by garment category"
+        }
+      }
+    },
+    {
+      "source_image": "../fashion_data/raw/train/train/image/054092.jpg",
+      "garment_id": "item2_short_sleeve_top",
+      "garment_category": "top",
+      "region_source": "mask",
+      "crop_path": "outputs/garment_instances/gt_pilot/054092/item2_short_sleeve_top_crop.jpg",
+      "mask_path": "outputs/garment_instances/gt_pilot/054092/item2_short_sleeve_top_mask.png",
+      "model": "openai/clip-vit-base-patch32",
+      "attributes": {
+        "primary_color": {
+          "label": "white",
+          "score": 0.3726460039615631,
+          "top3": [
+            {
+              "label": "white",
+              "score": 0.3726460039615631
+            },
+            {
+              "label": "beige",
+              "score": 0.12537242472171783
+            },
+            {
+              "label": "pink",
+              "score": 0.11471141874790192
+            }
+          ],
+          "score_note": "relative CLIP candidate-set score; not calibrated probability"
+        },
+        "pattern": {
+          "label": "camouflage",
+          "score": 0.4821583330631256,
+          "top3": [
+            {
+              "label": "camouflage",
+              "score": 0.4821583330631256
+            },
+            {
+              "label": "other",
+              "score": 0.14723268151283264
+            },
+            {
+              "label": "abstract",
+              "score": 0.14093056321144104
+            }
+          ],
+          "score_note": "relative CLIP candidate-set score; not calibrated probability"
+        },
+        "sleeve_length": {
+          "label": "sleeveless",
+          "score": 0.28494495153427124,
+          "top3": [
+            {
+              "label": "sleeveless",
+              "score": 0.28494495153427124
+            },
+            {
+              "label": "short",
+              "score": 0.16555863618850708
+            },
+            {
+              "label": "long",
+              "score": 0.12973621487617493
+            }
+          ],
+          "score_note": "relative CLIP candidate-set score; not calibrated probability"
+        },
+        "neckline": {
+          "label": "boat",
+          "score": 0.2647271454334259,
+          "top3": [
+            {
+              "label": "boat",
+              "score": 0.2647271454334259
+            },
+            {
+              "label": "square",
+              "score": 0.13354982435703278
+            },
+            {
+              "label": "unknown",
+              "score": 0.1183815598487854
+            }
+          ],
+          "score_note": "relative CLIP candidate-set score; not calibrated probability"
+        },
+        "neckline_whole": {
+          "label": "halter",
+          "score": 0.24478326737880707,
+          "top3": [
+            {
+              "label": "halter",
+              "score": 0.24478326737880707
+            },
+            {
+              "label": "other",
+              "score": 0.09794659912586212
+            },
+            {
+              "label": "square",
+              "score": 0.08758901059627533
+            }
+          ],
+          "score_note": "relative CLIP candidate-set score; not calibrated probability"
+        },
+        "neckline_local_proxy": {
+          "label": "boat",
+          "score": 0.2647271454334259,
+          "top3": [
+            {
+              "label": "boat",
+              "score": 0.2647271454334259
+            },
+            {
+              "label": "square",
+              "score": 0.13354982435703278
+            },
+            {
+              "label": "unknown",
+              "score": 0.1183815598487854
+            }
+          ],
+          "score_note": "relative CLIP candidate-set score; not calibrated probability"
+        }
+      }
+    },
+    {
+      "source_image": "../fashion_data/raw/train/train/image/077117.jpg",
+      "garment_id": "item1_long_sleeve_top",
+      "garment_category": "top",
+      "region_source": "mask",
+      "crop_path": "outputs/garment_instances/gt_pilot/077117/item1_long_sleeve_top_crop.jpg",
+      "mask_path": "outputs/garment_instances/gt_pilot/077117/item1_long_sleeve_top_mask.png",
+      "model": "openai/clip-vit-base-patch32",
+      "attributes": {
+        "primary_color": {
+          "label": "white",
+          "score": 0.7089864015579224,
+          "top3": [
+            {
+              "label": "white",
+              "score": 0.7089864015579224
+            },
+            {
+              "label": "beige",
+              "score": 0.0980972871184349
+            },
+            {
+              "label": "gray",
+              "score": 0.052260905504226685
+            }
+          ],
+          "score_note": "relative CLIP candidate-set score; not calibrated probability"
+        },
+        "pattern": {
+          "label": "solid",
+          "score": 0.6590825915336609,
+          "top3": [
+            {
+              "label": "solid",
+              "score": 0.6590825915336609
+            },
+            {
+              "label": "unknown",
+              "score": 0.08567915111780167
+            },
+            {
+              "label": "graphic",
+              "score": 0.07336162030696869
+            }
+          ],
+          "score_note": "relative CLIP candidate-set score; not calibrated probability"
+        },
+        "sleeve_length": {
+          "label": "unknown",
+          "score": 0.5320232510566711,
+          "top3": [
+            {
+              "label": "unknown",
+              "score": 0.5320232510566711
+            },
+            {
+              "label": "elbow",
+              "score": 0.1389378011226654
+            },
+            {
+              "label": "three_quarter",
+              "score": 0.10771909356117249
+            }
+          ],
+          "score_note": "relative CLIP candidate-set score; not calibrated probability"
+        },
+        "neckline": {
+          "label": "shirt_collar",
+          "score": 0.4702976942062378,
+          "top3": [
+            {
+              "label": "shirt_collar",
+              "score": 0.4702976942062378
+            },
+            {
+              "label": "crew",
+              "score": 0.10388035327196121
+            },
+            {
+              "label": "turtleneck",
+              "score": 0.05350720137357712
+            }
+          ],
+          "score_note": "relative CLIP candidate-set score; not calibrated probability"
+        },
+        "neckline_whole": {
+          "label": "shirt_collar",
+          "score": 0.2047586888074875,
+          "top3": [
+            {
+              "label": "shirt_collar",
+              "score": 0.2047586888074875
+            },
+            {
+              "label": "hooded",
+              "score": 0.15240192413330078
+            },
+            {
+              "label": "round",
+              "score": 0.08104865252971649
+            }
+          ],
+          "score_note": "relative CLIP candidate-set score; not calibrated probability"
+        },
+        "neckline_local_proxy": {
+          "label": "shirt_collar",
+          "score": 0.4702976942062378,
+          "top3": [
+            {
+              "label": "shirt_collar",
+              "score": 0.4702976942062378
+            },
+            {
+              "label": "crew",
+              "score": 0.10388035327196121
+            },
+            {
+              "label": "turtleneck",
+              "score": 0.05350720137357712
+            }
+          ],
+          "score_note": "relative CLIP candidate-set score; not calibrated probability"
+        }
+      }
+    },
+    {
+      "source_image": "../fashion_data/raw/train/train/image/077117.jpg",
+      "garment_id": "item2_trousers",
+      "garment_category": "pants",
+      "region_source": "mask",
+      "crop_path": "outputs/garment_instances/gt_pilot/077117/item2_trousers_crop.jpg",
+      "mask_path": "outputs/garment_instances/gt_pilot/077117/item2_trousers_mask.png",
+      "model": "openai/clip-vit-base-patch32",
+      "attributes": {
+        "primary_color": {
+          "label": "white",
+          "score": 0.5746060013771057,
+          "top3": [
+            {
+              "label": "white",
+              "score": 0.5746060013771057
+            },
+            {
+              "label": "gray",
+              "score": 0.16958516836166382
+            },
+            {
+              "label": "beige",
+              "score": 0.08379477262496948
+            }
+          ],
+          "score_note": "relative CLIP candidate-set score; not calibrated probability"
+        },
+        "pattern": {
+          "label": "solid",
+          "score": 0.4156908094882965,
+          "top3": [
+            {
+              "label": "solid",
+              "score": 0.4156908094882965
+            },
+            {
+              "label": "graphic",
+              "score": 0.15985247492790222
+            },
+            {
+              "label": "other",
+              "score": 0.09324734658002853
+            }
+          ],
+          "score_note": "relative CLIP candidate-set score; not calibrated probability"
+        },
+        "sleeve_length": {
+          "label": "not_applicable",
+          "score": 1.0,
+          "top3": [],
+          "score_note": "forced by garment category"
+        },
+        "neckline": {
+          "label": "not_applicable",
+          "score": 1.0,
+          "top3": [],
+          "score_note": "forced by garment category"
+        },
+        "neckline_whole": {
+          "label": "not_applicable",
+          "score": 1.0,
+          "top3": [],
+          "score_note": "forced by garment category"
+        },
+        "neckline_local_proxy": {
+          "label": "not_applicable",
+          "score": 1.0,
+          "top3": [],
+          "score_note": "forced by garment category"
+        }
+      }
+    },
+    {
+      "source_image": "../fashion_data/raw/train/train/image/087339.jpg",
+      "garment_id": "item1_trousers",
+      "garment_category": "pants",
+      "region_source": "mask",
+      "crop_path": "outputs/garment_instances/gt_pilot/087339/item1_trousers_crop.jpg",
+      "mask_path": "outputs/garment_instances/gt_pilot/087339/item1_trousers_mask.png",
+      "model": "openai/clip-vit-base-patch32",
+      "attributes": {
+        "primary_color": {
+          "label": "white",
+          "score": 0.810028076171875,
+          "top3": [
+            {
+              "label": "white",
+              "score": 0.810028076171875
+            },
+            {
+              "label": "beige",
+              "score": 0.09227562695741653
+            },
+            {
+              "label": "gray",
+              "score": 0.02260703407227993
+            }
+          ],
+          "score_note": "relative CLIP candidate-set score; not calibrated probability"
+        },
+        "pattern": {
+          "label": "solid",
+          "score": 0.4748755991458893,
+          "top3": [
+            {
+              "label": "solid",
+              "score": 0.4748755991458893
+            },
+            {
+              "label": "graphic",
+              "score": 0.15479950606822968
+            },
+            {
+              "label": "other",
+              "score": 0.0746428593993187
+            }
+          ],
+          "score_note": "relative CLIP candidate-set score; not calibrated probability"
+        },
+        "sleeve_length": {
+          "label": "not_applicable",
+          "score": 1.0,
+          "top3": [],
+          "score_note": "forced by garment category"
+        },
+        "neckline": {
+          "label": "not_applicable",
+          "score": 1.0,
+          "top3": [],
+          "score_note": "forced by garment category"
+        },
+        "neckline_whole": {
+          "label": "not_applicable",
+          "score": 1.0,
+          "top3": [],
+          "score_note": "forced by garment category"
+        },
+        "neckline_local_proxy": {
+          "label": "not_applicable",
+          "score": 1.0,
+          "top3": [],
+          "score_note": "forced by garment category"
+        }
+      }
+    },
+    {
+      "source_image": "../fashion_data/raw/train/train/image/087339.jpg",
+      "garment_id": "item2_long_sleeve_top",
+      "garment_category": "top",
+      "region_source": "mask",
+      "crop_path": "outputs/garment_instances/gt_pilot/087339/item2_long_sleeve_top_crop.jpg",
+      "mask_path": "outputs/garment_instances/gt_pilot/087339/item2_long_sleeve_top_mask.png",
+      "model": "openai/clip-vit-base-patch32",
+      "attributes": {
+        "primary_color": {
+          "label": "orange",
+          "score": 0.4145888388156891,
+          "top3": [
+            {
+              "label": "orange",
+              "score": 0.4145888388156891
+            },
+            {
+              "label": "pink",
+              "score": 0.29503852128982544
+            },
+            {
+              "label": "beige",
+              "score": 0.13233904540538788
+            }
+          ],
+          "score_note": "relative CLIP candidate-set score; not calibrated probability"
+        },
+        "pattern": {
+          "label": "solid",
+          "score": 0.3103291988372803,
+          "top3": [
+            {
+              "label": "solid",
+              "score": 0.3103291988372803
+            },
+            {
+              "label": "other",
+              "score": 0.11417287588119507
+            },
+            {
+              "label": "graphic",
+              "score": 0.08496607840061188
+            }
+          ],
+          "score_note": "relative CLIP candidate-set score; not calibrated probability"
+        },
+        "sleeve_length": {
+          "label": "three_quarter",
+          "score": 0.24347743391990662,
+          "top3": [
+            {
+              "label": "three_quarter",
+              "score": 0.24347743391990662
+            },
+            {
+              "label": "elbow",
+              "score": 0.19969622790813446
+            },
+            {
+              "label": "long",
+              "score": 0.18793389201164246
+            }
+          ],
+          "score_note": "relative CLIP candidate-set score; not calibrated probability"
+        },
+        "neckline": {
+          "label": "hooded",
+          "score": 0.18757694959640503,
+          "top3": [
+            {
+              "label": "hooded",
+              "score": 0.18757694959640503
+            },
+            {
+              "label": "square",
+              "score": 0.10686223208904266
+            },
+            {
+              "label": "v_neck",
+              "score": 0.10677462071180344
+            }
+          ],
+          "score_note": "relative CLIP candidate-set score; not calibrated probability"
+        },
+        "neckline_whole": {
+          "label": "hooded",
+          "score": 0.3680548667907715,
+          "top3": [
+            {
+              "label": "hooded",
+              "score": 0.3680548667907715
+            },
+            {
+              "label": "crew",
+              "score": 0.15178267657756805
+            },
+            {
+              "label": "turtleneck",
+              "score": 0.1509978473186493
+            }
+          ],
+          "score_note": "relative CLIP candidate-set score; not calibrated probability"
+        },
+        "neckline_local_proxy": {
+          "label": "hooded",
+          "score": 0.18757694959640503,
+          "top3": [
+            {
+              "label": "hooded",
+              "score": 0.18757694959640503
+            },
+            {
+              "label": "square",
+              "score": 0.10686223208904266
+            },
+            {
+              "label": "v_neck",
+              "score": 0.10677462071180344
+            }
+          ],
+          "score_note": "relative CLIP candidate-set score; not calibrated probability"
+        }
+      }
+    },
+    {
+      "source_image": "../fashion_data/raw/train/train/image/105966.jpg",
+      "garment_id": "item1_long_sleeve_outwear",
+      "garment_category": "outerwear",
+      "region_source": "mask",
+      "crop_path": "outputs/garment_instances/gt_pilot/105966/item1_long_sleeve_outwear_crop.jpg",
+      "mask_path": "outputs/garment_instances/gt_pilot/105966/item1_long_sleeve_outwear_mask.png",
+      "model": "openai/clip-vit-base-patch32",
+      "attributes": {
+        "primary_color": {
+          "label": "beige",
+          "score": 0.494182288646698,
+          "top3": [
+            {
+              "label": "beige",
+              "score": 0.494182288646698
+            },
+            {
+              "label": "white",
+              "score": 0.3877379596233368
+            },
+            {
+              "label": "gray",
+              "score": 0.04388870298862457
+            }
+          ],
+          "score_note": "relative CLIP candidate-set score; not calibrated probability"
+        },
+        "pattern": {
+          "label": "solid",
+          "score": 0.36635565757751465,
+          "top3": [
+            {
+              "label": "solid",
+              "score": 0.36635565757751465
+            },
+            {
+              "label": "other",
+              "score": 0.14356686174869537
+            },
+            {
+              "label": "abstract",
+              "score": 0.08386120200157166
+            }
+          ],
+          "score_note": "relative CLIP candidate-set score; not calibrated probability"
+        },
+        "sleeve_length": {
+          "label": "elbow",
+          "score": 0.44618260860443115,
+          "top3": [
+            {
+              "label": "elbow",
+              "score": 0.44618260860443115
+            },
+            {
+              "label": "long",
+              "score": 0.22384092211723328
+            },
+            {
+              "label": "three_quarter",
+              "score": 0.17483730614185333
+            }
+          ],
+          "score_note": "relative CLIP candidate-set score; not calibrated probability"
+        },
+        "neckline": {
+          "label": "square",
+          "score": 0.14060887694358826,
+          "top3": [
+            {
+              "label": "square",
+              "score": 0.14060887694358826
+            },
+            {
+              "label": "other",
+              "score": 0.103813037276268
+            },
+            {
+              "label": "v_neck",
+              "score": 0.09981945902109146
+            }
+          ],
+          "score_note": "relative CLIP candidate-set score; not calibrated probability"
+        },
+        "neckline_whole": {
+          "label": "turtleneck",
+          "score": 0.26577073335647583,
+          "top3": [
+            {
+              "label": "turtleneck",
+              "score": 0.26577073335647583
+            },
+            {
+              "label": "shirt_collar",
+              "score": 0.13021643459796906
+            },
+            {
+              "label": "hooded",
+              "score": 0.09580209106206894
+            }
+          ],
+          "score_note": "relative CLIP candidate-set score; not calibrated probability"
+        },
+        "neckline_local_proxy": {
+          "label": "square",
+          "score": 0.14060887694358826,
+          "top3": [
+            {
+              "label": "square",
+              "score": 0.14060887694358826
+            },
+            {
+              "label": "other",
+              "score": 0.103813037276268
+            },
+            {
+              "label": "v_neck",
+              "score": 0.09981945902109146
+            }
+          ],
+          "score_note": "relative CLIP candidate-set score; not calibrated probability"
+        }
+      }
+    },
+    {
+      "source_image": "../fashion_data/raw/train/train/image/105966.jpg",
+      "garment_id": "item2_trousers",
+      "garment_category": "pants",
+      "region_source": "mask",
+      "crop_path": "outputs/garment_instances/gt_pilot/105966/item2_trousers_crop.jpg",
+      "mask_path": "outputs/garment_instances/gt_pilot/105966/item2_trousers_mask.png",
+      "model": "openai/clip-vit-base-patch32",
+      "attributes": {
+        "primary_color": {
+          "label": "white",
+          "score": 0.33176571130752563,
+          "top3": [
+            {
+              "label": "white",
+              "score": 0.33176571130752563
+            },
+            {
+              "label": "beige",
+              "score": 0.27631643414497375
+            },
+            {
+              "label": "gray",
+              "score": 0.1565050333738327
+            }
+          ],
+          "score_note": "relative CLIP candidate-set score; not calibrated probability"
+        },
+        "pattern": {
+          "label": "solid",
+          "score": 0.24608825147151947,
+          "top3": [
+            {
+              "label": "solid",
+              "score": 0.24608825147151947
+            },
+            {
+              "label": "graphic",
+              "score": 0.1137639582157135
+            },
+            {
+              "label": "striped",
+              "score": 0.11312498897314072
+            }
+          ],
+          "score_note": "relative CLIP candidate-set score; not calibrated probability"
+        },
+        "sleeve_length": {
+          "label": "not_applicable",
+          "score": 1.0,
+          "top3": [],
+          "score_note": "forced by garment category"
+        },
+        "neckline": {
+          "label": "not_applicable",
+          "score": 1.0,
+          "top3": [],
+          "score_note": "forced by garment category"
+        },
+        "neckline_whole": {
+          "label": "not_applicable",
+          "score": 1.0,
+          "top3": [],
+          "score_note": "forced by garment category"
+        },
+        "neckline_local_proxy": {
+          "label": "not_applicable",
+          "score": 1.0,
+          "top3": [],
+          "score_note": "forced by garment category"
+        }
+      }
+    },
+    {
+      "source_image": "../fashion_data/raw/train/train/image/117462.jpg",
+      "garment_id": "item1_short_sleeve_dress",
+      "garment_category": "dress",
+      "region_source": "mask",
+      "crop_path": "outputs/garment_instances/gt_pilot/117462/item1_short_sleeve_dress_crop.jpg",
+      "mask_path": "outputs/garment_instances/gt_pilot/117462/item1_short_sleeve_dress_mask.png",
+      "model": "openai/clip-vit-base-patch32",
+      "attributes": {
+        "primary_color": {
+          "label": "black",
+          "score": 0.3672509491443634,
+          "top3": [
+            {
+              "label": "black",
+              "score": 0.3672509491443634
+            },
+            {
+              "label": "white",
+              "score": 0.19611987471580505
+            },
+            {
+              "label": "gray",
+              "score": 0.09869937598705292
+            }
+          ],
+          "score_note": "relative CLIP candidate-set score; not calibrated probability"
+        },
+        "pattern": {
+          "label": "graphic",
+          "score": 0.8777780532836914,
+          "top3": [
+            {
+              "label": "graphic",
+              "score": 0.8777780532836914
+            },
+            {
+              "label": "solid",
+              "score": 0.06926225870847702
+            },
+            {
+              "label": "geometric",
+              "score": 0.021318404003977776
+            }
+          ],
+          "score_note": "relative CLIP candidate-set score; not calibrated probability"
+        },
+        "sleeve_length": {
+          "label": "cap",
+          "score": 0.26416289806365967,
+          "top3": [
+            {
+              "label": "cap",
+              "score": 0.26416289806365967
+            },
+            {
+              "label": "short",
+              "score": 0.21105779707431793
+            },
+            {
+              "label": "long",
+              "score": 0.18772979080677032
+            }
+          ],
+          "score_note": "relative CLIP candidate-set score; not calibrated probability"
+        },
+        "neckline": {
+          "label": "crew",
+          "score": 0.45794180035591125,
+          "top3": [
+            {
+              "label": "crew",
+              "score": 0.45794180035591125
+            },
+            {
+              "label": "hooded",
+              "score": 0.1243855431675911
+            },
+            {
+              "label": "mock_neck",
+              "score": 0.11377264559268951
+            }
+          ],
+          "score_note": "relative CLIP candidate-set score; not calibrated probability"
+        },
+        "neckline_whole": {
+          "label": "crew",
+          "score": 0.584196150302887,
+          "top3": [
+            {
+              "label": "crew",
+              "score": 0.584196150302887
+            },
+            {
+              "label": "hooded",
+              "score": 0.09089075028896332
+            },
+            {
+              "label": "mock_neck",
+              "score": 0.08307374268770218
+            }
+          ],
+          "score_note": "relative CLIP candidate-set score; not calibrated probability"
+        },
+        "neckline_local_proxy": {
+          "label": "crew",
+          "score": 0.45794180035591125,
+          "top3": [
+            {
+              "label": "crew",
+              "score": 0.45794180035591125
+            },
+            {
+              "label": "hooded",
+              "score": 0.1243855431675911
+            },
+            {
+              "label": "mock_neck",
+              "score": 0.11377264559268951
+            }
+          ],
+          "score_note": "relative CLIP candidate-set score; not calibrated probability"
+        }
+      }
+    },
+    {
+      "source_image": "../fashion_data/raw/train/train/image/146629.jpg",
+      "garment_id": "item1_long_sleeve_outwear",
+      "garment_category": "outerwear",
+      "region_source": "mask",
+      "crop_path": "outputs/garment_instances/gt_pilot/146629/item1_long_sleeve_outwear_crop.jpg",
+      "mask_path": "outputs/garment_instances/gt_pilot/146629/item1_long_sleeve_outwear_mask.png",
+      "model": "openai/clip-vit-base-patch32",
+      "attributes": {
+        "primary_color": {
+          "label": "black",
+          "score": 0.45548757910728455,
+          "top3": [
+            {
+              "label": "black",
+              "score": 0.45548757910728455
+            },
+            {
+              "label": "white",
+              "score": 0.23832577466964722
+            },
+            {
+              "label": "gray",
+              "score": 0.16631348431110382
+            }
+          ],
+          "score_note": "relative CLIP candidate-set score; not calibrated probability"
+        },
+        "pattern": {
+          "label": "abstract",
+          "score": 0.3643184006214142,
+          "top3": [
+            {
+              "label": "abstract",
+              "score": 0.3643184006214142
+            },
+            {
+              "label": "other",
+              "score": 0.157766193151474
+            },
+            {
+              "label": "geometric",
+              "score": 0.12448760122060776
+            }
+          ],
+          "score_note": "relative CLIP candidate-set score; not calibrated probability"
+        },
+        "sleeve_length": {
+          "label": "elbow",
+          "score": 0.3893909454345703,
+          "top3": [
+            {
+              "label": "elbow",
+              "score": 0.3893909454345703
+            },
+            {
+              "label": "unknown",
+              "score": 0.23820704221725464
+            },
+            {
+              "label": "three_quarter",
+              "score": 0.15102307498455048
+            }
+          ],
+          "score_note": "relative CLIP candidate-set score; not calibrated probability"
+        },
+        "neckline": {
+          "label": "hooded",
+          "score": 0.3719252645969391,
+          "top3": [
+            {
+              "label": "hooded",
+              "score": 0.3719252645969391
+            },
+            {
+              "label": "boat",
+              "score": 0.10758991539478302
+            },
+            {
+              "label": "round",
+              "score": 0.08390706032514572
+            }
+          ],
+          "score_note": "relative CLIP candidate-set score; not calibrated probability"
+        },
+        "neckline_whole": {
+          "label": "one_shoulder",
+          "score": 0.20432554185390472,
+          "top3": [
+            {
+              "label": "one_shoulder",
+              "score": 0.20432554185390472
+            },
+            {
+              "label": "off_shoulder",
+              "score": 0.18327748775482178
+            },
+            {
+              "label": "v_neck",
+              "score": 0.12620827555656433
+            }
+          ],
+          "score_note": "relative CLIP candidate-set score; not calibrated probability"
+        },
+        "neckline_local_proxy": {
+          "label": "hooded",
+          "score": 0.3719252645969391,
+          "top3": [
+            {
+              "label": "hooded",
+              "score": 0.3719252645969391
+            },
+            {
+              "label": "boat",
+              "score": 0.10758991539478302
+            },
+            {
+              "label": "round",
+              "score": 0.08390706032514572
+            }
+          ],
+          "score_note": "relative CLIP candidate-set score; not calibrated probability"
+        }
+      }
+    },
+    {
+      "source_image": "../fashion_data/raw/train/train/image/146629.jpg",
+      "garment_id": "item2_shorts",
+      "garment_category": "pants",
+      "region_source": "mask",
+      "crop_path": "outputs/garment_instances/gt_pilot/146629/item2_shorts_crop.jpg",
+      "mask_path": "outputs/garment_instances/gt_pilot/146629/item2_shorts_mask.png",
+      "model": "openai/clip-vit-base-patch32",
+      "attributes": {
+        "primary_color": {
+          "label": "brown",
+          "score": 0.6373627185821533,
+          "top3": [
+            {
+              "label": "brown",
+              "score": 0.6373627185821533
+            },
+            {
+              "label": "black",
+              "score": 0.19892072677612305
+            },
+            {
+              "label": "gray",
+              "score": 0.055153749883174896
+            }
+          ],
+          "score_note": "relative CLIP candidate-set score; not calibrated probability"
+        },
+        "pattern": {
+          "label": "other",
+          "score": 0.25502899289131165,
+          "top3": [
+            {
+              "label": "other",
+              "score": 0.25502899289131165
+            },
+            {
+              "label": "solid",
+              "score": 0.22941896319389343
+            },
+            {
+              "label": "camouflage",
+              "score": 0.166163370013237
+            }
+          ],
+          "score_note": "relative CLIP candidate-set score; not calibrated probability"
+        },
+        "sleeve_length": {
+          "label": "not_applicable",
+          "score": 1.0,
+          "top3": [],
+          "score_note": "forced by garment category"
+        },
+        "neckline": {
+          "label": "not_applicable",
+          "score": 1.0,
+          "top3": [],
+          "score_note": "forced by garment category"
+        },
+        "neckline_whole": {
+          "label": "not_applicable",
+          "score": 1.0,
+          "top3": [],
+          "score_note": "forced by garment category"
+        },
+        "neckline_local_proxy": {
+          "label": "not_applicable",
+          "score": 1.0,
+          "top3": [],
+          "score_note": "forced by garment category"
+        }
+      }
+    },
+    {
+      "source_image": "../fashion_data/raw/train/train/image/151501.jpg",
+      "garment_id": "item1_trousers",
+      "garment_category": "pants",
+      "region_source": "mask",
+      "crop_path": "outputs/garment_instances/gt_pilot/151501/item1_trousers_crop.jpg",
+      "mask_path": "outputs/garment_instances/gt_pilot/151501/item1_trousers_mask.png",
+      "model": "openai/clip-vit-base-patch32",
+      "attributes": {
+        "primary_color": {
+          "label": "black",
+          "score": 0.7644621729850769,
+          "top3": [
+            {
+              "label": "black",
+              "score": 0.7644621729850769
+            },
+            {
+              "label": "gray",
+              "score": 0.059757281094789505
+            },
+            {
+              "label": "brown",
+              "score": 0.040349360555410385
+            }
+          ],
+          "score_note": "relative CLIP candidate-set score; not calibrated probability"
+        },
+        "pattern": {
+          "label": "solid",
+          "score": 0.40682563185691833,
+          "top3": [
+            {
+              "label": "solid",
+              "score": 0.40682563185691833
+            },
+            {
+              "label": "geometric",
+              "score": 0.21999026834964752
+            },
+            {
+              "label": "other",
+              "score": 0.10398107022047043
+            }
+          ],
+          "score_note": "relative CLIP candidate-set score; not calibrated probability"
+        },
+        "sleeve_length": {
+          "label": "not_applicable",
+          "score": 1.0,
+          "top3": [],
+          "score_note": "forced by garment category"
+        },
+        "neckline": {
+          "label": "not_applicable",
+          "score": 1.0,
+          "top3": [],
+          "score_note": "forced by garment category"
+        },
+        "neckline_whole": {
+          "label": "not_applicable",
+          "score": 1.0,
+          "top3": [],
+          "score_note": "forced by garment category"
+        },
+        "neckline_local_proxy": {
+          "label": "not_applicable",
+          "score": 1.0,
+          "top3": [],
+          "score_note": "forced by garment category"
+        }
+      }
+    },
+    {
+      "source_image": "../fashion_data/raw/train/train/image/151501.jpg",
+      "garment_id": "item2_short_sleeve_top",
+      "garment_category": "top",
+      "region_source": "mask",
+      "crop_path": "outputs/garment_instances/gt_pilot/151501/item2_short_sleeve_top_crop.jpg",
+      "mask_path": "outputs/garment_instances/gt_pilot/151501/item2_short_sleeve_top_mask.png",
+      "model": "openai/clip-vit-base-patch32",
+      "attributes": {
+        "primary_color": {
+          "label": "beige",
+          "score": 0.19225625693798065,
+          "top3": [
+            {
+              "label": "beige",
+              "score": 0.19225625693798065
+            },
+            {
+              "label": "gray",
+              "score": 0.18643322587013245
+            },
+            {
+              "label": "white",
+              "score": 0.10825961828231812
+            }
+          ],
+          "score_note": "relative CLIP candidate-set score; not calibrated probability"
+        },
+        "pattern": {
+          "label": "solid",
+          "score": 0.2593802809715271,
+          "top3": [
+            {
+              "label": "solid",
+              "score": 0.2593802809715271
+            },
+            {
+              "label": "camouflage",
+              "score": 0.20028334856033325
+            },
+            {
+              "label": "striped",
+              "score": 0.11257701367139816
+            }
+          ],
+          "score_note": "relative CLIP candidate-set score; not calibrated probability"
+        },
+        "sleeve_length": {
+          "label": "long",
+          "score": 0.4157097637653351,
+          "top3": [
+            {
+              "label": "long",
+              "score": 0.4157097637653351
+            },
+            {
+              "label": "short",
+              "score": 0.216093972325325
+            },
+            {
+              "label": "cap",
+              "score": 0.13736659288406372
+            }
+          ],
+          "score_note": "relative CLIP candidate-set score; not calibrated probability"
+        },
+        "neckline": {
+          "label": "crew",
+          "score": 0.16336019337177277,
+          "top3": [
+            {
+              "label": "crew",
+              "score": 0.16336019337177277
+            },
+            {
+              "label": "shirt_collar",
+              "score": 0.1390426754951477
+            },
+            {
+              "label": "hooded",
+              "score": 0.12338391691446304
+            }
+          ],
+          "score_note": "relative CLIP candidate-set score; not calibrated probability"
+        },
+        "neckline_whole": {
+          "label": "crew",
+          "score": 0.17556779086589813,
+          "top3": [
+            {
+              "label": "crew",
+              "score": 0.17556779086589813
+            },
+            {
+              "label": "hooded",
+              "score": 0.15872971713542938
+            },
+            {
+              "label": "mock_neck",
+              "score": 0.10894975066184998
+            }
+          ],
+          "score_note": "relative CLIP candidate-set score; not calibrated probability"
+        },
+        "neckline_local_proxy": {
+          "label": "crew",
+          "score": 0.16336019337177277,
+          "top3": [
+            {
+              "label": "crew",
+              "score": 0.16336019337177277
+            },
+            {
+              "label": "shirt_collar",
+              "score": 0.1390426754951477
+            },
+            {
+              "label": "hooded",
+              "score": 0.12338391691446304
+            }
+          ],
+          "score_note": "relative CLIP candidate-set score; not calibrated probability"
+        }
+      }
+    },
+    {
+      "source_image": "../fashion_data/raw/train/train/image/168120.jpg",
+      "garment_id": "item1_long_sleeve_top",
+      "garment_category": "top",
+      "region_source": "mask",
+      "crop_path": "outputs/garment_instances/gt_pilot/168120/item1_long_sleeve_top_crop.jpg",
+      "mask_path": "outputs/garment_instances/gt_pilot/168120/item1_long_sleeve_top_mask.png",
+      "model": "openai/clip-vit-base-patch32",
+      "attributes": {
+        "primary_color": {
+          "label": "beige",
+          "score": 0.2748745083808899,
+          "top3": [
+            {
+              "label": "beige",
+              "score": 0.2748745083808899
+            },
+            {
+              "label": "white",
+              "score": 0.20309187471866608
+            },
+            {
+              "label": "purple",
+              "score": 0.156790629029274
+            }
+          ],
+          "score_note": "relative CLIP candidate-set score; not calibrated probability"
+        },
+        "pattern": {
+          "label": "camouflage",
+          "score": 0.425144761800766,
+          "top3": [
+            {
+              "label": "camouflage",
+              "score": 0.425144761800766
+            },
+            {
+              "label": "floral",
+              "score": 0.418767511844635
+            },
+            {
+              "label": "other",
+              "score": 0.04974796622991562
+            }
+          ],
+          "score_note": "relative CLIP candidate-set score; not calibrated probability"
+        },
+        "sleeve_length": {
+          "label": "short",
+          "score": 0.27713650465011597,
+          "top3": [
+            {
+              "label": "short",
+              "score": 0.27713650465011597
+            },
+            {
+              "label": "three_quarter",
+              "score": 0.22346152365207672
+            },
+            {
+              "label": "cap",
+              "score": 0.1350967288017273
+            }
+          ],
+          "score_note": "relative CLIP candidate-set score; not calibrated probability"
+        },
+        "neckline": {
+          "label": "boat",
+          "score": 0.17985621094703674,
+          "top3": [
+            {
+              "label": "boat",
+              "score": 0.17985621094703674
+            },
+            {
+              "label": "round",
+              "score": 0.13894367218017578
+            },
+            {
+              "label": "off_shoulder",
+              "score": 0.12548446655273438
+            }
+          ],
+          "score_note": "relative CLIP candidate-set score; not calibrated probability"
+        },
+        "neckline_whole": {
+          "label": "off_shoulder",
+          "score": 0.2708021402359009,
+          "top3": [
+            {
+              "label": "off_shoulder",
+              "score": 0.2708021402359009
+            },
+            {
+              "label": "boat",
+              "score": 0.13841089606285095
+            },
+            {
+              "label": "one_shoulder",
+              "score": 0.11331015080213547
+            }
+          ],
+          "score_note": "relative CLIP candidate-set score; not calibrated probability"
+        },
+        "neckline_local_proxy": {
+          "label": "boat",
+          "score": 0.17985621094703674,
+          "top3": [
+            {
+              "label": "boat",
+              "score": 0.17985621094703674
+            },
+            {
+              "label": "round",
+              "score": 0.13894367218017578
+            },
+            {
+              "label": "off_shoulder",
+              "score": 0.12548446655273438
+            }
+          ],
+          "score_note": "relative CLIP candidate-set score; not calibrated probability"
+        }
+      }
+    },
+    {
+      "source_image": "../fashion_data/raw/train/train/image/168120.jpg",
+      "garment_id": "item2_trousers",
+      "garment_category": "pants",
+      "region_source": "mask",
+      "crop_path": "outputs/garment_instances/gt_pilot/168120/item2_trousers_crop.jpg",
+      "mask_path": "outputs/garment_instances/gt_pilot/168120/item2_trousers_mask.png",
+      "model": "openai/clip-vit-base-patch32",
+      "attributes": {
+        "primary_color": {
+          "label": "white",
+          "score": 0.7219828367233276,
+          "top3": [
+            {
+              "label": "white",
+              "score": 0.7219828367233276
+            },
+            {
+              "label": "beige",
+              "score": 0.07439081370830536
+            },
+            {
+              "label": "gray",
+              "score": 0.05537162721157074
+            }
+          ],
+          "score_note": "relative CLIP candidate-set score; not calibrated probability"
+        },
+        "pattern": {
+          "label": "floral",
+          "score": 0.32217323780059814,
+          "top3": [
+            {
+              "label": "floral",
+              "score": 0.32217323780059814
+            },
+            {
+              "label": "solid",
+              "score": 0.1429021656513214
+            },
+            {
+              "label": "abstract",
+              "score": 0.1418144404888153
+            }
+          ],
+          "score_note": "relative CLIP candidate-set score; not calibrated probability"
+        },
+        "sleeve_length": {
+          "label": "not_applicable",
+          "score": 1.0,
+          "top3": [],
+          "score_note": "forced by garment category"
+        },
+        "neckline": {
+          "label": "not_applicable",
+          "score": 1.0,
+          "top3": [],
+          "score_note": "forced by garment category"
+        },
+        "neckline_whole": {
+          "label": "not_applicable",
+          "score": 1.0,
+          "top3": [],
+          "score_note": "forced by garment category"
+        },
+        "neckline_local_proxy": {
+          "label": "not_applicable",
+          "score": 1.0,
+          "top3": [],
+          "score_note": "forced by garment category"
+        }
+      }
+    },
+    {
+      "source_image": "../fashion_data/raw/train/train/image/183818.jpg",
+      "garment_id": "item1_short_sleeve_top",
+      "garment_category": "top",
+      "region_source": "mask",
+      "crop_path": "outputs/garment_instances/gt_pilot/183818/item1_short_sleeve_top_crop.jpg",
+      "mask_path": "outputs/garment_instances/gt_pilot/183818/item1_short_sleeve_top_mask.png",
+      "model": "openai/clip-vit-base-patch32",
+      "attributes": {
+        "primary_color": {
+          "label": "pink",
+          "score": 0.48208317160606384,
+          "top3": [
+            {
+              "label": "pink",
+              "score": 0.48208317160606384
+            },
+            {
+              "label": "beige",
+              "score": 0.14978685975074768
+            },
+            {
+              "label": "white",
+              "score": 0.14636839926242828
+            }
+          ],
+          "score_note": "relative CLIP candidate-set score; not calibrated probability"
+        },
+        "pattern": {
+          "label": "striped",
+          "score": 0.5635858774185181,
+          "top3": [
+            {
+              "label": "striped",
+              "score": 0.5635858774185181
+            },
+            {
+              "label": "abstract",
+              "score": 0.10040830820798874
+            },
+            {
+              "label": "geometric",
+              "score": 0.06982435286045074
+            }
+          ],
+          "score_note": "relative CLIP candidate-set score; not calibrated probability"
+        },
+        "sleeve_length": {
+          "label": "short",
+          "score": 0.25775179266929626,
+          "top3": [
+            {
+              "label": "short",
+              "score": 0.25775179266929626
+            },
+            {
+              "label": "cap",
+              "score": 0.2371198832988739
+            },
+            {
+              "label": "long",
+              "score": 0.1615392565727234
+            }
+          ],
+          "score_note": "relative CLIP candidate-set score; not calibrated probability"
+        },
+        "neckline": {
+          "label": "square",
+          "score": 0.17883050441741943,
+          "top3": [
+            {
+              "label": "square",
+              "score": 0.17883050441741943
+            },
+            {
+              "label": "shirt_collar",
+              "score": 0.17556169629096985
+            },
+            {
+              "label": "round",
+              "score": 0.10149343311786652
+            }
+          ],
+          "score_note": "relative CLIP candidate-set score; not calibrated probability"
+        },
+        "neckline_whole": {
+          "label": "shirt_collar",
+          "score": 0.24208024144172668,
+          "top3": [
+            {
+              "label": "shirt_collar",
+              "score": 0.24208024144172668
+            },
+            {
+              "label": "square",
+              "score": 0.1391964703798294
+            },
+            {
+              "label": "turtleneck",
+              "score": 0.13830803334712982
+            }
+          ],
+          "score_note": "relative CLIP candidate-set score; not calibrated probability"
+        },
+        "neckline_local_proxy": {
+          "label": "square",
+          "score": 0.17883050441741943,
+          "top3": [
+            {
+              "label": "square",
+              "score": 0.17883050441741943
+            },
+            {
+              "label": "shirt_collar",
+              "score": 0.17556169629096985
+            },
+            {
+              "label": "round",
+              "score": 0.10149343311786652
+            }
+          ],
+          "score_note": "relative CLIP candidate-set score; not calibrated probability"
+        }
+      }
+    },
+    {
+      "source_image": "../fashion_data/raw/train/train/image/183818.jpg",
+      "garment_id": "item2_shorts",
+      "garment_category": "pants",
+      "region_source": "mask",
+      "crop_path": "outputs/garment_instances/gt_pilot/183818/item2_shorts_crop.jpg",
+      "mask_path": "outputs/garment_instances/gt_pilot/183818/item2_shorts_mask.png",
+      "model": "openai/clip-vit-base-patch32",
+      "attributes": {
+        "primary_color": {
+          "label": "blue",
+          "score": 0.4344151020050049,
+          "top3": [
+            {
+              "label": "blue",
+              "score": 0.4344151020050049
+            },
+            {
+              "label": "pink",
+              "score": 0.1205708384513855
+            },
+            {
+              "label": "purple",
+              "score": 0.09387308359146118
+            }
+          ],
+          "score_note": "relative CLIP candidate-set score; not calibrated probability"
+        },
+        "pattern": {
+          "label": "solid",
+          "score": 0.37039369344711304,
+          "top3": [
+            {
+              "label": "solid",
+              "score": 0.37039369344711304
+            },
+            {
+              "label": "other",
+              "score": 0.12804052233695984
+            },
+            {
+              "label": "striped",
+              "score": 0.11156312376260757
+            }
+          ],
+          "score_note": "relative CLIP candidate-set score; not calibrated probability"
+        },
+        "sleeve_length": {
+          "label": "not_applicable",
+          "score": 1.0,
+          "top3": [],
+          "score_note": "forced by garment category"
+        },
+        "neckline": {
+          "label": "not_applicable",
+          "score": 1.0,
+          "top3": [],
+          "score_note": "forced by garment category"
+        },
+        "neckline_whole": {
+          "label": "not_applicable",
+          "score": 1.0,
+          "top3": [],
+          "score_note": "forced by garment category"
+        },
+        "neckline_local_proxy": {
+          "label": "not_applicable",
+          "score": 1.0,
+          "top3": [],
+          "score_note": "forced by garment category"
+        }
+      }
+    },
+    {
+      "source_image": "../fashion_data/raw/train/train/image/187443.jpg",
+      "garment_id": "item1_short_sleeve_top",
+      "garment_category": "top",
+      "region_source": "mask",
+      "crop_path": "outputs/garment_instances/gt_pilot/187443/item1_short_sleeve_top_crop.jpg",
+      "mask_path": "outputs/garment_instances/gt_pilot/187443/item1_short_sleeve_top_mask.png",
+      "model": "openai/clip-vit-base-patch32",
+      "attributes": {
+        "primary_color": {
+          "label": "beige",
+          "score": 0.41981393098831177,
+          "top3": [
+            {
+              "label": "beige",
+              "score": 0.41981393098831177
+            },
+            {
+              "label": "brown",
+              "score": 0.17902547121047974
+            },
+            {
+              "label": "white",
+              "score": 0.15051637589931488
+            }
+          ],
+          "score_note": "relative CLIP candidate-set score; not calibrated probability"
+        },
+        "pattern": {
+          "label": "graphic",
+          "score": 0.3372480571269989,
+          "top3": [
+            {
+              "label": "graphic",
+              "score": 0.3372480571269989
+            },
+            {
+              "label": "other",
+              "score": 0.17052282392978668
+            },
+            {
+              "label": "unknown",
+              "score": 0.15899112820625305
+            }
+          ],
+          "score_note": "relative CLIP candidate-set score; not calibrated probability"
+        },
+        "sleeve_length": {
+          "label": "cap",
+          "score": 0.3767538368701935,
+          "top3": [
+            {
+              "label": "cap",
+              "score": 0.3767538368701935
+            },
+            {
+              "label": "short",
+              "score": 0.22837941348552704
+            },
+            {
+              "label": "three_quarter",
+              "score": 0.11519528925418854
+            }
+          ],
+          "score_note": "relative CLIP candidate-set score; not calibrated probability"
+        },
+        "neckline": {
+          "label": "halter",
+          "score": 0.2140391767024994,
+          "top3": [
+            {
+              "label": "halter",
+              "score": 0.2140391767024994
+            },
+            {
+              "label": "boat",
+              "score": 0.12742598354816437
+            },
+            {
+              "label": "round",
+              "score": 0.11549124121665955
+            }
+          ],
+          "score_note": "relative CLIP candidate-set score; not calibrated probability"
+        },
+        "neckline_whole": {
+          "label": "round",
+          "score": 0.1511882245540619,
+          "top3": [
+            {
+              "label": "round",
+              "score": 0.1511882245540619
+            },
+            {
+              "label": "halter",
+              "score": 0.1410592645406723
+            },
+            {
+              "label": "mock_neck",
+              "score": 0.1307053118944168
+            }
+          ],
+          "score_note": "relative CLIP candidate-set score; not calibrated probability"
+        },
+        "neckline_local_proxy": {
+          "label": "halter",
+          "score": 0.2140391767024994,
+          "top3": [
+            {
+              "label": "halter",
+              "score": 0.2140391767024994
+            },
+            {
+              "label": "boat",
+              "score": 0.12742598354816437
+            },
+            {
+              "label": "round",
+              "score": 0.11549124121665955
+            }
+          ],
+          "score_note": "relative CLIP candidate-set score; not calibrated probability"
+        }
+      }
+    },
+    {
+      "source_image": "../fashion_data/raw/train/train/image/187443.jpg",
+      "garment_id": "item2_sling_dress",
+      "garment_category": "dress",
+      "region_source": "mask",
+      "crop_path": "outputs/garment_instances/gt_pilot/187443/item2_sling_dress_crop.jpg",
+      "mask_path": "outputs/garment_instances/gt_pilot/187443/item2_sling_dress_mask.png",
+      "model": "openai/clip-vit-base-patch32",
+      "attributes": {
+        "primary_color": {
+          "label": "beige",
+          "score": 0.3736472427845001,
+          "top3": [
+            {
+              "label": "beige",
+              "score": 0.3736472427845001
+            },
+            {
+              "label": "gray",
+              "score": 0.22206629812717438
+            },
+            {
+              "label": "brown",
+              "score": 0.21224945783615112
+            }
+          ],
+          "score_note": "relative CLIP candidate-set score; not calibrated probability"
+        },
+        "pattern": {
+          "label": "other",
+          "score": 0.44524234533309937,
+          "top3": [
+            {
+              "label": "other",
+              "score": 0.44524234533309937
+            },
+            {
+              "label": "polka_dot",
+              "score": 0.12499157339334488
+            },
+            {
+              "label": "unknown",
+              "score": 0.08276169002056122
+            }
+          ],
+          "score_note": "relative CLIP candidate-set score; not calibrated probability"
+        },
+        "sleeve_length": {
+          "label": "cap",
+          "score": 0.19578176736831665,
+          "top3": [
+            {
+              "label": "cap",
+              "score": 0.19578176736831665
+            },
+            {
+              "label": "elbow",
+              "score": 0.1834280788898468
+            },
+            {
+              "label": "three_quarter",
+              "score": 0.16282939910888672
+            }
+          ],
+          "score_note": "relative CLIP candidate-set score; not calibrated probability"
+        },
+        "neckline": {
+          "label": "halter",
+          "score": 0.2906232178211212,
+          "top3": [
+            {
+              "label": "halter",
+              "score": 0.2906232178211212
+            },
+            {
+              "label": "round",
+              "score": 0.13639304041862488
+            },
+            {
+              "label": "mock_neck",
+              "score": 0.10168983042240143
+            }
+          ],
+          "score_note": "relative CLIP candidate-set score; not calibrated probability"
+        },
+        "neckline_whole": {
+          "label": "mock_neck",
+          "score": 0.18964101374149323,
+          "top3": [
+            {
+              "label": "mock_neck",
+              "score": 0.18964101374149323
+            },
+            {
+              "label": "hooded",
+              "score": 0.16718755662441254
+            },
+            {
+              "label": "crew",
+              "score": 0.13381217420101166
+            }
+          ],
+          "score_note": "relative CLIP candidate-set score; not calibrated probability"
+        },
+        "neckline_local_proxy": {
+          "label": "halter",
+          "score": 0.2906232178211212,
+          "top3": [
+            {
+              "label": "halter",
+              "score": 0.2906232178211212
+            },
+            {
+              "label": "round",
+              "score": 0.13639304041862488
+            },
+            {
+              "label": "mock_neck",
+              "score": 0.10168983042240143
+            }
+          ],
+          "score_note": "relative CLIP candidate-set score; not calibrated probability"
+        }
+      }
+    },
+    {
+      "source_image": "../fashion_data/raw/train/train/image/188639.jpg",
+      "garment_id": "item1_short_sleeve_top",
+      "garment_category": "top",
+      "region_source": "mask",
+      "crop_path": "outputs/garment_instances/gt_pilot/188639/item1_short_sleeve_top_crop.jpg",
+      "mask_path": "outputs/garment_instances/gt_pilot/188639/item1_short_sleeve_top_mask.png",
+      "model": "openai/clip-vit-base-patch32",
+      "attributes": {
+        "primary_color": {
+          "label": "white",
+          "score": 0.2706300914287567,
+          "top3": [
+            {
+              "label": "white",
+              "score": 0.2706300914287567
+            },
+            {
+              "label": "brown",
+              "score": 0.1351792961359024
+            },
+            {
+              "label": "beige",
+              "score": 0.12565632164478302
+            }
+          ],
+          "score_note": "relative CLIP candidate-set score; not calibrated probability"
+        },
+        "pattern": {
+          "label": "graphic",
+          "score": 0.7521672248840332,
+          "top3": [
+            {
+              "label": "graphic",
+              "score": 0.7521672248840332
+            },
+            {
+              "label": "unknown",
+              "score": 0.11391257494688034
+            },
+            {
+              "label": "solid",
+              "score": 0.05238526687026024
+            }
+          ],
+          "score_note": "relative CLIP candidate-set score; not calibrated probability"
+        },
+        "sleeve_length": {
+          "label": "unknown",
+          "score": 0.3082847595214844,
+          "top3": [
+            {
+              "label": "unknown",
+              "score": 0.3082847595214844
+            },
+            {
+              "label": "three_quarter",
+              "score": 0.27035537362098694
+            },
+            {
+              "label": "cap",
+              "score": 0.15119148790836334
+            }
+          ],
+          "score_note": "relative CLIP candidate-set score; not calibrated probability"
+        },
+        "neckline": {
+          "label": "crew",
+          "score": 0.5070872902870178,
+          "top3": [
+            {
+              "label": "crew",
+              "score": 0.5070872902870178
+            },
+            {
+              "label": "unknown",
+              "score": 0.08545403182506561
+            },
+            {
+              "label": "other",
+              "score": 0.07474160939455032
+            }
+          ],
+          "score_note": "relative CLIP candidate-set score; not calibrated probability"
+        },
+        "neckline_whole": {
+          "label": "crew",
+          "score": 0.3099033236503601,
+          "top3": [
+            {
+              "label": "crew",
+              "score": 0.3099033236503601
+            },
+            {
+              "label": "unknown",
+              "score": 0.25524353981018066
+            },
+            {
+              "label": "turtleneck",
+              "score": 0.09191861748695374
+            }
+          ],
+          "score_note": "relative CLIP candidate-set score; not calibrated probability"
+        },
+        "neckline_local_proxy": {
+          "label": "crew",
+          "score": 0.5070872902870178,
+          "top3": [
+            {
+              "label": "crew",
+              "score": 0.5070872902870178
+            },
+            {
+              "label": "unknown",
+              "score": 0.08545403182506561
+            },
+            {
+              "label": "other",
+              "score": 0.07474160939455032
+            }
+          ],
+          "score_note": "relative CLIP candidate-set score; not calibrated probability"
+        }
+      }
+    }
+  ]
+}

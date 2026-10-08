@@ -1,0 +1,61 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "fashion-multimodal-analysis"
+version = "0.3.0"
+description = "Garment segmentation, region grounding and visual attribute experiments"
+readme = "readme.md"
+requires-python = ">=3.10"
+dependencies = ["numpy", "Pillow", "pandas", "tqdm"]
+
+[project.optional-dependencies]
+vision = ["torch", "torchvision", "transformers", "opencv-python", "pycocotools"]
+
+[project.scripts]
+fashion-analysis = "fashion_multimodal_analysis.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+fashion_multimodal_analysis = ["command_registry.json", "common/path_aliases.json"]
+
+[tool.black]
+line-length = 88
+target-version = ["py310"]
+
+[tool.isort]
+profile = "black"
+line_length = 88
+known_first_party = ["fashion_multimodal_analysis"]
+
+[tool.ruff]
+line-length = 88
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E4", "E7", "E9", "F821", "F822", "F823", "ISC001", "ISC002", "D100", "D101", "D102", "D103", "D104", "D105", "D106", "D107", "ANN001", "ANN002", "ANN003", "ANN201", "ANN202"]
+
+[tool.ruff.lint.per-file-ignores]
+# Tests explicitly add this uninstalled source copy before importing its modules.
+"tests/*.py" = ["E402"]
+
+[tool.mypy]
+python_version = "3.10"
+ignore_missing_imports = true
+follow_imports = "skip"
+files = [
+  "src/fashion_multimodal_analysis/common/paths.py",
+  "src/fashion_multimodal_analysis/common/io.py",
+  "src/fashion_multimodal_analysis/evaluation/metrics.py",
+  "src/fashion_multimodal_analysis/segmentation/sampling.py",
+  "src/fashion_multimodal_analysis/segmentation/training/checkpoint_state.py",
+]
+
+[tool.ruff.lint.flake8-implicit-str-concat]
+allow-multiline = false
+
+[tool.ruff.lint.pydocstyle]
+convention = "google"

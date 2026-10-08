@@ -1,0 +1,36 @@
+PRD 3.1.3 primary color baseline v1
+===================================
+model=openai/clip-vit-base-patch32
+instances=22
+method=CLIP_primary_color_with_multi_background_embedding_average
+secondary_colors=out_of_scope
+gt_available=false_until_holdout_manual_audit
+
+Primary-color distribution
+--------------------------
+black=4
+white=1
+gray=1
+beige=4
+brown=2
+red=0
+orange=0
+yellow=1
+green=1
+blue=6
+purple=1
+pink=1
+
+Uncertainty
+-----------
+top1_top2_margin: mean=0.3278, median=0.2486, min=0.0015, max=0.9004
+normalized_entropy: mean=0.6196, median=0.6638, min=0.1519, max=0.8613
+
+Validation
+----------
+holdout_rows=0
+holdout_seed=20260918
+- Manually label the holdout before reporting color accuracy.
+- Scores are candidate-relative CLIP similarities, not calibrated probabilities.
+- Multicolor garments can be intrinsically ambiguous under a single-primary-color schema.
+- Material/fabric and craftsmanship remain excluded.

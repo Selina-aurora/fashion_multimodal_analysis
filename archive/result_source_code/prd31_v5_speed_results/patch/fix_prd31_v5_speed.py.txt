@@ -1,0 +1,270 @@
+"""Verify filtered mask transfers on CUDA, then evaluate the existing V5 checkpoint."""
+from __future__ import annotations
+import argparse
+import csv
+import hashlib
+import json
+import os
+from pathlib import Path
+import subprocess
+import sys
+import tempfile
+import time
+import types
+import zipfile
+
+BASE_RUNTIME_SHA = '24616489db986f3b9f21a7ef337ac79bcf0ad52bd5b21f4d73667401be23ea23'
+CHECKPOINT_SHA = 'ea5a4ddf0f002256f1ce5164fc1b4b5b4d2263698f9525c9fbe7d8cf98bc1a65'
+CORE_SHA = 'c83204aca87c9c4dee304b774fd459bf5a18a2d1d65f0a3a9a79b92721224b89'
+DEV_SHA = '39141f545ea5512d16ed074788b6f98474b33baff111d3b663ec0ffcc4c40b93'
+FAST_RUNTIME = '''"""Time preprocessing, model forward and CPU postprocessing, excluding disk/GT/report I/O."""
+from __future__ import annotations
+import time
+
+def postprocess_filtered(output, score_threshold, mask_threshold):
+    import numpy as np
+    import torch
+    score_tensor = output['scores'].detach()
+    keep = torch.isfinite(score_tensor) & (score_tensor >= score_threshold)
+    boxes = output['boxes'].detach()[keep].cpu().numpy()
+    labels = output['labels'].detach()[keep].cpu().numpy()
+    scores = score_tensor[keep].cpu().numpy()
+    # Keep the original NumPy mask threshold operation; transfer retained masks only.
+    masks = (output['masks'].detach()[keep, 0].cpu().numpy() >= mask_threshold).astype(np.uint8)
+    return boxes, labels, scores, masks
+
+def predict_timed(raw_image, model, device, score_threshold, mask_threshold):
+    import torch
+    from torchvision.transforms import functional as F
+    if device.type == 'cuda':
+        torch.cuda.synchronize()
+    start = time.perf_counter()
+    image = raw_image.convert('RGB')
+    tensor = F.to_tensor(image).to(device)
+    with torch.inference_mode():
+        output = model([tensor])[0]
+    result = postprocess_filtered(output, score_threshold, mask_threshold)
+    if device.type == 'cuda':
+        torch.cuda.synchronize()
+    elapsed_ms = (time.perf_counter() - start) * 1000
+    return (*result, elapsed_ms)
+'''
+
+def digest(path):
+    h = hashlib.sha256()
+    with Path(path).open('rb') as f:
+        for block in iter(lambda: f.read(1024 * 1024), b''):
+            h.update(block)
+    return h.hexdigest()
+
+def rows(path):
+    with Path(path).open(encoding='utf-8-sig', newline='') as f:
+        return list(csv.DictReader(f))
+
+def atomic_write(path, data):
+    path = Path(path)
+    path.parent.mkdir(parents=True, exist_ok=True)
+    fd, temp = tempfile.mkstemp(prefix=path.name + '.', dir=path.parent)
+    try:
+        with os.fdopen(fd, 'wb') as f:
+            f.write(data)
+        os.replace(temp, path)
+    finally:
+        if os.path.exists(temp):
+            os.unlink(temp)
+
+def original_decode(output, score_threshold, mask_threshold):
+    import numpy as np
+    scores = output['scores'].detach().cpu().numpy()
+    keep = np.isfinite(scores) & (scores >= score_threshold)
+    return (output['boxes'].detach().cpu().numpy()[keep],
+            output['labels'].detach().cpu().numpy()[keep], scores[keep],
+            (output['masks'].detach().cpu().numpy()[keep, 0] >= mask_threshold).astype(np.uint8))
+
+def verify_equal(output, fast_decode):
+    import numpy as np
+    old = original_decode(output, 0.4, 0.5)
+    new = fast_decode(output, 0.4, 0.5)
+    for name, a, b in zip(('boxes', 'labels', 'scores', 'masks'), old, new):
+        if a.dtype != b.dtype or a.shape != b.shape or not np.array_equal(a, b):
+            raise ValueError('Postprocessing changed ' + name)
+    return len(new[2])
+
+def verify_cuda(model, device, samples, fast_decode):
+    import numpy as np
+    import torch
+    from PIL import Image
+    from torchvision.transforms import functional as F
+    from fashion_multimodal_analysis.common.paths import resolve_path
+    # Exercise empty results, NaN/inf scores and score/mask threshold boundaries.
+    scores = np.array([np.nan, np.inf, -np.inf, 0.0,
+                       np.nextafter(np.float32(0.4), np.float32(0)), 0.4, 0.9], dtype=np.float32)
+    masks = np.tile(np.array([0.0, 0.49999997, 0.5, 1.0], dtype=np.float32), (7, 1)).reshape(7, 1, 2, 2)
+    synthetic = {'scores': torch.tensor(scores, device=device),
+                 'boxes': torch.arange(28, device=device, dtype=torch.float32).reshape(7, 4),
+                 'labels': torch.arange(7, device=device), 'masks': torch.tensor(masks, device=device)}
+    verify_equal(synthetic, fast_decode)
+    verify_equal({k: v[:0] for k, v in synthetic.items()}, fast_decode)
+    verify_equal({**synthetic, 'scores': torch.zeros_like(synthetic['scores'])}, fast_decode)
+    evidence = []
+    with torch.inference_mode():
+        for index, source in enumerate(samples, 1):
+            with Image.open(resolve_path(source)) as raw:
+                tensor = F.to_tensor(raw.convert('RGB')).to(device)
+                output = model([tensor])[0]
+            retained = verify_equal(output, fast_decode)
+            evidence.append({'source_image': source, 'model_outputs': len(output['scores']),
+                             'retained_outputs': retained, 'all_arrays_exactly_equal': True})
+            print(f'VERIFY {index:02d}/{len(samples)} PASS: retained={retained}', flush=True)
+    return {'boundary_cases_passed': True, 'images': evidence,
+            'scope': 'Exact boxes/labels/scores/binary masks for two decoders on the SAME model output. No model or threshold changes.'}
+
+def check_accuracy(before, after):
+    old, new = rows(before / 'per_gt_results.csv'), rows(after / 'per_gt_results.csv')
+    if len(old) != 400 or len(new) != 400:
+        raise ValueError('Expected 400 Core GT rows in both reports')
+    exact = ('source_dataset', 'source_image', 'record_id', 'garment_id', 'gt_class', 'fine_category',
+             'pred_class', 'localized_bbox50', 'class_correct', 'mask_iou_ge_0_50', 'mask_iou_ge_0_85', 'outcome')
+    differences = []
+    for a, b in zip(old, new):
+        changed = [key for key in exact if a[key] != b[key]]
+        changed += [key for key, tol in [('mask_iou', 0.0), ('bbox_iou', 1e-6), ('pred_score', 1e-6)]
+                    if abs(float(a[key]) - float(b[key])) > tol]
+        if changed:
+            differences.append({'record_id': a['record_id'], 'changed_fields': changed})
+    old_metrics = json.loads((before / 'protocol_metrics.json').read_text())
+    new_metrics = json.loads((after / 'protocol_metrics.json').read_text())
+    for key in ('tp', 'fp', 'fn', 'gt_count', 'prediction_count', 'localization_matches', 'mask_iou_ge_0_85_count'):
+        if old_metrics['micro'][key] != new_metrics['micro'][key]:
+            differences.append({'metric': key})
+    return {'accuracy_equal': not differences, 'gt_rows': 400, 'differences': differences[:20]}
+
+def summary(path):
+    return dict(line.split('=', 1) for line in Path(path).read_text().splitlines() if '=' in line and not line.startswith('-'))
+
+def package(root, run, original_runtime):
+    destination = root / 'prd31_v5_speed_results.zip'
+    if destination.exists():
+        destination = root / ('prd31_v5_speed_results_' + run.name + '.zip')
+    folders = [root / 'reports/reruns/recovery_v2/core_v5_full_targets',
+               root / 'reports/reruns/recovery_v2/v5_full_targets', run]
+    with zipfile.ZipFile(destination, 'w', zipfile.ZIP_DEFLATED) as z:
+        for folder in folders:
+            if folder.is_dir():
+                for p in sorted(folder.rglob('*')):
+                    if p.is_file():
+                        z.write(p, p.relative_to(root))
+        z.writestr('patch/runtime_before.py', original_runtime)
+        z.writestr('patch/runtime_candidate.py', FAST_RUNTIME)
+        z.write(Path(__file__), 'patch/FIX_PRD31_V5_SPEED.py')
+    print('RESULTS_ZIP=' + str(destination), flush=True)
+
+def run(root, data):
+    os.environ['FASHION_PROJECT_ROOT'] = str(root)
+    os.environ['FASHION_DATA_ROOT'] = str(data)
+    sys.path.insert(0, str(root / 'src'))
+    runtime = root / 'src/fashion_multimodal_analysis/evaluation/runtime.py'
+    checkpoint = root / 'outputs/prd_instance_segmentation/maskrcnn_8class_v5_full_targets/checkpoint_last.pth'
+    core = root / 'benchmark/prd_3_1_v1/manifests/segmentation_test_v1.csv'
+    dev = root / 'configs/prd_8class_val_v2_full_targets.csv'
+    for path, expected in [(checkpoint, CHECKPOINT_SHA), (core, CORE_SHA), (dev, DEV_SHA)]:
+        if digest(path) != expected:
+            raise ValueError('Frozen file SHA256 differs: ' + str(path))
+    candidate = FAST_RUNTIME.encode()
+    if digest(runtime) not in (BASE_RUNTIME_SHA, hashlib.sha256(candidate).hexdigest()):
+        raise ValueError('runtime.py has other edits; no overwrite performed')
+    backup = runtime.with_name('runtime.py.before_prd31_speed_fix.bak')
+    if backup.exists() and digest(backup) != BASE_RUNTIME_SHA:
+        raise ValueError('Existing runtime backup differs')
+    original = backup.read_bytes() if backup.exists() else runtime.read_bytes()
+    if hashlib.sha256(original).hexdigest() != BASE_RUNTIME_SHA:
+        raise ValueError('Original runtime backup is missing')
+    baseline = root / 'reports/reruns/recovery_v2/core_v5_full_targets'
+    previous = summary(baseline / 'evaluation_summary.txt')
+    for key, value in [('validation_images', '400'), ('gt_instances', '400'), ('checkpoint_epoch', '15'),
+                       ('score_threshold', '0.4'), ('match_bbox_iou', '0.5'), ('mask_threshold', '0.5'),
+                       ('warmup_runs', '10'), ('timed_passes', '5'), ('device', 'cuda')]:
+        if previous.get(key) != value:
+            raise ValueError('Original Core protocol differs: ' + key)
+    for name in ('per_gt_results.csv', 'protocol_metrics.json'):
+        if not (baseline / name).is_file():
+            raise ValueError('Original Core report incomplete: ' + name)
+    import torch
+    from fashion_multimodal_analysis.segmentation.modeling import build_evaluation_model
+    if not torch.cuda.is_available():
+        raise RuntimeError('CUDA is required; no CPU timing fallback')
+    cp = torch.load(checkpoint, map_location='cpu', weights_only=False)
+    if int(cp.get('epoch', -1)) != 15:
+        raise ValueError('Expected completed epoch 15')
+    saved = cp.get('args', {})
+    device = torch.device('cuda')
+    model = build_evaluation_model(int(saved.get('min_size', 640)), int(saved.get('max_size', 1024)))
+    model.load_state_dict(cp['model_state_dict'])
+    model.to(device).eval()
+    samples = sorted({r['source_image'] for r in rows(dev)})
+    if len(samples) != 32:
+        raise ValueError('Expected 32 development images')
+    fast = types.ModuleType('candidate_prd31_runtime')
+    exec(compile(FAST_RUNTIME, '<candidate_runtime>', 'exec'), fast.__dict__)
+    verified = verify_cuda(model, device, samples, fast.postprocess_filtered)
+    del model, cp
+    torch.cuda.empty_cache()
+    run_dir = root / 'reports/reruns/recovery_v2/v5_speed_fix' / time.strftime('%Y%m%d_%H%M%S')
+    run_dir.mkdir(parents=True, exist_ok=False)
+    new_report = run_dir / 'core_v5_filtered_transfer'
+    status = {'checkpoint_sha256': CHECKPOINT_SHA, 'core_manifest_sha256': CORE_SHA,
+              'development_manifest_sha256': DEV_SHA, 'verification': verified,
+              'score_threshold': 0.4, 'mask_threshold': 0.5, 'match_bbox_iou': 0.5,
+              'warmup_runs': 10, 'timed_passes': 5, 'baseline_report': str(baseline),
+              'candidate_runtime_sha256': hashlib.sha256(candidate).hexdigest()}
+    applied = False
+    try:
+        if not backup.exists():
+            atomic_write(backup, original)
+        atomic_write(runtime, candidate)
+        applied = True
+        print('PATCH_APPLIED: checking the existing V5 on Core400', flush=True)
+        subprocess.run([sys.executable, '-u', str(root / 'scripts/segmentation/evaluation/eval_prd_8class_maskrcnn_v3_b1_dataexp.py'),
+            '--checkpoint', str(checkpoint), '--val-csv', str(core), '--report-dir', str(new_report),
+            '--device', 'cuda', '--score-threshold', '0.4', '--mask-threshold', '0.5',
+            '--match-bbox-iou', '0.5', '--warmup-runs', '10', '--timed-passes', '5'], cwd=root, check=True)
+        status['core_accuracy_check'] = check_accuracy(baseline, new_report)
+        if not status['core_accuracy_check']['accuracy_equal']:
+            raise ValueError('Core accuracy changed across runs; restored original runtime')
+        current = summary(new_report / 'evaluation_summary.txt')
+        old_ms, new_ms = float(previous['mean_inference_ms_per_image']), float(current['mean_inference_ms_per_image'])
+        status.update(original_report_mean_ms=old_ms, candidate_mean_ms=new_ms,
+                      candidate_time_le_50ms=new_ms <= 50, speed_improved_vs_recorded_run=new_ms < old_ms)
+        if new_ms >= old_ms:
+            atomic_write(runtime, original)
+            status['status'] = 'ACCURACY_EQUAL_NO_SPEED_GAIN_ORIGINAL_RUNTIME_RESTORED'
+        else:
+            status['status'] = 'ACCURACY_EQUAL_FASTER_RUNTIME_INSTALLED'
+        print(json.dumps(status, ensure_ascii=False, indent=2), flush=True)
+    except BaseException as error:
+        if applied:
+            atomic_write(runtime, original)
+        status.update(status='FAILED_ORIGINAL_RUNTIME_RESTORED', error=type(error).__name__ + ': ' + str(error))
+        raise
+    finally:
+        atomic_write(run_dir / 'speed_fix_status.json', (json.dumps(status, ensure_ascii=False, indent=2) + '\n').encode())
+        package(root, run_dir, original)
+
+def main():
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--project', default='.')
+    parser.add_argument('--data-root', default='/workspace/fashion_data')
+    args = parser.parse_args()
+    root, data = Path(args.project).expanduser().resolve(), Path(args.data_root).expanduser().resolve()
+    lock = root / 'reports/reruns/recovery_v2/workflow.lock'
+    lock.parent.mkdir(parents=True, exist_ok=True)
+    try:
+        import fcntl
+        with lock.open('a+') as f:
+            fcntl.flock(f.fileno(), fcntl.LOCK_EX | fcntl.LOCK_NB)
+            run(root, data)
+    except (OSError, ValueError, RuntimeError, ImportError, subprocess.CalledProcessError) as error:
+        parser.exit(2, f'速度修复未完成：{type(error).__name__}: {error}\n')
+
+if __name__ == '__main__':
+    main()

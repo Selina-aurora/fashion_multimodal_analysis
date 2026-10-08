@@ -1,0 +1,255 @@
+from __future__ import annotations
+
+import errno
+import logging
+import os
+import re
+import shutil
+import uuid
+from collections.abc import Callable
+from pathlib import Path
+from typing import Any
+
+import torch
+
+
+LOGGER = logging.getLogger(__name__)
+MEBIBYTE = 1024 * 1024
+_EPOCH_CHECKPOINT_PATTERN = re.compile(r"epoch_(\d+)\.pt")
+_HARD_LINK_FALLBACK_ERRNOS = {
+    errno.EACCES,
+    errno.EPERM,
+    errno.EXDEV,
+    getattr(errno, "ENOTSUP", errno.EPERM),
+    getattr(errno, "EOPNOTSUPP", errno.EPERM),
+}
+
+
+class CheckpointWriteError(RuntimeError):
+    """Raised when a checkpoint cannot be saved without risking corruption."""
+
+
+class CheckpointManager:
+    """Save resumable checkpoints atomically while bounding archive growth."""
+
+    def __init__(
+        self,
+        output_dir: str | Path,
+        *,
+        keep_last: int = 0,
+        reserve_bytes: int = 128 * MEBIBYTE,
+        save_function: Callable[[Any, Path], None] | None = None,
+    ) -> None:
+        if keep_last < 0:
+            raise ValueError("keep_last must be non-negative.")
+        if reserve_bytes < 0:
+            raise ValueError("reserve_bytes must be non-negative.")
+        self.output_dir = Path(output_dir)
+        self.keep_last = keep_last
+        self.reserve_bytes = reserve_bytes
+        self.save_function = save_function or torch.save
+        self._estimated_checkpoint_bytes = 0
+
+    def prepare(
+        self,
+        *,
+        resume_path: str | Path | None = None,
+        next_epoch: int | None = None,
+    ) -> None:
+        self.output_dir.mkdir(parents=True, exist_ok=True)
+        self._remove_stale_temporary_files()
+
+        protected: set[Path] = set()
+        if resume_path is not None:
+            resume = Path(resume_path)
+            if resume.is_file():
+                protected.add(resume.resolve())
+                self._estimated_checkpoint_bytes = resume.stat().st_size
+
+        if next_epoch is not None:
+            stale_path = self.epoch_path(next_epoch)
+            if stale_path.exists() and stale_path.resolve() not in protected:
+                stale_path.unlink()
+                LOGGER.warning(
+                    "Removed stale checkpoint before resume: %s", stale_path
+                )
+
+        if self.keep_last:
+            self._prune_epoch_checkpoints(
+                max_to_keep=max(self.keep_last - 1, 0),
+                protected=protected,
+            )
+
+        if not self._estimated_checkpoint_bytes:
+            self._estimated_checkpoint_bytes = self._discover_checkpoint_size()
+        self.ensure_capacity()
+
+    def ensure_capacity(self, estimated_bytes: int | None = None) -> None:
+        estimate = estimated_bytes or self._estimated_checkpoint_bytes
+        if estimate <= 0:
+            return
+        usage = shutil.disk_usage(self.output_dir)
+        required = estimate + self.reserve_bytes
+        if usage.free < required:
+            raise CheckpointWriteError(
+                "Insufficient free space for the next atomic checkpoint in "
+                f"{self.output_dir}: free={_format_bytes(usage.free)}, "
+                f"required~={_format_bytes(required)} "
+                f"(checkpoint~={_format_bytes(estimate)}, "
+                f"reserve={_format_bytes(self.reserve_bytes)}). Free space or "
+                "quota before training; existing checkpoints were not modified."
+            )
+
+    def save(
+        self,
+        payload: dict[str, Any],
+        *,
+        epoch: int,
+        is_best: bool,
+    ) -> Path:
+        epoch_path = self.epoch_path(epoch)
+        estimated_bytes = max(
+            self._estimated_checkpoint_bytes,
+            _estimate_serialized_size(payload),
+        )
+        self.ensure_capacity(estimated_bytes)
+        atomic_torch_save(
+            payload,
+            epoch_path,
+            save_function=self.save_function,
+        )
+        self._estimated_checkpoint_bytes = epoch_path.stat().st_size
+
+        _atomic_checkpoint_alias(epoch_path, self.output_dir / "latest.pt")
+        if is_best:
+            _atomic_checkpoint_alias(epoch_path, self.output_dir / "best.pt")
+
+        if self.keep_last:
+            self._prune_epoch_checkpoints(max_to_keep=self.keep_last)
+        return epoch_path
+
+    def epoch_path(self, epoch: int) -> Path:
+        if epoch <= 0:
+            raise ValueError("epoch must be positive.")
+        return self.output_dir / f"epoch_{epoch:03d}.pt"
+
+    def _discover_checkpoint_size(self) -> int:
+        candidates = [
+            self.output_dir / "latest.pt",
+            self.output_dir / "best.pt",
+            *self._epoch_checkpoints(),
+        ]
+        return max(
+            (path.stat().st_size for path in candidates if path.is_file()),
+            default=0,
+        )
+
+    def _epoch_checkpoints(self) -> list[Path]:
+        checkpoints: list[tuple[int, Path]] = []
+        for path in self.output_dir.glob("epoch_*.pt"):
+            match = _EPOCH_CHECKPOINT_PATTERN.fullmatch(path.name)
+            if match:
+                checkpoints.append((int(match.group(1)), path))
+        checkpoints.sort(key=lambda item: item[0])
+        return [path for _, path in checkpoints]
+
+    def _prune_epoch_checkpoints(
+        self,
+        *,
+        max_to_keep: int,
+        protected: set[Path] | None = None,
+    ) -> None:
+        protected = protected or set()
+        removable = [
+            path
+            for path in self._epoch_checkpoints()
+            if path.resolve() not in protected
+        ]
+        keep_slots = max(max_to_keep - len(protected), 0)
+        for path in removable[: max(len(removable) - keep_slots, 0)]:
+            path.unlink()
+            LOGGER.info("Pruned old checkpoint archive: %s", path)
+
+    def _remove_stale_temporary_files(self) -> None:
+        for path in self.output_dir.glob(".*.pt.*.tmp"):
+            path.unlink()
+            LOGGER.warning("Removed stale temporary checkpoint: %s", path)
+
+
+def atomic_torch_save(
+    payload: Any,
+    destination: str | Path,
+    *,
+    save_function: Callable[[Any, Path], None] | None = None,
+) -> None:
+    destination = Path(destination)
+    destination.parent.mkdir(parents=True, exist_ok=True)
+    temporary = _temporary_path(destination)
+    try:
+        (save_function or torch.save)(payload, temporary)
+        os.replace(temporary, destination)
+    except Exception as exc:
+        temporary.unlink(missing_ok=True)
+        usage = shutil.disk_usage(destination.parent)
+        raise CheckpointWriteError(
+            f"Failed to save checkpoint {destination}. The temporary partial "
+            "file was removed and any existing destination was left intact. "
+            f"Free space={_format_bytes(usage.free)}. Check disk capacity, "
+            f"storage quota, and filesystem health. Original error: {exc}"
+        ) from exc
+
+
+def _atomic_checkpoint_alias(source: Path, destination: Path) -> None:
+    temporary = _temporary_path(destination)
+    try:
+        try:
+            os.link(source, temporary)
+        except OSError as exc:
+            if exc.errno not in _HARD_LINK_FALLBACK_ERRNOS:
+                raise
+            shutil.copy2(source, temporary)
+        os.replace(temporary, destination)
+    except Exception as exc:
+        temporary.unlink(missing_ok=True)
+        raise CheckpointWriteError(
+            f"Saved {source}, but failed to update checkpoint alias "
+            f"{destination}: {exc}"
+        ) from exc
+
+
+def _temporary_path(destination: Path) -> Path:
+    return destination.with_name(
+        f".{destination.name}.{os.getpid()}.{uuid.uuid4().hex}.tmp"
+    )
+
+
+def _estimate_serialized_size(payload: Any) -> int:
+    tensor_bytes = _tensor_storage_bytes(payload, seen=set())
+    return int(tensor_bytes * 1.05) + 16 * MEBIBYTE
+
+
+def _tensor_storage_bytes(value: Any, *, seen: set[tuple[str, int, int]]) -> int:
+    if isinstance(value, torch.Tensor):
+        storage = value.untyped_storage()
+        key = (str(value.device), storage.data_ptr(), storage.nbytes())
+        if key in seen:
+            return 0
+        seen.add(key)
+        return storage.nbytes()
+    if isinstance(value, dict):
+        return sum(
+            _tensor_storage_bytes(item, seen=seen) for item in value.values()
+        )
+    if isinstance(value, (list, tuple, set)):
+        return sum(_tensor_storage_bytes(item, seen=seen) for item in value)
+    return 0
+
+
+def _format_bytes(value: int) -> str:
+    units = ("B", "KiB", "MiB", "GiB", "TiB")
+    amount = float(value)
+    for unit in units:
+        if amount < 1024 or unit == units[-1]:
+            return f"{amount:.1f} {unit}"
+        amount /= 1024
+    return f"{amount:.1f} TiB"

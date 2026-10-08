@@ -1,0 +1,33 @@
+PRD 3.1.3 primary color baseline v1 - manual holdout review
+==============================================================
+
+holdout_rows=40
+evaluable_single_primary_rows=37
+ambiguous_multicolor_rows=3
+
+correct=32
+accuracy_on_evaluable_rows=0.8649
+
+ambiguous_rows=8,20,37
+
+Important
+---------
+- Accuracy excludes rows with no clearly dominant single color.
+- This avoids forcing a questionable GT label onto genuinely multicolor garments.
+- The current taxonomy maps cream/ivory to beige and magenta to pink.
+- Main observed errors are isolated color confusions plus one target-contamination case.
+- CLIP scores remain candidate-relative similarities, not calibrated probabilities.
+
+Observed high-confidence errors
+-------------------------------
+ROW 04: predicted orange -> manual gray
+ROW 05: predicted beige -> manual green
+ROW 10: predicted brown -> manual red
+ROW 30: predicted beige -> manual black
+ROW 33: predicted beige -> manual blue
+
+Interpretation
+--------------
+- The primary-color baseline is provisionally strong enough to keep as a baseline.
+- Remaining uncertainty is dominated by multicolor garments and close color boundaries.
+- Secondary/multi-color extraction should be a separate later extension, not forced into this single-primary-color score.

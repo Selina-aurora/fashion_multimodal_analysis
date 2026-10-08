@@ -1,0 +1,6 @@
+﻿region,N,correct,coarse,wrong,missed,strict_accuracy_pct,usable_rate_pct,missed_rate_pct,non_empty_prediction_rate_pct,mean_top_box_area_ratio
+pocket,5,0,0,0,5,0.0,0.0,100.0,0.0,
+shoulder,5,0,2,0,3,0.0,40.0,60.0,40.0,0.9999
+waist,5,0,3,0,2,0.0,60.0,40.0,60.0,0.9693
+pattern,5,1,2,0,2,20.0,60.0,40.0,60.0,0.9787
+decoration,5,0,0,0,5,0.0,0.0,100.0,0.0,

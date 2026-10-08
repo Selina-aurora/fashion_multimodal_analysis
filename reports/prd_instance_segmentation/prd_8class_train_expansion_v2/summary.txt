@@ -1,0 +1,60 @@
+PRD 3.1.1 train v2 - Fashionpedia expansion (fixed)
+====================================================
+
+seed=20260921
+target_fashionpedia_per_class=100
+
+Fixed validation
+----------------
+validation_rows=43
+frozen_fashionpedia_val_images=12
+validation_manifest_modified=False
+train_val_source_image_overlap=0
+
+Training rows
+-------------
+deepfashion2_train_rows=125
+fashionpedia_train_rows=300
+total_train_rows=425
+
+Fashionpedia build diagnostics
+------------------------------
+shoe: valid=100, attempted=112, skipped=12
+bag: valid=100, attempted=100, skipped=0
+accessory: valid=100, attempted=105, skipped=5
+
+Train class counts
+------------------
+top=42
+pants=31
+skirt=13
+outerwear=10
+dress=29
+shoe=100
+bag=100
+accessory=100
+
+Fashionpedia fine-category counts
+--------------------------------
+accessory <- belt: 11
+accessory <- glasses: 10
+accessory <- glove: 10
+accessory <- hat: 10
+accessory <- headband, head covering, hair accessory: 11
+accessory <- leg warmer: 5
+accessory <- scarf: 11
+accessory <- sock: 11
+accessory <- tie: 3
+accessory <- tights, stockings: 9
+accessory <- watch: 9
+bag <- bag, wallet: 100
+shoe <- shoe: 100
+
+Notes
+-----
+- Existing validation split was not changed.
+- Fashionpedia validation source images were excluded before sampling.
+- Decode failures were backfilled from reserve candidates until each target class reached the requested valid count.
+- DeepFashion2 train rows were preserved from train_v1.
+- New Fashionpedia masks are stored as full-image masks.
+- Use train_v2 for baseline-v2 training and compare on the same fixed val_v1.

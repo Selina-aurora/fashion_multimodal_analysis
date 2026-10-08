@@ -1,0 +1,84 @@
+{
+  "image": "../fashion_data/raw/train/train/image/000001.jpg",
+  "region": "whole_garment",
+  "model": "openai/clip-vit-base-patch32",
+  "scope": "visual attributes only; material and craftsmanship excluded",
+  "predictions": {
+    "color": {
+      "label": "white",
+      "confidence": 0.26413482427597046,
+      "top3": [
+        {
+          "label": "white",
+          "score": 0.26413482427597046
+        },
+        {
+          "label": "blue",
+          "score": 0.23942969739437103
+        },
+        {
+          "label": "gray",
+          "score": 0.08695600926876068
+        }
+      ],
+      "confidence_note": "relative softmax score over candidate labels; not calibrated"
+    },
+    "pattern": {
+      "label": "graphic",
+      "confidence": 0.8252025246620178,
+      "top3": [
+        {
+          "label": "graphic",
+          "score": 0.8252025246620178
+        },
+        {
+          "label": "solid",
+          "score": 0.04141857102513313
+        },
+        {
+          "label": "camouflage",
+          "score": 0.027683809399604797
+        }
+      ],
+      "confidence_note": "relative softmax score over candidate labels; not calibrated"
+    },
+    "sleeve_length": {
+      "label": "short",
+      "confidence": 0.27687081694602966,
+      "top3": [
+        {
+          "label": "short",
+          "score": 0.27687081694602966
+        },
+        {
+          "label": "cap",
+          "score": 0.25262996554374695
+        },
+        {
+          "label": "long",
+          "score": 0.13221894204616547
+        }
+      ],
+      "confidence_note": "relative softmax score over candidate labels; not calibrated"
+    },
+    "neckline": {
+      "label": "shirt_collar",
+      "confidence": 0.26635274291038513,
+      "top3": [
+        {
+          "label": "shirt_collar",
+          "score": 0.26635274291038513
+        },
+        {
+          "label": "not_applicable",
+          "score": 0.1157592162489891
+        },
+        {
+          "label": "crew",
+          "score": 0.09822652488946915
+        }
+      ],
+      "confidence_note": "relative softmax score over candidate labels; not calibrated"
+    }
+  }
+}

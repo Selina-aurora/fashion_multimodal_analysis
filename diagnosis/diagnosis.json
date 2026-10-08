@@ -1,0 +1,1062 @@
+{
+  "checkpoint_sha256": {
+    "v5": "ea5a4ddf0f002256f1ce5164fc1b4b5b4d2263698f9525c9fbe7d8cf98bc1a65",
+    "v6": "1ed99e67c141fc183a0502541ce0f151085a568f6434a0dc8f5573190c4e2209"
+  },
+  "development_manifest_sha256": "39141f545ea5512d16ed074788b6f98474b33baff111d3b663ec0ffcc4c40b93",
+  "frozen_score_threshold": 0.4,
+  "debug_score_threshold": 0.05,
+  "mask_threshold": 0.5,
+  "bbox_match_iou": 0.5,
+  "status": "REFERENCE_RESULTS_REPRODUCED_DIAGNOSTIC_COMPLETE",
+  "cases": [
+    {
+      "record_id": "v5_validation_00021",
+      "gt_class": "pants",
+      "source_image": "../fashion_data/raw/train/train/image/124892.jpg",
+      "reference_v5": {
+        "image_index": "13",
+        "source_dataset": "DeepFashion2",
+        "source_image": "../fashion_data/raw/train/train/image/124892.jpg",
+        "record_id": "v5_validation_00021",
+        "garment_id": "item2_shorts",
+        "gt_class": "pants",
+        "fine_category": "shorts",
+        "pred_class": "pants",
+        "pred_score": "0.9396426677703857",
+        "localized_bbox50": "True",
+        "bbox_iou": "0.8667951760333655",
+        "class_correct": "True",
+        "mask_iou": "0.945775723779696",
+        "mask_iou_ge_0_50": "True",
+        "mask_iou_ge_0_85": "True",
+        "outcome": "correct",
+        "visualization_path": "/workspace/prd31_recovery_20260930/fashion_multimodal_analysis/reports/reruns/recovery_v2/v6_coverage/v5_development_fast/visualizations/img_013.jpg"
+      },
+      "reference_v6": {
+        "image_index": "13",
+        "source_dataset": "DeepFashion2",
+        "source_image": "../fashion_data/raw/train/train/image/124892.jpg",
+        "record_id": "v5_validation_00021",
+        "garment_id": "item2_shorts",
+        "gt_class": "pants",
+        "fine_category": "shorts",
+        "pred_class": "skirt",
+        "pred_score": "0.7727171182632446",
+        "localized_bbox50": "True",
+        "bbox_iou": "0.9574269381856495",
+        "class_correct": "False",
+        "mask_iou": "0.9570430764839962",
+        "mask_iou_ge_0_50": "False",
+        "mask_iou_ge_0_85": "False",
+        "outcome": "wrong_class",
+        "visualization_path": "/workspace/prd31_recovery_20260930/fashion_multimodal_analysis/reports/reruns/recovery_v2/v6_coverage/v6_development_fast/visualizations/img_013.jpg"
+      },
+      "v5": {
+        "outcome": "correct",
+        "diagnostic_reason": "correct",
+        "returned_candidates_at_0_05": 9,
+        "frozen_candidates_at_0_4": 3,
+        "frozen_match": {
+          "prediction_index": 1,
+          "pred_class": "pants",
+          "score": 0.9396426677703857,
+          "bbox": [
+            71.9151611328125,
+            149.79840087890625,
+            674.8009033203125,
+            768.4653930664062
+          ],
+          "bbox_iou": 0.8667951760333655,
+          "mask_iou": 0.945775723779696,
+          "pred_mask_pixels": 258105,
+          "gt_mask_pixels": 251338,
+          "mask_pixel_precision": 0.9593886209100947,
+          "mask_pixel_recall": 0.9852191073375295
+        },
+        "best_bbox_any_class_debug": {
+          "prediction_index": 3,
+          "pred_class": "top",
+          "score": 0.2794612646102905,
+          "bbox": [
+            69.92633056640625,
+            146.51651000976562,
+            678.4065551757812,
+            722.512451171875
+          ],
+          "bbox_iou": 0.9326120937384859,
+          "mask_iou": 0.9444722835948948,
+          "pred_mask_pixels": 260871,
+          "gt_mask_pixels": 251338,
+          "mask_pixel_precision": 0.9536935880185993,
+          "mask_pixel_recall": 0.9898662359054341
+        },
+        "best_bbox_same_class_debug": {
+          "prediction_index": 1,
+          "pred_class": "pants",
+          "score": 0.9396426677703857,
+          "bbox": [
+            71.9151611328125,
+            149.79840087890625,
+            674.8009033203125,
+            768.4653930664062
+          ],
+          "bbox_iou": 0.8667951760333655,
+          "mask_iou": 0.945775723779696,
+          "pred_mask_pixels": 258105,
+          "gt_mask_pixels": 251338,
+          "mask_pixel_precision": 0.9593886209100947,
+          "mask_pixel_recall": 0.9852191073375295
+        }
+      },
+      "v6": {
+        "outcome": "wrong_class",
+        "diagnostic_reason": "matched_wrong_class",
+        "returned_candidates_at_0_05": 5,
+        "frozen_candidates_at_0_4": 3,
+        "frozen_match": {
+          "prediction_index": 0,
+          "pred_class": "skirt",
+          "score": 0.7727171182632446,
+          "bbox": [
+            63.21766662597656,
+            142.18051147460938,
+            665.9625854492188,
+            707.7454833984375
+          ],
+          "bbox_iou": 0.9574269381856495,
+          "mask_iou": 0.9570430764839962,
+          "pred_mask_pixels": 256090,
+          "gt_mask_pixels": 251338,
+          "mask_pixel_precision": 0.9689757507126401,
+          "mask_pixel_recall": 0.9872959918516102
+        },
+        "best_bbox_any_class_debug": {
+          "prediction_index": 0,
+          "pred_class": "skirt",
+          "score": 0.7727171182632446,
+          "bbox": [
+            63.21766662597656,
+            142.18051147460938,
+            665.9625854492188,
+            707.7454833984375
+          ],
+          "bbox_iou": 0.9574269381856495,
+          "mask_iou": 0.9570430764839962,
+          "pred_mask_pixels": 256090,
+          "gt_mask_pixels": 251338,
+          "mask_pixel_precision": 0.9689757507126401,
+          "mask_pixel_recall": 0.9872959918516102
+        },
+        "best_bbox_same_class_debug": {
+          "prediction_index": 1,
+          "pred_class": "pants",
+          "score": 0.7669668793678284,
+          "bbox": [
+            66.34911346435547,
+            144.78846740722656,
+            639.4822387695312,
+            706.9855346679688
+          ],
+          "bbox_iou": 0.9250760497849264,
+          "mask_iou": 0.9474890737778322,
+          "pred_mask_pixels": 257537,
+          "gt_mask_pixels": 251338,
+          "mask_pixel_precision": 0.961325945398137,
+          "mask_pixel_recall": 0.9850360868631086
+        }
+      },
+      "figure": "v5_validation_00021.jpg"
+    },
+    {
+      "record_id": "v5_validation_00030",
+      "gt_class": "pants",
+      "source_image": "../fashion_data/raw/train/train/image/178287.jpg",
+      "reference_v5": {
+        "image_index": "18",
+        "source_dataset": "DeepFashion2",
+        "source_image": "../fashion_data/raw/train/train/image/178287.jpg",
+        "record_id": "v5_validation_00030",
+        "garment_id": "item2_shorts",
+        "gt_class": "pants",
+        "fine_category": "shorts",
+        "pred_class": "pants",
+        "pred_score": "0.9831768274307251",
+        "localized_bbox50": "True",
+        "bbox_iou": "0.524537587929029",
+        "class_correct": "True",
+        "mask_iou": "0.6771090734576347",
+        "mask_iou_ge_0_50": "True",
+        "mask_iou_ge_0_85": "False",
+        "outcome": "correct",
+        "visualization_path": "/workspace/prd31_recovery_20260930/fashion_multimodal_analysis/reports/reruns/recovery_v2/v6_coverage/v5_development_fast/visualizations/img_018.jpg"
+      },
+      "reference_v6": {
+        "image_index": "18",
+        "source_dataset": "DeepFashion2",
+        "source_image": "../fashion_data/raw/train/train/image/178287.jpg",
+        "record_id": "v5_validation_00030",
+        "garment_id": "item2_shorts",
+        "gt_class": "pants",
+        "fine_category": "shorts",
+        "pred_class": "",
+        "pred_score": "0.0",
+        "localized_bbox50": "False",
+        "bbox_iou": "0.0",
+        "class_correct": "False",
+        "mask_iou": "0.0",
+        "mask_iou_ge_0_50": "False",
+        "mask_iou_ge_0_85": "False",
+        "outcome": "missed",
+        "visualization_path": "/workspace/prd31_recovery_20260930/fashion_multimodal_analysis/reports/reruns/recovery_v2/v6_coverage/v6_development_fast/visualizations/img_018.jpg"
+      },
+      "v5": {
+        "outcome": "correct",
+        "diagnostic_reason": "correct",
+        "returned_candidates_at_0_05": 11,
+        "frozen_candidates_at_0_4": 2,
+        "frozen_match": {
+          "prediction_index": 1,
+          "pred_class": "pants",
+          "score": 0.9831768274307251,
+          "bbox": [
+            131.3915557861328,
+            378.592529296875,
+            540.3275756835938,
+            626.2821655273438
+          ],
+          "bbox_iou": 0.524537587929029,
+          "mask_iou": 0.6771090734576347,
+          "pred_mask_pixels": 48840,
+          "gt_mask_pixels": 33283,
+          "mask_pixel_precision": 0.6788697788697788,
+          "mask_pixel_recall": 0.9961842381996815
+        },
+        "best_bbox_any_class_debug": {
+          "prediction_index": 7,
+          "pred_class": "bag",
+          "score": 0.08780940622091293,
+          "bbox": [
+            276.9757995605469,
+            349.99468994140625,
+            533.2427978515625,
+            630.0
+          ],
+          "bbox_iou": 0.7035281511847823,
+          "mask_iou": 0.37208064967796134,
+          "pred_mask_pixels": 15714,
+          "gt_mask_pixels": 33283,
+          "mask_pixel_precision": 0.8455517373043147,
+          "mask_pixel_recall": 0.39921281134513115
+        },
+        "best_bbox_same_class_debug": {
+          "prediction_index": 1,
+          "pred_class": "pants",
+          "score": 0.9831768274307251,
+          "bbox": [
+            131.3915557861328,
+            378.592529296875,
+            540.3275756835938,
+            626.2821655273438
+          ],
+          "bbox_iou": 0.524537587929029,
+          "mask_iou": 0.6771090734576347,
+          "pred_mask_pixels": 48840,
+          "gt_mask_pixels": 33283,
+          "mask_pixel_precision": 0.6788697788697788,
+          "mask_pixel_recall": 0.9961842381996815
+        }
+      },
+      "v6": {
+        "outcome": "missed",
+        "diagnostic_reason": "bbox50_candidate_only_below_score_0_4",
+        "returned_candidates_at_0_05": 7,
+        "frozen_candidates_at_0_4": 3,
+        "frozen_match": null,
+        "best_bbox_any_class_debug": {
+          "prediction_index": 4,
+          "pred_class": "skirt",
+          "score": 0.14648541808128357,
+          "bbox": [
+            286.2344970703125,
+            395.4055480957031,
+            545.3074951171875,
+            627.304931640625
+          ],
+          "bbox_iou": 0.8843375597935097,
+          "mask_iou": 0.8897174042254282,
+          "pred_mask_pixels": 36663,
+          "gt_mask_pixels": 33283,
+          "mask_pixel_precision": 0.8982352780732619,
+          "mask_pixel_recall": 0.9894540756542379
+        },
+        "best_bbox_same_class_debug": {
+          "prediction_index": 1,
+          "pred_class": "pants",
+          "score": 0.9094181656837463,
+          "bbox": [
+            123.2260513305664,
+            373.5603332519531,
+            536.0227661132812,
+            617.264892578125
+          ],
+          "bbox_iou": 0.48534305214003765,
+          "mask_iou": 0.7512988945091666,
+          "pred_mask_pixels": 43233,
+          "gt_mask_pixels": 33283,
+          "mask_pixel_precision": 0.7592579742326464,
+          "mask_pixel_recall": 0.9862392212240483
+        }
+      },
+      "figure": "v5_validation_00030.jpg"
+    },
+    {
+      "record_id": "v5_validation_00040",
+      "gt_class": "shoe",
+      "source_image": "../fashion_data/raw/fashionpedia/images/test/32227cade6d3646824f9c0f3fa9dc9e7.jpg",
+      "reference_v5": {
+        "image_index": "21",
+        "source_dataset": "Fashionpedia",
+        "source_image": "../fashion_data/raw/fashionpedia/images/test/32227cade6d3646824f9c0f3fa9dc9e7.jpg",
+        "record_id": "v5_validation_00040",
+        "garment_id": "fashionpedia_ann_7680",
+        "gt_class": "shoe",
+        "fine_category": "shoe",
+        "pred_class": "shoe",
+        "pred_score": "0.990928590297699",
+        "localized_bbox50": "True",
+        "bbox_iou": "0.8682201317205429",
+        "class_correct": "True",
+        "mask_iou": "0.7720663526520581",
+        "mask_iou_ge_0_50": "True",
+        "mask_iou_ge_0_85": "False",
+        "outcome": "correct",
+        "visualization_path": "/workspace/prd31_recovery_20260930/fashion_multimodal_analysis/reports/reruns/recovery_v2/v6_coverage/v5_development_fast/visualizations/img_021.jpg"
+      },
+      "reference_v6": {
+        "image_index": "21",
+        "source_dataset": "Fashionpedia",
+        "source_image": "../fashion_data/raw/fashionpedia/images/test/32227cade6d3646824f9c0f3fa9dc9e7.jpg",
+        "record_id": "v5_validation_00040",
+        "garment_id": "fashionpedia_ann_7680",
+        "gt_class": "shoe",
+        "fine_category": "shoe",
+        "pred_class": "",
+        "pred_score": "0.0",
+        "localized_bbox50": "False",
+        "bbox_iou": "0.0",
+        "class_correct": "False",
+        "mask_iou": "0.0",
+        "mask_iou_ge_0_50": "False",
+        "mask_iou_ge_0_85": "False",
+        "outcome": "missed",
+        "visualization_path": "/workspace/prd31_recovery_20260930/fashion_multimodal_analysis/reports/reruns/recovery_v2/v6_coverage/v6_development_fast/visualizations/img_021.jpg"
+      },
+      "v5": {
+        "outcome": "correct",
+        "diagnostic_reason": "correct",
+        "returned_candidates_at_0_05": 25,
+        "frozen_candidates_at_0_4": 9,
+        "frozen_match": {
+          "prediction_index": 2,
+          "pred_class": "shoe",
+          "score": 0.990928590297699,
+          "bbox": [
+            142.07872009277344,
+            881.6461791992188,
+            250.1510772705078,
+            975.0595092773438
+          ],
+          "bbox_iou": 0.8682201317205429,
+          "mask_iou": 0.7720663526520581,
+          "pred_mask_pixels": 4085,
+          "gt_mask_pixels": 4568,
+          "mask_pixel_precision": 0.9228886168910648,
+          "mask_pixel_recall": 0.8253064798598949
+        },
+        "best_bbox_any_class_debug": {
+          "prediction_index": 2,
+          "pred_class": "shoe",
+          "score": 0.990928590297699,
+          "bbox": [
+            142.07872009277344,
+            881.6461791992188,
+            250.1510772705078,
+            975.0595092773438
+          ],
+          "bbox_iou": 0.8682201317205429,
+          "mask_iou": 0.7720663526520581,
+          "pred_mask_pixels": 4085,
+          "gt_mask_pixels": 4568,
+          "mask_pixel_precision": 0.9228886168910648,
+          "mask_pixel_recall": 0.8253064798598949
+        },
+        "best_bbox_same_class_debug": {
+          "prediction_index": 2,
+          "pred_class": "shoe",
+          "score": 0.990928590297699,
+          "bbox": [
+            142.07872009277344,
+            881.6461791992188,
+            250.1510772705078,
+            975.0595092773438
+          ],
+          "bbox_iou": 0.8682201317205429,
+          "mask_iou": 0.7720663526520581,
+          "pred_mask_pixels": 4085,
+          "gt_mask_pixels": 4568,
+          "mask_pixel_precision": 0.9228886168910648,
+          "mask_pixel_recall": 0.8253064798598949
+        }
+      },
+      "v6": {
+        "outcome": "missed",
+        "diagnostic_reason": "bbox50_candidate_only_below_score_0_4",
+        "returned_candidates_at_0_05": 14,
+        "frozen_candidates_at_0_4": 7,
+        "frozen_match": null,
+        "best_bbox_any_class_debug": {
+          "prediction_index": 8,
+          "pred_class": "shoe",
+          "score": 0.16117127239704132,
+          "bbox": [
+            140.07147216796875,
+            866.1883544921875,
+            274.3373718261719,
+            970.4957275390625
+          ],
+          "bbox_iou": 0.66553496665497,
+          "mask_iou": 0.585141251755892,
+          "pred_mask_pixels": 5588,
+          "gt_mask_pixels": 4568,
+          "mask_pixel_precision": 0.6709019327129563,
+          "mask_pixel_recall": 0.8207092819614711
+        },
+        "best_bbox_same_class_debug": {
+          "prediction_index": 8,
+          "pred_class": "shoe",
+          "score": 0.16117127239704132,
+          "bbox": [
+            140.07147216796875,
+            866.1883544921875,
+            274.3373718261719,
+            970.4957275390625
+          ],
+          "bbox_iou": 0.66553496665497,
+          "mask_iou": 0.585141251755892,
+          "pred_mask_pixels": 5588,
+          "gt_mask_pixels": 4568,
+          "mask_pixel_precision": 0.6709019327129563,
+          "mask_pixel_recall": 0.8207092819614711
+        }
+      },
+      "figure": "v5_validation_00040.jpg"
+    },
+    {
+      "record_id": "v5_validation_00064",
+      "gt_class": "outerwear",
+      "source_image": "../fashion_data/raw/fashionpedia/images/test/77435fc234059dcb9e0bb3d73382bcc7.jpg",
+      "reference_v5": {
+        "image_index": "26",
+        "source_dataset": "Fashionpedia",
+        "source_image": "../fashion_data/raw/fashionpedia/images/test/77435fc234059dcb9e0bb3d73382bcc7.jpg",
+        "record_id": "v5_validation_00064",
+        "garment_id": "fashionpedia_ann_2414",
+        "gt_class": "outerwear",
+        "fine_category": "jacket",
+        "pred_class": "outerwear",
+        "pred_score": "0.6961283087730408",
+        "localized_bbox50": "True",
+        "bbox_iou": "0.6551780853186592",
+        "class_correct": "True",
+        "mask_iou": "0.8174728011534933",
+        "mask_iou_ge_0_50": "True",
+        "mask_iou_ge_0_85": "False",
+        "outcome": "correct",
+        "visualization_path": "/workspace/prd31_recovery_20260930/fashion_multimodal_analysis/reports/reruns/recovery_v2/v6_coverage/v5_development_fast/visualizations/img_026.jpg"
+      },
+      "reference_v6": {
+        "image_index": "26",
+        "source_dataset": "Fashionpedia",
+        "source_image": "../fashion_data/raw/fashionpedia/images/test/77435fc234059dcb9e0bb3d73382bcc7.jpg",
+        "record_id": "v5_validation_00064",
+        "garment_id": "fashionpedia_ann_2414",
+        "gt_class": "outerwear",
+        "fine_category": "jacket",
+        "pred_class": "top",
+        "pred_score": "0.6979271769523621",
+        "localized_bbox50": "True",
+        "bbox_iou": "0.7879875364334803",
+        "class_correct": "False",
+        "mask_iou": "0.48618744576222156",
+        "mask_iou_ge_0_50": "False",
+        "mask_iou_ge_0_85": "False",
+        "outcome": "wrong_class",
+        "visualization_path": "/workspace/prd31_recovery_20260930/fashion_multimodal_analysis/reports/reruns/recovery_v2/v6_coverage/v6_development_fast/visualizations/img_026.jpg"
+      },
+      "v5": {
+        "outcome": "correct",
+        "diagnostic_reason": "correct",
+        "returned_candidates_at_0_05": 17,
+        "frozen_candidates_at_0_4": 5,
+        "frozen_match": {
+          "prediction_index": 1,
+          "pred_class": "outerwear",
+          "score": 0.6961283087730408,
+          "bbox": [
+            489.1267395019531,
+            306.34368896484375,
+            674.6242065429688,
+            491.5070495605469
+          ],
+          "bbox_iou": 0.6551780853186592,
+          "mask_iou": 0.8174728011534933,
+          "pred_mask_pixels": 14122,
+          "gt_mask_pixels": 13609,
+          "mask_pixel_precision": 0.8832318368503045,
+          "mask_pixel_recall": 0.9165258284958483
+        },
+        "best_bbox_any_class_debug": {
+          "prediction_index": 13,
+          "pred_class": "dress",
+          "score": 0.06320594251155853,
+          "bbox": [
+            542.83056640625,
+            306.69061279296875,
+            663.2135620117188,
+            484.0293884277344
+          ],
+          "bbox_iou": 0.868849737721849,
+          "mask_iou": 0.7945301053512872,
+          "pred_mask_pixels": 12112,
+          "gt_mask_pixels": 13609,
+          "mask_pixel_precision": 0.940224570673712,
+          "mask_pixel_recall": 0.8367991770152106
+        },
+        "best_bbox_same_class_debug": {
+          "prediction_index": 1,
+          "pred_class": "outerwear",
+          "score": 0.6961283087730408,
+          "bbox": [
+            489.1267395019531,
+            306.34368896484375,
+            674.6242065429688,
+            491.5070495605469
+          ],
+          "bbox_iou": 0.6551780853186592,
+          "mask_iou": 0.8174728011534933,
+          "pred_mask_pixels": 14122,
+          "gt_mask_pixels": 13609,
+          "mask_pixel_precision": 0.8832318368503045,
+          "mask_pixel_recall": 0.9165258284958483
+        }
+      },
+      "v6": {
+        "outcome": "wrong_class",
+        "diagnostic_reason": "matched_wrong_class",
+        "returned_candidates_at_0_05": 17,
+        "frozen_candidates_at_0_4": 4,
+        "frozen_match": {
+          "prediction_index": 1,
+          "pred_class": "top",
+          "score": 0.6979271769523621,
+          "bbox": [
+            535.984130859375,
+            315.985595703125,
+            676.1754760742188,
+            484.1736755371094
+          ],
+          "bbox_iou": 0.7879875364334803,
+          "mask_iou": 0.48618744576222156,
+          "pred_mask_pixels": 6942,
+          "gt_mask_pixels": 13609,
+          "mask_pixel_precision": 0.9684528954191876,
+          "mask_pixel_recall": 0.4940113160408553
+        },
+        "best_bbox_any_class_debug": {
+          "prediction_index": 6,
+          "pred_class": "accessory",
+          "score": 0.20862796902656555,
+          "bbox": [
+            551.1577758789062,
+            295.4203796386719,
+            667.7308349609375,
+            477.8674011230469
+          ],
+          "bbox_iou": 0.8408558530856183,
+          "mask_iou": 0.1561863173216885,
+          "pred_mask_pixels": 2277,
+          "gt_mask_pixels": 13609,
+          "mask_pixel_precision": 0.9424681598594642,
+          "mask_pixel_recall": 0.15768976412668087
+        },
+        "best_bbox_same_class_debug": {
+          "prediction_index": 11,
+          "pred_class": "outerwear",
+          "score": 0.14341574907302856,
+          "bbox": [
+            508.1961364746094,
+            314.2286071777344,
+            681.837158203125,
+            500.88128662109375
+          ],
+          "bbox_iou": 0.6536118047665173,
+          "mask_iou": 0.816937495785854,
+          "pred_mask_pixels": 13338,
+          "gt_mask_pixels": 13609,
+          "mask_pixel_precision": 0.9083820662768031,
+          "mask_pixel_recall": 0.8902931883312514
+        }
+      },
+      "figure": "v5_validation_00064.jpg"
+    },
+    {
+      "record_id": "v5_validation_00074",
+      "gt_class": "shoe",
+      "source_image": "../fashion_data/raw/fashionpedia/images/test/89144779b3e40421facdb2eb70309356.jpg",
+      "reference_v5": {
+        "image_index": "27",
+        "source_dataset": "Fashionpedia",
+        "source_image": "../fashion_data/raw/fashionpedia/images/test/89144779b3e40421facdb2eb70309356.jpg",
+        "record_id": "v5_validation_00074",
+        "garment_id": "fashionpedia_ann_8520",
+        "gt_class": "shoe",
+        "fine_category": "shoe",
+        "pred_class": "shoe",
+        "pred_score": "0.811601459980011",
+        "localized_bbox50": "True",
+        "bbox_iou": "0.6800777784301631",
+        "class_correct": "True",
+        "mask_iou": "0.5736677115987461",
+        "mask_iou_ge_0_50": "True",
+        "mask_iou_ge_0_85": "False",
+        "outcome": "correct",
+        "visualization_path": "/workspace/prd31_recovery_20260930/fashion_multimodal_analysis/reports/reruns/recovery_v2/v6_coverage/v5_development_fast/visualizations/img_027.jpg"
+      },
+      "reference_v6": {
+        "image_index": "27",
+        "source_dataset": "Fashionpedia",
+        "source_image": "../fashion_data/raw/fashionpedia/images/test/89144779b3e40421facdb2eb70309356.jpg",
+        "record_id": "v5_validation_00074",
+        "garment_id": "fashionpedia_ann_8520",
+        "gt_class": "shoe",
+        "fine_category": "shoe",
+        "pred_class": "",
+        "pred_score": "0.0",
+        "localized_bbox50": "False",
+        "bbox_iou": "0.0",
+        "class_correct": "False",
+        "mask_iou": "0.0",
+        "mask_iou_ge_0_50": "False",
+        "mask_iou_ge_0_85": "False",
+        "outcome": "missed",
+        "visualization_path": "/workspace/prd31_recovery_20260930/fashion_multimodal_analysis/reports/reruns/recovery_v2/v6_coverage/v6_development_fast/visualizations/img_027.jpg"
+      },
+      "v5": {
+        "outcome": "correct",
+        "diagnostic_reason": "correct",
+        "returned_candidates_at_0_05": 19,
+        "frozen_candidates_at_0_4": 7,
+        "frozen_match": {
+          "prediction_index": 2,
+          "pred_class": "shoe",
+          "score": 0.811601459980011,
+          "bbox": [
+            510.52740478515625,
+            812.6381225585938,
+            628.5471801757812,
+            928.8255004882812
+          ],
+          "bbox_iou": 0.6800777784301631,
+          "mask_iou": 0.5736677115987461,
+          "pred_mask_pixels": 3986,
+          "gt_mask_pixels": 5050,
+          "mask_pixel_precision": 0.826392373306573,
+          "mask_pixel_recall": 0.6522772277227723
+        },
+        "best_bbox_any_class_debug": {
+          "prediction_index": 2,
+          "pred_class": "shoe",
+          "score": 0.811601459980011,
+          "bbox": [
+            510.52740478515625,
+            812.6381225585938,
+            628.5471801757812,
+            928.8255004882812
+          ],
+          "bbox_iou": 0.6800777784301631,
+          "mask_iou": 0.5736677115987461,
+          "pred_mask_pixels": 3986,
+          "gt_mask_pixels": 5050,
+          "mask_pixel_precision": 0.826392373306573,
+          "mask_pixel_recall": 0.6522772277227723
+        },
+        "best_bbox_same_class_debug": {
+          "prediction_index": 2,
+          "pred_class": "shoe",
+          "score": 0.811601459980011,
+          "bbox": [
+            510.52740478515625,
+            812.6381225585938,
+            628.5471801757812,
+            928.8255004882812
+          ],
+          "bbox_iou": 0.6800777784301631,
+          "mask_iou": 0.5736677115987461,
+          "pred_mask_pixels": 3986,
+          "gt_mask_pixels": 5050,
+          "mask_pixel_precision": 0.826392373306573,
+          "mask_pixel_recall": 0.6522772277227723
+        }
+      },
+      "v6": {
+        "outcome": "missed",
+        "diagnostic_reason": "bbox50_candidate_only_below_score_0_4",
+        "returned_candidates_at_0_05": 20,
+        "frozen_candidates_at_0_4": 4,
+        "frozen_match": null,
+        "best_bbox_any_class_debug": {
+          "prediction_index": 18,
+          "pred_class": "shoe",
+          "score": 0.052446573972702026,
+          "bbox": [
+            540.6984252929688,
+            817.464111328125,
+            637.3400268554688,
+            936.4349365234375
+          ],
+          "bbox_iou": 0.5702291864349168,
+          "mask_iou": 0.23087046437300243,
+          "pred_mask_pixels": 1497,
+          "gt_mask_pixels": 5050,
+          "mask_pixel_precision": 0.8203072812291249,
+          "mask_pixel_recall": 0.24316831683168316
+        },
+        "best_bbox_same_class_debug": {
+          "prediction_index": 18,
+          "pred_class": "shoe",
+          "score": 0.052446573972702026,
+          "bbox": [
+            540.6984252929688,
+            817.464111328125,
+            637.3400268554688,
+            936.4349365234375
+          ],
+          "bbox_iou": 0.5702291864349168,
+          "mask_iou": 0.23087046437300243,
+          "pred_mask_pixels": 1497,
+          "gt_mask_pixels": 5050,
+          "mask_pixel_precision": 0.8203072812291249,
+          "mask_pixel_recall": 0.24316831683168316
+        }
+      },
+      "figure": "v5_validation_00074.jpg"
+    },
+    {
+      "record_id": "v5_validation_00076",
+      "gt_class": "bag",
+      "source_image": "../fashion_data/raw/fashionpedia/images/test/89f6e3ad94e5493906b4f3d0e16bdae1.jpg",
+      "reference_v5": {
+        "image_index": "28",
+        "source_dataset": "Fashionpedia",
+        "source_image": "../fashion_data/raw/fashionpedia/images/test/89f6e3ad94e5493906b4f3d0e16bdae1.jpg",
+        "record_id": "v5_validation_00076",
+        "garment_id": "fashionpedia_ann_4505",
+        "gt_class": "bag",
+        "fine_category": "bag, wallet",
+        "pred_class": "bag",
+        "pred_score": "0.4991600215435028",
+        "localized_bbox50": "True",
+        "bbox_iou": "0.7934155260750542",
+        "class_correct": "True",
+        "mask_iou": "0.7872525659824047",
+        "mask_iou_ge_0_50": "True",
+        "mask_iou_ge_0_85": "False",
+        "outcome": "correct",
+        "visualization_path": "/workspace/prd31_recovery_20260930/fashion_multimodal_analysis/reports/reruns/recovery_v2/v6_coverage/v5_development_fast/visualizations/img_028.jpg"
+      },
+      "reference_v6": {
+        "image_index": "28",
+        "source_dataset": "Fashionpedia",
+        "source_image": "../fashion_data/raw/fashionpedia/images/test/89f6e3ad94e5493906b4f3d0e16bdae1.jpg",
+        "record_id": "v5_validation_00076",
+        "garment_id": "fashionpedia_ann_4505",
+        "gt_class": "bag",
+        "fine_category": "bag, wallet",
+        "pred_class": "",
+        "pred_score": "0.0",
+        "localized_bbox50": "False",
+        "bbox_iou": "0.0",
+        "class_correct": "False",
+        "mask_iou": "0.0",
+        "mask_iou_ge_0_50": "False",
+        "mask_iou_ge_0_85": "False",
+        "outcome": "missed",
+        "visualization_path": "/workspace/prd31_recovery_20260930/fashion_multimodal_analysis/reports/reruns/recovery_v2/v6_coverage/v6_development_fast/visualizations/img_028.jpg"
+      },
+      "v5": {
+        "outcome": "correct",
+        "diagnostic_reason": "correct",
+        "returned_candidates_at_0_05": 11,
+        "frozen_candidates_at_0_4": 5,
+        "frozen_match": {
+          "prediction_index": 3,
+          "pred_class": "bag",
+          "score": 0.4991600215435028,
+          "bbox": [
+            38.839019775390625,
+            676.6834106445312,
+            133.550048828125,
+            1019.4562377929688
+          ],
+          "bbox_iou": 0.7934155260750542,
+          "mask_iou": 0.7872525659824047,
+          "pred_mask_pixels": 19271,
+          "gt_mask_pixels": 19734,
+          "mask_pixel_precision": 0.8915468839188417,
+          "mask_pixel_recall": 0.8706293706293706
+        },
+        "best_bbox_any_class_debug": {
+          "prediction_index": 3,
+          "pred_class": "bag",
+          "score": 0.4991600215435028,
+          "bbox": [
+            38.839019775390625,
+            676.6834106445312,
+            133.550048828125,
+            1019.4562377929688
+          ],
+          "bbox_iou": 0.7934155260750542,
+          "mask_iou": 0.7872525659824047,
+          "pred_mask_pixels": 19271,
+          "gt_mask_pixels": 19734,
+          "mask_pixel_precision": 0.8915468839188417,
+          "mask_pixel_recall": 0.8706293706293706
+        },
+        "best_bbox_same_class_debug": {
+          "prediction_index": 3,
+          "pred_class": "bag",
+          "score": 0.4991600215435028,
+          "bbox": [
+            38.839019775390625,
+            676.6834106445312,
+            133.550048828125,
+            1019.4562377929688
+          ],
+          "bbox_iou": 0.7934155260750542,
+          "mask_iou": 0.7872525659824047,
+          "pred_mask_pixels": 19271,
+          "gt_mask_pixels": 19734,
+          "mask_pixel_precision": 0.8915468839188417,
+          "mask_pixel_recall": 0.8706293706293706
+        }
+      },
+      "v6": {
+        "outcome": "missed",
+        "diagnostic_reason": "bbox50_candidate_only_below_score_0_4",
+        "returned_candidates_at_0_05": 9,
+        "frozen_candidates_at_0_4": 3,
+        "frozen_match": null,
+        "best_bbox_any_class_debug": {
+          "prediction_index": 6,
+          "pred_class": "bag",
+          "score": 0.12971043586730957,
+          "bbox": [
+            41.66728210449219,
+            660.1889038085938,
+            133.0582275390625,
+            1011.0799560546875
+          ],
+          "bbox_iou": 0.8374219225220207,
+          "mask_iou": 0.7678626322954635,
+          "pred_mask_pixels": 20522,
+          "gt_mask_pixels": 19734,
+          "mask_pixel_precision": 0.8520124744176981,
+          "mask_pixel_recall": 0.886034255599473
+        },
+        "best_bbox_same_class_debug": {
+          "prediction_index": 6,
+          "pred_class": "bag",
+          "score": 0.12971043586730957,
+          "bbox": [
+            41.66728210449219,
+            660.1889038085938,
+            133.0582275390625,
+            1011.0799560546875
+          ],
+          "bbox_iou": 0.8374219225220207,
+          "mask_iou": 0.7678626322954635,
+          "pred_mask_pixels": 20522,
+          "gt_mask_pixels": 19734,
+          "mask_pixel_precision": 0.8520124744176981,
+          "mask_pixel_recall": 0.886034255599473
+        }
+      },
+      "figure": "v5_validation_00076.jpg"
+    },
+    {
+      "record_id": "v5_validation_00080",
+      "gt_class": "bag",
+      "source_image": "../fashion_data/raw/fashionpedia/images/test/cdd175f26ac87c01ec64fb2f02268654.jpg",
+      "reference_v5": {
+        "image_index": "29",
+        "source_dataset": "Fashionpedia",
+        "source_image": "../fashion_data/raw/fashionpedia/images/test/cdd175f26ac87c01ec64fb2f02268654.jpg",
+        "record_id": "v5_validation_00080",
+        "garment_id": "fashionpedia_ann_7855",
+        "gt_class": "bag",
+        "fine_category": "bag, wallet",
+        "pred_class": "bag",
+        "pred_score": "0.8885279297828674",
+        "localized_bbox50": "True",
+        "bbox_iou": "0.900795752603902",
+        "class_correct": "True",
+        "mask_iou": "0.6821492844288285",
+        "mask_iou_ge_0_50": "True",
+        "mask_iou_ge_0_85": "False",
+        "outcome": "correct",
+        "visualization_path": "/workspace/prd31_recovery_20260930/fashion_multimodal_analysis/reports/reruns/recovery_v2/v6_coverage/v5_development_fast/visualizations/img_029.jpg"
+      },
+      "reference_v6": {
+        "image_index": "29",
+        "source_dataset": "Fashionpedia",
+        "source_image": "../fashion_data/raw/fashionpedia/images/test/cdd175f26ac87c01ec64fb2f02268654.jpg",
+        "record_id": "v5_validation_00080",
+        "garment_id": "fashionpedia_ann_7855",
+        "gt_class": "bag",
+        "fine_category": "bag, wallet",
+        "pred_class": "bag",
+        "pred_score": "0.5997838377952576",
+        "localized_bbox50": "True",
+        "bbox_iou": "0.7036002720823628",
+        "class_correct": "True",
+        "mask_iou": "0.4303904923599321",
+        "mask_iou_ge_0_50": "False",
+        "mask_iou_ge_0_85": "False",
+        "outcome": "low_mask_iou",
+        "visualization_path": "/workspace/prd31_recovery_20260930/fashion_multimodal_analysis/reports/reruns/recovery_v2/v6_coverage/v6_development_fast/visualizations/img_029.jpg"
+      },
+      "v5": {
+        "outcome": "correct",
+        "diagnostic_reason": "correct",
+        "returned_candidates_at_0_05": 10,
+        "frozen_candidates_at_0_4": 5,
+        "frozen_match": {
+          "prediction_index": 3,
+          "pred_class": "bag",
+          "score": 0.8885279297828674,
+          "bbox": [
+            261.9978332519531,
+            401.4970703125,
+            388.7619934082031,
+            722.2577514648438
+          ],
+          "bbox_iou": 0.900795752603902,
+          "mask_iou": 0.6821492844288285,
+          "pred_mask_pixels": 10646,
+          "gt_mask_pixels": 8983,
+          "mask_pixel_precision": 0.747698666165696,
+          "mask_pixel_recall": 0.886118223310698
+        },
+        "best_bbox_any_class_debug": {
+          "prediction_index": 3,
+          "pred_class": "bag",
+          "score": 0.8885279297828674,
+          "bbox": [
+            261.9978332519531,
+            401.4970703125,
+            388.7619934082031,
+            722.2577514648438
+          ],
+          "bbox_iou": 0.900795752603902,
+          "mask_iou": 0.6821492844288285,
+          "pred_mask_pixels": 10646,
+          "gt_mask_pixels": 8983,
+          "mask_pixel_precision": 0.747698666165696,
+          "mask_pixel_recall": 0.886118223310698
+        },
+        "best_bbox_same_class_debug": {
+          "prediction_index": 3,
+          "pred_class": "bag",
+          "score": 0.8885279297828674,
+          "bbox": [
+            261.9978332519531,
+            401.4970703125,
+            388.7619934082031,
+            722.2577514648438
+          ],
+          "bbox_iou": 0.900795752603902,
+          "mask_iou": 0.6821492844288285,
+          "pred_mask_pixels": 10646,
+          "gt_mask_pixels": 8983,
+          "mask_pixel_precision": 0.747698666165696,
+          "mask_pixel_recall": 0.886118223310698
+        }
+      },
+      "v6": {
+        "outcome": "low_mask_iou",
+        "diagnostic_reason": "correct_class_localized_but_mask_iou_below_0_5",
+        "returned_candidates_at_0_05": 9,
+        "frozen_candidates_at_0_4": 5,
+        "frozen_match": {
+          "prediction_index": 4,
+          "pred_class": "bag",
+          "score": 0.5997838377952576,
+          "bbox": [
+            297.8329162597656,
+            390.9327697753906,
+            391.5213317871094,
+            697.7279663085938
+          ],
+          "bbox_iou": 0.7036002720823628,
+          "mask_iou": 0.4303904923599321,
+          "pred_mask_pixels": 4497,
+          "gt_mask_pixels": 8983,
+          "mask_pixel_precision": 0.9019346230820547,
+          "mask_pixel_recall": 0.4515195369030391
+        },
+        "best_bbox_any_class_debug": {
+          "prediction_index": 4,
+          "pred_class": "bag",
+          "score": 0.5997838377952576,
+          "bbox": [
+            297.8329162597656,
+            390.9327697753906,
+            391.5213317871094,
+            697.7279663085938
+          ],
+          "bbox_iou": 0.7036002720823628,
+          "mask_iou": 0.4303904923599321,
+          "pred_mask_pixels": 4497,
+          "gt_mask_pixels": 8983,
+          "mask_pixel_precision": 0.9019346230820547,
+          "mask_pixel_recall": 0.4515195369030391
+        },
+        "best_bbox_same_class_debug": {
+          "prediction_index": 4,
+          "pred_class": "bag",
+          "score": 0.5997838377952576,
+          "bbox": [
+            297.8329162597656,
+            390.9327697753906,
+            391.5213317871094,
+            697.7279663085938
+          ],
+          "bbox_iou": 0.7036002720823628,
+          "mask_iou": 0.4303904923599321,
+          "pred_mask_pixels": 4497,
+          "gt_mask_pixels": 8983,
+          "mask_pixel_precision": 0.9019346230820547,
+          "mask_pixel_recall": 0.4515195369030391
+        }
+      },
+      "figure": "v5_validation_00080.jpg"
+    }
+  ],
+  "reason_counts": {
+    "matched_wrong_class": 2,
+    "bbox50_candidate_only_below_score_0_4": 4,
+    "correct_class_localized_but_mask_iou_below_0_5": 1
+  },
+  "scope": "Development-only prediction diagnosis. GT and checkpoints unchanged. Debug candidates come from model-returned outputs after default internal filtering; scores below 0.05 and suppressed outputs are not inspected. No timing or acceptance claims."
+}

@@ -1,0 +1,59 @@
+{
+  "schema_version": "fashionpedia_to_prd_mapping_v1",
+  "source": "Fashionpedia instances_attributes_val2020.json",
+  "policy": "Exact source category IDs inherited from existing project training/validation mapping; no keyword expansion in benchmark.",
+  "mapping": {
+    "13": {
+      "source_name": "glasses",
+      "prd_class": "accessory"
+    },
+    "14": {
+      "source_name": "hat",
+      "prd_class": "accessory"
+    },
+    "15": {
+      "source_name": "headband, head covering, hair accessory",
+      "prd_class": "accessory"
+    },
+    "16": {
+      "source_name": "tie",
+      "prd_class": "accessory"
+    },
+    "17": {
+      "source_name": "glove",
+      "prd_class": "accessory"
+    },
+    "18": {
+      "source_name": "watch",
+      "prd_class": "accessory"
+    },
+    "19": {
+      "source_name": "belt",
+      "prd_class": "accessory"
+    },
+    "20": {
+      "source_name": "leg warmer",
+      "prd_class": "accessory"
+    },
+    "21": {
+      "source_name": "tights, stockings",
+      "prd_class": "accessory"
+    },
+    "22": {
+      "source_name": "sock",
+      "prd_class": "accessory"
+    },
+    "23": {
+      "source_name": "shoe",
+      "prd_class": "shoe"
+    },
+    "24": {
+      "source_name": "bag, wallet",
+      "prd_class": "bag"
+    },
+    "25": {
+      "source_name": "scarf",
+      "prd_class": "accessory"
+    }
+  }
+}

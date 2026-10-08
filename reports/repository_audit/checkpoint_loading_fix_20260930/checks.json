@@ -1,0 +1,18 @@
+{
+  "full_checkpoint_load_sites": 20,
+  "implicit_mode_remaining": [],
+  "original_evidence_count": 5570,
+  "original_evidence_changed": [],
+  "tests": {
+    "total": 41,
+    "passed": 39,
+    "skipped": 2,
+    "reason": "Local environment has no torch/torchvision; real Core-entrypoint loading and resume checks are included for AutoDL"
+  },
+  "runtime_feedback": {
+    "source": "user terminal screenshot 2026-09-30 12:53 Asia/Shanghai",
+    "v4_training_epochs_completed": 15,
+    "last_epoch_average_loss": 0.2713,
+    "core_evaluation": "blocked during checkpoint load; actual new metrics pending"
+  }
+}

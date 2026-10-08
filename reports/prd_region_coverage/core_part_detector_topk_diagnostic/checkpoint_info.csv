@@ -1,0 +1,2 @@
+﻿checkpoint_file,epoch,train_loss,macro_recall,image_success_rate,device
+best_loss_model.pt,5,0.2866699161628882,0.0,0.0,cpu

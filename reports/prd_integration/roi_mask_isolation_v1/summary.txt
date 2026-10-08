@@ -1,0 +1,42 @@
+PRD 3.1 BBox / Mask Isolation Ablation v1
+========================================
+
+matched_pairs=22
+
+Conditions
+----------
+A = GT bbox + GT mask (reference)
+B = Pred bbox + Pred mask (real pipeline)
+C = GT bbox + Pred mask (isolates mask error)
+D = Pred bbox + GT mask (isolates bbox error)
+
+Agreement with A
+----------------
+sleeve_length:
+  B_predbbox_predmask: 8/13 agreement=0.6154
+  C_gtbbox_predmask: 9/13 agreement=0.6923
+  D_predbbox_gtmask: 12/13 agreement=0.9231
+neckline:
+  B_predbbox_predmask: 7/13 agreement=0.5385
+  C_gtbbox_predmask: 7/13 agreement=0.5385
+  D_predbbox_gtmask: 10/13 agreement=0.7692
+silhouette_fit:
+  B_predbbox_predmask: 16/18 agreement=0.8889
+  C_gtbbox_predmask: 16/18 agreement=0.8889
+  D_predbbox_gtmask: 15/18 agreement=0.8333
+fashion_style:
+  B_predbbox_predmask: 11/18 agreement=0.6111
+  C_gtbbox_predmask: 11/18 agreement=0.6111
+  D_predbbox_gtmask: 14/18 agreement=0.7778
+
+Decision rule
+-------------
+- If C is much worse than D, predicted mask quality is the stronger error source.
+- If D is much worse than C, bbox crop quality is the stronger error source.
+- If both C and D are degraded, both components contribute or interact.
+- Compare sleeve_length and neckline first; they are the main local-structure attributes.
+
+Caution
+-------
+- This is a controlled diagnostic on the fixed matched set, not human-ground-truth attribute accuracy.
+- Some categories are unsupported by design-label v1 and therefore are excluded from attribute comparisons.

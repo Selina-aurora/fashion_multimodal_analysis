@@ -1,0 +1,22 @@
+{
+  "inputs": {
+    "checkpoint_sha256": "1ed99e67c141fc183a0502541ce0f151085a568f6434a0dc8f5573190c4e2209",
+    "val_manifest_sha256": "39141f545ea5512d16ed074788b6f98474b33baff111d3b663ec0ffcc4c40b93",
+    "runtime_sha256": "60021df022b16fbe42c88ed57635e180cfd397077803403cbb6513169daabaca",
+    "score_threshold": 0.4,
+    "mask_threshold": 0.5,
+    "match_bbox_iou": 0.5,
+    "warmup_runs": 10,
+    "timed_passes": 5,
+    "split": "DEVELOPMENT_FULL_TARGETS_NOT_CORE_ACCEPTANCE"
+  },
+  "report_sha256": {
+    "evaluation_summary.txt": "6aa148979708cd3b3344e345f532765ad86e4ef6d7a38148013c3fcda776e4ca",
+    "protocol_metrics.json": "ee3e93915c5ac746674a7a18462e08b8f7a07d794ad31cef038e92321425db39",
+    "per_gt_results.csv": "f1fba8233a252679e55a2a7e5a20255fb2bdd748c14569d9d050848850ff3245",
+    "per_class_metrics.csv": "a6ae0e0b25d21a099f8ab7616c75d6a86e6320e3c0e15626f5afd9d8ef7e2e81",
+    "per_source_metrics.csv": "1f3e3268cabf4d0c3234d94ca0dbdd5c9d14b3557ebd97798c104abd495ca118",
+    "per_image_timing.csv": "ae6524fa75bac76bbc9618479618559ae7237030b7991adaf3c63067ba5d776d",
+    "error_cases.csv": "bdb514613f512a1e587be7d981451897831f18909a9b42ed2ce708fb38434228"
+  }
+}

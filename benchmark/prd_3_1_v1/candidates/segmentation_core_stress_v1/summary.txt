@@ -1,0 +1,45 @@
+PRD 3.1.1 Core + Stress Segmentation Review Pool v1
+====================================================
+
+seed=20260922
+core_visibility_floor=area_ratio>=0.005, min_side_px>=50.0
+core_review_target_per_class=55
+core_freeze_target_per_class=50
+stress_target_per_class=10
+core_review_selected_total=440
+stress_selected_total=80
+selected_source_images_unique=520
+
+Protocol
+--------
+- Core is the only subset intended for PRD acceptance PASS/FAIL.
+- Stress is diagnostic and must be reported separately.
+- Previously used source images are excluded.
+- Source images are globally unique across Core and Stress.
+- Selection uses source annotation geometry only; no model predictions are inspected.
+- GT masks and overlays are for human annotation QC.
+
+Human review requirement
+------------------------
+- Every Core case must pass category, bbox, mask and image-quality review before final freeze.
+- Freeze exactly 50 reviewed PASS cases/class if coverage permits.
+- Do not replace failed cases using model performance.
+- Stress cases should also be reviewed before reporting diagnostic metrics.
+
+Class summary
+-------------
+top: core_eligible=125349 core_review=55 stress=10
+pants: core_eligible=91723 core_review=55 stress=10
+skirt: core_eligible=30743 core_review=55 stress=10
+outerwear: core_eligible=13977 core_review=55 stress=10
+dress: core_eligible=49451 core_review=55 stress=10
+shoe: core_eligible=442 core_review=55 stress=10
+bag: core_eligible=62 core_review=55 stress=10
+accessory: core_eligible=196 core_review=55 stress=10
+
+Next
+----
+- Review Core contact sheets with GT mask overlays.
+- Complete review_checklist_v1.csv.
+- Then freeze final Core segmentation_test_v1.csv.
+- Preserve Stress as segmentation_stress_test_v1.csv.

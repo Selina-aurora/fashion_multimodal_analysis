@@ -1,0 +1,231 @@
+"""PRD8 instance manifests, image grouping and Mask R-CNN targets."""
+from __future__ import annotations
+import csv
+import random
+from collections import defaultdict
+from pathlib import Path
+import numpy as np
+from PIL import Image
+import torch
+from torch.utils.data import Dataset
+from torchvision.transforms import functional as F
+from fashion_multimodal_analysis.common.paths import resolve_path as resolve_project_path
+from fashion_multimodal_analysis.common.schema import CLASS_TO_ID
+from fashion_multimodal_analysis.image_processing.masks import reconstruct_full_mask
+
+def read_manifest(path: Path) -> list[dict[str, str]]:
+    if not path.is_file():
+        raise FileNotFoundError(f"Missing manifest:\n  {path}")
+
+    with path.open("r", encoding="utf-8-sig", newline="") as f:
+        return list(csv.DictReader(f))
+
+
+def group_manifest(
+    rows: list[dict[str, str]],
+) -> list[dict]:
+    grouped: dict[tuple[str, str], list[dict[str, str]]] = defaultdict(list)
+
+    for row in rows:
+        key = (
+            str(row["source_dataset"]).strip(),
+            str(row["source_image"]).strip(),
+        )
+        grouped[key].append(row)
+
+    samples = []
+
+    for (dataset, source_image), instances in grouped.items():
+        samples.append(
+            {
+                "source_dataset": dataset,
+                "source_image": source_image,
+                "instances": instances,
+            }
+        )
+
+    samples.sort(
+        key=lambda x: (
+            x["source_dataset"],
+            x["source_image"],
+        )
+    )
+
+    return samples
+
+
+class PRD8MaskDataset(Dataset):
+    def __init__(
+        self,
+        manifest_path: Path,
+        training: bool,
+        enable_hflip: bool,
+    ) -> None:
+        self.manifest_path = manifest_path
+        self.training = training
+        self.enable_hflip = enable_hflip
+
+        rows = read_manifest(manifest_path)
+        self.rows = rows
+        self.samples = group_manifest(rows)
+
+    def __len__(self) -> int:
+        return len(self.samples)
+
+    def __getitem__(self, index: int):
+        sample = self.samples[index]
+
+        image_path = resolve_project_path(
+            sample["source_image"]
+        )
+
+        if not image_path.is_file():
+            raise FileNotFoundError(
+                f"Source image not found:\n  {image_path}"
+            )
+
+        image = Image.open(image_path).convert("RGB")
+        image_w, image_h = image.size
+
+        boxes = []
+        labels = []
+        masks = []
+        areas = []
+        iscrowd = []
+
+        for row in sample["instances"]:
+            category = str(
+                row["garment_category"]
+            ).strip().lower()
+
+            if category not in CLASS_TO_ID:
+                raise ValueError(
+                    f"Unknown PRD class: {category!r}"
+                )
+
+            x1 = int(float(row["bbox_x1"]))
+            y1 = int(float(row["bbox_y1"]))
+            x2 = int(float(row["bbox_x2"]))
+            y2 = int(float(row["bbox_y2"]))
+
+            x1 = max(0, min(image_w - 1, x1))
+            y1 = max(0, min(image_h - 1, y1))
+            x2 = max(x1 + 1, min(image_w, x2))
+            y2 = max(y1 + 1, min(image_h, y2))
+
+            mask_path = resolve_project_path(
+                row["mask_path"]
+            )
+
+            if not mask_path.is_file():
+                raise FileNotFoundError(
+                    f"Mask not found:\n  {mask_path}"
+                )
+
+            full_mask = reconstruct_full_mask(
+                mask_path=mask_path,
+                image_size=(image_w, image_h),
+                bbox=(x1, y1, x2, y2),
+            )
+
+            mask_arr = (
+                np.asarray(full_mask) > 0
+            ).astype(np.uint8)
+
+            if mask_arr.sum() == 0:
+                raise ValueError(
+                    "Empty reconstructed mask:\n"
+                    f"  image={image_path}\n"
+                    f"  mask={mask_path}"
+                )
+
+            boxes.append(
+                [float(x1), float(y1), float(x2), float(y2)]
+            )
+            labels.append(CLASS_TO_ID[category])
+            masks.append(mask_arr)
+            areas.append(float(mask_arr.sum()))
+            iscrowd.append(0)
+
+        image_tensor = F.to_tensor(image)
+
+        boxes_t = torch.as_tensor(
+            boxes,
+            dtype=torch.float32,
+        )
+        labels_t = torch.as_tensor(
+            labels,
+            dtype=torch.int64,
+        )
+        masks_t = torch.as_tensor(
+            np.stack(masks, axis=0),
+            dtype=torch.uint8,
+        )
+        area_t = torch.as_tensor(
+            areas,
+            dtype=torch.float32,
+        )
+        iscrowd_t = torch.as_tensor(
+            iscrowd,
+            dtype=torch.int64,
+        )
+
+        if (
+            self.training
+            and self.enable_hflip
+            and random.random() < 0.5
+        ):
+            image_tensor = torch.flip(
+                image_tensor,
+                dims=[2],
+            )
+
+            masks_t = torch.flip(
+                masks_t,
+                dims=[2],
+            )
+
+            old_x1 = boxes_t[:, 0].clone()
+            old_x2 = boxes_t[:, 2].clone()
+
+            boxes_t[:, 0] = image_w - old_x2
+            boxes_t[:, 2] = image_w - old_x1
+
+        target = {
+            "boxes": boxes_t,
+            "labels": labels_t,
+            "masks": masks_t,
+            "image_id": torch.tensor(
+                [index],
+                dtype=torch.int64,
+            ),
+            "area": area_t,
+            "iscrowd": iscrowd_t,
+        }
+
+        meta = {
+            "source_dataset": sample["source_dataset"],
+            "source_image": sample["source_image"],
+            "instance_count": len(boxes),
+            "classes": sorted(
+                {
+                    str(r["garment_category"]).strip().lower()
+                    for r in sample["instances"]
+                }
+            ),
+        }
+
+        return image_tensor, target, meta
+
+
+def collate_fn(batch):
+    images = []
+    targets = []
+    metas = []
+
+    for image, target, meta in batch:
+        images.append(image)
+        targets.append(target)
+        metas.append(meta)
+
+    return images, targets, metas

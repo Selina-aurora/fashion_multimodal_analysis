@@ -1,0 +1,3 @@
+﻿source_dataset,gt_count,balanced_bbox50_recall,nobalance_bbox50_recall,balanced_category_acc_localized,nobalance_category_acc_localized,balanced_mean_mask_iou_correct_class,nobalance_mean_mask_iou_correct_class,delta_mean_mask_iou,balanced_mask_iou_ge_085_rate,nobalance_mask_iou_ge_085_rate
+DeepFashion2,31,0.7419354838709677,0.7419354838709677,0.782608695652174,0.6956521739130435,0.8014067589608096,0.8060221527222375,-0.0046,0.1935483870967742,0.2903225806451613
+Fashionpedia,12,0.3333333333333333,0.25,1.0,1.0,0.7026570135138792,0.7002888153954171,0.0024,0.0,0.0

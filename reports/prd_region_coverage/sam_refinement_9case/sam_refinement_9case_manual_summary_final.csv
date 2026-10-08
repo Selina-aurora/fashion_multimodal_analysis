@@ -1,0 +1,5 @@
+﻿region,N,correct,coarse,wrong,missed,strict_accuracy_pct,usable_rate_pct,wrong_rate_pct,mean_proposal_box_area_ratio,mean_sam_bbox_area_ratio,mean_sam_mask_area_ratio,mean_sam_predicted_iou,mean_sam_inference_seconds
+collar,3,0,3,0,0,0.0,100.0,0.0,0.2959,0.2611,0.1211,0.6827,22.4939
+cuff,3,0,2,1,0,0.0,66.7,33.3,0.2319,0.2026,0.0659,0.9387,22.0958
+hem,3,0,3,0,0,0.0,100.0,0.0,0.6811,0.6297,0.4514,0.937,22.4025
+OVERALL,9,0,8,1,0,0.0,88.9,11.1,0.403,0.3645,0.2128,0.8528,22.3307

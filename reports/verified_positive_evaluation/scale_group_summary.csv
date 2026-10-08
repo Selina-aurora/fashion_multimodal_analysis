@@ -1,0 +1,7 @@
+﻿scale_group,condition,n_cases,detected_count,detection_rate,mean_num_detections,mean_top_score_detected,median_top_score_detected,mean_top_box_area_ratio_detected,mean_inference_seconds
+larger_part,full_image,4,2,0.5000,0.5000,0.3679,0.3679,0.9938,30.4646
+larger_part,roi_conditioned,4,2,0.5000,0.5000,0.3679,0.3679,0.9938,30.7095
+larger_part,local_enlarged,4,2,0.5000,0.5000,0.3071,0.3071,0.2324,47.1635
+small_object,full_image,4,0,0.0000,0.0000,,,,33.3721
+small_object,roi_conditioned,4,0,0.0000,0.0000,,,,31.9997
+small_object,local_enlarged,4,1,0.2500,0.2500,0.3049,0.3049,0.1942,58.7018

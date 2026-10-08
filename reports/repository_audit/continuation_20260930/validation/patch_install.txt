@@ -1,0 +1,19 @@
+{
+  "files_to_write": 13,
+  "preserved_existing_drafts_reviews_or_runs": [
+    "reports/reruns/recovery_v2/gpu_preflight.json",
+    "reports/reruns/recovery_v2/workflow_status.json"
+  ],
+  "dry_run": true
+}
+
+{
+  "files_to_write": 13,
+  "preserved_existing_drafts_reviews_or_runs": [
+    "reports/reruns/recovery_v2/gpu_preflight.json",
+    "reports/reruns/recovery_v2/workflow_status.json"
+  ],
+  "dry_run": false
+}
+修复版已安装。备份位置：/workspace/scratch/728b0ed5ee28/patch_install_validation/fashion_multimodal_analysis/archive/recovery_patch_backup_20260930T040413Z
+下一步：cd /workspace/scratch/728b0ed5ee28/patch_install_validation/fashion_multimodal_analysis；运行 python scripts/maintenance/run_prd31_recovery.py --phase all

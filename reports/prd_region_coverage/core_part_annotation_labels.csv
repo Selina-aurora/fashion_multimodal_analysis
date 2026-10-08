@@ -1,0 +1,46 @@
+﻿annotation_id,region,source_candidate_id,image_name,annotation_image_path,label_status,boxes_json,review_note
+collar_train_01,collar,collar_009,000067.jpg,outputs\core_part_annotation_pilot\images\collar_01_collar_009_000067.jpg,labeled,"[[113, 0, 376, 89]]",
+collar_train_02,collar,collar_011,000145.jpg,outputs\core_part_annotation_pilot\images\collar_02_collar_011_000145.jpg,unusable,[],Skipped during manual annotation.
+collar_train_03,collar,collar_004,000069.jpg,outputs\core_part_annotation_pilot\images\collar_03_collar_004_000069.jpg,labeled,"[[62, 47, 141, 86]]",
+collar_train_04,collar,collar_021,000196.jpg,outputs\core_part_annotation_pilot\images\collar_04_collar_021_000196.jpg,labeled,"[[53, 8, 182, 97]]",
+collar_train_05,collar,collar_005,000132.jpg,outputs\core_part_annotation_pilot\images\collar_05_collar_005_000132.jpg,labeled,"[[82, 0, 317, 104]]",
+collar_train_06,collar,collar_024,000061.jpg,outputs\core_part_annotation_pilot\images\collar_06_collar_024_000061.jpg,labeled,"[[116, 30, 159, 87]]",Reviewed during semantic QC.
+collar_train_07,collar,collar_014,000200.jpg,outputs\core_part_annotation_pilot\images\collar_07_collar_014_000200.jpg,labeled,"[[86, 5, 149, 46]]",
+collar_train_08,collar,collar_006,000284.jpg,outputs\core_part_annotation_pilot\images\collar_08_collar_006_000284.jpg,labeled,"[[125, 29, 288, 115]]",
+collar_train_09,collar,collar_013,000202.jpg,outputs\core_part_annotation_pilot\images\collar_09_collar_013_000202.jpg,unusable,[],Skipped during manual annotation.
+collar_train_10,collar,collar_007,000496.jpg,outputs\core_part_annotation_pilot\images\collar_10_collar_007_000496.jpg,labeled,"[[177, 35, 294, 106]]",
+collar_train_11,collar,collar_015,000265.jpg,outputs\core_part_annotation_pilot\images\collar_11_collar_015_000265.jpg,labeled,"[[124, 41, 290, 120]]",
+collar_train_12,collar,collar_017,000303.jpg,outputs\core_part_annotation_pilot\images\collar_12_collar_017_000303.jpg,labeled,"[[188, 29, 229, 84]]",
+collar_train_13,collar,collar_023,000459.jpg,outputs\core_part_annotation_pilot\images\collar_13_collar_023_000459.jpg,labeled,"[[117, 17, 249, 65]]",
+collar_train_14,collar,collar_008,000095.jpg,outputs\core_part_annotation_pilot\images\collar_14_collar_008_000095.jpg,labeled,"[[147, 40, 233, 79]]",Reviewed during semantic QC.
+collar_train_15,collar,collar_022,000440.jpg,outputs\core_part_annotation_pilot\images\collar_15_collar_022_000440.jpg,labeled,"[[115, 4, 330, 76]]",
+cuff_train_01,cuff,cuff_014,000423.jpg,outputs\core_part_annotation_pilot\images\cuff_01_cuff_014_000423.jpg,labeled,"[[344, 180, 379, 300], [163, 191, 192, 247]]",
+cuff_train_02,cuff,cuff_011,000365.jpg,outputs\core_part_annotation_pilot\images\cuff_02_cuff_011_000365.jpg,labeled,"[[0, 299, 66, 361], [423, 308, 467, 359]]",
+cuff_train_03,cuff,cuff_021,000069.jpg,outputs\core_part_annotation_pilot\images\cuff_03_cuff_021_000069.jpg,labeled,"[[16, 224, 83, 249], [255, 129, 308, 195]]",
+cuff_train_04,cuff,cuff_012,000305.jpg,outputs\core_part_annotation_pilot\images\cuff_04_cuff_012_000305.jpg,labeled,"[[372, 127, 419, 184]]",
+cuff_train_05,cuff,cuff_017,000302.jpg,outputs\core_part_annotation_pilot\images\cuff_05_cuff_017_000302.jpg,unusable,[],Skipped during manual annotation.
+cuff_train_06,cuff,cuff_002,000112.jpg,outputs\core_part_annotation_pilot\images\cuff_06_cuff_002_000112.jpg,labeled,"[[11, 142, 81, 181], [244, 132, 306, 170]]",
+cuff_train_07,cuff,cuff_018,000354.jpg,outputs\core_part_annotation_pilot\images\cuff_07_cuff_018_000354.jpg,unusable,[],Skipped during manual annotation.
+cuff_train_08,cuff,cuff_010,000272.jpg,outputs\core_part_annotation_pilot\images\cuff_08_cuff_010_000272.jpg,labeled,"[[83, 254, 146, 295], [484, 249, 519, 262]]",Reviewed during semantic QC.
+cuff_train_09,cuff,cuff_003,000218.jpg,outputs\core_part_annotation_pilot\images\cuff_09_cuff_003_000218.jpg,labeled,"[[0, 175, 54, 289], [425, 241, 467, 352]]",
+cuff_train_10,cuff,cuff_005,000056.jpg,outputs\core_part_annotation_pilot\images\cuff_10_cuff_005_000056.jpg,labeled,"[[21, 180, 128, 252], [373, 211, 449, 246]]",
+cuff_train_11,cuff,cuff_022,000039.jpg,outputs\core_part_annotation_pilot\images\cuff_11_cuff_022_000039.jpg,labeled,"[[284, 281, 319, 379]]",
+cuff_train_12,cuff,cuff_001,000421.jpg,outputs\core_part_annotation_pilot\images\cuff_12_cuff_001_000421.jpg,labeled,"[[89, 130, 97, 149], [180, 75, 193, 119]]",Reviewed during semantic QC.
+cuff_train_13,cuff,cuff_016,000461.jpg,outputs\core_part_annotation_pilot\images\cuff_13_cuff_016_000461.jpg,labeled,"[[30, 210, 92, 282], [335, 31, 403, 133]]",
+cuff_train_14,cuff,cuff_007,000271.jpg,outputs\core_part_annotation_pilot\images\cuff_14_cuff_007_000271.jpg,labeled,"[[51, 178, 86, 197], [254, 132, 291, 149]]",Reviewed during semantic QC.
+cuff_train_15,cuff,cuff_020,000196.jpg,outputs\core_part_annotation_pilot\images\cuff_15_cuff_020_000196.jpg,unusable,[],Marked unusable during semantic QC.
+hem_train_01,hem,hem_001,000282.jpg,outputs\core_part_annotation_pilot\images\hem_01_hem_001_000282.jpg,unusable,[],Marked unusable during semantic QC.
+hem_train_02,hem,hem_019,000111.jpg,outputs\core_part_annotation_pilot\images\hem_02_hem_019_000111.jpg,labeled,"[[172, 36, 382, 77]]",
+hem_train_03,hem,hem_007,000141.jpg,outputs\core_part_annotation_pilot\images\hem_03_hem_007_000141.jpg,labeled,"[[0, 22, 229, 250]]",Reviewed during semantic QC.
+hem_train_04,hem,hem_004,000384.jpg,outputs\core_part_annotation_pilot\images\hem_04_hem_004_000384.jpg,unusable,[],Skipped during manual annotation.
+hem_train_05,hem,hem_014,000164.jpg,outputs\core_part_annotation_pilot\images\hem_05_hem_014_000164.jpg,labeled,"[[0, 400, 411, 548]]",
+hem_train_06,hem,hem_010,000461.jpg,outputs\core_part_annotation_pilot\images\hem_06_hem_010_000461.jpg,labeled,"[[89, 511, 370, 629]]",
+hem_train_07,hem,hem_024,000370.jpg,outputs\core_part_annotation_pilot\images\hem_07_hem_024_000370.jpg,labeled,"[[72, 402, 422, 478]]",
+hem_train_08,hem,hem_022,000267.jpg,outputs\core_part_annotation_pilot\images\hem_08_hem_022_000267.jpg,unusable,[],Marked unusable during semantic QC.
+hem_train_09,hem,hem_018,000007.jpg,outputs\core_part_annotation_pilot\images\hem_09_hem_018_000007.jpg,labeled,"[[55, 519, 380, 609]]",
+hem_train_10,hem,hem_015,000418.jpg,outputs\core_part_annotation_pilot\images\hem_10_hem_015_000418.jpg,unusable,[],Marked unusable during semantic QC.
+hem_train_11,hem,hem_011,000499.jpg,outputs\core_part_annotation_pilot\images\hem_11_hem_011_000499.jpg,unusable,[],Marked unusable during semantic QC.
+hem_train_12,hem,hem_013,000184.jpg,outputs\core_part_annotation_pilot\images\hem_12_hem_013_000184.jpg,unusable,[],Skipped during manual annotation.
+hem_train_13,hem,hem_020,000304.jpg,outputs\core_part_annotation_pilot\images\hem_13_hem_020_000304.jpg,labeled,"[[0, 468, 467, 574]]",
+hem_train_14,hem,hem_012,000055.jpg,outputs\core_part_annotation_pilot\images\hem_14_hem_012_000055.jpg,labeled,"[[94, 398, 329, 491]]",
+hem_train_15,hem,hem_021,000014.jpg,outputs\core_part_annotation_pilot\images\hem_15_hem_021_000014.jpg,labeled,"[[82, 322, 333, 403]]",

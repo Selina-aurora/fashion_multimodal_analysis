@@ -1,0 +1,10 @@
+﻿region,N,correct,coarse,wrong,missed,strict_accuracy_pct,usable_rate_pct,missed_rate_pct,note
+collar,5,0,5,0,0,0.0,100.0,0.0,Baseline: all 5 responses are coarse garment-level boxes.
+cuff,5,0,4,0,1,0.0,80.0,20.0,Baseline: mostly coarse; 1 miss.
+hem,5,0,3,0,2,0.0,60.0,40.0,"Baseline: partial feasibility, 2 misses."
+pocket,5,0,0,0,5,0.0,0.0,100.0,Baseline: complete miss.
+shoulder,5,0,2,0,3,0.0,40.0,60.0,"Baseline: 2 coarse, 3 misses."
+waist,5,0,3,0,2,0.0,60.0,40.0,"Baseline: 3 coarse, 2 misses."
+pattern,5,1,2,0,2,20.0,60.0,40.0,"Baseline: 1 strict-correct, 2 coarse, 2 misses."
+decoration,5,0,0,0,5,0.0,0.0,100.0,Baseline: complete miss.
+OVERALL,40,1,19,0,20,2.5,50.0,50.0,Comparable frozen 40-case baseline across all 8 PRD regions.

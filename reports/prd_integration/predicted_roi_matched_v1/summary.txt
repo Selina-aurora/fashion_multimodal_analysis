@@ -1,0 +1,35 @@
+PRD 3.1 Predicted ROI Matched Pair Manifest v1
+=============================================
+
+predicted_input=configs/prd_3_1_predicted_roi_pilot20_v2.csv
+gt_input=configs/prd_8class_val_v1.csv
+iou_threshold=0.5
+raw_predictions=39
+matched_one_to_one_pairs=12
+unmatched_predictions=27
+unmatched_gt_in_pilot_images=16
+mean_matched_bbox_iou=0.8242
+
+Matched category counts
+-----------------------
+top=3
+pants=4
+skirt=1
+outerwear=1
+dress=3
+shoe=0
+bag=0
+accessory=0
+
+Matched source counts
+---------------------
+DeepFashion2=12
+
+Important
+---------
+- Each prediction and each GT instance appears at most once.
+- Matching is class-correct and requires bbox IoU >= threshold.
+- The output uses GT source_image + GT garment_id only as comparison join keys.
+- crop_path/mask_path remain predicted ROI artifacts from v2-balanced.
+- Use this paired manifest for GT-vs-predicted ROI attribute propagation analysis.
+- Do not call this a deployment manifest.

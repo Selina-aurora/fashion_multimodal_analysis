@@ -1,0 +1,9 @@
+﻿region,condition,n,non_empty_prediction_rate_pct,mean_top_score,mean_top_box_area_ratio_parent,mean_inference_seconds
+collar,BASELINE,5,100.0,0.3525,0.8933,15.8165
+collar,SPATIAL_HR,5,80.0,0.3497,0.3009,39.3465
+cuff,BASELINE,5,80.0,0.4119,0.8423,16.7716
+cuff,SPATIAL_HR,5,100.0,0.3436,0.3011,29.2976
+hem,BASELINE,5,60.0,0.3301,0.8644,16.1315
+hem,SPATIAL_HR,5,0.0,,,38.6933
+OVERALL,BASELINE,15,80.0,0.3667,0.8691,16.2399
+OVERALL,SPATIAL_HR,15,60.0,0.3463,0.301,35.7791

@@ -1,0 +1,45 @@
+{
+  "date": "2026-09-30",
+  "scope": "Continuation checkpoint/progress fixes; no real GPU training",
+  "syntax": {
+    "files": 388,
+    "errors": []
+  },
+  "entrypoint_static_help": {
+    "count": 170,
+    "failed": []
+  },
+  "original_evidence": {
+    "count": 5570,
+    "changed_or_missing": []
+  },
+  "document_links": {
+    "files": 26,
+    "broken": []
+  },
+  "structure": {
+    "returncode": 0,
+    "stdout": "Commands: 170; missing entrypoints/implementations: 0\nPASS: requested checks completed. No model inference was run.\n",
+    "stderr": ""
+  },
+  "installed_patch_tests": {
+    "total": 40,
+    "passed": 39,
+    "skipped": 1,
+    "returncode": 0,
+    "log": "unittest_installed_patch.txt",
+    "skip_reason": "PyTorch not installed; actual torch recovery still requires AutoDL"
+  },
+  "patch_install": {
+    "validated": true,
+    "reapplication_files_to_write": 0,
+    "log": "patch_install.txt"
+  },
+  "model_runtime": {
+    "executed": false,
+    "reason": "No torch/torchvision/transformers, CUDA, original images or external processed masks in this environment"
+  },
+  "patch_payload_files": 467,
+  "repository_status": "PASS",
+  "scientific_acceptance": "NOT_CLAIMED; actual GPU training, original-image GT reviews and real model inference remain pending"
+}

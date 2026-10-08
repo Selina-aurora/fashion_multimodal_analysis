@@ -1,0 +1,13 @@
+﻿target,prompt_variant,prompt,n,detection_rate,mean_top_score,mean_top_box_area_ratio,mean_inference_seconds
+button,garment_context,clothing button,5,20.0,0.3406,1.0,22.0335
+button,generic,button,5,20.0,0.3323,1.0,23.3817
+button,part_specific,the small button detail on the garment,5,100.0,0.3537,0.9941,24.3399
+collar,garment_context,clothing collar,5,100.0,0.3917,0.9939,27.604
+collar,generic,collar,5,80.0,0.4011,0.9953,26.5473
+collar,part_specific,the collar around the neck opening of the garment,5,100.0,0.3703,0.9911,28.2224
+sleeve,garment_context,clothing sleeve,5,80.0,0.3339,0.996,30.104
+sleeve,generic,sleeve,5,20.0,0.3862,0.9896,30.3476
+sleeve,part_specific,the sleeve area of the garment,5,100.0,0.4117,0.9634,31.5286
+zipper,garment_context,clothing zipper,5,0.0,,,25.2145
+zipper,generic,zipper,5,20.0,0.3032,1.0,25.7068
+zipper,part_specific,the zipper closure detail on the garment,5,40.0,0.3193,0.9978,34.1606

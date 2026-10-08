@@ -1,0 +1,25 @@
+﻿garment_category,fine_or_source_category,eligible_count,eligible_share_within_class
+top,long_sleeve_top,14,0.2593
+top,short_sleeve_top,14,0.2593
+top,sling,12,0.2222
+top,vest,14,0.2593
+pants,shorts,28,0.5091
+pants,trousers,27,0.4909
+skirt,skirt,55,1.0000
+outerwear,long_sleeve_outwear,32,0.5926
+outerwear,short_sleeve_outwear,22,0.4074
+dress,long_sleeve_dress,13,0.2364
+dress,short_sleeve_dress,15,0.2727
+dress,sling_dress,13,0.2364
+dress,vest_dress,14,0.2545
+shoe,shoe,55,1.0000
+bag,"bag, wallet",54,1.0000
+accessory,belt,10,0.1818
+accessory,glasses,5,0.0909
+accessory,glove,3,0.0545
+accessory,hat,7,0.1273
+accessory,"headband, head covering, hair accessory",9,0.1636
+accessory,scarf,8,0.1455
+accessory,sock,5,0.0909
+accessory,"tights, stockings",6,0.1091
+accessory,watch,2,0.0364

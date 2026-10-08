@@ -1,0 +1,56 @@
+PRD 3.1.3 style feature validity gating v1
+==========================================
+
+Input instances
+---------------
+merged_instances=156
+
+Policy
+------
+upper_geometry:
+  good   -> retain
+  usable -> retain, keep quality flag
+  weak   -> set these features to null/blank:
+            garment_length_proxy, waist_to_chest_ratio, hem_to_chest_ratio, lower_taper_slope
+
+trouser_geometry:
+  good   -> retain
+  usable -> retain, keep quality flag
+  weak   -> set these features to null/blank:
+            trouser_thigh_width_ratio, trouser_knee_width_ratio, trouser_hem_width_ratio, trouser_hem_to_thigh_ratio, trouser_lower_leg_fullness, trouser_lower_width_slope
+
+semantic features:
+  no entropy-based gating applied
+  reason: no calibrated entropy threshold has been established yet
+
+Observed quality counts
+-----------------------
+upper_good=37
+upper_usable=16
+upper_weak=12
+upper_not_applicable=91
+
+trouser_good=27
+trouser_usable=2
+trouser_weak=0
+trouser_not_applicable=127
+
+Gating applied
+--------------
+upper_instances_gated=12
+upper_feature_cells_nulled=48
+
+trouser_instances_gated=0
+trouser_feature_cells_nulled=0
+
+Outputs
+-------
+style_feature_vector_v1_gated.csv
+style_feature_vector_v1_gated.json
+
+Notes
+-----
+- CSV uses blank cells for gated features.
+- JSON uses null for gated features.
+- Original quality metadata is preserved.
+- New validity flags are added so downstream modules can explicitly check feature validity.

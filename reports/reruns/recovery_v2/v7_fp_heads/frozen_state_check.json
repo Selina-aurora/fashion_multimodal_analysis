@@ -1,0 +1,6 @@
+{
+  "status": "V5_BACKBONE_AND_RPN_EXACTLY_PRESERVED",
+  "frozen_state_tensors": 287,
+  "v5_checkpoint_sha256": "ea5a4ddf0f002256f1ce5164fc1b4b5b4d2263698f9525c9fbe7d8cf98bc1a65",
+  "v7_checkpoint_sha256": "69cddec515388f31b8ebeaac52357411f733f7ac9ae8899562b556e130276a0a"
+}

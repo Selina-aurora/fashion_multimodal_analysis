@@ -1,0 +1,26 @@
+PRD 3.1.1 Minority Scene Human Review v1
+========================================
+
+cases=74
+product_display=40
+complex_scene=34
+
+By class
+--------
+top=6
+pants=8
+skirt=11
+outerwear=8
+dress=10
+shoe=13
+bag=7
+accessory=11
+
+Review rule
+-----------
+- worn_person: ordinary person-wearing/carrying scene.
+- product_display: product displayed without being worn/carried by a person.
+- partial_view: close/cropped view where only part of wearer/item is visible.
+- complex_scene: runway/crowd/heavy clutter/wide difficult context.
+
+Do not freeze Core until these minority-scene cases are reviewed.

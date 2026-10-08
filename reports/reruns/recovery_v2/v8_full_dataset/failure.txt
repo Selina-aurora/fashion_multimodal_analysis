@@ -1,0 +1,7 @@
+Traceback (most recent call last):
+  File "/workspace/prd31_recovery_20260930/fashion_multimodal_analysis/scripts/run_prd31_v8_full_dataset.py", line 710, in main
+    protected=protected_inventory(root,data); prep=prepare(a,root,data,output,report,protected)
+                                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/prd31_recovery_20260930/fashion_multimodal_analysis/scripts/run_prd31_v8_full_dataset.py", line 397, in prepare
+    raise ValueError(f'{errors} 张原图/标注无效，详见 {report}/excluded_images.csv。修复后重跑，'
+ValueError: 1 张原图/标注无效，详见 /workspace/prd31_recovery_20260930/fashion_multimodal_analysis/reports/reruns/recovery_v2/v8_full_dataset/excluded_images.csv。修复后重跑，或显式加 --allow-bad-images 排除这些整张图；目前未启动训练。

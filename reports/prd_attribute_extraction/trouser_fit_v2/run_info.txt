@@ -1,0 +1,10 @@
+PRD 3.1.3 long-trouser fit continuous geometry v2
+manifest=configs/garment_instances_gt_pilot_100.csv
+instances=29
+selection=garment_id_contains_trousers
+shorts_excluded=true
+input=garment_instance_mask
+output_features=thigh_width_ratio,knee_width_ratio,hem_width_ratio,hem_to_thigh_ratio,lower_leg_fullness
+hard_classification=false
+gt_available=false
+material_and_craftsmanship=excluded

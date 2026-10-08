@@ -1,0 +1,269 @@
+from __future__ import annotations
+
+import argparse
+import importlib.util
+import json
+import sys
+from pathlib import Path
+
+import numpy as np
+from PIL import Image
+
+from fashion_mm.models.attributes import AttributeExtractionResult
+from fashion_mm.models.attributes import AttributeValuePrediction
+from fashion_mm.models.attributes import FineGrainedAttributePrediction
+from fashion_mm.models.instance_segmentation import FashionInstance
+from fashion_mm.models.instance_segmentation import SegmentationResult
+
+
+SCRIPT_PATH = (
+    Path(__file__).resolve().parents[1]
+    / "scripts"
+    / "inference"
+    / "predict_fashion_visual_pipeline.py"
+)
+SCRIPT_SPEC = importlib.util.spec_from_file_location(
+    "predict_fashion_visual_pipeline",
+    SCRIPT_PATH,
+)
+assert SCRIPT_SPEC is not None
+assert SCRIPT_SPEC.loader is not None
+pipeline_cli = importlib.util.module_from_spec(SCRIPT_SPEC)
+SCRIPT_SPEC.loader.exec_module(pipeline_cli)
+
+
+def test_output_dir_writes_versioned_delivery_package(tmp_path, monkeypatch):
+    image_path = tmp_path / "product.jpg"
+    Image.new("RGB", (40, 48), "white").save(image_path)
+    garment_mask = np.zeros((48, 40), dtype=bool)
+    garment_mask[4:44, 6:35] = True
+    segmentation = SegmentationResult(
+        image_size=(40, 48),
+        instances=[
+            FashionInstance(
+                mask=garment_mask,
+                box=(6.0, 4.0, 35.0, 44.0),
+                label_id=1,
+                label_name="top",
+                score=0.95,
+            )
+        ],
+        inference_time_ms=1.25,
+    )
+    constructor_args = {}
+
+    class FakeSegmentationPredictor:
+        def __init__(self, config, checkpoint_path=None, device=None):
+            constructor_args["segmentation"] = {
+                "config": config,
+                "checkpoint_path": checkpoint_path,
+                "device": device,
+            }
+
+        def predict(self, image):
+            return segmentation
+
+    class FakeAttributePredictor:
+        def __init__(
+            self,
+            checkpoint_path,
+            *,
+            device,
+            top_k=None,
+            confidence_threshold=None,
+        ):
+            constructor_args["attribute"] = {
+                "checkpoint_path": checkpoint_path,
+                "device": device,
+                "top_k": top_k,
+                "confidence_threshold": confidence_threshold,
+            }
+
+        def predict(self, image, mask, *, attributes=None):
+            assert np.asarray(mask, dtype=bool).any()
+            assert attributes == ["collar_design_labels"]
+            return AttributeExtractionResult(
+                image_size=(40, 48),
+                region_box=(10, 4, 31, 13),
+                mask_area=int(np.asarray(mask, dtype=bool).sum()),
+                mask_coverage=0.75,
+                predictions=(
+                    FineGrainedAttributePrediction(
+                        attribute_name="collar_design_labels",
+                        value=AttributeValuePrediction(
+                            label_index=1,
+                            label="v_neck",
+                            confidence=0.91,
+                        ),
+                        alternatives=(),
+                        is_confident=True,
+                    ),
+                ),
+                preprocessing_time_ms=0.5,
+                inference_time_ms=1.0,
+                total_time_ms=1.5,
+                backend="fake_attribute_predictor",
+            )
+
+    monkeypatch.setattr(
+        pipeline_cli,
+        "FashionInstanceSegmentationPredictor",
+        FakeSegmentationPredictor,
+    )
+    monkeypatch.setattr(
+        pipeline_cli,
+        "FashionAttributePredictor",
+        FakeAttributePredictor,
+    )
+    monkeypatch.setattr(
+        pipeline_cli,
+        "load_config",
+        lambda path: {"loaded_from": path},
+    )
+    output_dir = tmp_path / "delivery"
+    monkeypatch.setattr(
+        sys,
+        "argv",
+        [
+            "predict_fashion_visual_pipeline.py",
+            str(image_path),
+            "这件衣服的领口",
+            "--segmentation-checkpoint",
+            "segmentation.pt",
+            "--attribute-checkpoint",
+            "attributes.pt",
+            "--device",
+            "cpu",
+            "--attributes",
+            "collar_design_labels",
+            "--top-k",
+            "2",
+            "--confidence-threshold",
+            "0.7",
+            "--output-dir",
+            str(output_dir),
+        ],
+    )
+
+    pipeline_cli.main()
+
+    result_path = output_dir / "result.json"
+    segmentation_vis = output_dir / "segmentation_visualization.jpg"
+    local_region_mask = output_dir / "local_region_mask.png"
+    local_region_vis = output_dir / "local_region_visualization.jpg"
+    assert result_path.is_file()
+    assert segmentation_vis.is_file()
+    assert local_region_mask.is_file()
+    assert local_region_vis.is_file()
+
+    payload = json.loads(result_path.read_text(encoding="utf-8"))
+    assert payload["schema"] == {
+        "name": pipeline_cli.RESULT_SCHEMA_NAME,
+        "version": pipeline_cli.RESULT_SCHEMA_VERSION,
+    }
+    assert payload["status"] == "ok"
+    assert payload["local_region"]["query"]["region"] == "neckline"
+    assert payload["attribute_extraction"]["attributes"][0]["label"] == "v_neck"
+    assert payload["artifacts"] == {
+        "output_dir": str(output_dir.resolve()),
+        "result_json": str(result_path.resolve()),
+        "segmentation_visualization": str(segmentation_vis.resolve()),
+        "local_region_mask": str(local_region_mask.resolve()),
+        "local_region_visualization": str(local_region_vis.resolve()),
+    }
+    assert constructor_args["attribute"] == {
+        "checkpoint_path": "attributes.pt",
+        "device": "cpu",
+        "top_k": 2,
+        "confidence_threshold": 0.7,
+    }
+
+
+def test_output_dir_does_not_create_mask_without_local_region(tmp_path, monkeypatch):
+    image_path = tmp_path / "empty.jpg"
+    Image.new("RGB", (20, 24), "white").save(image_path)
+    segmentation = SegmentationResult(
+        image_size=(20, 24),
+        instances=[],
+        inference_time_ms=0.5,
+    )
+
+    class FakeSegmentationPredictor:
+        def __init__(self, config, checkpoint_path=None, device=None):
+            pass
+
+        def predict(self, image):
+            return segmentation
+
+    class FailingAttributePredictor:
+        def __init__(
+            self,
+            checkpoint_path,
+            *,
+            device,
+            top_k=None,
+            confidence_threshold=None,
+        ):
+            pass
+
+        def predict(self, image, mask, *, attributes=None):
+            raise AssertionError("3.1.3 must not run without a real 3.1.2 mask")
+
+    monkeypatch.setattr(
+        pipeline_cli,
+        "FashionInstanceSegmentationPredictor",
+        FakeSegmentationPredictor,
+    )
+    monkeypatch.setattr(
+        pipeline_cli,
+        "FashionAttributePredictor",
+        FailingAttributePredictor,
+    )
+    monkeypatch.setattr(pipeline_cli, "load_config", lambda path: {})
+    output_dir = tmp_path / "empty_delivery"
+    monkeypatch.setattr(
+        sys,
+        "argv",
+        [
+            "predict_fashion_visual_pipeline.py",
+            str(image_path),
+            "这件衣服的领口",
+            "--segmentation-checkpoint",
+            "segmentation.pt",
+            "--attribute-checkpoint",
+            "attributes.pt",
+            "--device",
+            "cpu",
+            "--output-dir",
+            str(output_dir),
+        ],
+    )
+
+    pipeline_cli.main()
+
+    payload = json.loads((output_dir / "result.json").read_text(encoding="utf-8"))
+    assert payload["status"] == "no_garment_instance"
+    assert payload["attribute_extraction"] is None
+    assert payload["artifacts"]["local_region_mask"] is None
+    assert not (output_dir / "local_region_mask.png").exists()
+    assert (output_dir / "segmentation_visualization.jpg").is_file()
+    assert (output_dir / "local_region_visualization.jpg").is_file()
+
+
+def test_legacy_output_paths_remain_available_without_output_dir():
+    args = argparse.Namespace(
+        output_dir=None,
+        output="legacy/result.json",
+        mask_output="legacy/region.png",
+        vis_output="legacy/visualization.jpg",
+    )
+
+    paths = pipeline_cli.resolve_artifact_paths(args)
+
+    assert paths == {
+        "output_dir": None,
+        "result_json": Path("legacy/result.json"),
+        "segmentation_visualization": None,
+        "local_region_mask": Path("legacy/region.png"),
+        "local_region_visualization": Path("legacy/visualization.jpg"),
+    }

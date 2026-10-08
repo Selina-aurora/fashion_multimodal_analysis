@@ -1,0 +1,22 @@
+{
+  "inputs": {
+    "checkpoint_sha256": "69cddec515388f31b8ebeaac52357411f733f7ac9ae8899562b556e130276a0a",
+    "val_manifest_sha256": "39141f545ea5512d16ed074788b6f98474b33baff111d3b663ec0ffcc4c40b93",
+    "runtime_sha256": "60021df022b16fbe42c88ed57635e180cfd397077803403cbb6513169daabaca",
+    "score_threshold": 0.4,
+    "mask_threshold": 0.5,
+    "match_bbox_iou": 0.5,
+    "warmup_runs": 10,
+    "timed_passes": 5,
+    "split": "DEVELOPMENT_FULL_TARGETS_NOT_CORE_ACCEPTANCE"
+  },
+  "report_sha256": {
+    "evaluation_summary.txt": "2a166f3026f90795532723eefb07798a7dfd23dd5fc7d8931d4dc7edd633ed4e",
+    "protocol_metrics.json": "71372bb8d75b5465ae4c25bbe5a9f198accf6faea25792457f7c7e4cc90acc73",
+    "per_gt_results.csv": "28ea7a734275a4d9e19473f116defae8fe4f86560dce3da1f4e9018edb1c8b9d",
+    "per_class_metrics.csv": "64c3b45aa8f66aaf3760954053bdd6a38192c1675f136e163298a49fdf8ee7a5",
+    "per_source_metrics.csv": "048a93a8579f44a0387ab836b99b9bd4e67f1fb8d4494150b4e660fb1934cd97",
+    "per_image_timing.csv": "c97ad1861789b70c9d5702a51d131e733d4a2690c6f41965d4b880e868ee01d9",
+    "error_cases.csv": "8409e52a42c4c0db24e4b97bafb6188827bb2ea90e451aadcae33e243e44f7c7"
+  }
+}

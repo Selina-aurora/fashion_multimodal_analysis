@@ -1,0 +1,374 @@
+#!/usr/bin/env python3
+"""Fine-tune V5 ROI heads for 3 epochs on its existing Fashionpedia training images.
+
+Run from the project root: python -u scripts/RUN_PRD31_V7_FP_HEADS.py
+Uses existing project modules; no V5/V6 helper scripts are required.
+Keeps V5/V6 weights, acceptance config, Core GT and frozen thresholds unchanged.
+This is a development experiment, not a claim of PRD acceptance.
+"""
+from __future__ import annotations
+
+import argparse
+from collections import Counter
+import csv
+import gc
+import hashlib
+import io
+import json
+import math
+import os
+from pathlib import Path
+import statistics
+import subprocess
+import sys
+import time
+from types import MethodType
+import zipfile
+
+TRAIN = 'configs/prd_8class_train_v5_full_targets.csv'
+TRAIN_SHA = '36ff78831b20e492d787c66161f05747433f8e85f7a089fd5df981c2bdf476e6'
+DEV = 'configs/prd_8class_val_v2_full_targets.csv'
+DEV_SHA = '39141f545ea5512d16ed074788b6f98474b33baff111d3b663ec0ffcc4c40b93'
+CORE = 'benchmark/prd_3_1_v1/manifests/segmentation_test_v1.csv'
+CORE_SHA = 'c83204aca87c9c4dee304b774fd459bf5a18a2d1d65f0a3a9a79b92721224b89'
+V5 = 'outputs/prd_instance_segmentation/maskrcnn_8class_v5_full_targets/checkpoint_last.pth'
+V5_SHA = 'ea5a4ddf0f002256f1ce5164fc1b4b5b4d2263698f9525c9fbe7d8cf98bc1a65'
+RUNTIME = 'src/fashion_multimodal_analysis/evaluation/runtime.py'
+RUNTIME_SHA = '60021df022b16fbe42c88ed57635e180cfd397077803403cbb6513169daabaca'
+V7_TRAIN = 'configs/prd_8class_train_v7_fp_heads.csv'
+REPORT = 'reports/reruns/recovery_v2/v7_fp_heads'
+V7 = 'outputs/prd_instance_segmentation/maskrcnn_8class_v7_fp_heads/checkpoint_last.pth'
+CLASSES = {'top', 'pants', 'skirt', 'outerwear', 'dress', 'shoe', 'bag', 'accessory'}
+SETTINGS = dict(batch_size=1, workers=0, min_size=640, max_size=1024,
+    seed=20260930, lr=0.0001, momentum=0.9, weight_decay=0.0005,
+    step_size=2, gamma=0.1, sampler_alpha=0.5, no_hflip=False, no_balanced_sampler=False)
+EPOCHS = 3
+REQUIRED_REPORTS = ['evaluation_summary.txt', 'protocol_metrics.json', 'per_gt_results.csv',
+    'per_class_metrics.csv', 'per_source_metrics.csv', 'per_image_timing.csv', 'error_cases.csv']
+
+def digest(path):
+    h = hashlib.sha256()
+    with Path(path).open('rb') as f:
+        for block in iter(lambda: f.read(1024 * 1024), b''):
+            h.update(block)
+    return h.hexdigest()
+
+def read_csv(path):
+    with Path(path).open(encoding='utf-8-sig', newline='') as f:
+        return list(csv.DictReader(f))
+
+def publish(path, content):
+    path = Path(path)
+    if path.exists():
+        if path.read_bytes() != content:
+            raise FileExistsError('Existing V7 artifact differs; preserved: ' + str(path))
+        return
+    path.parent.mkdir(parents=True, exist_ok=True)
+    temporary = path.with_name(path.name + '.tmp')
+    temporary.write_bytes(content)
+    temporary.replace(path)
+
+def write_json(path, value):
+    publish(path, (json.dumps(value, ensure_ascii=False, indent=2, allow_nan=False) + '\n').encode())
+
+def resolve_image(value, root, data):
+    for prefix in ('../fashion_data/', '/workspace/fashion_data/'):
+        if value.startswith(prefix):
+            return (data / value[len(prefix):]).resolve()
+    path = Path(value)
+    return (path if path.is_absolute() else root / path).resolve()
+
+def select_fp(rows):
+    # Keep every target row for every selected image, including non-shoe/bag classes.
+    selected = [dict(row) for row in rows if row['source_dataset'] == 'Fashionpedia']
+    if not selected or {r['garment_category'] for r in selected} != CLASSES:
+        raise ValueError('Fashionpedia training subset must contain all eight classes')
+    ids = [r['record_id'] for r in selected]
+    if len(ids) != len(set(ids)):
+        raise ValueError('Duplicate training record IDs')
+    return selected
+
+def prepare(root, data):
+    for relative, sha in ((TRAIN, TRAIN_SHA), (DEV, DEV_SHA), (CORE, CORE_SHA), (RUNTIME, RUNTIME_SHA)):
+        if digest(root / relative) != sha:
+            raise ValueError('Input differs from the verified V5/V6 run: ' + relative)
+    rows = select_fp(read_csv(root / TRAIN))
+    image_paths = {resolve_image(r['source_image'], root, data) for r in rows}
+    protected = {resolve_image(r['source_image'], root, data)
+                 for relative in (DEV, CORE) for r in read_csv(root / relative)}
+    if image_paths & protected:
+        raise ValueError('Training source images overlap development/Core')
+    if len(rows) != 1914 or len(image_paths) != 395:
+        raise ValueError('Expected the recorded 395 Fashionpedia images / 1914 targets')
+    from PIL import Image
+    sizes = {}
+    for path in sorted(image_paths):
+        with Image.open(path) as image:
+            sizes[path] = image.size
+    for row in rows:
+        source = resolve_image(row['source_image'], root, data)
+        width, height = sizes[source]
+        bbox = tuple(int(float(row[key])) for key in ('bbox_x1', 'bbox_y1', 'bbox_x2', 'bbox_y2'))
+        if not (0 <= bbox[0] < bbox[2] <= width and 0 <= bbox[1] < bbox[3] <= height):
+            raise ValueError('Invalid training bbox: ' + row['record_id'])
+        with Image.open(resolve_image(row['mask_path'], root, data)) as mask:
+            if mask.size != (width, height) or mask.convert('L').getbbox() != bbox:
+                raise ValueError('Full-image training mask/bbox differs: ' + row['record_id'])
+    text = io.StringIO(newline='')
+    writer = csv.DictWriter(text, fieldnames=list(rows[0]))
+    writer.writeheader()
+    writer.writerows(rows)
+    publish(root / V7_TRAIN, ('\ufeff' + text.getvalue()).encode('utf-8'))
+    report = dict(status='V7_FP_TRAINING_SUBSET_READY', images=len(image_paths), instances=len(rows),
+        class_counts=dict(sorted(Counter(r['garment_category'] for r in rows).items())),
+        train_manifest_sha256=digest(root / V7_TRAIN), source_manifest_sha256=TRAIN_SHA,
+        development_manifest_sha256=DEV_SHA, core_manifest_sha256=CORE_SHA,
+        initialization_checkpoint_sha256=V5_SHA, training_settings=SETTINGS, epochs=EPOCHS,
+        trainable_prefix='roi_heads.', frozen_prefixes=['backbone.', 'rpn.'],
+        scope='Existing V5 Fashionpedia training images only; all usable eight-class target rows retained. '
+              'No new images or GT edits. Source-path isolation only; no untouched blind test claimed.',
+        rationale='Test short ROI-head adaptation without the expanded DF2 training source. '
+                  'Source mixing is a hypothesis; the seven regression cases do not establish its cause.')
+    write_json(root / REPORT / 'data_preparation.json', report)
+    print('PREPARED: 395 images / 1914 targets; ROI heads only; 3 epochs', flush=True)
+    return report
+
+def validate_v7(checkpoint, train_sha, for_resume=False):
+    from fashion_multimodal_analysis.segmentation.training.checkpoint_state import validate_checkpoint
+    validate_checkpoint(checkpoint, train_sha, DEV_SHA, settings=SETTINGS,
+                        epochs=EPOCHS, for_resume=for_resume)
+    args = checkpoint.get('args', {})
+    for key, expected in {'v7_initial_checkpoint_sha256': V5_SHA,
+                          'v7_trainable_prefix': 'roi_heads.',
+                          'v7_script_sha256': digest(__file__)}.items():
+        if args.get(key) != expected:
+            raise ValueError('V7 fine-tuning provenance differs: ' + key)
+
+def train(root, train_sha):
+    import torch
+    from fashion_multimodal_analysis.segmentation.training import train_prd_8class_maskrcnn_v3_b1_dataexp as trainer
+    checkpoint = root / V7
+    resume = False
+    if checkpoint.exists():
+        saved = torch.load(checkpoint, map_location='cpu', weights_only=False)
+        resume = saved.get('epoch', 0) < EPOCHS
+        validate_v7(saved, train_sha, for_resume=resume)
+        del saved
+        if not resume:
+            print('REUSE_TRAINING: verified V7 epoch 3 checkpoint', flush=True)
+            return
+    original_builder, original_parser, previous_argv = trainer.build_model, trainer.parse_args, sys.argv[:]
+    def warm_builder(min_size, max_size):
+        model = original_builder(min_size=min_size, max_size=max_size)
+        saved = torch.load(root / V5, map_location='cpu', weights_only=False)
+        model.load_state_dict(saved['model_state_dict'], strict=True)
+        del saved
+        trainable = []
+        for name, parameter in model.named_parameters():
+            parameter.requires_grad_(name.startswith('roi_heads.'))
+            if parameter.requires_grad:
+                trainable.append(name)
+        if not trainable:
+            raise RuntimeError('No ROI-head parameters were enabled')
+        # Also freeze backbone running statistics if a backbone variant uses BatchNorm.
+        original_train = model.train
+        def train_heads(this, mode=True):
+            original_train(mode)
+            this.backbone.eval()
+            return this
+        model.train = MethodType(train_heads, model)
+        print('V5 weights loaded; trainable parameter tensors:', len(trainable), flush=True)
+        return model
+    def parse_v7():
+        args = original_parser()
+        args.v7_initial_checkpoint_sha256 = V5_SHA
+        args.v7_trainable_prefix = 'roi_heads.'
+        args.v7_script_sha256 = digest(__file__)
+        return args
+    arguments = ['--epochs', str(EPOCHS), '--device', 'cuda', '--train-csv', V7_TRAIN,
+        '--val-csv', DEV, '--output-dir', str(checkpoint.parent), '--report-dir', REPORT + '/training',
+        '--experiment-name', 'v7-fp-heads-from-v5', '--verify-isolation', '--save-every', '1']
+    for key, value in SETTINGS.items():
+        if not isinstance(value, bool):
+            arguments += ['--' + key.replace('_', '-'), str(value)]
+    if resume:
+        arguments += ['--resume', str(checkpoint)]
+    try:
+        trainer.build_model, trainer.parse_args = warm_builder, parse_v7
+        sys.argv = [str(Path(__file__)), *arguments]
+        trainer.main()
+        summary = root / REPORT / 'training/summary.txt'
+        if summary.is_file():
+            text = summary.read_text(encoding='utf-8')
+            text = text.replace('[Controlled comparison]', '[V5 ROI-head fine-tuning experiment]')
+            text = text.replace('initialization=COCO DEFAULT (same as v1; no warm-start from v1)',
+                'initialization=V5 epoch 15 checkpoint (new optimizer; ROI heads only)')
+            summary.write_text(text, encoding='utf-8')
+    finally:
+        trainer.build_model, trainer.parse_args, sys.argv = original_builder, original_parser, previous_argv
+        gc.collect()
+        torch.cuda.empty_cache()
+
+def verify_frozen(root, train_sha):
+    import torch
+    saved = torch.load(root / V7, map_location='cpu', weights_only=False)
+    validate_v7(saved, train_sha)
+    reference = torch.load(root / V5, map_location='cpu', weights_only=False)
+    old, new = reference['model_state_dict'], saved['model_state_dict']
+    if old.keys() != new.keys():
+        raise ValueError('V7 model architecture/state keys differ from V5')
+    frozen = [name for name in old if name.startswith(('backbone.', 'rpn.'))]
+    changed = [name for name in frozen if not torch.equal(old[name], new[name])]
+    if not frozen or changed:
+        raise ValueError('Frozen backbone/RPN state changed: ' + str(changed[:5]))
+    if not any(not torch.equal(old[name], new[name]) for name in old if name.startswith('roi_heads.')):
+        raise ValueError('ROI heads did not change; fine-tuning cannot be verified')
+    write_json(root / REPORT / 'frozen_state_check.json',
+        dict(status='V5_BACKBONE_AND_RPN_EXACTLY_PRESERVED', frozen_state_tensors=len(frozen),
+             v5_checkpoint_sha256=V5_SHA, v7_checkpoint_sha256=digest(root / V7)))
+
+def evaluation_inputs(checkpoint):
+    return dict(checkpoint_sha256=digest(checkpoint), val_manifest_sha256=DEV_SHA,
+        runtime_sha256=RUNTIME_SHA, score_threshold=0.4, mask_threshold=0.5, match_bbox_iou=0.5,
+        warmup_runs=10, timed_passes=5, split='DEVELOPMENT_FULL_TARGETS_NOT_CORE_ACCEPTANCE')
+
+def valid_report(folder, expected):
+    provenance = folder / 'comparison_provenance.json'
+    if not provenance.is_file():
+        return False
+    saved = json.loads(provenance.read_text())
+    return saved.get('inputs') == expected and all((folder / name).is_file()
+        and digest(folder / name) == saved.get('report_sha256', {}).get(name) for name in REQUIRED_REPORTS)
+
+def evaluate(root, checkpoint, name):
+    folder, expected = root / REPORT / name, evaluation_inputs(checkpoint)
+    if (folder / 'comparison_provenance.json').exists():
+        if not valid_report(folder, expected):
+            raise ValueError('Existing evaluation differs; preserved: ' + str(folder))
+        print('REUSE_EVALUATION:', name, flush=True)
+        return folder
+    if name == 'v5_reference':
+        previous = root / 'reports/reruns/recovery_v2/v6_coverage/v5_development_fast'
+        if valid_report(previous, expected):
+            for report_name in REQUIRED_REPORTS + ['comparison_provenance.json']:
+                publish(folder / report_name, (previous / report_name).read_bytes())
+            print('REUSE_REFERENCE: hash-verified V5 development reports', flush=True)
+            return folder
+    if folder.exists() and any(folder.iterdir()):
+        folder.rename(folder.with_name(folder.name + '_interrupted_' + str(time.time_ns())))
+    environment = os.environ.copy()
+    environment['PYTHONPATH'] = str(root / 'src') + os.pathsep + environment.get('PYTHONPATH', '')
+    subprocess.run([sys.executable, '-u', '-m',
+        'fashion_multimodal_analysis.segmentation.evaluation.eval_prd_8class_maskrcnn_v3_b1_dataexp',
+        '--checkpoint', str(checkpoint), '--val-csv', DEV, '--report-dir', str(folder), '--device', 'cuda',
+        '--score-threshold', '0.4', '--mask-threshold', '0.5', '--match-bbox-iou', '0.5',
+        '--warmup-runs', '10', '--timed-passes', '5'], cwd=root, env=environment, check=True)
+    write_json(folder / 'comparison_provenance.json', dict(inputs=expected,
+        report_sha256={name: digest(folder / name) for name in REQUIRED_REPORTS}))
+    return folder
+
+def comparison_summary(folder):
+    micro = json.loads((folder / 'protocol_metrics.json').read_text())['micro']
+    rows = read_csv(folder / 'per_gt_results.csv')
+    timings = read_csv(folder / 'per_image_timing.csv')
+    counts_per_image = Counter(row['image_index'] for row in timings)
+    if len(rows) != 88 or len(counts_per_image) != 32 or set(counts_per_image.values()) != {5}:
+        raise ValueError('Expected 88 GT, 32 images and five timed passes per image')
+    values = [float(row['inference_ms']) for row in timings]
+    if not all(math.isfinite(value) and value > 0 for value in values):
+        raise ValueError('Invalid inference timings')
+    micro = {key: (None if isinstance(value, float) and not math.isfinite(value) else value)
+             for key, value in micro.items()}
+    counts = Counter(row['outcome'] for row in rows)
+    return dict(micro=micro, outcome_counts=dict(counts),
+                mean_inference_ms=statistics.mean(values), median_inference_ms=statistics.median(values),
+                mean_inference_time_le_50ms=statistics.mean(values) <= 50)
+
+def paired_summary(reference, candidate):
+    old = {row['record_id']: row for row in read_csv(reference / 'per_gt_results.csv')}
+    new = {row['record_id']: row for row in read_csv(candidate / 'per_gt_results.csv')}
+    if len(old) != 88 or set(old) != set(new):
+        raise ValueError('V5/V7 development GT identities differ')
+    for key in old:
+        if any(old[key][field] != new[key][field] for field in ('source_dataset', 'source_image', 'gt_class', 'fine_category')):
+            raise ValueError('V5/V7 GT metadata differs: ' + key)
+    common = [key for key in old if old[key]['class_correct'] == new[key]['class_correct'] == 'True']
+    regressions = [key for key in old if old[key]['outcome'] == 'correct' and new[key]['outcome'] != 'correct']
+    gains = [key for key in old if old[key]['outcome'] != 'correct' and new[key]['outcome'] == 'correct']
+    return dict(common_class_correct_instances=len(common),
+        v5_mean_mask_iou_on_common=statistics.mean(float(old[key]['mask_iou']) for key in common) if common else None,
+        v7_mean_mask_iou_on_common=statistics.mean(float(new[key]['mask_iou']) for key in common) if common else None,
+        regressions=regressions, gains=gains)
+
+def finish(root):
+    reference = evaluate(root, root / V5, 'v5_reference')
+    candidate = evaluate(root, root / V7, 'v7_development')
+    result = dict(status='V7_DEVELOPMENT_COMPARISON_COMPLETED',
+        v5=comparison_summary(reference), v7=comparison_summary(candidate), formal_acceptance='NOT_CLAIMED',
+        paired_instance_comparison=paired_summary(reference, candidate),
+        default_candidate='V5_UNCHANGED_PENDING_REVIEW', core_evaluation='NOT_RUN',
+        note='Compare all classes, both sources, matched-instance mask IoU and misses. '
+             'Three fixed epochs; no selection among epochs using this development split. '
+             'Neither checkpoint nor acceptance configuration is automatically promoted.')
+    write_json(root / REPORT / 'development_comparison.json', result)
+    archive = root / 'prd31_v7_results.zip'
+    if archive.exists():
+        archive = root / ('prd31_v7_results_' + str(time.time_ns()) + '.zip')
+    with zipfile.ZipFile(archive, 'w', zipfile.ZIP_DEFLATED) as bundle:
+        for path in sorted((root / REPORT).rglob('*')):
+            if path.is_file() and path.suffix.lower() in ('.csv', '.txt', '.json', '.jpg', '.png'):
+                bundle.write(path, path.relative_to(root).as_posix())
+        bundle.write(root / V7_TRAIN, V7_TRAIN)
+        bundle.write(Path(__file__), 'patch/RUN_PRD31_V7_FP_HEADS.py')
+    print(json.dumps(result, ensure_ascii=False, indent=2), flush=True)
+    print('RESULTS_ZIP=' + str(archive), flush=True)
+
+def run(root, data, phase):
+    if not (root / 'src/fashion_multimodal_analysis').is_dir():
+        raise FileNotFoundError('Run from /workspace/prd31_recovery_20260930/fashion_multimodal_analysis')
+    os.environ['FASHION_PROJECT_ROOT'], os.environ['FASHION_DATA_ROOT'] = str(root), str(data)
+    sys.path.insert(0, str(root / 'src'))
+    prepared = prepare(root, data)
+    if phase == 'prepare':
+        return
+    import torch
+    from fashion_multimodal_analysis.segmentation.training.checkpoint_state import validate_checkpoint
+    if not torch.cuda.is_available():
+        raise RuntimeError('CUDA is required for training and timed comparison')
+    if digest(root / V5) != V5_SHA:
+        raise ValueError('Original V5 checkpoint differs')
+    initial = torch.load(root / V5, map_location='cpu', weights_only=False)
+    validate_checkpoint(initial, TRAIN_SHA,
+        'b6984415c31bb2060f230e78e0e8a12dfa011122201e29bdd3dc028928476ba1')
+    del initial
+    if phase == 'all':
+        train(root, prepared['train_manifest_sha256'])
+    verify_frozen(root, prepared['train_manifest_sha256'])
+    finish(root)
+    if digest(root / V5) != V5_SHA or digest(root / CORE) != CORE_SHA:
+        raise ValueError('V5 checkpoint or Core manifest changed during this run')
+
+def main():
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--project', default='.')
+    parser.add_argument('--data-root', default='/workspace/fashion_data')
+    parser.add_argument('--phase', choices=('all', 'prepare', 'compare'), default='all')
+    args = parser.parse_args()
+    root, data = Path(args.project).expanduser().resolve(), Path(args.data_root).expanduser().resolve()
+    try:
+        if not (root / 'src/fashion_multimodal_analysis').is_dir():
+            raise FileNotFoundError('Current directory is not the fashion project; cd to its root first')
+        lock = root / 'reports/reruns/recovery_v2/workflow.lock'
+        lock.parent.mkdir(parents=True, exist_ok=True)
+        import fcntl
+        with lock.open('a+') as handle:
+            try:
+                fcntl.flock(handle.fileno(), fcntl.LOCK_EX | fcntl.LOCK_NB)
+            except BlockingIOError as error:
+                raise RuntimeError('Another recovery/training/evaluation job is running; wait for it to finish') from error
+            run(root, data, args.phase)
+    except (OSError, ValueError, KeyError, TypeError, RuntimeError, ImportError, subprocess.CalledProcessError) as error:
+        parser.exit(2, f'V7 未完成：{type(error).__name__}: {error}\n')
+
+if __name__ == '__main__':
+    main()

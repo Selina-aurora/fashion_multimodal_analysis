@@ -1,0 +1,56 @@
+{
+  "data_isolation": {
+    "source_manifest": "configs/prd_8class_train_v3.csv",
+    "source_sha256": "bac77dc5a9afd3a9a80dd60996d741ad40bccb0aa8e0ea307a816acea47f394c",
+    "core_sha256": "c83204aca87c9c4dee304b774fd459bf5a18a2d1d65f0a3a9a79b92721224b89",
+    "validation_sha256": "b6984415c31bb2060f230e78e0e8a12dfa011122201e29bdd3dc028928476ba1",
+    "clean_manifest": "configs/prd_8class_train_v4_clean.csv",
+    "clean_sha256": "511e3f9be4ed749931e05a87a867afa331fa67c7fe89fb32de4eba8cb964aa6c",
+    "original_instances": 580,
+    "removed_instances": 33,
+    "clean_instances": 547,
+    "clean_images": 475,
+    "class_counts": {
+      "dress": 56,
+      "pants": 51,
+      "top": 57,
+      "skirt": 41,
+      "outerwear": 42,
+      "shoe": 100,
+      "bag": 100,
+      "accessory": 100
+    },
+    "source_counts": {
+      "DeepFashion2": 125,
+      "Fashionpedia": 422
+    },
+    "core_or_validation_overlap_images": 0,
+    "scope": "Normalized source_image path isolation. Not image-content deduplication or a restored untouched blind test."
+  },
+  "legacy_reviews": {
+    "primary_color": {
+      "reviewed_rows": 40,
+      "eligible_rows": 37,
+      "correct": 32,
+      "accuracy": 0.8648648648648649,
+      "split": "development",
+      "formal_acceptance": "NOT_CLAIMED",
+      "reason": "Previously inspected/tuned research holdout, retained as development evidence."
+    },
+    "pattern": {
+      "reviewed_rows": 40,
+      "eligible_rows": 40,
+      "correct": 34,
+      "accuracy": 0.85,
+      "split": "development",
+      "formal_acceptance": "NOT_CLAIMED",
+      "reason": "Previously inspected/tuned research holdout, retained as development evidence."
+    }
+  },
+  "candidates": {
+    "attribute_rows": 240,
+    "grounding_rows": 80,
+    "reused_existing_drafts": true
+  },
+  "status": "CODE_AND_DATA_PREPARED; REVIEW_AND_GPU_RUNS_REQUIRED"
+}

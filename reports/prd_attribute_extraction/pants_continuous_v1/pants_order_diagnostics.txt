@@ -1,0 +1,21 @@
+PRD 3.1.3 pants continuous feature v1
+======================================
+model=openai/clip-vit-base-patch32
+pants_instances=39
+shorts_n=10
+trousers_n=29
+
+Group means
+-----------
+shorts=0.6151
+trousers=0.8262
+
+Ordinal diagnostic
+------------------
+shorts < trousers: 258/290 pairwise-order accuracy=89.0%
+
+Interpretation
+--------------
+- The scalar is a continuous semantic feature, not exact physical GT.
+- DeepFashion2 only gives shorts/trousers here, so this validates order only.
+- Do not choose downstream thresholds from this same diagnostic set.

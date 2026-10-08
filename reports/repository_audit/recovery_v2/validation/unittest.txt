@@ -1,0 +1,35 @@
+test_extracted_algorithms_match_uploaded_ast_fingerprints (test_core.EvidenceTests.test_extracted_algorithms_match_uploaded_ast_fingerprints) ... ok
+test_overlap_audit_preserves_the_known_issue (test_core.EvidenceTests.test_overlap_audit_preserves_the_known_issue) ... ok
+test_overlap_keys_do_not_match_different_directories (test_core.EvidenceTests.test_overlap_keys_do_not_match_different_directories) ... ok
+test_box_geometry (test_core.MetricsTests.test_box_geometry) ... ok
+test_crop_mask_clipping_and_resize (test_core.MetricsTests.test_crop_mask_clipping_and_resize) ... ok
+test_full_mask_ignores_crop_bbox (test_core.MetricsTests.test_full_mask_ignores_crop_bbox) ... ok
+test_mask_geometry (test_core.MetricsTests.test_mask_geometry) ... ok
+test_copied_gpu_runtime_has_functioning_categorized_entrypoint (test_core.RuntimeTests.test_copied_gpu_runtime_has_functioning_categorized_entrypoint) ... ok
+test_launcher_restores_cwd_and_argv_after_failure (test_core.RuntimeTests.test_launcher_restores_cwd_and_argv_after_failure) ... ok
+test_paths_can_relocate (test_core.RuntimeTests.test_paths_can_relocate) ... ok
+test_invalid_training_distribution (test_core.SamplerTests.test_invalid_training_distribution) ... ok
+test_multiclass_image_uses_max_not_product (test_core.SamplerTests.test_multiclass_image_uses_max_not_product) ... ok
+test_no_balancing_and_sqrt_balancing (test_core.SamplerTests.test_no_balancing_and_sqrt_balancing) ... ok
+test_clean_manifest_excludes_all_core_and_validation_source_images (test_recovery.DataRepairTests.test_clean_manifest_excludes_all_core_and_validation_source_images) ... ok
+test_legacy_reviews_keep_actual_accuracy_as_development (test_recovery.DataRepairTests.test_legacy_reviews_keep_actual_accuracy_as_development) ... ok
+test_neckline_uses_predicted_part_and_never_gt_proxy_in_track_b (test_recovery.PipelineTests.test_neckline_uses_predicted_part_and_never_gt_proxy_in_track_b) ... ok
+test_roi_crop_and_coordinate_roundtrip (test_recovery.PipelineTests.test_roi_crop_and_coordinate_roundtrip) ... ok
+test_stage_failure_keeps_next_garment_and_failure_record (test_recovery.PipelineTests.test_stage_failure_keeps_next_garment_and_failure_record) ... ok
+test_two_predictions_are_processed_without_gt_filtering (test_recovery.PipelineTests.test_two_predictions_are_processed_without_gt_filtering) ... ok
+test_all_eligible_attribute_truth_including_segmentation_miss_remains (test_recovery.ProtocolTests.test_all_eligible_attribute_truth_including_segmentation_miss_remains) ... ok
+test_coarse_and_unreviewed_grounding_cannot_pass (test_recovery.ProtocolTests.test_coarse_and_unreviewed_grounding_cannot_pass) ... ok
+test_confidence_precedes_better_iou (test_recovery.ProtocolTests.test_confidence_precedes_better_iou) ... ok
+test_empty_or_missing_coverage_cannot_pass (test_recovery.ProtocolTests.test_empty_or_missing_coverage_cannot_pass) ... ok
+test_one_to_one_stable_ties_and_nonfinite_predictions (test_recovery.ProtocolTests.test_one_to_one_stable_ties_and_nonfinite_predictions) ... ok
+test_wrong_class_counts_as_fp_and_fn (test_recovery.ProtocolTests.test_wrong_class_counts_as_fp_and_fn) ... ok
+test_candidate_identity_and_original_image_coordinates_are_locked (test_recovery.ReviewTests.test_candidate_identity_and_original_image_coordinates_are_locked) ... ok
+test_complete_reviews_select_fixed_five_per_region (test_recovery.ReviewTests.test_complete_reviews_select_fixed_five_per_region) ... ok
+test_full_coverage_and_category_specific_labels_are_required (test_recovery.ReviewTests.test_full_coverage_and_category_specific_labels_are_required) ... ok
+test_pending_reviews_are_rejected (test_recovery.ReviewTests.test_pending_reviews_are_rejected) ... ok
+test_freeze_pipeline_and_report_keep_misses_in_denominator (test_recovery.WorkflowIntegrationTests.test_freeze_pipeline_and_report_keep_misses_in_denominator) ... ok
+
+----------------------------------------------------------------------
+Ran 30 tests in 0.639s
+
+OK

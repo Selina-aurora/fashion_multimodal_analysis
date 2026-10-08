@@ -1,0 +1,241 @@
+﻿sample_id,task_type,task_id,ai_review_status,human_review_status,target_present,gt_label,bbox,ambiguous,priority,reason
+SEGTEST1_0219,grounding,collar_001,completed,pending,yes,,[],1,1,颈部受绿色遮挡贴图、手臂和低清晰度影响，黑裙领口轮廓不可靠。
+SEGTEST1_0204,grounding,collar_002,completed,pending,yes,,[],1,1,白色印花裙的领口主要被抬起手部/头发遮挡，白衣亮部低对比，无法可靠给出完整领口紧框，撤去候选框。
+SEGTEST1_0157,grounding,collar_003,completed,pending,yes,,[],1,1,白色开衫领缘被手机、手和长发遮挡，只有两侧少量可见碎片，无法可靠给出完整领口紧框，撤去候选框。
+SEGTEST1_0179,grounding,collar_004,completed,pending,yes,,"[331, 318, 482, 389]",0,0,黑色印花袖夹克的圆形罗纹领口，排除内层印人像T恤的领口。
+SEGTEST1_0229,grounding,collar_005,completed,pending,yes,,"[396, 318, 481, 351]",0,0,绿色花卉裙圆弧领口及紧邻领缘。
+SEGTEST1_0208,grounding,collar_006,completed,pending,yes,,[],1,1,指定镜中远处黑裙人物失焦、反光且为侧后视，颈部/领口边界不可辨；不标前景人物的领口。
+SEGTEST1_0006,grounding,collar_007,completed,pending,yes,,[],1,1,目标衣物为中央骑木马人物的上衣；领口区域低分辨率并受项链干扰，无法可靠确定紧框。
+SEGTEST1_0013,grounding,collar_008,completed,pending,yes,,[],1,1,指定目标为镜面反射中的上衣；领口被头发遮挡，无法可靠确定边界。
+SEGTEST1_0246,grounding,collar_009,completed,pending,yes,,[],1,1,白裙领口被花束和双臂完全遮住；花束不是衣物装饰，不能用遮挡轮廓代替领口。
+SEGTEST1_0171,grounding,collar_010,completed,pending,yes,,"[232, 121, 284, 178]",0,0,格纹开衫/衬衫图像右侧可见领缘；另一侧部分被长发挡住。
+SEGTEST1_0040,grounding,cuff_001,completed,pending,no,,[],0,0,指定蓝色牛仔上衣为无袖/单肩样式，未见衣袖或袖口。
+SEGTEST1_0044,grounding,cuff_002,completed,pending,yes,,"[173, 311, 200, 322]",0,0,指定白色长袖上衣图像左侧的下垂袖末端；排除外层黑色圆点连衣裙。
+SEGTEST1_0178,grounding,cuff_003,completed,pending,yes,,[],1,1,格纹外套人物像素少，袖口与手、内层白衣混叠；放大后不能可靠给出紧框，撤去候选框。
+SEGTEST1_0022,grounding,cuff_004,completed,pending,,,[],1,1,目标上衣的上半部及袖部在原图上边缘之外，不能判定是否有袖口。
+SEGTEST1_0030,grounding,cuff_005,completed,pending,,,[],1,1,肩头可见短小蕾丝/荷叶边，但袖体与袖口不明确；cap袖或无袖装饰两种解释均可能。
+SEGTEST1_0226,grounding,cuff_006,completed,pending,no,,[],0,0,指定蓝色牛仔背带裙无袖；黑色T恤袖口属于内搭，不作为裙子袖口。
+SEGTEST1_0228,grounding,cuff_007,completed,pending,yes,,"[340, 322, 370, 344]",0,0,图像右侧蓝色格纹短袖的可见袖末端，排除手臂。
+SEGTEST1_0006,grounding,cuff_008,completed,pending,yes,,[],1,1,短袖边缘与手臂、双手混叠，原图像素不足，无法可靠界定袖口。
+SEGTEST1_0163,grounding,cuff_009,completed,pending,yes,,[],1,1,镜中外套袖末端与衣身/墙面混叠，放大后仍不能可靠定位袖口边缘；撤去候选框。
+SEGTEST1_0193,grounding,cuff_010,completed,pending,yes,,"[101, 692, 164, 733]",0,0,红色开衫图像左侧袖子末端可见，排除露出的手腕与包。
+SEGTEST1_0079,grounding,hem_001,completed,pending,yes,,[],1,1,裤腿向原图下边界延伸，真正的裤脚/下摆被裁出画面；膝部破洞不当作下摆。
+SEGTEST1_0213,grounding,hem_002,completed,pending,yes,,"[321, 755, 656, 829]",0,0,粉色长T恤裙的可见弧形下摆边缘带，排除下方灰色裤子。
+SEGTEST1_0107,grounding,hem_003,completed,pending,yes,,"[264, 633, 377, 666]",0,0,白色蕾丝裙可见波浪/镂空下摆，框包围最下部边缘带。
+SEGTEST1_0014,grounding,hem_004,completed,pending,yes,,"[300, 346, 430, 367]",0,0,黑色T恤下摆可见，取衣物底部边缘带，排除黄色裙子。
+SEGTEST1_0066,grounding,hem_005,completed,pending,yes,,"[427, 650, 441, 662]",0,0,选择图像左侧较清晰的一条裤腿底边，排除脚踝和鞋。
+SEGTEST1_0111,grounding,hem_006,completed,pending,yes,,"[382, 568, 419, 594]",0,0,深色裙子侧面可见弧形底边，排除大腿。
+SEGTEST1_0197,grounding,hem_007,completed,pending,yes,,[],1,1,放大复核后，深色短外套下摆与袖末端/内层花纹衣物混叠，无法可靠界定真正下摆，撤去候选框。
+SEGTEST1_0156,grounding,hem_008,completed,pending,yes,,"[314, 695, 466, 734]",0,0,平铺外套图像右侧衣片的底边；取单个可见下摆，不将两片间背景并入目标。
+SEGTEST1_0138,grounding,hem_009,completed,pending,yes,,"[627, 414, 674, 426]",0,0,目标为镜中小尺寸裙子；取可见裙子下边缘，排除家具和腿部。
+SEGTEST1_0130,grounding,hem_010,completed,pending,yes,,[],1,1,圆点裙延伸到原图下边界，真实下摆在画面外；图像裁切边缘不作为裙子下摆。
+SEGTEST1_0022,grounding,pocket_001,completed,pending,,,[],1,1,指定上衣仅显示下半部且有黑白图案；缺失的胸部区域可能影响口袋判断，不能可靠判为不存在。
+SEGTEST1_0092,grounding,pocket_002,completed,pending,,,[],1,1,深色短裤高腰褶皱/腰带形成多个暗纹，侧袋开口不能与褶皱可靠区分。
+SEGTEST1_0082,grounding,pocket_003,completed,pending,,,[],1,1,浅色长裤主要为后侧视图，可见线条不能可靠区分侧缝、褶皱和口袋开口；不凭缝线猜口袋。
+SEGTEST1_0159,grounding,pocket_004,completed,pending,,,[],1,1,放大复核后，黑色外套胸部短亮线仍不能可靠区分袋口/拉链与褶皱；撤去候选框，不凭低清线条确认口袋。
+SEGTEST1_0089,grounding,pocket_005,completed,pending,yes,,"[289, 522, 322, 553]",0,0,选择图像左侧牛仔短裤前口袋弧形开口与紧邻可见袋面。
+SEGTEST1_0025,grounding,pocket_006,completed,pending,,,[],1,1,指定白色上衣只显示背面，胸前不可见；背面未见口袋，不能据此判断整件衣物没有口袋。
+SEGTEST1_0131,grounding,pocket_007,completed,pending,,,[],1,1,浅灰裙两侧被双臂及手部遮挡，可见细线不足以确认口袋开口。
+SEGTEST1_0195,grounding,pocket_008,completed,pending,yes,,"[183, 205, 210, 234]",0,0,白色外搭图像左侧胸袋及袋盖可见；排除手机。
+SEGTEST1_0249,grounding,pocket_009,completed,pending,,,[],1,1,白色连衣裙像素较少且袋子/手臂遮挡侧边，没有足够清楚的口袋开口证据。
+SEGTEST1_0102,grounding,pocket_010,completed,pending,,,[],1,1,小尺寸浅黄裙子表面模糊，不能区分侧缝与口袋；无清楚口袋证据也不能可靠判断不存在。
+SEGTEST1_0024,grounding,shoulder_001,completed,pending,yes,,"[184, 195, 254, 236]",0,0,选择图像左侧最清晰的一侧肩部；限定为白色上衣，排除项链和皮肤。
+SEGTEST1_0036,grounding,shoulder_002,completed,pending,yes,,"[312, 341, 359, 390]",0,0,选择图像右侧较清楚的衬衫肩部，排除头部和背景；保留肩部衣料。
+SEGTEST1_0018,grounding,shoulder_003,completed,pending,yes,,[],1,1,吊带/无袖上衣肩部被长发遮挡且双臂抬起，无法界定肩带/肩部边缘。
+SEGTEST1_0194,grounding,shoulder_004,completed,pending,yes,,"[276, 146, 311, 192]",0,0,粉色开衫图像左侧可见肩部；排除头发和内层灰衣。
+SEGTEST1_0026,grounding,shoulder_005,completed,pending,yes,,"[235, 141, 291, 179]",0,0,选择图像右侧较清晰的上衣肩部，排除颈部、背景和双手。
+SEGTEST1_0041,grounding,shoulder_006,completed,pending,yes,,"[354, 279, 378, 299]",0,0,选择图像左侧可见肩部；框依据原图衣物轮廓，细节清晰度较低。
+SEGTEST1_0169,grounding,shoulder_007,completed,pending,yes,,"[296, 178, 361, 235]",0,0,橙色开衫图像右侧可见肩部；排除内层白色上衣和头发。
+SEGTEST1_0202,grounding,shoulder_008,completed,pending,yes,,[],1,1,指定目标为拼图顶部的紫色裙子，其上半身被原图裁掉；不能用拼图下方另一件白裙的肩部补标。
+SEGTEST1_0219,grounding,shoulder_009,completed,pending,yes,,"[197, 118, 221, 144]",0,1,黑色无袖裙图像左侧肩带/肩部衣料可见；人物像素少，重点复核此框。
+SEGTEST1_0029,grounding,shoulder_010,completed,pending,yes,,[],1,1,原图将指定白色无袖上衣的肩颈部裁出画面，仅见躯干和手臂；不能给出可见肩部框。
+SEGTEST1_0118,grounding,waist_001,completed,pending,yes,,"[278, 88, 460, 142]",0,0,浅色镂空裙上部腰围可见区域，排除外层白色上衣；腰头最上缘部分被覆盖。
+SEGTEST1_0013,grounding,waist_002,completed,pending,yes,,"[646, 674, 713, 714]",0,0,镜中指定上衣的下部腰腹区域，取可见白色衣物；排除裤子和右侧手臂。
+SEGTEST1_0044,grounding,waist_003,completed,pending,yes,,[],1,1,白色上衣腰部被外层黑色圆点连衣裙遮挡，仅侧缘露出，不能定位完整腰部区域。
+SEGTEST1_0179,grounding,waist_004,completed,pending,yes,,"[289, 629, 415, 711]",0,0,选择黑色夹克图像左侧可见的腰部衣片，排除内搭人像/文字区域及右侧花纹袖子。
+SEGTEST1_0077,grounding,waist_005,completed,pending,yes,,"[313, 538, 398, 566]",0,0,黑色短裤上部腰带附近可见区域；上衣遮住腰头最上缘，框限定为可见裤料。
+SEGTEST1_0186,grounding,waist_006,completed,pending,yes,,"[320, 420, 451, 475]",0,0,蓝色西装外套收腰、纽扣与腰侧袋附近的腰部区域。
+SEGTEST1_0142,grounding,waist_007,completed,pending,yes,,[],1,1,粉色纱裙腰头被白色上衣下摆与手部覆盖；可见裙身不能代替精确腰部边界。
+SEGTEST1_0061,grounding,waist_008,completed,pending,yes,,"[279, 357, 422, 410]",0,0,牛仔裤弹性腰头及紧邻腰部布料可见，排除上衣和左侧包带。
+SEGTEST1_0171,grounding,waist_009,completed,pending,yes,,[],1,1,坐姿、开襟和手臂遮挡使格纹外套腰腹部仅露出两侧碎片，无法可靠给出单一紧框。
+SEGTEST1_0207,grounding,waist_010,completed,pending,yes,,"[364, 232, 479, 286]",0,0,蓝底白花裙躯干中部的腰线/收腰区域。
+SEGTEST1_0355,grounding,pattern_001,completed,pending,no,,[],0,0,指定长围巾为黑色素面/细褶纹理；多色印花在内层上衣上，不属于围巾。
+SEGTEST1_0072,grounding,pattern_002,completed,pending,,,[],1,1,指定目标为背景行人的裤子，严重失焦，无法可靠判断有无印花。
+SEGTEST1_0108,grounding,pattern_003,completed,pending,no,,[],0,0,指定蓝色裙子为素色/牛仔纹理；圆点在外层黑色上衣上，粉色包不属于裙子。
+SEGTEST1_0169,grounding,pattern_004,completed,pending,no,,[],0,0,橙色开衫为素色，竖向罗纹是织物结构，不是印花。
+SEGTEST1_0071,grounding,pattern_005,completed,pending,yes,,"[488, 278, 523, 312]",0,0,指定右侧人物短裤上的可见彩色文字/旗帜图案；不标另一人的裤子。
+SEGTEST1_0296,grounding,pattern_006,completed,pending,,,[],1,1,鞋底可见软木/木纹样结构，鞋面细节模糊，无法确认是否存在独立印花；不把鞋底纹理直接标为印花。
+SEGTEST1_0315,grounding,pattern_007,completed,pending,yes,,"[219, 493, 347, 596]",0,0,包面为满版豹纹，框包围可见印花面板的外缘；手部遮挡间隙不作新的印花推断。
+SEGTEST1_0010,grounding,pattern_008,completed,pending,no,,[],0,0,指定白色吊带上衣为素色；未见可定位的印花。
+SEGTEST1_0165,grounding,pattern_009,completed,pending,no,,[],0,0,指定深色皮外套未见印花；黑色花卉图案位于内层白色连衣裙，不属于目标外套。
+SEGTEST1_0305,grounding,pattern_010,completed,pending,no,,[],0,0,托特包为黑/米白大块拼色，可见面没有独立的印花图案；拼色在属性任务记other_pattern。
+SEGTEST1_0343,grounding,decoration_001,completed,pending,yes,,"[288, 285, 303, 304]",0,1,棕色肩包上部可见小扣件/皮带环细节，排除肩带、白袖和手臂；需重点复核。
+SEGTEST1_0186,grounding,decoration_002,completed,pending,yes,,"[399, 336, 440, 344]",0,0,选图像右侧胸部口袋上方的细长金色装饰/袋口金属饰条；排除独立项链。
+SEGTEST1_0313,grounding,decoration_003,completed,pending,,,[],1,1,GT包框主要包含肩带、白色外套及手臂；包身仅露狭窄侧面，无法确认包上装饰。
+SEGTEST1_0045,grounding,decoration_004,completed,pending,no,,[],0,0,指定灰色格纹上衣未见独立附加饰件；细白线为格纹，不作为decoration。
+SEGTEST1_0319,grounding,decoration_005,completed,pending,,,[],1,1,背包为侧视且大部分被身体/外套挡住，可见长条主要是功能背带/垂带，不能确认独立装饰。
+SEGTEST1_0008,grounding,decoration_006,completed,pending,no,,[],0,0,可见装饰性图案为胸前旗帜印花，归入pattern；未见独立的蝴蝶结、花饰、亮片或附加饰件。
+SEGTEST1_0306,grounding,decoration_007,completed,pending,yes,,"[564, 365, 586, 393]",0,0,选择背包上部袋盖的金色金属扣/扣件细节，排除肩带与普通包身。
+SEGTEST1_0115,grounding,decoration_008,completed,pending,yes,,[],1,1,腰部可见独立皮带及金属扣，但不能确认它属于裙子自带装饰还是另一个配饰；目标范围歧义。
+SEGTEST1_0307,grounding,decoration_009,completed,pending,yes,,"[290, 402, 316, 453]",0,0,黑色手拿包图像右侧竖向浅色/金属串珠饰边可見；排除手部。
+SEGTEST1_0100,grounding,decoration_010,completed,pending,,,[],1,1,白色印字手拿包和手臂遮挡指定深色短裤大部分上半部；包的字样/手腕饰品不是短裤装饰。
+SEGTEST1_0030,attribute,primary_color,completed,pending,,white,,0,0,主体为白色，阴影不另作颜色。
+SEGTEST1_0030,attribute,pattern,completed,pending,,solid,,0,0,中心衣身素色，肩部蕾丝为结构/纹理，不判为印花。
+SEGTEST1_0030,attribute,sleeve_length,completed,pending,,,,1,1,肩头短蕾丝荷叶边难区分cap袖与无袖装饰。
+SEGTEST1_0030,attribute,neckline,completed,pending,,,,1,1,长发遮住领口两侧，crew和round_scoop无法可靠区分。
+SEGTEST1_0030,attribute,silhouette_fit,completed,pending,,regular_straight,,0,0,衣身自然垂落，有正常松量，未明显贴身或超宽。
+SEGTEST1_0030,attribute,fashion_style,completed,pending,,,,1,1,白色蕾丝细节兼具romantic和elegant特征，现有标签无互斥定义。
+SEGTEST1_0026,attribute,primary_color,completed,pending,,,,1,1,上衣呈低饱和灰绿，gray/green均合理，原图光照和低清晰度使主色无法唯一判定。
+SEGTEST1_0026,attribute,pattern,completed,pending,,solid,,0,0,指定上衣未见独立印花，深浅变化来自褶皱/阴影。
+SEGTEST1_0026,attribute,sleeve_length,completed,pending,,short,,0,0,袖末端在上臂中段，未到肘部。
+SEGTEST1_0026,attribute,neckline,completed,pending,,,,1,1,双手和颈部阴影遮挡领口，无法可靠区分圆领类型。
+SEGTEST1_0026,attribute,silhouette_fit,completed,pending,,loose_oversized,,0,0,上衣宽大，袖身及躯干有明显余量。
+SEGTEST1_0026,attribute,fashion_style,completed,pending,,,,1,1,素色宽松上衣可归casual或minimalist，图片没有足够信息唯一判定风格。
+SEGTEST1_0041,attribute,primary_color,completed,pending,,,,1,1,低清图中上衣呈浅灰蓝/灰绿，blue、gray、green边界不明确。
+SEGTEST1_0041,attribute,pattern,completed,pending,,solid,,0,0,未见稳定可辨印花。
+SEGTEST1_0041,attribute,sleeve_length,completed,pending,,short,,0,0,袖末端位于上臂，未延伸至肘部；可见卷边。
+SEGTEST1_0041,attribute,neckline,completed,pending,,,,1,1,领口模糊且部分被头发遮挡，可能为V领或衬衫领。
+SEGTEST1_0041,attribute,silhouette_fit,completed,pending,,regular_straight,,0,0,衣身自然直落，有正常余量，腰部收拢来自塞入/打结。
+SEGTEST1_0041,attribute,fashion_style,completed,pending,,,,1,1,衬衫细节不清，casual/elegant均可成立。
+SEGTEST1_0047,attribute,primary_color,completed,pending,,white,,0,0,指定上衣为白色，排除深色裙子。
+SEGTEST1_0047,attribute,pattern,completed,pending,,,,1,1,同色叶片/花瓣状立体装饰覆盖衣面；solid与floral/other_pattern取决于是否将立体装饰计入纹样，页面未定义。
+SEGTEST1_0047,attribute,sleeve_length,completed,pending,,sleeveless,,0,0,裸露双臂，上衣无衣袖。
+SEGTEST1_0047,attribute,neckline,completed,pending,,round_scoop,,0,0,宽而较深的弧形领口，低于贴颈圆领。
+SEGTEST1_0047,attribute,silhouette_fit,completed,pending,,regular_straight,,0,0,衣身直落并有层叠装饰，不沿腰部明显紧身收合。
+SEGTEST1_0047,attribute,fashion_style,completed,pending,,,,1,1,白色层叠花瓣装饰同时支持romantic/elegant，风格标签缺少互斥口径。
+SEGTEST1_0015,attribute,primary_color,completed,pending,,red,,0,0,以红/酒红色底和红色几何纹为主色，排除头发及皮肤。
+SEGTEST1_0015,attribute,pattern,completed,pending,,geometric_abstract,,0,0,重复菱形、锯齿和几何纹样。
+SEGTEST1_0015,attribute,sleeve_length,completed,pending,,sleeveless,,0,0,裸露肩臂，未见衣袖。
+SEGTEST1_0015,attribute,neckline,completed,pending,,,,1,1,领口轮廓被长发覆盖；可能为圆领，但可见像素不足以区分crew/round_scoop。
+SEGTEST1_0015,attribute,silhouette_fit,completed,pending,,slim_fitted,,0,0,指定上衣沿躯干收合，腰部没有明显宽松余量。
+SEGTEST1_0015,attribute,fashion_style,completed,pending,,,,1,1,几何/民族风纹样同时可支持casual或vintage；现有风格标签不互斥，无法唯一确定。
+SEGTEST1_0094,attribute,primary_color,completed,pending,,blue,,0,0,主体为蓝色牛仔布，排除皮肤及外层黑衣。
+SEGTEST1_0094,attribute,pattern,completed,pending,,solid,,0,0,破洞、毛边和磨白不当作独立印花图案。
+SEGTEST1_0094,attribute,silhouette_fit,completed,pending,,straight,,0,0,牛仔短裤为常规直形裤腿，未见显著外扩。
+SEGTEST1_0094,attribute,fashion_style,completed,pending,,,,1,1,做旧牛仔短裤可归casual或streetwear，现有风格口径不能唯一判定。
+SEGTEST1_0070,attribute,primary_color,completed,pending,,black,,0,0,指定裤腿主体为黑色，排除上衣和靴子。
+SEGTEST1_0070,attribute,pattern,completed,pending,,solid,,0,0,裤腿未见印花。
+SEGTEST1_0070,attribute,silhouette_fit,completed,pending,,slim_tapered,,0,0,裤腿贴合双腿并向踝部收窄；外层短裙不作为裤腿轮廓。
+SEGTEST1_0070,attribute,fashion_style,completed,pending,,,,1,1,黑色贴腿裤可用于casual/sporty/minimalist，图片未提供唯一风格线索。
+SEGTEST1_0091,attribute,primary_color,completed,pending,,gray,,0,0,裤料为中浅灰色。
+SEGTEST1_0091,attribute,pattern,completed,pending,,solid,,0,0,深浅变化为褶皱，未见印花。
+SEGTEST1_0091,attribute,silhouette_fit,completed,pending,,slim_tapered,,0,0,髋部有余量，裤腿向脚踝收窄。
+SEGTEST1_0091,attribute,fashion_style,completed,pending,,sporty,,0,0,松紧腰/踝部及休闲运动裤形态明显。
+SEGTEST1_0083,attribute,primary_color,completed,pending,,blue,,0,0,蓝色牛仔短裤，白色磨白为材质/洗水明暗。
+SEGTEST1_0083,attribute,pattern,completed,pending,,solid,,0,0,洗水、褶皱和卷边不作独立印花。
+SEGTEST1_0083,attribute,silhouette_fit,completed,pending,,straight,,0,0,短裤裤腿常规宽度、开口较直，未见明显喇叭或紧缩。
+SEGTEST1_0083,attribute,fashion_style,completed,pending,,casual,,0,0,牛仔短裤卷边，为日常休闲样式；无正装或运动制服细节。
+SEGTEST1_0096,attribute,primary_color,completed,pending,,black,,0,0,只审核黄色框内的黑色裤子，排除蓝白格外套。
+SEGTEST1_0096,attribute,pattern,completed,pending,,solid,,0,0,指定裤子未见印花。
+SEGTEST1_0096,attribute,silhouette_fit,completed,pending,,slim_tapered,,0,0,裤腿贴合并向脚踝收窄。
+SEGTEST1_0096,attribute,fashion_style,completed,pending,,,,1,1,黑色修身裤可用于casual/formal/minimalist，无法仅凭裤子唯一确定。
+SEGTEST1_0147,attribute,primary_color,completed,pending,,white,,0,0,白色蕾丝/薄纱裙，排除粉色上衣。
+SEGTEST1_0147,attribute,pattern,completed,pending,,floral,,0,0,裙面蕾丝有可辨重复花朵纹样；此处pattern按外观纹样，不限印刷工艺。
+SEGTEST1_0147,attribute,silhouette_fit,completed,pending,,,,1,1,人物坐姿使裙身铺在腿上，原图未展示站立裙型，不能可靠区分straight/a_line/flared。
+SEGTEST1_0147,attribute,fashion_style,completed,pending,,romantic,,0,0,白色蕾丝花纹、轻薄纱层为明确浪漫风格线索。
+SEGTEST1_0142,attribute,primary_color,completed,pending,,pink,,0,0,粉色纱裙主体。
+SEGTEST1_0142,attribute,pattern,completed,pending,,,,1,1,底布素色，散布白色点状珠饰；polka_dot与solid+decoration两种口径均可能，页面未定义装饰是否计入pattern。
+SEGTEST1_0142,attribute,silhouette_fit,completed,pending,,flared,,0,0,收褶腰和多层纱裙明显蓬松外扩。
+SEGTEST1_0142,attribute,fashion_style,completed,pending,,romantic,,0,0,粉色、多层薄纱与珠点组合具有明确浪漫风格线索。
+SEGTEST1_0127,attribute,primary_color,completed,pending,,,,1,1,红/粉棕底与密集浅色花纹混合，pink/red/brown均可能；未有主色面积/色系边界口径。
+SEGTEST1_0127,attribute,pattern,completed,pending,,,,1,1,可见密集细碎重复纹样，但原图像素不足以确认是floral还是other_pattern，不能猜花型。
+SEGTEST1_0127,attribute,silhouette_fit,completed,pending,,flared,,0,0,腰部大量收褶，长裙裙身明显蓬松展开。
+SEGTEST1_0127,attribute,fashion_style,completed,pending,,,,1,1,细碎纹长裙兼具romantic/vintage/casual特征，无法唯一判定。
+SEGTEST1_0102,attribute,primary_color,completed,pending,,yellow,,0,0,浅柠檬黄色裙料，排除上衣和皮肤。
+SEGTEST1_0102,attribute,pattern,completed,pending,,solid,,0,0,未见独立印花。
+SEGTEST1_0102,attribute,silhouette_fit,completed,pending,,a_line,,0,0,腰窄、下摆稍宽，呈A字轮廓。
+SEGTEST1_0102,attribute,fashion_style,completed,pending,,,,1,1,简单浅黄裙子可为casual/romantic；人物搭配不作为裙子的唯一风格真值。
+SEGTEST1_0104,attribute,primary_color,completed,pending,,yellow,,0,0,主体黄色。
+SEGTEST1_0104,attribute,pattern,completed,pending,,solid,,0,0,裙料无独立图案，褶皱/阴影不作印花。
+SEGTEST1_0104,attribute,silhouette_fit,completed,pending,,a_line,,0,0,腰部较窄，下摆逐渐外扩。
+SEGTEST1_0104,attribute,fashion_style,completed,pending,,casual,,0,0,日常短A字裙样式，无正装或运动制服细节。
+SEGTEST1_0187,attribute,primary_color,completed,pending,,black,,0,0,目标深色外套以黑色为主，局部绿调可能为曝光/色偏。
+SEGTEST1_0187,attribute,pattern,completed,pending,,solid,,0,0,衣身素色，领缘白色细条为边缘装饰，不作全衣印花。
+SEGTEST1_0187,attribute,sleeve_length,completed,pending,,,,1,1,目标是右侧小人物，袖子与抬起手臂混叠，袖末端位置不清。
+SEGTEST1_0187,attribute,neckline,completed,pending,,,,1,1,外套领缘为白色条纹，低清图无法唯一辨别shirt_collar/polo/其他开襟领。
+SEGTEST1_0187,attribute,silhouette_fit,completed,pending,,loose_oversized,,0,0,衣身宽松、腰部明显有余量，下摆宽。
+SEGTEST1_0187,attribute,fashion_style,completed,pending,,,,1,1,深色宽松外套带运动领缘元素，但casual/sporty均合理。
+SEGTEST1_0196,attribute,primary_color,completed,pending,,black,,0,0,黑色外套，排除内搭和裤子。
+SEGTEST1_0196,attribute,pattern,completed,pending,,solid,,0,0,未见印花，腰带及缝线为结构。
+SEGTEST1_0196,attribute,sleeve_length,completed,pending,,short,,0,0,袖子覆盖上臂上段但未到肘部。
+SEGTEST1_0196,attribute,neckline,completed,pending,,v_neck,,0,0,无翻领外套前开口形成深V形；内搭方/圆领不作为外套领型。
+SEGTEST1_0196,attribute,silhouette_fit,completed,pending,,slim_fitted,,0,0,腰部明显收合，有腰带和立体剪裁。
+SEGTEST1_0196,attribute,fashion_style,completed,pending,,formal,,0,0,结构化肩部、收腰和腰带的职业西装外套样式。
+SEGTEST1_0199,attribute,primary_color,completed,pending,,white,,0,0,挂在衣架上的白色外衣。
+SEGTEST1_0199,attribute,pattern,completed,pending,,solid,,0,0,无独立印花。
+SEGTEST1_0199,attribute,sleeve_length,completed,pending,,long,,0,0,袖体长度延伸至常规手腕处，末端可见收口。
+SEGTEST1_0199,attribute,neckline,completed,pending,,shirt_collar,,0,0,清楚可见尖角衬衫翻领。
+SEGTEST1_0199,attribute,silhouette_fit,completed,pending,,,,1,1,无穿着者，仅衣架平挂，无法可靠区分regular_straight与loose_oversized的合身度。
+SEGTEST1_0199,attribute,fashion_style,completed,pending,,,,1,1,白色翻领外衣可用于casual/formal/minimalist，单张衣架图不能唯一确定。
+SEGTEST1_0168,attribute,primary_color,completed,pending,,white,,0,0,指定外层白色衣物为主，排除内层绿色图案和背景的黄色脸部遮挡贴图。
+SEGTEST1_0168,attribute,pattern,completed,pending,,solid,,0,0,外层白衣未见印花，胸前绿色图案在内层衣物上。
+SEGTEST1_0168,attribute,sleeve_length,completed,pending,,,,1,1,人物像素少且一臂抬高，外衣袖末端无法与裸臂/内层衣物清楚区分。
+SEGTEST1_0168,attribute,neckline,completed,pending,,,,1,1,头部遮挡贴图和低分辨率使外衣开口不可辨，不能从内层上衣推断外衣领型。
+SEGTEST1_0168,attribute,silhouette_fit,completed,pending,,regular_straight,,0,0,外层白衣有正常余量，沿身侧直落，未呈显著紧身或超宽。
+SEGTEST1_0168,attribute,fashion_style,completed,pending,,casual,,0,0,轻便日常外搭，未见正式礼服或运动制服结构。
+SEGTEST1_0180,attribute,primary_color,completed,pending,,gray,,0,0,只审核图像左侧人物的灰色开衫。
+SEGTEST1_0180,attribute,pattern,completed,pending,,solid,,0,0,未见独立印花。
+SEGTEST1_0180,attribute,sleeve_length,completed,pending,,long,,0,0,两侧袖末端延伸至手腕，双手插袋。
+SEGTEST1_0180,attribute,neckline,completed,pending,,,,1,1,原图顶部裁掉颈部和开衫最上部，不能可靠判断领型。
+SEGTEST1_0180,attribute,silhouette_fit,completed,pending,,regular_straight,,0,0,开衫有常规松量、侧边自然直落。
+SEGTEST1_0180,attribute,fashion_style,completed,pending,,casual,,0,0,灰色开衫为日常休闲外搭。
+SEGTEST1_0249,attribute,primary_color,completed,pending,,white,,0,0,白色/近白底裙料，排除背景。
+SEGTEST1_0249,attribute,pattern,completed,pending,,,,1,1,裙面有稀疏深色小图案，但像素不足以确认是花卉、其他印花或附加饰件。
+SEGTEST1_0249,attribute,sleeve_length,completed,pending,,short,,0,0,袖末端在上臂，未至肘部。
+SEGTEST1_0249,attribute,neckline,completed,pending,,,,1,1,领口像素少，宽圆弧可为crew或round_scoop，深浅边界缺少足够细节。
+SEGTEST1_0249,attribute,silhouette_fit,completed,pending,,a_line,,0,0,腰部略收合，裙摆逐渐变宽。
+SEGTEST1_0249,attribute,fashion_style,completed,pending,,casual,,0,0,短袖日常连衣裙形态，未见礼服或运动制服结构。
+SEGTEST1_0238,attribute,primary_color,completed,pending,,black,,0,0,黑色底布为连续主体，红/粉色小花为印花颜色。
+SEGTEST1_0238,attribute,pattern,completed,pending,,floral,,0,0,密集红/粉色小花及叶茎纹样。
+SEGTEST1_0238,attribute,sleeve_length,completed,pending,,sleeveless,,0,0,细肩带，双臂裸露，无袖。
+SEGTEST1_0238,attribute,neckline,completed,pending,,,,1,1,左侧领口受抬起手臂遮挡，碎花使中心领缘不清，浅V/弧形低领均可能。
+SEGTEST1_0238,attribute,silhouette_fit,completed,pending,,a_line,,0,0,胸腰部收合，裙摆渐向外展开。
+SEGTEST1_0238,attribute,fashion_style,completed,pending,,romantic,,0,0,细肩带、花卉图案和收腰短裙组合为明确浪漫风格线索。
+SEGTEST1_0228,attribute,primary_color,completed,pending,,blue,,0,0,浅蓝色格纹主体，白色细格不改变主色。
+SEGTEST1_0228,attribute,pattern,completed,pending,,checked_plaid,,0,0,规则相交的细小蓝白方格。
+SEGTEST1_0228,attribute,sleeve_length,completed,pending,,short,,0,0,袖末端在上臂，未到肘部。
+SEGTEST1_0228,attribute,neckline,completed,pending,,,,1,1,可见前襟纽扣，但颈部像素少，衬衫翻领/短立领轮廓无法可靠区分。
+SEGTEST1_0228,attribute,silhouette_fit,completed,pending,,a_line,,0,0,腰部收褶、裙摆逐渐向下展开。
+SEGTEST1_0228,attribute,fashion_style,completed,pending,,casual,,0,0,短袖格纹衬衫式日常短裙，未见礼服或运动制服结构。
+SEGTEST1_0202,attribute,primary_color,completed,pending,,purple,,0,0,指定拼图顶部裙子为浅紫/薰衣草色；不取下方白裙。
+SEGTEST1_0202,attribute,pattern,completed,pending,,solid,,0,0,可见紫色裙身无印花，薄纱褶皱为结构。
+SEGTEST1_0202,attribute,sleeve_length,completed,pending,,,,1,1,指定紫色裙子上半身在原图外，衣袖不可见。
+SEGTEST1_0202,attribute,neckline,completed,pending,,,,1,1,指定紫色裙子颈部在原图外；不能使用另一张白色款商品图推断。
+SEGTEST1_0202,attribute,silhouette_fit,completed,pending,,,,1,1,只显示下半裙摆，缺少腰线和上半身，不能可靠确定整件dress的fit轮廓。
+SEGTEST1_0202,attribute,fashion_style,completed,pending,,,,1,1,浅紫色层叠裙摆可支持romantic/elegant，但整件衣物未展示完整。
+SEGTEST1_0203,attribute,primary_color,completed,pending,,black,,0,0,内层连衣裙黑色底面积占主导，排除荧光绿开衫。
+SEGTEST1_0203,attribute,pattern,completed,pending,,floral,,0,0,清晰的白/黄/紫花朵及叶茎印花。
+SEGTEST1_0203,attribute,sleeve_length,completed,pending,,sleeveless,,0,0,黑色连衣裙为肩带/无袖，绿色衣袖属于外搭。
+SEGTEST1_0203,attribute,neckline,completed,pending,,v_neck,,0,0,指定黑色连衣裙领口向胸前中央形成V形。
+SEGTEST1_0203,attribute,silhouette_fit,completed,pending,,,,1,1,仅显示上胸部，腰部和裙身被原图裁出，不能可靠判定整件裙型。
+SEGTEST1_0203,attribute,fashion_style,completed,pending,,,,1,1,花卉连衣裙可归romantic/casual，且画面仅显示局部，缺少完整风格线索。
+SEGTEST1_0282,attribute,primary_color,completed,pending,,gray,,0,0,鞋面为银灰色；词表没有silver，按色系映射到gray，闪光不作白色印花。
+SEGTEST1_0282,attribute,pattern,completed,pending,,solid,,0,0,整体闪亮/金属质感是纹理，不是独立印花。
+SEGTEST1_0256,attribute,primary_color,completed,pending,,,,1,1,源GT鞋框主要覆盖小腿和踝部，真正鞋身位于框下方；当前目标框不足以确认整只鞋主色。
+SEGTEST1_0256,attribute,pattern,completed,pending,,,,1,1,GT框没有完整覆盖鞋面；不能把皮肤纹理或框外鞋子直接当作当前ROI真值。
+SEGTEST1_0262,attribute,primary_color,completed,pending,,black,,0,0,黑色鱼嘴高跟鞋，皮肤不计入主色。
+SEGTEST1_0262,attribute,pattern,completed,pending,,solid,,0,0,鞋面无印花，开口和搭接为结构。
+SEGTEST1_0290,attribute,primary_color,completed,pending,,black,,0,0,黑色高跟鞋，排除脚背皮肤。
+SEGTEST1_0290,attribute,pattern,completed,pending,,solid,,0,0,无独立印花，明暗是高光/轮廓。
+SEGTEST1_0285,attribute,primary_color,completed,pending,,,,1,1,舞台红紫灯光显著，鞋面呈深棕紫/黑色，black与brown无法可靠区分。
+SEGTEST1_0285,attribute,pattern,completed,pending,,,,1,1,多排圆形孔/金属饰点可视为solid+装饰或polka_dot，原图不能确认其工艺及pattern口径。
+SEGTEST1_0323,attribute,primary_color,completed,pending,,white,,0,0,包身为白/米白色；阴影、五金和黑裙不计入主色。
+SEGTEST1_0323,attribute,pattern,completed,pending,,solid,,0,0,包面无印花，菱形拼接/缝线为结构。
+SEGTEST1_0305,attribute,primary_color,completed,pending,,,,1,1,包身下部奶油/米白色面积较大，white/beige均可能，舞台光照偏暖；黑色上部为次色。
+SEGTEST1_0305,attribute,pattern,completed,pending,,other_pattern,,0,1,大块黑/米白拼色，不是重复条纹；pattern按外观纹样，使用other_pattern。
+SEGTEST1_0325,attribute,primary_color,completed,pending,,blue,,0,0,背包主体呈深蓝/海军蓝，黑色边带和阴影面积较小。
+SEGTEST1_0325,attribute,pattern,completed,pending,,solid,,0,0,包面无印花，条带、拉链和扣件为结构。
+SEGTEST1_0344,attribute,primary_color,completed,pending,,black,,0,0,指定黑色小肩包和流苏，排除GT框内占较大面积的手臂与灰裙。
+SEGTEST1_0344,attribute,pattern,completed,pending,,solid,,0,0,包面素色，流苏是装饰结构。
+SEGTEST1_0321,attribute,primary_color,completed,pending,,,,1,1,包面有米色、红棕色和浅色几何图案，手部遮挡显著，没有单一明确占优的主色。
+SEGTEST1_0321,attribute,pattern,completed,pending,,geometric_abstract,,0,0,放射形折线/三角几何纹样，排除人物裙子的花纹。
+SEGTEST1_0355,attribute,primary_color,completed,pending,,black,,0,0,指定长围巾为黑色，排除内层印花衣物及黄色裤子。
+SEGTEST1_0355,attribute,pattern,completed,pending,,solid,,0,0,围巾无独立印花，细纵线为褶皱/纹理。
+SEGTEST1_0376,attribute,primary_color,completed,pending,,black,,0,0,指定中间黑色表带/表壳为主，白色表盘为次色；不审核右侧红色腕表。
+SEGTEST1_0376,attribute,pattern,completed,pending,,,,1,1,四分区黑白表盘为手表结构/图形，衣物pattern词表未定义是否算geometric_abstract或solid，不能强行套用。
+SEGTEST1_0353,attribute,primary_color,completed,pending,,white,,0,0,腰部露出的配饰带为白/浅灰底，排除黑短裤及粉上衣。
+SEGTEST1_0353,attribute,pattern,completed,pending,,,,1,1,配饰带上有深色小点/孔，低清图无法区分印花圆点与穿孔/镶嵌装饰；solid+装饰或polka_dot均可能。
+SEGTEST1_0366,attribute,primary_color,completed,pending,,red,,0,0,指定袜/紧身袜为深红/酒红色，排除黄色外套、黑色阴影与棕鞋。
+SEGTEST1_0366,attribute,pattern,completed,pending,,solid,,0,0,未见独立印花。
+SEGTEST1_0351,attribute,primary_color,completed,pending,,black,,0,0,指定头纱/网状头饰为黑色，肤色和头发不作为配饰主色。
+SEGTEST1_0351,attribute,pattern,completed,pending,,geometric_abstract,,0,1,头饰可见规则菱形网格；pattern按可见几何纹样，非印刷工艺判断。

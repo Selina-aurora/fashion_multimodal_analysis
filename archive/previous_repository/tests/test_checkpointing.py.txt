@@ -1,0 +1,70 @@
+from __future__ import annotations
+
+import os
+
+import pytest
+import torch
+
+from fashion_mm.utils.checkpointing import CheckpointManager
+from fashion_mm.utils.checkpointing import CheckpointWriteError
+from fashion_mm.utils.checkpointing import atomic_torch_save
+
+
+def test_atomic_torch_save_preserves_destination_after_failed_write(tmp_path):
+    destination = tmp_path / "checkpoint.pt"
+    destination.write_bytes(b"valid checkpoint")
+
+    def fail_after_partial_write(payload, path):
+        del payload
+        path.write_bytes(b"partial")
+        raise RuntimeError("file write failed")
+
+    with pytest.raises(CheckpointWriteError, match="temporary partial file"):
+        atomic_torch_save(
+            {"value": torch.tensor([1])},
+            destination,
+            save_function=fail_after_partial_write,
+        )
+
+    assert destination.read_bytes() == b"valid checkpoint"
+    assert list(tmp_path.glob(".*.tmp")) == []
+
+
+def test_checkpoint_manager_updates_aliases_and_prunes_old_epochs(tmp_path):
+    manager = CheckpointManager(tmp_path, keep_last=1, reserve_bytes=0)
+
+    first = manager.save(
+        {"value": torch.tensor([1])},
+        epoch=1,
+        is_best=True,
+    )
+    second = manager.save(
+        {"value": torch.tensor([2])},
+        epoch=2,
+        is_best=False,
+    )
+
+    assert not first.exists()
+    assert second.is_file()
+    assert os.path.samefile(second, tmp_path / "latest.pt")
+    assert torch.load(tmp_path / "latest.pt")["value"].item() == 2
+    assert torch.load(tmp_path / "best.pt")["value"].item() == 1
+    assert list(tmp_path.glob("epoch_*.pt")) == [second]
+
+
+def test_checkpoint_manager_prepare_cleans_failed_resume_epoch(tmp_path):
+    first = tmp_path / "epoch_001.pt"
+    resume = tmp_path / "epoch_010.pt"
+    failed = tmp_path / "epoch_011.pt"
+    first.write_bytes(b"old")
+    resume.write_bytes(b"resume")
+    failed.write_bytes(b"partial")
+    (tmp_path / ".epoch_011.pt.123.tmp").write_bytes(b"partial temp")
+
+    manager = CheckpointManager(tmp_path, keep_last=1, reserve_bytes=0)
+    manager.prepare(resume_path=resume, next_epoch=11)
+
+    assert not first.exists()
+    assert resume.read_bytes() == b"resume"
+    assert not failed.exists()
+    assert list(tmp_path.glob(".*.tmp")) == []

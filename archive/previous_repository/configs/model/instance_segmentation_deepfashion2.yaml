@@ -1,0 +1,51 @@
+task: "deepfashion2_instance_segmentation"
+
+model:
+  name: "mask_rcnn_resnet50_fpn"
+  backbone: "resnet50_fpn"
+  pretrained: true
+  num_classes: 6
+
+categories:
+  0: "background"
+  1: "top"
+  2: "pants"
+  3: "skirt"
+  4: "outerwear"
+  5: "dress"
+
+inference:
+  score_threshold: 0.3
+  mask_threshold: 0.4
+  device: "cuda"
+
+training:
+  image_size: 1024
+  batch_size: 2
+  num_workers: 4
+  learning_rate: 0.00005
+  weight_decay: 0.0001
+  num_epochs: 1
+  log_interval: 50
+  class_balanced_sampling: true
+  hard_mining:
+    enabled: false
+    path: "outputs/failure_analysis/failure_cases_1000.json"
+    weight_multiplier: 2.0
+    reasons:
+      - "dress_confused_as_top"
+      - "top_confused_as_dress"
+      - "low_iou_dress"
+      - "low_iou_top"
+      - "low_iou_pants"
+  augmentation:
+    enabled: true
+    horizontal_flip_prob: 0.5
+    scale_jitter: [0.95, 1.05]
+    brightness: 0.08
+    contrast: 0.08
+    saturation: 0.05
+
+performance_target:
+  max_latency_ms: 50
+  min_iou: 0.85

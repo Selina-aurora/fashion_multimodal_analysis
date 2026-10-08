@@ -1,0 +1,2494 @@
+
+===== scripts/audit_fashionpedia_prd_mapping_v1.py =====
+0001: """
+0002: Audit the EXACT Fashionpedia -> PRD class mapping already used by this project.
+0003: 
+0004: Why
+0005: ---
+0006: Before building the blind benchmark, we must keep the same class semantics
+0007: used by the existing 8-class training/validation data. This script does not
+0008: guess the mapping.
+0009: 
+0010: It reconstructs the mapping from:
+0011: 1) existing configs/*.csv rows that reference Fashionpedia;
+0012: 2) the raw Fashionpedia COCO-like annotation JSON;
+0013: 3) existing project Python code containing Fashionpedia mapping logic.
+0014: 
+0015: Outputs
+0016: -------
+0017: benchmark/prd_3_1_v1/audit/fashionpedia_mapping_v1/
+0018: ├── fashionpedia_used_annotation_mapping.csv
+0019: ├── fashionpedia_mapping_summary.csv
+0020: ├── code_mapping_hits.txt
+0021: └── fashionpedia_mapping_audit.txt
+0022: 
+0023: Run
+0024: ---
+0025: cd /workspace/fashion_multimodal_analysis
+0026: 
+0027: python scripts/audit_fashionpedia_prd_mapping_v1.py
+0028: """
+0029: 
+0030: from __future__ import annotations
+0031: 
+0032: import csv
+0033: import json
+0034: import re
+0035: from collections import Counter, defaultdict
+0036: from pathlib import Path
+...
+0038: 
+0039: PROJECT_ROOT = Path(__file__).resolve().parents[1]
+0040: CONFIG_DIR = PROJECT_ROOT / "configs"
+0041: SCRIPT_DIR = PROJECT_ROOT / "scripts"
+0042: DATA_ROOT = PROJECT_ROOT.parent / "fashion_data"
+0043: FASHIONPEDIA_ROOT = DATA_ROOT / "raw" / "fashionpedia"
+0044: 
+0045: OUT_DIR = (
+0046:     PROJECT_ROOT
+0047:     / "benchmark"
+0048:     / "prd_3_1_v1"
+0049:     / "audit"
+0050:     / "fashionpedia_mapping_v1"
+0051: )
+0052: 
+0053: ANN_ID_RE = re.compile(r"(?:fashionpedia[_-]?)?ann[_-]?(\d+)", re.I)
+0054: 
+0055: SEARCH_TERMS = (
+0056:     "fashionpedia",
+0057:     "accessory",
+0058:     "shoe",
+0059:     "bag",
+0060:     "wallet",
+0061:     "belt",
+0062: )
+0063: 
+0064: PRD_CLASSES = {
+0065:     "top",
+...
+0068:     "outerwear",
+0069:     "dress",
+0070:     "shoe",
+0071:     "bag",
+0072:     "accessory",
+0073: }
+0074: 
+...
+0109: 
+0110: 
+0111: def find_coco_json() -> Path:
+0112:     candidates = []
+0113: 
+0114:     for p in FASHIONPEDIA_ROOT.rglob("*.json"):
+0115:         try:
+0116:             with p.open("r", encoding="utf-8") as f:
+0117:                 data = json.load(f)
+0118:         except Exception:
+0119:             continue
+0120: 
+0121:         if (
+0122:             isinstance(data, dict)
+0123:             and isinstance(data.get("images"), list)
+...
+0126:         ):
+0127:             candidates.append(p)
+0128: 
+0129:     if not candidates:
+0130:         raise FileNotFoundError(
+0131:             f"No COCO-like Fashionpedia JSON found under {FASHIONPEDIA_ROOT}"
+0132:         )
+0133: 
+0134:     # Prefer the file with the most annotations.
+0135:     best = None
+0136:     best_n = -1
+0137:     for p in candidates:
+0138:         with p.open("r", encoding="utf-8") as f:
+0139:             d = json.load(f)
+0140:         n = len(d.get("annotations", []))
+...
+0163: 
+0164:         hit_lines = set()
+0165: 
+0166:         for i, line in enumerate(lines):
+0167:             low = line.lower()
+0168:             if "fashionpedia" in low:
+0169:                 for j in range(max(0, i - 5), min(len(lines), i + 10)):
+0170:                     hit_lines.add(j)
+0171: 
+0172:         # Also include likely mapping lines in files already containing Fashionpedia.
+0173:         if hit_lines:
+0174:             for i, line in enumerate(lines):
+0175:                 low = line.lower()
+0176:                 if any(term in low for term in SEARCH_TERMS[1:]):
+0177:                     for j in range(max(0, i - 2), min(len(lines), i + 3)):
+0178:                         hit_lines.add(j)
+0179: 
+0180:         if not hit_lines:
+0181:             continue
+...
+0190:                 blocks.append("...")
+0191:             blocks.append(f"{i+1:04d}: {lines[i]}")
+0192:             previous = i
+0193: 
+0194:     if not blocks:
+0195:         return "No Fashionpedia-related code hits found under scripts/.\n"
+0196: 
+0197:     return "\n".join(blocks) + "\n"
+0198: 
+0199: 
+0200: def main():
+0201:     OUT_DIR.mkdir(parents=True, exist_ok=True)
+0202: 
+0203:     coco_path = find_coco_json()
+0204: 
+0205:     with coco_path.open("r", encoding="utf-8") as f:
+0206:         coco = json.load(f)
+0207: 
+0208:     categories = {
+0209:         int(c["id"]): {
+0210:             "fashionpedia_category_name": norm(c.get("name", "")),
+0211:             "fashionpedia_supercategory": norm(c.get("supercategory", "")),
+0212:         }
+0213:         for c in coco["categories"]
+0214:     }
+0215: 
+0216:     ann_by_id = {
+0217:         int(a["id"]): a
+0218:         for a in coco["annotations"]
+0219:         if "id" in a
+0220:     }
+...
+0235:                 row,
+0236:                 ("source_dataset", "dataset"),
+0237:             )
+0238: 
+0239:             if (
+0240:                 "fashionpedia" not in source_image.lower()
+0241:                 and "fashionpedia" not in source_dataset.lower()
+0242:             ):
+0243:                 continue
+0244: 
+0245:             config_files_with_fp.add(
+0246:                 str(cfg.relative_to(PROJECT_ROOT))
+0247:             )
+0248: 
+0249:             garment_id = norm(row.get("garment_id", ""))
+0250:             prd_class = first(
+...
+0271:             ann = ann_by_id[ann_id]
+0272:             cid = int(ann["category_id"])
+0273:             cat = categories.get(
+0274:                 cid,
+0275:                 {
+0276:                     "fashionpedia_category_name": "",
+0277:                     "fashionpedia_supercategory": "",
+0278:                 },
+0279:             )
+0280: 
+0281:             config_rows.append({
+0282:                 "config_file": str(cfg.relative_to(PROJECT_ROOT)),
+0283:                 "source_image": source_image,
+0284:                 "garment_id": garment_id,
+0285:                 "prd_class": prd_class,
+0286:                 "fashionpedia_annotation_id": ann_id,
+0287:                 "fashionpedia_category_id": cid,
+0288:                 "fashionpedia_category_name": cat[
+0289:                     "fashionpedia_category_name"
+0290:                 ],
+0291:                 "fashionpedia_supercategory": cat[
+0292:                     "fashionpedia_supercategory"
+0293:                 ],
+0294:             })
+0295: 
+0296:     # Deduplicate the same garment repeated across several configs.
+0297:     dedup = {}
+0298:     for r in config_rows:
+0299:         key = (
+0300:             r["source_image"],
+0301:             r["garment_id"],
+0302:             r["prd_class"],
+0303:             r["fashionpedia_category_id"],
+0304:         )
+0305:         if key not in dedup:
+0306:             dedup[key] = dict(r)
+0307:             dedup[key]["source_configs"] = [r["config_file"]]
+0308:         else:
+0309:             dedup[key]["source_configs"].append(r["config_file"])
+0310: 
+0311:     used_rows = []
+0312:     for r in dedup.values():
+...
+0317:         used_rows.append(row)
+0318: 
+0319:     used_rows.sort(
+0320:         key=lambda r: (
+0321:             r["prd_class"],
+0322:             int(r["fashionpedia_category_id"]),
+0323:             r["garment_id"],
+0324:         )
+0325:     )
+0326: 
+0327:     write_csv(
+0328:         OUT_DIR / "fashionpedia_used_annotation_mapping.csv",
+0329:         used_rows,
+0330:     )
+0331: 
+0332:     # Summary: empirical mapping actually used in existing data.
+0333:     grouped = defaultdict(Counter)
+0334:     source_examples = defaultdict(list)
+0335: 
+0336:     for r in used_rows:
+0337:         key = (
+0338:             int(r["fashionpedia_category_id"]),
+0339:             r["fashionpedia_category_name"],
+0340:             r["fashionpedia_supercategory"],
+0341:         )
+0342:         grouped[r["prd_class"]][key] += 1
+0343: 
+0344:         ekey = (r["prd_class"], key)
+0345:         if len(source_examples[ekey]) < 5:
+0346:             source_examples[ekey].append(r["garment_id"])
+0347: 
+0348:     summary_rows = []
+0349: 
+...
+0353:             name,
+0354:             supercat,
+0355:         ), n in grouped[prd_class].most_common():
+0356:             summary_rows.append({
+0357:                 "prd_class": prd_class,
+0358:                 "fashionpedia_category_id": cid,
+0359:                 "fashionpedia_category_name": name,
+0360:                 "fashionpedia_supercategory": supercat,
+0361:                 "unique_used_garment_count": n,
+0362:                 "example_garment_ids": " | ".join(
+0363:                     source_examples[
+0364:                         (
+0365:                             prd_class,
+0366:                             (cid, name, supercat),
+0367:                         )
+0368:                     ]
+0369:                 ),
+0370:             })
+0371: 
+0372:     write_csv(
+0373:         OUT_DIR / "fashionpedia_mapping_summary.csv",
+0374:         summary_rows,
+0375:     )
+0376: 
+0377:     if unresolved:
+0378:         write_csv(
+0379:             OUT_DIR / "unresolved_fashionpedia_rows.csv",
+0380:             unresolved,
+0381:         )
+0382: 
+0383:     code_text = code_hits()
+0384:     (OUT_DIR / "code_mapping_hits.txt").write_text(
+0385:         code_text,
+0386:         encoding="utf-8",
+0387:     )
+0388: 
+...
+0390:         r
+0391:         for r in summary_rows
+0392:         if r["prd_class"] in {"shoe", "bag", "accessory"}
+0393:     ]
+0394: 
+0395:     lines = [
+0396:         "PRD 3.1 Fashionpedia -> PRD Mapping Audit v1",
+0397:         "===========================================",
+0398:         "",
+0399:         f"raw_annotation_json={coco_path}",
+0400:         f"configs_with_fashionpedia_rows={len(config_files_with_fp)}",
+0401:         f"resolved_unique_fashionpedia_garments={len(used_rows)}",
+0402:         f"unresolved_rows={len(unresolved)}",
+0403:         "",
+0404:         "Empirical mapping used by existing project data",
+0405:         "-----------------------------------------------",
+0406:     ]
+0407: 
+0408:     if target_summary:
+0409:         for r in target_summary:
+0410:             lines.append(
+0411:                 f"{r['prd_class']} <- "
+0412:                 f"Fashionpedia id={r['fashionpedia_category_id']} "
+0413:                 f"name={r['fashionpedia_category_name']} "
+0414:                 f"supercategory={r['fashionpedia_supercategory']} "
+0415:                 f"used_unique={r['unique_used_garment_count']}"
+0416:             )
+0417:     else:
+0418:         lines.append(
+0419:             "No resolved shoe/bag/accessory mapping found in existing configs."
+0420:         )
+0421: 
+0422:     lines += [
+0423:         "",
+0424:         "Consistency check",
+0425:         "-----------------",
+0426:     ]
+0427: 
+0428:     # Detect one PRD class mapping to multiple Fashionpedia categories,
+0429:     # and one Fashionpedia category mapping to multiple PRD classes.
+0430:     by_prd = defaultdict(set)
+0431:     by_fp = defaultdict(set)
+0432: 
+0433:     for r in summary_rows:
+0434:         by_prd[r["prd_class"]].add(
+0435:             (
+0436:                 r["fashionpedia_category_id"],
+0437:                 r["fashionpedia_category_name"],
+0438:             )
+0439:         )
+0440:         by_fp[
+0441:             (
+0442:                 r["fashionpedia_category_id"],
+0443:                 r["fashionpedia_category_name"],
+0444:             )
+0445:         ].add(r["prd_class"])
+0446: 
+0447:     for cls in ["shoe", "bag", "accessory"]:
+0448:         vals = by_prd.get(cls, set())
+0449:         lines.append(
+0450:             f"{cls}_fashionpedia_category_count={len(vals)}"
+0451:         )
+0452: 
+0453:     conflicts = [
+0454:         (fp, classes)
+0455:         for fp, classes in by_fp.items()
+0456:         if len(classes) > 1
+0457:     ]
+0458: 
+0459:     lines.append(
+0460:         f"fashionpedia_categories_mapped_to_multiple_prd_classes={len(conflicts)}"
+0461:     )
+0462: 
+0463:     if conflicts:
+0464:         for (cid, name), classes in conflicts:
+0465:             lines.append(
+0466:                 f"CONFLICT id={cid} name={name}: {sorted(classes)}"
+0467:             )
+0468: 
+0469:     lines += [
+0470:         "",
+0471:         "Files",
+0472:         "-----",
+0473:         "- fashionpedia_used_annotation_mapping.csv: one row per previously used unique Fashionpedia garment.",
+0474:         "- fashionpedia_mapping_summary.csv: empirical source-category -> PRD-class mapping.",
+0475:         "- code_mapping_hits.txt: mapping-related code context from existing scripts.",
+0476:         "- unresolved_fashionpedia_rows.csv: only created if any rows cannot be reconstructed.",
+0477:         "",
+0478:         "Do not freeze benchmark mapping until this audit is reviewed.",
+0479:     ]
+0480: 
+0481:     (
+0482:         OUT_DIR / "fashionpedia_mapping_audit.txt"
+0483:     ).write_text(
+0484:         "\n".join(lines) + "\n",
+0485:         encoding="utf-8",
+0486:     )
+0487: 
+0488:     print("FINISHED")
+0489:     for p in [
+0490:         OUT_DIR / "fashionpedia_mapping_audit.txt",
+0491:         OUT_DIR / "fashionpedia_mapping_summary.csv",
+0492:         OUT_DIR / "fashionpedia_used_annotation_mapping.csv",
+0493:         OUT_DIR / "code_mapping_hits.txt",
+0494:     ]:
+0495:         print(p.relative_to(PROJECT_ROOT))
+0496: 
+0497:     if unresolved:
+0498:         print(
+0499:             (OUT_DIR / "unresolved_fashionpedia_rows.csv").relative_to(
+0500:                 PROJECT_ROOT
+0501:             )
+0502:         )
+0503: 
+0504: 
+0505: if __name__ == "__main__":
+0506:     main()
+
+===== scripts/build_fashionpedia_missing3_pilot_v1.py =====
+0001: """
+0002: Build a small Fashionpedia pilot for the 3 PRD 3.1.1 categories
+0003: missing from the current DeepFashion2 setup:
+0004: 
+0005:     shoe
+0006:     bag
+0007:     accessory
+0008: 
+0009: Expected raw data layout
+0010: ------------------------
+0011: D:/projects/
+0012: ├── fashion_multimodal_analysis/
+0013: │   └── scripts/
+0014: │       └── build_fashionpedia_missing3_pilot_v1.py
+0015: └── fashion_data/
+0016:     └── raw/
+0017:         └── fashionpedia/
+0018:             ├── annotations/
+0019:             │   └── instances_attributes_val2020.json
+0020:             └── images/
+0021:                 └── test/
+0022:                     └── *.jpg
+0023: 
+0024: The script DOES NOT modify raw data.
+0025: 
+0026: Derived data:
+0027:     ../fashion_data/processed/fashionpedia_missing3_pilot_v1/
+0028: 
+0029: Project outputs:
+0030:     configs/fashionpedia_missing3_pilot_manifest_v1.csv
+0031:     reports/prd_instance_segmentation/fashionpedia_missing3_pilot_v1/
+0032: 
+0033: Run from project root:
+0034:     python scripts/build_fashionpedia_missing3_pilot_v1.py
+0035: 
+0036: Default pilot:
+0037:     20 instances per PRD class, seed 20260917
+0038: """
+0039: 
+0040: from __future__ import annotations
+0041: 
+0042: import argparse
+0043: import csv
+...
+0053: 
+0054: 
+0055: PROJECT_ROOT = Path(__file__).resolve().parents[1]
+0056: DATA_ROOT = PROJECT_ROOT.parent / "fashion_data"
+0057: 
+0058: RAW_ROOT = DATA_ROOT / "raw" / "fashionpedia"
+0059: ANN_PATH = RAW_ROOT / "annotations" / "instances_attributes_val2020.json"
+0060: IMAGES_DIR = RAW_ROOT / "images" / "test"
+0061: 
+0062: PROCESSED_ROOT = (
+0063:     DATA_ROOT / "processed" / "fashionpedia_missing3_pilot_v1"
+0064: )
+0065: 
+0066: FULL_MASK_DIR = PROCESSED_ROOT / "full_masks"
+0067: CROP_MASK_DIR = PROCESSED_ROOT / "crop_masks"
+0068: CROP_DIR = PROCESSED_ROOT / "crops"
+0069: MASKED_CROP_DIR = PROCESSED_ROOT / "masked_crops"
+0070: VIS_DIR = PROCESSED_ROOT / "visualizations"
+0071: CONTACT_DIR = PROCESSED_ROOT / "contact_sheets"
+0072: 
+0073: MANIFEST_PATH = (
+0074:     PROJECT_ROOT
+0075:     / "configs"
+0076:     / "fashionpedia_missing3_pilot_manifest_v1.csv"
+0077: )
+0078: 
+0079: REPORT_DIR = (
+0080:     PROJECT_ROOT
+0081:     / "reports"
+0082:     / "prd_instance_segmentation"
+0083:     / "fashionpedia_missing3_pilot_v1"
+0084: )
+0085: 
+0086: TARGET_CLASSES = ("shoe", "bag", "accessory")
+0087: 
+0088: 
+0089: # Fashionpedia source-category -> PRD category.
+0090: #
+0091: # We deliberately keep the broad PRD "accessory" category as a collapse of
+0092: # several Fashionpedia fine categories.
+0093: #
+0094: # Matching is normalized and also has a conservative keyword fallback below.
+0095: SOURCE_TO_PRD = {
+0096:     # shoe
+0097:     "shoe": "shoe",
+0098: 
+0099:     # bag
+0100:     "bag": "bag",
+0101:     "wallet": "bag",
+0102:     "bag, wallet": "bag",
+0103: 
+0104:     # accessory
+0105:     "glasses": "accessory",
+0106:     "hat": "accessory",
+0107:     "headband": "accessory",
+0108:     "head covering": "accessory",
+0109:     "hair accessory": "accessory",
+0110:     "headband, head covering, hair accessory": "accessory",
+0111:     "tie": "accessory",
+0112:     "glove": "accessory",
+0113:     "watch": "accessory",
+0114:     "belt": "accessory",
+0115:     "leg warmer": "accessory",
+0116:     "tights": "accessory",
+0117:     "stockings": "accessory",
+0118:     "tights, stockings": "accessory",
+0119:     "sock": "accessory",
+0120:     "scarf": "accessory",
+0121: }
+0122: 
+...
+0159:     n = normalize_name(name)
+0160: 
+0161:     if n in SOURCE_TO_PRD:
+0162:         return SOURCE_TO_PRD[n]
+0163: 
+0164:     # Conservative fallback for Fashionpedia wording variations.
+0165:     if n == "shoe" or n.endswith(" shoe") or "shoes" in n:
+0166:         return "shoe"
+0167: 
+0168:     if "bag" in n or "wallet" in n:
+0169:         return "bag"
+0170: 
+0171:     accessory_keywords = (
+0172:         "glasses",
+0173:         "hat",
+0174:         "headband",
+0175:         "head covering",
+0176:         "hair accessory",
+0177:         "tie",
+0178:         "glove",
+0179:         "watch",
+0180:         "belt",
+0181:         "leg warmer",
+0182:         "tights",
+...
+0185:         "scarf",
+0186:     )
+0187:     if any(k in n for k in accessory_keywords):
+0188:         return "accessory"
+0189: 
+0190:     return None
+...
+0535:     draw = ImageDraw.Draw(sheet)
+0536:     font = ImageFont.load_default()
+0537: 
+0538:     draw.text(
+0539:         (15, 15),
+0540:         f"Fashionpedia pilot - PRD {cls}",
+0541:         fill="black",
+0542:         font=font,
+0543:     )
+0544: 
+0545:     for i, row in enumerate(rows):
+0546:         r = i // cols
+0547:         c = i % cols
+0548: 
+0549:         x0 = c * tile_w
+...
+0596:     if not ann_path.is_file():
+0597:         raise FileNotFoundError(
+0598:             "\nAnnotation JSON not found:\n"
+0599:             f"  {ann_path}\n\n"
+0600:             "Expected:\n"
+0601:             "  ../fashion_data/raw/fashionpedia/annotations/"
+0602:             "instances_attributes_val2020.json"
+0603:         )
+0604: 
+0605:     if not images_dir.is_dir():
+0606:         raise FileNotFoundError(
+0607:             "\nFashionpedia image folder not found:\n"
+0608:             f"  {images_dir}\n\n"
+0609:             "Expected:\n"
+0610:             "  ../fashion_data/raw/fashionpedia/images/test/"
+0611:         )
+0612: 
+0613:     ensure_dirs()
+0614: 
+0615:     print("[0/6] Loading annotation JSON...")
+0616:     print("      annotation:", ann_path)
+0617:     print("      images    :", images_dir)
+0618: 
+0619:     with ann_path.open(
+...
+0643:     image_by_id = {
+0644:         int(img["id"]): img
+0645:         for img in images
+0646:     }
+0647: 
+0648:     # Save exact Fashionpedia category inventory + our mapping.
+0649:     category_rows = []
+0650: 
+0651:     for cat in categories:
+0652:         source_name = str(cat["name"])
+0653:         mapped = map_source_category(source_name)
+0654: 
+0655:         category_rows.append(
+0656:             {
+0657:                 "source_category_id": int(cat["id"]),
+...
+0715:             ", ".join(missing),
+0716:         )
+0717:         print(
+0718:             "Open:\n"
+0719:             "  reports/prd_instance_segmentation/"
+0720:             "fashionpedia_missing3_pilot_v1/"
+0721:             "category_mapping_used.csv\n"
+0722:             "and send it to me."
+0723:         )
+0724: 
+0725:     image_index = build_image_index(images_dir)
+0726: 
+0727:     rng = random.Random(args.seed)
+0728: 
+0729:     print("[3/6] Sampling pilot instances...")
+...
+0878:                 source_bbox_h,
+0879:             ) = source_bbox
+0880: 
+0881:         manifest_rows.append(
+0882:             {
+0883:                 "source_dataset": "Fashionpedia",
+0884:                 "source_image": relative_display(image_path),
+0885:                 "image_id": image_id,
+0886:                 "annotation_id": annotation_id,
+0887:                 "garment_id": f"fashionpedia_ann_{annotation_id}",
+0888:                 "source_category": source_cat,
+0889:                 "garment_category": prd_class,
+0890:                 "image_width": width,
+0891:                 "image_height": height,
+0892:                 "bbox_x1": x1,
+0893:                 "bbox_y1": y1,
+0894:                 "bbox_x2": x2,
+0895:                 "bbox_y2": y2,
+0896:                 "bbox_width": x2 - x1,
+...
+0967:         )
+0968:         for row in manifest_rows
+0969:     )
+0970: 
+0971:     summary_lines = [
+0972:         "Fashionpedia missing-3 pilot for PRD 3.1.1",
+0973:         "==========================================",
+0974:         "",
+0975:         f"annotation={relative_display(ann_path)}",
+0976:         f"images_dir={relative_display(images_dir)}",
+0977:         f"seed={args.seed}",
+0978:         f"requested_per_class={args.per_class}",
+0979:         f"selected_before_decode={len(selected)}",
+0980:         f"saved_instances={len(manifest_rows)}",
+0981:         f"skipped_instances={len(skipped_rows)}",
+...
+1004: 
+1005:     summary_lines += [
+1006:         "",
+1007:         "Notes",
+1008:         "-----",
+1009:         "- Raw Fashionpedia files were not modified.",
+1010:         "- This is a small pilot, not the final training/evaluation set.",
+1011:         "- Fashionpedia fine categories are collapsed into the PRD shoe/bag/accessory categories.",
+1012:         "- Inspect shoe.jpg, bag.jpg and accessory.jpg before using the pilot downstream.",
+1013:         "- If a source category is mapped incorrectly, fix the mapping before scaling up.",
+1014:     ]
+1015: 
+1016:     summary_path = REPORT_DIR / "summary.txt"
+1017: 
+1018:     summary_path.write_text(
+1019:         "\n".join(summary_lines) + "\n",
+1020:         encoding="utf-8",
+...
+1031:     print(f"  skipped: {len(skipped_rows)}")
+1032:     print()
+1033:     print("Please send me these 4 outputs:")
+1034:     print(
+1035:         "1. reports/prd_instance_segmentation/"
+1036:         "fashionpedia_missing3_pilot_v1/summary.txt"
+1037:     )
+1038:     print(
+1039:         "2. ../fashion_data/processed/"
+1040:         "fashionpedia_missing3_pilot_v1/contact_sheets/shoe.jpg"
+1041:     )
+1042:     print(
+1043:         "3. ../fashion_data/processed/"
+1044:         "fashionpedia_missing3_pilot_v1/contact_sheets/bag.jpg"
+1045:     )
+1046:     print(
+1047:         "4. ../fashion_data/processed/"
+1048:         "fashionpedia_missing3_pilot_v1/contact_sheets/accessory.jpg"
+1049:     )
+1050: 
+1051: 
+1052: if __name__ == "__main__":
+1053:     main()
+
+===== scripts/build_fashionpedia_missing3_pilot_v2.py =====
+0001: """
+0002: Fashionpedia -> PRD 3.1.1 missing-3-class pilot
+0003: ================================================
+0004: 
+0005: Purpose
+0006: -------
+0007: 补 PRD 3.1.1 当前缺失的 3 类：
+0008:     - shoe
+0009:     - bag
+0010:     - accessory
+0011: 
+0012: Expected raw data layout
+0013: ------------------------
+0014: D:/projects/
+0015: ├── fashion_multimodal_analysis/
+0016: │   ├── configs/
+0017: │   │   └── fashionpedia_to_prd_8class_mapping_v1.json
+0018: │   └── scripts/
+0019: │       └── build_fashionpedia_missing3_pilot_v2.py
+0020: └── fashion_data/
+0021:     └── raw/
+0022:         └── fashionpedia/
+0023:             ├── images/
+0024:             │   └── val/
+0025:             │       └── *.jpg
+0026:             └── annotations/
+0027:                 └── instances_attributes_val2020.json
+0028: 
+0029: If the extracted images are not exactly under images/val/,
+0030: the script will recursively search under:
+0031:     ../fashion_data/raw/fashionpedia/
+0032: 
+0033: Outputs
+0034: -------
+0035: Derived images/masks:
+0036:     ../fashion_data/processed/fashionpedia_missing3_pilot_v1/
+0037:         crops/
+0038:         crop_masks/
+0039:         masked_crops/
+0040:         full_masks/
+0041:         visualizations/
+0042:         contact_sheets/
+0043: 
+0044: Project-side outputs:
+0045:     configs/fashionpedia_missing3_pilot_manifest_v1.csv
+0046: 
+0047:     reports/prd_instance_segmentation/fashionpedia_missing3_pilot_v1/
+0048:         summary.txt
+0049:         category_mapping_used.csv
+0050:         skipped_annotations.csv
+0051: 
+0052: Run
+0053: ---
+0054: python scripts/build_fashionpedia_missing3_pilot_v2.py
+0055: 
+0056: Default:
+0057:     20 instances per class, total up to 60.
+0058: 
+0059: Optional:
+0060: python scripts/build_fashionpedia_missing3_pilot_v2.py --per-class 30
+0061: """
+0062: 
+0063: from __future__ import annotations
+0064: 
+0065: import argparse
+0066: import csv
+0067: import json
+0068: import math
+0069: import random
+...
+0080: # =========================================================
+0081: 
+0082: PROJECT_ROOT = Path(__file__).resolve().parents[1]
+0083: DATA_ROOT = PROJECT_ROOT.parent / "fashion_data"
+0084: 
+0085: RAW_FP_ROOT = DATA_ROOT / "raw" / "fashionpedia"
+0086: 
+0087: DEFAULT_ANN_PATH = (
+0088:     RAW_FP_ROOT
+0089:     / "annotations"
+0090:     / "instances_attributes_val2020.json"
+0091: )
+0092: 
+0093: DEFAULT_IMAGES_DIR = (
+0094:     RAW_FP_ROOT
+...
+0097: )
+0098: 
+0099: DEFAULT_MAPPING_PATH = (
+0100:     PROJECT_ROOT
+0101:     / "configs"
+0102:     / "fashionpedia_to_prd_8class_mapping_v1.json"
+0103: )
+0104: 
+0105: PROCESSED_ROOT = (
+0106:     DATA_ROOT
+0107:     / "processed"
+0108:     / "fashionpedia_missing3_pilot_v1"
+0109: )
+0110: 
+0111: CROP_DIR = PROCESSED_ROOT / "crops"
+0112: CROP_MASK_DIR = PROCESSED_ROOT / "crop_masks"
+0113: MASKED_CROP_DIR = PROCESSED_ROOT / "masked_crops"
+0114: FULL_MASK_DIR = PROCESSED_ROOT / "full_masks"
+0115: VIS_DIR = PROCESSED_ROOT / "visualizations"
+0116: SHEET_DIR = PROCESSED_ROOT / "contact_sheets"
+0117: 
+0118: MANIFEST_PATH = (
+0119:     PROJECT_ROOT
+0120:     / "configs"
+0121:     / "fashionpedia_missing3_pilot_manifest_v1.csv"
+0122: )
+0123: 
+0124: REPORT_DIR = (
+0125:     PROJECT_ROOT
+0126:     / "reports"
+0127:     / "prd_instance_segmentation"
+0128:     / "fashionpedia_missing3_pilot_v1"
+0129: )
+0130: 
+0131: TARGET_PRD_CLASSES = ("shoe", "bag", "accessory")
+0132: 
+0133: 
+0134: # =========================================================
+0135: # Built-in fallback mapping
+0136: # =========================================================
+0137: 
+0138: DEFAULT_SOURCE_TO_PRD = {
+0139:     # shoe
+0140:     "shoe": "shoe",
+0141: 
+0142:     # bag
+0143:     "bag, wallet": "bag",
+0144:     "bag": "bag",
+0145:     "wallet": "bag",
+0146: 
+0147:     # accessory
+0148:     "glasses": "accessory",
+0149:     "hat": "accessory",
+0150:     "headband, head covering, hair accessory": "accessory",
+0151:     "tie": "accessory",
+0152:     "glove": "accessory",
+0153:     "watch": "accessory",
+0154:     "belt": "accessory",
+0155:     "leg warmer": "accessory",
+0156:     "tights, stockings": "accessory",
+0157:     "sock": "accessory",
+0158:     "scarf": "accessory",
+0159: }
+0160: 
+...
+0266:         # Expected form:
+0267:         # {
+0268:         #   "shoe": ["shoe"],
+0269:         #   "bag": ["bag, wallet"],
+0270:         #   "accessory": ["hat", "glasses", ...]
+0271:         # }
+0272:         for prd_class, source_names in config_mapping.items():
+...
+0316:         }:
+0317:             roots.append(RAW_FP_ROOT)
+0318: 
+0319:     if not roots:
+0320:         raise FileNotFoundError(
+0321:             "\n找不到 Fashionpedia 图片目录。\n"
+0322:             "请先解压 val_test2020.zip 到：\n"
+0323:             f"  {RAW_FP_ROOT}\n"
+0324:         )
+0325: 
+0326:     for root in roots:
+0327:         print(f"[scan images] {root}")
+0328: 
+0329:         # Fast direct check first.
+0330:         for name in required_names:
+...
+0606:     n: int,
+0607:     rng: random.Random,
+0608: ) -> list[dict]:
+0609:     """
+0610:     Try to:
+0611:     1) diversify Fashionpedia fine categories
+0612:     2) avoid repeated source images when possible
+0613:     """
+0614:     by_source_category: dict[str, list[dict]] = defaultdict(list)
+0615: 
+0616:     for item in candidates:
+0617:         by_source_category[
+0618:             item["source_category"]
+0619:         ].append(item)
+0620: 
+...
+0819:         preferred_images_dir = (
+0820:             PROJECT_ROOT
+0821:             / preferred_images_dir
+0822:         )
+0823: 
+0824:     print("\n=== Fashionpedia missing-3 pilot ===")
+0825:     print("project root :", PROJECT_ROOT)
+0826:     print("raw root     :", RAW_FP_ROOT)
+0827:     print("annotation   :", ann_path)
+0828:     print("images pref  :", preferred_images_dir)
+0829: 
+0830:     payload = json.loads(
+0831:         ann_path.read_text(
+0832:             encoding="utf-8"
+0833:         )
+...
+1178:         else:
+1179:             sbx = sby = sbw = sbh = ""
+1180: 
+1181:         manifest_rows.append(
+1182:             {
+1183:                 "source_dataset": "Fashionpedia",
+1184:                 "source_image": project_relative(
+1185:                     image_path
+1186:                 ),
+1187:                 "image_id": image_id,
+1188:                 "annotation_id": annotation_id,
+1189:                 "garment_id": (
+1190:                     "fashionpedia_ann_"
+1191:                     f"{annotation_id}"
+1192:                 ),
+1193:                 "source_category": source_category,
+1194:                 "garment_category": prd_category,
+1195:                 "image_width": width,
+1196:                 "image_height": height,
+1197:                 "bbox_x1": x1,
+1198:                 "bbox_y1": y1,
+1199:                 "bbox_x2": x2,
+...
+1268:         )
+1269:         for row in manifest_rows
+1270:     )
+1271: 
+1272:     summary_lines = [
+1273:         "Fashionpedia missing-3 pilot for PRD 3.1.1",
+1274:         "==========================================",
+1275:         f"annotation={project_relative(ann_path)}",
+1276:         f"seed={args.seed}",
+1277:         f"requested_per_class={args.per_class}",
+1278:         f"selected_before_decode={len(selected)}",
+1279:         f"manifest_rows={len(manifest_rows)}",
+1280:         f"skipped={len(skipped_rows)}",
+1281:         "",
+1282:         "PRD class counts",
+...
+1309: 
+1310:     summary_lines += [
+1311:         "",
+1312:         "Notes",
+1313:         "-----",
+1314:         "- raw/fashionpedia is read-only in this script.",
+1315:         "- all derived crops/masks go to fashion_data/processed/.",
+1316:         "- this is only a pilot, not final training data.",
+1317:         "- inspect contact sheets before formal training.",
+1318:     ]
+1319: 
+1320:     (
+1321:         REPORT_DIR
+1322:         / "summary.txt"
+1323:     ).write_text(
+...
+1338:         ]
+1339: 
+1340:         make_contact_sheet(
+1341:             class_rows,
+1342:             (
+1343:                 "Fashionpedia pilot - "
+1344:                 f"PRD {prd_class}"
+1345:             ),
+1346:             (
+1347:                 SHEET_DIR
+1348:                 / f"{prd_class}.jpg"
+1349:             ),
+1350:         )
+1351: 
+1352:     print("\n=== DONE ===")
+...
+1376:     )
+1377: 
+1378:     print("\nPlease send me:")
+1379:     print(
+1380:         "1. reports/prd_instance_segmentation/"
+1381:         "fashionpedia_missing3_pilot_v1/summary.txt"
+1382:     )
+1383:     print(
+1384:         "2. ../fashion_data/processed/"
+1385:         "fashionpedia_missing3_pilot_v1/"
+1386:         "contact_sheets/shoe.jpg"
+1387:     )
+1388:     print(
+1389:         "3. ../fashion_data/processed/"
+1390:         "fashionpedia_missing3_pilot_v1/"
+1391:         "contact_sheets/bag.jpg"
+1392:     )
+1393:     print(
+1394:         "4. ../fashion_data/processed/"
+1395:         "fashionpedia_missing3_pilot_v1/"
+1396:         "contact_sheets/accessory.jpg"
+1397:     )
+1398: 
+1399: 
+1400: if __name__ == "__main__":
+1401:     main()
+
+===== scripts/build_prd_8class_train_v2_expand_fashionpedia.py =====
+0001: """
+0002: Expand the Fashionpedia training portion for PRD 3.1.1 baseline v2.
+0003: 
+0004: Goal
+0005: ----
+0006: Keep the existing fixed validation split unchanged, but rebuild the TRAIN split as:
+0007: 
+0008:     DeepFashion2: keep the current train rows exactly as they are
+0009:     Fashionpedia:
+0010:         shoe       -> 100 training instances
+0011:         bag        -> 100 training instances
+0012:         accessory  -> 100 training instances
+0013: 
+0014: The current validation images are excluded from Fashionpedia candidate sampling,
+0015: so there is no source-image leakage into the fixed validation set.
+0016: 
+0017: Inputs
+0018: ------
+0019: configs/prd_8class_train_v1.csv
+0020: configs/prd_8class_val_v1.csv
+0021: 
+0022: ../fashion_data/raw/fashionpedia/
+0023: ├── annotations/
+0024: │   └── instances_attributes_val2020.json
+0025: └── images/
+0026:     └── test/
+0027:         └── *.jpg
+0028: 
+0029: Outputs
+0030: -------
+0031: configs/prd_8class_train_v2.csv
+0032: 
+0033: ../fashion_data/processed/fashionpedia_train_expanded_v2/
+0034: └── full_masks/
+0035:     └── *.png
+0036: 
+0037: reports/prd_instance_segmentation/prd_8class_train_expansion_v2/
+0038: ├── summary.txt
+0039: ├── class_counts_train_v2.csv
+0040: ├── selected_fashionpedia_v2.csv
+0041: ├── skipped_annotations.csv
+0042: ├── validation_overlap_check.csv
+0043: └── contact_sheets/
+0044:     ├── shoe.jpg
+0045:     ├── bag.jpg
+0046:     └── accessory.jpg
+0047: 
+0048: Run from project root
+0049: ---------------------
+0050: python scripts/build_prd_8class_train_v2_expand_fashionpedia.py
+0051: 
+0052: Default:
+0053:     100 train instances per Fashionpedia PRD class
+0054: 
+0055: Optional:
+0056:     python scripts/build_prd_8class_train_v2_expand_fashionpedia.py \
+0057:         --per-class 100 \
+0058:         --seed 20260921
+0059: 
+0060: Important
+0061: ---------
+0062: - The validation manifest is NOT modified.
+0063: - All Fashionpedia validation source images are excluded.
+0064: - DeepFashion2 training rows are preserved.
+0065: - Raw Fashionpedia data are never modified.
+0066: - Newly generated Fashionpedia masks are full-image masks.
+0067: """
+0068: 
+0069: from __future__ import annotations
+0070: 
+0071: import argparse
+0072: import csv
+0073: import json
+0074: import math
+0075: import random
+...
+0085: DATA_ROOT = PROJECT_ROOT.parent / "fashion_data"
+0086: 
+0087: TRAIN_V1 = PROJECT_ROOT / "configs" / "prd_8class_train_v1.csv"
+0088: VAL_V1 = PROJECT_ROOT / "configs" / "prd_8class_val_v1.csv"
+0089: 
+0090: RAW_FP_ROOT = DATA_ROOT / "raw" / "fashionpedia"
+0091: FP_ANN = RAW_FP_ROOT / "annotations" / "instances_attributes_val2020.json"
+0092: FP_IMAGES = RAW_FP_ROOT / "images" / "test"
+0093: 
+0094: PROCESSED_ROOT = (
+0095:     DATA_ROOT
+0096:     / "processed"
+0097:     / "fashionpedia_train_expanded_v2"
+0098: )
+0099: FULL_MASK_DIR = PROCESSED_ROOT / "full_masks"
+0100: 
+0101: TRAIN_V2 = PROJECT_ROOT / "configs" / "prd_8class_train_v2.csv"
+0102: 
+0103: REPORT_DIR = (
+0104:     PROJECT_ROOT
+0105:     / "reports"
+0106:     / "prd_instance_segmentation"
+0107:     / "prd_8class_train_expansion_v2"
+0108: )
+0109: SUMMARY_PATH = REPORT_DIR / "summary.txt"
+0110: COUNTS_PATH = REPORT_DIR / "class_counts_train_v2.csv"
+0111: SELECTED_PATH = REPORT_DIR / "selected_fashionpedia_v2.csv"
+0112: SKIPPED_PATH = REPORT_DIR / "skipped_annotations.csv"
+0113: OVERLAP_PATH = REPORT_DIR / "validation_overlap_check.csv"
+0114: CONTACT_DIR = REPORT_DIR / "contact_sheets"
+0115: 
+0116: TARGET_FP_CLASSES = ("shoe", "bag", "accessory")
+0117: 
+0118: OUTPUT_FIELDS = [
+0119:     "record_id",
+0120:     "source_dataset",
+...
+0144:     p = argparse.ArgumentParser()
+0145:     p.add_argument(
+0146:         "--per-class",
+0147:         type=int,
+0148:         default=100,
+0149:         help="Number of Fashionpedia TRAIN instances for each PRD class.",
+0150:     )
+0151:     p.add_argument(
+0152:         "--seed",
+0153:         type=int,
+0154:         default=20260921,
+0155:     )
+0156:     p.add_argument(
+0157:         "--contact-sheet-items",
+0158:         type=int,
+...
+0222:     n = normalize_name(name)
+0223: 
+0224:     if n == "shoe" or n.endswith(" shoe") or "shoes" in n:
+0225:         return "shoe"
+0226: 
+0227:     if "bag" in n or "wallet" in n:
+0228:         return "bag"
+0229: 
+0230:     accessory_keywords = (
+0231:         "glasses",
+0232:         "hat",
+0233:         "headband",
+0234:         "head covering",
+0235:         "hair accessory",
+0236:         "tie",
+0237:         "glove",
+0238:         "watch",
+0239:         "belt",
+0240:         "leg warmer",
+0241:         "tights",
+...
+0245:     )
+0246: 
+0247:     if any(k in n for k in accessory_keywords):
+0248:         return "accessory"
+0249: 
+0250:     return None
+...
+0402: def build_image_index(
+0403:     needed_names: set[str],
+0404: ) -> dict[str, Path]:
+0405:     if not FP_IMAGES.is_dir():
+0406:         raise FileNotFoundError(
+0407:             "Fashionpedia image folder not found:\n"
+0408:             f"  {FP_IMAGES}"
+0409:         )
+0410: 
+0411:     index: dict[str, Path] = {}
+0412: 
+0413:     for name in needed_names:
+0414:         p = FP_IMAGES / name
+0415: 
+0416:         if p.is_file():
+...
+0445:     rng: random.Random,
+0446: ) -> list[dict]:
+0447:     """
+0448:     Prefer:
+0449:       1) unique source images
+0450:       2) balanced rotation across Fashionpedia fine categories
+0451:     """
+0452:     by_fine: dict[
+0453:         str,
+0454:         list[dict],
+0455:     ] = defaultdict(list)
+0456: 
+0457:     for item in candidates:
+0458:         by_fine[
+0459:             item["source_category"]
+...
+0598:     font = ImageFont.load_default()
+0599: 
+0600:     draw.text(
+0601:         (15, 15),
+0602:         (
+0603:             "Fashionpedia train v2 - "
+0604:             f"{class_name}"
+0605:         ),
+0606:         fill="black",
+0607:         font=font,
+0608:     )
+0609: 
+0610:     for i, row in enumerate(
+0611:         rows
+0612:     ):
+...
+0753:         row
+0754:         for row in train_v1_rows
+0755:         if row[
+0756:             "source_dataset"
+0757:         ].strip()
+0758:         == "Fashionpedia"
+0759:     ]
+0760: 
+0761:     # Freeze validation source images. Use basename for Fashionpedia
+0762:     # because annotation file_name stores the image filename.
+0763:     val_fp_names = {
+0764:         Path(
+0765:             row[
+0766:                 "source_image"
+0767:             ]
+0768:         ).name
+0769:         for row in val_rows
+0770:         if row[
+0771:             "source_dataset"
+0772:         ].strip()
+0773:         == "Fashionpedia"
+0774:     }
+0775: 
+0776:     print(
+0777:         "DeepFashion2 train rows kept:",
+0778:         len(deep_train_rows),
+0779:     )
+0780:     print(
+0781:         "Old Fashionpedia train rows:",
+0782:         len(old_fp_train_rows),
+0783:     )
+0784:     print(
+0785:         "Frozen Fashionpedia val image names:",
+0786:         len(val_fp_names),
+0787:     )
+0788: 
+0789:     if not FP_ANN.is_file():
+0790:         raise FileNotFoundError(
+0791:             "Fashionpedia annotation not found:\n"
+0792:             f"  {FP_ANN}"
+0793:         )
+0794: 
+0795:     data = json.loads(
+0796:         FP_ANN.read_text(
+0797:             encoding="utf-8"
+0798:         )
+0799:     )
+0800: 
+...
+1061:             {
+1062:                 "record_id": (
+1063:                     f"prd8v2_fp_"
+1064:                     f"{seq:04d}"
+1065:                 ),
+1066:                 "source_dataset": "Fashionpedia",
+1067:                 "source_image": relative_to_project(
+1068:                     image_path
+1069:                 ),
+1070:                 "garment_id": (
+1071:                     f"fashionpedia_ann_"
+1072:                     f"{ann_id}"
+1073:                 ),
+1074:                 "garment_category": prd_class,
+1075:                 "fine_category": source_cat,
+1076:                 "source_category_id": str(
+1077:                     ann[
+1078:                         "category_id"
+1079:                     ]
+1080:                 ),
+...
+1110:                 ),
+1111:                 "image_height": str(
+1112:                     height
+1113:                 ),
+1114:                 "source_manifest": (
+1115:                     "Fashionpedia "
+1116:                     "instances_attributes_val2020.json "
+1117:                     "expanded-train-v2"
+1118:                 ),
+1119:             }
+1120:         )
+1121: 
+1122:     if skipped:
+1123:         print(
+1124:             "\nWARNING: "
+...
+1280:             "outerwear",
+1281:             "dress",
+1282:             "shoe",
+1283:             "bag",
+1284:             "accessory",
+1285:         )
+1286:     ]
+...
+1326:         )
+1327:         for row in fp_rows
+1328:     )
+1329: 
+1330:     summary = [
+1331:         "PRD 3.1.1 train v2 - Fashionpedia expansion",
+1332:         "============================================",
+1333:         "",
+1334:         f"seed={args.seed}",
+1335:         f"target_fashionpedia_per_class={args.per_class}",
+1336:         "",
+1337:         "Fixed validation",
+1338:         "----------------",
+1339:         f"validation_rows={len(val_rows)}",
+1340:         f"frozen_fashionpedia_val_images={len(val_fp_names)}",
+1341:         "validation_manifest_modified=False",
+1342:         "train_val_source_image_overlap=0",
+1343:         "",
+1344:         "Training rows",
+1345:         "-------------",
+1346:         f"deepfashion2_train_rows={len(deep_train_rows)}",
+1347:         f"fashionpedia_train_rows={len(fp_rows)}",
+1348:         f"total_train_rows={len(final_rows)}",
+1349:         "",
+1350:         "Train class counts",
+1351:         "------------------",
+1352:     ]
+1353: 
+1354:     for cls in (
+1355:         "top",
+1356:         "pants",
+...
+1358:         "outerwear",
+1359:         "dress",
+1360:         "shoe",
+1361:         "bag",
+1362:         "accessory",
+1363:     ):
+1364:         summary.append(
+...
+1366:             f"{counts.get(cls, 0)}"
+1367:         )
+1368: 
+1369:     summary += [
+1370:         "",
+1371:         "Fashionpedia fine-category counts",
+1372:         "--------------------------------",
+1373:     ]
+1374: 
+1375:     for (
+1376:         prd_cls,
+1377:         fine_cls,
+1378:     ), count in sorted(
+1379:         fine_counts.items()
+1380:     ):
+...
+1387:     summary += [
+1388:         "",
+1389:         "Notes",
+1390:         "-----",
+1391:         "- The original fixed validation manifest is unchanged.",
+1392:         "- Fashionpedia candidates from validation source images were excluded before sampling.",
+1393:         "- DeepFashion2 training rows were preserved from train_v1.",
+1394:         "- Fashionpedia train masks were regenerated as full-image masks.",
+1395:         "- train_v2 is intended for baseline-v2 training; compare against v1 on the same fixed validation set.",
+1396:         "- Because the class distribution is now intentionally changed, use a class-aware/balanced training strategy in the next training script rather than interpreting raw epoch counts as directly comparable.",
+1397:     ]
+1398: 
+1399:     SUMMARY_PATH.write_text(
+1400:         "\n".join(
+1401:             summary
+1402:         )
+1403:         + "\n",
+...
+1426:         "outerwear",
+1427:         "dress",
+1428:         "shoe",
+1429:         "bag",
+1430:         "accessory",
+1431:     ):
+1432:         print(
+
+===== scripts/build_prd_8class_train_v2_expand_fashionpedia_fixed.py =====
+0001: """
+0002: Build PRD 3.1.1 train_v2 with exactly 100 VALID Fashionpedia training
+0003: instances per new PRD class (shoe / bag / accessory).
+0004: 
+0005: This version fixes the v1 expansion issue where exactly 100 candidates were
+0006: sampled before mask decoding, so decode failures could leave fewer than 100
+0007: usable rows. Here we keep drawing reserve candidates until each class reaches
+0008: the requested number of SUCCESSFULLY decoded instances.
+0009: 
+0010: Inputs
+0011: ------
+0012: configs/prd_8class_train_v1.csv
+0013: configs/prd_8class_val_v1.csv
+0014: 
+0015: ../fashion_data/raw/fashionpedia/
+0016: ├── annotations/
+0017: │   └── instances_attributes_val2020.json
+0018: └── images/
+0019:     └── test/
+0020: 
+0021: Outputs
+0022: -------
+0023: configs/prd_8class_train_v2.csv
+0024: 
+0025: ../fashion_data/processed/fashionpedia_train_expanded_v2/
+0026: └── full_masks/
+0027: 
+0028: reports/prd_instance_segmentation/prd_8class_train_expansion_v2/
+0029: ├── summary.txt
+0030: ├── class_counts_train_v2.csv
+0031: ├── selected_fashionpedia_v2.csv
+0032: ├── skipped_annotations.csv
+0033: ├── validation_overlap_check.csv
+0034: └── contact_sheets/
+0035:     ├── shoe.jpg
+0036:     ├── bag.jpg
+0037:     └── accessory.jpg
+0038: 
+0039: Run
+0040: ---
+0041: cd /workspace/fashion_multimodal_analysis
+0042: python scripts/build_prd_8class_train_v2_expand_fashionpedia_fixed.py
+0043: """
+0044: 
+0045: from __future__ import annotations
+0046: 
+0047: import argparse
+0048: import csv
+0049: import json
+0050: import math
+0051: import random
+...
+0062: DATA_ROOT = PROJECT_ROOT.parent / "fashion_data"
+0063: 
+0064: TRAIN_V1 = PROJECT_ROOT / "configs" / "prd_8class_train_v1.csv"
+0065: VAL_V1 = PROJECT_ROOT / "configs" / "prd_8class_val_v1.csv"
+0066: 
+0067: RAW_FP_ROOT = DATA_ROOT / "raw" / "fashionpedia"
+0068: FP_ANN = RAW_FP_ROOT / "annotations" / "instances_attributes_val2020.json"
+0069: FP_IMAGES = RAW_FP_ROOT / "images" / "test"
+0070: 
+0071: PROCESSED_ROOT = DATA_ROOT / "processed" / "fashionpedia_train_expanded_v2"
+0072: FULL_MASK_DIR = PROCESSED_ROOT / "full_masks"
+0073: 
+0074: TRAIN_V2 = PROJECT_ROOT / "configs" / "prd_8class_train_v2.csv"
+0075: 
+0076: REPORT_DIR = (
+0077:     PROJECT_ROOT
+0078:     / "reports"
+0079:     / "prd_instance_segmentation"
+0080:     / "prd_8class_train_expansion_v2"
+0081: )
+0082: SUMMARY_PATH = REPORT_DIR / "summary.txt"
+0083: COUNTS_PATH = REPORT_DIR / "class_counts_train_v2.csv"
+0084: SELECTED_PATH = REPORT_DIR / "selected_fashionpedia_v2.csv"
+0085: SKIPPED_PATH = REPORT_DIR / "skipped_annotations.csv"
+0086: OVERLAP_PATH = REPORT_DIR / "validation_overlap_check.csv"
+0087: CONTACT_DIR = REPORT_DIR / "contact_sheets"
+0088: 
+0089: TARGET_FP_CLASSES = ("shoe", "bag", "accessory")
+0090: 
+0091: 
+0092: def parse_args() -> argparse.Namespace:
+0093:     p = argparse.ArgumentParser()
+...
+0145:     n = normalize_name(name)
+0146: 
+0147:     if n == "shoe" or n.endswith(" shoe") or "shoes" in n:
+0148:         return "shoe"
+0149: 
+0150:     if "bag" in n or "wallet" in n:
+0151:         return "bag"
+0152: 
+0153:     accessory_keywords = (
+0154:         "glasses",
+0155:         "hat",
+0156:         "headband",
+0157:         "head covering",
+0158:         "hair accessory",
+0159:         "tie",
+0160:         "glove",
+0161:         "watch",
+0162:         "belt",
+0163:         "leg warmer",
+0164:         "tights",
+...
+0167:         "scarf",
+0168:     )
+0169:     if any(k in n for k in accessory_keywords):
+0170:         return "accessory"
+0171: 
+0172:     return None
+...
+0271: 
+0272: 
+0273: def build_image_index() -> dict[str, Path]:
+0274:     if not FP_IMAGES.is_dir():
+0275:         raise FileNotFoundError(
+0276:             f"Fashionpedia image directory not found:\n  {FP_IMAGES}"
+0277:         )
+0278: 
+0279:     index: dict[str, Path] = {}
+0280: 
+0281:     print(f"Indexing Fashionpedia images under:\n  {FP_IMAGES}")
+0282: 
+0283:     for pattern in (
+0284:         "*.jpg",
+0285:         "*.jpeg",
+0286:         "*.png",
+0287:         "*.JPG",
+0288:         "*.JPEG",
+0289:         "*.PNG",
+0290:     ):
+...
+0399:     draw = ImageDraw.Draw(sheet)
+0400:     font = ImageFont.load_default()
+0401: 
+0402:     draw.text(
+0403:         (15, 15),
+0404:         f"Fashionpedia train v2 - {class_name}",
+0405:         fill="black",
+0406:         font=font,
+0407:     )
+0408: 
+0409:     for i, row in enumerate(rows):
+0410:         r = i // cols
+0411:         c = i % cols
+0412: 
+0413:         x0 = c * tile_w
+...
+0486:     ]
+0487: 
+0488:     old_fp_train_rows = [
+0489:         row
+0490:         for row in train_v1_rows
+0491:         if row["source_dataset"].strip() == "Fashionpedia"
+0492:     ]
+0493: 
+0494:     val_fp_names = {
+0495:         Path(row["source_image"]).name
+0496:         for row in val_rows
+0497:         if row["source_dataset"].strip() == "Fashionpedia"
+0498:     }
+0499: 
+0500:     print(f"DeepFashion2 train rows kept: {len(deep_train_rows)}")
+0501:     print(f"Old Fashionpedia train rows: {len(old_fp_train_rows)}")
+0502:     print(f"Frozen Fashionpedia val image names: {len(val_fp_names)}")
+0503: 
+0504:     if not FP_ANN.is_file():
+0505:         raise FileNotFoundError(
+0506:             f"Fashionpedia annotation not found:\n  {FP_ANN}"
+0507:         )
+0508: 
+0509:     with FP_ANN.open("r", encoding="utf-8") as f:
+0510:         data = json.load(f)
+0511: 
+0512:     category_by_id = {
+0513:         int(c["id"]): str(c["name"])
+0514:         for c in data["categories"]
+0515:     }
+...
+0645: 
+0646:             Image.fromarray(mask).save(mask_path)
+0647: 
+0648:             row = {
+0649:                 "record_id": "",
+0650:                 "source_dataset": "Fashionpedia",
+0651:                 "source_image": relative_to_project(image_path),
+0652:                 "garment_id": f"fashionpedia_ann_{ann_id}",
+0653:                 "garment_category": cls,
+0654:                 "fine_category": source_cat,
+0655:                 "source_category_id": str(ann["category_id"]),
+0656:                 "annotation_ref": str(ann_id),
+0657:                 "crop_path": "",
+0658:                 "mask_path": relative_to_project(mask_path),
+0659:                 "masked_preview_path": "",
+0660:                 "visualization_path": "",
+0661:                 "bbox_x1": str(x1),
+...
+0665:                 "bbox_width": str(x2 - x1),
+0666:                 "bbox_height": str(y2 - y1),
+0667:                 "image_width": str(width),
+0668:                 "image_height": str(height),
+0669:                 "source_manifest": (
+0670:                     "Fashionpedia instances_attributes_val2020.json "
+0671:                     "expanded-train-v2"
+0672:                 ),
+0673:             }
+0674: 
+0675:             successful_rows.append(row)
+0676: 
+0677:             if (
+0678:                 len(successful_rows) % 20 == 0
+0679:                 or len(successful_rows) == args.per_class
+...
+0804:             "outerwear",
+0805:             "dress",
+0806:             "shoe",
+0807:             "bag",
+0808:             "accessory",
+0809:         )
+0810:     ]
+...
+0849:         r["prd_class"]
+0850:         for r in skipped
+0851:     )
+0852: 
+0853:     summary = [
+0854:         "PRD 3.1.1 train v2 - Fashionpedia expansion (fixed)",
+0855:         "====================================================",
+0856:         "",
+0857:         f"seed={args.seed}",
+0858:         f"target_fashionpedia_per_class={args.per_class}",
+0859:         "",
+0860:         "Fixed validation",
+0861:         "----------------",
+0862:         f"validation_rows={len(val_rows)}",
+0863:         f"frozen_fashionpedia_val_images={len(val_fp_names)}",
+0864:         "validation_manifest_modified=False",
+0865:         "train_val_source_image_overlap=0",
+0866:         "",
+0867:         "Training rows",
+0868:         "-------------",
+0869:         f"deepfashion2_train_rows={len(deep_train_rows)}",
+0870:         f"fashionpedia_train_rows={len(fp_rows)}",
+0871:         f"total_train_rows={len(final_rows)}",
+0872:         "",
+0873:         "Fashionpedia build diagnostics",
+0874:         "------------------------------",
+0875:     ]
+0876: 
+0877:     for cls in TARGET_FP_CLASSES:
+0878:         summary.append(
+0879:             f"{cls}: valid={fp_counts.get(cls, 0)}, "
+0880:             f"attempted={attempts_by_class.get(cls, 0)}, "
+0881:             f"skipped={skip_counts.get(cls, 0)}"
+0882:         )
+...
+0894:         "outerwear",
+0895:         "dress",
+0896:         "shoe",
+0897:         "bag",
+0898:         "accessory",
+0899:     ):
+0900:         summary.append(
+0901:             f"{cls}={counts.get(cls, 0)}"
+0902:         )
+0903: 
+0904:     summary += [
+0905:         "",
+0906:         "Fashionpedia fine-category counts",
+0907:         "--------------------------------",
+0908:     ]
+0909: 
+0910:     for (prd_cls, fine_cls), count in sorted(
+0911:         fine_counts.items()
+0912:     ):
+0913:         summary.append(
+0914:             f"{prd_cls} <- {fine_cls}: {count}"
+0915:         )
+...
+0917:     summary += [
+0918:         "",
+0919:         "Notes",
+0920:         "-----",
+0921:         "- Existing validation split was not changed.",
+0922:         "- Fashionpedia validation source images were excluded before sampling.",
+0923:         "- Decode failures were backfilled from reserve candidates until each target class reached the requested valid count.",
+0924:         "- DeepFashion2 train rows were preserved from train_v1.",
+0925:         "- New Fashionpedia masks are stored as full-image masks.",
+0926:         "- Use train_v2 for baseline-v2 training and compare on the same fixed val_v1.",
+0927:     ]
+0928: 
+0929:     SUMMARY_PATH.write_text(
+0930:         "\n".join(summary) + "\n",
+0931:         encoding="utf-8",
+0932:     )
+0933: 
+0934:     print()
+0935:     print("=== TRAIN V2 BUILD FINISHED ===")
+0936:     print(f"DeepFashion2 train rows: {len(deep_train_rows)}")
+0937:     print(f"Fashionpedia train rows: {len(fp_rows)}")
+0938:     print(f"Total train rows       : {len(final_rows)}")
+0939:     print()
+0940: 
+0941:     for cls in (
+0942:         "top",
+0943:         "pants",
+0944:         "skirt",
+0945:         "outerwear",
+0946:         "dress",
+0947:         "shoe",
+0948:         "bag",
+0949:         "accessory",
+0950:     ):
+0951:         print(
+
+===== scripts/build_prd_8class_train_val_split_v1.py =====
+0078:     "outerwear",
+0079:     "dress",
+0080:     "shoe",
+0081:     "bag",
+0082:     "accessory",
+0083: )
+0084: 
+...
+0612:         "Per-source counts: train / val",
+0613:         "-----------------------------",
+0614:         f"DeepFashion2="
+0615:         f"{dataset_train.get('DeepFashion2', 0)}/"
+0616:         f"{dataset_val.get('DeepFashion2', 0)}",
+0617:         f"Fashionpedia="
+0618:         f"{dataset_train.get('Fashionpedia', 0)}/"
+0619:         f"{dataset_val.get('Fashionpedia', 0)}",
+0620:         "",
+0621:         "Validation",
+0622:         "----------",
+0623:         f"image_group_overlap=0" if not any(
+0624:             i["issue_type"] == "image_group_leakage"
+0625:             for i in issues
+0626:         ) else "image_group_overlap=ERROR",
+0627:         f"validation_issues={len(issues)}",
+0628:         "",
+
+===== scripts/build_prd_8class_unified_manifest_v1.py =====
+0004: 1) DeepFashion2 prepared garment instances:
+0005:    configs/garment_instances_gt_pilot_100.csv
+0006:    NOTE: despite the historical filename "_100", this file currently contains
+0007:    156 data rows + 1 header row, i.e. the full prepared 156-instance set.
+0008: 
+0009: 2) Fashionpedia missing-3 pilot:
+0010:    configs/fashionpedia_missing3_pilot_manifest_v1.csv
+0011:    Expected: 60 data rows (20 shoe, 20 bag, 20 accessory).
+0012: 
+0013: Outputs
+0014: -------
+0015: configs/prd_8class_unified_manifest_v1.csv
+0016: 
+0017: reports/prd_instance_segmentation/prd_8class_unified_v1/
+0018: ├── summary.txt
+0019: ├── class_counts.csv
+...
+0034: 
+0035: DEEPFASHION2_CSV = (
+0036:     PROJECT_ROOT / "configs" / "garment_instances_gt_pilot_100.csv"
+0037: )
+0038: 
+0039: FASHIONPEDIA_CSV = (
+0040:     PROJECT_ROOT / "configs" / "fashionpedia_missing3_pilot_manifest_v1.csv"
+0041: )
+0042: 
+0043: OUTPUT_CSV = (
+0044:     PROJECT_ROOT / "configs" / "prd_8class_unified_manifest_v1.csv"
+0045: )
+0046: 
+0047: REPORT_DIR = (
+0048:     PROJECT_ROOT
+0049:     / "reports"
+...
+0062:     "outerwear",
+0063:     "dress",
+0064:     "shoe",
+0065:     "bag",
+0066:     "accessory",
+0067: )
+0068: 
+...
+0072:     "skirt",
+0073:     "outerwear",
+0074:     "dress",
+0075: }
+0076: 
+0077: FASHIONPEDIA_CLASSES = {
+0078:     "shoe",
+0079:     "bag",
+0080:     "accessory",
+0081: }
+0082: 
+0083: OUTPUT_FIELDS = [
+0084:     "record_id",
+0085:     "source_dataset",
+0086:     "source_image",
+...
+0207:         )
+0208: 
+0209:     return normalized, issues
+0210: 
+0211: 
+0212: def normalize_fashionpedia(
+0213:     rows: list[dict[str, str]],
+0214: ) -> tuple[list[dict], list[dict]]:
+0215:     normalized = []
+0216:     issues = []
+0217: 
+0218:     for idx, row in enumerate(rows, start=1):
+0219:         category = str(row.get("garment_category", "")).strip().lower()
+0220: 
+0221:         if category not in FASHIONPEDIA_CLASSES:
+0222:             issues.append(
+0223:                 {
+0224:                     "source_dataset": "Fashionpedia",
+0225:                     "row_number": idx + 1,
+0226:                     "garment_id": row.get("garment_id", ""),
+0227:                     "issue": f"unexpected garment_category={category!r}",
+0228:                 }
+0229:             )
+0230: 
+0231:         normalized.append(
+0232:             {
+0233:                 "record_id": "",
+0234:                 "source_dataset": "Fashionpedia",
+0235:                 "source_image": row.get("source_image", ""),
+0236:                 "garment_id": row.get("garment_id", ""),
+0237:                 "garment_category": category,
+0238:                 "fine_category": row.get("source_category", ""),
+0239:                 "source_category_id": "",
+0240:                 "annotation_ref": row.get("annotation_id", ""),
+0241:                 "crop_path": row.get("crop_path", ""),
+0242:                 "mask_path": row.get("mask_path", ""),
+0243:                 "masked_preview_path": row.get(
+...
+0252:                 "bbox_y2": to_int_string(row.get("bbox_y2")),
+0253:                 "bbox_width": to_int_string(row.get("bbox_width")),
+0254:                 "bbox_height": to_int_string(row.get("bbox_height")),
+0255:                 "image_width": to_int_string(row.get("image_width")),
+0256:                 "image_height": to_int_string(row.get("image_height")),
+0257:                 "source_manifest": "configs/fashionpedia_missing3_pilot_manifest_v1.csv",
+0258:             }
+0259:         )
+0260: 
+0261:     return normalized, issues
+0262: 
+0263: 
+0264: def validate_rows(rows: list[dict]) -> list[dict]:
+0265:     issues = []
+0266: 
+...
+0349: 
+0350: def main() -> None:
+0351:     REPORT_DIR.mkdir(parents=True, exist_ok=True)
+0352: 
+0353:     deep_rows_raw = read_csv(DEEPFASHION2_CSV)
+0354:     fp_rows_raw = read_csv(FASHIONPEDIA_CSV)
+0355: 
+0356:     print("Input rows:")
+0357:     print(f"  DeepFashion2: {len(deep_rows_raw)}")
+0358:     print(f"  Fashionpedia: {len(fp_rows_raw)}")
+0359: 
+0360:     deep_rows, deep_issues = normalize_deepfashion2(
+0361:         deep_rows_raw
+0362:     )
+0363:     fp_rows, fp_issues = normalize_fashionpedia(
+0364:         fp_rows_raw
+0365:     )
+0366: 
+0367:     unified = deep_rows + fp_rows
+0368: 
+0369:     for idx, row in enumerate(unified, start=1):
+0370:         row["record_id"] = f"prd8_{idx:04d}"
+0371: 
+0372:     validation_issues = (
+...
+0426:         "===================================",
+0427:         "",
+0428:         "Inputs",
+0429:         "------",
+0430:         f"DeepFashion2 rows={len(deep_rows_raw)}",
+0431:         f"Fashionpedia rows={len(fp_rows_raw)}",
+0432:         f"Unified rows={len(unified)}",
+0433:         "",
+0434:         "Dataset counts",
+0435:         "--------------",
+0436:         f"DeepFashion2={dataset_counts.get('DeepFashion2', 0)}",
+0437:         f"Fashionpedia={dataset_counts.get('Fashionpedia', 0)}",
+0438:         "",
+0439:         "PRD class counts",
+0440:         "----------------",
+0441:     ]
+0442: 
+0443:     for cls in PRD_CLASSES:
+0444:         summary.append(
+0445:             f"{cls}={counts.get(cls, 0)}"
+0446:         )
+...
+0454:         "Important interpretation",
+0455:         "------------------------",
+0456:         "- This file establishes unified DATA COVERAGE for the 8 PRD categories.",
+0457:         "- It does NOT by itself prove that the 3.1.1 segmentation model meets the PRD accuracy/speed targets.",
+0458:         "- DeepFashion2 supplies top/pants/skirt/outerwear/dress.",
+0459:         "- Fashionpedia supplies shoe/bag/accessory.",
+0460:         "- Keep source_dataset when splitting/evaluating so dataset-source effects remain visible.",
+0461:     ]
+0462: 
+0463:     SUMMARY_PATH.write_text(
+0464:         "\n".join(summary) + "\n",
+0465:         encoding="utf-8",
+0466:     )
+0467: 
+0468:     print()
+
+===== scripts/build_prd_8class_unified_manifest_v2.py =====
+0008:   instead of:
+0009:       source_dataset + garment_id
+0010: 
+0011: Inputs:
+0012:     configs/garment_instances_gt_pilot_100.csv
+0013:     configs/fashionpedia_missing3_pilot_manifest_v1.csv
+0014: 
+0015: Outputs:
+0016:     configs/prd_8class_unified_manifest_v2.csv
+0017: 
+0018:     reports/prd_instance_segmentation/prd_8class_unified_v2/
+0019:         summary.txt
+0020:         class_counts.csv
+0021:         validation_issues.csv
+0022: 
+...
+0035: 
+0036: DEEPFASHION2_CSV = (
+0037:     PROJECT_ROOT / "configs" / "garment_instances_gt_pilot_100.csv"
+0038: )
+0039: 
+0040: FASHIONPEDIA_CSV = (
+0041:     PROJECT_ROOT / "configs" / "fashionpedia_missing3_pilot_manifest_v1.csv"
+0042: )
+0043: 
+0044: OUTPUT_CSV = (
+0045:     PROJECT_ROOT / "configs" / "prd_8class_unified_manifest_v2.csv"
+0046: )
+0047: 
+0048: REPORT_DIR = (
+0049:     PROJECT_ROOT
+0050:     / "reports"
+...
+0063:     "outerwear",
+0064:     "dress",
+0065:     "shoe",
+0066:     "bag",
+0067:     "accessory",
+0068: )
+0069: 
+...
+0073:     "skirt",
+0074:     "outerwear",
+0075:     "dress",
+0076: }
+0077: 
+0078: FASHIONPEDIA_CLASSES = {
+0079:     "shoe",
+0080:     "bag",
+0081:     "accessory",
+0082: }
+0083: 
+0084: OUTPUT_FIELDS = [
+0085:     "record_id",
+0086:     "source_dataset",
+0087:     "source_image",
+...
+0207:         )
+0208: 
+0209:     return normalized, issues
+0210: 
+0211: 
+0212: def normalize_fashionpedia(
+0213:     rows: list[dict[str, str]],
+0214: ) -> tuple[list[dict], list[dict]]:
+0215:     normalized = []
+0216:     issues = []
+0217: 
+0218:     for idx, row in enumerate(rows, start=1):
+0219:         category = str(row.get("garment_category", "")).strip().lower()
+0220: 
+0221:         if category not in FASHIONPEDIA_CLASSES:
+0222:             issues.append(
+0223:                 {
+0224:                     "source_dataset": "Fashionpedia",
+0225:                     "row_number": idx + 1,
+0226:                     "garment_id": row.get("garment_id", ""),
+0227:                     "issue": f"unexpected garment_category={category!r}",
+0228:                 }
+0229:             )
+0230: 
+0231:         normalized.append(
+0232:             {
+0233:                 "record_id": "",
+0234:                 "source_dataset": "Fashionpedia",
+0235:                 "source_image": row.get("source_image", ""),
+0236:                 "garment_id": row.get("garment_id", ""),
+0237:                 "garment_category": category,
+0238:                 "fine_category": row.get("source_category", ""),
+0239:                 "source_category_id": "",
+0240:                 "annotation_ref": row.get("annotation_id", ""),
+0241:                 "crop_path": row.get("crop_path", ""),
+0242:                 "mask_path": row.get("mask_path", ""),
+0243:                 "masked_preview_path": row.get("masked_crop_path", ""),
+...
+0248:                 "bbox_y2": to_int_string(row.get("bbox_y2")),
+0249:                 "bbox_width": to_int_string(row.get("bbox_width")),
+0250:                 "bbox_height": to_int_string(row.get("bbox_height")),
+0251:                 "image_width": to_int_string(row.get("image_width")),
+0252:                 "image_height": to_int_string(row.get("image_height")),
+0253:                 "source_manifest": "configs/fashionpedia_missing3_pilot_manifest_v1.csv",
+0254:             }
+0255:         )
+0256: 
+0257:     return normalized, issues
+0258: 
+0259: 
+0260: def validate_rows(rows: list[dict]) -> list[dict]:
+0261:     issues = []
+0262: 
+...
+0355: 
+0356: def main() -> None:
+0357:     REPORT_DIR.mkdir(parents=True, exist_ok=True)
+0358: 
+0359:     deep_rows_raw = read_csv(DEEPFASHION2_CSV)
+0360:     fp_rows_raw = read_csv(FASHIONPEDIA_CSV)
+0361: 
+0362:     print("Input rows:")
+0363:     print(f"  DeepFashion2: {len(deep_rows_raw)}")
+0364:     print(f"  Fashionpedia: {len(fp_rows_raw)}")
+0365: 
+0366:     deep_rows, deep_issues = normalize_deepfashion2(deep_rows_raw)
+0367:     fp_rows, fp_issues = normalize_fashionpedia(fp_rows_raw)
+0368: 
+0369:     unified = deep_rows + fp_rows
+0370: 
+0371:     for idx, row in enumerate(unified, start=1):
+0372:         row["record_id"] = f"prd8_{idx:04d}"
+0373: 
+0374:     validation_issues = (
+0375:         deep_issues
+0376:         + fp_issues
+...
+0429:         "===================================",
+0430:         "",
+0431:         "Inputs",
+0432:         "------",
+0433:         f"DeepFashion2 rows={len(deep_rows_raw)}",
+0434:         f"Fashionpedia rows={len(fp_rows_raw)}",
+0435:         f"Unified rows={len(unified)}",
+0436:         "",
+0437:         "Dataset counts",
+0438:         "--------------",
+0439:         f"DeepFashion2={dataset_counts.get('DeepFashion2', 0)}",
+0440:         f"Fashionpedia={dataset_counts.get('Fashionpedia', 0)}",
+0441:         "",
+0442:         "PRD class counts",
+0443:         "----------------",
+0444:     ]
+0445: 
+0446:     for cls in PRD_CLASSES:
+0447:         summary.append(
+0448:             f"{cls}={counts.get(cls, 0)}"
+0449:         )
+...
+0462:         "Important interpretation",
+0463:         "------------------------",
+0464:         "- This establishes unified DATA COVERAGE for the 8 PRD categories.",
+0465:         "- It does NOT prove the segmentation model meets final PRD accuracy/speed targets.",
+0466:         "- DeepFashion2 supplies top/pants/skirt/outerwear/dress.",
+0467:         "- Fashionpedia supplies shoe/bag/accessory.",
+0468:         "- Keep source_dataset visible during splitting/evaluation.",
+0469:     ]
+0470: 
+0471:     SUMMARY_PATH.write_text(
+0472:         "\n".join(summary) + "\n",
+0473:         encoding="utf-8",
+0474:     )
+0475: 
+0476:     print()
+
+===== scripts/compare_prd_8class_balanced_vs_nobalance.py =====
+0040: )
+0041: 
+0042: CLASSES = ["top", "pants", "skirt", "outerwear", "dress", "shoe", "bag", "accessory"]
+0043: OLD5 = {"top", "pants", "skirt", "outerwear", "dress"}
+0044: NEW3 = {"shoe", "bag", "accessory"}
+0045: 
+0046: 
+...
+0226:         bmi = be["mean_mask_iou_correct_class"]
+0227:         nmi = ne["mean_mask_iou_correct_class"]
+0228: 
+0229:         per_class.append({
+0230:             "garment_category": cls,
+0231:             "group": "DeepFashion2_old5" if cls in OLD5 else "Fashionpedia_new3",
+0232:             "gt_count": be["gt_count"],
+0233:             "balanced_bbox50_recall": br.get("bbox50_recall", ""),
+0234:             "nobalance_bbox50_recall": nr.get("bbox50_recall", ""),
+0235:             "delta_bbox50_recall": fmt(
+0236:                 fnum(br.get("bbox50_recall")) - fnum(nr.get("bbox50_recall"))
+0237:             ),
+0238:             "balanced_category_acc_localized": br.get("category_accuracy_on_localized", ""),
+0239:             "nobalance_category_acc_localized": nr.get("category_accuracy_on_localized", ""),
+0240:             "balanced_correct_class_count": be["correct_class_count"],
+...
+0281:     write_csv(COMPARE_DIR / "per_source_comparison.csv", per_source)
+0282: 
+0283:     grouped = []
+0284:     for name, classes in [
+0285:         ("DeepFashion2_old5", OLD5),
+0286:         ("Fashionpedia_new3", NEW3),
+0287:     ]:
+0288:         bg = pooled(b_exact, classes)
+0289:         ng = pooled(n_exact, classes)
+0290: 
+0291:         grouped.append({
+0292:             "group": name,
+0293:             "gt_count": bg["gt_count"],
+0294:             "balanced_correct_class_count": bg["correct_class_count"],
+0295:             "nobalance_correct_class_count": ng["correct_class_count"],
+...
+0367:         f"nobalance_mean_mask_iou={fmt(ng_old['mean_mask_iou_correct_class'])}",
+0368:         f"delta_mean_mask_iou={fmt(bg_old['mean_mask_iou_correct_class'] - ng_old['mean_mask_iou_correct_class'])}",
+0369:         f"balanced_high_iou_count={bg_old['mask_iou_ge_085_count']}",
+0370:         f"nobalance_high_iou_count={ng_old['mask_iou_ge_085_count']}",
+0371:         "",
+0372:         "[Fashionpedia new3]",
+0373:         f"balanced_mean_mask_iou={fmt(bg_new['mean_mask_iou_correct_class'])}",
+0374:         f"nobalance_mean_mask_iou={fmt(ng_new['mean_mask_iou_correct_class'])}",
+0375:         f"delta_mean_mask_iou={fmt(bg_new['mean_mask_iou_correct_class'] - ng_new['mean_mask_iou_correct_class'])}",
+0376:         f"balanced_high_iou_count={bg_new['mask_iou_ge_085_count']}",
+0377:         f"nobalance_high_iou_count={ng_new['mask_iou_ge_085_count']}",
+0378:         "",
+0379:         "[Interpretation rule]",
+0380:         "- old5 stable + new3 decline: aggregate drop is mainly from the added/smaller classes.",
+0381:         "- old5 also declines clearly: balanced sampling is affecting original garment classes; consider reducing sampler strength.",
+
+===== scripts/discover_prd31_raw_benchmark_pool_v1.py =====
+0005: 
+0006: It:
+0007: 1) reads benchmark/prd_3_1_v1/audit/used_sample_registry.csv;
+0008: 2) scans DeepFashion2 raw annotations and counts UNUSED candidates for the
+0009:    five clothing classes used by the current project;
+0010: 3) scans Fashionpedia annotation JSON files and reports COCO-style category
+0011:    names/counts so shoe/bag/accessory can be mapped safely before sampling;
+0012: 4) writes only audit reports.
+0013: 
+0014: Run
+0015: ---
+0016: cd /workspace/fashion_multimodal_analysis
+0017: 
+0018: python scripts/discover_prd31_raw_benchmark_pool_v1.py
+0019: """
+...
+0046:     / "raw_pool_discovery_v1"
+0047: )
+0048: 
+0049: DF2_ANNO_DIR = DATA_ROOT / "raw" / "train" / "train" / "annos"
+0050: DF2_IMAGE_DIR = DATA_ROOT / "raw" / "train" / "train" / "image"
+0051: FASHIONPEDIA_ROOT = DATA_ROOT / "raw" / "fashionpedia"
+0052: 
+0053: # DeepFashion2 official fine-category IDs/names.
+0054: DF2_FINE = {
+0055:     1: "short_sleeve_top",
+0056:     2: "long_sleeve_top",
+0057:     3: "short_sleeve_outwear",
+0058:     4: "long_sleeve_outwear",
+0059:     5: "vest",
+0060:     6: "sling",
+...
+0091:         type=int,
+0092:         default=0,
+0093:         help="0 = scan all DeepFashion2 annotation files.",
+0094:     )
+0095:     p.add_argument(
+0096:         "--max-fashionpedia-jsons",
+0097:         type=int,
+0098:         default=0,
+0099:         help="0 = inspect all JSON files under raw/fashionpedia.",
+0100:     )
+0101:     return p.parse_args()
+0102: 
+0103: 
+0104: def read_csv(path: Path) -> list[dict[str, str]]:
+0105:     if not path.is_file():
+0106:         raise FileNotFoundError(path)
+0107:     with path.open("r", encoding="utf-8-sig", newline="") as f:
+0108:         return list(csv.DictReader(f))
+...
+0262:         "unused_fine_distribution": dict(sorted(fine_unused.items())),
+0263:     }
+0264:     return summary_rows, previews, meta
+0265: 
+0266: 
+0267: def scan_fashionpedia(max_jsons: int):
+0268:     rows = []
+0269: 
+0270:     if not FASHIONPEDIA_ROOT.exists():
+0271:         return rows, {
+0272:             "status": "MISSING",
+0273:             "root": str(FASHIONPEDIA_ROOT),
+0274:         }
+0275: 
+0276:     json_files = sorted(FASHIONPEDIA_ROOT.rglob("*.json"))
+0277:     if max_jsons > 0:
+0278:         json_files = json_files[:max_jsons]
+0279: 
+0280:     inspected = 0
+0281:     errors = 0
+0282: 
+0283:     for path in json_files:
+0284:         inspected += 1
+0285:         size_mb = path.stat().st_size / (1024 * 1024)
+...
+0386:     write_csv(
+0387:         OUT_DIR / "deepfashion2_unused_candidates_preview.csv",
+0388:         df2_preview,
+0389:     )
+0390: 
+0391:     fp_rows, fp_meta = scan_fashionpedia(
+0392:         args.max_fashionpedia_jsons
+0393:     )
+0394:     write_csv(
+0395:         OUT_DIR / "fashionpedia_annotation_inventory.csv",
+0396:         fp_rows,
+0397:     )
+0398: 
+0399:     lines = [
+0400:         "PRD 3.1 Raw Benchmark Pool Discovery v1",
+0401:         "======================================",
+0402:         "",
+0403:         f"data_root={DATA_ROOT}",
+0404:         f"used_registry_samples={len(used)}",
+...
+0421:                 f"unused={r['unused_candidates']}"
+0422:             )
+0423: 
+0424:     lines += [
+0425:         "",
+0426:         "Fashionpedia",
+0427:         "------------",
+0428:     ]
+0429: 
+0430:     for k, v in fp_meta.items():
+0431:         lines.append(f"{k}={v}")
+0432: 
+0433:     lines += [
+0434:         "",
+0435:         "Next decision",
+0436:         "-------------",
+0437:         "- Use unused DeepFashion2 for top/pants/skirt/outerwear/dress.",
+0438:         "- Inspect fashionpedia_annotation_inventory.csv before defining the shoe/bag/accessory mapping.",
+0439:         "- Do not freeze or sample the blind benchmark until both source pools are confirmed.",
+0440:     ]
+0441: 
+0442:     (OUT_DIR / "raw_pool_discovery.txt").write_text(
+0443:         "\n".join(lines) + "\n",
+0444:         encoding="utf-8",
+0445:     )
+0446: 
+0447:     print("FINISHED")
+0448:     for p in [
+0449:         OUT_DIR / "raw_pool_discovery.txt",
+0450:         OUT_DIR / "deepfashion2_unused_candidate_counts.csv",
+0451:         OUT_DIR / "deepfashion2_unused_candidates_preview.csv",
+0452:         OUT_DIR / "fashionpedia_annotation_inventory.csv",
+0453:     ]:
+0454:         print(p.relative_to(PROJECT_ROOT))
+0455: 
+0456: 
+0457: if __name__ == "__main__":
+0458:     main()
+
+===== scripts/record_maskrcnn_8class_experiment_config_v1.py =====
+0029:     "outerwear": 4,
+0030:     "dress": 5,
+0031:     "shoe": 6,
+0032:     "bag": 7,
+0033:     "accessory": 8,
+0034: }
+0035: 
+...
+0139: 
+0140:     lines += [
+0141:         "",
+0142:         "[Dataset Sources]",
+0143:         f"train_DeepFashion2={train['source_counts'].get('DeepFashion2', 0)}",
+0144:         f"train_Fashionpedia={train['source_counts'].get('Fashionpedia', 0)}",
+0145:         f"val_DeepFashion2={val['source_counts'].get('DeepFashion2', 0)}",
+0146:         f"val_Fashionpedia={val['source_counts'].get('Fashionpedia', 0)}",
+0147:         "",
+0148:         "[Training Hyperparameters]",
+0149:         f"epochs={CONFIG['epochs']}",
+0150:         f"batch_size={CONFIG['batch_size']}",
+0151:         f"optimizer={CONFIG['optimizer']}",
+0152:         f"learning_rate={CONFIG['learning_rate']}",
+0153:         f"momentum={CONFIG['momentum']}",
+0154:         f"weight_decay={CONFIG['weight_decay']}",
+0155:         f"lr_scheduler={CONFIG['lr_scheduler']}",
+...
+0178:         "python scripts/train_prd_8class_maskrcnn_baseline_v1.py --epochs 15 --device cuda",
+0179:         "",
+0180:         "[Notes]",
+0181:         "- Train/validation split is grouped by source image to avoid leakage.",
+0182:         "- DeepFashion2 provides top/pants/skirt/outerwear/dress.",
+0183:         "- Fashionpedia provides shoe/bag/accessory.",
+0184:         "- This file records the baseline configuration; evaluation metrics are reported separately.",
+0185:     ]
+0186: 
+0187:     OUTPUT_PATH.parent.mkdir(parents=True, exist_ok=True)
+0188:     OUTPUT_PATH.write_text("\n".join(lines) + "\n", encoding="utf-8")
+0189: 
+0190:     print("Experiment configuration saved:")
+0191:     print(OUTPUT_PATH)
+0192:     print()
+
+===== scripts/run_prd31_predicted_roi_attributes_fullval_v1.py =====
+0687:         "outerwear",
+0688:         "dress",
+0689:         "shoe",
+0690:         "bag",
+0691:         "accessory",
+0692:     ]:
+0693:         lines.append(
+...
+0737:         (
+0738:             "- No GT continuous style geometry is injected into "
+0739:             "predicted-ROI categorical inference."
+0740:         ),
+0741:         (
+0742:             "- Missing GT attribute outputs for Fashionpedia "
+0743:             "instances reduce the number of comparable pairs."
+0744:         ),
+0745:         (
+0746:             "- This is still a fixed-validation diagnostic, "
+0747:             "not final production acceptance."
+0748:         ),
+0749:     ]
+0750: 
+0751:     (
+
+===== scripts/train_prd_8class_maskrcnn_baseline_v1.py =====
+0009: Important
+0010: ---------
+0011: The manifests are grouped by source image. This dataset loader reconstructs a
+0012: full-image binary mask for every instance:
+0013: - if mask_path already has the full source-image size, use it directly;
+0014: - if mask_path is a bbox-sized crop mask (e.g. Fashionpedia pilot), paste it
+0015:   back into the full image at bbox_x1/y1/x2/y2.
+0016: 
+0017: Thus DeepFashion2 and Fashionpedia can be trained in one full-image detector.
+0018: 
+0019: Outputs
+0020: -------
+0021: outputs/prd_instance_segmentation/maskrcnn_8class_baseline_v1/
+0022:     checkpoint_epoch_XX.pth
+0023:     checkpoint_last.pth
+0024: 
+0025: reports/prd_instance_segmentation/maskrcnn_8class_baseline_v1/
+0026:     train_log.csv
+...
+0091:     "outerwear": 4,
+0092:     "dress": 5,
+0093:     "shoe": 6,
+0094:     "bag": 7,
+0095:     "accessory": 8,
+0096: }
+0097: 
+
+===== scripts/train_prd_8class_maskrcnn_baseline_v2_balanced.py =====
+0008: - SAME pretrained initialization: COCO DEFAULT weights
+0009: - SAME fixed validation split: configs/prd_8class_val_v1.csv
+0010: - SAME optimizer / LR schedule / image resize / augmentation defaults
+0011: - CHANGED training data:
+0012:     DeepFashion2 train rows kept from v1
+0013:     Fashionpedia shoe / bag / accessory expanded to 100 valid instances each
+0014: - CHANGED sampler:
+0015:     class-aware image-group sampler with replacement
+0016: 
+0017: The sampler uses a damped inverse-frequency weight:
+0018:     image_weight = max((max_class_count / class_count)^alpha)
+0019: over the PRD classes present in that image.
+0020: Default alpha = 0.5 (square-root balancing), which reduces extreme oversampling.
+0021: 
+0022: Inputs
+...
+0106:     "outerwear": 4,
+0107:     "dress": 5,
+0108:     "shoe": 6,
+0109:     "bag": 7,
+0110:     "accessory": 8,
+0111: }
+0112: 
+...
+0962:             "epoch_seconds": epoch_seconds,
+0963:             "sampled_DeepFashion2_images": sampled_source_counts.get(
+0964:                 "DeepFashion2",
+0965:                 0,
+0966:             ),
+0967:             "sampled_Fashionpedia_images": sampled_source_counts.get(
+0968:                 "Fashionpedia",
+0969:                 0,
+0970:             ),
+0971:         }
+0972: 
+0973:         for cls in CLASS_TO_ID:
+0974:             row[
+0975:                 f"sampled_images_with_{cls}"
+0976:             ] = sampled_class_counts.get(
+0977:                 cls,
+...
+0992:             "epoch",
+0993:             "learning_rate",
+0994:             "train_loss_total",
+0995:             "epoch_seconds",
+0996:             "sampled_DeepFashion2_images",
+0997:             "sampled_Fashionpedia_images",
+0998:         ]
+0999: 
+1000:         all_fields += [
+1001:             f"sampled_images_with_{cls}"
+1002:             for cls in CLASS_TO_ID
+1003:         ]
+1004: 
+1005:         component_fields = sorted(
+1006:             {
+
+===== scripts/train_prd_8class_maskrcnn_baseline_v2_nobalance.py =====
+0008: - SAME pretrained initialization: COCO DEFAULT weights
+0009: - SAME fixed validation split: configs/prd_8class_val_v1.csv
+0010: - SAME optimizer / LR schedule / image resize / augmentation defaults
+0011: - CHANGED training data:
+0012:     DeepFashion2 train rows kept from v1
+0013:     Fashionpedia shoe / bag / accessory expanded to 100 valid instances each
+0014: - CHANGED sampler:
+0015:     class-aware image-group sampler with replacement
+0016: 
+0017: The sampler uses a damped inverse-frequency weight:
+0018:     image_weight = max((max_class_count / class_count)^alpha)
+0019: over the PRD classes present in that image.
+0020: Default alpha = 0.5 (square-root balancing), which reduces extreme oversampling.
+0021: 
+0022: Inputs
+...
+0106:     "outerwear": 4,
+0107:     "dress": 5,
+0108:     "shoe": 6,
+0109:     "bag": 7,
+0110:     "accessory": 8,
+0111: }
+0112: 
+...
+0962:             "epoch_seconds": epoch_seconds,
+0963:             "sampled_DeepFashion2_images": sampled_source_counts.get(
+0964:                 "DeepFashion2",
+0965:                 0,
+0966:             ),
+0967:             "sampled_Fashionpedia_images": sampled_source_counts.get(
+0968:                 "Fashionpedia",
+0969:                 0,
+0970:             ),
+0971:         }
+0972: 
+0973:         for cls in CLASS_TO_ID:
+0974:             row[
+0975:                 f"sampled_images_with_{cls}"
+0976:             ] = sampled_class_counts.get(
+0977:                 cls,
+...
+0992:             "epoch",
+0993:             "learning_rate",
+0994:             "train_loss_total",
+0995:             "epoch_seconds",
+0996:             "sampled_DeepFashion2_images",
+0997:             "sampled_Fashionpedia_images",
+0998:         ]
+0999: 
+1000:         all_fields += [
+1001:             f"sampled_images_with_{cls}"
+1002:             for cls in CLASS_TO_ID
+1003:         ]
+1004: 
+1005:         component_fields = sorted(
+1006:             {

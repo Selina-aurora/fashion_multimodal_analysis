@@ -1,0 +1,23 @@
+PRD 3.1.3 pattern v3 fresh-holdout manual review - FINAL
+=========================================================
+
+holdout_rows=40
+overall_correct=34
+overall_accuracy=0.8500
+
+stage1_gate_correct=35
+stage1_gate_accuracy=0.8750
+
+true_visible_pattern_rows=9
+correctly_routed_visible_pattern_rows=7
+stage2_correct_given_correct_visible_pattern_route=6
+stage2_subtype_accuracy_given_correct_route=0.8571
+
+borderline_rows=0
+all_manual_labels_finalized=true
+
+Final interpretation
+--------------------
+- V3 substantially improves the pattern-presence gate over V2.
+- Remaining errors are isolated boundary/subtype cases rather than a systemic collapse.
+- This is a suitable stopping point for the pattern baseline; further prompt tuning is not recommended.

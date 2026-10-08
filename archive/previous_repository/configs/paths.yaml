@@ -1,0 +1,15 @@
+project_root: "."
+
+data_root: "data"
+checkpoint_root: "checkpoints"
+output_root: "outputs"
+
+fashionai:
+  root: "data/FashionAI"
+
+deepfashion2:
+  root: "data/DeepFashion2"
+  train_image_dir: "data/DeepFashion2/train/image"
+  train_anno_dir: "data/DeepFashion2/train/annos"
+  val_image_dir: "data/DeepFashion2/validation/image"
+  val_anno_dir: "data/DeepFashion2/validation/annos"

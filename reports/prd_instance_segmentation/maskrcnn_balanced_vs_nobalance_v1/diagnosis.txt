@@ -1,0 +1,34 @@
+PRD 3.1.1 Balanced vs No-Balance Diagnostic
+===========================================
+
+score_threshold=0.4
+mask_threshold=0.5
+match_bbox_iou=0.5
+
+[DeepFashion2 old5]
+balanced_mean_mask_iou=0.8014
+nobalance_mean_mask_iou=0.8060
+delta_mean_mask_iou=-0.0046
+balanced_high_iou_count=6
+nobalance_high_iou_count=9
+
+[Fashionpedia new3]
+balanced_mean_mask_iou=0.7027
+nobalance_mean_mask_iou=0.7003
+delta_mean_mask_iou=0.0024
+balanced_high_iou_count=0
+nobalance_high_iou_count=0
+
+[Interpretation rule]
+- old5 stable + new3 decline: aggregate drop is mainly from the added/smaller classes.
+- old5 also declines clearly: balanced sampling is affecting original garment classes; consider reducing sampler strength.
+- mean IoU nearly unchanged but >=0.85 count drops: describe it as a high-IoU-tail change, not a general mask-head collapse.
+- small fixed validation set: descriptive evidence only, not proof of causal mechanism.
+
+[Speed]
+balanced_mean_ms=46.5101
+balanced_median_ms=24.9943
+balanced_p95_ms=95.6409
+nobalance_mean_ms=43.6554
+nobalance_median_ms=23.2003
+nobalance_p95_ms=81.7896

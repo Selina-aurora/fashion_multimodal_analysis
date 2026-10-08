@@ -1,0 +1,2 @@
+# Base package; see docs/SETUP.md for model-specific dependencies.
+-e .

@@ -1,0 +1,10 @@
+﻿candidate_id,region,proposal_source,proposal_box_area_ratio,sam_bbox_area_ratio,sam_mask_area_ratio,sam_predicted_iou,sam_localization_quality,review_note
+collar_001,collar,spatial_hr,0.313721,0.242626,0.128876,0.636599,coarse,SAM segments a broad upper-shirt region; the neckline is included but not isolated.
+collar_010,collar,spatial_hr,0.313913,0.28084,0.066126,0.621418,coarse,SAM follows the broad upper-torso/lapel proposal and does not isolate the collar.
+collar_020,collar,spatial_hr,0.260165,0.259887,0.168251,0.790182,coarse,SAM segments the upper bodice around the collar rather than the collar itself.
+cuff_006,cuff,spatial_hr,0.143077,0.085033,0.026519,0.983408,coarse,"SAM tightens the proposal toward the sleeve, but still segments a sleeve region rather than the cuff edge."
+cuff_008,cuff,spatial_hr,0.433684,0.412825,0.124705,0.853655,wrong,SAM mainly selects the right-side/background region instead of a cuff-level garment part.
+cuff_019,cuff,spatial_hr,0.119006,0.110059,0.046464,0.979029,coarse,"SAM reduces the box modestly around the sleeve/forearm region, but the cuff is not isolated."
+hem_003,hem,baseline,0.689182,0.657368,0.493365,0.953058,coarse,SAM segments almost the entire trousers; the trouser hems are included but not isolated.
+hem_008,hem,fixed_spatial_prior,0.448276,0.298522,0.03883,0.940433,coarse,"SAM selects only a lower-left garment portion; the hem is included, but localization is incomplete and broad."
+hem_023,hem,baseline,0.905951,0.933137,0.82201,0.917535,coarse,SAM segments almost the whole top; the bottom hem is included but not isolated.

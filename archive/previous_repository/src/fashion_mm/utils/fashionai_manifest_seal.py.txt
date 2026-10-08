@@ -1,0 +1,221 @@
+from __future__ import annotations
+
+import hashlib
+import json
+from pathlib import Path
+from typing import Any
+
+
+MANIFEST_FILENAMES = (
+    "train.csv",
+    "validation.csv",
+    "test.csv",
+    "split_summary.json",
+)
+SEAL_FILENAME = "fashionai_manifest_seal.json"
+SEAL_FORMAT = "fashionai_attribute_manifests"
+SEAL_VERSION = 1
+HASH_ALGORITHM = "sha256"
+
+
+class ManifestSealError(RuntimeError):
+    """Base error for malformed or unverifiable FashionAI manifest seals."""
+
+
+class ManifestSealVerificationError(ManifestSealError):
+    """Raised when one or more sealed manifest files no longer match."""
+
+    def __init__(self, message: str, *, report: dict[str, Any]) -> None:
+        super().__init__(message)
+        self.report = report
+
+
+def default_manifest_seal_path(manifest_dir: str | Path) -> Path:
+    """Return the standard seal path for one manifest directory."""
+    return Path(manifest_dir) / SEAL_FILENAME
+
+
+def create_manifest_seal(
+    manifest_dir: str | Path,
+    *,
+    seal_path: str | Path | None = None,
+    overwrite: bool = False,
+) -> tuple[Path, dict[str, Any]]:
+    """Hash the fixed FashionAI manifest set and write a JSON seal.
+
+    Existing seals are protected by default. ``overwrite=True`` is intentionally
+    explicit so callers cannot silently reseal modified manifests.
+    """
+    directory = Path(manifest_dir)
+    output_path = (
+        Path(seal_path)
+        if seal_path is not None
+        else default_manifest_seal_path(directory)
+    )
+    required_paths = {
+        (directory / filename).resolve() for filename in MANIFEST_FILENAMES
+    }
+    if output_path.resolve() in required_paths:
+        raise ManifestSealError(
+            f"Seal path cannot replace a manifest file: {output_path}"
+        )
+    if output_path.exists() and not overwrite:
+        raise FileExistsError(
+            f"Manifest seal already exists and will not be overwritten: {output_path}"
+        )
+
+    files = _hash_required_files(directory)
+    payload = {
+        "format": SEAL_FORMAT,
+        "version": SEAL_VERSION,
+        "algorithm": HASH_ALGORITHM,
+        "files": files,
+    }
+    serialized = (
+        json.dumps(payload, ensure_ascii=False, indent=2, sort_keys=True) + "\n"
+    )
+    output_path.parent.mkdir(parents=True, exist_ok=True)
+    mode = "w" if overwrite else "x"
+    with output_path.open(mode, encoding="utf-8") as seal_file:
+        seal_file.write(serialized)
+    return output_path, payload
+
+
+def verify_manifest_seal(
+    manifest_dir: str | Path,
+    *,
+    seal_path: str | Path | None = None,
+) -> dict[str, Any]:
+    """Verify all four FashionAI manifests against a previously created seal."""
+    directory = Path(manifest_dir)
+    input_path = (
+        Path(seal_path)
+        if seal_path is not None
+        else default_manifest_seal_path(directory)
+    )
+    try:
+        payload = json.loads(input_path.read_text(encoding="utf-8"))
+    except (UnicodeDecodeError, json.JSONDecodeError) as error:
+        raise ManifestSealError(f"Invalid JSON seal {input_path}: {error}") from error
+
+    expected_files = _validate_seal_payload(payload, input_path)
+    report: dict[str, Any] = {
+        "status": "ok",
+        "seal_file": str(input_path),
+        "files": {},
+    }
+    mismatches = []
+    for filename in MANIFEST_FILENAMES:
+        path = directory / filename
+        expected = expected_files[filename]
+        if not path.is_file():
+            result = {
+                "status": "missing",
+                "expected_sha256": expected["sha256"],
+                "expected_size_bytes": expected["size_bytes"],
+            }
+            mismatches.append(f"{filename}: missing")
+        else:
+            actual = _hash_file(path)
+            matches = (
+                actual["sha256"] == expected["sha256"]
+                and actual["size_bytes"] == expected["size_bytes"]
+            )
+            result = {
+                "status": "ok" if matches else "mismatch",
+                "expected_sha256": expected["sha256"],
+                "actual_sha256": actual["sha256"],
+                "expected_size_bytes": expected["size_bytes"],
+                "actual_size_bytes": actual["size_bytes"],
+            }
+            if not matches:
+                mismatches.append(f"{filename}: digest or size mismatch")
+        report["files"][filename] = result
+
+    if mismatches:
+        report["status"] = "failed"
+        raise ManifestSealVerificationError(
+            "Manifest seal verification failed: " + "; ".join(mismatches),
+            report=report,
+        )
+    return report
+
+
+def _hash_required_files(directory: Path) -> dict[str, dict[str, Any]]:
+    missing = [
+        str(directory / filename)
+        for filename in MANIFEST_FILENAMES
+        if not (directory / filename).is_file()
+    ]
+    if missing:
+        raise FileNotFoundError(
+            "Cannot seal manifests; required files are missing: " + ", ".join(missing)
+        )
+    return {
+        filename: _hash_file(directory / filename) for filename in MANIFEST_FILENAMES
+    }
+
+
+def _hash_file(path: Path) -> dict[str, Any]:
+    hasher = hashlib.sha256()
+    size_bytes = 0
+    with path.open("rb") as file:
+        for chunk in iter(lambda: file.read(1024 * 1024), b""):
+            hasher.update(chunk)
+            size_bytes += len(chunk)
+    return {
+        "sha256": hasher.hexdigest(),
+        "size_bytes": size_bytes,
+    }
+
+
+def _validate_seal_payload(
+    payload: Any,
+    seal_path: Path,
+) -> dict[str, dict[str, Any]]:
+    if not isinstance(payload, dict):
+        raise ManifestSealError(f"Seal payload must be a JSON object: {seal_path}")
+    if payload.get("format") != SEAL_FORMAT:
+        raise ManifestSealError(
+            f"Unsupported seal format in {seal_path}: {payload.get('format')!r}"
+        )
+    if payload.get("version") != SEAL_VERSION:
+        raise ManifestSealError(
+            f"Unsupported seal version in {seal_path}: {payload.get('version')!r}"
+        )
+    if payload.get("algorithm") != HASH_ALGORITHM:
+        raise ManifestSealError(
+            f"Unsupported seal algorithm in {seal_path}: "
+            f"{payload.get('algorithm')!r}"
+        )
+
+    files = payload.get("files")
+    if not isinstance(files, dict) or set(files) != set(MANIFEST_FILENAMES):
+        raise ManifestSealError(
+            f"Seal {seal_path} must contain exactly: {', '.join(MANIFEST_FILENAMES)}"
+        )
+    for filename in MANIFEST_FILENAMES:
+        entry = files[filename]
+        if not isinstance(entry, dict):
+            raise ManifestSealError(
+                f"Seal entry for {filename} must be a JSON object: {seal_path}"
+            )
+        digest = entry.get("sha256")
+        size_bytes = entry.get("size_bytes")
+        if (
+            not isinstance(digest, str)
+            or len(digest) != 64
+            or any(character not in "0123456789abcdef" for character in digest)
+        ):
+            raise ManifestSealError(
+                f"Seal entry for {filename} has an invalid SHA-256 digest: {seal_path}"
+            )
+        if (
+            not isinstance(size_bytes, int)
+            or isinstance(size_bytes, bool)
+            or size_bytes < 0
+        ):
+            raise ManifestSealError(
+                f"Seal entry for {filename} has an invalid byte size: {seal_path}"
+            )
+    return files

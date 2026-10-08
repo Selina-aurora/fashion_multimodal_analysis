@@ -1,0 +1,1431 @@
+# Alibaba AI Fashion Multimodal Project
+
+## Project Goal
+
+Fine-grained fashion visual understanding and multimodal reasoning system.
+
+## Current Stage
+
+Stage 1: Fine-grained visual foundation module.
+
+Current target:
+
+- 3.1.1 Fashion instance segmentation
+- 3.1.2 Language-guided local-region localization
+- 3.1.3 Fine-grained attribute extraction from a target-region mask
+- Input: RGB fashion image
+- Output: clothing instances, local-region masks, and attribute labels with confidence
+- Classes: top, pants, skirt, outerwear, dress, shoes, bag, accessory
+- Target: single-image latency <= 50 ms, mask IoU >= 0.85
+
+## Repository Structure
+
+- `configs/`: configuration files
+- `src/`: reusable project source code
+- `scripts/`: executable scripts
+- `docs/`: setup notes and project documentation
+- `docker/`: Docker environment files
+- `tests/`: unit tests
+
+## Environment
+
+```bash
+pip install -r requirements.txt
+pip install -e .
+```
+
+## 3.1.1 Usage
+
+Train on AutoDL:
+
+```bash
+python scripts/train/train_instance_segmentation.py \
+  --model-config configs/model/instance_segmentation_deepfashion2.yaml \
+  --paths-config configs/paths.autodl.yaml
+```
+
+Current best DeepFashion2 checkpoint:
+
+```bash
+/root/autodl-tmp/checkpoints/deepfashion2_6class_soft_aug_epoch2/instance_segmentation/epoch_001.pt
+```
+
+Full validation result on DeepFashion2 validation:
+
+- Images: 32,153
+- Ground-truth instances: 52,490
+- Mean best mask IoU: 0.8547
+- Recall@0.75: 0.8937
+- Inference thresholds: score >= 0.3, mask >= 0.4
+
+Run inference with a trained checkpoint:
+
+```bash
+python scripts/inference/predict_instance_segmentation.py image.jpg \
+  --checkpoint /root/autodl-tmp/checkpoints/deepfashion2_6class_soft_aug_epoch2/instance_segmentation/epoch_001.pt \
+  --device cuda
+```
+
+## 3.1.2 Usage
+
+Run language-guided local-region localization:
+
+```bash
+python scripts/inference/predict_local_region.py image.jpg "右侧的口袋" \
+  --checkpoint /root/autodl-tmp/checkpoints/deepfashion2_6class_hard_mining/instance_segmentation/epoch_001.pt \
+  --device cuda \
+  --output outputs/local_region_sample.json \
+  --vis-output outputs/local_region_sample.jpg
+```
+
+Run a small AutoDL sanity evaluation:
+
+```bash
+python scripts/eval/evaluate_local_region_queries.py \
+  --image-dir /root/autodl-tmp/datasets/DeepFashion2/validation/image \
+  --checkpoint /root/autodl-tmp/checkpoints/deepfashion2_6class_hard_mining/instance_segmentation/epoch_001.pt \
+  --device cuda \
+  --max-images 20 \
+  --output /root/autodl-tmp/outputs/local_region_query_eval.json \
+  --vis-dir /root/autodl-tmp/outputs/local_region_vis
+```
+
+### 3.1.2 Current Plan
+
+The PRD direction is language-guided grounding: image plus natural-language
+query should return a local-region mask and bbox. DeepFashion2 provides garment
+masks, boxes, categories, and landmarks, but it does not provide query-level
+human labels such as "右侧口袋" -> bbox/mask. Therefore the current 3.1.2 plan is:
+
+1. Keep the heuristic open-vocabulary pipeline as the online baseline.
+2. Use a small manual bbox benchmark as the main evaluation signal.
+3. Add pretrained grounding / vision-language baselines next, such as
+   GroundingDINO or OWL-ViT, and Chinese/translated CLIP-style reranking.
+4. Treat landmark pseudo-label and weak-ranker results as diagnostics only.
+   They are useful for exploration, but they are not enough to prove PRD
+   language-guided localization accuracy.
+
+Run weak-label evaluation with DeepFashion2 annotations only as a diagnostic:
+
+```bash
+python scripts/eval/evaluate_local_region_weak_labels.py \
+  --image-dir /root/autodl-tmp/datasets/DeepFashion2/validation/image \
+  --anno-dir /root/autodl-tmp/datasets/DeepFashion2/validation/annos \
+  --checkpoint /root/autodl-tmp/checkpoints/deepfashion2_6class_hard_mining/instance_segmentation/epoch_001.pt \
+  --device cuda \
+  --max-images 50 \
+  --output /root/autodl-tmp/outputs/local_region_weak_eval.json
+```
+
+Do not use weak-label IoU as the final PRD metric. It depends on landmark
+pseudo-labels plus rule fallback and can reward geometry that does not match
+human-labeled query intent.
+
+Build a small manual bbox benchmark for the true 3.1.2 metric. This is not a
+full DeepFashion2 relabeling task; label about 100-300 image-query pairs and use
+them only for evaluation, not training:
+
+```bash
+PYTHONPATH=src python scripts/data/build_local_region_manual_eval_manifest.py \
+  --image-dir /root/autodl-tmp/datasets/DeepFashion2/validation/image \
+  --anno-dir /root/autodl-tmp/datasets/DeepFashion2/validation/annos \
+  --max-images 50 \
+  --max-records 150 \
+  --shuffle \
+  --output /root/autodl-tmp/outputs/local_region_manual_eval_manifest.jsonl
+```
+
+When `--anno-dir` is provided, the manifest uses class-aware query templates so
+pants receive waist/pant-hem/pocket/zipper queries instead of neckline or
+shoulder queries. This reduces skipped records while keeping annotation small.
+
+Start the browser annotator, then drag a bbox for each image-query pair. The
+tool writes pixel-coordinate `target_bbox` values into a labeled JSONL file, so
+you do not need to calculate coordinates by hand:
+
+```bash
+PYTHONPATH=src python scripts/data/annotate_local_region_bboxes.py \
+  --manifest /root/autodl-tmp/outputs/local_region_manual_eval_manifest.jsonl \
+  --output /root/autodl-tmp/outputs/local_region_manual_eval_labeled.jsonl \
+  --host 0.0.0.0 \
+  --port 7860
+```
+
+Do not use DeepFashion2 landmarks while labeling. Then evaluate the full
+pipeline against the manual benchmark:
+
+```bash
+PYTHONPATH=src python scripts/eval/evaluate_local_region_manual_labels.py \
+  --annotations /root/autodl-tmp/outputs/local_region_manual_eval_labeled.jsonl \
+  --checkpoint /root/autodl-tmp/checkpoints/deepfashion2_6class_hard_mining/instance_segmentation/epoch_001.pt \
+  --device cuda \
+  --output /root/autodl-tmp/outputs/local_region_manual_eval_heuristic.json
+```
+
+Treat pseudo-label metrics as development diagnostics. The manual bbox
+benchmark is the independent check for whether weak-supervised improvements
+match real language-guided local-region localization. The initial 55-record
+manual benchmark favored the pure heuristic online baseline over the hem-gated
+candidate-listwise hybrid (`0.2544` vs `0.2324` average bbox IoU), so the
+default online policy is heuristic-only. Keep learned rankers as experimental
+branches until they improve this manual benchmark.
+
+Merge multiple manual labeling rounds into one combined benchmark:
+
+```bash
+PYTHONPATH=src python scripts/data/merge_local_region_manual_eval_labels.py \
+  --inputs \
+    /root/autodl-tmp/outputs/local_region_manual_eval_labeled.jsonl \
+    /root/autodl-tmp/outputs/local_region_manual_eval_labeled_class_aware.jsonl \
+  --output /root/autodl-tmp/outputs/local_region_manual_eval_labeled_combined.jsonl
+```
+
+Then evaluate the combined benchmark with the heuristic default:
+
+```bash
+PYTHONPATH=src python scripts/eval/evaluate_local_region_manual_labels.py \
+  --annotations /root/autodl-tmp/outputs/local_region_manual_eval_labeled_combined.jsonl \
+  --checkpoint /root/autodl-tmp/checkpoints/deepfashion2_6class_hard_mining/instance_segmentation/epoch_001.pt \
+  --device cuda \
+  --output /root/autodl-tmp/outputs/local_region_manual_eval_heuristic_combined.json
+```
+
+Combined manual benchmark result so far: `122` labeled records, average bbox IoU
+`0.2812`, Hit@0.3 `0.4344`, Hit@0.5 `0.2623`. Shoulder, neckline, and hem are
+the strongest regions; cuff, pocket, and waist are the main failure areas.
+Export low-IoU examples for review:
+
+```bash
+PYTHONPATH=src python scripts/eval/export_local_region_manual_failures.py \
+  --eval-json /root/autodl-tmp/outputs/local_region_manual_eval_heuristic_combined.json \
+  --output-dir /root/autodl-tmp/outputs/local_region_manual_failures_combined \
+  --iou-threshold 0.1 \
+  --regions cuff pocket waist \
+  --max-cases 80
+```
+
+The export directory contains per-case images, `failure_summary.json`, and
+`failure_review.html` for a grouped browser review page.
+
+Before using a manual benchmark to select another model, audit its hard cases.
+The audit manifest keeps the prior bbox visible, but resets its status so each
+case must be explicitly confirmed, adjusted, or skipped. Use garment/wearer
+left/right for side queries; skip a record if the named garment or its queried
+part is absent, occluded, or ambiguous among multiple garments.
+
+```bash
+PYTHONPATH=src python scripts/data/build_local_region_manual_label_audit_manifest.py \
+  --annotations /root/autodl-tmp/outputs/local_region_manual_eval_labeled_combined_plus_semantic.jsonl \
+  --eval-json /root/autodl-tmp/outputs/local_region_manual_eval_four_expert_hybrid_fallback.json \
+  --regions cuff pocket zipper waist \
+  --iou-threshold 0.3 \
+  --output /root/autodl-tmp/outputs/local_region_manual_eval_hard_region_audit.jsonl
+```
+
+Review the generated file with the existing annotator. Then merge it after the
+original labels with `--skip-removes-existing`, so reviewed skips remove invalid
+old labels instead of silently retaining them.
+
+Failure review on the 34 exported cases showed three concrete policy issues:
+side-specific cuff/pocket queries should follow garment/wearer left-right
+convention instead of raw image left-right, cuff candidates should cover the
+sleeve end rather than the whole side sleeve strip, and waist/pocket candidates
+need category-aware upper-band geometry. Re-run the combined manual benchmark
+after any policy refinement before changing the learned ranker.
+
+After the first heuristic refinement, the same 122-record manual benchmark
+improved to average bbox IoU `0.3064`, Hit@0.3 `0.4754`, and Hit@0.5 `0.2787`.
+The targeted failure regions also improved: cuff `0.0190 -> 0.0592`, pocket
+`0.0000 -> 0.1337`, and waist `0.0961 -> 0.2306`. Cuff remains the main
+bottleneck and should be reviewed again before introducing more training.
+The next cuff-only refinement emits both upper-sleeve and lower-terminal cuff
+candidates, because the remaining manual failures mix short-sleeve/armhole
+cases with long-sleeve terminal cases.
+
+The cuff-variant policy improved the 122-record benchmark again to average bbox
+IoU `0.3123`, Hit@0.3 `0.4836`, and Hit@0.5 `0.2705`; cuff improved from
+`0.0592` to `0.0904`. This confirms the visual diagnosis, but cuff remains a
+low-confidence region where pure geometry is near its limit.
+
+### 3.1.2 Next Experiments
+
+The next implementation direction should return to the PRD's pretrained
+visual-text matching route instead of expanding pseudo-label ranker training:
+
+1. Add an offline pretrained grounding evaluator.
+   - Candidate models: GroundingDINO, OWL-ViT/OWL-V2, or Chinese-CLIP/CLIP crop
+     reranking with SAM/3.1.1 masks as candidate regions.
+   - If the model is English-centric, map Chinese query words to English
+     prompts, e.g. `领口 -> neckline`, `袖口 -> cuff`, `口袋 -> pocket`,
+     `拉链 -> zipper`, `下摆 -> hem`.
+   - Evaluate only against
+     `/root/autodl-tmp/outputs/local_region_manual_eval_labeled_combined.jsonl`.
+   - First AutoDL command:
+
+```bash
+PYTHONPATH=src HF_ENDPOINT=https://hf-mirror.com python scripts/eval/evaluate_pretrained_grounding_manual_labels.py \
+  --annotations /root/autodl-tmp/outputs/local_region_manual_eval_labeled_combined.jsonl \
+  --backend owlvit \
+  --model-name google/owlvit-base-patch32 \
+  --prompt-mode english \
+  --device cuda \
+  --score-threshold 0.05 \
+  --output /root/autodl-tmp/outputs/local_region_manual_eval_owlvit.json
+```
+
+   - OWL-ViT base result on the 122-record manual benchmark was very weak:
+     average bbox IoU `0.0305`, Hit@0.3 `0.0410`, Hit@0.5 `0.0000`, with
+     `101/122` records returning no detection. Treat this as a negative
+     generic open-vocabulary detector baseline, not as the final pretrained
+     grounding route.
+   - Next model to test:
+
+```bash
+PYTHONPATH=src HF_ENDPOINT=https://hf-mirror.com python scripts/eval/evaluate_pretrained_grounding_manual_labels.py \
+  --annotations /root/autodl-tmp/outputs/local_region_manual_eval_labeled_combined.jsonl \
+  --backend auto \
+  --model-name IDEA-Research/grounding-dino-tiny \
+  --prompt-mode english \
+  --device cuda \
+  --score-threshold 0.15 \
+  --output /root/autodl-tmp/outputs/local_region_manual_eval_grounding_dino_tiny.json
+```
+
+   - GroundingDINO tiny result on the 122-record manual benchmark: average bbox
+     IoU `0.2225`, Hit@0.3 `0.2295`, Hit@0.5 `0.1639`. It is still below the
+     heuristic control overall, but it is much stronger on visual semantic
+     regions: pattern `0.8262`, zipper `0.8233`, neckline `0.3843`. It is weak
+     on geometry/structural regions such as hem, shoulder, cuff, and pocket.
+   - Compare heuristic and GroundingDINO by region:
+
+```bash
+PYTHONPATH=src python scripts/eval/compare_local_region_manual_evals.py \
+  --eval-json \
+    /root/autodl-tmp/outputs/local_region_manual_eval_heuristic_cuff_variants.json \
+    /root/autodl-tmp/outputs/local_region_manual_eval_grounding_dino_tiny.json \
+  --names heuristic grounding_dino_tiny \
+  --default-eval heuristic \
+  --region-policy pattern=grounding_dino_tiny zipper=grounding_dino_tiny \
+  --output /root/autodl-tmp/outputs/local_region_manual_eval_heuristic_vs_grounding_dino.json
+```
+
+   - The fixed semantic-region hybrid (`pattern/zipper -> GroundingDINO`,
+     others -> heuristic) reaches average bbox IoU `0.3465`, Hit@0.3 `0.5246`,
+     Hit@0.5 `0.3197` on the 122-record benchmark. This is better than the
+     heuristic-only control, but it is still a small benchmark and should be
+     validated on a larger manual split before changing the default online path.
+   - Next validation split: generate a targeted semantic/detail manifest that
+     skips already labeled records and balances `pattern`, `zipper`, and
+     `pocket`:
+
+```bash
+PYTHONPATH=src python scripts/data/build_local_region_manual_eval_manifest.py \
+  --image-dir /root/autodl-tmp/datasets/DeepFashion2/validation/image \
+  --anno-dir /root/autodl-tmp/datasets/DeepFashion2/validation/annos \
+  --max-images 300 \
+  --max-records 150 \
+  --shuffle \
+  --target-regions pattern zipper pocket \
+  --balance-target-regions \
+  --exclude-existing /root/autodl-tmp/outputs/local_region_manual_eval_labeled_combined.jsonl \
+  --output /root/autodl-tmp/outputs/local_region_manual_eval_manifest_semantic_150.jsonl
+```
+
+   - Targeted semantic split result: `49` labeled records and `101` skipped
+     records. GroundingDINO beats heuristic on this split overall (`0.2133` vs
+     `0.1296` avg IoU), especially on `pattern` (`0.5591` vs `0.3046`) and
+     `pocket` (`0.1162` vs `0.0096`). `zipper` is not stable here, where
+     heuristic is slightly better (`0.1637` vs `0.1334`). The fixed policy for
+     this split is therefore `pattern/pocket -> GroundingDINO`, all other
+     regions -> heuristic, reaching avg IoU `0.2250`.
+   - Final validation should merge the original 122 labels and the new 49
+     semantic labels, then re-run heuristic, GroundingDINO, and the fixed
+     `pattern/pocket` hybrid on the combined manual benchmark.
+   - Merged 171-record validation result: heuristic-only avg IoU `0.2599`,
+     GroundingDINO-only `0.2199`, and fixed `pattern/pocket` hybrid `0.3060`.
+     Hit@0.3 improves from `0.3918` to `0.4503`; Hit@0.5 improves from
+     `0.2047` to `0.2749`. The fixed policy is effectively equal to the
+     per-region oracle (`0.3060` avg IoU), so the current PRD-aligned direction
+     is a gated hybrid rather than a full detector replacement.
+   - The explicit experimental evaluator is
+     `scripts/eval/evaluate_gated_hybrid_manual_labels.py`. It routes
+     `pattern/pocket` to GroundingDINO and all other regions to the current
+     heuristic path without changing default online inference. On the merged
+     171-record benchmark, this executable gated path matches the fixed
+     comparison result exactly: avg IoU `0.3060`, Hit@0.3 `0.4503`, Hit@0.5
+     `0.2749`, with `41` grounding-routed records and `130` heuristic-routed
+     records.
+   - The matching single-image experimental script is
+     `scripts/inference/predict_gated_hybrid_local_region.py`. Keep
+     `scripts/inference/predict_local_region.py` as the default heuristic-only
+     online path; use the gated script only when explicitly testing the
+     `pattern/pocket -> GroundingDINO` policy.
+
+```bash
+PYTHONPATH=src HF_ENDPOINT=https://hf-mirror.com python scripts/inference/predict_gated_hybrid_local_region.py \
+  /root/autodl-tmp/datasets/DeepFashion2/validation/image/000001.jpg \
+  "这件衣服上的碎花图案" \
+  --checkpoint /root/autodl-tmp/checkpoints/deepfashion2_6class_hard_mining/instance_segmentation/epoch_001.pt \
+  --device cuda \
+  --grounding-regions pattern pocket \
+  --grounding-backend auto \
+  --grounding-model-name IDEA-Research/grounding-dino-tiny \
+  --prompt-mode english \
+  --score-threshold 0.15 \
+  --output /root/autodl-tmp/outputs/local_region_gated_single.json \
+  --vis-output /root/autodl-tmp/outputs/local_region_gated_single.jpg
+```
+
+Run a small batch gated-hybrid demo with route counts, latency stats, records,
+and visualizations:
+
+```bash
+PYTHONPATH=src HF_ENDPOINT=https://hf-mirror.com python scripts/eval/evaluate_gated_hybrid_queries.py \
+  --image-dir /root/autodl-tmp/datasets/DeepFashion2/validation/image \
+  --checkpoint /root/autodl-tmp/checkpoints/deepfashion2_6class_hard_mining/instance_segmentation/epoch_001.pt \
+  --device cuda \
+  --max-images 20 \
+  --queries \
+    "这件衣服的领口" \
+    "衣服下方的下摆" \
+    "这件衣服的肩部" \
+    "这件衣服上的碎花图案" \
+    "右侧的口袋" \
+  --grounding-regions pattern pocket \
+  --grounding-backend auto \
+  --grounding-model-name IDEA-Research/grounding-dino-tiny \
+  --prompt-mode english \
+  --score-threshold 0.15 \
+  --output /root/autodl-tmp/outputs/local_region_gated_query_eval_20.json \
+  --vis-dir /root/autodl-tmp/outputs/local_region_gated_query_vis \
+  --vis-count 40
+```
+
+For visual review, use a per-record JSONL manifest when queries are not valid
+for every image. Each line needs `image` and `query_text`; optional metadata is
+copied into the output record:
+
+```json
+{"image": "/root/autodl-tmp/datasets/DeepFashion2/validation/image/000003.jpg", "query_text": "这件衣服上的碎花图案"}
+{"image": "/root/autodl-tmp/datasets/DeepFashion2/validation/image/000010.jpg", "query_text": "右侧的口袋"}
+```
+
+Build the qualitative manifest from the completed gated manual evaluation
+instead of choosing image ids by hand. The builder selects successful records
+by manual IoU within each requested region and writes its selection provenance
+and reference bbox into the JSONL. The visualization draws this manual reference
+in green as `GT`; orange remains the predicted local region. This is a visual
+sanity set, not an aggregate performance result.
+
+```bash
+PYTHONPATH=src python scripts/data/build_gated_hybrid_demo_manifest.py \
+  --eval-json /root/autodl-tmp/outputs/local_region_manual_eval_gated_pattern_pocket_combined_plus_semantic.json \
+  --target-regions pattern neckline hem shoulder \
+  --per-region 2 \
+  --min-iou 0.3 \
+  --require-full-quota \
+  --output /root/autodl-tmp/outputs/local_region_gated_demo_manifest.jsonl
+```
+
+```bash
+PYTHONPATH=src HF_ENDPOINT=https://hf-mirror.com python scripts/eval/evaluate_gated_hybrid_queries.py \
+  --manifest /root/autodl-tmp/outputs/local_region_gated_demo_manifest.jsonl \
+  --checkpoint /root/autodl-tmp/checkpoints/deepfashion2_6class_hard_mining/instance_segmentation/epoch_001.pt \
+  --device cuda \
+  --grounding-regions pattern pocket \
+  --grounding-backend auto \
+  --grounding-model-name IDEA-Research/grounding-dino-tiny \
+  --prompt-mode english \
+  --score-threshold 0.15 \
+  --output /root/autodl-tmp/outputs/local_region_gated_demo_manifest_eval.json \
+  --vis-dir /root/autodl-tmp/outputs/local_region_gated_demo_manifest_vis \
+  --vis-count 80
+```
+
+2. Keep the online policy heuristic-only until a pretrained grounding baseline
+   is wired behind an explicit experimental flag. The validated gated policy is:
+   - `pattern` -> GroundingDINO
+   - `pocket` -> GroundingDINO
+   - all other regions -> heuristic
+
+3. Use failure review to decide whether a model improves the hard cases:
+   - cuff: needs real visual evidence for sleeve ends and armholes
+   - pocket: needs side-aware small-object grounding
+   - zipper/pattern/decoration: needs visual-text matching more than geometry
+
+4. Only consider fine-tuning after the pretrained baseline is measured. If more
+   training data is needed, add a small targeted calibration set instead of
+   relabeling all of DeepFashion2.
+
+Before changing the fixed `pattern/pocket` gate, analyze whether low-confidence
+GroundingDINO detections should fall back to the heuristic. This command uses
+completed JSON outputs only, splits by image into calibration and holdout sets,
+and does not rerun either model. It is exploratory: only a holdout improvement
+should justify a new online policy experiment.
+
+```bash
+PYTHONPATH=src python scripts/eval/analyze_gated_hybrid_confidence.py \
+  --gated-eval-json /root/autodl-tmp/outputs/local_region_manual_eval_gated_pattern_pocket_combined_plus_semantic.json \
+  --heuristic-eval-json /root/autodl-tmp/outputs/local_region_manual_eval_heuristic_combined_plus_semantic.json \
+  --grounding-regions pattern pocket \
+  --thresholds 0.0 0.15 0.2 0.25 0.3 0.35 0.4 0.45 0.5 \
+  --holdout-fraction 0.3 \
+  --output /root/autodl-tmp/outputs/local_region_gated_confidence_analysis.json
+```
+
+Compare `holdout_results` at threshold `0.0` (the current fixed gate) with the
+selected threshold's `semantic_summary`; do not treat calibration gain alone as
+evidence for a policy change.
+
+The current confidence split did not establish a stable fallback gain. Before
+changing the fixed gate, run a no-training prompt ablation on the same semantic
+manual records. The model is loaded once and each profile is evaluated fairly:
+
+```bash
+PYTHONPATH=src HF_ENDPOINT=https://hf-mirror.com python scripts/eval/evaluate_grounding_prompt_profiles.py \
+  --annotations /root/autodl-tmp/outputs/local_region_manual_eval_labeled_combined_plus_semantic.jsonl \
+  --model-name IDEA-Research/grounding-dino-tiny \
+  --backend auto \
+  --prompt-mode english \
+  --prompt-profiles ensemble precise fashion \
+  --target-regions pattern pocket \
+  --device cuda \
+  --score-threshold 0.15 \
+  --output /root/autodl-tmp/outputs/local_region_grounding_prompt_profiles_pattern_pocket.json
+```
+
+`ensemble` is the validated current set of English synonyms; `precise` uses one
+direct phrase; `fashion` adds an explicit clothing context. After selecting a
+candidate only from this result, inspect its real improvements and regressions
+against heuristic-only output:
+
+```bash
+PYTHONPATH=src python scripts/eval/export_gated_hybrid_policy_deltas.py \
+  --baseline-eval-json /root/autodl-tmp/outputs/local_region_manual_eval_heuristic_combined_plus_semantic.json \
+  --candidate-eval-json /root/autodl-tmp/outputs/local_region_manual_eval_gated_pattern_pocket_combined_plus_semantic.json \
+  --regions pattern pocket \
+  --candidate-routes grounding \
+  --min-abs-delta 0.05 \
+  --output-dir /root/autodl-tmp/outputs/local_region_gated_pattern_pocket_deltas
+```
+
+The paired `policy_delta_review.html` shows manual GT in green, heuristic in
+red, and gated grounding in blue. It is offline analysis only; any prompt or
+gate revision still needs a new full 171-record manual evaluation before it can
+affect the default heuristic-only online path.
+
+The paired review also exposes occasional background-object detections. An
+explicit manual-evaluation experiment can reject GroundingDINO boxes that do
+not overlap the frozen 3.1.1 selected garment mask, then fall back to heuristic
+when no valid grounding detection remains:
+
+```bash
+PYTHONPATH=src HF_ENDPOINT=https://hf-mirror.com python scripts/eval/evaluate_gated_hybrid_manual_labels.py \
+  --annotations /root/autodl-tmp/outputs/local_region_manual_eval_labeled_combined_plus_semantic.jsonl \
+  --checkpoint /root/autodl-tmp/checkpoints/deepfashion2_6class_hard_mining/instance_segmentation/epoch_001.pt \
+  --device cuda \
+  --grounding-regions pattern pocket \
+  --grounding-backend auto \
+  --grounding-model-name IDEA-Research/grounding-dino-tiny \
+  --prompt-profile ensemble \
+  --constrain-grounding-to-garment \
+  --grounding-min-mask-coverage 0.2 \
+  --output /root/autodl-tmp/outputs/local_region_manual_eval_gated_pattern_pocket_garment_constrained.json
+```
+
+This gate is experimental; retain it only if the complete manual benchmark
+improves, and keep the default online path unchanged because it adds mask
+inference for semantic queries.
+
+On the 171-record benchmark, the garment constraint reduced Hit@0.3 from
+`0.4503` to `0.4386`, so it is not adopted. Measure the theoretical per-record
+best-of-two upper bound before investing in a router:
+
+```bash
+PYTHONPATH=src python scripts/eval/analyze_local_region_routing_oracle.py \
+  --baseline-eval-json /root/autodl-tmp/outputs/local_region_manual_eval_heuristic_combined_plus_semantic.json \
+  --candidate-eval-json /root/autodl-tmp/outputs/local_region_manual_eval_gated_pattern_pocket_combined_plus_semantic.json \
+  --output /root/autodl-tmp/outputs/local_region_routing_oracle_heuristic_vs_gated.json
+```
+
+The result is an analysis-only ceiling: if its Hit@0.3 stays below 60%, routing
+these two experts cannot meet the weekly target and one of the experts needs a
+new capability.
+
+Observed routing-oracle result on the 171 manually labeled records: best-of-two
+reaches only Hit@0.3 `0.4561` (heuristic selected for 148 records, gated
+GroundingDINO for 23). Therefore, do not spend another iteration on routing or
+threshold tuning. Evaluate a new visual-text expert directly on the same manual
+benchmark instead.
+
+The next offline PRD-aligned baseline is frozen Chinese-CLIP crop reranking.
+It uses the original Chinese query and candidate crops generated inside the
+frozen 3.1.1 garment instance; it does not use landmarks, pseudo labels, or
+training. The small region-prior sweep is diagnostic only, not an online
+policy change:
+
+```bash
+PYTHONPATH=src HF_ENDPOINT=https://hf-mirror.com python scripts/eval/evaluate_chinese_clip_manual_local_regions.py \
+  --annotations /root/autodl-tmp/outputs/local_region_manual_eval_labeled_combined_plus_semantic.jsonl \
+  --checkpoint /root/autodl-tmp/checkpoints/deepfashion2_6class_hard_mining/instance_segmentation/epoch_001.pt \
+  --model-name OFA-Sys/chinese-clip-vit-base-patch16 \
+  --device cuda \
+  --region-prior-weights 0.0,0.05,0.1,0.2 \
+  --output /root/autodl-tmp/outputs/local_region_manual_eval_chinese_clip_candidates.json
+```
+
+Compare each run with the heuristic and gated 171-record results. Keep the
+heuristic-only online default unless a Chinese-CLIP configuration improves the
+full manual benchmark and produces credible gains on cuff, waist, pocket, or
+zipper after visual review.
+
+Observed result: the best Chinese-CLIP settings (`0.1` and `0.2`) reached only
+Hit@0.3 `0.3860`, below heuristic-only (`0.3918`) and far below the gated
+GroundingDINO policy (`0.4503`). The visual score did not localize cuff, pocket,
+or zipper reliably; the prior mainly restored rule-derived candidate names.
+Do not integrate Chinese-CLIP crop reranking into the online policy. The next
+pretrained comparison is GroundingDINO-base, evaluated offline before deciding
+which hard regions, if any, it should replace:
+
+```bash
+PYTHONPATH=src HF_ENDPOINT=https://hf-mirror.com python scripts/eval/evaluate_pretrained_grounding_manual_labels.py \
+  --annotations /root/autodl-tmp/outputs/local_region_manual_eval_labeled_combined_plus_semantic.jsonl \
+  --model-name IDEA-Research/grounding-dino-base \
+  --backend auto \
+  --prompt-mode english \
+  --prompt-profile ensemble \
+  --device cuda \
+  --score-threshold 0.15 \
+  --output /root/autodl-tmp/outputs/local_region_manual_eval_grounding_dino_base.json
+```
+
+Observed GroundingDINO-base result: it improves pocket Hit@0.3 to `0.2083`
+(tiny/heuristic: `0.1250`) and cuff to `0.1304` (heuristic: `0.0870`), but it
+is worse than tiny on pattern and worse than heuristic on structural regions.
+The next reproducible policy test therefore uses tiny only for pattern, base
+only for pocket/cuff, and heuristic for every other region:
+
+```bash
+PYTHONPATH=src HF_ENDPOINT=https://hf-mirror.com python scripts/eval/evaluate_gated_hybrid_manual_labels.py \
+  --annotations /root/autodl-tmp/outputs/local_region_manual_eval_labeled_combined_plus_semantic.jsonl \
+  --checkpoint /root/autodl-tmp/checkpoints/deepfashion2_6class_hard_mining/instance_segmentation/epoch_001.pt \
+  --device cuda \
+  --grounding-routes \
+    pattern=IDEA-Research/grounding-dino-tiny \
+    pocket=IDEA-Research/grounding-dino-base \
+    cuff=IDEA-Research/grounding-dino-base \
+  --grounding-backend auto \
+  --prompt-mode english \
+  --prompt-profile ensemble \
+  --score-threshold 0.15 \
+  --output /root/autodl-tmp/outputs/local_region_manual_eval_multi_expert_pattern_tiny_pocket_cuff_base.json
+```
+
+This is still a same-benchmark exploratory policy: it must be evaluated as a
+real pipeline run and visually reviewed before being treated as evidence. It
+is not expected to reach 60% Hit@0.3 by itself, because zipper and most cuff
+cases remain unresolved.
+
+Observed pipeline result: the fixed multi-expert policy reproduces the expected
+gain, reaching average manual IoU `0.3082`, Hit@0.3 `0.4678`, and Hit@0.5
+`0.2924`. It is the current best experimental result, but still needs 23 more
+Hit@0.3 successes to reach the 60% weekly target. Do not tune this route
+further before testing a different pretrained grounding family.
+
+The next diagnostic is OWLv2-large on the 79 hard cuff/pocket/zipper/waist
+records. Run all three prompt profiles with one model load, then compare their
+per-region results before launching a complete 171-record evaluation:
+
+```bash
+PYTHONPATH=src HF_ENDPOINT=https://hf-mirror.com python scripts/eval/evaluate_grounding_prompt_profiles.py \
+  --annotations /root/autodl-tmp/outputs/local_region_manual_eval_labeled_combined_plus_semantic.jsonl \
+  --model-name google/owlv2-large-patch14-ensemble \
+  --backend owlv2 \
+  --prompt-mode english \
+  --prompt-profiles ensemble precise fashion \
+  --target-regions cuff pocket zipper waist \
+  --device cuda \
+  --score-threshold 0.05 \
+  --output /root/autodl-tmp/outputs/local_region_owlv2_large_hard_region_profiles.json
+```
+
+This is a diagnostic comparison only. A profile must improve a hard region
+over the current multi-expert policy before it is evaluated on all 171 records
+and considered for routing.
+
+Observed OWLv2 diagnostic result: `precise` improves cuff Hit@0.3 to `0.2174`
+(current base route: `0.1304`), and `ensemble` improves waist to `0.5000`
+(heuristic: `0.3333`). Pocket only ties base at `0.2083`; zipper remains lower
+than heuristic. Verify the following fixed four-expert policy on all 171
+records. Per-region prompt and threshold overrides preserve each model's
+validated setting:
+
+```bash
+PYTHONPATH=src HF_ENDPOINT=https://hf-mirror.com python scripts/eval/evaluate_gated_hybrid_manual_labels.py \
+  --annotations /root/autodl-tmp/outputs/local_region_manual_eval_labeled_combined_plus_semantic.jsonl \
+  --checkpoint /root/autodl-tmp/checkpoints/deepfashion2_6class_hard_mining/instance_segmentation/epoch_001.pt \
+  --device cuda \
+  --grounding-routes \
+    pattern=IDEA-Research/grounding-dino-tiny \
+    pocket=IDEA-Research/grounding-dino-base \
+    cuff=google/owlv2-large-patch14-ensemble \
+    waist=google/owlv2-large-patch14-ensemble \
+  --grounding-route-profiles cuff=precise waist=ensemble \
+  --grounding-route-thresholds cuff=0.05 waist=0.05 \
+  --grounding-backend auto \
+  --prompt-mode english \
+  --prompt-profile ensemble \
+  --score-threshold 0.15 \
+  --output /root/autodl-tmp/outputs/local_region_manual_eval_four_expert_hybrid.json
+```
+
+The pipeline loads each `(model, threshold)` pair once. Zipper deliberately
+stays on heuristic. The expected same-benchmark gain is roughly four Hit@0.3
+successes over the three-expert run; only the real 171-record output can
+confirm it.
+
+After the hard-region label audit, the decision benchmark contains 161 valid
+records. Heuristic-only reaches Hit@0.3 `0.4099` (66/161), while the four-expert
+policy reaches `0.5217` (84/161). Offline Top-5 analysis found that enforcing
+garment/wearer-side consistency improves cuff from 5/18 to 8/18 Hit@0.3. The
+same rule does not improve pocket Hit@0.3 and reduces pocket Hit@0.5, so it is
+enabled only for cuff:
+
+```bash
+PYTHONPATH=src HF_ENDPOINT=https://hf-mirror.com python scripts/eval/evaluate_gated_hybrid_manual_labels.py \
+  --annotations /root/autodl-tmp/outputs/local_region_manual_eval_labeled_audited.jsonl \
+  --checkpoint /root/autodl-tmp/checkpoints/deepfashion2_6class_hard_mining/instance_segmentation/epoch_001.pt \
+  --device cuda \
+  --grounding-routes \
+    pattern=IDEA-Research/grounding-dino-tiny \
+    pocket=IDEA-Research/grounding-dino-base \
+    cuff=google/owlv2-large-patch14-ensemble \
+    waist=google/owlv2-large-patch14-ensemble \
+  --grounding-route-profiles cuff=precise waist=ensemble \
+  --grounding-route-thresholds cuff=0.05 waist=0.05 \
+  --grounding-backend auto \
+  --prompt-mode english \
+  --prompt-profile ensemble \
+  --score-threshold 0.15 \
+  --fallback-on-no-detection \
+  --wearer-side-regions cuff \
+  --wearer-side-min-score-ratio 0.5 \
+  --record-heuristic-candidates-for-grounding \
+  --output /root/autodl-tmp/outputs/local_region_manual_eval_four_expert_side_cuff_audited.json
+```
+
+Before tuning another selector, measure whether the saved Top-5 grounding boxes
+or the diagnostic heuristic candidate can recover the remaining failures. This
+oracle is diagnostic only and never uses manual boxes in online inference:
+
+```bash
+PYTHONPATH=src python scripts/eval/analyze_grounding_candidate_oracle.py \
+  --eval-json /root/autodl-tmp/outputs/local_region_manual_eval_four_expert_side_cuff_audited.json \
+  --regions cuff pocket pattern waist \
+  --hit-threshold 0.3 \
+  --output /root/autodl-tmp/outputs/local_region_grounding_candidate_oracle_audited.json
+```
+
+The 60% target is 97/161 hits. The side-aware cuff result is expected to reach
+87/161 if the online rerun reproduces the offline analysis, leaving 10 hits.
+Use `recoverable_failures` to decide whether the next step is candidate
+selection or new candidate generation.
+
+The expanded grounding-plus-heuristic oracle remains at 98/161 Hit@0.3;
+heuristic candidates improve IoU and Hit@0.5 but add no new Hit@0.3 success.
+Generate diagnostic zipper candidates with the already loaded
+GroundingDINO-base model while preserving heuristic as the selected zipper
+route:
+
+```bash
+PYTHONPATH=src HF_ENDPOINT=https://hf-mirror.com python scripts/eval/evaluate_gated_hybrid_manual_labels.py \
+  ...same audited four-expert arguments... \
+  --diagnostic-grounding-routes zipper=IDEA-Research/grounding-dino-base \
+  --record-heuristic-candidates-for-grounding \
+  --output /root/autodl-tmp/outputs/local_region_manual_eval_zipper_candidates_audited.json
+```
+
+The diagnostic route saves Top-K boxes but cannot change the 87/161 selected
+policy result. Include `zipper` in the candidate-oracle regions for the next
+ceiling measurement.
+
+The zipper candidate raises the oracle to 101/161 Hit@0.3 (`0.6273`), adding
+three recoverable zipper failures. To widen the four-hit margin without loading
+another model, cross the two already loaded GroundingDINO experts: use base as
+the diagnostic model for pattern/cuff/waist and tiny for pocket, while retaining
+base for zipper. Selected online routes remain unchanged.
+
+The completed cross-model oracle reaches 107/161 Hit@0.3 (`0.6646`), providing
+a ten-hit margin above the 97/161 target. Candidate-selector development must
+not train and report on the same manual records. Run the image-grouped 5-fold
+selector evaluation; every reported prediction is produced by a model trained
+without any label from that image:
+
+```bash
+PYTHONPATH=src python scripts/eval/cross_validate_grounding_candidate_selector.py \
+  --eval-json /root/autodl-tmp/outputs/local_region_manual_eval_cross_model_candidates_audited.json \
+  --regions cuff pocket pattern waist zipper \
+  --num-folds 5 \
+  --num-epochs 120 \
+  --device cpu \
+  --output /root/autodl-tmp/outputs/local_region_candidate_selector_5fold_audited.json
+```
+
+Use `out_of_fold_summary.manual_hit_at["0.3"]` as the decision metric, not an
+in-sample score or the oracle ceiling.
+
+The first listwise selector is rejected: its image-grouped out-of-fold Hit@0.3
+is 85/161 (`0.5280`), below the current policy's 87/161 (`0.5404`). It gains
+seven hits but loses nine, with most net damage on pocket and zipper. Evaluate
+the conservative pairwise policy next. It keeps the current prediction unless
+an alternative is predicted to recover a current miss:
+
+```bash
+PYTHONPATH=src python scripts/eval/cross_validate_grounding_candidate_selector.py \
+  --eval-json /root/autodl-tmp/outputs/local_region_manual_eval_cross_model_candidates_audited.json \
+  --regions cuff pocket pattern waist zipper \
+  --num-folds 5 \
+  --num-epochs 120 \
+  --hidden-dim 48 \
+  --learning-rate 0.003 \
+  --weight-decay 0.01 \
+  --selection-policy conservative_pairwise \
+  --override-threshold 0.5 \
+  --seed 42 \
+  --device cpu \
+  --output /root/autodl-tmp/outputs/local_region_candidate_selector_conservative_5fold_audited.json
+```
+
+The override threshold is fixed before evaluation; do not tune it against the
+same out-of-fold result.
+
+The conservative pairwise run is also rejected. It overrides 20/86 routed
+records, gains three Hit@0.3 cases, and loses five, leaving the full OOF result
+at 85/161 (`0.5280`). Geometry, detector confidence, and source metadata are
+therefore insufficient to identify the oracle candidate.
+
+Add frozen visual-semantic evidence to the same candidate pool. This does not
+repeat the earlier Chinese-CLIP-as-localizer baseline: grounding still creates
+the 107/161 oracle pool, while Chinese-CLIP only scores each tight crop and a
+fixed 1.6x context crop. The enrichment step never reads manual target boxes:
+
+```bash
+PYTHONPATH=src HF_ENDPOINT=https://hf-mirror.com python \
+  scripts/eval/enrich_grounding_candidates_with_chinese_clip.py \
+  --eval-json /root/autodl-tmp/outputs/local_region_manual_eval_cross_model_candidates_audited.json \
+  --regions cuff pocket pattern waist zipper \
+  --model-name OFA-Sys/chinese-clip-vit-base-patch16 \
+  --prompt-profile region_ensemble \
+  --context-scale 1.6 \
+  --image-batch-size 32 \
+  --device cuda \
+  --output /root/autodl-tmp/outputs/local_region_cross_model_candidates_chinese_clip_audited.json
+```
+
+Then run the same leakage-safe selector on the enriched artifact:
+
+```bash
+PYTHONPATH=src python scripts/eval/cross_validate_grounding_candidate_selector.py \
+  --eval-json /root/autodl-tmp/outputs/local_region_cross_model_candidates_chinese_clip_audited.json \
+  --regions cuff pocket pattern waist zipper \
+  --num-folds 5 \
+  --num-epochs 120 \
+  --hidden-dim 48 \
+  --learning-rate 0.003 \
+  --weight-decay 0.01 \
+  --selection-policy conservative_pairwise \
+  --override-threshold 0.5 \
+  --seed 42 \
+  --device cpu \
+  --output /root/autodl-tmp/outputs/local_region_candidate_selector_clip_conservative_5fold_audited.json
+```
+
+Require `num_records_with_visual_scores == 86`, and continue to use only the
+out-of-fold Hit@0.3 as the achieved result.
+
+The visual-feature MLP still fails the outer OOF test: Hit@0.3 is 85/161
+(`0.5280`). It makes 24 overrides, gains four hits, and loses six. All four
+gains occur on cuff; pocket, waist, and zipper only lose hits. Do not integrate
+this model or tune its fixed threshold on the outer predictions.
+
+The next validation reduces model capacity and moves all routing decisions
+inside the training data. A linear recovery classifier is used. For each outer
+fold, three inner image-grouped folds select a threshold separately per region;
+a region is enabled only when inner OOF gains at least one net hit and loses
+none:
+
+```bash
+OMP_NUM_THREADS=4 MKL_NUM_THREADS=4 PYTHONPATH=src \
+python scripts/eval/cross_validate_grounding_candidate_selector.py \
+  --eval-json /root/autodl-tmp/outputs/local_region_cross_model_candidates_chinese_clip_audited.json \
+  --regions cuff pocket pattern waist zipper \
+  --num-folds 5 \
+  --inner-folds 3 \
+  --num-epochs 200 \
+  --selector-architecture linear \
+  --selection-policy conservative_pairwise \
+  --threshold-policy nested_region \
+  --nested-thresholds 0.3,0.4,0.5,0.6,0.7,0.8,0.9 \
+  --nested-max-lost-hits 0 \
+  --nested-min-net-gain 1 \
+  --learning-rate 0.01 \
+  --weight-decay 0.01 \
+  --seed 42 \
+  --device cpu \
+  --output /root/autodl-tmp/outputs/local_region_candidate_selector_clip_nested_linear_5fold_audited.json
+```
+
+`nested_region_activation_counts` reports how consistently each region is
+enabled across outer folds. Only `out_of_fold_summary` is the achieved score.
+
+### Archived Weak-Supervision Experiments
+
+These commands are kept for reproducibility, but they are no longer the main
+3.1.2 plan after the manual benchmark and mentor review.
+
+Build weak query-region records for a learned 3.1.2 ranker:
+
+```bash
+python scripts/data/build_deepfashion2_local_region_queries.py \
+  --image-dir /root/autodl-tmp/datasets/DeepFashion2/train/image \
+  --anno-dir /root/autodl-tmp/datasets/DeepFashion2/train/annos \
+  --output /root/autodl-tmp/outputs/local_region_train_queries.jsonl
+```
+
+Train the lightweight learned ranker:
+
+```bash
+python scripts/train/train_local_region_ranker.py \
+  --records /root/autodl-tmp/outputs/local_region_train_queries.jsonl \
+  --output /root/autodl-tmp/checkpoints/local_region_ranker/hash_text_geometry.pt \
+  --device cuda \
+  --max-records 50000 \
+  --val-records 2000 \
+  --num-epochs 1
+```
+
+Use `--val-offset` to evaluate on a later JSONL slice during larger runs.
+
+Export candidate-level records for the next vision-language local-region ranker:
+
+```bash
+python scripts/data/build_local_region_candidate_records.py \
+  --records /root/autodl-tmp/outputs/local_region_train_queries.jsonl \
+  --output /root/autodl-tmp/outputs/local_region_train_candidates.jsonl \
+  --max-records 500000
+```
+
+Install and evaluate Chinese-CLIP candidate reranking on weak candidates:
+
+```bash
+pip install "transformers>=4.37.0" sentencepiece
+HF_ENDPOINT=https://hf-mirror.com \
+python scripts/eval/evaluate_chinese_clip_local_region_ranker.py \
+  --candidates /root/autodl-tmp/outputs/local_region_train_candidates.jsonl \
+  --model-name OFA-Sys/chinese-clip-vit-base-patch16 \
+  --device cuda \
+  --max-groups 2000 \
+  --region-prior-weights 0,0.01,0.02,0.05,0.1,0.2 \
+  --output /root/autodl-tmp/outputs/local_region_chinese_clip_eval_2k.json
+```
+
+Run candidate diagnostics:
+
+```bash
+python scripts/eval/evaluate_local_region_candidate_baselines.py \
+  --candidates /root/autodl-tmp/outputs/local_region_train_candidates.jsonl \
+  --max-groups 2000 \
+  --output /root/autodl-tmp/outputs/local_region_candidate_baselines_2k.json
+```
+
+Train a listwise candidate ranker from weak IoU labels:
+
+```bash
+python scripts/train/train_candidate_local_region_ranker.py \
+  --candidates /root/autodl-tmp/outputs/local_region_train_candidates.jsonl \
+  --output /root/autodl-tmp/checkpoints/local_region_ranker/candidate_listwise_context_50k.pt \
+  --device cuda \
+  --max-groups 50000 \
+  --val-groups 2000 \
+  --loss soft \
+  --softmax-temperature 0.08 \
+  --metrics-output /root/autodl-tmp/outputs/local_region_candidate_listwise_context_50k_metrics.json \
+  --num-epochs 1
+```
+
+Validate the saved candidate ranker on a later slice:
+
+```bash
+python scripts/train/train_candidate_local_region_ranker.py \
+  --candidates /root/autodl-tmp/outputs/local_region_train_candidates.jsonl \
+  --checkpoint /root/autodl-tmp/checkpoints/local_region_ranker/candidate_listwise_context_50k.pt \
+  --device cuda \
+  --val-offset 50000 \
+  --val-groups 5000 \
+  --eval-only \
+  --metrics-output /root/autodl-tmp/outputs/local_region_candidate_listwise_context_eval_offset50k.json
+```
+
+The context-feature candidate ranker is strong offline, but manual bbox
+evaluation did not confirm an online gain. On the initial 55-record manual
+benchmark, pure heuristic reached average bbox IoU `0.2544` while the hem-gated
+candidate-listwise hybrid reached `0.2324`. Candidate-listwise checkpoints are
+therefore disabled in online inference by default and should be treated as an
+experimental weak-supervision branch, not the deployed 3.1.2 baseline.
+
+Optionally compare an experimental learned ranker checkpoint against the
+heuristic default:
+
+```bash
+python scripts/eval/evaluate_local_region_queries.py \
+  --image-dir /root/autodl-tmp/datasets/DeepFashion2/validation/image \
+  --checkpoint /root/autodl-tmp/checkpoints/deepfashion2_6class_hard_mining/instance_segmentation/epoch_001.pt \
+  --ranker-checkpoint /root/autodl-tmp/checkpoints/local_region_ranker/hash_text_geometry_500k.pt \
+  --device cuda \
+  --max-images 20 \
+  --output /root/autodl-tmp/outputs/local_region_query_eval_learned.json
+```
+
+### Independent Weak-Supervision Selector Protocol
+
+The nested region-gated linear selector is also rejected. Its image-grouped
+OOF Hit@0.3 is `85/161` (`0.5280`), below the fixed current policy at `87/161`
+(`0.5404`). It makes five overrides, gains no new hits, and loses two. The
+manual benchmark is too small to train a reliable candidate selector and must
+now remain a frozen test set.
+
+The current training experiment uses a disjoint protocol:
+
+1. Build cuff and waist weak targets from category-specific DeepFashion2 train
+   landmarks only. Rule fallbacks are excluded.
+2. Generate every candidate with the real online segmentation/grounding path.
+   The weak target bbox is read only after inference to compute training IoU.
+3. Train the conservative selector and choose region thresholds only on a
+   train-image calibration split.
+4. Evaluate once on the frozen 161-record audited validation benchmark.
+
+The category-aware landmark builder supports short/long sleeve endpoints for
+shirts, outerwear, and dresses, plus waistband landmarks for shorts, trousers,
+and skirts. DeepFashion2 contour names follow image side; cuff pairs are
+swapped to the benchmark's garment/wearer-side convention for frontal and
+flat-lay images. Back views therefore remain noisy weak labels. Use `--vis-dir`
+and inspect the generated cuff/waist boxes before running GPU inference. Full
+AutoDL commands are in `docs/setup_autodl.md`.
+
+The first independent run contains 2,338 single-item weak records. Its current
+policy reaches weak-label Hit@0.3 `0.3623`, while the saved candidate pool has
+an oracle ceiling of `0.6822`. Geometry/source-only linear selection improves
+OOF by seven hits with no losses. Chinese-CLIP tight/context scalar features
+raise that to eleven gains with no losses, but this is still too small to
+unlock the frozen manual benchmark.
+
+The next PRD-aligned experiment attaches frozen DINOv2 tight-crop and
+1.6x-context embeddings to those same candidates. A deterministic,
+label-independent random projection stores 64 dimensions per crop. The
+enrichment path reports `target_bbox_used_for_features: false`; weak target
+boxes remain training labels only and never enter selector features.
+
+The first shared-weight DINOv2 linear selector adds only three OOF Hit@0.3
+cases (`0.3623` to `0.3636`): cuff is disabled in all five folds and waist is
+enabled in all five. This exposes a linear-feature limitation rather than a
+candidate shortage: a constant region one-hot cannot condition candidate
+visual or geometry weights. The follow-up feature schema therefore retains
+shared signals and adds explicit region-by-signal interaction blocks before
+rerunning listwise and conservative image-grouped OOF diagnostics.
+
+With those interactions, soft-target listwise OOF reaches Hit@0.3 `0.4778`
+(`0.4339` cuff, `0.7339` waist), gaining 393 hits but losing 123. Because the
+metric accepts any candidate above the IoU threshold, multi-positive and MLP
+diagnostics were tested next. Multi-positive linear remains at `0.4778`
+(1,117/2,338 hits), while MLP falls to `0.4542`; loss shape and model capacity
+are therefore not the current bottleneck.
+
+The next experiment is cuff-specific DINOv2 patch spatial enrichment. It pools
+CLS, global patch mean, four quadrants, center, and border from each tight and
+1.6x context crop, then stores a deterministic 128-dimensional projection.
+Only cuff is enriched; waist keeps the existing feature path and already
+exceeds 60% OOF. The spatial run must remain on the independent weak split and
+must report `target_bbox_used_for_features: false`. Do not open the manual
+benchmark unless full weak OOF reaches 60% (at least 1,403/2,338 hits).
+
+The completed spatial run reaches Hit@0.3 `0.5021` (1,174/2,338), with cuff at
+`0.4624` and waist unchanged at `0.7339`. This adds 57 hits over the previous
+listwise result but remains 229 short of the gate. The next controlled variable
+is online garment-relative geometry: re-run only the 3.1.1 segmentation model
+on the saved records, retain its predicted garment box, and express every
+candidate relative to that box and predicted garment category. This remains
+target-independent and does not rerun the grounding or visual encoders.
+
+Online garment-relative geometry raises Hit@0.3 to `0.5141` (1,202/2,338):
+cuff reaches `0.4714`, waist reaches `0.7632`, and Hit@0.5 reaches `0.1719`.
+The feature is useful but leaves a 201-hit gap to the 60% gate. The next v5
+selector therefore models the saved candidate pool itself. It adds
+target-independent cross-expert box agreement, overlap density, score and area
+percentiles, English/Chinese left-right prompt agreement, and source/model-side
+interactions. The controlled comparison keeps the linear soft-target model,
+fold split, seed, and all frozen visual features unchanged.
+
+The v5 consensus run remains at Hit@0.3 `0.5141` (1,202/2,338). Cuff is
+`0.4709`, waist is `0.7661`, and Hit@0.5 changes only to `0.1728`. It recovers
+477 baseline misses but loses 122 baseline hits, preserving the same net gain
+as v4. Candidate-level consensus is therefore not the missing signal. Before
+adding a new ranker, run the cuff-side/pair diagnostic on the saved v5 JSON.
+It measures wrong-side recoveries, incompatible-side hit risk, left/right box
+collisions, and the side-distinct pair oracle without changing any prediction.
+
+The diagnostic rejects a hard side filter: only 9 wrong-side misses are
+recoverable, while 19 existing hits violate the simple side rule. Box
+deduplication is also insufficient because only 52 of 809 complete pairs
+collide. Learned pair decoding still has measurable headroom: selected pairs
+contain 766 record-level hits (`550` any-hit pairs plus `216` both-hit pairs),
+while the side-compatible distinct-pair oracle contains 953. The next
+experiment trains a low-dimensional linear pair reranker inside each outer
+training fold. It combines frozen independent relative scores with box
+symmetry, size, vertical alignment, side agreement, visual scalars, and expert
+pair identity; unpaired cuffs and waist records retain independent selection.
+
+## 3.1.3 Working Pipeline
+
+The first 3.1.3 milestone established a working, testable path. It accepts an
+RGB image plus a target-region mask and returns one
+label, confidence, and alternatives for each requested FashionAI attribute
+head. The end-to-end wrapper composes:
+
+1. 3.1.1 clothing instance segmentation.
+2. The frozen heuristic 3.1.2 local-region policy.
+3. Masked-region crop preprocessing and the 3.1.3 multi-head classifier.
+
+The initial supervised corpus was the labeled Round1 test A/B release agreed
+with the mentor. A has 10,080 rows, B has 15,042, and 5,206 annotations overlap
+with identical labels. The preparation command deduplicates them into 19,916
+unique records, then creates deterministic 80/10/10 train/validation/test
+splits stratified by `(attribute_name, strict y class)`. Stable relative image
+IDs guarantee that A/B copies cannot cross splits.
+
+Prepare the extracted AutoDL data:
+
+```bash
+cd /root/projects/alibaba-ai
+git pull
+
+PYTHONPATH=src python scripts/data/prepare_fashionai_round1_attributes.py \
+  --root /root/autodl-tmp/datasets/FashionAI \
+  --output-dir /root/autodl-tmp/outputs/fashionai_round1_stratified
+```
+
+The summary must report `num_unique_records: 19916`,
+`num_duplicate_records: 5206`, and zero for every `split_overlap_counts`
+entry. With seed 42, the split sizes are train `15,930`, validation `1,993`,
+and test `1,993`. Inspect the compact result without printing the full class
+table:
+
+```bash
+python - <<'PY'
+import json
+
+path = "/root/autodl-tmp/outputs/fashionai_round1_stratified/split_summary.json"
+payload = json.load(open(path, encoding="utf-8"))
+print({
+    "before_dedup": payload["num_records_before_deduplication"],
+    "duplicates": payload["num_duplicate_records"],
+    "unique": payload["num_unique_records"],
+    "overlaps": payload["split_overlap_counts"],
+    "num_strata": payload["stratification_audit"]["num_strata"],
+    "max_stratum_fraction_error": payload["stratification_audit"][
+        "max_absolute_fraction_error"
+    ],
+    "split_sizes": {
+        name: split["num_records"]
+        for name, split in payload["splits"].items()
+    },
+})
+PY
+```
+
+Train the lightweight MobileNetV3 multi-head baseline on CUDA:
+
+```bash
+PYTHONPATH=src python scripts/train/train_fashionai_attributes.py \
+  --device cuda \
+  --output-dir /root/autodl-tmp/checkpoints/fashionai_attributes
+```
+
+The default dataset config reads only generated `train.csv` and
+`validation.csv`. It does not read `test.csv`. Human-readable values for all 8
+groups and 54 classes come from the included Round1 README label map.
+
+After model selection is finished, evaluate `best.pt` once on the held-out test
+split:
+
+```bash
+PYTHONPATH=src python scripts/eval/evaluate_fashionai_attributes.py \
+  --annotations /root/autodl-tmp/outputs/fashionai_round1_stratified/test.csv \
+  --checkpoint \
+    /root/autodl-tmp/checkpoints/fashionai_round1_resnet50_final/best.pt \
+  --device cuda \
+  --split-role held_out_test \
+  --output \
+    /root/autodl-tmp/outputs/fashionai_round1_resnet50_final_test_eval.json
+```
+
+This reports strict top-1, ambiguity-aware top-1, official FashionAI mAP,
+BasicPrecision, per-attribute metrics, and batched CUDA model latency. It
+remains separate from single-sample end-to-end pipeline latency.
+
+Benchmark the resident model on the image-plus-mask contract after CUDA warmup:
+
+```bash
+PYTHONPATH=src python scripts/eval/benchmark_fashionai_attribute_latency.py \
+  /root/autodl-tmp/datasets/DeepFashion2/validation/image/000001.jpg \
+  --mask /root/autodl-tmp/outputs/fashion_visual_pipeline_final_region.png \
+  --checkpoint \
+    /root/autodl-tmp/checkpoints/fashionai_round1_resnet50_final/best.pt \
+  --device cuda \
+  --warmup-runs 10 \
+  --runs 30 \
+  --target-ms 20 \
+  --output \
+    /root/autodl-tmp/outputs/fashionai_round1_resnet50_final_latency.json
+```
+
+The benchmark keeps one predictor resident and includes file loading, masked
+crop preprocessing, model execution, and decoding in `wall_total_ms`. The
+final ResNet-50 checkpoint reached wall-time p95 `13.367 ms`, max
+`15.349 ms`, and model-only mean `2.840 ms` on AutoDL RTX 5090. Cold process
+startup is reported separately from this steady-state service metric.
+
+The first validation-only accuracy experiment preserves the complete garment
+instead of applying the baseline's aggressive random resized crop. Every other
+training setting and the stratified manifests remain fixed:
+
+```bash
+PYTHONPATH=src python scripts/train/train_fashionai_attributes.py \
+  --model-config configs/model/fashionai_attributes_full_frame.yaml \
+  --device cuda \
+  --output-dir /root/autodl-tmp/checkpoints/fashionai_attributes_full_frame \
+  > /root/autodl-tmp/outputs/fashionai_attributes_full_frame.log 2>&1
+```
+
+The checkpoint records `input_mode: full_frame`, so validation, standalone
+mask inference, and later evaluation automatically use matching white-padded
+square preprocessing. The observed best checkpoint was epoch 5 with validation
+strict accuracy `0.6106`, only `0.0020` above the crop baseline. Full-frame
+input improved skirt length by `0.0517` but reduced sleeve length by `0.0472`,
+so it is retained as an ablation rather than a universal replacement.
+
+The second validation-only experiment keeps the original crop input and lowers
+only the pretrained backbone learning rate. The attribute heads remain at
+`3e-4` while the backbone uses `3e-5`:
+
+```bash
+PYTHONPATH=src python scripts/train/train_fashionai_attributes.py \
+  --model-config configs/model/fashionai_attributes_low_backbone_lr.yaml \
+  --device cuda \
+  --output-dir \
+    /root/autodl-tmp/checkpoints/fashionai_attributes_low_backbone_lr \
+  > /root/autodl-tmp/outputs/fashionai_attributes_low_backbone_lr.log 2>&1
+```
+
+Select experiments using validation only; do not evaluate the held-out test
+split until a final model has been chosen. The low-backbone-rate run reached
+only `0.5610` validation strict accuracy at epoch 10, `0.0476` below baseline,
+so it is rejected as underfit within the fixed budget.
+
+The third experiment restores one `3e-4` optimizer rate and applies cosine
+decay to `3e-6` over the same 10 epochs:
+
+```bash
+PYTHONPATH=src python scripts/train/train_fashionai_attributes.py \
+  --model-config configs/model/fashionai_attributes_cosine.yaml \
+  --device cuda \
+  --output-dir /root/autodl-tmp/checkpoints/fashionai_attributes_cosine \
+  > /root/autodl-tmp/outputs/fashionai_attributes_cosine.log 2>&1
+```
+
+Scheduler state is saved in every checkpoint so a resumed run preserves its
+learning-rate trajectory. The cosine run peaked at epoch 9 with validation
+strict accuracy `0.6101`, effectively tied with the crop and full-frame runs.
+
+Choosing the best existing checkpoint independently for each head gives a
+validation-only oracle of `0.6287`, but requires three resident models and
+multiple encodings. Keep it as a diagnostic rather than violating the latency
+contract. The next single-model experiment changes only the backbone to
+ResNet-18:
+
+```bash
+PYTHONPATH=src python scripts/train/train_fashionai_attributes.py \
+  --model-config configs/model/fashionai_attributes_resnet18.yaml \
+  --device cuda \
+  --output-dir /root/autodl-tmp/checkpoints/fashionai_attributes_resnet18 \
+  > /root/autodl-tmp/outputs/fashionai_attributes_resnet18.log 2>&1
+```
+
+ResNet-18 peaked at epoch 6 with validation strict accuracy `0.6884` and
+ambiguity-aware accuracy `0.6974`, improving the MobileNetV3-small baseline by
+`0.0798`. It improved all eight heads; the largest gains were neckline design
+(`+0.1265`) and sleeve length (`+0.1268`). Its resident image-plus-mask
+benchmark also passed the deployment gate with wall-time p95 `15.043 ms`, max
+`16.705 ms`, and model-only mean `1.584 ms`. ResNet-18 is therefore the current
+eligible validation champion, although it remains below the 88% quality
+target. Keep the held-out test split closed while tuning continues.
+
+The next controlled run retains the winning ResNet-18 model and changes only
+the learning-rate schedule to cosine decay:
+
+```bash
+PYTHONPATH=src python scripts/train/train_fashionai_attributes.py \
+  --model-config configs/model/fashionai_attributes_resnet18_cosine.yaml \
+  --device cuda \
+  --output-dir \
+    /root/autodl-tmp/checkpoints/fashionai_attributes_resnet18_cosine \
+  > /root/autodl-tmp/outputs/fashionai_attributes_resnet18_cosine.log 2>&1
+```
+
+The first log record must show equal backbone and head rates of `0.0003` and
+`scheduler=CosineAnnealingLR`. Compare its selected checkpoint with `0.6884`
+on validation only.
+
+ResNet-18 with cosine decay peaked at epoch 9 with validation strict accuracy
+`0.7105` and ambiguity-aware accuracy `0.7220`, improving the fixed-rate model
+by `0.0221`. All eight heads improved. Its formal latency benchmark reached
+wall-time p95 `13.960 ms`, max `19.627 ms`, and model-only mean `1.512 ms`, so
+both latency checks pass. It is the current eligible validation champion, with
+the held-out test split still closed.
+
+The remaining latency margin supports one controlled capacity experiment.
+Keep the winning schedule and change only ResNet-18 to ResNet-50:
+
+```bash
+PYTHONPATH=src python scripts/train/train_fashionai_attributes.py \
+  --model-config configs/model/fashionai_attributes_resnet50_cosine.yaml \
+  --device cuda \
+  --output-dir \
+    /root/autodl-tmp/checkpoints/fashionai_attributes_resnet50_cosine \
+  > /root/autodl-tmp/outputs/fashionai_attributes_resnet50_cosine.log 2>&1
+```
+
+Select this run against `0.7105` using validation only. If it wins, it must
+pass the same resident image-plus-mask latency benchmark before promotion.
+
+ResNet-50 with cosine decay peaked at the final epoch 10 with validation
+strict accuracy `0.7802` and ambiguity-aware accuracy `0.7873`, improving
+ResNet-18 cosine by `0.0697`. Every head improved. Its resident benchmark
+reached wall-time p95 `14.344 ms`, max `16.757 ms`, and model-only mean
+`2.798 ms`, passing both latency checks and making it the current eligible
+validation champion.
+
+Because validation was still improving at the training boundary, run one
+final horizon ablation. This changes only the cosine horizon and epoch budget
+from 10 to 15:
+
+```bash
+PYTHONPATH=src python scripts/train/train_fashionai_attributes.py \
+  --model-config \
+    configs/model/fashionai_attributes_resnet50_cosine_15ep.yaml \
+  --device cuda \
+  --output-dir \
+    /root/autodl-tmp/checkpoints/fashionai_attributes_resnet50_cosine_15ep \
+  > /root/autodl-tmp/outputs/fashionai_attributes_resnet50_cosine_15ep.log 2>&1
+```
+
+Run this experiment from pretrained initialization; do not resume the 10-epoch
+checkpoint because its scheduler state has a different horizon. Select against
+`0.7802` on validation only, then freeze model selection.
+
+The fresh 15-epoch run selected epoch 13 with validation strict accuracy
+`0.7852` and ambiguity-aware accuracy `0.7943`. After model selection was
+frozen, its single evaluation on the 1,993-record held-out test split reached
+strict accuracy `0.7807` and ambiguity-aware accuracy `0.7898`. The strict
+validation-to-test difference was only `0.0045`, and test accuracy improved by
+`0.1736` over the original MobileNetV3-small baseline.
+
+The final image-plus-mask benchmark passed the 20 ms target with wall-time p95
+`12.600 ms` and max `13.245 ms`. The complete 3.1.1 -> 3.1.2 -> 3.1.3 smoke
+test returned `ok` at every stage, saved the region mask and visualization,
+and exactly matched standalone 3.1.3 labels. This establishes the operational
+milestone, but not final 3.1.3 acceptance. Test strict accuracy remains
+`0.0993` below the PRD's 88% quality target.
+
+## 3.1.3 Final Frozen Release
+
+The time-boxed 2026-07-28 closure uses the mentor-approved, content-deduplicated
+Round1 A/B corpus because no additional extracted FashionAI training release was
+available. The sealed split contains `15,930 / 1,993 / 1,993` records for
+train/validation/test. All four manifest files passed SHA-256 and byte-size
+verification before the held-out test was opened.
+
+The final ResNet-50 cosine run selected epoch 14 using validation strict
+accuracy. Validation strict was `0.781736`, acceptable accuracy was `0.791771`,
+and official mAP was `0.912506`. The single 1,993-record held-out evaluation
+reported:
+
+| Metric | Result | Gate | Status |
+| --- | ---: | ---: | --- |
+| strict accuracy | 0.780733 | >= 0.88 | failed |
+| acceptable accuracy | 0.790266 | diagnostic | recorded |
+| official FashionAI mAP | 0.916841 | diagnostic | recorded |
+| wall-time p95 | 13.367 ms | <= 20 ms | passed |
+| observed maximum | 15.349 ms | <= 20 ms | passed |
+
+The release manifest is
+`/root/autodl-tmp/outputs/fashionai_round1_resnet50_final_release_v1.json`.
+Its SHA-256 is
+`bd54c82f4da0e201497b364072573b62e38816a269646c626fa682d1f2f8dca4`.
+It binds these immutable inputs:
+
+- Split seal:
+  `2d8890e490fd08ce5e74c6e5d9e6725fcbf25cbfba9e55a6a94c6f1cae202352`
+- Epoch-14 `best.pt`:
+  `b20ec81f3683541d9a77d6cb2d9d1521981b83d4368a9787f1efb64458956731`
+- Held-out evaluation:
+  `1f701500614ab0c071627e54526a16541268fe950b7cc79b2416c29b65e062ea`
+- Latency benchmark:
+  `8f2017376f65fee030829db81c8289547d8cf182b49eaccce06a6b6a0a494899`
+
+Verify the frozen evidence without rerunning evaluation:
+
+```bash
+PYTHONPATH=src python scripts/eval/freeze_fashionai_attribute_release.py verify \
+  /root/autodl-tmp/outputs/fashionai_round1_resnet50_final_release_v1.json
+```
+
+Run the complete 3.1.1 -> 3.1.2 -> 3.1.3 delivery command:
+
+```bash
+PYTHONPATH=src python scripts/inference/predict_fashion_visual_pipeline.py \
+  /root/autodl-tmp/datasets/DeepFashion2/validation/image/000001.jpg \
+  "这件衣服的领口" \
+  --segmentation-checkpoint \
+    /root/autodl-tmp/checkpoints/deepfashion2_6class_hard_mining/instance_segmentation/epoch_001.pt \
+  --attribute-checkpoint \
+    /root/autodl-tmp/checkpoints/fashionai_round1_resnet50_final/best.pt \
+  --device cuda \
+  --attributes \
+    collar_design_labels \
+    lapel_design_labels \
+    neck_design_labels \
+    neckline_design_labels \
+  --output-dir /root/autodl-tmp/outputs/fashion_visual_demo_final_v1
+```
+
+The verified Demo produced `result.json`, `segmentation_visualization.jpg`,
+`local_region_mask.png`, and `local_region_visualization.jpg`. All three stages
+returned `ok`; the query resolved to `neckline`, three garment instances were
+reported, and total pipeline time was `510.169 ms`. The four structured labels
+were `Invisible`, `Invisible`, `Invisible`, and `V Neckline`. The full-pipeline
+time includes instance segmentation and localization and is not the 3.1.3
+20 ms metric.
+
+| Demo artifact | SHA-256 |
+| --- | --- |
+| `result.json` | `ca33c0b62e59ae817988a20b51e7b01c653b32432945ce04fc5f07cb66f92405` |
+| `segmentation_visualization.jpg` | `da9d5d479af418dabce5d9f016b3dd50faf797719a8cb593856251d11e75b2bf` |
+| `local_region_mask.png` | `a0b9397ef8d758a294fd78a814510078fd38619e244e56171462a0a02cadf6a9` |
+| `local_region_visualization.jpg` | `5c8e8e3034f63ad6e4f6f5659ddee48489a8af838510cfd9dc83970132e958ec` |
+
+The implementation and evidence pipeline are closed. The release status remains
+`failed` because strict accuracy missed 88% by `0.099267`; official mAP is kept
+as a separate diagnostic and is not substituted for the predefined quality
+gate. No further ablation, tuning, or held-out evaluation is permitted for this
+release. FashionAI supervision is image-level, so semantic correctness on
+masked DeepFashion2 regions remains a documented limitation.

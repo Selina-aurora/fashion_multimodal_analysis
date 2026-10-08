@@ -1,0 +1,39 @@
+﻿source_dataset,fine_category,instances
+DeepFashion2,long_sleeve_dress,6
+DeepFashion2,long_sleeve_outwear,9
+DeepFashion2,long_sleeve_top,14
+DeepFashion2,short_sleeve_dress,8
+DeepFashion2,short_sleeve_outwear,1
+DeepFashion2,short_sleeve_top,26
+DeepFashion2,shorts,7
+DeepFashion2,skirt,13
+DeepFashion2,sling,0
+DeepFashion2,sling_dress,7
+DeepFashion2,trousers,24
+DeepFashion2,vest,2
+DeepFashion2,vest_dress,8
+Fashionpedia,"bag, wallet",100
+Fashionpedia,belt,11
+Fashionpedia,cape,2
+Fashionpedia,cardigan,4
+Fashionpedia,coat,14
+Fashionpedia,dress,27
+Fashionpedia,glasses,10
+Fashionpedia,glove,10
+Fashionpedia,hat,10
+Fashionpedia,"headband, head covering, hair accessory",11
+Fashionpedia,jacket,12
+Fashionpedia,leg warmer,5
+Fashionpedia,pants,9
+Fashionpedia,scarf,11
+Fashionpedia,"shirt, blouse",4
+Fashionpedia,shoe,100
+Fashionpedia,shorts,11
+Fashionpedia,skirt,28
+Fashionpedia,sock,11
+Fashionpedia,sweater,3
+Fashionpedia,tie,3
+Fashionpedia,"tights, stockings",9
+Fashionpedia,"top, t-shirt, sweatshirt",4
+Fashionpedia,vest,4
+Fashionpedia,watch,9

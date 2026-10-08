@@ -1,0 +1,16 @@
+PRD 3.1.1 Focused Human Review Packet v1
+======================================
+
+total_review_cases=24
+REVIEW_REQUIRED=11
+REVIEW_PRIORITY=13
+core_review_cases=11
+stress_review_cases=13
+
+Human decision rule
+-------------------
+- PASS only when category, bbox, mask and image quality are all valid.
+- EXCLUDE when source annotation is clearly wrong or unsuitable.
+- AMBIGUOUS when a stable annotation cannot be established visually.
+- REVIEW_PRIORITY is not an automatic failure.
+- Never use model predictions when deciding whether a GT case stays.

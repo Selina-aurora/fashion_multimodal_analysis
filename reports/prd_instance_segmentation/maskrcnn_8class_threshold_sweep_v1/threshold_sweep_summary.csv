@@ -1,0 +1,5 @@
+﻿score_threshold,predictions_above_threshold,bbox50_recall,bbox50_precision,category_accuracy_on_localized,end_to_end_bbox50_class_recall,mean_bbox_iou_localized,mean_mask_iou_correct_class,mask_iou_ge_0_50_rate,mask_iou_ge_0_85_rate,mean_inference_ms_per_image,median_inference_ms_per_image,p95_inference_ms_per_image,correct,low_mask_iou,wrong_class,missed
+0.2,122,0.7674,0.2705,0.5455,0.4186,0.8170,0.8204,0.3953,0.2093,45.5490,25.5657,85.6303,17,1,15,10
+0.3,84,0.7442,0.3810,0.6250,0.4651,0.8086,0.8213,0.4419,0.2326,45.9893,25.7295,86.6366,19,1,12,11
+0.4,62,0.6279,0.4355,0.7407,0.4651,0.8172,0.8321,0.4419,0.2558,47.8832,27.1989,88.6136,19,1,7,16
+0.5,45,0.5116,0.4889,0.7273,0.3721,0.8213,0.8178,0.3488,0.1628,46.9953,26.2199,91.4389,15,1,6,21

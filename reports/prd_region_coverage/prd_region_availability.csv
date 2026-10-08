@@ -1,0 +1,9 @@
+﻿region,prd_required,current_status,verified_positive_count,dataset_status,experiment_status,note
+collar,yes,existing benchmark available,,to_review,pending,
+cuff,yes,candidate screening required,,to_review,pending,
+hem,yes,candidate screening required,,to_review,pending,
+pocket,yes,candidate screening required,,to_review,pending,
+shoulder,yes,candidate screening required,,to_review,pending,
+waist,yes,candidate screening required,,to_review,pending,
+pattern,yes,candidate screening required,,to_review,pending,
+decoration,yes,button/zipper diagnostic evidence available,,to_review,pending,

@@ -1,0 +1,80 @@
+"""Image-group sampler weights; pure Python and independent of model loading."""
+from __future__ import annotations
+from collections import Counter
+from typing import TYPE_CHECKING
+from fashion_multimodal_analysis.common.schema import CLASS_TO_ID
+if TYPE_CHECKING:
+    from fashion_multimodal_analysis.datasets.prd8 import PRD8MaskDataset
+
+def instance_class_counts(
+    dataset: PRD8MaskDataset,
+) -> Counter:
+    return Counter(
+        str(r["garment_category"]).strip().lower()
+        for r in dataset.rows
+    )
+
+
+def build_sampler_weights(
+    dataset: PRD8MaskDataset,
+    alpha: float,
+) -> tuple[list[float], list[dict]]:
+    if alpha < 0:
+        raise ValueError("--sampler-alpha must be >= 0")
+
+    counts = instance_class_counts(dataset)
+
+    if not counts:
+        raise ValueError("Training manifest has no class rows.")
+
+    max_count = max(
+        counts.get(cls, 0)
+        for cls in CLASS_TO_ID
+    )
+
+    class_weight = {}
+
+    for cls in CLASS_TO_ID:
+        count = counts.get(cls, 0)
+
+        if count <= 0:
+            raise ValueError(
+                f"Training class missing: {cls}"
+            )
+
+        class_weight[cls] = (
+            max_count / count
+        ) ** alpha
+
+    image_weights = []
+    report_rows = []
+
+    for index, sample in enumerate(dataset.samples):
+        classes = sorted(
+            {
+                str(r["garment_category"]).strip().lower()
+                for r in sample["instances"]
+            }
+        )
+
+        # Use max weight so an image containing any rare class gets the
+        # appropriate boost without multiplying weights for multi-instance imgs.
+        weight = max(
+            class_weight[c]
+            for c in classes
+        )
+
+        image_weights.append(float(weight))
+
+        report_rows.append(
+            {
+                "dataset_index": index,
+                "source_dataset": sample["source_dataset"],
+                "source_image": sample["source_image"],
+                "instance_count": len(sample["instances"]),
+                "classes": ";".join(classes),
+                "sampler_weight": f"{weight:.6f}",
+            }
+        )
+
+    return image_weights, report_rows

@@ -1,0 +1,9 @@
+﻿garment_category,n,worn_person,product_display,partial_view,complex_scene,scene_types_present,human_review_complete
+top,50,28,0,15,7,3,YES
+pants,50,26,1,15,8,4,YES
+skirt,50,19,1,15,15,4,YES
+outerwear,50,32,4,6,8,4,YES
+dress,50,29,2,8,11,4,YES
+shoe,50,21,0,1,28,3,YES
+bag,50,27,0,3,20,3,YES
+accessory,50,10,0,9,31,3,YES

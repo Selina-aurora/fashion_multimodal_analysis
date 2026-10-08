@@ -1,0 +1,304 @@
+{
+  "schema": {
+    "name": "fashion_mm.fashion_visual_casebook_manifest",
+    "version": "1.0.0"
+  },
+  "title": "服饰多模态解析系统典型样例候选集",
+  "description": "先运行草稿并人工看图，再从候选中确认 10-20 个成功、边界和典型失败案例。",
+  "default_attributes": [
+    "coat_length_labels",
+    "collar_design_labels",
+    "lapel_design_labels",
+    "neck_design_labels",
+    "neckline_design_labels",
+    "pant_length_labels",
+    "skirt_length_labels",
+    "sleeve_length_labels"
+  ],
+  "cases": [
+    {
+      "id": "candidate_01_neckline",
+      "title": "基础领口查询",
+      "category": "unreviewed",
+      "review_status": "pending",
+      "image": "/root/autodl-tmp/datasets/DeepFashion2/validation/image/000001.jpg",
+      "query": "这件衣服的领口",
+      "attributes": [
+        "collar_design_labels",
+        "lapel_design_labels",
+        "neck_design_labels",
+        "neckline_design_labels"
+      ],
+      "expected": {
+        "pipeline_status": "ok",
+        "region": "neckline"
+      },
+      "review_note": "检查正面领口定位是否清晰，属性结果是否与可见外观一致。"
+    },
+    {
+      "id": "candidate_02_dress_neckline",
+      "title": "连衣裙领口查询",
+      "category": "unreviewed",
+      "review_status": "pending",
+      "image": "/root/autodl-tmp/datasets/DeepFashion2/validation/image/000002.jpg",
+      "query": "这条连衣裙是什么领口",
+      "attributes": [
+        "collar_design_labels",
+        "lapel_design_labels",
+        "neck_design_labels",
+        "neckline_design_labels"
+      ],
+      "expected": {
+        "pipeline_status": "ok",
+        "region": "neckline"
+      },
+      "review_note": "检查 garment hint 与领口区域是否共同生效。"
+    },
+    {
+      "id": "candidate_03_outerwear_neckline",
+      "title": "外套领型查询",
+      "category": "unreviewed",
+      "review_status": "pending",
+      "image": "/root/autodl-tmp/datasets/DeepFashion2/validation/image/000003.jpg",
+      "query": "外套的衣领是什么样的",
+      "attributes": [
+        "collar_design_labels",
+        "lapel_design_labels",
+        "neck_design_labels",
+        "neckline_design_labels"
+      ],
+      "expected": {
+        "pipeline_status": "ok",
+        "region": "neckline"
+      },
+      "review_note": "检查外套实例选择、翻领区域和细粒度属性输出。"
+    },
+    {
+      "id": "candidate_04_inner_neckline",
+      "title": "内搭领口关系查询",
+      "category": "unreviewed",
+      "review_status": "pending",
+      "image": "/root/autodl-tmp/datasets/DeepFashion2/validation/image/000004.jpg",
+      "query": "里面那件衣服的领口",
+      "attributes": [
+        "collar_design_labels",
+        "lapel_design_labels",
+        "neck_design_labels",
+        "neckline_design_labels"
+      ],
+      "expected": {
+        "pipeline_status": "ok",
+        "region": "neckline"
+      },
+      "review_note": "关系词是系统边界，检查是否误选外层或最高置信度实例。"
+    },
+    {
+      "id": "candidate_05_left_cuff",
+      "title": "左侧袖口查询",
+      "category": "unreviewed",
+      "review_status": "pending",
+      "image": "/root/autodl-tmp/datasets/DeepFashion2/validation/image/000005.jpg",
+      "query": "左边的袖口",
+      "attributes": [
+        "sleeve_length_labels"
+      ],
+      "expected": {
+        "pipeline_status": "ok",
+        "region": "left_cuff"
+      },
+      "review_note": "检查左右空间提示、袖口小区域和袖长属性是否可靠。"
+    },
+    {
+      "id": "candidate_06_right_cuff",
+      "title": "右侧袖口查询",
+      "category": "unreviewed",
+      "review_status": "pending",
+      "image": "/root/autodl-tmp/datasets/DeepFashion2/validation/image/000006.jpg",
+      "query": "右侧袖口在哪里",
+      "attributes": [
+        "sleeve_length_labels"
+      ],
+      "expected": {
+        "pipeline_status": "ok",
+        "region": "right_cuff"
+      },
+      "review_note": "检查右侧袖口在遮挡、短袖或出框情况下的边界表现。"
+    },
+    {
+      "id": "candidate_07_pants_hem",
+      "title": "裤脚与裤长",
+      "category": "unreviewed",
+      "review_status": "pending",
+      "image": "/root/autodl-tmp/datasets/DeepFashion2/validation/image/000007.jpg",
+      "query": "这条裤子的裤脚",
+      "attributes": [
+        "pant_length_labels"
+      ],
+      "expected": {
+        "pipeline_status": "ok",
+        "region": "hem"
+      },
+      "review_note": "检查裤子实例、下摆区域和裤长标签是否形成完整成功链路。"
+    },
+    {
+      "id": "candidate_08_skirt_hem",
+      "title": "裙摆与裙长",
+      "category": "unreviewed",
+      "review_status": "pending",
+      "image": "/root/autodl-tmp/datasets/DeepFashion2/validation/image/000008.jpg",
+      "query": "裙子的裙摆",
+      "attributes": [
+        "skirt_length_labels"
+      ],
+      "expected": {
+        "pipeline_status": "ok",
+        "region": "hem"
+      },
+      "review_note": "检查裙装类别提示、裙摆定位和裙长属性。"
+    },
+    {
+      "id": "candidate_09_coat_hem",
+      "title": "外套下摆与衣长",
+      "category": "unreviewed",
+      "review_status": "pending",
+      "image": "/root/autodl-tmp/datasets/DeepFashion2/validation/image/000009.jpg",
+      "query": "外套的下摆",
+      "attributes": [
+        "coat_length_labels"
+      ],
+      "expected": {
+        "pipeline_status": "ok",
+        "region": "hem"
+      },
+      "review_note": "检查长外套、裁切或人体遮挡对衣长判断的影响。"
+    },
+    {
+      "id": "candidate_10_waist",
+      "title": "腰线区域查询",
+      "category": "unreviewed",
+      "review_status": "pending",
+      "image": "/root/autodl-tmp/datasets/DeepFashion2/validation/image/000010.jpg",
+      "query": "这件衣服的腰线",
+      "expected": {
+        "pipeline_status": "ok",
+        "region": "waist"
+      },
+      "review_note": "腰线没有专属属性头，适合作为定位成功但语义输出受限的边界候选。"
+    },
+    {
+      "id": "candidate_11_pattern",
+      "title": "印花图案查询",
+      "category": "unreviewed",
+      "review_status": "pending",
+      "image": "/root/autodl-tmp/datasets/DeepFashion2/validation/image/000011.jpg",
+      "query": "衣服上的碎花图案",
+      "expected": {
+        "pipeline_status": "ok",
+        "region": "pattern"
+      },
+      "review_note": "图案可定位但当前 8 个属性头不覆盖花型，展示任务标签空间边界。"
+    },
+    {
+      "id": "candidate_12_right_pocket",
+      "title": "右侧口袋查询",
+      "category": "unreviewed",
+      "review_status": "pending",
+      "image": "/root/autodl-tmp/datasets/DeepFashion2/validation/image/000012.jpg",
+      "query": "右边的口袋",
+      "expected": {
+        "pipeline_status": "ok",
+        "region": "right_pocket"
+      },
+      "review_note": "口袋属于弱监督局部区域，检查左右选择以及假阳性定位。"
+    },
+    {
+      "id": "candidate_13_decoration",
+      "title": "装饰区域查询",
+      "category": "unreviewed",
+      "review_status": "pending",
+      "image": "/root/autodl-tmp/datasets/DeepFashion2/validation/image/000013.jpg",
+      "query": "衣服上的蝴蝶结装饰",
+      "expected": {
+        "pipeline_status": "ok",
+        "region": "decoration"
+      },
+      "review_note": "检查小装饰、无装饰和重复纹理下的典型定位失败。"
+    },
+    {
+      "id": "candidate_14_zipper",
+      "title": "拉链区域查询",
+      "category": "unreviewed",
+      "review_status": "pending",
+      "image": "/root/autodl-tmp/datasets/DeepFashion2/validation/image/000014.jpg",
+      "query": "正面的拉链",
+      "expected": {
+        "pipeline_status": "ok",
+        "region": "zipper"
+      },
+      "review_note": "检查中央细长区域规则在无拉链服装上的能力边界。"
+    },
+    {
+      "id": "candidate_15_button",
+      "title": "纽扣区域查询",
+      "category": "unreviewed",
+      "review_status": "pending",
+      "image": "/root/autodl-tmp/datasets/DeepFashion2/validation/image/000015.jpg",
+      "query": "中间的纽扣",
+      "expected": {
+        "pipeline_status": "ok",
+        "region": "button"
+      },
+      "review_note": "检查纽扣排布、遮挡和无纽扣情况下是否产生典型误定位。"
+    },
+    {
+      "id": "candidate_16_unknown_material",
+      "title": "超出支持范围的材质查询",
+      "category": "unreviewed",
+      "review_status": "pending",
+      "image": "/root/autodl-tmp/datasets/DeepFashion2/validation/image/000016.jpg",
+      "query": "这件衣服是什么材质",
+      "expected": {
+        "region": null
+      },
+      "review_note": "材质不在区域解析和属性标签空间内，应作为明确的系统边界候选。"
+    },
+    {
+      "id": "candidate_17_multi_instance",
+      "title": "多实例服装选择",
+      "category": "unreviewed",
+      "review_status": "pending",
+      "image": "/root/autodl-tmp/datasets/DeepFashion2/validation/image/000017.jpg",
+      "query": "右边那件衣服的领口",
+      "attributes": [
+        "collar_design_labels",
+        "lapel_design_labels",
+        "neck_design_labels",
+        "neckline_design_labels"
+      ],
+      "expected": {
+        "pipeline_status": "ok",
+        "region": "neckline"
+      },
+      "review_note": "多实例选择目前主要依赖类别、分数和面积，右侧关系可能失效。"
+    },
+    {
+      "id": "candidate_18_small_garment",
+      "title": "小目标领口查询",
+      "category": "unreviewed",
+      "review_status": "pending",
+      "image": "/root/autodl-tmp/datasets/DeepFashion2/validation/image/000018.jpg",
+      "query": "人物上衣的领口",
+      "attributes": [
+        "collar_design_labels",
+        "lapel_design_labels",
+        "neck_design_labels",
+        "neckline_design_labels"
+      ],
+      "expected": {
+        "pipeline_status": "ok",
+        "region": "neckline"
+      },
+      "review_note": "检查小目标、低分辨率与背景干扰造成的端到端退化。"
+    }
+  ]
+}

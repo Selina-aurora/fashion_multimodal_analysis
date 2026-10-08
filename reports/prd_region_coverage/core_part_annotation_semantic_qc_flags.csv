@@ -1,0 +1,12 @@
+﻿annotation_id,region,priority,recommended_action,reason
+collar_train_06,collar,must_fix,relabel_or_unusable,Current box includes a large hand/chin area and is not a tight collar/neckline box.
+collar_train_14,collar,review,review_target_garment,"Multiple garments/lapels are visible; the current box targets the inner neckline, creating target-instance ambiguity."
+cuff_train_08,cuff,must_fix,relabel_tighter,Both boxes cover large lower-sleeve regions; tighten them around the actual sleeve openings/cuffs.
+cuff_train_12,cuff,review,review_visibility,The two cuff boxes are visually ambiguous; confirm that each box corresponds to a visible sleeve ending rather than arm/background.
+cuff_train_14,cuff,must_fix,relabel_tighter,Both boxes are substantially broader than the sleeve openings; tighten around the cuff/opening edge.
+cuff_train_15,cuff,must_fix,mark_unusable_if_no_cuff,No clear wrist-level cuff is visible; current side boxes do not look like cuff annotations.
+hem_train_01,hem,must_fix,mark_unusable_or_relabel,"Current vertical box is on the side/background area, not the garment bottom edge."
+hem_train_03,hem,review,review_orientation,Image is rotated/folded and the target hem is ambiguous; keep only if the boxed edge is truly the garment bottom edge.
+hem_train_08,hem,must_fix,mark_unusable,The dress bottom edge is cut by the image boundary; the two corner boxes do not form a reliable hem label.
+hem_train_10,hem,must_fix,mark_unusable_or_relabel,Current narrow vertical side box is not a clear bottom hem region.
+hem_train_11,hem,review,review_target_garment,Multiple garments are visible; confirm whether the two small lower boxes correspond to the intended garment hem.

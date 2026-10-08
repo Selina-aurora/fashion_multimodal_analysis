@@ -1,0 +1,9 @@
+PRD 3.1.3 garment pattern baseline v1
+model=openai/clip-vit-base-patch32
+manifest=configs/garment_instances_gt_pilot_100.csv
+instances=156
+unit_of_analysis=one_garment_instance
+taxonomy=solid,striped,checked_plaid,floral,graphic_logo,polka_dot,animal_print,camouflage,geometric_abstract,other_pattern
+uncertainty=top1_top2_margin+normalized_entropy
+gt_available=false
+material_and_craftsmanship=excluded

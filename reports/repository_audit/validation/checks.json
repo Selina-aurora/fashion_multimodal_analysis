@@ -1,0 +1,70 @@
+{
+  "syntax": {
+    "files": 366,
+    "errors": []
+  },
+  "internal_import_paths": {
+    "errors": []
+  },
+  "entrypoint_static_help": {
+    "count": 163,
+    "failed": []
+  },
+  "original_evidence": {
+    "count": 5570,
+    "changed_or_missing": []
+  },
+  "unit_tests": {
+    "returncode": 0,
+    "log": "reports/repository_audit/validation/unittest.txt"
+  },
+  "structure_check": {
+    "returncode": 0,
+    "stdout": "Commands: 163; missing entrypoints/implementations: 0\nPASS: requested checks completed. No model inference was run.\n",
+    "stderr": ""
+  },
+  "external_assets": {
+    "returncode": 1,
+    "expected_missing": true,
+    "log": "reports/repository_audit/validation/external_assets.txt"
+  },
+  "model_runtime": {
+    "executed": false,
+    "reason": "No torch/torchvision/transformers or external source dataset/checkpoints in this validation environment."
+  },
+  "available_modules": {
+    "numpy": true,
+    "PIL": true,
+    "pandas": true,
+    "torch": false,
+    "torchvision": false,
+    "transformers": false,
+    "cv2": false
+  },
+  "current_document_links": {
+    "files": 15,
+    "broken": []
+  },
+  "files": {
+    "count": 6028,
+    "total_bytes": 392816391,
+    "largest_file": "benchmark/prd_3_1_v1/candidates/segmentation_core_stress_v1/contact_sheets_core/outerwear.jpg",
+    "largest_bytes": 910155,
+    "over_100_MiB": []
+  },
+  "excluded_binaries": {
+    "unexpected": []
+  },
+  "credential_pattern_scan": {
+    "matched_files": [],
+    "scope": "Common private-key and token patterns; not a comprehensive security audit."
+  },
+  "repository_status": "PASS",
+  "scientific_acceptance": "NOT_CLAIMED: known 33-image train/Core overlap and no GPU rerun.",
+  "package_build": {
+    "status": "PASS",
+    "mode": "pip wheel --no-index --no-deps --no-build-isolation",
+    "registry_included": true,
+    "note": "Wheel build only; model dependencies were not installed."
+  }
+}

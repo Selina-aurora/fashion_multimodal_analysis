@@ -1,0 +1,64 @@
+{
+  "syntax": {
+    "files": 386,
+    "errors": []
+  },
+  "internal_import_paths": {
+    "errors": []
+  },
+  "entrypoint_static_help": {
+    "count": 170,
+    "failed": []
+  },
+  "original_evidence": {
+    "count": 5570,
+    "changed_or_missing": []
+  },
+  "unit_tests": {
+    "returncode": 0,
+    "log": "reports/repository_audit/recovery_v2/validation/unittest.txt"
+  },
+  "structure_check": {
+    "returncode": 0,
+    "stdout": "Commands: 170; missing entrypoints/implementations: 0\nPASS: requested checks completed. No model inference was run.\n",
+    "stderr": ""
+  },
+  "external_assets": {
+    "returncode": 1,
+    "expected_missing": true,
+    "log": "reports/repository_audit/recovery_v2/validation/external_assets.txt"
+  },
+  "model_runtime": {
+    "executed": false,
+    "reason": "No torch/torchvision/transformers or external source dataset/checkpoints in this validation environment."
+  },
+  "available_modules": {
+    "numpy": true,
+    "PIL": true,
+    "pandas": true,
+    "torch": false,
+    "torchvision": false,
+    "transformers": false,
+    "cv2": false
+  },
+  "current_document_links": {
+    "files": 19,
+    "broken": []
+  },
+  "files": {
+    "count": 6070,
+    "total_bytes": 397203302,
+    "largest_file": "benchmark/prd_3_1_v2/review/PRD31_review.html",
+    "largest_bytes": 2664108,
+    "over_100_MiB": []
+  },
+  "excluded_binaries": {
+    "unexpected": []
+  },
+  "credential_pattern_scan": {
+    "matched_files": [],
+    "scope": "Common private-key and token patterns; not a comprehensive security audit."
+  },
+  "repository_status": "PASS",
+  "scientific_acceptance": "NOT_CLAIMED: clean v4 manifest prepared; original v3 overlap retained as evidence; GPU rerun and new human reviews pending."
+}

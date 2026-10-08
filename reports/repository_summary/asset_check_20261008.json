@@ -1,0 +1,54 @@
+{
+  "mode": "READ_ONLY",
+  "assets": [
+    {
+      "name": "v5_checkpoint",
+      "path": "outputs/prd_instance_segmentation/maskrcnn_8class_v5_full_targets/checkpoint_last.pth",
+      "status": "MISSING",
+      "expected_sha256": "ea5a4ddf0f002256f1ce5164fc1b4b5b4d2263698f9525c9fbe7d8cf98bc1a65",
+      "actual_sha256": null
+    },
+    {
+      "name": "v8_checkpoint",
+      "path": "outputs/prd_instance_segmentation/maskrcnn_8class_v8_full_dataset/checkpoint_last.pth",
+      "status": "MISSING",
+      "expected_sha256": "e08d3426768f78953a81cf51d1cc2b664ac22a78ad8de10ae4a992f0dd3ad3b7",
+      "actual_sha256": null
+    },
+    {
+      "name": "v8_dataset_index",
+      "path": "outputs/prd_instance_segmentation/maskrcnn_8class_v8_full_dataset/dataset.sqlite",
+      "status": "MISSING",
+      "expected_sha256": "2aa79074bda85b5c400891f894e4ca11b1320ae887a1f74cbb2ea9e840e0cce8",
+      "actual_sha256": null
+    },
+    {
+      "name": "v5_training_manifest",
+      "path": "configs/prd_8class_train_v5_full_targets.csv",
+      "status": "HASH_MATCH",
+      "expected_sha256": "36ff78831b20e492d787c66161f05747433f8e85f7a089fd5df981c2bdf476e6",
+      "actual_sha256": "36ff78831b20e492d787c66161f05747433f8e85f7a089fd5df981c2bdf476e6"
+    },
+    {
+      "name": "full_target_development_manifest",
+      "path": "configs/prd_8class_val_v2_full_targets.csv",
+      "status": "MISSING",
+      "expected_sha256": "39141f545ea5512d16ed074788b6f98474b33baff111d3b663ec0ffcc4c40b93",
+      "actual_sha256": null
+    },
+    {
+      "name": "core400_manifest",
+      "path": "benchmark/prd_3_1_v1/manifests/segmentation_test_v1.csv",
+      "status": "HASH_MATCH",
+      "expected_sha256": "c83204aca87c9c4dee304b774fd459bf5a18a2d1d65f0a3a9a79b92721224b89",
+      "actual_sha256": "c83204aca87c9c4dee304b774fd459bf5a18a2d1d65f0a3a9a79b92721224b89"
+    }
+  ],
+  "external_data": {
+    "raw/train/train/annos": false,
+    "raw/train/train/image": false,
+    "raw/fashionpedia": false
+  },
+  "ready_for_exact_v8_restore": false,
+  "note": "原始图片、标注及派生掩码的逐项检查仍由训练准备步骤完成。"
+}

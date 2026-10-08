@@ -1,0 +1,37 @@
+# Python
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.pytest_cache/
+
+# Virtual environments
+.venv/
+venv/
+env/
+conda-env/
+
+# Data and large files
+/data/
+/dataset/
+/datasets/
+/configs/dataset/deepfashion2/
+/configs/dataset/fashionai/
+/docs/source_notes/
+/checkpoints/
+/outputs/
+/runs/
+/wandb/
+
+# Model weights
+*.pth
+*.pt
+*.ckpt
+*.onnx
+*.engine
+*.safetensors
+
+# Logs
+*.log
+
+# System files
+.DS_Store

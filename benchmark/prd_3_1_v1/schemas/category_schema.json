@@ -1,0 +1,38 @@
+{
+  "schema_version": "prd_3_1_category_v1",
+  "categories": [
+    {
+      "id": "top",
+      "display_zh": "上衣"
+    },
+    {
+      "id": "pants",
+      "display_zh": "裤子"
+    },
+    {
+      "id": "skirt",
+      "display_zh": "裙子"
+    },
+    {
+      "id": "outerwear",
+      "display_zh": "外套"
+    },
+    {
+      "id": "dress",
+      "display_zh": "连衣裙"
+    },
+    {
+      "id": "shoe",
+      "display_zh": "鞋子"
+    },
+    {
+      "id": "bag",
+      "display_zh": "包包"
+    },
+    {
+      "id": "accessory",
+      "display_zh": "配饰"
+    }
+  ],
+  "unknown_policy": "Do not map an unknown visible object into the closest class. Mark unsupported/excluded explicitly."
+}

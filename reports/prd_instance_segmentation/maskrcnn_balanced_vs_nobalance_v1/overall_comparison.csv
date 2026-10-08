@@ -1,0 +1,9 @@
+﻿metric,balanced,no_balance,balanced_minus_no_balance
+bbox50_recall,0.6279,0.6047,0.0232
+category_accuracy_on_localized,0.8148,0.7308,0.0840
+end_to_end_bbox50_class_recall,0.5116,0.4419,0.0697
+mean_mask_iou_correct_class,0.7835,0.7893,-0.0058
+mask_iou_ge_0_85_rate,0.1395,0.2093,-0.0698
+mean_inference_ms_per_image,46.5101,43.6554,2.8547
+median_inference_ms_per_image,24.9943,23.2003,1.7940
+p95_inference_ms_per_image,95.6409,81.7896,13.8513

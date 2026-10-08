@@ -1,0 +1,957 @@
+{
+  "overall": {
+    "gt_count": 400,
+    "localized": 140,
+    "class_correct": 100,
+    "missed": 260,
+    "wrong_class": 40,
+    "low_mask_iou": 9,
+    "correct_mask50": 91,
+    "bbox50_recall": 0.35,
+    "class_correct_recall": 0.25,
+    "mean_mask_iou_correct_class": 0.7481466434428199,
+    "mask85_count": 34
+  },
+  "groups": [
+    {
+      "group_field": "gt_class",
+      "group_value": "accessory",
+      "gt_count": 50,
+      "localized": 7,
+      "class_correct": 4,
+      "missed": 43,
+      "wrong_class": 3,
+      "low_mask_iou": 0,
+      "correct_mask50": 4,
+      "bbox50_recall": 0.14,
+      "class_correct_recall": 0.08,
+      "mean_mask_iou_correct_class": 0.7800485531325381,
+      "mask85_count": 2
+    },
+    {
+      "group_field": "gt_class",
+      "group_value": "bag",
+      "gt_count": 50,
+      "localized": 21,
+      "class_correct": 20,
+      "missed": 29,
+      "wrong_class": 1,
+      "low_mask_iou": 5,
+      "correct_mask50": 15,
+      "bbox50_recall": 0.42,
+      "class_correct_recall": 0.4,
+      "mean_mask_iou_correct_class": 0.6496572214522462,
+      "mask85_count": 6
+    },
+    {
+      "group_field": "gt_class",
+      "group_value": "dress",
+      "gt_count": 50,
+      "localized": 18,
+      "class_correct": 11,
+      "missed": 32,
+      "wrong_class": 7,
+      "low_mask_iou": 0,
+      "correct_mask50": 11,
+      "bbox50_recall": 0.36,
+      "class_correct_recall": 0.22,
+      "mean_mask_iou_correct_class": 0.8356851239236647,
+      "mask85_count": 4
+    },
+    {
+      "group_field": "gt_class",
+      "group_value": "outerwear",
+      "gt_count": 50,
+      "localized": 20,
+      "class_correct": 13,
+      "missed": 30,
+      "wrong_class": 7,
+      "low_mask_iou": 2,
+      "correct_mask50": 11,
+      "bbox50_recall": 0.4,
+      "class_correct_recall": 0.26,
+      "mean_mask_iou_correct_class": 0.6642118047703394,
+      "mask85_count": 2
+    },
+    {
+      "group_field": "gt_class",
+      "group_value": "pants",
+      "gt_count": 50,
+      "localized": 20,
+      "class_correct": 11,
+      "missed": 30,
+      "wrong_class": 9,
+      "low_mask_iou": 1,
+      "correct_mask50": 10,
+      "bbox50_recall": 0.4,
+      "class_correct_recall": 0.22,
+      "mean_mask_iou_correct_class": 0.7784116178496162,
+      "mask85_count": 4
+    },
+    {
+      "group_field": "gt_class",
+      "group_value": "shoe",
+      "gt_count": 50,
+      "localized": 22,
+      "class_correct": 22,
+      "missed": 28,
+      "wrong_class": 0,
+      "low_mask_iou": 1,
+      "correct_mask50": 21,
+      "bbox50_recall": 0.44,
+      "class_correct_recall": 0.44,
+      "mean_mask_iou_correct_class": 0.7483645163154151,
+      "mask85_count": 6
+    },
+    {
+      "group_field": "gt_class",
+      "group_value": "skirt",
+      "gt_count": 50,
+      "localized": 19,
+      "class_correct": 12,
+      "missed": 31,
+      "wrong_class": 7,
+      "low_mask_iou": 0,
+      "correct_mask50": 12,
+      "bbox50_recall": 0.38,
+      "class_correct_recall": 0.24,
+      "mean_mask_iou_correct_class": 0.9000920989142099,
+      "mask85_count": 10
+    },
+    {
+      "group_field": "gt_class",
+      "group_value": "top",
+      "gt_count": 50,
+      "localized": 13,
+      "class_correct": 7,
+      "missed": 37,
+      "wrong_class": 6,
+      "low_mask_iou": 0,
+      "correct_mask50": 7,
+      "bbox50_recall": 0.26,
+      "class_correct_recall": 0.14,
+      "mean_mask_iou_correct_class": 0.7209119336109665,
+      "mask85_count": 0
+    },
+    {
+      "group_field": "size_bucket",
+      "group_value": "large",
+      "gt_count": 104,
+      "localized": 62,
+      "class_correct": 40,
+      "missed": 42,
+      "wrong_class": 22,
+      "low_mask_iou": 4,
+      "correct_mask50": 36,
+      "bbox50_recall": 0.5961538461538461,
+      "class_correct_recall": 0.38461538461538464,
+      "mean_mask_iou_correct_class": 0.7302688426222799,
+      "mask85_count": 12
+    },
+    {
+      "group_field": "size_bucket",
+      "group_value": "medium",
+      "gt_count": 160,
+      "localized": 54,
+      "class_correct": 40,
+      "missed": 106,
+      "wrong_class": 14,
+      "low_mask_iou": 4,
+      "correct_mask50": 36,
+      "bbox50_recall": 0.3375,
+      "class_correct_recall": 0.25,
+      "mean_mask_iou_correct_class": 0.7588987433869958,
+      "mask85_count": 16
+    },
+    {
+      "group_field": "size_bucket",
+      "group_value": "small",
+      "gt_count": 136,
+      "localized": 24,
+      "class_correct": 20,
+      "missed": 112,
+      "wrong_class": 4,
+      "low_mask_iou": 1,
+      "correct_mask50": 19,
+      "bbox50_recall": 0.17647058823529413,
+      "class_correct_recall": 0.14705882352941177,
+      "mean_mask_iou_correct_class": 0.7623980451955485,
+      "mask85_count": 6
+    },
+    {
+      "group_field": "scene_type",
+      "group_value": "complex_scene",
+      "gt_count": 128,
+      "localized": 32,
+      "class_correct": 26,
+      "missed": 96,
+      "wrong_class": 6,
+      "low_mask_iou": 1,
+      "correct_mask50": 25,
+      "bbox50_recall": 0.25,
+      "class_correct_recall": 0.203125,
+      "mean_mask_iou_correct_class": 0.7940724897372718,
+      "mask85_count": 11
+    },
+    {
+      "group_field": "scene_type",
+      "group_value": "partial_view",
+      "gt_count": 72,
+      "localized": 36,
+      "class_correct": 23,
+      "missed": 36,
+      "wrong_class": 13,
+      "low_mask_iou": 2,
+      "correct_mask50": 21,
+      "bbox50_recall": 0.5,
+      "class_correct_recall": 0.3194444444444444,
+      "mean_mask_iou_correct_class": 0.7323343009236905,
+      "mask85_count": 7
+    },
+    {
+      "group_field": "scene_type",
+      "group_value": "product_display",
+      "gt_count": 8,
+      "localized": 3,
+      "class_correct": 0,
+      "missed": 5,
+      "wrong_class": 3,
+      "low_mask_iou": 0,
+      "correct_mask50": 0,
+      "bbox50_recall": 0.375,
+      "class_correct_recall": 0.0,
+      "mean_mask_iou_correct_class": null,
+      "mask85_count": 0
+    },
+    {
+      "group_field": "scene_type",
+      "group_value": "worn_person",
+      "gt_count": 192,
+      "localized": 69,
+      "class_correct": 51,
+      "missed": 123,
+      "wrong_class": 18,
+      "low_mask_iou": 6,
+      "correct_mask50": 45,
+      "bbox50_recall": 0.359375,
+      "class_correct_recall": 0.265625,
+      "mean_mask_iou_correct_class": 0.731864523330746,
+      "mask85_count": 16
+    },
+    {
+      "group_field": "fine_category",
+      "group_value": "bag, wallet",
+      "gt_count": 50,
+      "localized": 21,
+      "class_correct": 20,
+      "missed": 29,
+      "wrong_class": 1,
+      "low_mask_iou": 5,
+      "correct_mask50": 15,
+      "bbox50_recall": 0.42,
+      "class_correct_recall": 0.4,
+      "mean_mask_iou_correct_class": 0.6496572214522462,
+      "mask85_count": 6
+    },
+    {
+      "group_field": "fine_category",
+      "group_value": "belt",
+      "gt_count": 9,
+      "localized": 1,
+      "class_correct": 0,
+      "missed": 8,
+      "wrong_class": 1,
+      "low_mask_iou": 0,
+      "correct_mask50": 0,
+      "bbox50_recall": 0.1111111111111111,
+      "class_correct_recall": 0.0,
+      "mean_mask_iou_correct_class": null,
+      "mask85_count": 0
+    },
+    {
+      "group_field": "fine_category",
+      "group_value": "glasses",
+      "gt_count": 5,
+      "localized": 2,
+      "class_correct": 2,
+      "missed": 3,
+      "wrong_class": 0,
+      "low_mask_iou": 0,
+      "correct_mask50": 2,
+      "bbox50_recall": 0.4,
+      "class_correct_recall": 0.4,
+      "mean_mask_iou_correct_class": 0.7466956558015116,
+      "mask85_count": 1
+    },
+    {
+      "group_field": "fine_category",
+      "group_value": "glove",
+      "gt_count": 3,
+      "localized": 0,
+      "class_correct": 0,
+      "missed": 3,
+      "wrong_class": 0,
+      "low_mask_iou": 0,
+      "correct_mask50": 0,
+      "bbox50_recall": 0.0,
+      "class_correct_recall": 0.0,
+      "mean_mask_iou_correct_class": null,
+      "mask85_count": 0
+    },
+    {
+      "group_field": "fine_category",
+      "group_value": "hat",
+      "gt_count": 6,
+      "localized": 1,
+      "class_correct": 1,
+      "missed": 5,
+      "wrong_class": 0,
+      "low_mask_iou": 0,
+      "correct_mask50": 1,
+      "bbox50_recall": 0.16666666666666666,
+      "class_correct_recall": 0.16666666666666666,
+      "mean_mask_iou_correct_class": 0.8877721943048577,
+      "mask85_count": 1
+    },
+    {
+      "group_field": "fine_category",
+      "group_value": "headband, head covering, hair accessory",
+      "gt_count": 8,
+      "localized": 1,
+      "class_correct": 0,
+      "missed": 7,
+      "wrong_class": 1,
+      "low_mask_iou": 0,
+      "correct_mask50": 0,
+      "bbox50_recall": 0.125,
+      "class_correct_recall": 0.0,
+      "mean_mask_iou_correct_class": null,
+      "mask85_count": 0
+    },
+    {
+      "group_field": "fine_category",
+      "group_value": "long_sleeve_dress",
+      "gt_count": 12,
+      "localized": 2,
+      "class_correct": 0,
+      "missed": 10,
+      "wrong_class": 2,
+      "low_mask_iou": 0,
+      "correct_mask50": 0,
+      "bbox50_recall": 0.16666666666666666,
+      "class_correct_recall": 0.0,
+      "mean_mask_iou_correct_class": null,
+      "mask85_count": 0
+    },
+    {
+      "group_field": "fine_category",
+      "group_value": "long_sleeve_outwear",
+      "gt_count": 29,
+      "localized": 14,
+      "class_correct": 8,
+      "missed": 15,
+      "wrong_class": 6,
+      "low_mask_iou": 2,
+      "correct_mask50": 6,
+      "bbox50_recall": 0.4827586206896552,
+      "class_correct_recall": 0.27586206896551724,
+      "mean_mask_iou_correct_class": 0.6434021246504195,
+      "mask85_count": 2
+    },
+    {
+      "group_field": "fine_category",
+      "group_value": "long_sleeve_top",
+      "gt_count": 13,
+      "localized": 4,
+      "class_correct": 2,
+      "missed": 9,
+      "wrong_class": 2,
+      "low_mask_iou": 0,
+      "correct_mask50": 2,
+      "bbox50_recall": 0.3076923076923077,
+      "class_correct_recall": 0.15384615384615385,
+      "mean_mask_iou_correct_class": 0.7456541433562627,
+      "mask85_count": 0
+    },
+    {
+      "group_field": "fine_category",
+      "group_value": "scarf",
+      "gt_count": 7,
+      "localized": 2,
+      "class_correct": 1,
+      "missed": 5,
+      "wrong_class": 1,
+      "low_mask_iou": 0,
+      "correct_mask50": 1,
+      "bbox50_recall": 0.2857142857142857,
+      "class_correct_recall": 0.14285714285714285,
+      "mean_mask_iou_correct_class": 0.7390307066222715,
+      "mask85_count": 0
+    },
+    {
+      "group_field": "fine_category",
+      "group_value": "shoe",
+      "gt_count": 50,
+      "localized": 22,
+      "class_correct": 22,
+      "missed": 28,
+      "wrong_class": 0,
+      "low_mask_iou": 1,
+      "correct_mask50": 21,
+      "bbox50_recall": 0.44,
+      "class_correct_recall": 0.44,
+      "mean_mask_iou_correct_class": 0.7483645163154151,
+      "mask85_count": 6
+    },
+    {
+      "group_field": "fine_category",
+      "group_value": "short_sleeve_dress",
+      "gt_count": 13,
+      "localized": 6,
+      "class_correct": 4,
+      "missed": 7,
+      "wrong_class": 2,
+      "low_mask_iou": 0,
+      "correct_mask50": 4,
+      "bbox50_recall": 0.46153846153846156,
+      "class_correct_recall": 0.3076923076923077,
+      "mean_mask_iou_correct_class": 0.831678844401505,
+      "mask85_count": 2
+    },
+    {
+      "group_field": "fine_category",
+      "group_value": "short_sleeve_outwear",
+      "gt_count": 21,
+      "localized": 6,
+      "class_correct": 5,
+      "missed": 15,
+      "wrong_class": 1,
+      "low_mask_iou": 0,
+      "correct_mask50": 5,
+      "bbox50_recall": 0.2857142857142857,
+      "class_correct_recall": 0.23809523809523808,
+      "mean_mask_iou_correct_class": 0.6975072929622111,
+      "mask85_count": 0
+    },
+    {
+      "group_field": "fine_category",
+      "group_value": "short_sleeve_top",
+      "gt_count": 13,
+      "localized": 3,
+      "class_correct": 3,
+      "missed": 10,
+      "wrong_class": 0,
+      "low_mask_iou": 0,
+      "correct_mask50": 3,
+      "bbox50_recall": 0.23076923076923078,
+      "class_correct_recall": 0.23076923076923078,
+      "mean_mask_iou_correct_class": 0.7837797131156776,
+      "mask85_count": 0
+    },
+    {
+      "group_field": "fine_category",
+      "group_value": "shorts",
+      "gt_count": 25,
+      "localized": 8,
+      "class_correct": 0,
+      "missed": 17,
+      "wrong_class": 8,
+      "low_mask_iou": 0,
+      "correct_mask50": 0,
+      "bbox50_recall": 0.32,
+      "class_correct_recall": 0.0,
+      "mean_mask_iou_correct_class": null,
+      "mask85_count": 0
+    },
+    {
+      "group_field": "fine_category",
+      "group_value": "skirt",
+      "gt_count": 50,
+      "localized": 19,
+      "class_correct": 12,
+      "missed": 31,
+      "wrong_class": 7,
+      "low_mask_iou": 0,
+      "correct_mask50": 12,
+      "bbox50_recall": 0.38,
+      "class_correct_recall": 0.24,
+      "mean_mask_iou_correct_class": 0.9000920989142099,
+      "mask85_count": 10
+    },
+    {
+      "group_field": "fine_category",
+      "group_value": "sling",
+      "gt_count": 11,
+      "localized": 2,
+      "class_correct": 0,
+      "missed": 9,
+      "wrong_class": 2,
+      "low_mask_iou": 0,
+      "correct_mask50": 0,
+      "bbox50_recall": 0.18181818181818182,
+      "class_correct_recall": 0.0,
+      "mean_mask_iou_correct_class": null,
+      "mask85_count": 0
+    },
+    {
+      "group_field": "fine_category",
+      "group_value": "sling_dress",
+      "gt_count": 12,
+      "localized": 6,
+      "class_correct": 4,
+      "missed": 6,
+      "wrong_class": 2,
+      "low_mask_iou": 0,
+      "correct_mask50": 4,
+      "bbox50_recall": 0.5,
+      "class_correct_recall": 0.3333333333333333,
+      "mean_mask_iou_correct_class": 0.8286111151672062,
+      "mask85_count": 1
+    },
+    {
+      "group_field": "fine_category",
+      "group_value": "sock",
+      "gt_count": 5,
+      "localized": 0,
+      "class_correct": 0,
+      "missed": 5,
+      "wrong_class": 0,
+      "low_mask_iou": 0,
+      "correct_mask50": 0,
+      "bbox50_recall": 0.0,
+      "class_correct_recall": 0.0,
+      "mean_mask_iou_correct_class": null,
+      "mask85_count": 0
+    },
+    {
+      "group_field": "fine_category",
+      "group_value": "tights, stockings",
+      "gt_count": 5,
+      "localized": 0,
+      "class_correct": 0,
+      "missed": 5,
+      "wrong_class": 0,
+      "low_mask_iou": 0,
+      "correct_mask50": 0,
+      "bbox50_recall": 0.0,
+      "class_correct_recall": 0.0,
+      "mean_mask_iou_correct_class": null,
+      "mask85_count": 0
+    },
+    {
+      "group_field": "fine_category",
+      "group_value": "trousers",
+      "gt_count": 25,
+      "localized": 12,
+      "class_correct": 11,
+      "missed": 13,
+      "wrong_class": 1,
+      "low_mask_iou": 1,
+      "correct_mask50": 10,
+      "bbox50_recall": 0.48,
+      "class_correct_recall": 0.44,
+      "mean_mask_iou_correct_class": 0.7784116178496162,
+      "mask85_count": 4
+    },
+    {
+      "group_field": "fine_category",
+      "group_value": "vest",
+      "gt_count": 13,
+      "localized": 4,
+      "class_correct": 2,
+      "missed": 9,
+      "wrong_class": 2,
+      "low_mask_iou": 0,
+      "correct_mask50": 2,
+      "bbox50_recall": 0.3076923076923077,
+      "class_correct_recall": 0.15384615384615385,
+      "mean_mask_iou_correct_class": 0.6018680546086037,
+      "mask85_count": 0
+    },
+    {
+      "group_field": "fine_category",
+      "group_value": "vest_dress",
+      "gt_count": 13,
+      "localized": 4,
+      "class_correct": 3,
+      "missed": 9,
+      "wrong_class": 1,
+      "low_mask_iou": 0,
+      "correct_mask50": 3,
+      "bbox50_recall": 0.3076923076923077,
+      "class_correct_recall": 0.23076923076923078,
+      "mean_mask_iou_correct_class": 0.8504588416284888,
+      "mask85_count": 1
+    },
+    {
+      "group_field": "fine_category",
+      "group_value": "watch",
+      "gt_count": 2,
+      "localized": 0,
+      "class_correct": 0,
+      "missed": 2,
+      "wrong_class": 0,
+      "low_mask_iou": 0,
+      "correct_mask50": 0,
+      "bbox50_recall": 0.0,
+      "class_correct_recall": 0.0,
+      "mean_mask_iou_correct_class": null,
+      "mask85_count": 0
+    },
+    {
+      "group_field": "source_dataset",
+      "group_value": "DeepFashion2",
+      "gt_count": 250,
+      "localized": 90,
+      "class_correct": 54,
+      "missed": 160,
+      "wrong_class": 36,
+      "low_mask_iou": 3,
+      "correct_mask50": 51,
+      "bbox50_recall": 0.36,
+      "class_correct_recall": 0.216,
+      "mean_mask_iou_correct_class": 0.7821723396994034,
+      "mask85_count": 20
+    },
+    {
+      "group_field": "source_dataset",
+      "group_value": "Fashionpedia",
+      "gt_count": 150,
+      "localized": 50,
+      "class_correct": 46,
+      "missed": 100,
+      "wrong_class": 4,
+      "low_mask_iou": 6,
+      "correct_mask50": 40,
+      "bbox50_recall": 0.3333333333333333,
+      "class_correct_recall": 0.30666666666666664,
+      "mean_mask_iou_correct_class": 0.7082034347937871,
+      "mask85_count": 14
+    }
+  ],
+  "provenance": {
+    "checkpoint_sha256": "f1f662d45ab1bdbb851dbcb9560f3318844ebd4add837f6a097cf34379284678",
+    "core_manifest_sha256": "c83204aca87c9c4dee304b774fd459bf5a18a2d1d65f0a3a9a79b92721224b89",
+    "parameters": {
+      "score_threshold": 0.4,
+      "mask_threshold": 0.5,
+      "match_bbox_iou": 0.5,
+      "warmup_runs": 10,
+      "timed_passes": 5
+    }
+  },
+  "timing": {
+    "measurements": 2000,
+    "mean_ms": 35.75180387450382,
+    "median_ms": 27.78041735291481,
+    "p95_ms": 78.73924111481756,
+    "scope": "RGB conversion + tensor/device transfer + model + score/mask CPU postprocessing"
+  },
+  "input_sha256": {
+    "core_manifest": "c83204aca87c9c4dee304b774fd459bf5a18a2d1d65f0a3a9a79b92721224b89",
+    "training_manifest": "511e3f9be4ed749931e05a87a867afa331fa67c7fe89fb32de4eba8cb964aa6c",
+    "per_gt_results": "92ba3affe21eb4e143a35bd56a57b90fd9df02adab328265e3a345514e391d9b"
+  },
+  "training_fine_categories": [
+    {
+      "source_dataset": "DeepFashion2",
+      "fine_category": "long_sleeve_dress",
+      "instances": 6
+    },
+    {
+      "source_dataset": "DeepFashion2",
+      "fine_category": "long_sleeve_outwear",
+      "instances": 9
+    },
+    {
+      "source_dataset": "DeepFashion2",
+      "fine_category": "long_sleeve_top",
+      "instances": 14
+    },
+    {
+      "source_dataset": "DeepFashion2",
+      "fine_category": "short_sleeve_dress",
+      "instances": 8
+    },
+    {
+      "source_dataset": "DeepFashion2",
+      "fine_category": "short_sleeve_outwear",
+      "instances": 1
+    },
+    {
+      "source_dataset": "DeepFashion2",
+      "fine_category": "short_sleeve_top",
+      "instances": 26
+    },
+    {
+      "source_dataset": "DeepFashion2",
+      "fine_category": "shorts",
+      "instances": 7
+    },
+    {
+      "source_dataset": "DeepFashion2",
+      "fine_category": "skirt",
+      "instances": 13
+    },
+    {
+      "source_dataset": "DeepFashion2",
+      "fine_category": "sling",
+      "instances": 0
+    },
+    {
+      "source_dataset": "DeepFashion2",
+      "fine_category": "sling_dress",
+      "instances": 7
+    },
+    {
+      "source_dataset": "DeepFashion2",
+      "fine_category": "trousers",
+      "instances": 24
+    },
+    {
+      "source_dataset": "DeepFashion2",
+      "fine_category": "vest",
+      "instances": 2
+    },
+    {
+      "source_dataset": "DeepFashion2",
+      "fine_category": "vest_dress",
+      "instances": 8
+    },
+    {
+      "source_dataset": "Fashionpedia",
+      "fine_category": "bag, wallet",
+      "instances": 100
+    },
+    {
+      "source_dataset": "Fashionpedia",
+      "fine_category": "belt",
+      "instances": 11
+    },
+    {
+      "source_dataset": "Fashionpedia",
+      "fine_category": "cape",
+      "instances": 2
+    },
+    {
+      "source_dataset": "Fashionpedia",
+      "fine_category": "cardigan",
+      "instances": 4
+    },
+    {
+      "source_dataset": "Fashionpedia",
+      "fine_category": "coat",
+      "instances": 14
+    },
+    {
+      "source_dataset": "Fashionpedia",
+      "fine_category": "dress",
+      "instances": 27
+    },
+    {
+      "source_dataset": "Fashionpedia",
+      "fine_category": "glasses",
+      "instances": 10
+    },
+    {
+      "source_dataset": "Fashionpedia",
+      "fine_category": "glove",
+      "instances": 10
+    },
+    {
+      "source_dataset": "Fashionpedia",
+      "fine_category": "hat",
+      "instances": 10
+    },
+    {
+      "source_dataset": "Fashionpedia",
+      "fine_category": "headband, head covering, hair accessory",
+      "instances": 11
+    },
+    {
+      "source_dataset": "Fashionpedia",
+      "fine_category": "jacket",
+      "instances": 12
+    },
+    {
+      "source_dataset": "Fashionpedia",
+      "fine_category": "leg warmer",
+      "instances": 5
+    },
+    {
+      "source_dataset": "Fashionpedia",
+      "fine_category": "pants",
+      "instances": 9
+    },
+    {
+      "source_dataset": "Fashionpedia",
+      "fine_category": "scarf",
+      "instances": 11
+    },
+    {
+      "source_dataset": "Fashionpedia",
+      "fine_category": "shirt, blouse",
+      "instances": 4
+    },
+    {
+      "source_dataset": "Fashionpedia",
+      "fine_category": "shoe",
+      "instances": 100
+    },
+    {
+      "source_dataset": "Fashionpedia",
+      "fine_category": "shorts",
+      "instances": 11
+    },
+    {
+      "source_dataset": "Fashionpedia",
+      "fine_category": "skirt",
+      "instances": 28
+    },
+    {
+      "source_dataset": "Fashionpedia",
+      "fine_category": "sock",
+      "instances": 11
+    },
+    {
+      "source_dataset": "Fashionpedia",
+      "fine_category": "sweater",
+      "instances": 3
+    },
+    {
+      "source_dataset": "Fashionpedia",
+      "fine_category": "tie",
+      "instances": 3
+    },
+    {
+      "source_dataset": "Fashionpedia",
+      "fine_category": "tights, stockings",
+      "instances": 9
+    },
+    {
+      "source_dataset": "Fashionpedia",
+      "fine_category": "top, t-shirt, sweatshirt",
+      "instances": 4
+    },
+    {
+      "source_dataset": "Fashionpedia",
+      "fine_category": "vest",
+      "instances": 4
+    },
+    {
+      "source_dataset": "Fashionpedia",
+      "fine_category": "watch",
+      "instances": 9
+    }
+  ],
+  "native_annotations": {
+    "train": {
+      "images": 475,
+      "checked_images": 395,
+      "statuses": {
+        "RAW_ANNOTATION_FILE_MISSING": 80,
+        "ADDITIONAL_RAW_TARGETS": 387,
+        "COMPLETE_WITHIN_SCOPE": 8
+      },
+      "known_omitted_usable_instances": 1492,
+      "omitted_usable_instances": null,
+      "audit_complete": false,
+      "interpretation": "原标注库存检查；没有执行新增 mask 解码或修改数据清单。",
+      "by_source": {
+        "DeepFashion2": {
+          "images": 80,
+          "checked_images": 0,
+          "manifest_instances": 125,
+          "raw_usable_instances": null,
+          "omitted_usable_instances": null,
+          "statuses": {
+            "RAW_ANNOTATION_FILE_MISSING": 80
+          }
+        },
+        "Fashionpedia": {
+          "images": 395,
+          "checked_images": 395,
+          "manifest_instances": 422,
+          "raw_usable_instances": 1914,
+          "omitted_usable_instances": 1492,
+          "statuses": {
+            "ADDITIONAL_RAW_TARGETS": 387,
+            "COMPLETE_WITHIN_SCOPE": 8
+          }
+        }
+      }
+    },
+    "validation": {
+      "images": 32,
+      "checked_images": 12,
+      "statuses": {
+        "RAW_ANNOTATION_FILE_MISSING": 20,
+        "ADDITIONAL_RAW_TARGETS": 12
+      },
+      "known_omitted_usable_instances": 45,
+      "omitted_usable_instances": null,
+      "audit_complete": false,
+      "interpretation": "原标注库存检查；没有执行新增 mask 解码或修改数据清单。",
+      "by_source": {
+        "DeepFashion2": {
+          "images": 20,
+          "checked_images": 0,
+          "manifest_instances": 31,
+          "raw_usable_instances": null,
+          "omitted_usable_instances": null,
+          "statuses": {
+            "RAW_ANNOTATION_FILE_MISSING": 20
+          }
+        },
+        "Fashionpedia": {
+          "images": 12,
+          "checked_images": 12,
+          "manifest_instances": 12,
+          "raw_usable_instances": 57,
+          "omitted_usable_instances": 45,
+          "statuses": {
+            "ADDITIONAL_RAW_TARGETS": 12
+          }
+        }
+      }
+    },
+    "core_selected": {
+      "images": 400,
+      "checked_images": 150,
+      "statuses": {
+        "RAW_ANNOTATION_FILE_MISSING": 250,
+        "ADDITIONAL_RAW_TARGETS": 150
+      },
+      "known_omitted_usable_instances": 554,
+      "omitted_usable_instances": null,
+      "audit_complete": false,
+      "interpretation": "原标注库存检查；没有执行新增 mask 解码或修改数据清单。",
+      "by_source": {
+        "DeepFashion2": {
+          "images": 250,
+          "checked_images": 0,
+          "manifest_instances": 250,
+          "raw_usable_instances": null,
+          "omitted_usable_instances": null,
+          "statuses": {
+            "RAW_ANNOTATION_FILE_MISSING": 250
+          }
+        },
+        "Fashionpedia": {
+          "images": 150,
+          "checked_images": 150,
+          "manifest_instances": 150,
+          "raw_usable_instances": 704,
+          "omitted_usable_instances": 554,
+          "statuses": {
+            "ADDITIONAL_RAW_TARGETS": 150
+          }
+        }
+      }
+    }
+  },
+  "first_loss": 0.8171082969715721,
+  "last_loss": 0.2713124216230292,
+  "raw_fashionpedia_sha256": "f831f415edad12d52acde8b138fe7ebd1592b57bf0dcd6a3b63ba8cabd208223",
+  "caveat": "训练 loss 下降不是泛化验收；原标注库存不证明 mask 解码或训练效果。"
+}

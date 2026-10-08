@@ -1,0 +1,21 @@
+{
+  "user_input_zip_sha256": "9d4ba3a2309a87b31dcae005164685b580bf15c2d20180a8c992730ef3f7d3d8",
+  "core_identity_rows": 400,
+  "timing_rows": 2000,
+  "fashionpedia_images": 395,
+  "selected_fp_instances": 422,
+  "raw_fp_instances": 1914,
+  "omitted_fp_instances": 1492,
+  "decoded_polygon_masks": 1842,
+  "decoded_rle_masks": 72,
+  "decode_failures": 0,
+  "synthetic_pipeline_checks": [
+    "complete_targets",
+    "repeat_stability",
+    "originals_retained",
+    "heldout_overlap_rejected",
+    "conflicting_outputs_rejected"
+  ],
+  "torch_cuda_validation": "PENDING_ON_AUTODL",
+  "V5_PRD_PASS": "NOT_CLAIMED"
+}

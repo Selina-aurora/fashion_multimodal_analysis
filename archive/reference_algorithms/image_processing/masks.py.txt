@@ -1,0 +1,56 @@
+"""Shared binary mask loading and crop-to-image reconstruction."""
+from __future__ import annotations
+from pathlib import Path
+import numpy as np
+from PIL import Image
+
+def open_binary_mask(path: Path) -> Image.Image:
+    mask = Image.open(path).convert("L")
+    arr = np.asarray(mask)
+    arr = (arr > 0).astype(np.uint8) * 255
+    return Image.fromarray(arr, mode="L")
+
+
+def reconstruct_full_mask(
+    mask_path: Path,
+    image_size: tuple[int, int],
+    bbox: tuple[int, int, int, int],
+) -> Image.Image:
+    image_w, image_h = image_size
+    x1, y1, x2, y2 = bbox
+
+    mask = open_binary_mask(mask_path)
+
+    if mask.size == (image_w, image_h):
+        return mask
+
+    bbox_w = max(1, x2 - x1)
+    bbox_h = max(1, y2 - y1)
+
+    if mask.size != (bbox_w, bbox_h):
+        mask = mask.resize(
+            (bbox_w, bbox_h),
+            resample=Image.Resampling.NEAREST,
+        )
+
+    canvas = Image.new("L", (image_w, image_h), 0)
+
+    cx1 = max(0, min(image_w, x1))
+    cy1 = max(0, min(image_h, y1))
+    cx2 = max(0, min(image_w, x2))
+    cy2 = max(0, min(image_h, y2))
+
+    if cx2 <= cx1 or cy2 <= cy1:
+        return canvas
+
+    mx1 = cx1 - x1
+    my1 = cy1 - y1
+    mx2 = mx1 + (cx2 - cx1)
+    my2 = my1 + (cy2 - cy1)
+
+    canvas.paste(
+        mask.crop((mx1, my1, mx2, my2)),
+        (cx1, cy1),
+    )
+
+    return canvas

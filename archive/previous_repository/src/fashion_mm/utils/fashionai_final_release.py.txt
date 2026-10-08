@@ -1,0 +1,527 @@
+from __future__ import annotations
+
+import hashlib
+import json
+import math
+from pathlib import Path
+from typing import Any
+
+from fashion_mm.utils.fashionai_manifest_seal import ManifestSealError
+from fashion_mm.utils.fashionai_manifest_seal import verify_manifest_seal
+
+
+RELEASE_FORMAT = "fashionai_attribute_final_release"
+RELEASE_VERSION = 1
+HASH_ALGORITHM = "sha256"
+STRICT_ACCURACY_TARGET = 0.88
+PRIMARY_LATENCY_TARGET_MS = 20.0
+HELD_OUT_TEST_ROLE = "held_out_test"
+RELEASE_FILE_KEYS = (
+    "split_seal",
+    "checkpoint",
+    "held_out_evaluation",
+    "latency_benchmark",
+)
+
+
+class FinalReleaseError(RuntimeError):
+    """Base error for malformed FashionAI final-release inputs or manifests."""
+
+
+class FinalReleaseVerificationError(FinalReleaseError):
+    """Raised when one or more frozen release inputs no longer match."""
+
+    def __init__(self, message: str, *, report: dict[str, Any]) -> None:
+        super().__init__(message)
+        self.report = report
+
+
+def create_final_release_manifest(
+    *,
+    split_seal: str | Path,
+    checkpoint: str | Path,
+    held_out_evaluation: str | Path,
+    latency_benchmark: str | Path,
+    output_path: str | Path,
+    overwrite: bool = False,
+) -> tuple[Path, dict[str, Any]]:
+    """Validate and freeze one final FashionAI attribute release.
+
+    A release may be frozen when its quality gate fails. In that case the
+    manifest is written with ``status: failed`` so operational evidence is
+    preserved without claiming final PRD acceptance.
+    """
+    output = Path(output_path)
+    source_paths = {
+        "split_seal": Path(split_seal).resolve(),
+        "checkpoint": Path(checkpoint).resolve(),
+        "held_out_evaluation": Path(held_out_evaluation).resolve(),
+        "latency_benchmark": Path(latency_benchmark).resolve(),
+    }
+    if output.resolve() in set(source_paths.values()):
+        raise FinalReleaseError(
+            f"Final release manifest cannot replace an input file: {output}"
+        )
+    if output.exists() and not overwrite:
+        raise FileExistsError(
+            "Final release manifest already exists and will not be overwritten: "
+            f"{output}"
+        )
+
+    _validate_source_files(source_paths)
+    _verify_split_seal(source_paths["split_seal"])
+    metrics, source_bindings = _extract_source_evidence(
+        source_paths["held_out_evaluation"],
+        source_paths["latency_benchmark"],
+        expected_checkpoint=source_paths["checkpoint"],
+        expected_annotations=source_paths["split_seal"].parent / "test.csv",
+    )
+    acceptance = _build_acceptance(metrics)
+    payload = {
+        "format": RELEASE_FORMAT,
+        "version": RELEASE_VERSION,
+        "algorithm": HASH_ALGORITHM,
+        "status": "passed" if acceptance["overall_passed"] else "failed",
+        "targets": {
+            "strict_accuracy_min": STRICT_ACCURACY_TARGET,
+            "primary_latency_ms_max": PRIMARY_LATENCY_TARGET_MS,
+        },
+        "metrics": metrics,
+        "source_bindings": source_bindings,
+        "acceptance": acceptance,
+        "files": {
+            key: {
+                "path": str(path),
+                **_hash_file(path),
+            }
+            for key, path in source_paths.items()
+        },
+    }
+    serialized = (
+        json.dumps(payload, ensure_ascii=False, indent=2, sort_keys=True) + "\n"
+    )
+    output.parent.mkdir(parents=True, exist_ok=True)
+    mode = "w" if overwrite else "x"
+    with output.open(mode, encoding="utf-8") as manifest_file:
+        manifest_file.write(serialized)
+    return output, payload
+
+
+def verify_final_release_manifest(manifest_path: str | Path) -> dict[str, Any]:
+    """Revalidate a final-release manifest, its source structures, and hashes."""
+    path = Path(manifest_path)
+    payload = _read_json_object(path, label="final release manifest")
+    files = _validate_release_payload(payload, path)
+    report: dict[str, Any] = {
+        "status": "ok",
+        "manifest_file": str(path),
+        "release_status": payload["status"],
+        "files": {},
+    }
+    mismatches = []
+    source_paths: dict[str, Path] = {}
+    for key in RELEASE_FILE_KEYS:
+        expected = files[key]
+        source_path = Path(expected["path"])
+        source_paths[key] = source_path
+        if not source_path.is_file():
+            result = {
+                "status": "missing",
+                "path": str(source_path),
+                "expected_sha256": expected["sha256"],
+                "expected_size_bytes": expected["size_bytes"],
+            }
+            mismatches.append(f"{key}: missing")
+        else:
+            actual = _hash_file(source_path)
+            matches = (
+                actual["sha256"] == expected["sha256"]
+                and actual["size_bytes"] == expected["size_bytes"]
+            )
+            result = {
+                "status": "ok" if matches else "mismatch",
+                "path": str(source_path),
+                "expected_sha256": expected["sha256"],
+                "actual_sha256": actual["sha256"],
+                "expected_size_bytes": expected["size_bytes"],
+                "actual_size_bytes": actual["size_bytes"],
+            }
+            if not matches:
+                mismatches.append(f"{key}: digest or size mismatch")
+        report["files"][key] = result
+
+    if mismatches:
+        report["status"] = "failed"
+        raise FinalReleaseVerificationError(
+            "Final release verification failed: " + "; ".join(mismatches),
+            report=report,
+        )
+
+    _verify_split_seal(source_paths["split_seal"])
+    source_metrics, source_bindings = _extract_source_evidence(
+        source_paths["held_out_evaluation"],
+        source_paths["latency_benchmark"],
+        expected_checkpoint=source_paths["checkpoint"],
+        expected_annotations=source_paths["split_seal"].parent / "test.csv",
+    )
+    if source_metrics != payload["metrics"]:
+        report["status"] = "failed"
+        report["structure"] = {
+            "status": "mismatch",
+            "expected_metrics": payload["metrics"],
+            "actual_metrics": source_metrics,
+        }
+        raise FinalReleaseVerificationError(
+            "Final release source metrics do not match the frozen manifest.",
+            report=report,
+        )
+    if source_bindings != payload["source_bindings"]:
+        report["status"] = "failed"
+        report["structure"] = {
+            "status": "mismatch",
+            "expected_source_bindings": payload["source_bindings"],
+            "actual_source_bindings": source_bindings,
+        }
+        raise FinalReleaseVerificationError(
+            "Final release source bindings do not match the frozen manifest.",
+            report=report,
+        )
+
+    report["structure"] = {"status": "ok"}
+    report["acceptance"] = payload["acceptance"]
+    return report
+
+
+def _validate_source_files(source_paths: dict[str, Path]) -> None:
+    missing = [
+        f"{key}: {path}" for key, path in source_paths.items() if not path.is_file()
+    ]
+    if missing:
+        raise FileNotFoundError(
+            "Cannot freeze final release; required inputs are missing: "
+            + ", ".join(missing)
+        )
+
+
+def _verify_split_seal(seal_path: Path) -> None:
+    try:
+        verify_manifest_seal(seal_path.parent, seal_path=seal_path)
+    except (ManifestSealError, FileNotFoundError, OSError) as error:
+        raise FinalReleaseError(
+            f"Split seal is not valid and current: {seal_path}: {error}"
+        ) from error
+
+
+def _extract_source_evidence(
+    evaluation_path: Path,
+    latency_path: Path,
+    *,
+    expected_checkpoint: Path,
+    expected_annotations: Path,
+) -> tuple[dict[str, Any], dict[str, Any]]:
+    evaluation = _read_json_object(evaluation_path, label="held-out evaluation")
+    split_role = evaluation.get("split_role")
+    if split_role != HELD_OUT_TEST_ROLE:
+        raise FinalReleaseError(
+            "Held-out evaluation must record split_role='held_out_test'; "
+            f"got {split_role!r} in {evaluation_path}"
+        )
+    _require_matching_path(
+        evaluation.get("checkpoint"),
+        "checkpoint",
+        evaluation_path,
+        expected_checkpoint,
+    )
+    _require_matching_path(
+        evaluation.get("annotations"),
+        "annotations",
+        evaluation_path,
+        expected_annotations,
+    )
+    evaluation_metrics = evaluation.get("metrics")
+    if not isinstance(evaluation_metrics, dict):
+        raise FinalReleaseError(
+            f"Held-out evaluation metrics must be a JSON object: {evaluation_path}"
+        )
+    strict_accuracy = _require_number(
+        evaluation_metrics.get("strict_accuracy"),
+        "metrics.strict_accuracy",
+        evaluation_path,
+        minimum=0.0,
+        maximum=1.0,
+    )
+    acceptable_accuracy = _require_number(
+        evaluation_metrics.get("acceptable_accuracy"),
+        "metrics.acceptable_accuracy",
+        evaluation_path,
+        minimum=0.0,
+        maximum=1.0,
+    )
+
+    latency = _read_json_object(latency_path, label="latency benchmark")
+    _require_matching_path(
+        latency.get("checkpoint"),
+        "checkpoint",
+        latency_path,
+        expected_checkpoint,
+    )
+    latency_target = latency.get("latency_target")
+    if not isinstance(latency_target, dict):
+        raise FinalReleaseError(
+            f"Latency benchmark latency_target must be a JSON object: {latency_path}"
+        )
+    primary_metric = latency_target.get("primary_metric")
+    if primary_metric != "wall_total_ms.p95":
+        raise FinalReleaseError(
+            "latency_target.primary_metric must be 'wall_total_ms.p95'; "
+            f"got {primary_metric!r} in {latency_path}"
+        )
+    threshold_ms = _require_number(
+        latency_target.get("threshold_ms"),
+        "latency_target.threshold_ms",
+        latency_path,
+        minimum=0.0,
+    )
+    if threshold_ms != PRIMARY_LATENCY_TARGET_MS:
+        raise FinalReleaseError(
+            "latency_target.threshold_ms must be 20.0; "
+            f"got {threshold_ms!r} in {latency_path}"
+        )
+    primary_latency_ms = _require_number(
+        latency_target.get("primary_value_ms"),
+        "latency_target.primary_value_ms",
+        latency_path,
+        minimum=0.0,
+    )
+    metrics = {
+        "split_role": HELD_OUT_TEST_ROLE,
+        "strict_accuracy": strict_accuracy,
+        "acceptable_accuracy": acceptable_accuracy,
+        "primary_latency_ms": primary_latency_ms,
+    }
+    source_bindings = {
+        "checkpoint": str(expected_checkpoint.resolve()),
+        "held_out_annotations": str(expected_annotations.resolve()),
+        "latency_primary_metric": primary_metric,
+        "latency_threshold_ms": threshold_ms,
+    }
+    return metrics, source_bindings
+
+
+def _build_acceptance(metrics: dict[str, Any]) -> dict[str, bool]:
+    quality_passed = metrics["strict_accuracy"] >= STRICT_ACCURACY_TARGET
+    latency_passed = metrics["primary_latency_ms"] <= PRIMARY_LATENCY_TARGET_MS
+    return {
+        "quality_passed": quality_passed,
+        "latency_passed": latency_passed,
+        "overall_passed": quality_passed and latency_passed,
+    }
+
+
+def _validate_release_payload(
+    payload: dict[str, Any],
+    manifest_path: Path,
+) -> dict[str, dict[str, Any]]:
+    if payload.get("format") != RELEASE_FORMAT:
+        raise FinalReleaseError(
+            f"Unsupported final release format in {manifest_path}: "
+            f"{payload.get('format')!r}"
+        )
+    if payload.get("version") != RELEASE_VERSION:
+        raise FinalReleaseError(
+            f"Unsupported final release version in {manifest_path}: "
+            f"{payload.get('version')!r}"
+        )
+    if payload.get("algorithm") != HASH_ALGORITHM:
+        raise FinalReleaseError(
+            f"Unsupported final release algorithm in {manifest_path}: "
+            f"{payload.get('algorithm')!r}"
+        )
+
+    targets = payload.get("targets")
+    if targets != {
+        "strict_accuracy_min": STRICT_ACCURACY_TARGET,
+        "primary_latency_ms_max": PRIMARY_LATENCY_TARGET_MS,
+    }:
+        raise FinalReleaseError(
+            f"Final release targets are invalid in {manifest_path}: {targets!r}"
+        )
+
+    metrics = payload.get("metrics")
+    if not isinstance(metrics, dict):
+        raise FinalReleaseError(
+            f"Final release metrics must be a JSON object: {manifest_path}"
+        )
+    if set(metrics) != {
+        "split_role",
+        "strict_accuracy",
+        "acceptable_accuracy",
+        "primary_latency_ms",
+    }:
+        raise FinalReleaseError(
+            f"Final release metrics have invalid fields: {manifest_path}"
+        )
+    if metrics.get("split_role") != HELD_OUT_TEST_ROLE:
+        raise FinalReleaseError(
+            f"Final release split_role must be held_out_test: {manifest_path}"
+        )
+    normalized_metrics = {
+        "split_role": HELD_OUT_TEST_ROLE,
+        "strict_accuracy": _require_number(
+            metrics.get("strict_accuracy"),
+            "metrics.strict_accuracy",
+            manifest_path,
+            minimum=0.0,
+            maximum=1.0,
+        ),
+        "acceptable_accuracy": _require_number(
+            metrics.get("acceptable_accuracy"),
+            "metrics.acceptable_accuracy",
+            manifest_path,
+            minimum=0.0,
+            maximum=1.0,
+        ),
+        "primary_latency_ms": _require_number(
+            metrics.get("primary_latency_ms"),
+            "metrics.primary_latency_ms",
+            manifest_path,
+            minimum=0.0,
+        ),
+    }
+    expected_acceptance = _build_acceptance(normalized_metrics)
+    if payload.get("acceptance") != expected_acceptance:
+        raise FinalReleaseError(
+            f"Final release acceptance flags are inconsistent: {manifest_path}"
+        )
+    expected_status = "passed" if expected_acceptance["overall_passed"] else "failed"
+    if payload.get("status") != expected_status:
+        raise FinalReleaseError(
+            f"Final release status must be {expected_status!r}: {manifest_path}"
+        )
+    payload["metrics"] = normalized_metrics
+
+    files = payload.get("files")
+    if not isinstance(files, dict) or set(files) != set(RELEASE_FILE_KEYS):
+        raise FinalReleaseError(
+            "Final release files must contain exactly "
+            f"{', '.join(RELEASE_FILE_KEYS)}: {manifest_path}"
+        )
+    for key in RELEASE_FILE_KEYS:
+        entry = files[key]
+        if not isinstance(entry, dict):
+            raise FinalReleaseError(
+                f"Final release file entry {key!r} must be an object: {manifest_path}"
+            )
+        source_path = entry.get("path")
+        if not isinstance(source_path, str) or not Path(source_path).is_absolute():
+            raise FinalReleaseError(
+                f"Final release file entry {key!r} needs an absolute path: "
+                f"{manifest_path}"
+            )
+        _validate_hash_entry(entry, key=key, manifest_path=manifest_path)
+    source_bindings = payload.get("source_bindings")
+    expected_source_bindings = {
+        "checkpoint": files["checkpoint"]["path"],
+        "held_out_annotations": str(
+            (Path(files["split_seal"]["path"]).parent / "test.csv").resolve()
+        ),
+        "latency_primary_metric": "wall_total_ms.p95",
+        "latency_threshold_ms": PRIMARY_LATENCY_TARGET_MS,
+    }
+    if source_bindings != expected_source_bindings:
+        raise FinalReleaseError(
+            f"Final release source bindings are invalid: {manifest_path}"
+        )
+    return files
+
+
+def _validate_hash_entry(
+    entry: dict[str, Any],
+    *,
+    key: str,
+    manifest_path: Path,
+) -> None:
+    digest = entry.get("sha256")
+    size_bytes = entry.get("size_bytes")
+    if (
+        not isinstance(digest, str)
+        or len(digest) != 64
+        or any(character not in "0123456789abcdef" for character in digest)
+    ):
+        raise FinalReleaseError(
+            f"Final release file entry {key!r} has invalid SHA-256: {manifest_path}"
+        )
+    if (
+        not isinstance(size_bytes, int)
+        or isinstance(size_bytes, bool)
+        or size_bytes < 0
+    ):
+        raise FinalReleaseError(
+            f"Final release file entry {key!r} has invalid size: {manifest_path}"
+        )
+
+
+def _read_json_object(path: Path, *, label: str) -> dict[str, Any]:
+    try:
+        payload = json.loads(path.read_text(encoding="utf-8"))
+    except (UnicodeDecodeError, json.JSONDecodeError) as error:
+        raise FinalReleaseError(f"Invalid JSON {label} {path}: {error}") from error
+    if not isinstance(payload, dict):
+        raise FinalReleaseError(f"{label.capitalize()} must be a JSON object: {path}")
+    return payload
+
+
+def _require_matching_path(
+    value: Any,
+    field: str,
+    source_path: Path,
+    expected_path: Path,
+) -> None:
+    if not isinstance(value, str) or not value:
+        raise FinalReleaseError(f"{field} must be a non-empty path in {source_path}")
+    recorded = Path(value).expanduser()
+    if recorded.is_absolute():
+        candidates = {recorded.resolve()}
+    else:
+        candidates = {
+            recorded.resolve(),
+            (source_path.parent / recorded).resolve(),
+        }
+    expected = expected_path.resolve()
+    if expected not in candidates:
+        raise FinalReleaseError(
+            f"{field} in {source_path} must reference {expected}; got {value!r}"
+        )
+
+
+def _require_number(
+    value: Any,
+    field: str,
+    path: Path,
+    *,
+    minimum: float | None = None,
+    maximum: float | None = None,
+) -> float:
+    if isinstance(value, bool) or not isinstance(value, int | float):
+        raise FinalReleaseError(f"{field} must be numeric in {path}")
+    result = float(value)
+    if not math.isfinite(result):
+        raise FinalReleaseError(f"{field} must be finite in {path}")
+    if minimum is not None and result < minimum:
+        raise FinalReleaseError(f"{field} must be at least {minimum} in {path}")
+    if maximum is not None and result > maximum:
+        raise FinalReleaseError(f"{field} must be at most {maximum} in {path}")
+    return result
+
+
+def _hash_file(path: Path) -> dict[str, Any]:
+    hasher = hashlib.sha256()
+    size_bytes = 0
+    with path.open("rb") as file:
+        for chunk in iter(lambda: file.read(1024 * 1024), b""):
+            hasher.update(chunk)
+            size_bytes += len(chunk)
+    return {
+        "sha256": hasher.hexdigest(),
+        "size_bytes": size_bytes,
+    }

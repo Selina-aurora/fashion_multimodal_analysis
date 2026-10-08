@@ -1,0 +1,15 @@
+PRD 3.1 ROI Quality -> Attribute Stability Diagnostic v2
+=======================================================
+
+matched_pairs=22
+missing_join_pairs=0
+bbox_iou_vs_attribute_stability_pearson_r=-0.3506
+mask_iou_vs_attribute_stability_pearson_r=0.4651
+
+Interpretation
+--------------
+- This is descriptive only; n is small.
+- A positive correlation suggests better ROI/mask overlap tends to preserve more attribute labels.
+- Weak/near-zero correlation suggests some attribute instability is intrinsic to the attribute classifier, not only localization quality.
+- Compare local attributes (sleeve_length, neckline) against global attributes (color, silhouette_fit) across IoU bins.
+- Attribute agreement is consistency vs frozen GT-ROI outputs, not human-GT accuracy.

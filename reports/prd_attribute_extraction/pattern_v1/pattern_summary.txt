@@ -1,0 +1,32 @@
+PRD 3.1.3 garment pattern baseline v1
+====================================
+model=openai/clip-vit-base-patch32
+instances=156
+unit_of_analysis=one_garment_instance
+gt_available=false
+
+Top-1 distribution
+------------------
+solid=65
+striped=31
+checked_plaid=2
+floral=5
+graphic_logo=25
+polka_dot=13
+animal_print=2
+camouflage=10
+geometric_abstract=1
+other_pattern=2
+
+Uncertainty diagnostics
+-----------------------
+top1_top2_margin: mean=0.4004, median=0.3700, min=0.0029, max=0.9885
+normalized_entropy: mean=0.5332, median=0.5560, min=0.0259, max=0.8757
+
+Interpretation
+--------------
+- Pattern is modeled as a categorical attribute, not a continuous style scalar.
+- CLIP softmax scores are candidate-relative, not calibrated probabilities.
+- No pattern GT is available in this pilot, so accuracy is not reported.
+- Use the audit template plus low-margin/high-entropy sheets for manual error analysis.
+- Material/fabric and craftsmanship remain excluded.

@@ -1,3 +1,5 @@
+> 历史阶段记录：正文保留当时的实验背景；当前模型归属、指标修正和限制见项目根 README 与 docs/corrections.md。文中的运行入口已按新目录调整。
+
 Grounding DINO Prompt Optimization Analysis
 
 1\. Objective

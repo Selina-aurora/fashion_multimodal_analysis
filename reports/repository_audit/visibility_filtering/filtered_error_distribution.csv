@@ -1,0 +1,8 @@
+error_type,count
+wrong_part,5
+whole_garment,4
+face_head,4
+non_clothing_object,4
+footwear,4
+background_object,2
+whole_image,2

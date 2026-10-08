@@ -1,0 +1,41 @@
+PRD 3.1.1 unified 8-class manifest v2
+===================================
+
+Inputs
+------
+DeepFashion2 rows=156
+Fashionpedia rows=60
+Unified rows=216
+
+Dataset counts
+--------------
+DeepFashion2=156
+Fashionpedia=60
+
+PRD class counts
+----------------
+top=52
+pants=39
+skirt=16
+outerwear=13
+dress=36
+shoe=20
+bag=20
+accessory=20
+
+PRD class coverage=8/8
+missing_classes=none
+validation_issues=0
+
+Validation note
+---------------
+- DeepFashion2 garment_id is only unique within an image.
+- Duplicate checking therefore uses source_dataset + source_image + garment_id.
+
+Important interpretation
+------------------------
+- This establishes unified DATA COVERAGE for the 8 PRD categories.
+- It does NOT prove the segmentation model meets final PRD accuracy/speed targets.
+- DeepFashion2 supplies top/pants/skirt/outerwear/dress.
+- Fashionpedia supplies shoe/bag/accessory.
+- Keep source_dataset visible during splitting/evaluation.

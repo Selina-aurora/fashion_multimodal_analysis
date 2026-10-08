@@ -1,0 +1,41 @@
+PRD 3.1.3 design attribute categorical baseline v1 — repaired integration
+=======================================================================
+prediction_records=156
+style_records=156
+style_matches=156
+style_unmatched=0
+audit_rows=40
+audit_seed=20260917
+
+Balanced audit distribution
+---------------------------
+sleeve_length=10
+neckline=10
+silhouette_fit=10
+fashion_style=10
+
+Sleeve weak-GT diagnostic
+-------------------------
+DeepFashion2 fine category names are used only as a coarse diagnostic, not as final PRD ground truth.
+diagnostic_rows=101
+coarse_accuracy=0.6238
+
+coarse_confusion (weak_gt -> prediction)
+long -> long: 22
+long -> short: 12
+long -> sleeveless: 1
+short -> long: 10
+short -> short: 31
+short -> sleeveless: 3
+sleeveless -> long: 5
+sleeveless -> short: 7
+sleeveless -> sleeveless: 10
+
+Important
+---------
+- This repair does not rerun CLIP.
+- Existing categorical predictions are unchanged.
+- Continuous style features and quality fields are now restored.
+- Weak upper/trouser geometry remains preserved but is flagged for downstream gating.
+- The manual audit is now balanced across the four attributes.
+- Do not treat candidate-relative CLIP confidence as a calibrated probability.

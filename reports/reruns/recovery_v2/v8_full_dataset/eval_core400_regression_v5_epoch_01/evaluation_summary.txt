@@ -1,0 +1,45 @@
+PRD 3.1.1 Mask R-CNN 8-Class Baseline Evaluation v2
+====================================================
+
+checkpoint=/workspace/prd31_recovery_20260930/fashion_multimodal_analysis/outputs/prd_instance_segmentation/maskrcnn_8class_v5_full_targets/checkpoint_last.pth
+checkpoint_epoch=15
+device=cuda
+gpu=NVIDIA GeForce RTX 4090
+score_threshold=0.4
+match_bbox_iou=0.5
+mask_threshold=0.5
+warmup_runs=10
+timed_passes=5
+validation_images=400
+gt_instances=400
+predictions_above_threshold=2158
+
+bbox50_recall=0.6775
+bbox50_precision=0.1256
+mean_bbox_iou_localized=0.7807
+category_accuracy_on_localized=0.6937
+end_to_end_bbox50_class_recall=0.4700
+mean_mask_iou_localized=0.6981
+mean_mask_iou_correct_class=0.7539
+mask_iou_ge_0_50_rate=0.4200
+mask_iou_ge_0_85_rate=0.1875
+
+mean_inference_ms_per_image=32.4909
+median_inference_ms_per_image=29.8438
+p95_inference_ms_per_image=55.6647
+mean_inference_time_le_50ms=True
+
+correct=168
+low_mask_iou=20
+wrong_class=83
+missed=129
+
+Notes:
+- Frozen matching: predictions in descending confidence order, one-to-one bbox IoU >=0.50, independent of class.
+- Wrong-class localized predictions are counted as wrong_class rather than missed.
+- Per-class bbox50_recall is GT-class localization recall, independent of predicted class.
+- Per-class bbox50_precision is class-aware: correct localized class predictions / predictions of that class.
+- Per-class false_positive_count is predictions of that class minus correct localized class predictions.
+- Mask IoU >= 0.85 is reported as a PRD-reference pass rate.
+- Timing includes RGB conversion, tensor preprocessing/device transfer, model and score/mask CPU postprocessing; disk decoding, GT, metrics and report I/O are excluded.
+- Do not run another GPU-heavy job during timing if you need trustworthy speed numbers.

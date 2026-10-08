@@ -1,0 +1,10 @@
+﻿region,n,non_empty_prediction_rate,mean_top_score,mean_top_box_area_ratio,mean_inference_seconds
+collar,5,100.0,0.3525,0.8933,15.8165
+cuff,5,80.0,0.4119,0.8423,16.7716
+hem,5,60.0,0.3301,0.8644,16.1315
+pocket,5,0.0,,,18.6424
+shoulder,5,40.0,0.3268,0.9999,53.0079
+waist,5,60.0,0.3711,0.9693,17.0423
+pattern,5,60.0,0.4063,0.9787,29.2947
+decoration,5,0.0,,,29.2145
+OVERALL,40,50.0,0.3693,0.9136,24.4902

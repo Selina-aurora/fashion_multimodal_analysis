@@ -1,0 +1,9 @@
+PRD 3.1.3 unified garment attribute output v1
+style_json=reports/prd_attribute_extraction/style_v1/style_feature_vector_v1.json
+pattern_csv=reports/prd_attribute_extraction/pattern_v3_hierarchical/pattern_v3_predictions.csv
+color_csv=reports/prd_attribute_extraction/color_v1/primary_color_predictions.csv
+merge_key=source_image+garment_id
+complete_records=156
+incomplete_records=0
+secondary_colors=out_of_scope
+material_and_craftsmanship=excluded

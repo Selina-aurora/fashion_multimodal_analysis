@@ -1,0 +1,22 @@
+{
+  "changed_files": [
+    "src/fashion_multimodal_analysis/grounding/core_parts/diagnose_core_part_detector_topk.py",
+    "src/fashion_multimodal_analysis/grounding/core_parts/diagnose_core_part_detector_train_vs_val.py",
+    "src/fashion_multimodal_analysis/grounding/core_parts/diagnose_core_part_detector_v1.py",
+    "src/fashion_multimodal_analysis/grounding/core_parts/train_core_part_detector_v1.py",
+    "src/fashion_multimodal_analysis/integration/build_prd31_predicted_roi_pilot_v1.py",
+    "src/fashion_multimodal_analysis/integration/build_prd31_predicted_roi_pilot_v2.py",
+    "src/fashion_multimodal_analysis/segmentation/diagnostics/diagnose_resized_crop_inference.py",
+    "src/fashion_multimodal_analysis/segmentation/diagnostics/diagnose_small_crop_resize.py",
+    "src/fashion_multimodal_analysis/segmentation/diagnostics/infer_small_crop.py",
+    "src/fashion_multimodal_analysis/segmentation/evaluation/eval_prd31_core_regression_v2_balanced_v1.py",
+    "src/fashion_multimodal_analysis/segmentation/evaluation/eval_prd_8class_maskrcnn_baseline_v1.py",
+    "src/fashion_multimodal_analysis/segmentation/evaluation/eval_prd_8class_maskrcnn_baseline_v2.py",
+    "src/fashion_multimodal_analysis/segmentation/evaluation/eval_prd_8class_maskrcnn_v3_a1_highres.py",
+    "src/fashion_multimodal_analysis/segmentation/evaluation/eval_prd_8class_maskrcnn_v3_a2_smallanchors.py",
+    "src/fashion_multimodal_analysis/segmentation/evaluation/eval_prd_8class_maskrcnn_v3_a2b_p2small.py",
+    "src/fashion_multimodal_analysis/segmentation/evaluation/eval_prd_8class_maskrcnn_v3_a3_smallsampling.py",
+    "src/fashion_multimodal_analysis/segmentation/evaluation/eval_prd_8class_maskrcnn_v3_b1_dataexp.py"
+  ],
+  "scope": "Full checkpoints produced by this project; model weights, manifests and reports unchanged"
+}

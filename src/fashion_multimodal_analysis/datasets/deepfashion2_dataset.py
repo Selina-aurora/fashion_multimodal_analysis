@@ -1,9 +1,14 @@
-"""DeepFashion2 dataset utilities for Mask2Former training."""
+"""数据处理：保存原图来源和实例标识，避免同一图片的不同实例跨训练与评估划分。
+
+DeepFashion2 dataset utilities for Mask2Former training.
+"""
+
+from __future__ import annotations
 
 import json
 import logging
 from pathlib import Path
-from typing import Any, TypedDict
+from typing import Any, Iterator, TypedDict
 
 import cv2
 import numpy as np
@@ -188,6 +193,18 @@ class DeepFashion2Dataset(Dataset[Mask2FormerSample]):
         processor: Mask2FormerImageProcessor,
         target_size: tuple[int, int] = DEFAULT_TARGET_SIZE,
     ) -> None:
+        """保存当前对象需要的配置、数据引用和状态。
+
+        Args:
+            image_dir: 本步骤使用的目录。
+            annotation_dir: 本步骤使用的目录。
+            processor: 与模型配套的输入处理器。
+            target_size: 目标 size。
+
+        Raises:
+            FileNotFoundError: 需要的文件不存在。
+            ValueError: 输入或实验状态不符合检查条件。
+        """
         if not image_dir.is_dir():
             raise FileNotFoundError(f"Image directory not found: {image_dir}")
 
@@ -210,7 +227,11 @@ class DeepFashion2Dataset(Dataset[Mask2FormerSample]):
         self._target_size = target_size
 
     def __len__(self) -> int:
-        """Return the number of annotation samples."""
+        """Return the number of annotation samples.
+
+        Returns:
+            本步骤计算或解析得到的结果；函数体保留了具体结构和空值处理规则。
+        """
         return len(self._annotation_paths)
 
     def _build_targets(
@@ -259,7 +280,7 @@ class DeepFashion2Dataset(Dataset[Mask2FormerSample]):
 
             if not 1 <= category_id <= DEEPFASHION2_CLASS_COUNT:
                 raise ValueError(
-                    f"Invalid category_id " f"{category_id} in {item_name}"
+                    f"Invalid category_id " + f"{category_id} in {item_name}"
                 )
 
             if not isinstance(category_name, str):
@@ -366,15 +387,15 @@ class DeepFashion2Dataset(Dataset[Mask2FormerSample]):
         if tuple(pixel_values.shape[-2:]) != expected_size:
             raise RuntimeError(
                 "Processed image dimensions do not match "
-                f"target size: {tuple(pixel_values.shape[-2:])} "
-                f"!= {expected_size}"
+                + f"target size: {tuple(pixel_values.shape[-2:])} "
+                + f"!= {expected_size}"
             )
 
         if tuple(mask_labels.shape[-2:]) != expected_size:
             raise RuntimeError(
                 "Mask dimensions do not match "
-                f"target size: {tuple(mask_labels.shape[-2:])} "
-                f"!= {expected_size}"
+                + f"target size: {tuple(mask_labels.shape[-2:])} "
+                + f"!= {expected_size}"
             )
 
         return {

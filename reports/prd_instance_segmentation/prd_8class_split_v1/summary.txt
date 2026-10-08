@@ -1,0 +1,47 @@
+PRD 3.1.1 grouped train/val split v1
+====================================
+
+Split rule
+----------
+- Split unit = source_dataset + source_image.
+- Instances from the same original image cannot appear in both splits.
+
+Global counts
+-------------
+total_instances=216
+total_image_groups=159
+train_instances=173
+val_instances=43
+train_image_groups=127
+val_image_groups=32
+target_val_ratio=0.2000
+actual_train_ratio=0.8009
+actual_val_ratio=0.1991
+seed=20260918
+
+Per-class counts: train / val / total
+-------------------------------------
+top=42/10/52
+pants=31/8/39
+skirt=13/3/16
+outerwear=10/3/13
+dress=29/7/36
+shoe=16/4/20
+bag=16/4/20
+accessory=16/4/20
+
+Per-source counts: train / val
+-----------------------------
+DeepFashion2=125/31
+Fashionpedia=48/12
+
+Validation
+----------
+image_group_overlap=0
+validation_issues=0
+
+Interpretation
+--------------
+- This is a grouped data split for baseline training/evaluation.
+- It does not itself measure segmentation quality.
+- Keep the validation split fixed for later model comparisons.
