@@ -18,6 +18,6 @@
 
 ## 冻结与复现
 
-当前同步的pipeline、model_backends、semantic_consistency与10月14日成功运行记录的SHA对应。新增解释位于本文，不修改这些受哈希门禁保护的文件。GitHub原有采样、模型构造、mask回填及ROI属性配对说明继续保留。
+初次同步提交c2847e1的pipeline、model_backends、semantic_consistency与10月14日成功运行记录的SHA对应。后续CI修复统一排版、补充类型标注与说明，因此活动代码的文件SHA已变化。原始六份集成代码保存在archive/runtime_snapshot_20261014并记录SHA；历史门禁和原始结果未改写。旧实验复现应使用原提交或恢复独立工作副本，不能跳过旧SHA校验。GitHub原有采样、模型构造、mask回填及ROI属性配对说明继续保留。
 
 批处理加速候选只在归档实验中；同步当前GPU主实现不等于启用批处理。正式替换前仍需同样本人工真值精度对照。
