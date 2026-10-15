@@ -1,0 +1,89 @@
+{
+  "status": "CHAIN_FAILED",
+  "date": "2026-10-14",
+  "root": "/workspace/fashion_multimodal_analysis",
+  "mode": "REAL_GPU_INFERENCE",
+  "baseline_checkpoint": "outputs/recovery_20261008/v5_balanced150/checkpoint_last.pth",
+  "manifest_protected": true,
+  "project_files_written": false,
+  "manifest_hashes": {
+    "configs/prd_8class_train_v5_balanced150_20261008.csv": {
+      "sha256": "e8c277055efe4d042b4353bf2d4553bddddc7706eead9398f07f5efcd90bb38f",
+      "matches_expected": true
+    },
+    "configs/prd_8class_val_v2_full_targets.csv": {
+      "sha256": "39141f545ea5512d16ed074788b6f98474b33baff111d3b663ec0ffcc4c40b93",
+      "matches_expected": true
+    },
+    "benchmark/prd_3_1_v1/manifests/segmentation_test_v1.csv": {
+      "sha256": "c83204aca87c9c4dee304b774fd459bf5a18a2d1d65f0a3a9a79b92721224b89",
+      "matches_expected": true
+    }
+  },
+  "core_gt_count": 400,
+  "source_selection": "LEGACY_DIAGNOSTIC_8_REUSED",
+  "legacy_baseline_dir": "/workspace/fashion_multimodal_analysis/reports/reruns/recovery_20261009/prd31_neckline_context_20261009_012052",
+  "legacy_input_sha256": {
+    "segmentation_checkpoint": "c5ba795225349b1c521aac0517ac7c493d9818dcc17d558ac4a3f6f8669452f0",
+    "train_manifest": "e8c277055efe4d042b4353bf2d4553bddddc7706eead9398f07f5efcd90bb38f",
+    "val_manifest": "39141f545ea5512d16ed074788b6f98474b33baff111d3b663ec0ffcc4c40b93"
+  },
+  "selected_images": [
+    {
+      "selection_category": "top",
+      "source_sha256": "8ef5b366ce86a81bd1ca20f4f161c682b4343c5ae83af4beba47c712699350fc",
+      "source_image": "/workspace/fashion_data/raw/train/train/image/013010.jpg"
+    },
+    {
+      "selection_category": "pants",
+      "source_sha256": "1d9497454cad3e23f832502468dd0a415223b12f6bc9f214fe6c5a8e3b9811b4",
+      "source_image": "/workspace/fashion_data/raw/train/train/image/051719.jpg"
+    },
+    {
+      "selection_category": "skirt",
+      "source_sha256": "666bc788faddcaaa00fcf76abb05be614667e2d4a3b2b4c688591f60c6a97e42",
+      "source_image": "/workspace/fashion_data/raw/train/train/image/032014.jpg"
+    },
+    {
+      "selection_category": "outerwear",
+      "source_sha256": "cf6b7b4aaafa31a9c1fa0a046ddcbf028f9a094bcc7b94932c2bce599438a0e9",
+      "source_image": "/workspace/fashion_data/raw/train/train/image/092719.jpg"
+    },
+    {
+      "selection_category": "dress",
+      "source_sha256": "5a47b48bf9bc11c84743a78becb19504efad400d5305939d4064c7b0dec3e8bc",
+      "source_image": "/workspace/fashion_data/raw/train/train/image/002278.jpg"
+    },
+    {
+      "selection_category": "shoe",
+      "source_sha256": "68cc723eca099c94e3b8b6b62ab7f67a024963cec1329f19f41abbf9cdced0d6",
+      "source_image": "/workspace/fashion_data/raw/fashionpedia/images/test/311db0d6f5b7be84ac3c952a443ef981.jpg"
+    },
+    {
+      "selection_category": "bag",
+      "source_sha256": "df91edad8133b9d732873c9a4df1d76a5bb76799a3aff8948337c47fec241b9d",
+      "source_image": "/workspace/fashion_data/raw/fashionpedia/images/test/4f23f05daee3cbdd96295f84825e3581.jpg"
+    },
+    {
+      "selection_category": "accessory",
+      "source_sha256": "ba1a04bce9114beba860ee784d34f2a2c43b4fee2e7680e69726795e5b4b79fe",
+      "source_image": "/workspace/fashion_data/raw/fashionpedia/images/test/32227cade6d3646824f9c0f3fa9dc9e7.jpg"
+    }
+  ],
+  "cuda_name": "NVIDIA GeForce RTX 4090",
+  "torch_version": "2.13.0+cu132",
+  "checkpoint": {
+    "path": "/workspace/fashion_multimodal_analysis/outputs/recovery_20261008/v5_balanced150/checkpoint_last.pth",
+    "sha256": "c5ba795225349b1c521aac0517ac7c493d9818dcc17d558ac4a3f6f8669452f0",
+    "epoch": 15,
+    "saved_min_size": 640,
+    "saved_max_size": 1024
+  },
+  "semantic_consistency_patch_present": true,
+  "installed_code_sha256": {
+    "/workspace/fashion_multimodal_analysis/src/fashion_multimodal_analysis/integration/pipeline.py": "8c6e8b3278cc94fdbc934defbd7f51aa5081dabb1d767a03c9160854dc22da68",
+    "/workspace/fashion_multimodal_analysis/src/fashion_multimodal_analysis/integration/model_backends.py": "0efd47f3a29e6c25d7396717cb4fc1b1540ed30c16df171a9ad7b93fade7f7ec",
+    "/workspace/fashion_multimodal_analysis/src/fashion_multimodal_analysis/integration/semantic_consistency.py": "4aaa4c17604d272a557c1aa14a9acd6d1138a5129ec1a94ded622046acc8a49c"
+  },
+  "error": "OSError: We couldn't connect to 'https://huggingface.co' to load the files, and couldn't find them in the cached files.\nCheckout your internet connection or see how to run the library in offline mode at 'https://huggingface.co/docs/transformers/installation#offline-mode'."
+}

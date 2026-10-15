@@ -1,0 +1,17 @@
+﻿case,region,serial_candidates,batch_candidates,matching_candidate_count,max_box_abs_px,max_score_abs,labels_equal,exact_zero_candidate_both,strict_parity
+case_01,collar,1,1,True,0.00054931640625,0.00017517805099487305,True,False,True
+case_01,cuff,1,1,True,0.0,4.76837158203125e-07,True,False,True
+case_01,hem,1,1,True,0.0004349946975708008,4.0531158447265625e-05,True,False,True
+case_01,pocket,1,1,True,0.000788569450378418,0.0003482699394226074,True,False,True
+case_02,collar,1,1,True,0.0,1.0728836059570312e-06,True,False,True
+case_02,cuff,2,2,True,0.009368896484375,0.0003917813301086426,True,False,True
+case_02,hem,1,1,True,0.001220703125,0.00010865926742553711,True,False,True
+case_02,pocket,2,2,True,0.00341796875,0.0001308917999267578,True,False,True
+case_03,collar,1,1,True,0.0003662109375,4.1425228118896484e-05,True,False,True
+case_03,cuff,1,1,True,0.001074075698852539,0.00011599063873291016,True,False,True
+case_03,hem,1,1,True,0.00171661376953125,4.506111145019531e-05,True,False,True
+case_03,pocket,1,1,True,0.000946044921875,7.569789886474609e-06,True,False,True
+case_04,collar,2,2,True,0.001556396484375,0.00021201372146606445,True,False,True
+case_04,cuff,1,1,True,0.001377105712890625,1.7464160919189453e-05,True,False,True
+case_04,hem,1,1,True,0.0010986328125,7.659196853637695e-05,True,False,True
+case_04,pocket,1,1,True,0.007568359375,0.0007787346839904785,True,False,True

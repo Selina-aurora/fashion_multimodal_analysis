@@ -1,0 +1,17 @@
+{
+  "images": 36,
+  "strata": {
+    "top/DeepFashion2": 6,
+    "top/Fashionpedia": 6,
+    "outerwear/DeepFashion2": 6,
+    "outerwear/Fashionpedia": 6,
+    "dress/DeepFashion2": 6,
+    "dress/Fashionpedia": 6
+  },
+  "protected_unique_paths": 432,
+  "protected_unique_file_hashes": 432,
+  "excluded_candidate_reasons": {},
+  "reviewed": 0,
+  "source_files_exact_byte_copies": true,
+  "status": "TRAINING_SIDE_ANNOTATION_PILOT_PENDING_REVIEW"
+}

@@ -1,0 +1,28 @@
+{
+  "status": "NO_CLASS_CORRECT_MATCHED_PAIRS",
+  "candidate_pairs_before_limit": 0,
+  "selected_pairs": 0,
+  "validation_images_scanned": 32,
+  "source": "configs/prd_8class_val_v2_full_targets.csv",
+  "source_scope": "Validation development diagnostic, not Core400 or blinded test.",
+  "pair_rule": "bbox_IoU>=0.5 and exact 8class match, deterministic selection",
+  "attributes_comparable": 0,
+  "attribute_label_agreement_count": 0,
+  "attribute_label_agreement_rate": null,
+  "regional_queries_run": 0,
+  "both_region_boxes_detected": 0,
+  "mean_cross_input_region_box_iou": null,
+  "skipped_sources_count": 32,
+  "not_measured": [
+    "True attribute accuracy (no regional/attribute GT labels).",
+    "True region localization accuracy (GT garment ROI is NOT GT local part ROI).",
+    "Uncontrolled full-chain accuracy.",
+    "Independent blind holdout acceptance."
+  ],
+  "critical_notes": [
+    "controlled=True is used on BOTH garment ROIs. Neckline uses the same top-center PROXY rule, not GT neckline and not predicted collar.",
+    "Reported agreement is consistency across garment ROI changes, not correctness.",
+    "GT garment ROI masks exist in validation annotations; no regional or attribute ground-truth labels are fabricated.",
+    "Pair membership depends on the model correctly localizing and classifying the garment, thus conditional and selection-biased."
+  ]
+}

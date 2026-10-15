@@ -1,0 +1,17 @@
+{
+  "status": "DATA_READY_TRAINING_NOT_STARTED",
+  "cases": 36,
+  "train_images": 27,
+  "development_val_images": 9,
+  "positive_images": 24,
+  "negative_images": 12,
+  "cuff_boxes": 43,
+  "ambiguous_excluded": 12,
+  "protected_source_files_checked": 432,
+  "source_hashes_unique": 36,
+  "crop_coordinate_roundtrip_checked": true,
+  "context_padding_fraction": 0.1,
+  "crop_policy_uses_cuff_labels": false,
+  "model_weights_modified": false,
+  "low_mask_overlap_boxes_are_diagnostic_not_auto_relabeling": true
+}

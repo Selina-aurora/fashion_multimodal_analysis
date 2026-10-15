@@ -1,0 +1,19 @@
+{
+  "images": 18,
+  "strata": {
+    "top/DeepFashion2": 3,
+    "top/Fashionpedia": 3,
+    "outerwear/DeepFashion2": 3,
+    "outerwear/Fashionpedia": 3,
+    "dress/DeepFashion2": 3,
+    "dress/Fashionpedia": 3
+  },
+  "original_train_Core_paths_checked": 1025,
+  "prior_annotation_hashes_excluded": 96,
+  "excluded": {
+    "batch_duplicate_source": 2
+  },
+  "candidate_sha256": "52f8d78ffa032b9135eea8ba8ea511e942e2f12cd793f49bbca324f720a91c84",
+  "reviewed": 0,
+  "model_weights_modified": false
+}

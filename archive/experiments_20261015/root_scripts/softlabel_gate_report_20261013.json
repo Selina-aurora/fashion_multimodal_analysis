@@ -1,0 +1,95 @@
+{
+  "status": "CANDIDATE_SOURCE_GATE_PASSED_NO_TRAINING",
+  "training_authorized": false,
+  "training_done": false,
+  "classes": [
+    "sleeveless",
+    "cap",
+    "short",
+    "elbow"
+  ],
+  "snapshot_sha256": {
+    "train": "e8c277055efe4d042b4353bf2d4553bddddc7706eead9398f07f5efcd90bb38f",
+    "val": "39141f545ea5512d16ed074788b6f98474b33baff111d3b663ec0ffcc4c40b93"
+  },
+  "candidate_count": 10,
+  "checked_candidates": 10,
+  "candidate_results": [
+    {
+      "record_id": "v5_train_00484",
+      "source_file": "3109762baa95cfc50b5a454db19d4143.jpg",
+      "image_sha256": "53b9adecbc7d65a901794134f43175bf8da7ee51c029157d466be2dee6df293b",
+      "check": "PASS",
+      "issues": []
+    },
+    {
+      "record_id": "v5_train_00533",
+      "source_file": "3696956aa43b2641bdb8ee6fd0ea213f.jpg",
+      "image_sha256": "854fe32c69f6a8718fe9215fcd84b2619e24b9830d2a96a19d5277babde3c1c6",
+      "check": "PASS",
+      "issues": []
+    },
+    {
+      "record_id": "v5_train_01055",
+      "source_file": "7c3c0cd188f831a4533f8aa2f5902b64.jpg",
+      "image_sha256": "b364e6ed940f49101bea2c02cacac4d765e02916f1297867e5b1266cd356f765",
+      "check": "PASS",
+      "issues": []
+    },
+    {
+      "record_id": "v5_train_01445",
+      "source_file": "abe7f00720ada9f255b8d1355579dc0e.jpg",
+      "image_sha256": "36ec95313761a48cdc46ea026d9067397320a69938644dac5f50b3517552a887",
+      "check": "PASS",
+      "issues": []
+    },
+    {
+      "record_id": "v5_train_00286",
+      "source_file": "13bd73c2068bc2705f3a0b65e425b965.jpg",
+      "image_sha256": "468fe5252ab7904b6053229147b41397cc50588533e64fba20a943de5a45e6b2",
+      "check": "PASS",
+      "issues": []
+    },
+    {
+      "record_id": "v5_train_00415",
+      "source_file": "28f3172e9e96bb17c1f9ec3697b175bc.jpg",
+      "image_sha256": "f62e1c9d4a0cd7015a047e77172fc905c81f9e85fdca27f83dc44588f04add33",
+      "check": "PASS",
+      "issues": []
+    },
+    {
+      "record_id": "v5_train_01106",
+      "source_file": "845197179e9ea35e1dd58144a1e03f36.jpg",
+      "image_sha256": "311f8715261a8b2475aeaaf95718483e991a4841369ce9492e4722f3abdacb0c",
+      "check": "PASS",
+      "issues": []
+    },
+    {
+      "record_id": "v5_train_01155",
+      "source_file": "88383c53ef2404f1596e41e45ebe5ddd.jpg",
+      "image_sha256": "f63325a85091ce7c00b169f3f6e73b9c78f9c0785458e9319ce5680abc16e916",
+      "check": "PASS",
+      "issues": []
+    },
+    {
+      "record_id": "v5_train_01296",
+      "source_file": "9ac4f47132fe867a5bef9e999fe562fd.jpg",
+      "image_sha256": "fc3122090eb9d7efc311b8ee1960956862a415a43a8e8ac385284c5503d1a112",
+      "check": "PASS",
+      "issues": []
+    },
+    {
+      "record_id": "v5_train_01508",
+      "source_file": "b22ea58665d776f693c9f13635499460.jpg",
+      "image_sha256": "edc14f9cf4b0774f876108b84b21cec714f112e4813903d32e256745fbe7e886",
+      "check": "PASS",
+      "issues": []
+    }
+  ],
+  "failures": [],
+  "limitations": [
+    "This verifies only the 10 pre-screened candidates against fixed CSV snapshots; not new GT approval.",
+    "Four-class pilot does not constitute six-class supervised soft-label validation.",
+    "Image filename membership is used for CSV linkage; request independent cross-split image-hash audit before training."
+  ]
+}

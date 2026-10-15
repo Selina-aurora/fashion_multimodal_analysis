@@ -1,0 +1,53 @@
+{
+  "status": "STAGE6_DIAGNOSTIC_COMPLETED",
+  "mode": "paired",
+  "dry_run": false,
+  "project_files_modified": false,
+  "scope": "warmed latency and/or controlled GT/pred garment ROI development diagnostic",
+  "generated_by": "run_stage6.py",
+  "checkpoint": {
+    "device": "NVIDIA GeForce RTX 4090",
+    "torch": "2.13.0+cu132",
+    "checkpoint_sha256": "c5ba795225349b1c521aac0517ac7c493d9818dcc17d558ac4a3f6f8669452f0",
+    "min_size": 640,
+    "max_size": 1024
+  },
+  "paired": {
+    "status": "PAIRED_DIAGNOSTIC_FINISHED",
+    "candidate_pairs_before_limit": 63,
+    "selected_pairs": 8,
+    "validation_images_scanned": 32,
+    "source": "configs/prd_8class_val_v2_full_targets.csv",
+    "source_scope": "Validation development diagnostic, not Core400 or blinded test.",
+    "validation_schema": {
+      "bbox_keys": [
+        "bbox_x1",
+        "bbox_y1",
+        "bbox_x2",
+        "bbox_y2"
+      ],
+      "mask_key": "mask_path"
+    },
+    "pair_rule": "bbox_IoU>=0.5 and exact 8class match, deterministic selection",
+    "attributes_comparable": 32,
+    "attribute_label_agreement_count": 21,
+    "attribute_label_agreement_rate": 0.65625,
+    "regional_queries_run": 16,
+    "both_region_boxes_detected": 11,
+    "mean_cross_input_region_box_iou": 0.6181256768019715,
+    "skipped_sources_count": 0,
+    "scanned_with_no_gt_matches_count": null,
+    "not_measured": [
+      "True attribute accuracy (no regional/attribute GT labels).",
+      "True region localization accuracy (GT garment ROI is NOT GT local part ROI).",
+      "Uncontrolled full-chain accuracy.",
+      "Independent blind holdout acceptance."
+    ],
+    "critical_notes": [
+      "controlled=True is used on BOTH garment ROIs. Neckline uses the same top-center PROXY rule, not GT neckline and not predicted collar.",
+      "Reported agreement is consistency across garment ROI changes, not correctness.",
+      "GT garment ROI masks exist in validation annotations; no regional or attribute ground-truth labels are fabricated.",
+      "Pair membership depends on the model correctly localizing and classifying the garment, thus conditional and selection-biased."
+    ]
+  }
+}

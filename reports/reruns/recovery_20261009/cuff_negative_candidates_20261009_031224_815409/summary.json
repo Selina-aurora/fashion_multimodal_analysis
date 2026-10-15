@@ -1,0 +1,12 @@
+{
+  "images": 12,
+  "reviewed": 0,
+  "status": "CANDIDATES_PENDING_VISUAL_REVIEW_NOT_NEGATIVE_TRUTH",
+  "strata": {
+    "top/Fashionpedia": 4,
+    "top/DeepFashion2": 4,
+    "dress/DeepFashion2": 4
+  },
+  "protected_path_count": 432,
+  "previous_batch_excluded": 36
+}

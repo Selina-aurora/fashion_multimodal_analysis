@@ -1,0 +1,61 @@
+{
+  "cases": [
+    {
+      "id": "case_01",
+      "class": "top",
+      "crop_size": [
+        126,
+        178
+      ],
+      "regions": [
+        "collar",
+        "cuff",
+        "hem",
+        "pocket"
+      ]
+    },
+    {
+      "id": "case_02",
+      "class": "dress",
+      "crop_size": [
+        275,
+        614
+      ],
+      "regions": [
+        "collar",
+        "cuff",
+        "hem",
+        "pocket"
+      ]
+    },
+    {
+      "id": "case_03",
+      "class": "outerwear",
+      "crop_size": [
+        468,
+        576
+      ],
+      "regions": [
+        "collar",
+        "cuff",
+        "hem",
+        "pocket"
+      ]
+    },
+    {
+      "id": "case_04",
+      "class": "outerwear",
+      "crop_size": [
+        364,
+        565
+      ],
+      "regions": [
+        "collar",
+        "cuff",
+        "hem",
+        "pocket"
+      ]
+    }
+  ],
+  "skipped": []
+}

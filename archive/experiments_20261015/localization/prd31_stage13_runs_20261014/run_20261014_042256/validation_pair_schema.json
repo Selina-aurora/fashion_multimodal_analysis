@@ -1,0 +1,30 @@
+{
+  "bbox_keys": [
+    "bbox_x1",
+    "bbox_y1",
+    "bbox_x2",
+    "bbox_y2"
+  ],
+  "mask_key": "mask_path",
+  "rows": 88,
+  "column_names": [
+    "annotation_ref",
+    "bbox_height",
+    "bbox_width",
+    "bbox_x1",
+    "bbox_x2",
+    "bbox_y1",
+    "bbox_y2",
+    "fine_category",
+    "garment_category",
+    "garment_id",
+    "image_height",
+    "image_width",
+    "mask_path",
+    "record_id",
+    "source_category_id",
+    "source_dataset",
+    "source_image",
+    "source_manifest"
+  ]
+}

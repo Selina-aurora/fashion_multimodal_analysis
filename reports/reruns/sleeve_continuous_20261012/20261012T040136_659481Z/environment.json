@@ -1,0 +1,10 @@
+{
+  "python": "3.12.11",
+  "numpy": "2.3.5",
+  "torch": "2.13.0+cu132",
+  "transformers": "4.51.3",
+  "device": "cuda",
+  "clip_model": "openai/clip-vit-base-patch32",
+  "clip_config_commit": "3d74acf9a28c67741b2f4f2ea7635f0aaf6f0268",
+  "cuda_name": "NVIDIA GeForce RTX 4090"
+}

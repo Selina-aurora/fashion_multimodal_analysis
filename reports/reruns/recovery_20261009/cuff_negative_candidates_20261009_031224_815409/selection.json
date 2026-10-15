@@ -1,0 +1,269 @@
+{
+  "status": "CANDIDATES_PENDING_VISUAL_REVIEW_NOT_NEGATIVE_TRUTH",
+  "selection_sha256": "de52c8652a3ea9b99834dc76f56fbc828b6f7171261d8e3f90038cffef8cff23",
+  "role": "training_side_candidate_pool_not_independent_test",
+  "definition": "若有清楚独立的罗纹/扣式/翻折袖口带，框整个袖口带；没有独立带则框袖子末端开口的可见边缘，允许少量余量。各开口单独框；只标目标服装，不标内搭、整条袖子、手表、下摆。遮挡/截断或目标层不清标 ambiguous；草稿待人工确认。",
+  "script_sha256": "a9dde0191e6886ba7719afdee22ad76042db1935aa80bf1b0d23d2a97d331c25",
+  "reviewed_count": 0,
+  "cases": [
+    {
+      "record_id": "v5_train_00772",
+      "source_dataset": "Fashionpedia",
+      "category": "top",
+      "fine_category": "vest",
+      "source_image_reference": "../fashion_data/raw/fashionpedia/images/test/56e5e99c58d6d12337e92e6a73f3c8d5.jpg",
+      "garment_id": "fashionpedia_ann_6659",
+      "garment_bbox": [
+        149.0,
+        306.0,
+        552.0,
+        738.0
+      ],
+      "image_width": 682,
+      "image_height": 1024,
+      "source_image_sha256": "bbbaea0f5049b31de205ec5021503b0bf8aa4259fed07b2f02ef1d5db5b053c6",
+      "source_file_relative": "source_images/v5_train_00772.jpg",
+      "presence": "pending",
+      "cuff_boxes": [],
+      "review_status": "pending"
+    },
+    {
+      "record_id": "v5_train_00340",
+      "source_dataset": "Fashionpedia",
+      "category": "top",
+      "fine_category": "vest",
+      "source_image_reference": "../fashion_data/raw/fashionpedia/images/test/1f0d72ecd966170babc209b45abe8983.jpg",
+      "garment_id": "fashionpedia_ann_3175",
+      "garment_bbox": [
+        247.0,
+        104.0,
+        553.0,
+        457.0
+      ],
+      "image_width": 680,
+      "image_height": 1024,
+      "source_image_sha256": "3a91a0bce3353fb89912db0ef27ebf159eac3dc3415f891972e2faa567cebe10",
+      "source_file_relative": "source_images/v5_train_00340.jpg",
+      "presence": "pending",
+      "cuff_boxes": [],
+      "review_status": "pending"
+    },
+    {
+      "record_id": "v5_train_00330",
+      "source_dataset": "Fashionpedia",
+      "category": "top",
+      "fine_category": "vest",
+      "source_image_reference": "../fashion_data/raw/fashionpedia/images/test/1ca6fb4b937bb1f34797d3315266a546.jpg",
+      "garment_id": "fashionpedia_ann_4873",
+      "garment_bbox": [
+        358.0,
+        339.0,
+        663.0,
+        682.0
+      ],
+      "image_width": 1024,
+      "image_height": 682,
+      "source_image_sha256": "dcf5c21401cabe845aab03f7009a9936b2833fdbef0b5ba9527a9cd75dd6d5ad",
+      "source_file_relative": "source_images/v5_train_00330.jpg",
+      "presence": "pending",
+      "cuff_boxes": [],
+      "review_status": "pending"
+    },
+    {
+      "record_id": "v5_train_01283",
+      "source_dataset": "Fashionpedia",
+      "category": "top",
+      "fine_category": "vest",
+      "source_image_reference": "../fashion_data/raw/fashionpedia/images/test/9947f3f56aa4fab3b07bca98b09d7bfe.jpg",
+      "garment_id": "fashionpedia_ann_1683",
+      "garment_bbox": [
+        252.0,
+        0.0,
+        535.0,
+        282.0
+      ],
+      "image_width": 1024,
+      "image_height": 768,
+      "source_image_sha256": "efa0b4274ccfa3102dad25e86f95b924cc714ab6618fc7d6e3ca8a2ed35d86a2",
+      "source_file_relative": "source_images/v5_train_01283.jpg",
+      "presence": "pending",
+      "cuff_boxes": [],
+      "review_status": "pending"
+    },
+    {
+      "record_id": "v5_train_00109",
+      "source_dataset": "DeepFashion2",
+      "category": "top",
+      "fine_category": "vest",
+      "source_image_reference": "../fashion_data/raw/train/train/image/163017.jpg",
+      "garment_id": "item2_vest",
+      "garment_bbox": [
+        3.0,
+        27.0,
+        421.0,
+        515.0
+      ],
+      "image_width": 468,
+      "image_height": 702,
+      "source_image_sha256": "e7fa570eb1d147c3256a81876287ad1cf035998209020a5baa60653987d0f92a",
+      "source_file_relative": "source_images/v5_train_00109.jpg",
+      "presence": "pending",
+      "cuff_boxes": [],
+      "review_status": "pending"
+    },
+    {
+      "record_id": "df2_targeted150_20261008_00248",
+      "source_dataset": "DeepFashion2",
+      "category": "top",
+      "fine_category": "vest",
+      "source_image_reference": "../fashion_data/raw/train/train/image/123257.jpg",
+      "garment_id": "item1_vest",
+      "garment_bbox": [
+        266.0,
+        30.0,
+        668.0,
+        591.0
+      ],
+      "image_width": 880,
+      "image_height": 1320,
+      "source_image_sha256": "ed066f78a1ea6b126e5b3be259776ce985f416bff2f7d9ef1a27478b70372759",
+      "source_file_relative": "source_images/df2_targeted150_20261008_00248.jpg",
+      "presence": "pending",
+      "cuff_boxes": [],
+      "review_status": "pending"
+    },
+    {
+      "record_id": "v5_train_00074",
+      "source_dataset": "DeepFashion2",
+      "category": "top",
+      "fine_category": "vest",
+      "source_image_reference": "../fashion_data/raw/train/train/image/125082.jpg",
+      "garment_id": "item1_vest",
+      "garment_bbox": [
+        33.0,
+        34.0,
+        428.0,
+        561.0
+      ],
+      "image_width": 468,
+      "image_height": 625,
+      "source_image_sha256": "08d9b1b4aa091a8070c8286dcd4e38af3329d73749fad31bffcc16281013d7c1",
+      "source_file_relative": "source_images/v5_train_00074.jpg",
+      "presence": "pending",
+      "cuff_boxes": [],
+      "review_status": "pending"
+    },
+    {
+      "record_id": "df2_targeted150_20261008_00186",
+      "source_dataset": "DeepFashion2",
+      "category": "top",
+      "fine_category": "sling",
+      "source_image_reference": "../fashion_data/raw/train/train/image/102848.jpg",
+      "garment_id": "item1_sling",
+      "garment_bbox": [
+        176.0,
+        276.0,
+        465.0,
+        688.0
+      ],
+      "image_width": 640,
+      "image_height": 960,
+      "source_image_sha256": "80e5ef8bc1b6013c2edc97e734277535d8b294230fb134a11660b1e8adb41a61",
+      "source_file_relative": "source_images/df2_targeted150_20261008_00186.jpg",
+      "presence": "pending",
+      "cuff_boxes": [],
+      "review_status": "pending"
+    },
+    {
+      "record_id": "v5_train_00047",
+      "source_dataset": "DeepFashion2",
+      "category": "dress",
+      "fine_category": "sling_dress",
+      "source_image_reference": "../fashion_data/raw/train/train/image/089313.jpg",
+      "garment_id": "item1_sling_dress",
+      "garment_bbox": [
+        0.0,
+        206.0,
+        421.0,
+        624.0
+      ],
+      "image_width": 468,
+      "image_height": 624,
+      "source_image_sha256": "314bff0ecc5cac4b78f9f8b90a9c5eafaab87d9d82440d97fe5911f276a80197",
+      "source_file_relative": "source_images/v5_train_00047.jpg",
+      "presence": "pending",
+      "cuff_boxes": [],
+      "review_status": "pending"
+    },
+    {
+      "record_id": "df2_balanced150_20261008_00064",
+      "source_dataset": "DeepFashion2",
+      "category": "dress",
+      "fine_category": "sling_dress",
+      "source_image_reference": "../fashion_data/raw/train/train/image/070219.jpg",
+      "garment_id": "item2_sling_dress",
+      "garment_bbox": [
+        238.0,
+        317.0,
+        608.0,
+        1180.0
+      ],
+      "image_width": 880,
+      "image_height": 1320,
+      "source_image_sha256": "909c25e98e480aea92dbd7b86e8eaef481fb1d2ca090769e0cee158262cdf383",
+      "source_file_relative": "source_images/df2_balanced150_20261008_00064.jpg",
+      "presence": "pending",
+      "cuff_boxes": [],
+      "review_status": "pending"
+    },
+    {
+      "record_id": "df2_balanced150_20261008_00062",
+      "source_dataset": "DeepFashion2",
+      "category": "dress",
+      "fine_category": "sling_dress",
+      "source_image_reference": "../fashion_data/raw/train/train/image/055908.jpg",
+      "garment_id": "item1_sling_dress",
+      "garment_bbox": [
+        116.0,
+        88.0,
+        481.0,
+        613.0
+      ],
+      "image_width": 750,
+      "image_height": 689,
+      "source_image_sha256": "d9aac98bd3fa22494fd98de318f5ab0e7e54c0ffe0b63a990e129afd0d00242c",
+      "source_file_relative": "source_images/df2_balanced150_20261008_00062.jpg",
+      "presence": "pending",
+      "cuff_boxes": [],
+      "review_status": "pending"
+    },
+    {
+      "record_id": "df2_balanced150_20261008_00046",
+      "source_dataset": "DeepFashion2",
+      "category": "dress",
+      "fine_category": "sling_dress",
+      "source_image_reference": "../fashion_data/raw/train/train/image/147619.jpg",
+      "garment_id": "item1_sling_dress",
+      "garment_bbox": [
+        30.0,
+        70.0,
+        392.0,
+        578.0
+      ],
+      "image_width": 468,
+      "image_height": 624,
+      "source_image_sha256": "b7a4d8a5fb0d962c3f75d9263343bb3ee9438874906850d651ec809364f9bd80",
+      "source_file_relative": "source_images/df2_balanced150_20261008_00046.jpg",
+      "presence": "pending",
+      "cuff_boxes": [],
+      "review_status": "pending"
+    }
+  ],
+  "limitations": [
+    "Fine-category names select candidates only; do not establish cuff absence.",
+    "Excludes val/Core and previous 36 images by resolved path and exact file hash.",
+    "No visually similar or re-encoded image duplicate check.",
+    "Target garment only; visible sleeves from another layer must not be labeled as target cuffs.",
+    "No split or independent test set established."
+  ]
+}

@@ -1,0 +1,4 @@
+﻿region,total,correct,wrong_region,upstream_instance_error,comment
+hem,11,2,6,3,Emitted candidates only; NOT recall / IoU / mAP
+waist,8,1,5,2,Emitted candidates only; NOT recall / IoU / mAP
+pocket,9,0,7,2,Emitted candidates only; NOT recall / IoU / mAP

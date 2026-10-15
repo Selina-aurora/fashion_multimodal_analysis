@@ -1,0 +1,17 @@
+﻿case_id,instance_id,category,region,image_width,image_height
+case_01,pred_0002,top,collar,747,585
+case_02,pred_0000,dress,collar,640,640
+case_01,pred_0002,top,cuff,747,585
+case_02,pred_0000,dress,cuff,640,640
+case_01,pred_0002,top,hem,747,585
+case_02,pred_0000,dress,hem,640,640
+case_01,pred_0002,top,pocket,747,585
+case_02,pred_0000,dress,pocket,640,640
+case_01,pred_0002,top,shoulder,747,585
+case_02,pred_0000,dress,shoulder,640,640
+case_01,pred_0002,top,waist,747,585
+case_02,pred_0000,dress,waist,640,640
+case_01,pred_0002,top,pattern,747,585
+case_02,pred_0000,dress,pattern,640,640
+case_01,pred_0002,top,decoration,747,585
+case_02,pred_0000,dress,decoration,640,640

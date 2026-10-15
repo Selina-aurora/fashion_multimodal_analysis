@@ -1,0 +1,15 @@
+{
+  "status": "STAGE11_ROOTCAUSE_DIAGNOSTIC_COMPLETED",
+  "cases": 4,
+  "queries": 16,
+  "native_vs_helper_serial_pass": 16,
+  "helper_serial_vs_batch_pass": 16,
+  "native_vs_helper_batch_pass": 16,
+  "production_status_counts": {
+    "detected": 8,
+    "missed": 3,
+    "rejected_region_geometry": 5
+  },
+  "scope": "read-only same-image same-prompt candidate parity; no localization GT or speed acceptance",
+  "next_step": "Inspect runtime ground source and proposal differences; do not integrate Stage10 experimental path"
+}

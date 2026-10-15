@@ -1,0 +1,645 @@
+{
+  "schema_version": "sleeve_continuous_batch2_v1",
+  "packet_id": "sleeve_continuous_batch2_20_20261012",
+  "manifest_digest": "2a73e6a42041940155f7f5e87a62f910d89386cefa13f629a08a1578fdb94e9c",
+  "exported_at": "2026-10-12T03:45:26.260Z",
+  "parent_batch1_review_sha256": "0243fcbedc1c4d172a161481d523900ef217738294f929851fd1e67f32e5897b",
+  "quality_checks_version": "20261012_v2",
+  "measurement_scope": "single-side apparent 2D coverage; feasibility pilot",
+  "annotations": [
+    {
+      "record_id": "v5_train_01779",
+      "source_image_sha256": "ca5b91296eccc050b3cec6237b51b41d568787332a06b3e822bb456fa33f929b",
+      "reviewer": "qyx",
+      "side": "image_right",
+      "state": "measurable",
+      "points": {
+        "shoulder": [
+          0.6296685687233028,
+          0.30991942820487905
+        ],
+        "elbow": [
+          0.6348917764443854,
+          0.4449301744070564
+        ],
+        "wrist": [
+          0.6257510732692301,
+          0.5603741909715564
+        ],
+        "cuff": [
+          0.6414209116243038,
+          0.3529663086462322
+        ]
+      },
+      "reason": "",
+      "review_status": "confirmed",
+      "same_arm_confirmed": true,
+      "sleeveless_confirmed": false,
+      "current_class": "cap",
+      "class_confirmed": true,
+      "ratio": 0.1749321270017562,
+      "projection_distance_ratio": 0.05999901287721909,
+      "arm_pixels": 159.44535248786912,
+      "elbow_angle_deg": 169.91615595723744,
+      "wrist_overshoot_ratio": 0,
+      "measurement_method": "projected_arm_polyline_v1",
+      "confirmed_at": "2026-10-12T03:32:37.028Z"
+    },
+    {
+      "record_id": "v5_train_00276",
+      "source_image_sha256": "d9d0675eb6291def49d9dba41be99d1acdb0d0cdc078bcb9c9dee90c816c27e7",
+      "reviewer": "qyx",
+      "side": "image_right",
+      "state": "measurable",
+      "points": {
+        "shoulder": [
+          0.8143143754105668,
+          0.3094271049499512
+        ],
+        "elbow": [
+          0.8103103408584366,
+          0.6147604179382324
+        ],
+        "wrist": [
+          0.7562562868043825,
+          0.8867604179382325
+        ],
+        "cuff": [
+          0.8583583889064846,
+          0.5174271049499511
+        ]
+      },
+      "reason": "",
+      "review_status": "confirmed",
+      "same_arm_confirmed": true,
+      "sleeveless_confirmed": false,
+      "current_class": "short",
+      "class_confirmed": true,
+      "ratio": 0.35834019138459444,
+      "projection_distance_ratio": 0.05373093185986656,
+      "arm_pixels": 579.7169680115755,
+      "elbow_angle_deg": 172.96094581007975,
+      "wrist_overshoot_ratio": 0,
+      "measurement_method": "projected_arm_polyline_v1",
+      "confirmed_at": "2026-10-12T03:33:17.321Z"
+    },
+    {
+      "record_id": "v5_train_00425",
+      "source_image_sha256": "bf6dcb971ca5dd483f25d5310a6b6e0aba29d1d9948e844932fc9de4620b8867",
+      "reviewer": "qyx",
+      "side": "image_right",
+      "state": "measurable",
+      "points": {
+        "shoulder": [
+          0.6001001306482263,
+          0.20276043701171875
+        ],
+        "elbow": [
+          0.6381381381381381,
+          0.3694271240234375
+        ],
+        "wrist": [
+          0.6681681681681682,
+          0.5067604370117188
+        ],
+        "cuff": [
+          0.6661661967142924,
+          0.33076043701171876
+        ]
+      },
+      "reason": "",
+      "review_status": "confirmed",
+      "same_arm_confirmed": true,
+      "sleeveless_confirmed": false,
+      "current_class": "short",
+      "class_confirmed": true,
+      "ratio": 0.43322888676659416,
+      "projection_distance_ratio": 0.07894673677982576,
+      "arm_pixels": 307.36300615588164,
+      "elbow_angle_deg": 179.64300352966237,
+      "wrist_overshoot_ratio": 0,
+      "confirmed_at": "2026-10-12T03:34:05.911Z",
+      "measurement_method": "projected_arm_polyline_v1"
+    },
+    {
+      "record_id": "v5_train_00909",
+      "source_image_sha256": "518a5692b33cb5ae2d5e57c218dcfda9b82bd9f675d639c215b83ba894ad50e0",
+      "reviewer": "qyx",
+      "side": "image_left",
+      "state": "measurable",
+      "points": {
+        "shoulder": [
+          0.36786786786786785,
+          0.25342707824707034
+        ],
+        "elbow": [
+          0.26976980031789605,
+          0.37609376525878907
+        ],
+        "wrist": [
+          0.38388391443201014,
+          0.4440937652587891
+        ],
+        "cuff": [
+          0.35585585585585583,
+          0.29209376525878905
+        ]
+      },
+      "reason": "",
+      "review_status": "confirmed",
+      "same_arm_confirmed": true,
+      "sleeveless_confirmed": false,
+      "current_class": "short",
+      "class_confirmed": true,
+      "ratio": 0.1572398919738937,
+      "projection_distance_ratio": 0.04613147156165955,
+      "arm_pixels": 240.9608129523745,
+      "elbow_angle_deg": 103.78002824792073,
+      "wrist_overshoot_ratio": 0,
+      "measurement_method": "projected_arm_polyline_v1",
+      "confirmed_at": "2026-10-12T03:34:32.637Z"
+    },
+    {
+      "record_id": "v5_train_00996",
+      "source_image_sha256": "1e9b4500f72e20997b58e987c55784451881dad5bf5050874fc96f0748ea6237",
+      "reviewer": "qyx",
+      "side": "image_left",
+      "state": "measurable",
+      "points": {
+        "shoulder": [
+          0.4650655021834061,
+          0.21609376525878907
+        ],
+        "elbow": [
+          0.4340126448496634,
+          0.3907604217529297
+        ],
+        "wrist": [
+          0.3951965065502183,
+          0.4854270782470703
+        ],
+        "cuff": [
+          0.44953911793804585,
+          0.4054270782470703
+        ]
+      },
+      "reason": "",
+      "review_status": "confirmed",
+      "same_arm_confirmed": true,
+      "sleeveless_confirmed": false,
+      "current_class": "elbow",
+      "class_confirmed": true,
+      "ratio": 0.6823885287218618,
+      "projection_distance_ratio": 0.051924925064762824,
+      "arm_pixels": 274.31547197214906,
+      "elbow_angle_deg": 171.2314445521239,
+      "wrist_overshoot_ratio": 0,
+      "measurement_method": "projected_arm_polyline_v1",
+      "confirmed_at": "2026-10-12T03:35:03.518Z"
+    },
+    {
+      "record_id": "v5_train_01453",
+      "source_image_sha256": "b18db7144fec8264b01e41af998fed3916ae5db6e77403efaea32beec33f504f",
+      "reviewer": "qyx",
+      "side": "image_right",
+      "state": "unmeasurable",
+      "points": {},
+      "reason": "白色外套袖管宽松且存在褶皱，画面右侧手臂抬起，肘部及袖口位置难以准确辨认，无法可靠计算连续袖长比例。",
+      "review_status": "confirmed",
+      "same_arm_confirmed": true,
+      "sleeveless_confirmed": false,
+      "current_class": "three_quarter",
+      "class_confirmed": true,
+      "ratio": null,
+      "measurement_method": "not_measured",
+      "confirmed_at": "2026-10-12T03:37:20.217Z"
+    },
+    {
+      "record_id": "v5_train_00521",
+      "source_image_sha256": "36578743a7c5a40371ad682e3ce6739296c0348113aa9bc1b64373df639534ee",
+      "reviewer": "qyx",
+      "side": "image_right",
+      "state": "measurable",
+      "points": {
+        "shoulder": [
+          0.8083083694045609,
+          0.29409376525878905
+        ],
+        "elbow": [
+          0.8883884189365147,
+          0.5660937652587891
+        ],
+        "wrist": [
+          0.8403403708884666,
+          0.8127604522705079
+        ],
+        "cuff": [
+          0.8383383994345909,
+          0.8274270782470703
+        ]
+      },
+      "reason": "",
+      "review_status": "confirmed",
+      "same_arm_confirmed": true,
+      "sleeveless_confirmed": false,
+      "current_class": "long",
+      "class_confirmed": true,
+      "ratio": 1,
+      "projection_distance_ratio": 0.028002923805390798,
+      "arm_pixels": 525.9131425104191,
+      "elbow_angle_deg": 161.51459810835428,
+      "wrist_overshoot_ratio": 0.02798233358710236,
+      "measurement_method": "projected_arm_polyline_v1",
+      "confirmed_at": "2026-10-12T03:39:15.131Z"
+    },
+    {
+      "record_id": "v5_train_00326",
+      "source_image_sha256": "e86adb970d57542a1137e8514c2ead716fff6418554389cda78c3435c2d22093",
+      "reviewer": "qyx",
+      "side": "image_left",
+      "state": "measurable",
+      "points": {
+        "shoulder": [
+          0.41424968474148804,
+          0.34209376525878904
+        ],
+        "elbow": [
+          0.4075241954750552,
+          0.43409376525878907
+        ],
+        "wrist": [
+          0.3873476507083465,
+          0.5087604522705078
+        ],
+        "cuff": [
+          0.38398486759142497,
+          0.5127604522705078
+        ]
+      },
+      "reason": "",
+      "review_status": "confirmed",
+      "same_arm_confirmed": true,
+      "sleeveless_confirmed": false,
+      "current_class": "long",
+      "class_confirmed": true,
+      "ratio": 1,
+      "projection_distance_ratio": 0.02852789968888001,
+      "arm_pixels": 168.516190763484,
+      "elbow_angle_deg": 171.22301466179186,
+      "wrist_overshoot_ratio": 0.026525392229545874,
+      "measurement_method": "projected_arm_polyline_v1",
+      "confirmed_at": "2026-10-12T03:40:26.005Z"
+    },
+    {
+      "record_id": "v5_train_01295",
+      "source_image_sha256": "dca38fd3c0ca28f42a2b23d23ea3c1b347b640bc6aaf2ce8ccb7637383e32a31",
+      "reviewer": "qyx",
+      "side": "image_right",
+      "state": "measurable",
+      "points": {
+        "shoulder": [
+          0.6321321321321322,
+          0.2767604217529297
+        ],
+        "elbow": [
+          0.6881882492844407,
+          0.5434270782470703
+        ],
+        "wrist": [
+          0.7802803108284065,
+          0.754093765258789
+        ],
+        "cuff": [
+          0.6821822432784347,
+          0.3300937652587891
+        ]
+      },
+      "reason": "",
+      "review_status": "confirmed",
+      "same_arm_confirmed": true,
+      "sleeveless_confirmed": false,
+      "current_class": "cap",
+      "class_confirmed": true,
+      "ratio": 0.11754064050724884,
+      "projection_distance_ratio": 0.05242046698759721,
+      "arm_pixels": 488.68068731771837,
+      "elbow_angle_deg": 171.73727519389325,
+      "wrist_overshoot_ratio": 0,
+      "measurement_method": "projected_arm_polyline_v1",
+      "confirmed_at": "2026-10-12T03:41:03.797Z"
+    },
+    {
+      "record_id": "v5_train_00642",
+      "source_image_sha256": "a652ebd38dd031433d5fdd14aedbf3d907c9526fca8620517d25e9c43d873ae5",
+      "reviewer": "qyx",
+      "side": "image_right",
+      "state": "measurable",
+      "points": {
+        "shoulder": [
+          0.7342342342342343,
+          0.15009375
+        ],
+        "elbow": [
+          0.7642642642642643,
+          0.32876043701171875
+        ],
+        "wrist": [
+          0.6701702312664227,
+          0.4594271240234375
+        ],
+        "cuff": [
+          0.7642642642642643,
+          0.1914271240234375
+        ]
+      },
+      "reason": "",
+      "review_status": "confirmed",
+      "same_arm_confirmed": true,
+      "sleeveless_confirmed": false,
+      "current_class": "cap",
+      "class_confirmed": true,
+      "ratio": 0.13335940902968002,
+      "projection_distance_ratio": 0.047051847855440705,
+      "arm_pixels": 324.6994401005254,
+      "elbow_angle_deg": 147.99090573503142,
+      "wrist_overshoot_ratio": 0,
+      "measurement_method": "projected_arm_polyline_v1",
+      "confirmed_at": "2026-10-12T03:41:36.409Z"
+    },
+    {
+      "record_id": "v5_train_01075",
+      "source_image_sha256": "85921645691829f712f35482cd152a7569beba927872c639066eb6e472656f8c",
+      "reviewer": "qyx",
+      "side": "image_left",
+      "state": "measurable",
+      "points": {
+        "shoulder": [
+          0.6241241546722504,
+          0.21276043701171876
+        ],
+        "elbow": [
+          0.6221221832183746,
+          0.34742706298828124
+        ],
+        "wrist": [
+          0.6461462072423987,
+          0.46742706298828124
+        ],
+        "cuff": [
+          0.6301301606782563,
+          0.27942706298828124
+        ]
+      },
+      "reason": "",
+      "review_status": "confirmed",
+      "same_arm_confirmed": true,
+      "sleeveless_confirmed": false,
+      "current_class": "short",
+      "class_confirmed": true,
+      "ratio": 0.2605185317883283,
+      "projection_distance_ratio": 0.01822129865115686,
+      "arm_pixels": 255.73519387881328,
+      "elbow_angle_deg": 171.83809870539548,
+      "wrist_overshoot_ratio": 0,
+      "confirmed_at": "2026-10-12T03:43:05.336Z",
+      "measurement_method": "projected_arm_polyline_v1"
+    },
+    {
+      "record_id": "v5_train_02036",
+      "source_image_sha256": "0f4eba12652f753844fdf4bd4c452099907872913b9b66df534957f5bd9e5940",
+      "reviewer": "qyx",
+      "side": "image_left",
+      "state": "measurable",
+      "points": {
+        "shoulder": [
+          0.34514837710925717,
+          0.25876043701171875
+        ],
+        "elbow": [
+          0.3491704374057315,
+          0.41609375
+        ],
+        "wrist": [
+          0.14806438463305996,
+          0.44676043701171875
+        ],
+        "cuff": [
+          0.33710407239819007,
+          0.3454271240234375
+        ]
+      },
+      "reason": "",
+      "review_status": "confirmed",
+      "same_arm_confirmed": true,
+      "sleeveless_confirmed": false,
+      "current_class": "short",
+      "class_confirmed": true,
+      "ratio": 0.2942642953502876,
+      "projection_distance_ratio": 0.023120275732687007,
+      "arm_pixels": 294.17044841341794,
+      "elbow_angle_deg": 101.98176748371384,
+      "wrist_overshoot_ratio": 0,
+      "measurement_method": "projected_arm_polyline_v1",
+      "confirmed_at": "2026-10-12T03:43:24.916Z"
+    },
+    {
+      "record_id": "v5_train_01019",
+      "source_image_sha256": "ba4422fb7d01a596381182810e2642e7c308b6aaeb7bb2b7771b8f5843a4eba4",
+      "reviewer": "qyx",
+      "side": "image_left",
+      "state": "unmeasurable",
+      "points": {},
+      "reason": "画面下部截断，腕部出框，无法可靠确定完整手臂长度。",
+      "review_status": "confirmed",
+      "same_arm_confirmed": false,
+      "sleeveless_confirmed": false,
+      "current_class": "elbow",
+      "class_confirmed": true,
+      "ratio": null,
+      "measurement_method": "not_measured",
+      "confirmed_at": "2026-10-12T03:43:39.539Z"
+    },
+    {
+      "record_id": "v5_train_00714",
+      "source_image_sha256": "30a9b06fdb0d47436f8f68ee5c2927e5ae9218b20ef89920ca42f1ca3f0c0712",
+      "reviewer": "qyx",
+      "side": "image_left",
+      "state": "measurable",
+      "points": {
+        "shoulder": [
+          0.3918918918918919,
+          0.26609375
+        ],
+        "elbow": [
+          0.3598598904079861,
+          0.40342706298828124
+        ],
+        "wrist": [
+          0.3258258258258258,
+          0.5127604370117187
+        ],
+        "cuff": [
+          0.3778779084260041,
+          0.4127604370117188
+        ]
+      },
+      "reason": "",
+      "review_status": "confirmed",
+      "same_arm_confirmed": true,
+      "sleeveless_confirmed": false,
+      "current_class": "elbow",
+      "class_confirmed": true,
+      "ratio": 0.581248855392737,
+      "projection_distance_ratio": 0.05444022263251855,
+      "arm_pixels": 250.6386436685686,
+      "elbow_angle_deg": 177.11725937242986,
+      "wrist_overshoot_ratio": 0,
+      "measurement_method": "projected_arm_polyline_v1",
+      "confirmed_at": "2026-10-12T03:43:59.569Z"
+    },
+    {
+      "record_id": "v5_train_01934",
+      "source_image_sha256": "dce7385346f1f74c3a21c7e5693372f07263c7e6fb1a8c4698f19e671a523de6",
+      "reviewer": "qyx",
+      "side": "image_left",
+      "state": "measurable",
+      "points": {
+        "shoulder": [
+          0.3556390977443609,
+          0.22476043701171874
+        ],
+        "elbow": [
+          0.335589003025141,
+          0.34609375
+        ],
+        "wrist": [
+          0.31353383458646616,
+          0.43409375
+        ],
+        "cuff": [
+          0.3175438902431861,
+          0.37809375
+        ]
+      },
+      "reason": "",
+      "review_status": "confirmed",
+      "same_arm_confirmed": true,
+      "sleeveless_confirmed": false,
+      "current_class": "three_quarter",
+      "class_confirmed": true,
+      "ratio": 0.7364771863972325,
+      "projection_distance_ratio": 0.03112470501429507,
+      "arm_pixels": 211.27756697181175,
+      "elbow_angle_deg": 176.80873390354165,
+      "wrist_overshoot_ratio": 0,
+      "measurement_method": "projected_arm_polyline_v1",
+      "confirmed_at": "2026-10-12T03:44:14.022Z"
+    },
+    {
+      "record_id": "v5_train_00735",
+      "source_image_sha256": "23a64d8d0f5cab50b3693b16aaf39dd4efc1c3bb8fcdc9339f55d7202f0ace35",
+      "reviewer": "qyx",
+      "side": "image_left",
+      "state": "unmeasurable",
+      "points": {},
+      "reason": "目标较小，手臂弯曲并持物，腕部及袖口无法可靠区分。",
+      "review_status": "confirmed",
+      "same_arm_confirmed": false,
+      "sleeveless_confirmed": false,
+      "current_class": "three_quarter",
+      "class_confirmed": true,
+      "ratio": null,
+      "measurement_method": "not_measured",
+      "confirmed_at": "2026-10-12T03:44:24.707Z"
+    },
+    {
+      "record_id": "v5_train_01831",
+      "source_image_sha256": "b78a2bbaad844e8c05c6cc88ca3ae4ba06173376de2960d70800262cb1bbc66f",
+      "reviewer": "qyx",
+      "side": "image_right",
+      "state": "measurable",
+      "points": {
+        "shoulder": [
+          0.8378657280883035,
+          0.18342706298828124
+        ],
+        "elbow": [
+          0.8543469555151035,
+          0.32609375
+        ],
+        "wrist": [
+          0.8609394313967862,
+          0.49676043701171874
+        ],
+        "cuff": [
+          0.844458203969986,
+          0.46342706298828124
+        ]
+      },
+      "reason": "",
+      "review_status": "confirmed",
+      "same_arm_confirmed": true,
+      "sleeveless_confirmed": false,
+      "current_class": "long",
+      "class_confirmed": true,
+      "ratio": 0.8925813755738609,
+      "projection_distance_ratio": 0.0391214974972801,
+      "arm_pixels": 314.03838276717414,
+      "elbow_angle_deg": 176.45067562469717,
+      "wrist_overshoot_ratio": 0,
+      "measurement_method": "projected_arm_polyline_v1",
+      "confirmed_at": "2026-10-12T03:44:48.436Z"
+    },
+    {
+      "record_id": "v5_train_00701",
+      "source_image_sha256": "96becf2f6764eaa72c3a37003d4bc5f84e244842413c8efe1f095bdaa6b03379",
+      "reviewer": "qyx",
+      "side": "image_left",
+      "state": "unmeasurable",
+      "points": {},
+      "reason": "双手插袋，腕部受到遮挡，无法可靠确定腕关节中心。",
+      "review_status": "confirmed",
+      "same_arm_confirmed": false,
+      "sleeveless_confirmed": false,
+      "current_class": "long",
+      "class_confirmed": true,
+      "ratio": null,
+      "measurement_method": "not_measured",
+      "confirmed_at": "2026-10-12T03:45:06.003Z"
+    },
+    {
+      "record_id": "df2_targeted150_20261008_00271",
+      "source_image_sha256": "0d7d5fc6ebdc27b4a35c4fe398034c5579215b74db9e8f6ce683a2e743ae004c",
+      "reviewer": "qyx",
+      "side": "image_left",
+      "state": "sleeveless",
+      "points": {},
+      "reason": "",
+      "review_status": "confirmed",
+      "same_arm_confirmed": false,
+      "sleeveless_confirmed": true,
+      "current_class": "sleeveless",
+      "class_confirmed": true,
+      "ratio": 0,
+      "measurement_method": "visible_sleeve_absence",
+      "confirmed_at": "2026-10-12T03:45:16.551Z"
+    },
+    {
+      "record_id": "df2_balanced150_20261008_00029",
+      "source_image_sha256": "49102fca866d8cd8813bd927eb4e38d7ac622f321b74f166e8b73089db3e2d09",
+      "reviewer": "qyx",
+      "side": "image_left",
+      "state": "sleeveless",
+      "points": {},
+      "reason": "",
+      "review_status": "confirmed",
+      "same_arm_confirmed": false,
+      "sleeveless_confirmed": true,
+      "current_class": "sleeveless",
+      "class_confirmed": true,
+      "ratio": 0,
+      "measurement_method": "visible_sleeve_absence",
+      "confirmed_at": "2026-10-12T03:45:23.793Z"
+    }
+  ]
+}

@@ -1,0 +1,73 @@
+{
+  "status": "REGRESSION_COMPLETED",
+  "root": "/workspace/fashion_multimodal_analysis",
+  "date": "2026-10-14",
+  "checkpoint": "outputs/recovery_20261008/v5_balanced150/checkpoint_last.pth",
+  "train_manifest": "configs/prd_8class_train_v5_balanced150_20261008.csv",
+  "val_manifest": "configs/prd_8class_val_v2_full_targets.csv",
+  "core_manifest": "benchmark/prd_3_1_v1/manifests/segmentation_test_v1.csv",
+  "regression": "segmentation_core400_only",
+  "timing_scope": "preprocess+forward+postprocess",
+  "input_sha256": {
+    "configs/prd_8class_train_v5_balanced150_20261008.csv": "e8c277055efe4d042b4353bf2d4553bddddc7706eead9398f07f5efcd90bb38f",
+    "configs/prd_8class_val_v2_full_targets.csv": "39141f545ea5512d16ed074788b6f98474b33baff111d3b663ec0ffcc4c40b93",
+    "benchmark/prd_3_1_v1/manifests/segmentation_test_v1.csv": "c83204aca87c9c4dee304b774fd459bf5a18a2d1d65f0a3a9a79b92721224b89"
+  },
+  "input_rows": {
+    "configs/prd_8class_train_v5_balanced150_20261008.csv": 2299,
+    "configs/prd_8class_val_v2_full_targets.csv": 88,
+    "benchmark/prd_3_1_v1/manifests/segmentation_test_v1.csv": 400
+  },
+  "torch": "2.13.0+cu132",
+  "cuda_available": true,
+  "gpu": "NVIDIA GeForce RTX 4090",
+  "checkpoint_provenance": {
+    "epoch": 15,
+    "train_manifest_sha256": "e8c277055efe4d042b4353bf2d4553bddddc7706eead9398f07f5efcd90bb38f",
+    "val_manifest_sha256": "39141f545ea5512d16ed074788b6f98474b33baff111d3b663ec0ffcc4c40b93",
+    "checkpoint_format": 2,
+    "class_to_id": {
+      "top": 1,
+      "pants": 2,
+      "skirt": 3,
+      "outerwear": 4,
+      "dress": 5,
+      "shoe": 6,
+      "bag": 7,
+      "accessory": 8
+    }
+  },
+  "checkpoint_args": {
+    "epochs": 15,
+    "min_size": 640,
+    "max_size": 1024,
+    "seed": 20260921,
+    "no_balanced_sampler": false
+  },
+  "gate": "PROVENANCE_AND_CUDA_PASSED",
+  "eval_command": [
+    "/usr/local/miniconda3/envs/py312/bin/python",
+    "/workspace/fashion_multimodal_analysis/scripts/segmentation/evaluation/eval_prd31_core_regression_v2_balanced_v1.py",
+    "--checkpoint",
+    "/workspace/fashion_multimodal_analysis/outputs/recovery_20261008/v5_balanced150/checkpoint_last.pth",
+    "--val-csv",
+    "/workspace/fashion_multimodal_analysis/benchmark/prd_3_1_v1/manifests/segmentation_test_v1.csv",
+    "--device",
+    "cuda",
+    "--score-threshold",
+    "0.40",
+    "--mask-threshold",
+    "0.50",
+    "--match-bbox-iou",
+    "0.50",
+    "--warmup-runs",
+    "10",
+    "--timed-passes",
+    "5",
+    "--max-visualizations",
+    "12",
+    "--report-dir",
+    "/workspace/prd31_regression_20261014/v5_balanced150_core400/evaluation"
+  ],
+  "return_code": 0
+}

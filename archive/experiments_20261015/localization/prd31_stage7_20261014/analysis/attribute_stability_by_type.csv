@@ -1,0 +1,7 @@
+﻿attribute,comparable,agreed,disagreed,agreement_rate,interpretation
+fashion_style,5,2,3,0.4,consistency_not_accuracy
+neckline,3,1,2,0.3333,consistency_not_accuracy
+pattern,8,5,3,0.625,consistency_not_accuracy
+primary_color,8,6,2,0.75,consistency_not_accuracy
+silhouette_fit,5,5,0,1.0,consistency_not_accuracy
+sleeve_length,3,2,1,0.6667,consistency_not_accuracy

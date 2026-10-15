@@ -1,0 +1,14 @@
+{
+  "cohort_images": 20,
+  "predicted_clothing_instances": 33,
+  "all_predicted_arms": 66,
+  "proposal_statuses": {
+    "abstain": 55,
+    "proposal_requires_review": 7,
+    "partial_requires_review": 4
+  },
+  "image_count_with_any_full_proposal": 5,
+  "rules_frozen_sha256": "74c129c6d319c6441d9bd596351a22c26738b7f2a87621b5641a73f08b533b38",
+  "predictions_frozen_sha256": "51b11e1f4c4ca041b1686e93d95dabc6871fe9957d3cc2cbb2781ef53e98840e",
+  "important": "No annotations used or produced. This is NOT an endpoint accuracy metric or PRD validation pass."
+}

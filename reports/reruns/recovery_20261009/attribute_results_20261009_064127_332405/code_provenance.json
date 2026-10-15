@@ -1,0 +1,8 @@
+{
+  "runner_sha256": "31445208d14786acdb3ac165802f0bd981070509fcb23c3f4d67ff73cb36e396",
+  "helpers": {
+    "/workspace/fashion_multimodal_analysis/src/fashion_multimodal_analysis/attributes/color/run_primary_color_baseline_v1.py": "1f3fdd371603a6d32b2803a6d3d71a62aa0a605fc3a4236e53e6cbf141274cb9",
+    "/workspace/fashion_multimodal_analysis/src/fashion_multimodal_analysis/attributes/pattern/run_pattern_hierarchical_v3.py": "4fe0c50478e60e5639a05d1b8c64abe7358999af23a133944ea640f99edb41f0",
+    "/workspace/fashion_multimodal_analysis/src/fashion_multimodal_analysis/attributes/design/run_design_attribute_labels_v1.py": "c7e2a14d333eda8318ef5c633f4ee12f283f16cfbada035370c2d30cdccdfbe9"
+  }
+}

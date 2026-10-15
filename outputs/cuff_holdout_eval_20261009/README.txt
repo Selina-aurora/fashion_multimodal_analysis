@@ -1,0 +1,1 @@
+解压到 outputs/cuff_holdout_eval_20261009，运行PYTHONPATH=src python outputs/cuff_holdout_eval_20261009/run_cuff_holdout_eval_20261009.py。冻结第三版第27轮，评分阈值0.4，匹配IoU0.5。全18张已确认，12张正例21框、3张无袖口负例、3张歧义排除。评估全部15张可用图片，包括漏检和误检。两组：原衣物框/掩码控制输入、V5预测框/掩码输入。无训练或调参，结果不能宣称整个流程盲测或正式PRD通过。最后UPLOAD ZIP发回。

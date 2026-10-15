@@ -1,0 +1,183 @@
+{
+  "images": 8,
+  "neckline_pairs": [
+    {
+      "case": "case_01",
+      "instance_id": "pred_0002",
+      "category": "top",
+      "previous_label": "other",
+      "legacy_candidate": {
+        "label": "other",
+        "confidence": 0.15575069189071655
+      },
+      "context_candidate": {
+        "label": "shirt_collar",
+        "confidence": 0.2178349494934082
+      },
+      "input_view_agreement": false,
+      "status": "requires_review",
+      "legacy_view_path": "case_01/instance_002_neckline_legacy.jpg",
+      "context_view_path": "case_01/instance_002_neckline_context.jpg",
+      "semantic_review_status": "pending"
+    },
+    {
+      "case": "case_03",
+      "instance_id": "pred_0000",
+      "category": "outerwear",
+      "previous_label": "other",
+      "legacy_candidate": {
+        "label": "other",
+        "confidence": 0.21592020988464355
+      },
+      "context_candidate": {
+        "label": "other",
+        "confidence": 0.23558619618415833
+      },
+      "input_view_agreement": true,
+      "status": "predicted",
+      "legacy_view_path": "case_03/instance_000_neckline_legacy.jpg",
+      "context_view_path": "case_03/instance_000_neckline_context.jpg",
+      "semantic_review_status": "pending"
+    },
+    {
+      "case": "case_04",
+      "instance_id": "pred_0000",
+      "category": "outerwear",
+      "previous_label": "turtleneck",
+      "legacy_candidate": {
+        "label": "turtleneck",
+        "confidence": 0.49801355600357056
+      },
+      "context_candidate": {
+        "label": "crew",
+        "confidence": 0.14783062040805817
+      },
+      "input_view_agreement": false,
+      "status": "requires_review",
+      "legacy_view_path": "case_04/instance_000_neckline_legacy.jpg",
+      "context_view_path": "case_04/instance_000_neckline_context.jpg",
+      "semantic_review_status": "pending"
+    },
+    {
+      "case": "case_04",
+      "instance_id": "pred_0001",
+      "category": "dress",
+      "previous_label": "other",
+      "legacy_candidate": {
+        "label": "other",
+        "confidence": 0.22223319113254547
+      },
+      "context_candidate": {
+        "label": "other",
+        "confidence": 0.17937590181827545
+      },
+      "input_view_agreement": true,
+      "status": "predicted",
+      "legacy_view_path": "case_04/instance_001_neckline_legacy.jpg",
+      "context_view_path": "case_04/instance_001_neckline_context.jpg",
+      "semantic_review_status": "pending"
+    },
+    {
+      "case": "case_05",
+      "instance_id": "pred_0000",
+      "category": "dress",
+      "previous_label": "other",
+      "legacy_candidate": {
+        "label": "other",
+        "confidence": 0.1642603874206543
+      },
+      "context_candidate": {
+        "label": "off_shoulder",
+        "confidence": 0.15892715752124786
+      },
+      "input_view_agreement": false,
+      "status": "requires_review",
+      "legacy_view_path": "case_05/instance_000_neckline_legacy.jpg",
+      "context_view_path": "case_05/instance_000_neckline_context.jpg",
+      "semantic_review_status": "pending"
+    },
+    {
+      "case": "case_06",
+      "instance_id": "pred_0002",
+      "category": "dress",
+      "previous_label": "other",
+      "legacy_candidate": {
+        "label": "other",
+        "confidence": 0.12138142436742783
+      },
+      "context_candidate": {
+        "label": "shirt_collar",
+        "confidence": 0.19726641476154327
+      },
+      "input_view_agreement": false,
+      "status": "requires_review",
+      "legacy_view_path": "case_06/instance_002_neckline_legacy.jpg",
+      "context_view_path": "case_06/instance_002_neckline_context.jpg",
+      "semantic_review_status": "pending"
+    },
+    {
+      "case": "case_06",
+      "instance_id": "pred_0003",
+      "category": "top",
+      "previous_label": "other",
+      "legacy_candidate": {
+        "label": "other",
+        "confidence": 0.1366623491048813
+      },
+      "context_candidate": {
+        "label": "halter",
+        "confidence": 0.18592309951782227
+      },
+      "input_view_agreement": false,
+      "status": "requires_review",
+      "legacy_view_path": "case_06/instance_003_neckline_legacy.jpg",
+      "context_view_path": "case_06/instance_003_neckline_context.jpg",
+      "semantic_review_status": "pending"
+    },
+    {
+      "case": "case_07",
+      "instance_id": "pred_0007",
+      "category": "top",
+      "previous_label": "other",
+      "legacy_candidate": {
+        "label": "other",
+        "confidence": 0.1517564058303833
+      },
+      "context_candidate": {
+        "label": "other",
+        "confidence": 0.1960781216621399
+      },
+      "input_view_agreement": true,
+      "status": "predicted",
+      "legacy_view_path": "case_07/instance_007_neckline_legacy.jpg",
+      "context_view_path": "case_07/instance_007_neckline_context.jpg",
+      "semantic_review_status": "pending"
+    },
+    {
+      "case": "case_08",
+      "instance_id": "pred_0005",
+      "category": "dress",
+      "previous_label": "hooded",
+      "legacy_candidate": {
+        "label": "hooded",
+        "confidence": 0.25061362981796265
+      },
+      "context_candidate": {
+        "label": "mock_neck",
+        "confidence": 0.33488893508911133
+      },
+      "input_view_agreement": false,
+      "status": "requires_review",
+      "legacy_view_path": "case_08/instance_005_neckline_legacy.jpg",
+      "context_view_path": "case_08/instance_005_neckline_context.jpg",
+      "semantic_review_status": "pending"
+    }
+  ],
+  "non_neckline_differences": [],
+  "accuracy_evaluated": false,
+  "note": "Changes and agreement are diagnostic counts, not accuracy. Any non-neckline drift requires review.",
+  "paired_neckline_count": 9,
+  "view_disagreement_count": 6,
+  "legacy_prediction_drift_count": 0,
+  "non_neckline_difference_count": 0
+}

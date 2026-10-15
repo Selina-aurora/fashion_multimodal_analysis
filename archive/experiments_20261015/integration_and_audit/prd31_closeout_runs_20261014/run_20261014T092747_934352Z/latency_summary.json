@@ -1,0 +1,30 @@
+{
+  "scope": "preloaded_RGB_image_to_complete_pipeline_result_all_predicted_garments",
+  "includes": [
+    "segmentation",
+    "all_configured_region_queries",
+    "all_configured_attributes",
+    "consistency_checks",
+    "CPU_GPU_synchronization"
+  ],
+  "excludes": [
+    "model_loading",
+    "disk_image_decode",
+    "metrics",
+    "image_JSON_export"
+  ],
+  "warmup_passes": 1,
+  "timed_passes": 3,
+  "all_calls": {
+    "n": 36,
+    "mean_ms": 5948.58649528275,
+    "median_ms": 5044.7834730148315,
+    "p95_ms": 12510.225136997178,
+    "max_ms": 12636.202459223568
+  },
+  "failure_calls": 0,
+  "empty_prediction_calls": 0,
+  "prd_end_to_end_target_ms": null,
+  "acceptance": "MEASURED_NO_AGREED_CHAIN_THRESHOLD",
+  "note": "Do not compare image-level chain time to per-region 30 ms or attribute 20 ms."
+}

@@ -1,0 +1,39 @@
+{
+  "status": "SLEEVE_TRAINING_CANDIDATES_PREPARED",
+  "assignment_status_counts": {
+    "PROPOSED_SELECTED_GARMENT": 558,
+    "AMBIGUOUS_OR_LOW_COVERAGE": 1
+  },
+  "consistent_native_candidate_counts": {
+    "train": {
+      "long": 181,
+      "three_quarter": 29,
+      "short": 31,
+      "cap": 17,
+      "elbow": 23
+    },
+    "val": {
+      "long": 5,
+      "elbow": 1,
+      "short": 2,
+      "three_quarter": 1
+    }
+  },
+  "review_train_samples": 40,
+  "review_label_counts": {
+    "cap": 8,
+    "short": 8,
+    "elbow": 8,
+    "three_quarter": 8,
+    "long": 8
+  },
+  "training_started": false,
+  "formal_prd_acceptance": false,
+  "limitations": [
+    "Mask coverage only proposes sleeve ownership; all review samples start pending.",
+    "Cap shape takes precedence over a short-length hint only for a review draft.",
+    "Conflicting assigned sleeve lengths excluded from consistent candidates; this can bias coverage.",
+    "At most eight training garments per draft class sampled; unreviewed candidates are not approved labels.",
+    "Every upper/whole-body native garment competes for ownership, including nonselected garments."
+  ]
+}

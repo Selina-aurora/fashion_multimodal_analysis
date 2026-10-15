@@ -1,0 +1,32 @@
+{
+  "image": "/workspace/fashion_data/raw/fashionpedia/images/test/28f3172e9e96bb17c1f9ec3697b175bc.jpg",
+  "persons_detected": 1,
+  "keypoints": [
+    {
+      "left_shoulder": [
+        219.05694580078125,
+        274.2935485839844
+      ],
+      "right_shoulder": [
+        180.25088500976562,
+        254.3141326904297
+      ],
+      "left_elbow": [
+        214.9407196044922,
+        419.78076171875
+      ],
+      "right_elbow": [
+        119.84767150878906,
+        420.1742858886719
+      ],
+      "left_wrist": [
+        263.1180419921875,
+        488.040771484375
+      ],
+      "right_wrist": [
+        154.0532989501953,
+        534.052978515625
+      ]
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+{
+  "patch_version": "neckline_context_pair_20261009_v1",
+  "expected_source_sha256": {
+    "src/fashion_multimodal_analysis/integration/model_backends.py": "3eb4230032fa0a7975a49af00d1015237892bdac916bb00c7929c2661c0e32be"
+  }
+}

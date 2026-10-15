@@ -1,0 +1,17 @@
+﻿case,region,old_status,new_status,status_equal,mask_iou,mask_pixel_equal,bbox_max_abs_px,proposal_bbox_max_abs_px,dino_score_abs,sam_score_abs,model_phrase_equal,parity_pass
+case_01,collar,detected,detected,True,0.006043569922698524,False,149.0,150.0,0.42621544003486633,0.005146324634552002,False,False
+case_01,cuff,missed,detected,False,,,,,,,,False
+case_01,hem,detected,detected,True,0.0,False,163.0,162.0,0.37391409277915955,0.019894421100616455,False,False
+case_01,pocket,missed,detected,False,,,,,,,,False
+case_02,collar,missed,detected,False,,,,,,,,False
+case_02,cuff,rejected_region_geometry,detected,False,,,,,,,,False
+case_02,hem,rejected_region_geometry,detected,False,,,,,,,,False
+case_02,pocket,detected,detected,True,0.09215020964001325,False,240.0,233.0,0.2884862720966339,0.046865999698638916,False,False
+case_03,collar,detected,detected,True,0.015215015837448304,False,549.0,548.0,0.3021756112575531,0.03487658500671387,False,False
+case_03,cuff,rejected_region_geometry,detected,False,,,,,,,,False
+case_03,hem,rejected_region_geometry,detected,False,,,,,,,,False
+case_03,pocket,rejected_region_geometry,detected,False,,,,,,,,False
+case_04,collar,detected,detected,True,0.0812140566784801,False,269.0,263.0,0.3868981599807739,0.05201929807662964,False,False
+case_04,cuff,detected,detected,True,0.020417481222347978,False,473.0,467.0,0.31017887592315674,0.0006427764892578125,False,False
+case_04,hem,detected,detected,True,0.020141051710380685,False,473.0,465.0,0.40096214413642883,0.0014660954475402832,False,False
+case_04,pocket,detected,detected,True,0.3312789999806398,False,235.0,233.0,0.2892235219478607,0.015766501426696777,False,False

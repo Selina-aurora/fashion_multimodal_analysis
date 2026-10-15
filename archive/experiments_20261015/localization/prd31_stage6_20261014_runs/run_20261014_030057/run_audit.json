@@ -1,0 +1,8 @@
+{
+  "status": "DRY_RUN_PASS",
+  "mode": "all",
+  "dry_run": true,
+  "project_files_modified": false,
+  "scope": "warmed latency and/or controlled GT/pred garment ROI development diagnostic",
+  "generated_by": "run_stage6.py"
+}

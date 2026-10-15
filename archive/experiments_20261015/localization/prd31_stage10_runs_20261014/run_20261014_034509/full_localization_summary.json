@@ -1,0 +1,23 @@
+{
+  "status": "STAGE10_END_TO_END_AB_COMPLETED",
+  "cases": 4,
+  "paired_queries": 16,
+  "timed_rows": 12,
+  "baseline_mean_group_ms": 737.7522,
+  "joint_batch_mean_group_ms": 578.0012,
+  "baseline_mean_amortized_ms": 184.438,
+  "joint_batch_mean_amortized_ms": 144.5003,
+  "overall_speedup": 1.2764,
+  "mask_parity_within_tolerance": false,
+  "parity_passes": 0,
+  "parity_failures": 16,
+  "integration_decision": "DO_NOT_INTEGRATE",
+  "limitations": [
+    "Same frozen diagnostic images, no reviewed local-part GT.",
+    "Measured group throughput for multi-query same-instance; amortized ms/query is NOT standalone per-query latency.",
+    "No guarantee of 30ms PRD target, no official accuracy claim.",
+    "DINO image is duplicated across batch; GPU memory may increase.",
+    "Only warmed calls; model loading, disk IO, and ROI selection excluded.",
+    "Not a production patch."
+  ]
+}

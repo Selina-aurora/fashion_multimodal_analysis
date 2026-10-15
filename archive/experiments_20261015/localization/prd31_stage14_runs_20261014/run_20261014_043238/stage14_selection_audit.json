@@ -1,0 +1,248 @@
+{
+  "selection_protocol": "val_manifest_distinct_source_image_path_exclude_stage13_train_core_known_paths",
+  "origin_manifest": "configs/prd_8class_val_v2_full_targets.csv",
+  "origin_manifest_sha256": "39141f545ea5512d16ed074788b6f98474b33baff111d3b663ec0ffcc4c40b93",
+  "total_val_rows": 88,
+  "unique_val_images": 32,
+  "eligible_val_images": 24,
+  "source_candidates": 24,
+  "requested_max_cases": 12,
+  "skipped_paths": [
+    {
+      "source_image": "/workspace/fashion_data/raw/fashionpedia/images/test/311db0d6f5b7be84ac3c952a443ef981.jpg",
+      "reason": "USED_IN_STAGE13"
+    },
+    {
+      "source_image": "/workspace/fashion_data/raw/fashionpedia/images/test/32227cade6d3646824f9c0f3fa9dc9e7.jpg",
+      "reason": "USED_IN_STAGE13"
+    },
+    {
+      "source_image": "/workspace/fashion_data/raw/fashionpedia/images/test/4f23f05daee3cbdd96295f84825e3581.jpg",
+      "reason": "USED_IN_STAGE13"
+    },
+    {
+      "source_image": "/workspace/fashion_data/raw/train/train/image/002278.jpg",
+      "reason": "USED_IN_STAGE13"
+    },
+    {
+      "source_image": "/workspace/fashion_data/raw/train/train/image/013010.jpg",
+      "reason": "USED_IN_STAGE13"
+    },
+    {
+      "source_image": "/workspace/fashion_data/raw/train/train/image/032014.jpg",
+      "reason": "USED_IN_STAGE13"
+    },
+    {
+      "source_image": "/workspace/fashion_data/raw/train/train/image/051719.jpg",
+      "reason": "USED_IN_STAGE13"
+    },
+    {
+      "source_image": "/workspace/fashion_data/raw/train/train/image/092719.jpg",
+      "reason": "USED_IN_STAGE13"
+    }
+  ],
+  "candidate_image_sha256": [
+    {
+      "source_image": "/workspace/fashion_data/raw/fashionpedia/images/test/33cfdcbd48019b09e36a78c428bbae1d.jpg",
+      "source_sha256": "2f60ebbd03f1ae1151ab4643cccc3b05cda61a457853c1ad83ca6c9f07ceeff3",
+      "validation_gt_classes": [
+        "accessory",
+        "pants",
+        "shoe",
+        "top"
+      ]
+    },
+    {
+      "source_image": "/workspace/fashion_data/raw/fashionpedia/images/test/33846044d27032d3988b9b4b7e22e252.jpg",
+      "source_sha256": "f89b6d83f9ff6648b1d6312af4a9cd14be4b808254e9224a7e18020bdcb6619d",
+      "validation_gt_classes": [
+        "dress",
+        "pants",
+        "shoe"
+      ]
+    },
+    {
+      "source_image": "/workspace/fashion_data/raw/train/train/image/114238.jpg",
+      "source_sha256": "d9e4c2cfdb0b0d41182e6199fa266a7372237afc6a7c7608c21b9a44fec568a2",
+      "validation_gt_classes": [
+        "outerwear",
+        "skirt"
+      ]
+    },
+    {
+      "source_image": "/workspace/fashion_data/raw/fashionpedia/images/test/3bf082a96a03a1c8f75e1d1d0ebf42d2.jpg",
+      "source_sha256": "4c586e958e94a7170b3296bbd5fc97cc1c337750f80d8155f175949394a966e0",
+      "validation_gt_classes": [
+        "accessory",
+        "outerwear",
+        "pants",
+        "shoe",
+        "top"
+      ]
+    },
+    {
+      "source_image": "/workspace/fashion_data/raw/fashionpedia/images/test/89144779b3e40421facdb2eb70309356.jpg",
+      "source_sha256": "f2cfb45495139081cf86430588c2584f81ae8f9b106e17aee3fcf506ad3dc81c",
+      "validation_gt_classes": [
+        "dress",
+        "shoe"
+      ]
+    },
+    {
+      "source_image": "/workspace/fashion_data/raw/fashionpedia/images/test/77435fc234059dcb9e0bb3d73382bcc7.jpg",
+      "source_sha256": "bf88cc3aa332176552eb6c44e6a624ca2bf05d23f056a937f6000cb75849ebb6",
+      "validation_gt_classes": [
+        "accessory",
+        "bag",
+        "outerwear",
+        "pants",
+        "shoe"
+      ]
+    },
+    {
+      "source_image": "/workspace/fashion_data/raw/fashionpedia/images/test/89f6e3ad94e5493906b4f3d0e16bdae1.jpg",
+      "source_sha256": "25245e70eb36bc3ab994d824d41e9b5641185d5f8dd31433a8914afb31e553b1",
+      "validation_gt_classes": [
+        "bag",
+        "top"
+      ]
+    },
+    {
+      "source_image": "/workspace/fashion_data/raw/fashionpedia/images/test/dd4525a10b6110df29f0a6b19e6b924b.jpg",
+      "source_sha256": "61fe69dc195f9e07a8b45a3f8eee9cc5f146dca40fe7e6cb700874fe29163342",
+      "validation_gt_classes": [
+        "accessory",
+        "dress",
+        "shoe"
+      ]
+    },
+    {
+      "source_image": "/workspace/fashion_data/raw/fashionpedia/images/test/cdd175f26ac87c01ec64fb2f02268654.jpg",
+      "source_sha256": "a9c2fff42a0fe64a3776c9fd101502a972a53281e9e5990e97c0356b13ca0b84",
+      "validation_gt_classes": [
+        "bag",
+        "dress",
+        "shoe"
+      ]
+    },
+    {
+      "source_image": "/workspace/fashion_data/raw/fashionpedia/images/test/fac6412c2873388612c4ec4cda414ac6.jpg",
+      "source_sha256": "ece935cec2674684214f689bd878663ec5e15acdde69725a183078daa16fd0e6",
+      "validation_gt_classes": [
+        "bag",
+        "dress",
+        "shoe"
+      ]
+    },
+    {
+      "source_image": "/workspace/fashion_data/raw/train/train/image/004648.jpg",
+      "source_sha256": "be50a11c80ad7c0c61d44e14d1c8e97ba047947def8d6317dafb7f6eb14ed632",
+      "validation_gt_classes": [
+        "dress"
+      ]
+    },
+    {
+      "source_image": "/workspace/fashion_data/raw/train/train/image/015031.jpg",
+      "source_sha256": "b8afc1fff47b66e1459d7bb466b0204b97daa8b411054703781d5f3830165787",
+      "validation_gt_classes": [
+        "dress"
+      ]
+    },
+    {
+      "source_image": "/workspace/fashion_data/raw/train/train/image/019779.jpg",
+      "source_sha256": "6f342b460e05950dfa5e796e8524237bba8225dc9a9eef6b91387f11ee6f49da",
+      "validation_gt_classes": [
+        "dress"
+      ]
+    },
+    {
+      "source_image": "/workspace/fashion_data/raw/train/train/image/073497.jpg",
+      "source_sha256": "9b3fe32ef33dab940c4c0f378235ffbe9307fdf5cad7d2897b8dd3c096ed7b1d",
+      "validation_gt_classes": [
+        "pants",
+        "top"
+      ]
+    },
+    {
+      "source_image": "/workspace/fashion_data/raw/train/train/image/079537.jpg",
+      "source_sha256": "a23e53ad9cff8c87adfbfef8968d1a26444d7a0bb255ffb07d6a75023e87a326",
+      "validation_gt_classes": [
+        "pants",
+        "top"
+      ]
+    },
+    {
+      "source_image": "/workspace/fashion_data/raw/train/train/image/096778.jpg",
+      "source_sha256": "f1a8dd47ca0411c6675af302978a81f16b91e88d85222776791bd3b8112ff3ff",
+      "validation_gt_classes": [
+        "dress",
+        "top"
+      ]
+    },
+    {
+      "source_image": "/workspace/fashion_data/raw/train/train/image/101034.jpg",
+      "source_sha256": "1ff3fc0f63441fd6a488ef2ee2a1c482e1760e78b98cfd7f7f8df91468bfbd60",
+      "validation_gt_classes": [
+        "dress",
+        "top"
+      ]
+    },
+    {
+      "source_image": "/workspace/fashion_data/raw/train/train/image/124892.jpg",
+      "source_sha256": "dc58b87123274a7577e4d906c454e1e47c043c8e0b8d8a41af47112b7acde3b4",
+      "validation_gt_classes": [
+        "pants",
+        "top"
+      ]
+    },
+    {
+      "source_image": "/workspace/fashion_data/raw/train/train/image/142658.jpg",
+      "source_sha256": "b8148ca7301b63a7d100214dff5ada69524ffe97a43a7c094f26e38d55595918",
+      "validation_gt_classes": [
+        "skirt",
+        "top"
+      ]
+    },
+    {
+      "source_image": "/workspace/fashion_data/raw/train/train/image/146128.jpg",
+      "source_sha256": "67ad0a245ba72e5cd1d27fc259a0113fba1721adb50c6d7a4b7f23e14e50077c",
+      "validation_gt_classes": [
+        "outerwear"
+      ]
+    },
+    {
+      "source_image": "/workspace/fashion_data/raw/train/train/image/152326.jpg",
+      "source_sha256": "28dbd59d685a39d39f97418ba91f9b8163494d50be5e5fcd109e7da569f29437",
+      "validation_gt_classes": [
+        "pants",
+        "top"
+      ]
+    },
+    {
+      "source_image": "/workspace/fashion_data/raw/train/train/image/174323.jpg",
+      "source_sha256": "ced008e6111b7f2b8382ddefc44160c25e9a5339069bfab2791bdf6512828fb6",
+      "validation_gt_classes": [
+        "pants",
+        "top"
+      ]
+    },
+    {
+      "source_image": "/workspace/fashion_data/raw/train/train/image/178287.jpg",
+      "source_sha256": "427e4b35b0db8c6199590c4ec002173431ecdf9ef1d3348aa696324c0f7b5d5f",
+      "validation_gt_classes": [
+        "pants",
+        "top"
+      ]
+    },
+    {
+      "source_image": "/workspace/fashion_data/raw/train/train/image/184087.jpg",
+      "source_sha256": "800d5ad44da59bfa4fd719ff459524b3acebb3c49acbd0a6cb062b68092b54ac",
+      "validation_gt_classes": [
+        "dress"
+      ]
+    }
+  ],
+  "exclusion_is_path_based_only": true,
+  "not_blind_or_semantic_acceptance": true,
+  "diagnostic_purpose": "validate speed and output parity on additional validation-manifest images"
+}

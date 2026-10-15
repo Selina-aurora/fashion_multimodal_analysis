@@ -1,0 +1,388 @@
+{
+  "schema_version": "attribute_review_v1",
+  "selection_sha256": "f36d08d710565703406c5fa48c29ccea78ea2ca30429ea2991b5f2bed60d47cd",
+  "purpose": "18-target diagnostic attribute review; not formal PRD acceptance; original segmentation validation images",
+  "draft_author": "assistant_visual_review_not_model_prediction",
+  "exported_at": "2026-10-09T06:35:42.293Z",
+  "confirmed_count": 18,
+  "cases": [
+    {
+      "record_id": "v5_validation_00014",
+      "attributes": {
+        "primary_color": "white",
+        "pattern": "graphic_logo",
+        "sleeve_length": "short"
+      },
+      "comment": "",
+      "review_status": "confirmed",
+      "category": "top",
+      "source_dataset": "DeepFashion2",
+      "garment_id": "item1_short_sleeve_top",
+      "garment_bbox": [
+        267,
+        222,
+        530,
+        407
+      ],
+      "source_image_sha256": "f1a8dd47ca0411c6675af302978a81f16b91e88d85222776791bd3b8112ff3ff",
+      "source_image_reference": "../fashion_data/raw/train/train/image/096778.jpg"
+    },
+    {
+      "record_id": "v5_validation_00027",
+      "attributes": {
+        "primary_color": "pink",
+        "pattern": "solid",
+        "sleeve_length": "long"
+      },
+      "comment": "袖子上有条纹",
+      "review_status": "confirmed",
+      "category": "top",
+      "source_dataset": "DeepFashion2",
+      "garment_id": "item1_long_sleeve_top",
+      "garment_bbox": [
+        71,
+        138,
+        597,
+        745
+      ],
+      "source_image_sha256": "ced008e6111b7f2b8382ddefc44160c25e9a5339069bfab2791bdf6512828fb6",
+      "source_image_reference": "../fashion_data/raw/train/train/image/174323.jpg"
+    },
+    {
+      "record_id": "v5_validation_00016",
+      "attributes": {
+        "primary_color": "white",
+        "pattern": "graphic_logo",
+        "sleeve_length": "short"
+      },
+      "comment": "",
+      "review_status": "confirmed",
+      "category": "top",
+      "source_dataset": "DeepFashion2",
+      "garment_id": "item1_short_sleeve_top",
+      "garment_bbox": [
+        153,
+        116,
+        406,
+        377
+      ],
+      "source_image_sha256": "1ff3fc0f63441fd6a488ef2ee2a1c482e1760e78b98cfd7f7f8df91468bfbd60",
+      "source_image_reference": "../fashion_data/raw/train/train/image/101034.jpg"
+    },
+    {
+      "record_id": "v5_validation_00046",
+      "attributes": {
+        "primary_color": "purple",
+        "pattern": "checked_plaid",
+        "sleeve_length": "elbow"
+      },
+      "comment": "",
+      "review_status": "confirmed",
+      "category": "top",
+      "source_dataset": "Fashionpedia",
+      "garment_id": "fashionpedia_ann_6505",
+      "garment_bbox": [
+        234,
+        194,
+        530,
+        504
+      ],
+      "source_image_sha256": "2f60ebbd03f1ae1151ab4643cccc3b05cda61a457853c1ad83ca6c9f07ceeff3",
+      "source_image_reference": "../fashion_data/raw/fashionpedia/images/test/33cfdcbd48019b09e36a78c428bbae1d.jpg"
+    },
+    {
+      "record_id": "v5_validation_00053",
+      "attributes": {
+        "primary_color": "pink",
+        "pattern": "solid",
+        "sleeve_length": "unknown"
+      },
+      "comment": "",
+      "review_status": "confirmed",
+      "category": "top",
+      "source_dataset": "Fashionpedia",
+      "garment_id": "fashionpedia_ann_3411",
+      "garment_bbox": [
+        306,
+        487,
+        379,
+        621
+      ],
+      "source_image_sha256": "4c586e958e94a7170b3296bbd5fc97cc1c337750f80d8155f175949394a966e0",
+      "source_image_reference": "../fashion_data/raw/fashionpedia/images/test/3bf082a96a03a1c8f75e1d1d0ebf42d2.jpg"
+    },
+    {
+      "record_id": "v5_validation_00035",
+      "attributes": {
+        "primary_color": "beige",
+        "pattern": "animal_print",
+        "sleeve_length": "short"
+      },
+      "comment": "",
+      "review_status": "confirmed",
+      "category": "top",
+      "source_dataset": "Fashionpedia",
+      "garment_id": "fashionpedia_ann_6951",
+      "garment_bbox": [
+        342,
+        251,
+        531,
+        405
+      ],
+      "source_image_sha256": "68cc723eca099c94e3b8b6b62ab7f67a024963cec1329f19f41abbf9cdced0d6",
+      "source_image_reference": "../fashion_data/raw/fashionpedia/images/test/311db0d6f5b7be84ac3c952a443ef981.jpg"
+    },
+    {
+      "record_id": "v5_validation_00013",
+      "attributes": {
+        "primary_color": "white",
+        "pattern": "solid",
+        "sleeve_length": "unknown"
+      },
+      "comment": "",
+      "review_status": "confirmed",
+      "category": "outerwear",
+      "source_dataset": "DeepFashion2",
+      "garment_id": "item1_long_sleeve_outwear",
+      "garment_bbox": [
+        76,
+        98,
+        468,
+        574
+      ],
+      "source_image_sha256": "cf6b7b4aaafa31a9c1fa0a046ddcbf028f9a094bcc7b94932c2bce599438a0e9",
+      "source_image_reference": "../fashion_data/raw/train/train/image/092719.jpg"
+    },
+    {
+      "record_id": "v5_validation_00018",
+      "attributes": {
+        "primary_color": "black",
+        "pattern": "striped",
+        "sleeve_length": "three_quarter"
+      },
+      "comment": "",
+      "review_status": "confirmed",
+      "category": "outerwear",
+      "source_dataset": "DeepFashion2",
+      "garment_id": "item1_long_sleeve_outwear",
+      "garment_bbox": [
+        126,
+        200,
+        640,
+        957
+      ],
+      "source_image_sha256": "d9e4c2cfdb0b0d41182e6199fa266a7372237afc6a7c7608c21b9a44fec568a2",
+      "source_image_reference": "../fashion_data/raw/train/train/image/114238.jpg"
+    },
+    {
+      "record_id": "v5_validation_00024",
+      "attributes": {
+        "primary_color": "black",
+        "pattern": "floral",
+        "sleeve_length": "three_quarter"
+      },
+      "comment": "",
+      "review_status": "confirmed",
+      "category": "outerwear",
+      "source_dataset": "DeepFashion2",
+      "garment_id": "item1_long_sleeve_outwear",
+      "garment_bbox": [
+        5,
+        127,
+        305,
+        395
+      ],
+      "source_image_sha256": "67ad0a245ba72e5cd1d27fc259a0113fba1721adb50c6d7a4b7f23e14e50077c",
+      "source_image_reference": "../fashion_data/raw/train/train/image/146128.jpg"
+    },
+    {
+      "record_id": "v5_validation_00036",
+      "attributes": {
+        "primary_color": "purple",
+        "pattern": "geometric_abstract",
+        "sleeve_length": "long"
+      },
+      "comment": "",
+      "review_status": "confirmed",
+      "category": "outerwear",
+      "source_dataset": "Fashionpedia",
+      "garment_id": "fashionpedia_ann_7673",
+      "garment_bbox": [
+        99,
+        208,
+        326,
+        545
+      ],
+      "source_image_sha256": "ba1a04bce9114beba860ee784d34f2a2c43b4fee2e7680e69726795e5b4b79fe",
+      "source_image_reference": "../fashion_data/raw/fashionpedia/images/test/32227cade6d3646824f9c0f3fa9dc9e7.jpg"
+    },
+    {
+      "record_id": "v5_validation_00062",
+      "attributes": {
+        "primary_color": "green",
+        "pattern": "solid",
+        "sleeve_length": "long"
+      },
+      "comment": "",
+      "review_status": "confirmed",
+      "category": "outerwear",
+      "source_dataset": "Fashionpedia",
+      "garment_id": "fashionpedia_ann_6083",
+      "garment_bbox": [
+        218,
+        187,
+        535,
+        635
+      ],
+      "source_image_sha256": "df91edad8133b9d732873c9a4df1d76a5bb76799a3aff8948337c47fec241b9d",
+      "source_image_reference": "../fashion_data/raw/fashionpedia/images/test/4f23f05daee3cbdd96295f84825e3581.jpg"
+    },
+    {
+      "record_id": "v5_validation_00064",
+      "attributes": {
+        "primary_color": "black",
+        "pattern": "solid",
+        "sleeve_length": "long"
+      },
+      "comment": "",
+      "review_status": "confirmed",
+      "category": "outerwear",
+      "source_dataset": "Fashionpedia",
+      "garment_id": "fashionpedia_ann_2414",
+      "garment_bbox": [
+        544,
+        300,
+        669,
+        493
+      ],
+      "source_image_sha256": "bf88cc3aa332176552eb6c44e6a624ca2bf05d23f056a937f6000cb75849ebb6",
+      "source_image_reference": "../fashion_data/raw/fashionpedia/images/test/77435fc234059dcb9e0bb3d73382bcc7.jpg"
+    },
+    {
+      "record_id": "v5_validation_00031",
+      "attributes": {
+        "primary_color": "black",
+        "pattern": "solid",
+        "sleeve_length": "long"
+      },
+      "comment": "",
+      "review_status": "confirmed",
+      "category": "dress",
+      "source_dataset": "DeepFashion2",
+      "garment_id": "item1_long_sleeve_dress",
+      "garment_bbox": [
+        186,
+        4,
+        760,
+        1067
+      ],
+      "source_image_sha256": "800d5ad44da59bfa4fd719ff459524b3acebb3c49acbd0a6cb062b68092b54ac",
+      "source_image_reference": "../fashion_data/raw/train/train/image/184087.jpg"
+    },
+    {
+      "record_id": "v5_validation_00006",
+      "attributes": {
+        "primary_color": "white",
+        "pattern": "solid",
+        "sleeve_length": "sleeveless"
+      },
+      "comment": "",
+      "review_status": "confirmed",
+      "category": "dress",
+      "source_dataset": "DeepFashion2",
+      "garment_id": "item1_short_sleeve_dress",
+      "garment_bbox": [
+        63,
+        189,
+        466,
+        624
+      ],
+      "source_image_sha256": "6f342b460e05950dfa5e796e8524237bba8225dc9a9eef6b91387f11ee6f49da",
+      "source_image_reference": "../fashion_data/raw/train/train/image/019779.jpg"
+    },
+    {
+      "record_id": "v5_validation_00005",
+      "attributes": {
+        "primary_color": "green",
+        "pattern": "checked_plaid",
+        "sleeve_length": "short"
+      },
+      "comment": "",
+      "review_status": "confirmed",
+      "category": "dress",
+      "source_dataset": "DeepFashion2",
+      "garment_id": "item1_short_sleeve_dress",
+      "garment_bbox": [
+        55,
+        239,
+        349,
+        644
+      ],
+      "source_image_sha256": "b8afc1fff47b66e1459d7bb466b0204b97daa8b411054703781d5f3830165787",
+      "source_image_reference": "../fashion_data/raw/train/train/image/015031.jpg"
+    },
+    {
+      "record_id": "v5_validation_00072",
+      "attributes": {
+        "primary_color": "purple",
+        "pattern": "solid",
+        "sleeve_length": "sleeveless"
+      },
+      "comment": "",
+      "review_status": "confirmed",
+      "category": "dress",
+      "source_dataset": "Fashionpedia",
+      "garment_id": "fashionpedia_ann_8517",
+      "garment_bbox": [
+        107,
+        248,
+        352,
+        711
+      ],
+      "source_image_sha256": "f2cfb45495139081cf86430588c2584f81ae8f9b106e17aee3fcf506ad3dc81c",
+      "source_image_reference": "../fashion_data/raw/fashionpedia/images/test/89144779b3e40421facdb2eb70309356.jpg"
+    },
+    {
+      "record_id": "v5_validation_00085",
+      "attributes": {
+        "primary_color": "black",
+        "pattern": "solid",
+        "sleeve_length": "unknown"
+      },
+      "comment": "",
+      "review_status": "confirmed",
+      "category": "dress",
+      "source_dataset": "Fashionpedia",
+      "garment_id": "fashionpedia_ann_7325",
+      "garment_bbox": [
+        192,
+        229,
+        479,
+        753
+      ],
+      "source_image_sha256": "ece935cec2674684214f689bd878663ec5e15acdde69725a183078daa16fd0e6",
+      "source_image_reference": "../fashion_data/raw/fashionpedia/images/test/fac6412c2873388612c4ec4cda414ac6.jpg"
+    },
+    {
+      "record_id": "v5_validation_00081",
+      "attributes": {
+        "primary_color": "red",
+        "pattern": "solid",
+        "sleeve_length": "sleeveless"
+      },
+      "comment": "",
+      "review_status": "confirmed",
+      "category": "dress",
+      "source_dataset": "Fashionpedia",
+      "garment_id": "fashionpedia_ann_2757",
+      "garment_bbox": [
+        521,
+        125,
+        753,
+        646
+      ],
+      "source_image_sha256": "61fe69dc195f9e07a8b45a3f8eee9cc5f146dca40fe7e6cb700874fe29163342",
+      "source_image_reference": "../fashion_data/raw/fashionpedia/images/test/dd4525a10b6110df29f0a6b19e6b924b.jpg"
+    }
+  ]
+}

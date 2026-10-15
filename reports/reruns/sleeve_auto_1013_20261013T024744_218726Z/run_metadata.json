@@ -1,0 +1,34 @@
+{
+  "purpose": "8-image development feasibility, NOT blind validation",
+  "input": "original images only; predicted garment bbox/mask",
+  "gt_used_in_inference": false,
+  "GT_matching": "evaluation only after predictions.json saved",
+  "frozen_csv_sha256_before": {
+    "configs/prd_8class_train_v5_balanced150_20261008.csv": "e8c277055efe4d042b4353bf2d4553bddddc7706eead9398f07f5efcd90bb38f",
+    "configs/prd_8class_val_v2_full_targets.csv": "39141f545ea5512d16ed074788b6f98474b33baff111d3b663ec0ffcc4c40b93",
+    "benchmark/prd_3_1_v1/manifests/segmentation_test_v1.csv": "c83204aca87c9c4dee304b774fd459bf5a18a2d1d65f0a3a9a79b92721224b89"
+  },
+  "pose_weights_sha256": "869e83fcdffdc7371fa4e34cd8e51c838cc729571d1635e5141e3075e9319dc0",
+  "segmentation_checkpoint": "/workspace/fashion_multimodal_analysis/outputs/recovery_20261008/v5_balanced150/checkpoint_last.pth",
+  "segmentation_weights_sha256": "c5ba795225349b1c521aac0517ac7c493d9818dcc17d558ac4a3f6f8669452f0",
+  "script_sha256": {
+    "geometry.py": "a934f0cf4aaaeee4b8b223d8926d98c4eac6e59fa589530fbb10fe5f3495df4b",
+    "pose_worker.py": "77f4bf75efb7607ae0c02b625ec5f1219f6f7c64195004d142e5657dd66bd043",
+    "run.py": "459823f075384447c20cd1a5c3a6f773b49b5512ce4c352af71b44c593caf38c",
+    "test_geometry.py": "4a047fb930ec8e7180f8e1678c883c2621849fc412520b6966a392515311961c"
+  },
+  "parameters": {
+    "seg_score": 0.4,
+    "mask_threshold": 0.5,
+    "pose_score": 0.25,
+    "joint_confidence": 0.25,
+    "evaluation_bbox_iou": 0.5
+  },
+  "acceptance_thresholds": "NOT AGREED; exploratory metrics only; PCK@0.05 diagonal is a diagnostic",
+  "frozen_csv_sha256_after": {
+    "configs/prd_8class_train_v5_balanced150_20261008.csv": "e8c277055efe4d042b4353bf2d4553bddddc7706eead9398f07f5efcd90bb38f",
+    "configs/prd_8class_val_v2_full_targets.csv": "39141f545ea5512d16ed074788b6f98474b33baff111d3b663ec0ffcc4c40b93",
+    "benchmark/prd_3_1_v1/manifests/segmentation_test_v1.csv": "c83204aca87c9c4dee304b774fd459bf5a18a2d1d65f0a3a9a79b92721224b89"
+  },
+  "completed": true
+}

@@ -1,0 +1,43 @@
+{
+  "task": "target_garment_conditioned_cuff_boxes",
+  "dataset_dir": "/workspace/fashion_multimodal_analysis/reports/reruns/recovery_20261009/cuff_expanded_data_20261009_052733_007388",
+  "manifest_sha256": "94ad937c80a9ecc099d96ff0f5d833f05bcd22a9a3f58de3ce7f8d994261fb58",
+  "base_checkpoint": "/workspace/fashion_multimodal_analysis/outputs/recovery_20261008/v5_balanced150/checkpoint_last.pth",
+  "base_checkpoint_sha256": "c5ba795225349b1c521aac0517ac7c493d9818dcc17d558ac4a3f6f8669452f0",
+  "dataset_json_sha256": "573b67718e9dda990476828136f20d51a22174e145e526c8ba70faae9d455b47",
+  "epochs": 40,
+  "seed": 20261009,
+  "input": "RGB + binary target garment mask; full RGB context retained",
+  "context_padding_fraction": 0.1,
+  "min_size": 640,
+  "max_size": 1024,
+  "batch_size": 1,
+  "workers": 0,
+  "confidence_threshold": 0.4,
+  "matching_iou": 0.5,
+  "optimizer": "SGD lr=.005 momentum=.9 weight_decay=.0005",
+  "lr_milestones": [
+    25,
+    35
+  ],
+  "roi_batch_size_per_image": 64,
+  "roi_positive_fraction": 0.5,
+  "trainable_resnet": [
+    "conv1",
+    "layer3",
+    "layer4"
+  ],
+  "variant": "v3 expanded training; train-only horizontal flips and mild RGB brightness/contrast; unchanged development split",
+  "augmentation_enabled": true,
+  "selection": "highest development_val F1; ties retain earlier epoch",
+  "limitations": [
+    "All source images came from original segmentation training data.",
+    "No independent untouched end-to-end test set is established.",
+    "Annotations apply only to the specified garment, not every garment in the image.",
+    "Ambiguous cases are excluded, never used as empty-label negatives.",
+    "No original segmentation label, weight, or protected Core/val manifest is modified.",
+    "Original nine development images and cuff labels unchanged.",
+    "Supplement contains only new training samples; no independent blind cuff test."
+  ],
+  "role": "controlled pilot using native target garment ROI/mask; not end-to-end prediction or blind PRD acceptance"
+}

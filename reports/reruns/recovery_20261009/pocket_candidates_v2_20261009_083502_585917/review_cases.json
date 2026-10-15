@@ -1,0 +1,1988 @@
+[
+  {
+    "split": "train",
+    "record_id": "v5_train_00810",
+    "category": "top",
+    "source_image": "../fashion_data/raw/fashionpedia/images/test/6096b12d8fc996b65b4b9947b18502ca.jpg",
+    "garment_id": "fashionpedia_ann_3845",
+    "native_garment_annotation_id": 3845,
+    "image_id": 19326,
+    "garment_bbox": [
+      157.0,
+      193.0,
+      338.0,
+      493.0
+    ],
+    "parts": [
+      {
+        "image_id": 19326,
+        "image_file": "6096b12d8fc996b65b4b9947b18502ca.jpg",
+        "part_annotation_id": 3846,
+        "part_bbox_xywh": [
+          275.0,
+          422.0,
+          39.0,
+          13.0
+        ],
+        "part_attributes": [
+          {
+            "id": 219,
+            "name": "welt (pocket)",
+            "supercategory": "nickname",
+            "level": 1,
+            "taxonomy_id": "att000226_00"
+          }
+        ],
+        "ranked_garment_coverages": [
+          {
+            "garment_annotation_id": 3845,
+            "part_coverage": 1.0
+          },
+          {
+            "garment_annotation_id": 3844,
+            "part_coverage": 0.0
+          },
+          {
+            "garment_annotation_id": 3853,
+            "part_coverage": 0.0
+          }
+        ],
+        "association_status": "PROPOSED_SELECTED_GARMENT",
+        "proposed_native_garment_annotation_id": 3845,
+        "association_confirmed": false
+      },
+      {
+        "image_id": 19326,
+        "image_file": "6096b12d8fc996b65b4b9947b18502ca.jpg",
+        "part_annotation_id": 3847,
+        "part_bbox_xywh": [
+          169.0,
+          413.0,
+          44.0,
+          12.0
+        ],
+        "part_attributes": [
+          {
+            "id": 219,
+            "name": "welt (pocket)",
+            "supercategory": "nickname",
+            "level": 1,
+            "taxonomy_id": "att000226_00"
+          }
+        ],
+        "ranked_garment_coverages": [
+          {
+            "garment_annotation_id": 3845,
+            "part_coverage": 1.0
+          },
+          {
+            "garment_annotation_id": 3844,
+            "part_coverage": 0.0
+          },
+          {
+            "garment_annotation_id": 3853,
+            "part_coverage": 0.0
+          }
+        ],
+        "association_status": "PROPOSED_SELECTED_GARMENT",
+        "proposed_native_garment_annotation_id": 3845,
+        "association_confirmed": false
+      }
+    ],
+    "review_status": "pending",
+    "confirmed_gt": false,
+    "source_image_sha256": "587986a331a60f7877dba12a0395641cf67281c00b859afdd1f5a7a105b889dd",
+    "review_number": 1,
+    "source_image_export": "review_images/01_source.jpg",
+    "marked_image_export": "review_images/01_marked.jpg"
+  },
+  {
+    "split": "train",
+    "record_id": "v5_train_01531",
+    "category": "top",
+    "source_image": "../fashion_data/raw/fashionpedia/images/test/b360c19580caf49e561173fab54bfdb2.jpg",
+    "garment_id": "fashionpedia_ann_9272",
+    "native_garment_annotation_id": 9272,
+    "image_id": 13560,
+    "garment_bbox": [
+      189.0,
+      217.0,
+      464.0,
+      576.0
+    ],
+    "parts": [
+      {
+        "image_id": 13560,
+        "image_file": "b360c19580caf49e561173fab54bfdb2.jpg",
+        "part_annotation_id": 9274,
+        "part_bbox_xywh": [
+          355.0,
+          309.0,
+          51.0,
+          27.0
+        ],
+        "part_attributes": [
+          {
+            "id": 224,
+            "name": "flap (pocket)",
+            "supercategory": "nickname",
+            "level": 1,
+            "taxonomy_id": "att000231_00"
+          }
+        ],
+        "ranked_garment_coverages": [
+          {
+            "garment_annotation_id": 9272,
+            "part_coverage": 1.0
+          },
+          {
+            "garment_annotation_id": 9265,
+            "part_coverage": 0.0
+          }
+        ],
+        "association_status": "PROPOSED_SELECTED_GARMENT",
+        "proposed_native_garment_annotation_id": 9272,
+        "association_confirmed": false
+      }
+    ],
+    "review_status": "pending",
+    "confirmed_gt": false,
+    "source_image_sha256": "7c226c4b333797363a4a976d99ed3ae792af5251243fa90e9413ec678ab86057",
+    "review_number": 2,
+    "source_image_export": "review_images/02_source.jpg",
+    "marked_image_export": "review_images/02_marked.jpg"
+  },
+  {
+    "split": "train",
+    "record_id": "v5_train_00330",
+    "category": "top",
+    "source_image": "../fashion_data/raw/fashionpedia/images/test/1ca6fb4b937bb1f34797d3315266a546.jpg",
+    "garment_id": "fashionpedia_ann_4873",
+    "native_garment_annotation_id": 4873,
+    "image_id": 20328,
+    "garment_bbox": [
+      358.0,
+      339.0,
+      663.0,
+      682.0
+    ],
+    "parts": [
+      {
+        "image_id": 20328,
+        "image_file": "1ca6fb4b937bb1f34797d3315266a546.jpg",
+        "part_annotation_id": 4869,
+        "part_bbox_xywh": [
+          608.0,
+          549.0,
+          54.0,
+          132.0
+        ],
+        "part_attributes": [
+          {
+            "id": 224,
+            "name": "flap (pocket)",
+            "supercategory": "nickname",
+            "level": 1,
+            "taxonomy_id": "att000231_00"
+          }
+        ],
+        "ranked_garment_coverages": [
+          {
+            "garment_annotation_id": 4873,
+            "part_coverage": 1.0
+          },
+          {
+            "garment_annotation_id": 4867,
+            "part_coverage": 0.0
+          }
+        ],
+        "association_status": "PROPOSED_SELECTED_GARMENT",
+        "proposed_native_garment_annotation_id": 4873,
+        "association_confirmed": false
+      },
+      {
+        "image_id": 20328,
+        "image_file": "1ca6fb4b937bb1f34797d3315266a546.jpg",
+        "part_annotation_id": 4870,
+        "part_bbox_xywh": [
+          358.0,
+          581.0,
+          28.0,
+          100.0
+        ],
+        "part_attributes": [
+          {
+            "id": 224,
+            "name": "flap (pocket)",
+            "supercategory": "nickname",
+            "level": 1,
+            "taxonomy_id": "att000231_00"
+          }
+        ],
+        "ranked_garment_coverages": [
+          {
+            "garment_annotation_id": 4873,
+            "part_coverage": 1.0
+          },
+          {
+            "garment_annotation_id": 4867,
+            "part_coverage": 0.0
+          }
+        ],
+        "association_status": "PROPOSED_SELECTED_GARMENT",
+        "proposed_native_garment_annotation_id": 4873,
+        "association_confirmed": false
+      }
+    ],
+    "review_status": "pending",
+    "confirmed_gt": false,
+    "source_image_sha256": "dcf5c21401cabe845aab03f7009a9936b2833fdbef0b5ba9527a9cd75dd6d5ad",
+    "review_number": 3,
+    "source_image_export": "review_images/03_source.jpg",
+    "marked_image_export": "review_images/03_marked.jpg"
+  },
+  {
+    "split": "train",
+    "record_id": "v5_train_01283",
+    "category": "top",
+    "source_image": "../fashion_data/raw/fashionpedia/images/test/9947f3f56aa4fab3b07bca98b09d7bfe.jpg",
+    "garment_id": "fashionpedia_ann_1683",
+    "native_garment_annotation_id": 1683,
+    "image_id": 17090,
+    "garment_bbox": [
+      252.0,
+      0.0,
+      535.0,
+      282.0
+    ],
+    "parts": [
+      {
+        "image_id": 17090,
+        "image_file": "9947f3f56aa4fab3b07bca98b09d7bfe.jpg",
+        "part_annotation_id": 1687,
+        "part_bbox_xywh": [
+          263.0,
+          126.0,
+          89.0,
+          101.0
+        ],
+        "part_attributes": [
+          {
+            "id": 224,
+            "name": "flap (pocket)",
+            "supercategory": "nickname",
+            "level": 1,
+            "taxonomy_id": "att000231_00"
+          }
+        ],
+        "ranked_garment_coverages": [
+          {
+            "garment_annotation_id": 1683,
+            "part_coverage": 0.9988145639288738
+          },
+          {
+            "garment_annotation_id": 1681,
+            "part_coverage": 0.0
+          },
+          {
+            "garment_annotation_id": 1689,
+            "part_coverage": 0.0
+          }
+        ],
+        "association_status": "PROPOSED_SELECTED_GARMENT",
+        "proposed_native_garment_annotation_id": 1683,
+        "association_confirmed": false
+      },
+      {
+        "image_id": 17090,
+        "image_file": "9947f3f56aa4fab3b07bca98b09d7bfe.jpg",
+        "part_annotation_id": 1688,
+        "part_bbox_xywh": [
+          447.0,
+          152.0,
+          52.0,
+          80.0
+        ],
+        "part_attributes": [
+          {
+            "id": 224,
+            "name": "flap (pocket)",
+            "supercategory": "nickname",
+            "level": 1,
+            "taxonomy_id": "att000231_00"
+          }
+        ],
+        "ranked_garment_coverages": [
+          {
+            "garment_annotation_id": 1683,
+            "part_coverage": 0.999611801242236
+          },
+          {
+            "garment_annotation_id": 1681,
+            "part_coverage": 0.00038819875776397513
+          },
+          {
+            "garment_annotation_id": 1689,
+            "part_coverage": 0.0
+          }
+        ],
+        "association_status": "PROPOSED_SELECTED_GARMENT",
+        "proposed_native_garment_annotation_id": 1683,
+        "association_confirmed": false
+      }
+    ],
+    "review_status": "pending",
+    "confirmed_gt": false,
+    "source_image_sha256": "efa0b4274ccfa3102dad25e86f95b924cc714ab6618fc7d6e3ca8a2ed35d86a2",
+    "review_number": 4,
+    "source_image_export": "review_images/04_source.jpg",
+    "marked_image_export": "review_images/04_marked.jpg"
+  },
+  {
+    "split": "train",
+    "record_id": "v5_train_01076",
+    "category": "pants",
+    "source_image": "../fashion_data/raw/fashionpedia/images/test/809906ce0fd1e001d613c9b13e7e8a4e.jpg",
+    "garment_id": "fashionpedia_ann_9118",
+    "native_garment_annotation_id": 9118,
+    "image_id": 13428,
+    "garment_bbox": [
+      181.0,
+      665.0,
+      393.0,
+      744.0
+    ],
+    "parts": [
+      {
+        "image_id": 13428,
+        "image_file": "809906ce0fd1e001d613c9b13e7e8a4e.jpg",
+        "part_annotation_id": 9119,
+        "part_bbox_xywh": [
+          190.0,
+          681.0,
+          42.0,
+          21.0
+        ],
+        "part_attributes": [
+          {
+            "id": 223,
+            "name": "curved (pocket)",
+            "supercategory": "nickname",
+            "level": 1,
+            "taxonomy_id": "att000230_00"
+          }
+        ],
+        "ranked_garment_coverages": [
+          {
+            "garment_annotation_id": 9118,
+            "part_coverage": 1.0
+          },
+          {
+            "garment_annotation_id": 9124,
+            "part_coverage": 0.0
+          },
+          {
+            "garment_annotation_id": 9125,
+            "part_coverage": 0.0
+          }
+        ],
+        "association_status": "PROPOSED_SELECTED_GARMENT",
+        "proposed_native_garment_annotation_id": 9118,
+        "association_confirmed": false
+      }
+    ],
+    "review_status": "pending",
+    "confirmed_gt": false,
+    "source_image_sha256": "edcaa83c6fe3e63cb463429fa57816681c3e26200b371bc2ea40e87734bd0ccc",
+    "review_number": 5,
+    "source_image_export": "review_images/05_source.jpg",
+    "marked_image_export": "review_images/05_marked.jpg"
+  },
+  {
+    "split": "train",
+    "record_id": "v5_train_01648",
+    "category": "pants",
+    "source_image": "../fashion_data/raw/fashionpedia/images/test/c7154df1a2a7d442ba4a2f9579622a31.jpg",
+    "garment_id": "fashionpedia_ann_5203",
+    "native_garment_annotation_id": 5203,
+    "image_id": 18638,
+    "garment_bbox": [
+      272.0,
+      479.0,
+      448.0,
+      622.0
+    ],
+    "parts": [
+      {
+        "image_id": 18638,
+        "image_file": "c7154df1a2a7d442ba4a2f9579622a31.jpg",
+        "part_annotation_id": 5201,
+        "part_bbox_xywh": [
+          390.0,
+          479.0,
+          57.0,
+          103.0
+        ],
+        "part_attributes": [
+          {
+            "id": 218,
+            "name": "patch (pocket)",
+            "supercategory": "nickname",
+            "level": 1,
+            "taxonomy_id": "att000225_00"
+          }
+        ],
+        "ranked_garment_coverages": [
+          {
+            "garment_annotation_id": 5203,
+            "part_coverage": 1.0
+          },
+          {
+            "garment_annotation_id": 5200,
+            "part_coverage": 0.0
+          }
+        ],
+        "association_status": "PROPOSED_SELECTED_GARMENT",
+        "proposed_native_garment_annotation_id": 5203,
+        "association_confirmed": false
+      },
+      {
+        "image_id": 18638,
+        "image_file": "c7154df1a2a7d442ba4a2f9579622a31.jpg",
+        "part_annotation_id": 5202,
+        "part_bbox_xywh": [
+          272.0,
+          535.0,
+          27.0,
+          64.0
+        ],
+        "part_attributes": [
+          {
+            "id": 218,
+            "name": "patch (pocket)",
+            "supercategory": "nickname",
+            "level": 1,
+            "taxonomy_id": "att000225_00"
+          }
+        ],
+        "ranked_garment_coverages": [
+          {
+            "garment_annotation_id": 5203,
+            "part_coverage": 1.0
+          },
+          {
+            "garment_annotation_id": 5200,
+            "part_coverage": 0.0
+          }
+        ],
+        "association_status": "PROPOSED_SELECTED_GARMENT",
+        "proposed_native_garment_annotation_id": 5203,
+        "association_confirmed": false
+      }
+    ],
+    "review_status": "pending",
+    "confirmed_gt": false,
+    "source_image_sha256": "9e2428a31490a5c22feb5e437a3700b87b4a80d05157f1d3471567160f22cadc",
+    "review_number": 6,
+    "source_image_export": "review_images/06_source.jpg",
+    "marked_image_export": "review_images/06_marked.jpg"
+  },
+  {
+    "split": "train",
+    "record_id": "v5_train_01284",
+    "category": "pants",
+    "source_image": "../fashion_data/raw/fashionpedia/images/test/9947f3f56aa4fab3b07bca98b09d7bfe.jpg",
+    "garment_id": "fashionpedia_ann_1689",
+    "native_garment_annotation_id": 1689,
+    "image_id": 17090,
+    "garment_bbox": [
+      189.0,
+      269.0,
+      639.0,
+      588.0
+    ],
+    "parts": [
+      {
+        "image_id": 17090,
+        "image_file": "9947f3f56aa4fab3b07bca98b09d7bfe.jpg",
+        "part_annotation_id": 1690,
+        "part_bbox_xywh": [
+          297.0,
+          424.0,
+          39.0,
+          9.0
+        ],
+        "part_attributes": [
+          {
+            "id": 218,
+            "name": "patch (pocket)",
+            "supercategory": "nickname",
+            "level": 1,
+            "taxonomy_id": "att000225_00"
+          }
+        ],
+        "ranked_garment_coverages": [
+          {
+            "garment_annotation_id": 1689,
+            "part_coverage": 1.0
+          },
+          {
+            "garment_annotation_id": 1681,
+            "part_coverage": 0.0
+          },
+          {
+            "garment_annotation_id": 1683,
+            "part_coverage": 0.0
+          }
+        ],
+        "association_status": "PROPOSED_SELECTED_GARMENT",
+        "proposed_native_garment_annotation_id": 1689,
+        "association_confirmed": false
+      },
+      {
+        "image_id": 17090,
+        "image_file": "9947f3f56aa4fab3b07bca98b09d7bfe.jpg",
+        "part_annotation_id": 1691,
+        "part_bbox_xywh": [
+          436.0,
+          431.0,
+          31.0,
+          3.0
+        ],
+        "part_attributes": [
+          {
+            "id": 218,
+            "name": "patch (pocket)",
+            "supercategory": "nickname",
+            "level": 1,
+            "taxonomy_id": "att000225_00"
+          }
+        ],
+        "ranked_garment_coverages": [
+          {
+            "garment_annotation_id": 1689,
+            "part_coverage": 1.0
+          },
+          {
+            "garment_annotation_id": 1681,
+            "part_coverage": 0.0
+          },
+          {
+            "garment_annotation_id": 1683,
+            "part_coverage": 0.0
+          }
+        ],
+        "association_status": "PROPOSED_SELECTED_GARMENT",
+        "proposed_native_garment_annotation_id": 1689,
+        "association_confirmed": false
+      }
+    ],
+    "review_status": "pending",
+    "confirmed_gt": false,
+    "source_image_sha256": "efa0b4274ccfa3102dad25e86f95b924cc714ab6618fc7d6e3ca8a2ed35d86a2",
+    "review_number": 7,
+    "source_image_export": "review_images/07_source.jpg",
+    "marked_image_export": "review_images/07_marked.jpg"
+  },
+  {
+    "split": "train",
+    "record_id": "v5_train_00414",
+    "category": "pants",
+    "source_image": "../fashion_data/raw/fashionpedia/images/test/28f3172e9e96bb17c1f9ec3697b175bc.jpg",
+    "garment_id": "fashionpedia_ann_9016",
+    "native_garment_annotation_id": 9016,
+    "image_id": 11856,
+    "garment_bbox": [
+      158.0,
+      420.0,
+      311.0,
+      595.0
+    ],
+    "parts": [
+      {
+        "image_id": 11856,
+        "image_file": "28f3172e9e96bb17c1f9ec3697b175bc.jpg",
+        "part_annotation_id": 9020,
+        "part_bbox_xywh": [
+          172.0,
+          447.0,
+          30.0,
+          65.0
+        ],
+        "part_attributes": [
+          {
+            "id": 222,
+            "name": "slash (pocket)",
+            "supercategory": "nickname",
+            "level": 1,
+            "taxonomy_id": "att000229_00"
+          }
+        ],
+        "ranked_garment_coverages": [
+          {
+            "garment_annotation_id": 9016,
+            "part_coverage": 1.0
+          },
+          {
+            "garment_annotation_id": 9017,
+            "part_coverage": 0.0
+          }
+        ],
+        "association_status": "PROPOSED_SELECTED_GARMENT",
+        "proposed_native_garment_annotation_id": 9016,
+        "association_confirmed": false
+      }
+    ],
+    "review_status": "pending",
+    "confirmed_gt": false,
+    "source_image_sha256": "f62e1c9d4a0cd7015a047e77172fc905c81f9e85fdca27f83dc44588f04add33",
+    "review_number": 8,
+    "source_image_export": "review_images/08_source.jpg",
+    "marked_image_export": "review_images/08_marked.jpg"
+  },
+  {
+    "split": "train",
+    "record_id": "v5_train_01712",
+    "category": "skirt",
+    "source_image": "../fashion_data/raw/fashionpedia/images/test/cf2b90efe608a262ab09c367feddc352.jpg",
+    "garment_id": "fashionpedia_ann_3876",
+    "native_garment_annotation_id": 3876,
+    "image_id": 19394,
+    "garment_bbox": [
+      384.0,
+      464.0,
+      555.0,
+      644.0
+    ],
+    "parts": [
+      {
+        "image_id": 19394,
+        "image_file": "cf2b90efe608a262ab09c367feddc352.jpg",
+        "part_annotation_id": 3877,
+        "part_bbox_xywh": [
+          467.0,
+          502.0,
+          57.0,
+          33.0
+        ],
+        "part_attributes": [
+          {
+            "id": 219,
+            "name": "welt (pocket)",
+            "supercategory": "nickname",
+            "level": 1,
+            "taxonomy_id": "att000226_00"
+          }
+        ],
+        "ranked_garment_coverages": [
+          {
+            "garment_annotation_id": 3876,
+            "part_coverage": 1.0
+          },
+          {
+            "garment_annotation_id": 3879,
+            "part_coverage": 0.0
+          },
+          {
+            "garment_annotation_id": 3881,
+            "part_coverage": 0.0
+          }
+        ],
+        "association_status": "PROPOSED_SELECTED_GARMENT",
+        "proposed_native_garment_annotation_id": 3876,
+        "association_confirmed": false
+      }
+    ],
+    "review_status": "pending",
+    "confirmed_gt": false,
+    "source_image_sha256": "1622426b9b02834f821be75daee4b8be7ad7df8000f8902925ac958ed6682403",
+    "review_number": 9,
+    "source_image_export": "review_images/09_source.jpg",
+    "marked_image_export": "review_images/09_marked.jpg"
+  },
+  {
+    "split": "train",
+    "record_id": "v5_train_00390",
+    "category": "skirt",
+    "source_image": "../fashion_data/raw/fashionpedia/images/test/228d6f335e7c88d524d4bd4c8bdebd1d.jpg",
+    "garment_id": "fashionpedia_ann_5157",
+    "native_garment_annotation_id": 5157,
+    "image_id": 20639,
+    "garment_bbox": [
+      148.0,
+      364.0,
+      320.0,
+      585.0
+    ],
+    "parts": [
+      {
+        "image_id": 20639,
+        "image_file": "228d6f335e7c88d524d4bd4c8bdebd1d.jpg",
+        "part_annotation_id": 5158,
+        "part_bbox_xywh": [
+          244.0,
+          383.0,
+          43.0,
+          48.0
+        ],
+        "part_attributes": [
+          {
+            "id": 218,
+            "name": "patch (pocket)",
+            "supercategory": "nickname",
+            "level": 1,
+            "taxonomy_id": "att000225_00"
+          }
+        ],
+        "ranked_garment_coverages": [
+          {
+            "garment_annotation_id": 5157,
+            "part_coverage": 1.0
+          },
+          {
+            "garment_annotation_id": 5154,
+            "part_coverage": 0.0
+          }
+        ],
+        "association_status": "PROPOSED_SELECTED_GARMENT",
+        "proposed_native_garment_annotation_id": 5157,
+        "association_confirmed": false
+      },
+      {
+        "image_id": 20639,
+        "image_file": "228d6f335e7c88d524d4bd4c8bdebd1d.jpg",
+        "part_annotation_id": 5159,
+        "part_bbox_xywh": [
+          290.0,
+          371.0,
+          24.0,
+          39.0
+        ],
+        "part_attributes": [
+          {
+            "id": 218,
+            "name": "patch (pocket)",
+            "supercategory": "nickname",
+            "level": 1,
+            "taxonomy_id": "att000225_00"
+          }
+        ],
+        "ranked_garment_coverages": [
+          {
+            "garment_annotation_id": 5157,
+            "part_coverage": 1.0
+          },
+          {
+            "garment_annotation_id": 5154,
+            "part_coverage": 0.0
+          }
+        ],
+        "association_status": "PROPOSED_SELECTED_GARMENT",
+        "proposed_native_garment_annotation_id": 5157,
+        "association_confirmed": false
+      }
+    ],
+    "review_status": "pending",
+    "confirmed_gt": false,
+    "source_image_sha256": "aa2ad846603f8a1b8977818f8f1183408e1faa2be96563de4efdbe6b65ad255d",
+    "review_number": 10,
+    "source_image_export": "review_images/10_source.jpg",
+    "marked_image_export": "review_images/10_marked.jpg"
+  },
+  {
+    "split": "train",
+    "record_id": "v5_train_00719",
+    "category": "skirt",
+    "source_image": "../fashion_data/raw/fashionpedia/images/test/4f9742189256a459260eb22543154825.jpg",
+    "garment_id": "fashionpedia_ann_865",
+    "native_garment_annotation_id": 865,
+    "image_id": 15967,
+    "garment_bbox": [
+      217.0,
+      402.0,
+      380.0,
+      789.0
+    ],
+    "parts": [
+      {
+        "image_id": 15967,
+        "image_file": "4f9742189256a459260eb22543154825.jpg",
+        "part_annotation_id": 870,
+        "part_bbox_xywh": [
+          357.0,
+          479.0,
+          15.0,
+          63.0
+        ],
+        "part_attributes": [
+          {
+            "id": 222,
+            "name": "slash (pocket)",
+            "supercategory": "nickname",
+            "level": 1,
+            "taxonomy_id": "att000229_00"
+          }
+        ],
+        "ranked_garment_coverages": [
+          {
+            "garment_annotation_id": 865,
+            "part_coverage": 1.0
+          },
+          {
+            "garment_annotation_id": 867,
+            "part_coverage": 0.0
+          },
+          {
+            "garment_annotation_id": 875,
+            "part_coverage": 0.0
+          }
+        ],
+        "association_status": "PROPOSED_SELECTED_GARMENT",
+        "proposed_native_garment_annotation_id": 865,
+        "association_confirmed": false
+      }
+    ],
+    "review_status": "pending",
+    "confirmed_gt": false,
+    "source_image_sha256": "c9ad53064cec695e1c073479a6c72aa9f83c6a2d597d5b3ca6e679a4ac40f129",
+    "review_number": 11,
+    "source_image_export": "review_images/11_source.jpg",
+    "marked_image_export": "review_images/11_marked.jpg"
+  },
+  {
+    "split": "train",
+    "record_id": "v5_train_01738",
+    "category": "outerwear",
+    "source_image": "../fashion_data/raw/fashionpedia/images/test/d286a435e6e15637c797d692d07fd385.jpg",
+    "garment_id": "fashionpedia_ann_3884",
+    "native_garment_annotation_id": 3884,
+    "image_id": 19412,
+    "garment_bbox": [
+      465.0,
+      430.0,
+      564.0,
+      590.0
+    ],
+    "parts": [
+      {
+        "image_id": 19412,
+        "image_file": "d286a435e6e15637c797d692d07fd385.jpg",
+        "part_annotation_id": 3887,
+        "part_bbox_xywh": [
+          524.0,
+          500.0,
+          10.0,
+          27.0
+        ],
+        "part_attributes": [
+          {
+            "id": 218,
+            "name": "patch (pocket)",
+            "supercategory": "nickname",
+            "level": 1,
+            "taxonomy_id": "att000225_00"
+          }
+        ],
+        "ranked_garment_coverages": [
+          {
+            "garment_annotation_id": 3884,
+            "part_coverage": 1.0
+          },
+          {
+            "garment_annotation_id": 3889,
+            "part_coverage": 0.0
+          }
+        ],
+        "association_status": "PROPOSED_SELECTED_GARMENT",
+        "proposed_native_garment_annotation_id": 3884,
+        "association_confirmed": false
+      }
+    ],
+    "review_status": "pending",
+    "confirmed_gt": false,
+    "source_image_sha256": "633205271d09cf08b1dcaf87d1f2609a1a2961a2dfc3029cd1f4c0a1d2e79f8d",
+    "review_number": 12,
+    "source_image_export": "review_images/12_source.jpg",
+    "marked_image_export": "review_images/12_marked.jpg"
+  },
+  {
+    "split": "train",
+    "record_id": "v5_train_00510",
+    "category": "outerwear",
+    "source_image": "../fashion_data/raw/fashionpedia/images/test/330629f6ea12a084fa484a2ae181d1ab.jpg",
+    "garment_id": "fashionpedia_ann_177",
+    "native_garment_annotation_id": 177,
+    "image_id": 15229,
+    "garment_bbox": [
+      203.0,
+      158.0,
+      532.0,
+      641.0
+    ],
+    "parts": [
+      {
+        "image_id": 15229,
+        "image_file": "330629f6ea12a084fa484a2ae181d1ab.jpg",
+        "part_annotation_id": 184,
+        "part_bbox_xywh": [
+          275.0,
+          433.0,
+          29.0,
+          51.0
+        ],
+        "part_attributes": [
+          {
+            "id": 222,
+            "name": "slash (pocket)",
+            "supercategory": "nickname",
+            "level": 1,
+            "taxonomy_id": "att000229_00"
+          }
+        ],
+        "ranked_garment_coverages": [
+          {
+            "garment_annotation_id": 177,
+            "part_coverage": 1.0
+          },
+          {
+            "garment_annotation_id": 176,
+            "part_coverage": 0.0
+          },
+          {
+            "garment_annotation_id": 178,
+            "part_coverage": 0.0
+          }
+        ],
+        "association_status": "PROPOSED_SELECTED_GARMENT",
+        "proposed_native_garment_annotation_id": 177,
+        "association_confirmed": false
+      },
+      {
+        "image_id": 15229,
+        "image_file": "330629f6ea12a084fa484a2ae181d1ab.jpg",
+        "part_annotation_id": 185,
+        "part_bbox_xywh": [
+          413.0,
+          400.0,
+          35.0,
+          74.0
+        ],
+        "part_attributes": [
+          {
+            "id": 222,
+            "name": "slash (pocket)",
+            "supercategory": "nickname",
+            "level": 1,
+            "taxonomy_id": "att000229_00"
+          }
+        ],
+        "ranked_garment_coverages": [
+          {
+            "garment_annotation_id": 177,
+            "part_coverage": 1.0
+          },
+          {
+            "garment_annotation_id": 176,
+            "part_coverage": 0.0
+          },
+          {
+            "garment_annotation_id": 178,
+            "part_coverage": 0.0
+          }
+        ],
+        "association_status": "PROPOSED_SELECTED_GARMENT",
+        "proposed_native_garment_annotation_id": 177,
+        "association_confirmed": false
+      }
+    ],
+    "review_status": "pending",
+    "confirmed_gt": false,
+    "source_image_sha256": "d3cf696cb1f7167dc6dab72a5ed0dde9b7b71936fb25b1e1e2df1fb9dbb0c01b",
+    "review_number": 13,
+    "source_image_export": "review_images/13_source.jpg",
+    "marked_image_export": "review_images/13_marked.jpg"
+  },
+  {
+    "split": "train",
+    "record_id": "v5_train_01216",
+    "category": "outerwear",
+    "source_image": "../fashion_data/raw/fashionpedia/images/test/9171c0d10e43e4b5987a705e552568d7.jpg",
+    "garment_id": "fashionpedia_ann_8431",
+    "native_garment_annotation_id": 8431,
+    "image_id": 12567,
+    "garment_bbox": [
+      272.0,
+      200.0,
+      526.0,
+      656.0
+    ],
+    "parts": [
+      {
+        "image_id": 12567,
+        "image_file": "9171c0d10e43e4b5987a705e552568d7.jpg",
+        "part_annotation_id": 8437,
+        "part_bbox_xywh": [
+          317.0,
+          415.0,
+          19.0,
+          61.0
+        ],
+        "part_attributes": [
+          {
+            "id": 222,
+            "name": "slash (pocket)",
+            "supercategory": "nickname",
+            "level": 1,
+            "taxonomy_id": "att000229_00"
+          }
+        ],
+        "ranked_garment_coverages": [
+          {
+            "garment_annotation_id": 8431,
+            "part_coverage": 1.0
+          },
+          {
+            "garment_annotation_id": 8432,
+            "part_coverage": 0.0
+          }
+        ],
+        "association_status": "PROPOSED_SELECTED_GARMENT",
+        "proposed_native_garment_annotation_id": 8431,
+        "association_confirmed": false
+      },
+      {
+        "image_id": 12567,
+        "image_file": "9171c0d10e43e4b5987a705e552568d7.jpg",
+        "part_annotation_id": 8438,
+        "part_bbox_xywh": [
+          460.0,
+          406.0,
+          18.0,
+          70.0
+        ],
+        "part_attributes": [
+          {
+            "id": 222,
+            "name": "slash (pocket)",
+            "supercategory": "nickname",
+            "level": 1,
+            "taxonomy_id": "att000229_00"
+          }
+        ],
+        "ranked_garment_coverages": [
+          {
+            "garment_annotation_id": 8431,
+            "part_coverage": 1.0
+          },
+          {
+            "garment_annotation_id": 8432,
+            "part_coverage": 0.0
+          }
+        ],
+        "association_status": "PROPOSED_SELECTED_GARMENT",
+        "proposed_native_garment_annotation_id": 8431,
+        "association_confirmed": false
+      }
+    ],
+    "review_status": "pending",
+    "confirmed_gt": false,
+    "source_image_sha256": "b4cd61b5525c948cbfa68dd4456691e34d9fa19d71da65431408d6acdcb10476",
+    "review_number": 14,
+    "source_image_export": "review_images/14_source.jpg",
+    "marked_image_export": "review_images/14_marked.jpg"
+  },
+  {
+    "split": "train",
+    "record_id": "v5_train_00298",
+    "category": "outerwear",
+    "source_image": "../fashion_data/raw/fashionpedia/images/test/15b3536fd4cd5f7c40b1ef1a611402e5.jpg",
+    "garment_id": "fashionpedia_ann_7405",
+    "native_garment_annotation_id": 7405,
+    "image_id": 11351,
+    "garment_bbox": [
+      113.0,
+      162.0,
+      636.0,
+      942.0
+    ],
+    "parts": [
+      {
+        "image_id": 11351,
+        "image_file": "15b3536fd4cd5f7c40b1ef1a611402e5.jpg",
+        "part_annotation_id": 7411,
+        "part_bbox_xywh": [
+          385.0,
+          528.0,
+          48.0,
+          103.0
+        ],
+        "part_attributes": [
+          {
+            "id": 222,
+            "name": "slash (pocket)",
+            "supercategory": "nickname",
+            "level": 1,
+            "taxonomy_id": "att000229_00"
+          }
+        ],
+        "ranked_garment_coverages": [
+          {
+            "garment_annotation_id": 7405,
+            "part_coverage": 1.0
+          }
+        ],
+        "association_status": "PROPOSED_SELECTED_GARMENT",
+        "proposed_native_garment_annotation_id": 7405,
+        "association_confirmed": false
+      },
+      {
+        "image_id": 11351,
+        "image_file": "15b3536fd4cd5f7c40b1ef1a611402e5.jpg",
+        "part_annotation_id": 7412,
+        "part_bbox_xywh": [
+          207.0,
+          552.0,
+          34.0,
+          90.0
+        ],
+        "part_attributes": [
+          {
+            "id": 222,
+            "name": "slash (pocket)",
+            "supercategory": "nickname",
+            "level": 1,
+            "taxonomy_id": "att000229_00"
+          }
+        ],
+        "ranked_garment_coverages": [
+          {
+            "garment_annotation_id": 7405,
+            "part_coverage": 1.0
+          }
+        ],
+        "association_status": "PROPOSED_SELECTED_GARMENT",
+        "proposed_native_garment_annotation_id": 7405,
+        "association_confirmed": false
+      }
+    ],
+    "review_status": "pending",
+    "confirmed_gt": false,
+    "source_image_sha256": "e644a918096bf290dad38c705f510f66d24e6d77ab3411f1efa284359eb884bc",
+    "review_number": 15,
+    "source_image_export": "review_images/15_source.jpg",
+    "marked_image_export": "review_images/15_marked.jpg"
+  },
+  {
+    "split": "train",
+    "record_id": "v5_train_00477",
+    "category": "dress",
+    "source_image": "../fashion_data/raw/fashionpedia/images/test/3023783645f6b5b3ddd20648231f85aa.jpg",
+    "garment_id": "fashionpedia_ann_4026",
+    "native_garment_annotation_id": 4026,
+    "image_id": 19461,
+    "garment_bbox": [
+      151.0,
+      201.0,
+      334.0,
+      787.0
+    ],
+    "parts": [
+      {
+        "image_id": 19461,
+        "image_file": "3023783645f6b5b3ddd20648231f85aa.jpg",
+        "part_annotation_id": 4037,
+        "part_bbox_xywh": [
+          280.0,
+          449.0,
+          53.0,
+          88.0
+        ],
+        "part_attributes": [
+          {
+            "id": 218,
+            "name": "patch (pocket)",
+            "supercategory": "nickname",
+            "level": 1,
+            "taxonomy_id": "att000225_00"
+          }
+        ],
+        "ranked_garment_coverages": [
+          {
+            "garment_annotation_id": 4026,
+            "part_coverage": 0.9994907053730583
+          },
+          {
+            "garment_annotation_id": 4034,
+            "part_coverage": 0.0
+          }
+        ],
+        "association_status": "PROPOSED_SELECTED_GARMENT",
+        "proposed_native_garment_annotation_id": 4026,
+        "association_confirmed": false
+      },
+      {
+        "image_id": 19461,
+        "image_file": "3023783645f6b5b3ddd20648231f85aa.jpg",
+        "part_annotation_id": 4038,
+        "part_bbox_xywh": [
+          151.0,
+          420.0,
+          71.0,
+          88.0
+        ],
+        "part_attributes": [
+          {
+            "id": 218,
+            "name": "patch (pocket)",
+            "supercategory": "nickname",
+            "level": 1,
+            "taxonomy_id": "att000225_00"
+          }
+        ],
+        "ranked_garment_coverages": [
+          {
+            "garment_annotation_id": 4026,
+            "part_coverage": 1.0
+          },
+          {
+            "garment_annotation_id": 4034,
+            "part_coverage": 0.0
+          }
+        ],
+        "association_status": "PROPOSED_SELECTED_GARMENT",
+        "proposed_native_garment_annotation_id": 4026,
+        "association_confirmed": false
+      }
+    ],
+    "review_status": "pending",
+    "confirmed_gt": false,
+    "source_image_sha256": "c9795060812a7fc9e4eef63d9b941112ade63244f4503f0e4671556700754186",
+    "review_number": 16,
+    "source_image_export": "review_images/16_source.jpg",
+    "marked_image_export": "review_images/16_marked.jpg"
+  },
+  {
+    "split": "train",
+    "record_id": "v5_train_00195",
+    "category": "dress",
+    "source_image": "../fashion_data/raw/fashionpedia/images/test/05b5e806121325fe0b9879c18f146f39.jpg",
+    "garment_id": "fashionpedia_ann_1786",
+    "native_garment_annotation_id": 1786,
+    "image_id": 17183,
+    "garment_bbox": [
+      242.0,
+      229.0,
+      456.0,
+      887.0
+    ],
+    "parts": [
+      {
+        "image_id": 17183,
+        "image_file": "05b5e806121325fe0b9879c18f146f39.jpg",
+        "part_annotation_id": 1787,
+        "part_bbox_xywh": [
+          271.0,
+          311.0,
+          48.0,
+          66.0
+        ],
+        "part_attributes": [
+          {
+            "id": 218,
+            "name": "patch (pocket)",
+            "supercategory": "nickname",
+            "level": 1,
+            "taxonomy_id": "att000225_00"
+          }
+        ],
+        "ranked_garment_coverages": [
+          {
+            "garment_annotation_id": 1786,
+            "part_coverage": 1.0
+          },
+          {
+            "garment_annotation_id": 1781,
+            "part_coverage": 0.0
+          },
+          {
+            "garment_annotation_id": 1782,
+            "part_coverage": 0.0
+          }
+        ],
+        "association_status": "PROPOSED_SELECTED_GARMENT",
+        "proposed_native_garment_annotation_id": 1786,
+        "association_confirmed": false
+      },
+      {
+        "image_id": 17183,
+        "image_file": "05b5e806121325fe0b9879c18f146f39.jpg",
+        "part_annotation_id": 1788,
+        "part_bbox_xywh": [
+          390.0,
+          311.0,
+          31.0,
+          52.0
+        ],
+        "part_attributes": [
+          {
+            "id": 218,
+            "name": "patch (pocket)",
+            "supercategory": "nickname",
+            "level": 1,
+            "taxonomy_id": "att000225_00"
+          }
+        ],
+        "ranked_garment_coverages": [
+          {
+            "garment_annotation_id": 1786,
+            "part_coverage": 1.0
+          },
+          {
+            "garment_annotation_id": 1781,
+            "part_coverage": 0.0
+          },
+          {
+            "garment_annotation_id": 1782,
+            "part_coverage": 0.0
+          }
+        ],
+        "association_status": "PROPOSED_SELECTED_GARMENT",
+        "proposed_native_garment_annotation_id": 1786,
+        "association_confirmed": false
+      }
+    ],
+    "review_status": "pending",
+    "confirmed_gt": false,
+    "source_image_sha256": "a4c9f43aa4f68781526d2f01c988acfc71bd0d73b4cfe1395422164129e2b043",
+    "review_number": 17,
+    "source_image_export": "review_images/17_source.jpg",
+    "marked_image_export": "review_images/17_marked.jpg"
+  },
+  {
+    "split": "train",
+    "record_id": "v5_train_00466",
+    "category": "dress",
+    "source_image": "../fashion_data/raw/fashionpedia/images/test/2ed6ea0b7ce46f8d5fc6608776152d5d.jpg",
+    "garment_id": "fashionpedia_ann_4400",
+    "native_garment_annotation_id": 4400,
+    "image_id": 19811,
+    "garment_bbox": [
+      220.0,
+      184.0,
+      485.0,
+      622.0
+    ],
+    "parts": [
+      {
+        "image_id": 19811,
+        "image_file": "2ed6ea0b7ce46f8d5fc6608776152d5d.jpg",
+        "part_annotation_id": 4403,
+        "part_bbox_xywh": [
+          376.0,
+          268.0,
+          50.0,
+          74.0
+        ],
+        "part_attributes": [
+          {
+            "id": 218,
+            "name": "patch (pocket)",
+            "supercategory": "nickname",
+            "level": 1,
+            "taxonomy_id": "att000225_00"
+          }
+        ],
+        "ranked_garment_coverages": [
+          {
+            "garment_annotation_id": 4400,
+            "part_coverage": 1.0
+          },
+          {
+            "garment_annotation_id": 4407,
+            "part_coverage": 0.0
+          }
+        ],
+        "association_status": "PROPOSED_SELECTED_GARMENT",
+        "proposed_native_garment_annotation_id": 4400,
+        "association_confirmed": false
+      },
+      {
+        "image_id": 19811,
+        "image_file": "2ed6ea0b7ce46f8d5fc6608776152d5d.jpg",
+        "part_annotation_id": 4405,
+        "part_bbox_xywh": [
+          405.0,
+          392.0,
+          45.0,
+          100.0
+        ],
+        "part_attributes": [
+          {
+            "id": 222,
+            "name": "slash (pocket)",
+            "supercategory": "nickname",
+            "level": 1,
+            "taxonomy_id": "att000229_00"
+          }
+        ],
+        "ranked_garment_coverages": [
+          {
+            "garment_annotation_id": 4400,
+            "part_coverage": 1.0
+          },
+          {
+            "garment_annotation_id": 4407,
+            "part_coverage": 0.0
+          }
+        ],
+        "association_status": "PROPOSED_SELECTED_GARMENT",
+        "proposed_native_garment_annotation_id": 4400,
+        "association_confirmed": false
+      },
+      {
+        "image_id": 19811,
+        "image_file": "2ed6ea0b7ce46f8d5fc6608776152d5d.jpg",
+        "part_annotation_id": 4406,
+        "part_bbox_xywh": [
+          278.0,
+          393.0,
+          38.0,
+          102.0
+        ],
+        "part_attributes": [
+          {
+            "id": 222,
+            "name": "slash (pocket)",
+            "supercategory": "nickname",
+            "level": 1,
+            "taxonomy_id": "att000229_00"
+          }
+        ],
+        "ranked_garment_coverages": [
+          {
+            "garment_annotation_id": 4400,
+            "part_coverage": 1.0
+          },
+          {
+            "garment_annotation_id": 4407,
+            "part_coverage": 0.0
+          }
+        ],
+        "association_status": "PROPOSED_SELECTED_GARMENT",
+        "proposed_native_garment_annotation_id": 4400,
+        "association_confirmed": false
+      }
+    ],
+    "review_status": "pending",
+    "confirmed_gt": false,
+    "source_image_sha256": "91340e3d04e3c5fd689885e09a510a84d4a7e02cf79bd772f949af3aea6ce519",
+    "review_number": 18,
+    "source_image_export": "review_images/18_source.jpg",
+    "marked_image_export": "review_images/18_marked.jpg"
+  },
+  {
+    "split": "train",
+    "record_id": "v5_train_00714",
+    "category": "dress",
+    "source_image": "../fashion_data/raw/fashionpedia/images/test/4f2a2c16e1c284c1dc11cb987c9f5ca0.jpg",
+    "garment_id": "fashionpedia_ann_2697",
+    "native_garment_annotation_id": 2697,
+    "image_id": 18282,
+    "garment_bbox": [
+      224.0,
+      236.0,
+      463.0,
+      664.0
+    ],
+    "parts": [
+      {
+        "image_id": 18282,
+        "image_file": "4f2a2c16e1c284c1dc11cb987c9f5ca0.jpg",
+        "part_annotation_id": 2698,
+        "part_bbox_xywh": [
+          359.0,
+          327.0,
+          59.0,
+          66.0
+        ],
+        "part_attributes": [
+          {
+            "id": 224,
+            "name": "flap (pocket)",
+            "supercategory": "nickname",
+            "level": 1,
+            "taxonomy_id": "att000231_00"
+          }
+        ],
+        "ranked_garment_coverages": [
+          {
+            "garment_annotation_id": 2697,
+            "part_coverage": 1.0
+          }
+        ],
+        "association_status": "PROPOSED_SELECTED_GARMENT",
+        "proposed_native_garment_annotation_id": 2697,
+        "association_confirmed": false
+      }
+    ],
+    "review_status": "pending",
+    "confirmed_gt": false,
+    "source_image_sha256": "30a9b06fdb0d47436f8f68ee5c2927e5ae9218b20ef89920ca42f1ca3f0c0712",
+    "review_number": 19,
+    "source_image_export": "review_images/19_source.jpg",
+    "marked_image_export": "review_images/19_marked.jpg"
+  },
+  {
+    "split": "val",
+    "record_id": "v5_validation_00046",
+    "category": "top",
+    "source_image": "../fashion_data/raw/fashionpedia/images/test/33cfdcbd48019b09e36a78c428bbae1d.jpg",
+    "garment_id": "fashionpedia_ann_6505",
+    "native_garment_annotation_id": 6505,
+    "image_id": 10531,
+    "garment_bbox": [
+      234.0,
+      194.0,
+      530.0,
+      504.0
+    ],
+    "parts": [
+      {
+        "image_id": 10531,
+        "image_file": "33cfdcbd48019b09e36a78c428bbae1d.jpg",
+        "part_annotation_id": 6500,
+        "part_bbox_xywh": [
+          404.0,
+          305.0,
+          61.0,
+          32.0
+        ],
+        "part_attributes": [
+          {
+            "id": 224,
+            "name": "flap (pocket)",
+            "supercategory": "nickname",
+            "level": 1,
+            "taxonomy_id": "att000231_00"
+          }
+        ],
+        "ranked_garment_coverages": [
+          {
+            "garment_annotation_id": 6505,
+            "part_coverage": 1.0
+          },
+          {
+            "garment_annotation_id": 6509,
+            "part_coverage": 0.0
+          }
+        ],
+        "association_status": "PROPOSED_SELECTED_GARMENT",
+        "proposed_native_garment_annotation_id": 6505,
+        "association_confirmed": false
+      },
+      {
+        "image_id": 10531,
+        "image_file": "33cfdcbd48019b09e36a78c428bbae1d.jpg",
+        "part_annotation_id": 6501,
+        "part_bbox_xywh": [
+          287.0,
+          316.0,
+          51.0,
+          33.0
+        ],
+        "part_attributes": [
+          {
+            "id": 224,
+            "name": "flap (pocket)",
+            "supercategory": "nickname",
+            "level": 1,
+            "taxonomy_id": "att000231_00"
+          }
+        ],
+        "ranked_garment_coverages": [
+          {
+            "garment_annotation_id": 6505,
+            "part_coverage": 1.0
+          },
+          {
+            "garment_annotation_id": 6509,
+            "part_coverage": 0.0
+          }
+        ],
+        "association_status": "PROPOSED_SELECTED_GARMENT",
+        "proposed_native_garment_annotation_id": 6505,
+        "association_confirmed": false
+      }
+    ],
+    "review_status": "pending",
+    "confirmed_gt": false,
+    "source_image_sha256": "2f60ebbd03f1ae1151ab4643cccc3b05cda61a457853c1ad83ca6c9f07ceeff3",
+    "review_number": 20,
+    "source_image_export": "review_images/20_source.jpg",
+    "marked_image_export": "review_images/20_marked.jpg"
+  },
+  {
+    "split": "val",
+    "record_id": "v5_validation_00047",
+    "category": "pants",
+    "source_image": "../fashion_data/raw/fashionpedia/images/test/33cfdcbd48019b09e36a78c428bbae1d.jpg",
+    "garment_id": "fashionpedia_ann_6509",
+    "native_garment_annotation_id": 6509,
+    "image_id": 10531,
+    "garment_bbox": [
+      270.0,
+      490.0,
+      492.0,
+      954.0
+    ],
+    "parts": [
+      {
+        "image_id": 10531,
+        "image_file": "33cfdcbd48019b09e36a78c428bbae1d.jpg",
+        "part_annotation_id": 6507,
+        "part_bbox_xywh": [
+          289.0,
+          514.0,
+          45.0,
+          28.0
+        ],
+        "part_attributes": [
+          {
+            "id": 223,
+            "name": "curved (pocket)",
+            "supercategory": "nickname",
+            "level": 1,
+            "taxonomy_id": "att000230_00"
+          }
+        ],
+        "ranked_garment_coverages": [
+          {
+            "garment_annotation_id": 6509,
+            "part_coverage": 1.0
+          },
+          {
+            "garment_annotation_id": 6505,
+            "part_coverage": 0.0
+          }
+        ],
+        "association_status": "PROPOSED_SELECTED_GARMENT",
+        "proposed_native_garment_annotation_id": 6509,
+        "association_confirmed": false
+      },
+      {
+        "image_id": 10531,
+        "image_file": "33cfdcbd48019b09e36a78c428bbae1d.jpg",
+        "part_annotation_id": 6508,
+        "part_bbox_xywh": [
+          415.0,
+          509.0,
+          54.0,
+          26.0
+        ],
+        "part_attributes": [
+          {
+            "id": 223,
+            "name": "curved (pocket)",
+            "supercategory": "nickname",
+            "level": 1,
+            "taxonomy_id": "att000230_00"
+          }
+        ],
+        "ranked_garment_coverages": [
+          {
+            "garment_annotation_id": 6509,
+            "part_coverage": 1.0
+          },
+          {
+            "garment_annotation_id": 6505,
+            "part_coverage": 0.0
+          }
+        ],
+        "association_status": "PROPOSED_SELECTED_GARMENT",
+        "proposed_native_garment_annotation_id": 6509,
+        "association_confirmed": false
+      }
+    ],
+    "review_status": "pending",
+    "confirmed_gt": false,
+    "source_image_sha256": "2f60ebbd03f1ae1151ab4643cccc3b05cda61a457853c1ad83ca6c9f07ceeff3",
+    "review_number": 21,
+    "source_image_export": "review_images/21_source.jpg",
+    "marked_image_export": "review_images/21_marked.jpg"
+  },
+  {
+    "split": "val",
+    "record_id": "v5_validation_00052",
+    "category": "outerwear",
+    "source_image": "../fashion_data/raw/fashionpedia/images/test/3bf082a96a03a1c8f75e1d1d0ebf42d2.jpg",
+    "garment_id": "fashionpedia_ann_3404",
+    "native_garment_annotation_id": 3404,
+    "image_id": 18895,
+    "garment_bbox": [
+      239.0,
+      425.0,
+      446.0,
+      761.0
+    ],
+    "parts": [
+      {
+        "image_id": 18895,
+        "image_file": "3bf082a96a03a1c8f75e1d1d0ebf42d2.jpg",
+        "part_annotation_id": 3409,
+        "part_bbox_xywh": [
+          398.0,
+          652.0,
+          20.0,
+          60.0
+        ],
+        "part_attributes": [
+          {
+            "id": 218,
+            "name": "patch (pocket)",
+            "supercategory": "nickname",
+            "level": 1,
+            "taxonomy_id": "att000225_00"
+          }
+        ],
+        "ranked_garment_coverages": [
+          {
+            "garment_annotation_id": 3404,
+            "part_coverage": 1.0
+          },
+          {
+            "garment_annotation_id": 3411,
+            "part_coverage": 0.0
+          },
+          {
+            "garment_annotation_id": 3413,
+            "part_coverage": 0.0
+          }
+        ],
+        "association_status": "PROPOSED_SELECTED_GARMENT",
+        "proposed_native_garment_annotation_id": 3404,
+        "association_confirmed": false
+      },
+      {
+        "image_id": 18895,
+        "image_file": "3bf082a96a03a1c8f75e1d1d0ebf42d2.jpg",
+        "part_annotation_id": 3410,
+        "part_bbox_xywh": [
+          244.0,
+          644.0,
+          47.0,
+          82.0
+        ],
+        "part_attributes": [
+          {
+            "id": 218,
+            "name": "patch (pocket)",
+            "supercategory": "nickname",
+            "level": 1,
+            "taxonomy_id": "att000225_00"
+          }
+        ],
+        "ranked_garment_coverages": [
+          {
+            "garment_annotation_id": 3404,
+            "part_coverage": 0.9985272459499264
+          },
+          {
+            "garment_annotation_id": 3411,
+            "part_coverage": 0.0
+          },
+          {
+            "garment_annotation_id": 3413,
+            "part_coverage": 0.0
+          }
+        ],
+        "association_status": "PROPOSED_SELECTED_GARMENT",
+        "proposed_native_garment_annotation_id": 3404,
+        "association_confirmed": false
+      }
+    ],
+    "review_status": "pending",
+    "confirmed_gt": false,
+    "source_image_sha256": "4c586e958e94a7170b3296bbd5fc97cc1c337750f80d8155f175949394a966e0",
+    "review_number": 22,
+    "source_image_export": "review_images/22_source.jpg",
+    "marked_image_export": "review_images/22_marked.jpg"
+  },
+  {
+    "split": "val",
+    "record_id": "v5_validation_00062",
+    "category": "outerwear",
+    "source_image": "../fashion_data/raw/fashionpedia/images/test/4f23f05daee3cbdd96295f84825e3581.jpg",
+    "garment_id": "fashionpedia_ann_6083",
+    "native_garment_annotation_id": 6083,
+    "image_id": 9753,
+    "garment_bbox": [
+      218.0,
+      187.0,
+      535.0,
+      635.0
+    ],
+    "parts": [
+      {
+        "image_id": 9753,
+        "image_file": "4f23f05daee3cbdd96295f84825e3581.jpg",
+        "part_annotation_id": 6079,
+        "part_bbox_xywh": [
+          406.0,
+          454.0,
+          46.0,
+          92.0
+        ],
+        "part_attributes": [
+          {
+            "id": 218,
+            "name": "patch (pocket)",
+            "supercategory": "nickname",
+            "level": 1,
+            "taxonomy_id": "att000225_00"
+          }
+        ],
+        "ranked_garment_coverages": [
+          {
+            "garment_annotation_id": 6083,
+            "part_coverage": 1.0
+          },
+          {
+            "garment_annotation_id": 6077,
+            "part_coverage": 0.0
+          }
+        ],
+        "association_status": "PROPOSED_SELECTED_GARMENT",
+        "proposed_native_garment_annotation_id": 6083,
+        "association_confirmed": false
+      },
+      {
+        "image_id": 9753,
+        "image_file": "4f23f05daee3cbdd96295f84825e3581.jpg",
+        "part_annotation_id": 6085,
+        "part_bbox_xywh": [
+          255.0,
+          461.0,
+          19.0,
+          44.0
+        ],
+        "part_attributes": [
+          {
+            "id": 218,
+            "name": "patch (pocket)",
+            "supercategory": "nickname",
+            "level": 1,
+            "taxonomy_id": "att000225_00"
+          }
+        ],
+        "ranked_garment_coverages": [
+          {
+            "garment_annotation_id": 6083,
+            "part_coverage": 1.0
+          },
+          {
+            "garment_annotation_id": 6077,
+            "part_coverage": 0.0
+          }
+        ],
+        "association_status": "PROPOSED_SELECTED_GARMENT",
+        "proposed_native_garment_annotation_id": 6083,
+        "association_confirmed": false
+      }
+    ],
+    "review_status": "pending",
+    "confirmed_gt": false,
+    "source_image_sha256": "df91edad8133b9d732873c9a4df1d76a5bb76799a3aff8948337c47fec241b9d",
+    "review_number": 23,
+    "source_image_export": "review_images/23_source.jpg",
+    "marked_image_export": "review_images/23_marked.jpg"
+  },
+  {
+    "split": "val",
+    "record_id": "v5_validation_00066",
+    "category": "pants",
+    "source_image": "../fashion_data/raw/fashionpedia/images/test/77435fc234059dcb9e0bb3d73382bcc7.jpg",
+    "garment_id": "fashionpedia_ann_2419",
+    "native_garment_annotation_id": 2419,
+    "image_id": 17962,
+    "garment_bbox": [
+      468.0,
+      464.0,
+      681.0,
+      686.0
+    ],
+    "parts": [
+      {
+        "image_id": 17962,
+        "image_file": "77435fc234059dcb9e0bb3d73382bcc7.jpg",
+        "part_annotation_id": 2425,
+        "part_bbox_xywh": [
+          539.0,
+          492.0,
+          19.0,
+          29.0
+        ],
+        "part_attributes": [
+          {
+            "id": 218,
+            "name": "patch (pocket)",
+            "supercategory": "nickname",
+            "level": 1,
+            "taxonomy_id": "att000225_00"
+          }
+        ],
+        "ranked_garment_coverages": [
+          {
+            "garment_annotation_id": 2419,
+            "part_coverage": 1.0
+          },
+          {
+            "garment_annotation_id": 2414,
+            "part_coverage": 0.0
+          }
+        ],
+        "association_status": "PROPOSED_SELECTED_GARMENT",
+        "proposed_native_garment_annotation_id": 2419,
+        "association_confirmed": false
+      },
+      {
+        "image_id": 17962,
+        "image_file": "77435fc234059dcb9e0bb3d73382bcc7.jpg",
+        "part_annotation_id": 2426,
+        "part_bbox_xywh": [
+          570.0,
+          476.0,
+          28.0,
+          22.0
+        ],
+        "part_attributes": [
+          {
+            "id": 223,
+            "name": "curved (pocket)",
+            "supercategory": "nickname",
+            "level": 1,
+            "taxonomy_id": "att000230_00"
+          }
+        ],
+        "ranked_garment_coverages": [
+          {
+            "garment_annotation_id": 2419,
+            "part_coverage": 1.0
+          },
+          {
+            "garment_annotation_id": 2414,
+            "part_coverage": 0.012106537530266344
+          }
+        ],
+        "association_status": "PROPOSED_SELECTED_GARMENT",
+        "proposed_native_garment_annotation_id": 2419,
+        "association_confirmed": false
+      }
+    ],
+    "review_status": "pending",
+    "confirmed_gt": false,
+    "source_image_sha256": "bf88cc3aa332176552eb6c44e6a624ca2bf05d23f056a937f6000cb75849ebb6",
+    "review_number": 24,
+    "source_image_export": "review_images/24_source.jpg",
+    "marked_image_export": "review_images/24_marked.jpg"
+  }
+]

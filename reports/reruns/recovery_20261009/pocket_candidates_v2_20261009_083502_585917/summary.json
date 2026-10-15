@@ -1,0 +1,69 @@
+{
+  "status": "POCKET_ALL_CLOTHING_CANDIDATES_PREPARED",
+  "clothing_classes": [
+    "top",
+    "pants",
+    "skirt",
+    "outerwear",
+    "dress"
+  ],
+  "native_file_sha256": "f831f415edad12d52acde8b138fe7ebd1592b57bf0dcd6a3b63ba8cabd208223",
+  "manifest_provenance": {
+    "train": [
+      "configs/prd_8class_train_v5_balanced150_20261008.csv",
+      "e8c277055efe4d042b4353bf2d4553bddddc7706eead9398f07f5efcd90bb38f"
+    ],
+    "val": [
+      "configs/prd_8class_val_v2_full_targets.csv",
+      "39141f545ea5512d16ed074788b6f98474b33baff111d3b663ec0ffcc4c40b93"
+    ]
+  },
+  "joined_garments_by_split": {
+    "train": {
+      "pants": 168,
+      "top": 254,
+      "dress": 135,
+      "outerwear": 145,
+      "skirt": 75
+    },
+    "val": {
+      "pants": 5,
+      "top": 4,
+      "outerwear": 4,
+      "dress": 5
+    }
+  },
+  "unmatched_records": [],
+  "pocket_parts_on_selected_clothing_images": 208,
+  "association_status_counts": {
+    "PROPOSED_SELECTED_GARMENT": 208
+  },
+  "eligible_candidate_garments_by_split": {
+    "train": {
+      "outerwear": 51,
+      "pants": 54,
+      "dress": 4,
+      "top": 6,
+      "skirt": 3
+    },
+    "val": {
+      "top": 1,
+      "pants": 2,
+      "outerwear": 2
+    }
+  },
+  "review_samples_by_split": {
+    "train": 19,
+    "val": 5
+  },
+  "train_candidates_excluded_for_validation_image_overlap": [],
+  "ownership_confirmed": false,
+  "training_started": false,
+  "formal_prd_acceptance": false,
+  "limitations": [
+    "Mask coverage only proposes ownership; all labels pending human review.",
+    "All native upper/lower/wholebody garments compete, including unselected garments.",
+    "Sample contains pocket-positive candidates only; no recall or negative-case accuracy measurement.",
+    "Existing validation remains separate; reviewed validation is diagnostic, not an unseen blind benchmark."
+  ]
+}

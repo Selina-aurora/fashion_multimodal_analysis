@@ -1,0 +1,1317 @@
+{
+  "gt_roi": [
+    {
+      "record_id": "v5_validation_00014",
+      "category": "top",
+      "source_dataset": "DeepFashion2",
+      "truth": {
+        "primary_color": "white",
+        "pattern": "graphic_logo",
+        "sleeve_length": "short"
+      },
+      "review_comment": "",
+      "pattern_label_review_flag": false,
+      "prediction": {
+        "primary_color": {
+          "label": "white",
+          "score": 0.2825220823287964
+        },
+        "pattern": {
+          "label": "graphic_logo",
+          "score": 0.9522925615310669,
+          "stage1_bucket": "local_graphic_pattern"
+        },
+        "sleeve_length": {
+          "label": "sleeveless",
+          "score": 0.3879799544811249
+        }
+      },
+      "status": "GT_ROI",
+      "bounds": [
+        267,
+        222,
+        530,
+        407
+      ]
+    },
+    {
+      "record_id": "v5_validation_00027",
+      "category": "top",
+      "source_dataset": "DeepFashion2",
+      "truth": {
+        "primary_color": "pink",
+        "pattern": "solid",
+        "sleeve_length": "long"
+      },
+      "review_comment": "袖子上有条纹",
+      "pattern_label_review_flag": true,
+      "prediction": {
+        "primary_color": {
+          "label": "pink",
+          "score": 0.9322659969329834
+        },
+        "pattern": {
+          "label": "solid",
+          "score": 0.5241143107414246,
+          "stage1_bucket": "plain_non_pattern"
+        },
+        "sleeve_length": {
+          "label": "elbow",
+          "score": 0.3710906505584717
+        }
+      },
+      "status": "GT_ROI",
+      "bounds": [
+        71,
+        138,
+        597,
+        745
+      ]
+    },
+    {
+      "record_id": "v5_validation_00016",
+      "category": "top",
+      "source_dataset": "DeepFashion2",
+      "truth": {
+        "primary_color": "white",
+        "pattern": "graphic_logo",
+        "sleeve_length": "short"
+      },
+      "review_comment": "",
+      "pattern_label_review_flag": false,
+      "prediction": {
+        "primary_color": {
+          "label": "black",
+          "score": 0.3664177358150482
+        },
+        "pattern": {
+          "label": "graphic_logo",
+          "score": 0.9607291221618652,
+          "stage1_bucket": "local_graphic_pattern"
+        },
+        "sleeve_length": {
+          "label": "short",
+          "score": 0.403667688369751
+        }
+      },
+      "status": "GT_ROI",
+      "bounds": [
+        153,
+        116,
+        406,
+        377
+      ]
+    },
+    {
+      "record_id": "v5_validation_00046",
+      "category": "top",
+      "source_dataset": "Fashionpedia",
+      "truth": {
+        "primary_color": "purple",
+        "pattern": "checked_plaid",
+        "sleeve_length": "elbow"
+      },
+      "review_comment": "",
+      "pattern_label_review_flag": false,
+      "prediction": {
+        "primary_color": {
+          "label": "purple",
+          "score": 0.36876019835472107
+        },
+        "pattern": {
+          "label": "checked_plaid",
+          "score": 0.8224475979804993,
+          "stage1_bucket": "repeated_surface_pattern"
+        },
+        "sleeve_length": {
+          "label": "short",
+          "score": 0.7666592597961426
+        }
+      },
+      "status": "GT_ROI",
+      "bounds": [
+        234,
+        194,
+        530,
+        504
+      ]
+    },
+    {
+      "record_id": "v5_validation_00053",
+      "category": "top",
+      "source_dataset": "Fashionpedia",
+      "truth": {
+        "primary_color": "pink",
+        "pattern": "solid",
+        "sleeve_length": "unknown"
+      },
+      "review_comment": "",
+      "pattern_label_review_flag": false,
+      "prediction": {
+        "primary_color": {
+          "label": "pink",
+          "score": 0.8156256079673767
+        },
+        "pattern": {
+          "label": "solid",
+          "score": 0.5130022168159485,
+          "stage1_bucket": "texture_structure_non_pattern"
+        },
+        "sleeve_length": {
+          "label": "sleeveless",
+          "score": 0.3458290100097656
+        }
+      },
+      "status": "GT_ROI",
+      "bounds": [
+        306,
+        487,
+        379,
+        621
+      ]
+    },
+    {
+      "record_id": "v5_validation_00035",
+      "category": "top",
+      "source_dataset": "Fashionpedia",
+      "truth": {
+        "primary_color": "beige",
+        "pattern": "animal_print",
+        "sleeve_length": "short"
+      },
+      "review_comment": "",
+      "pattern_label_review_flag": false,
+      "prediction": {
+        "primary_color": {
+          "label": "beige",
+          "score": 0.596959114074707
+        },
+        "pattern": {
+          "label": "animal_print",
+          "score": 0.7494822144508362,
+          "stage1_bucket": "repeated_surface_pattern"
+        },
+        "sleeve_length": {
+          "label": "cap",
+          "score": 0.4674449563026428
+        }
+      },
+      "status": "GT_ROI",
+      "bounds": [
+        342,
+        251,
+        531,
+        405
+      ]
+    },
+    {
+      "record_id": "v5_validation_00013",
+      "category": "outerwear",
+      "source_dataset": "DeepFashion2",
+      "truth": {
+        "primary_color": "white",
+        "pattern": "solid",
+        "sleeve_length": "unknown"
+      },
+      "review_comment": "",
+      "pattern_label_review_flag": false,
+      "prediction": {
+        "primary_color": {
+          "label": "white",
+          "score": 0.31443193554878235
+        },
+        "pattern": {
+          "label": "polka_dot",
+          "score": 0.5976988077163696,
+          "stage1_bucket": "repeated_surface_pattern"
+        },
+        "sleeve_length": {
+          "label": "three_quarter",
+          "score": 0.24901287257671356
+        }
+      },
+      "status": "GT_ROI",
+      "bounds": [
+        76,
+        98,
+        468,
+        574
+      ]
+    },
+    {
+      "record_id": "v5_validation_00018",
+      "category": "outerwear",
+      "source_dataset": "DeepFashion2",
+      "truth": {
+        "primary_color": "black",
+        "pattern": "striped",
+        "sleeve_length": "three_quarter"
+      },
+      "review_comment": "",
+      "pattern_label_review_flag": false,
+      "prediction": {
+        "primary_color": {
+          "label": "purple",
+          "score": 0.6214690804481506
+        },
+        "pattern": {
+          "label": "striped",
+          "score": 0.5332198739051819,
+          "stage1_bucket": "repeated_surface_pattern"
+        },
+        "sleeve_length": {
+          "label": "elbow",
+          "score": 0.3721052408218384
+        }
+      },
+      "status": "GT_ROI",
+      "bounds": [
+        126,
+        200,
+        640,
+        957
+      ]
+    },
+    {
+      "record_id": "v5_validation_00024",
+      "category": "outerwear",
+      "source_dataset": "DeepFashion2",
+      "truth": {
+        "primary_color": "black",
+        "pattern": "floral",
+        "sleeve_length": "three_quarter"
+      },
+      "review_comment": "",
+      "pattern_label_review_flag": false,
+      "prediction": {
+        "primary_color": {
+          "label": "pink",
+          "score": 0.5266786813735962
+        },
+        "pattern": {
+          "label": "camouflage",
+          "score": 0.7227276563644409,
+          "stage1_bucket": "repeated_surface_pattern"
+        },
+        "sleeve_length": {
+          "label": "sleeveless",
+          "score": 0.257943332195282
+        }
+      },
+      "status": "GT_ROI",
+      "bounds": [
+        5,
+        127,
+        305,
+        395
+      ]
+    },
+    {
+      "record_id": "v5_validation_00036",
+      "category": "outerwear",
+      "source_dataset": "Fashionpedia",
+      "truth": {
+        "primary_color": "purple",
+        "pattern": "geometric_abstract",
+        "sleeve_length": "long"
+      },
+      "review_comment": "",
+      "pattern_label_review_flag": false,
+      "prediction": {
+        "primary_color": {
+          "label": "purple",
+          "score": 0.7174882292747498
+        },
+        "pattern": {
+          "label": "polka_dot",
+          "score": 0.22028644382953644,
+          "stage1_bucket": "repeated_surface_pattern"
+        },
+        "sleeve_length": {
+          "label": "long",
+          "score": 0.46689775586128235
+        }
+      },
+      "status": "GT_ROI",
+      "bounds": [
+        99,
+        208,
+        326,
+        545
+      ]
+    },
+    {
+      "record_id": "v5_validation_00062",
+      "category": "outerwear",
+      "source_dataset": "Fashionpedia",
+      "truth": {
+        "primary_color": "green",
+        "pattern": "solid",
+        "sleeve_length": "long"
+      },
+      "review_comment": "",
+      "pattern_label_review_flag": false,
+      "prediction": {
+        "primary_color": {
+          "label": "blue",
+          "score": 0.40277501940727234
+        },
+        "pattern": {
+          "label": "solid",
+          "score": 0.3990233838558197,
+          "stage1_bucket": "plain_non_pattern"
+        },
+        "sleeve_length": {
+          "label": "three_quarter",
+          "score": 0.3414880633354187
+        }
+      },
+      "status": "GT_ROI",
+      "bounds": [
+        218,
+        187,
+        535,
+        635
+      ]
+    },
+    {
+      "record_id": "v5_validation_00064",
+      "category": "outerwear",
+      "source_dataset": "Fashionpedia",
+      "truth": {
+        "primary_color": "black",
+        "pattern": "solid",
+        "sleeve_length": "long"
+      },
+      "review_comment": "",
+      "pattern_label_review_flag": false,
+      "prediction": {
+        "primary_color": {
+          "label": "black",
+          "score": 0.19913440942764282
+        },
+        "pattern": {
+          "label": "striped",
+          "score": 0.2634555399417877,
+          "stage1_bucket": "local_graphic_pattern"
+        },
+        "sleeve_length": {
+          "label": "cap",
+          "score": 0.5555274486541748
+        }
+      },
+      "status": "GT_ROI",
+      "bounds": [
+        544,
+        300,
+        669,
+        493
+      ]
+    },
+    {
+      "record_id": "v5_validation_00031",
+      "category": "dress",
+      "source_dataset": "DeepFashion2",
+      "truth": {
+        "primary_color": "black",
+        "pattern": "solid",
+        "sleeve_length": "long"
+      },
+      "review_comment": "",
+      "pattern_label_review_flag": false,
+      "prediction": {
+        "primary_color": {
+          "label": "black",
+          "score": 0.780241847038269
+        },
+        "pattern": {
+          "label": "other_pattern",
+          "score": 0.5125449895858765,
+          "stage1_bucket": "repeated_surface_pattern"
+        },
+        "sleeve_length": {
+          "label": "sleeveless",
+          "score": 0.3344290256500244
+        }
+      },
+      "status": "GT_ROI",
+      "bounds": [
+        186,
+        4,
+        760,
+        1067
+      ]
+    },
+    {
+      "record_id": "v5_validation_00006",
+      "category": "dress",
+      "source_dataset": "DeepFashion2",
+      "truth": {
+        "primary_color": "white",
+        "pattern": "solid",
+        "sleeve_length": "sleeveless"
+      },
+      "review_comment": "",
+      "pattern_label_review_flag": false,
+      "prediction": {
+        "primary_color": {
+          "label": "white",
+          "score": 0.8290252685546875
+        },
+        "pattern": {
+          "label": "solid",
+          "score": 0.5272144675254822,
+          "stage1_bucket": "plain_non_pattern"
+        },
+        "sleeve_length": {
+          "label": "cap",
+          "score": 0.4865965247154236
+        }
+      },
+      "status": "GT_ROI",
+      "bounds": [
+        63,
+        189,
+        466,
+        624
+      ]
+    },
+    {
+      "record_id": "v5_validation_00005",
+      "category": "dress",
+      "source_dataset": "DeepFashion2",
+      "truth": {
+        "primary_color": "green",
+        "pattern": "checked_plaid",
+        "sleeve_length": "short"
+      },
+      "review_comment": "",
+      "pattern_label_review_flag": false,
+      "prediction": {
+        "primary_color": {
+          "label": "green",
+          "score": 0.20134013891220093
+        },
+        "pattern": {
+          "label": "checked_plaid",
+          "score": 0.6740288138389587,
+          "stage1_bucket": "repeated_surface_pattern"
+        },
+        "sleeve_length": {
+          "label": "cap",
+          "score": 0.3039379417896271
+        }
+      },
+      "status": "GT_ROI",
+      "bounds": [
+        55,
+        239,
+        349,
+        644
+      ]
+    },
+    {
+      "record_id": "v5_validation_00072",
+      "category": "dress",
+      "source_dataset": "Fashionpedia",
+      "truth": {
+        "primary_color": "purple",
+        "pattern": "solid",
+        "sleeve_length": "sleeveless"
+      },
+      "review_comment": "",
+      "pattern_label_review_flag": false,
+      "prediction": {
+        "primary_color": {
+          "label": "purple",
+          "score": 0.9747026562690735
+        },
+        "pattern": {
+          "label": "solid",
+          "score": 0.36506372690200806,
+          "stage1_bucket": "plain_non_pattern"
+        },
+        "sleeve_length": {
+          "label": "sleeveless",
+          "score": 0.24552930891513824
+        }
+      },
+      "status": "GT_ROI",
+      "bounds": [
+        107,
+        248,
+        352,
+        711
+      ]
+    },
+    {
+      "record_id": "v5_validation_00085",
+      "category": "dress",
+      "source_dataset": "Fashionpedia",
+      "truth": {
+        "primary_color": "black",
+        "pattern": "solid",
+        "sleeve_length": "unknown"
+      },
+      "review_comment": "",
+      "pattern_label_review_flag": false,
+      "prediction": {
+        "primary_color": {
+          "label": "black",
+          "score": 0.8029170632362366
+        },
+        "pattern": {
+          "label": "solid",
+          "score": 0.4507825970649719,
+          "stage1_bucket": "plain_non_pattern"
+        },
+        "sleeve_length": {
+          "label": "cap",
+          "score": 0.33522042632102966
+        }
+      },
+      "status": "GT_ROI",
+      "bounds": [
+        192,
+        229,
+        479,
+        753
+      ]
+    },
+    {
+      "record_id": "v5_validation_00081",
+      "category": "dress",
+      "source_dataset": "Fashionpedia",
+      "truth": {
+        "primary_color": "red",
+        "pattern": "solid",
+        "sleeve_length": "sleeveless"
+      },
+      "review_comment": "",
+      "pattern_label_review_flag": false,
+      "prediction": {
+        "primary_color": {
+          "label": "red",
+          "score": 0.9243258237838745
+        },
+        "pattern": {
+          "label": "solid",
+          "score": 0.47414731979370117,
+          "stage1_bucket": "plain_non_pattern"
+        },
+        "sleeve_length": {
+          "label": "elbow",
+          "score": 0.39507725834846497
+        }
+      },
+      "status": "GT_ROI",
+      "bounds": [
+        521,
+        125,
+        753,
+        646
+      ]
+    }
+  ],
+  "predicted_roi": [
+    {
+      "record_id": "v5_validation_00014",
+      "category": "top",
+      "source_dataset": "DeepFashion2",
+      "truth": {
+        "primary_color": "white",
+        "pattern": "graphic_logo",
+        "sleeve_length": "short"
+      },
+      "review_comment": "",
+      "pattern_label_review_flag": false,
+      "prediction": {
+        "primary_color": {
+          "label": "blue",
+          "score": 0.22860008478164673
+        },
+        "pattern": {
+          "label": "graphic_logo",
+          "score": 0.8812735080718994,
+          "stage1_bucket": "local_graphic_pattern"
+        },
+        "sleeve_length": {
+          "label": "sleeveless",
+          "score": 0.2595996856689453
+        }
+      },
+      "status": "MATCHED_PREDICTED_TARGET",
+      "bounds": [
+        267,
+        218,
+        528,
+        442
+      ],
+      "garment_iou": 0.820878434161174,
+      "predicted_garment_box": [
+        267.23089599609375,
+        218.09957885742188,
+        527.2048950195312,
+        441.3145751953125
+      ],
+      "predicted_class_id": 1
+    },
+    {
+      "record_id": "v5_validation_00027",
+      "category": "top",
+      "source_dataset": "DeepFashion2",
+      "truth": {
+        "primary_color": "pink",
+        "pattern": "solid",
+        "sleeve_length": "long"
+      },
+      "review_comment": "袖子上有条纹",
+      "pattern_label_review_flag": true,
+      "prediction": {
+        "primary_color": {
+          "label": "pink",
+          "score": 0.9640343189239502
+        },
+        "pattern": {
+          "label": "solid",
+          "score": 0.3937572240829468,
+          "stage1_bucket": "plain_non_pattern"
+        },
+        "sleeve_length": {
+          "label": "elbow",
+          "score": 0.31212568283081055
+        }
+      },
+      "status": "MATCHED_PREDICTED_TARGET",
+      "bounds": [
+        117,
+        170,
+        593,
+        729
+      ],
+      "garment_iou": 0.8302932792069789,
+      "predicted_garment_box": [
+        117.70779418945312,
+        170.81515502929688,
+        592.6810302734375,
+        728.947021484375
+      ],
+      "predicted_class_id": 1
+    },
+    {
+      "record_id": "v5_validation_00016",
+      "category": "top",
+      "source_dataset": "DeepFashion2",
+      "truth": {
+        "primary_color": "white",
+        "pattern": "graphic_logo",
+        "sleeve_length": "short"
+      },
+      "review_comment": "",
+      "pattern_label_review_flag": false,
+      "prediction": {
+        "primary_color": {
+          "label": "black",
+          "score": 0.24045054614543915
+        },
+        "pattern": {
+          "label": "graphic_logo",
+          "score": 0.946748673915863,
+          "stage1_bucket": "local_graphic_pattern"
+        },
+        "sleeve_length": {
+          "label": "short",
+          "score": 0.350178599357605
+        }
+      },
+      "status": "MATCHED_PREDICTED_TARGET",
+      "bounds": [
+        125,
+        128,
+        402,
+        390
+      ],
+      "garment_iou": 0.8078961487476288,
+      "predicted_garment_box": [
+        125.13423919677734,
+        128.19691467285156,
+        401.12274169921875,
+        389.4890441894531
+      ],
+      "predicted_class_id": 1
+    },
+    {
+      "record_id": "v5_validation_00046",
+      "category": "top",
+      "source_dataset": "Fashionpedia",
+      "truth": {
+        "primary_color": "purple",
+        "pattern": "checked_plaid",
+        "sleeve_length": "elbow"
+      },
+      "review_comment": "",
+      "pattern_label_review_flag": false,
+      "prediction": {
+        "primary_color": {
+          "label": "purple",
+          "score": 0.4819367229938507
+        },
+        "pattern": {
+          "label": "checked_plaid",
+          "score": 0.7644347548484802,
+          "stage1_bucket": "repeated_surface_pattern"
+        },
+        "sleeve_length": {
+          "label": "short",
+          "score": 0.5661818981170654
+        }
+      },
+      "status": "MATCHED_PREDICTED_TARGET",
+      "bounds": [
+        234,
+        193,
+        536,
+        512
+      ],
+      "garment_iou": 0.9598354044697428,
+      "predicted_garment_box": [
+        234.0098876953125,
+        193.68597412109375,
+        535.0731201171875,
+        511.2055358886719
+      ],
+      "predicted_class_id": 1
+    },
+    {
+      "record_id": "v5_validation_00053",
+      "category": "top",
+      "source_dataset": "Fashionpedia",
+      "truth": {
+        "primary_color": "pink",
+        "pattern": "solid",
+        "sleeve_length": "unknown"
+      },
+      "review_comment": "",
+      "pattern_label_review_flag": false,
+      "prediction": {
+        "primary_color": {
+          "label": "pink",
+          "score": 0.8898807764053345
+        },
+        "pattern": {
+          "label": "solid",
+          "score": 0.4778437316417694,
+          "stage1_bucket": "texture_structure_non_pattern"
+        },
+        "sleeve_length": {
+          "label": "long",
+          "score": 0.22321376204490662
+        }
+      },
+      "status": "MATCHED_PREDICTED_TARGET",
+      "bounds": [
+        305,
+        477,
+        389,
+        622
+      ],
+      "garment_iou": 0.8260632696333385,
+      "predicted_garment_box": [
+        305.5440979003906,
+        477.9185791015625,
+        388.1352844238281,
+        621.2959594726562
+      ],
+      "predicted_class_id": 1
+    },
+    {
+      "record_id": "v5_validation_00035",
+      "category": "top",
+      "source_dataset": "Fashionpedia",
+      "truth": {
+        "primary_color": "beige",
+        "pattern": "animal_print",
+        "sleeve_length": "short"
+      },
+      "review_comment": "",
+      "pattern_label_review_flag": false,
+      "prediction": {
+        "primary_color": {
+          "label": "beige",
+          "score": 0.618461549282074
+        },
+        "pattern": {
+          "label": "animal_print",
+          "score": 0.5684595704078674,
+          "stage1_bucket": "repeated_surface_pattern"
+        },
+        "sleeve_length": {
+          "label": "cap",
+          "score": 0.4957018792629242
+        }
+      },
+      "status": "MATCHED_PREDICTED_TARGET",
+      "bounds": [
+        349,
+        253,
+        535,
+        452
+      ],
+      "garment_iou": 0.7177250777649431,
+      "predicted_garment_box": [
+        349.46160888671875,
+        253.72467041015625,
+        534.6682739257812,
+        451.4455871582031
+      ],
+      "predicted_class_id": 1
+    },
+    {
+      "record_id": "v5_validation_00013",
+      "category": "outerwear",
+      "source_dataset": "DeepFashion2",
+      "truth": {
+        "primary_color": "white",
+        "pattern": "solid",
+        "sleeve_length": "unknown"
+      },
+      "review_comment": "",
+      "pattern_label_review_flag": false,
+      "prediction": {},
+      "status": "GARMENT_CLASS_MISMATCH",
+      "bounds": null,
+      "garment_iou": 0.8460963397589863,
+      "predicted_garment_box": [
+        78.27731323242188,
+        52.30518341064453,
+        440.67901611328125,
+        572.2970581054688
+      ],
+      "predicted_class_id": 5
+    },
+    {
+      "record_id": "v5_validation_00018",
+      "category": "outerwear",
+      "source_dataset": "DeepFashion2",
+      "truth": {
+        "primary_color": "black",
+        "pattern": "striped",
+        "sleeve_length": "three_quarter"
+      },
+      "review_comment": "",
+      "pattern_label_review_flag": false,
+      "prediction": {
+        "primary_color": {
+          "label": "blue",
+          "score": 0.41752663254737854
+        },
+        "pattern": {
+          "label": "striped",
+          "score": 0.4575682580471039,
+          "stage1_bucket": "repeated_surface_pattern"
+        },
+        "sleeve_length": {
+          "label": "long",
+          "score": 0.25669586658477783
+        }
+      },
+      "status": "MATCHED_PREDICTED_TARGET",
+      "bounds": [
+        108,
+        265,
+        626,
+        954
+      ],
+      "garment_iou": 0.8553060771486878,
+      "predicted_garment_box": [
+        108.19479370117188,
+        265.9737854003906,
+        625.31103515625,
+        953.4560546875
+      ],
+      "predicted_class_id": 4
+    },
+    {
+      "record_id": "v5_validation_00024",
+      "category": "outerwear",
+      "source_dataset": "DeepFashion2",
+      "truth": {
+        "primary_color": "black",
+        "pattern": "floral",
+        "sleeve_length": "three_quarter"
+      },
+      "review_comment": "",
+      "pattern_label_review_flag": false,
+      "prediction": {},
+      "status": "GARMENT_CLASS_MISMATCH",
+      "bounds": null,
+      "garment_iou": 0.8155976872341816,
+      "predicted_garment_box": [
+        10.399847984313965,
+        130.8389129638672,
+        258.63494873046875,
+        395.0
+      ],
+      "predicted_class_id": 5
+    },
+    {
+      "record_id": "v5_validation_00036",
+      "category": "outerwear",
+      "source_dataset": "Fashionpedia",
+      "truth": {
+        "primary_color": "purple",
+        "pattern": "geometric_abstract",
+        "sleeve_length": "long"
+      },
+      "review_comment": "",
+      "pattern_label_review_flag": false,
+      "prediction": {
+        "primary_color": {
+          "label": "purple",
+          "score": 0.8003489971160889
+        },
+        "pattern": {
+          "label": "solid",
+          "score": 0.357589989900589,
+          "stage1_bucket": "texture_structure_non_pattern"
+        },
+        "sleeve_length": {
+          "label": "long",
+          "score": 0.7210631966590881
+        }
+      },
+      "status": "MATCHED_PREDICTED_TARGET",
+      "bounds": [
+        100,
+        211,
+        329,
+        574
+      ],
+      "garment_iou": 0.8986636458964048,
+      "predicted_garment_box": [
+        100.33010864257812,
+        211.43072509765625,
+        328.18408203125,
+        573.6913452148438
+      ],
+      "predicted_class_id": 4
+    },
+    {
+      "record_id": "v5_validation_00062",
+      "category": "outerwear",
+      "source_dataset": "Fashionpedia",
+      "truth": {
+        "primary_color": "green",
+        "pattern": "solid",
+        "sleeve_length": "long"
+      },
+      "review_comment": "",
+      "pattern_label_review_flag": false,
+      "prediction": {
+        "primary_color": {
+          "label": "gray",
+          "score": 0.331387460231781
+        },
+        "pattern": {
+          "label": "solid",
+          "score": 0.4144933819770813,
+          "stage1_bucket": "texture_structure_non_pattern"
+        },
+        "sleeve_length": {
+          "label": "elbow",
+          "score": 0.33363819122314453
+        }
+      },
+      "status": "MATCHED_PREDICTED_TARGET",
+      "bounds": [
+        218,
+        167,
+        529,
+        648
+      ],
+      "garment_iou": 0.9155007385658998,
+      "predicted_garment_box": [
+        218.64480590820312,
+        167.94996643066406,
+        528.9531860351562,
+        647.6387939453125
+      ],
+      "predicted_class_id": 4
+    },
+    {
+      "record_id": "v5_validation_00064",
+      "category": "outerwear",
+      "source_dataset": "Fashionpedia",
+      "truth": {
+        "primary_color": "black",
+        "pattern": "solid",
+        "sleeve_length": "long"
+      },
+      "review_comment": "",
+      "pattern_label_review_flag": false,
+      "prediction": {},
+      "status": "GARMENT_CLASS_MISMATCH",
+      "bounds": null,
+      "garment_iou": 0.8707455688181496,
+      "predicted_garment_box": [
+        546.4498291015625,
+        296.3034973144531,
+        676.0591430664062,
+        484.04876708984375
+      ],
+      "predicted_class_id": 8
+    },
+    {
+      "record_id": "v5_validation_00031",
+      "category": "dress",
+      "source_dataset": "DeepFashion2",
+      "truth": {
+        "primary_color": "black",
+        "pattern": "solid",
+        "sleeve_length": "long"
+      },
+      "review_comment": "",
+      "pattern_label_review_flag": false,
+      "prediction": {
+        "primary_color": {
+          "label": "black",
+          "score": 0.8505935668945312
+        },
+        "pattern": {
+          "label": "polka_dot",
+          "score": 0.35315343737602234,
+          "stage1_bucket": "repeated_surface_pattern"
+        },
+        "sleeve_length": {
+          "label": "cap",
+          "score": 0.2923695743083954
+        }
+      },
+      "status": "MATCHED_PREDICTED_TARGET",
+      "bounds": [
+        168,
+        79,
+        770,
+        1104
+      ],
+      "garment_iou": 0.8602085503262716,
+      "predicted_garment_box": [
+        168.18121337890625,
+        79.27401733398438,
+        769.731689453125,
+        1103.0992431640625
+      ],
+      "predicted_class_id": 5
+    },
+    {
+      "record_id": "v5_validation_00006",
+      "category": "dress",
+      "source_dataset": "DeepFashion2",
+      "truth": {
+        "primary_color": "white",
+        "pattern": "solid",
+        "sleeve_length": "sleeveless"
+      },
+      "review_comment": "",
+      "pattern_label_review_flag": false,
+      "prediction": {
+        "primary_color": {
+          "label": "white",
+          "score": 0.8241078853607178
+        },
+        "pattern": {
+          "label": "solid",
+          "score": 0.4902600347995758,
+          "stage1_bucket": "plain_non_pattern"
+        },
+        "sleeve_length": {
+          "label": "cap",
+          "score": 0.29978856444358826
+        }
+      },
+      "status": "MATCHED_PREDICTED_TARGET",
+      "bounds": [
+        77,
+        218,
+        455,
+        618
+      ],
+      "garment_iou": 0.8582563891651316,
+      "predicted_garment_box": [
+        77.50296783447266,
+        218.44485473632812,
+        454.9255065917969,
+        617.0872802734375
+      ],
+      "predicted_class_id": 5
+    },
+    {
+      "record_id": "v5_validation_00005",
+      "category": "dress",
+      "source_dataset": "DeepFashion2",
+      "truth": {
+        "primary_color": "green",
+        "pattern": "checked_plaid",
+        "sleeve_length": "short"
+      },
+      "review_comment": "",
+      "pattern_label_review_flag": false,
+      "prediction": {
+        "primary_color": {
+          "label": "green",
+          "score": 0.24238450825214386
+        },
+        "pattern": {
+          "label": "checked_plaid",
+          "score": 0.7073063850402832,
+          "stage1_bucket": "repeated_surface_pattern"
+        },
+        "sleeve_length": {
+          "label": "cap",
+          "score": 0.31966957449913025
+        }
+      },
+      "status": "MATCHED_PREDICTED_TARGET",
+      "bounds": [
+        48,
+        235,
+        361,
+        646
+      ],
+      "garment_iou": 0.930861167493049,
+      "predicted_garment_box": [
+        48.588748931884766,
+        235.9423370361328,
+        360.5970764160156,
+        645.9115600585938
+      ],
+      "predicted_class_id": 5
+    },
+    {
+      "record_id": "v5_validation_00072",
+      "category": "dress",
+      "source_dataset": "Fashionpedia",
+      "truth": {
+        "primary_color": "purple",
+        "pattern": "solid",
+        "sleeve_length": "sleeveless"
+      },
+      "review_comment": "",
+      "pattern_label_review_flag": false,
+      "prediction": {
+        "primary_color": {
+          "label": "purple",
+          "score": 0.9646075367927551
+        },
+        "pattern": {
+          "label": "solid",
+          "score": 0.5887105464935303,
+          "stage1_bucket": "plain_non_pattern"
+        },
+        "sleeve_length": {
+          "label": "sleeveless",
+          "score": 0.35544347763061523
+        }
+      },
+      "status": "MATCHED_PREDICTED_TARGET",
+      "bounds": [
+        103,
+        262,
+        342,
+        718
+      ],
+      "garment_iou": 0.9022067143268426,
+      "predicted_garment_box": [
+        103.7738265991211,
+        262.3720703125,
+        341.1296081542969,
+        717.4884033203125
+      ],
+      "predicted_class_id": 5
+    },
+    {
+      "record_id": "v5_validation_00085",
+      "category": "dress",
+      "source_dataset": "Fashionpedia",
+      "truth": {
+        "primary_color": "black",
+        "pattern": "solid",
+        "sleeve_length": "unknown"
+      },
+      "review_comment": "",
+      "pattern_label_review_flag": false,
+      "prediction": {
+        "primary_color": {
+          "label": "black",
+          "score": 0.8645400404930115
+        },
+        "pattern": {
+          "label": "solid",
+          "score": 0.3002352714538574,
+          "stage1_bucket": "plain_non_pattern"
+        },
+        "sleeve_length": {
+          "label": "cap",
+          "score": 0.28726956248283386
+        }
+      },
+      "status": "MATCHED_PREDICTED_TARGET",
+      "bounds": [
+        203,
+        233,
+        479,
+        752
+      ],
+      "garment_iou": 0.9475093940530795,
+      "predicted_garment_box": [
+        203.70181274414062,
+        233.5622100830078,
+        478.7960510253906,
+        751.5448608398438
+      ],
+      "predicted_class_id": 5
+    },
+    {
+      "record_id": "v5_validation_00081",
+      "category": "dress",
+      "source_dataset": "Fashionpedia",
+      "truth": {
+        "primary_color": "red",
+        "pattern": "solid",
+        "sleeve_length": "sleeveless"
+      },
+      "review_comment": "",
+      "pattern_label_review_flag": false,
+      "prediction": {
+        "primary_color": {
+          "label": "red",
+          "score": 0.9070385098457336
+        },
+        "pattern": {
+          "label": "solid",
+          "score": 0.5108144879341125,
+          "stage1_bucket": "plain_non_pattern"
+        },
+        "sleeve_length": {
+          "label": "elbow",
+          "score": 0.4590550661087036
+        }
+      },
+      "status": "MATCHED_PREDICTED_TARGET",
+      "bounds": [
+        518,
+        131,
+        743,
+        646
+      ],
+      "garment_iou": 0.9310204102555588,
+      "predicted_garment_box": [
+        518.4910888671875,
+        131.2171630859375,
+        742.3433227539062,
+        645.0548706054688
+      ],
+      "predicted_class_id": 5
+    }
+  ]
+}

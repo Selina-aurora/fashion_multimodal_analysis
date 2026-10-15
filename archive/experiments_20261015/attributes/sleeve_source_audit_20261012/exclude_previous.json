@@ -1,0 +1,953 @@
+[
+  {
+    "record_id": "v5_train_01994",
+    "experiment_split": "train",
+    "source_image_sha256": "1934f1e03cdc21a7b1ff3d5d5455f1c2b27272511cd41c27cd5592cadd500e9f",
+    "source_image": "../fashion_data/raw/fashionpedia/images/test/fa6fe8a772afec21850eaf4cf5fc72fd.jpg",
+    "category": "top",
+    "garment_bbox_original": [
+      204,
+      192,
+      419,
+      440
+    ],
+    "historical_label": "cap",
+    "source_dataset_split": "train"
+  },
+  {
+    "record_id": "v5_train_01373",
+    "experiment_split": "train",
+    "source_image_sha256": "270c2917cf05a24ea4dc29c4d2aa5c35e552b2282a304633ee81f55dfa1a4915",
+    "source_image": "../fashion_data/raw/fashionpedia/images/test/a4f806e6b45ed0ac339db298ee287b44.jpg",
+    "category": "dress",
+    "garment_bbox_original": [
+      179,
+      0,
+      530,
+      534
+    ],
+    "historical_label": "cap",
+    "source_dataset_split": "train"
+  },
+  {
+    "record_id": "v5_train_01779",
+    "experiment_split": "train",
+    "source_image_sha256": "ca5b91296eccc050b3cec6237b51b41d568787332a06b3e822bb456fa33f929b",
+    "source_image": "../fashion_data/raw/fashionpedia/images/test/d5d759731757fdef16a804321d4375ae.jpg",
+    "category": "top",
+    "garment_bbox_original": [
+      525,
+      200,
+      669,
+      322
+    ],
+    "historical_label": "cap",
+    "source_dataset_split": "train"
+  },
+  {
+    "record_id": "v5_train_00474",
+    "experiment_split": "train",
+    "source_image_sha256": "158f580676c76280f790d991f8b5cc1619fa15ace16c16cc2328893b95178c94",
+    "source_image": "../fashion_data/raw/fashionpedia/images/test/2ede08066feaa38aa9127fccf570a4a9.jpg",
+    "category": "dress",
+    "garment_bbox_original": [
+      173,
+      295,
+      535,
+      929
+    ],
+    "historical_label": "short",
+    "source_dataset_split": "train"
+  },
+  {
+    "record_id": "v5_train_01252",
+    "experiment_split": "train",
+    "source_image_sha256": "22d2d9bf3217227affc5a38345224dcb309b6d9196a070de78447c765d2a1b83",
+    "source_image": "../fashion_data/raw/fashionpedia/images/test/963999a4ce820148817057ade3cc956d.jpg",
+    "category": "top",
+    "garment_bbox_original": [
+      130,
+      204,
+      395,
+      361
+    ],
+    "historical_label": "short",
+    "source_dataset_split": "train"
+  },
+  {
+    "record_id": "v5_train_00276",
+    "experiment_split": "train",
+    "source_image_sha256": "d9d0675eb6291def49d9dba41be99d1acdb0d0cdc078bcb9c9dee90c816c27e7",
+    "source_image": "../fashion_data/raw/fashionpedia/images/test/12416f707a0428adc08bc899bc6d84c8.jpg",
+    "category": "dress",
+    "garment_bbox_original": [
+      121,
+      286,
+      613,
+      1024
+    ],
+    "historical_label": "short",
+    "source_dataset_split": "train"
+  },
+  {
+    "record_id": "v5_train_00246",
+    "experiment_split": "train",
+    "source_image_sha256": "f26638dc98dadc1a8b641855f802ea0a414c362ac24fa267c32556c614a95464",
+    "source_image": "../fashion_data/raw/fashionpedia/images/test/0d5d5e00e589fe5641b919179794994b.jpg",
+    "category": "top",
+    "garment_bbox_original": [
+      692,
+      315,
+      817,
+      571
+    ],
+    "historical_label": "short",
+    "source_dataset_split": "train"
+  },
+  {
+    "record_id": "v5_train_00138",
+    "experiment_split": "train",
+    "source_image_sha256": "bf5083da16c7935aaae42161f673a1b428d4366a118b79615c2bd54df87924ff",
+    "source_image": "../fashion_data/raw/fashionpedia/images/test/0146a53e12d690914995248fb6872121.jpg",
+    "category": "top",
+    "garment_bbox_original": [
+      176,
+      160,
+      462,
+      564
+    ],
+    "historical_label": "short",
+    "source_dataset_split": "train"
+  },
+  {
+    "record_id": "v5_train_00425",
+    "experiment_split": "train",
+    "source_image_sha256": "bf6dcb971ca5dd483f25d5310a6b6e0aba29d1d9948e844932fc9de4620b8867",
+    "source_image": "../fashion_data/raw/fashionpedia/images/test/2ad4ef98177e257b8d57cdfa8e421bde.jpg",
+    "category": "dress",
+    "garment_bbox_original": [
+      171,
+      156,
+      472,
+      882
+    ],
+    "historical_label": "short",
+    "source_dataset_split": "train"
+  },
+  {
+    "record_id": "v5_train_00256",
+    "experiment_split": "train",
+    "source_image_sha256": "6142a23d073c1785bc6ac9e17dcbde04c8acb7fcd4686da69a7c7ae1d421642c",
+    "source_image": "../fashion_data/raw/fashionpedia/images/test/0fd47405bde971ea795259fa8790ef40.jpg",
+    "category": "dress",
+    "garment_bbox_original": [
+      185,
+      188,
+      683,
+      989
+    ],
+    "historical_label": "short",
+    "source_dataset_split": "train"
+  },
+  {
+    "record_id": "v5_train_01335",
+    "experiment_split": "train",
+    "source_image_sha256": "7833c1dc721023525da062c18e46ffa440d430c63bf4b5824bf087786da4c77d",
+    "source_image": "../fashion_data/raw/fashionpedia/images/test/9f6a012fdb962c60a7f95bb7472a3c6c.jpg",
+    "category": "top",
+    "garment_bbox_original": [
+      549,
+      287,
+      650,
+      364
+    ],
+    "historical_label": "short",
+    "source_dataset_split": "train"
+  },
+  {
+    "record_id": "v5_train_00909",
+    "experiment_split": "train",
+    "source_image_sha256": "518a5692b33cb5ae2d5e57c218dcfda9b82bd9f675d639c215b83ba894ad50e0",
+    "source_image": "../fashion_data/raw/fashionpedia/images/test/67ec64b00cd3aa7ab1d92c59e5d8fd85.jpg",
+    "category": "dress",
+    "garment_bbox_original": [
+      209,
+      236,
+      456,
+      945
+    ],
+    "historical_label": "short",
+    "source_dataset_split": "train"
+  },
+  {
+    "record_id": "v5_train_00442",
+    "experiment_split": "train",
+    "source_image_sha256": "2fc932908883849bfec64d7abce81ca03db202ae339fb9f17e6052c1c70bbcbe",
+    "source_image": "../fashion_data/raw/fashionpedia/images/test/2df8a3cbaf17a7e8441cf3f4bc73824c.jpg",
+    "category": "top",
+    "garment_bbox_original": [
+      488,
+      434,
+      548,
+      524
+    ],
+    "historical_label": "elbow",
+    "source_dataset_split": "train"
+  },
+  {
+    "record_id": "v5_train_00933",
+    "experiment_split": "train",
+    "source_image_sha256": "e23a9377cec3eca5b46d5ca8514cb75600844f276be72dbc05badd9cd54c4f9c",
+    "source_image": "../fashion_data/raw/fashionpedia/images/test/68d6747a3e74f059dddb6d75f624f21c.jpg",
+    "category": "dress",
+    "garment_bbox_original": [
+      191,
+      220,
+      371,
+      628
+    ],
+    "historical_label": "elbow",
+    "source_dataset_split": "train"
+  },
+  {
+    "record_id": "v5_train_00939",
+    "experiment_split": "train",
+    "source_image_sha256": "f9a183e41a0c51167c49fe7cde454b8706496a143439702fa9de503b566dd48e",
+    "source_image": "../fashion_data/raw/fashionpedia/images/test/6b4ee84a44b076120d58c0ebb74f313a.jpg",
+    "category": "dress",
+    "garment_bbox_original": [
+      142,
+      366,
+      368,
+      768
+    ],
+    "historical_label": "elbow",
+    "source_dataset_split": "train"
+  },
+  {
+    "record_id": "v5_train_00733",
+    "experiment_split": "train",
+    "source_image_sha256": "58e98af9aaa921a6f7475ec7383221f40dba5631f2b6b3ff414e3dd5cccb68f0",
+    "source_image": "../fashion_data/raw/fashionpedia/images/test/50e763ae42f2872db7567e607005d3b1.jpg",
+    "category": "top",
+    "garment_bbox_original": [
+      330,
+      198,
+      566,
+      464
+    ],
+    "historical_label": "elbow",
+    "source_dataset_split": "train"
+  },
+  {
+    "record_id": "v5_train_01919",
+    "experiment_split": "train",
+    "source_image_sha256": "3f48654d25b836d19b582ad497d1e0d04023874d746b9a6aafc21e6929c220ba",
+    "source_image": "../fashion_data/raw/fashionpedia/images/test/f06777ee045a0762aad3a7ec3111b864.jpg",
+    "category": "top",
+    "garment_bbox_original": [
+      316,
+      452,
+      442,
+      635
+    ],
+    "historical_label": "elbow",
+    "source_dataset_split": "train"
+  },
+  {
+    "record_id": "v5_train_00996",
+    "experiment_split": "train",
+    "source_image_sha256": "1e9b4500f72e20997b58e987c55784451881dad5bf5050874fc96f0748ea6237",
+    "source_image": "../fashion_data/raw/fashionpedia/images/test/73565a1d1eab156d8d17f9f481d7d54e.jpg",
+    "category": "top",
+    "garment_bbox_original": [
+      278,
+      199,
+      539,
+      540
+    ],
+    "historical_label": "elbow",
+    "source_dataset_split": "train"
+  },
+  {
+    "record_id": "v5_train_01298",
+    "experiment_split": "train",
+    "source_image_sha256": "65ea98489c9aa2dab26bd7f03284da85db7918d4a8b878cc312e2c1560bdb135",
+    "source_image": "../fashion_data/raw/fashionpedia/images/test/9ad7fa911ef3602db892724c8cd679ee.jpg",
+    "category": "dress",
+    "garment_bbox_original": [
+      193,
+      234,
+      412,
+      641
+    ],
+    "historical_label": "three_quarter",
+    "source_dataset_split": "train"
+  },
+  {
+    "record_id": "v5_train_01963",
+    "experiment_split": "train",
+    "source_image_sha256": "d9c5409cfb2c3469ea3292212ada1f1e07a99b9351e8aa6fd8ce82cfa672582b",
+    "source_image": "../fashion_data/raw/fashionpedia/images/test/f71e5303f0a10b85bf4bbc6c9cbee1ab.jpg",
+    "category": "outerwear",
+    "garment_bbox_original": [
+      189,
+      205,
+      466,
+      494
+    ],
+    "historical_label": "three_quarter",
+    "source_dataset_split": "train"
+  },
+  {
+    "record_id": "v5_train_01592",
+    "experiment_split": "train",
+    "source_image_sha256": "aa99523ead533c94e8df668d2aeaa165aab97d3450d5a0da296e32d91b58b1a9",
+    "source_image": "../fashion_data/raw/fashionpedia/images/test/bfabcacd46568489e6ae0d4952ecccf9.jpg",
+    "category": "outerwear",
+    "garment_bbox_original": [
+      138,
+      144,
+      504,
+      757
+    ],
+    "historical_label": "long",
+    "source_dataset_split": "train"
+  },
+  {
+    "record_id": "v5_train_01453",
+    "experiment_split": "train",
+    "source_image_sha256": "b18db7144fec8264b01e41af998fed3916ae5db6e77403efaea32beec33f504f",
+    "source_image": "../fashion_data/raw/fashionpedia/images/test/ad1a3b0fb188342ec29f22275b434f04.jpg",
+    "category": "outerwear",
+    "garment_bbox_original": [
+      278,
+      288,
+      637,
+      788
+    ],
+    "historical_label": "three_quarter",
+    "source_dataset_split": "train"
+  },
+  {
+    "record_id": "v5_train_00569",
+    "experiment_split": "train",
+    "source_image_sha256": "4c78e17f2d40831881362bdc54924382b1b763841efea44878ef169285857e53",
+    "source_image": "../fashion_data/raw/fashionpedia/images/test/3ad847bd01f73476418f50f8419bf644.jpg",
+    "category": "dress",
+    "garment_bbox_original": [
+      183,
+      183,
+      480,
+      809
+    ],
+    "historical_label": "long",
+    "source_dataset_split": "train"
+  },
+  {
+    "record_id": "v5_train_01662",
+    "experiment_split": "train",
+    "source_image_sha256": "c3350a7a2d8f0919d8088bbd5dea2c6e035853594fbbd3768844887b4f71eb63",
+    "source_image": "../fashion_data/raw/fashionpedia/images/test/c8183194c22ace7c7bbe6f224ea525bb.jpg",
+    "category": "top",
+    "garment_bbox_original": [
+      205,
+      275,
+      526,
+      642
+    ],
+    "historical_label": "long",
+    "source_dataset_split": "train"
+  },
+  {
+    "record_id": "v5_train_00521",
+    "experiment_split": "train",
+    "source_image_sha256": "36578743a7c5a40371ad682e3ce6739296c0348113aa9bc1b64373df639534ee",
+    "source_image": "../fashion_data/raw/fashionpedia/images/test/33a60f6f6d0abe76697705b61564ad30.jpg",
+    "category": "outerwear",
+    "garment_bbox_original": [
+      205,
+      268,
+      647,
+      865
+    ],
+    "historical_label": "long",
+    "source_dataset_split": "train"
+  },
+  {
+    "record_id": "v5_train_01317",
+    "experiment_split": "train",
+    "source_image_sha256": "cea78453a9e0ee400dd898de066e10fc76ceb06d02c4fdf9590df2f59b5a4dfb",
+    "source_image": "../fashion_data/raw/fashionpedia/images/test/9ce7b758976ec102f8c3ec502e523969.jpg",
+    "category": "outerwear",
+    "garment_bbox_original": [
+      321,
+      299,
+      447,
+      568
+    ],
+    "historical_label": "long",
+    "source_dataset_split": "train"
+  },
+  {
+    "record_id": "v5_train_00326",
+    "experiment_split": "train",
+    "source_image_sha256": "e86adb970d57542a1137e8514c2ead716fff6418554389cda78c3435c2d22093",
+    "source_image": "../fashion_data/raw/fashionpedia/images/test/1c1484bd95e170ad133660f8a69419b1.jpg",
+    "category": "top",
+    "garment_bbox_original": [
+      301,
+      329,
+      504,
+      548
+    ],
+    "historical_label": "long",
+    "source_dataset_split": "train"
+  },
+  {
+    "record_id": "df2_targeted150_20261008_00228",
+    "experiment_split": "train",
+    "source_image_sha256": "a2d2d1dbd91dea36c8290728b6d5762eacf3929a76551f698e0cc63b3df0fe6f",
+    "source_image": "../fashion_data/raw/train/train/image/082966.jpg",
+    "category": "top",
+    "garment_bbox_original": [
+      285,
+      252,
+      484,
+      450
+    ],
+    "historical_label": "sleeveless",
+    "source_dataset_split": "train"
+  },
+  {
+    "record_id": "df2_targeted150_20261008_00186",
+    "experiment_split": "train",
+    "source_image_sha256": "80e5ef8bc1b6013c2edc97e734277535d8b294230fb134a11660b1e8adb41a61",
+    "source_image": "../fashion_data/raw/train/train/image/102848.jpg",
+    "category": "top",
+    "garment_bbox_original": [
+      176,
+      276,
+      465,
+      688
+    ],
+    "historical_label": "sleeveless",
+    "source_dataset_split": "train"
+  },
+  {
+    "record_id": "df2_targeted150_20261008_00188",
+    "experiment_split": "train",
+    "source_image_sha256": "7d74a1c483cb500f5ee606099216dc1f7937b8c94cb5887a76d028525c5d5726",
+    "source_image": "../fashion_data/raw/train/train/image/111447.jpg",
+    "category": "top",
+    "garment_bbox_original": [
+      139,
+      14,
+      296,
+      239
+    ],
+    "historical_label": "sleeveless",
+    "source_dataset_split": "train"
+  },
+  {
+    "record_id": "v5_train_00073",
+    "experiment_split": "train",
+    "source_image_sha256": "10d29cd8d2b24f541f3f185a71474cda79e76809df54e4e06034aece9d50fe87",
+    "source_image": "../fashion_data/raw/train/train/image/120729.jpg",
+    "category": "dress",
+    "garment_bbox_original": [
+      261,
+      252,
+      424,
+      742
+    ],
+    "historical_label": "sleeveless",
+    "source_dataset_split": "train"
+  },
+  {
+    "record_id": "df2_balanced150_20261008_00056",
+    "experiment_split": "train",
+    "source_image_sha256": "e237849abef2bfa98615f5efe9cde617d8f18c9664dd5680cca8d8ba914d5edf",
+    "source_image": "../fashion_data/raw/train/train/image/142726.jpg",
+    "category": "dress",
+    "garment_bbox_original": [
+      121,
+      136,
+      206,
+      326
+    ],
+    "historical_label": "sleeveless",
+    "source_dataset_split": "train"
+  },
+  {
+    "record_id": "v5_train_01295",
+    "experiment_split": "dev",
+    "source_image_sha256": "dca38fd3c0ca28f42a2b23d23ea3c1b347b640bc6aaf2ce8ccb7637383e32a31",
+    "source_image": "../fashion_data/raw/fashionpedia/images/test/9a886a145d0a9f81b15e79666a5c51b1.jpg",
+    "category": "dress",
+    "garment_bbox_original": [
+      75,
+      270,
+      486,
+      984
+    ],
+    "historical_label": "cap",
+    "source_dataset_split": "train"
+  },
+  {
+    "record_id": "v5_train_00642",
+    "experiment_split": "dev",
+    "source_image_sha256": "a652ebd38dd031433d5fdd14aedbf3d907c9526fca8620517d25e9c43d873ae5",
+    "source_image": "../fashion_data/raw/fashionpedia/images/test/466e69961de78100fddae84c64fbf542.jpg",
+    "category": "top",
+    "garment_bbox_original": [
+      310,
+      154,
+      551,
+      443
+    ],
+    "historical_label": "cap",
+    "source_dataset_split": "train"
+  },
+  {
+    "record_id": "v5_train_01075",
+    "experiment_split": "dev",
+    "source_image_sha256": "85921645691829f712f35482cd152a7569beba927872c639066eb6e472656f8c",
+    "source_image": "../fashion_data/raw/fashionpedia/images/test/80206b9ade4e359369a5b9c6bbdf4321.jpg",
+    "category": "top",
+    "garment_bbox_original": [
+      244,
+      200,
+      445,
+      449
+    ],
+    "historical_label": "short",
+    "source_dataset_split": "train"
+  },
+  {
+    "record_id": "v5_train_02036",
+    "experiment_split": "dev",
+    "source_image_sha256": "0f4eba12652f753844fdf4bd4c452099907872913b9b66df534957f5bd9e5940",
+    "source_image": "../fashion_data/raw/fashionpedia/images/test/fffea54b50ac7e4bf24688c8614a5f27.jpg",
+    "category": "dress",
+    "garment_bbox_original": [
+      214,
+      225,
+      468,
+      793
+    ],
+    "historical_label": "short",
+    "source_dataset_split": "train"
+  },
+  {
+    "record_id": "v5_train_01019",
+    "experiment_split": "dev",
+    "source_image_sha256": "ba4422fb7d01a596381182810e2642e7c308b6aaeb7bb2b7771b8f5843a4eba4",
+    "source_image": "../fashion_data/raw/fashionpedia/images/test/768acaf9c9e2b1230016fa2924ce42aa.jpg",
+    "category": "outerwear",
+    "garment_bbox_original": [
+      0,
+      549,
+      538,
+      1024
+    ],
+    "historical_label": "elbow",
+    "source_dataset_split": "train"
+  },
+  {
+    "record_id": "v5_train_00714",
+    "experiment_split": "dev",
+    "source_image_sha256": "30a9b06fdb0d47436f8f68ee5c2927e5ae9218b20ef89920ca42f1ca3f0c0712",
+    "source_image": "../fashion_data/raw/fashionpedia/images/test/4f2a2c16e1c284c1dc11cb987c9f5ca0.jpg",
+    "category": "dress",
+    "garment_bbox_original": [
+      224,
+      236,
+      463,
+      664
+    ],
+    "historical_label": "elbow",
+    "source_dataset_split": "train"
+  },
+  {
+    "record_id": "v5_train_01934",
+    "experiment_split": "dev",
+    "source_image_sha256": "dce7385346f1f74c3a21c7e5693372f07263c7e6fb1a8c4698f19e671a523de6",
+    "source_image": "../fashion_data/raw/fashionpedia/images/test/f184df3bcf321ef5d3e4d5a513ade947.jpg",
+    "category": "top",
+    "garment_bbox_original": [
+      199,
+      197,
+      439,
+      413
+    ],
+    "historical_label": "three_quarter",
+    "source_dataset_split": "train"
+  },
+  {
+    "record_id": "v5_train_00735",
+    "experiment_split": "dev",
+    "source_image_sha256": "23a64d8d0f5cab50b3693b16aaf39dd4efc1c3bb8fcdc9339f55d7202f0ace35",
+    "source_image": "../fashion_data/raw/fashionpedia/images/test/517a8397f4b67050adbbb77fc38d94f3.jpg",
+    "category": "top",
+    "garment_bbox_original": [
+      136,
+      256,
+      312,
+      409
+    ],
+    "historical_label": "three_quarter",
+    "source_dataset_split": "train"
+  },
+  {
+    "record_id": "v5_train_01831",
+    "experiment_split": "dev",
+    "source_image_sha256": "b78a2bbaad844e8c05c6cc88ca3ae4ba06173376de2960d70800262cb1bbc66f",
+    "source_image": "../fashion_data/raw/fashionpedia/images/test/de8af016793ce1f2170e1ae785ed78ee.jpg",
+    "category": "outerwear",
+    "garment_bbox_original": [
+      442,
+      119,
+      742,
+      491
+    ],
+    "historical_label": "long",
+    "source_dataset_split": "train"
+  },
+  {
+    "record_id": "v5_train_00701",
+    "experiment_split": "dev",
+    "source_image_sha256": "96becf2f6764eaa72c3a37003d4bc5f84e244842413c8efe1f095bdaa6b03379",
+    "source_image": "../fashion_data/raw/fashionpedia/images/test/4d3fd642c9d08290f6262759a51d252f.jpg",
+    "category": "outerwear",
+    "garment_bbox_original": [
+      175,
+      212,
+      498,
+      504
+    ],
+    "historical_label": "long",
+    "source_dataset_split": "train"
+  },
+  {
+    "record_id": "df2_targeted150_20261008_00271",
+    "experiment_split": "dev",
+    "source_image_sha256": "0d7d5fc6ebdc27b4a35c4fe398034c5579215b74db9e8f6ce683a2e743ae004c",
+    "source_image": "../fashion_data/raw/train/train/image/148490.jpg",
+    "category": "top",
+    "garment_bbox_original": [
+      145,
+      142,
+      361,
+      441
+    ],
+    "historical_label": "sleeveless",
+    "source_dataset_split": "train"
+  },
+  {
+    "record_id": "df2_balanced150_20261008_00029",
+    "experiment_split": "dev",
+    "source_image_sha256": "49102fca866d8cd8813bd927eb4e38d7ac622f321b74f166e8b73089db3e2d09",
+    "source_image": "../fashion_data/raw/train/train/image/179563.jpg",
+    "category": "dress",
+    "garment_bbox_original": [
+      272,
+      49,
+      490,
+      368
+    ],
+    "historical_label": "sleeveless",
+    "source_dataset_split": "train"
+  },
+  {
+    "record_id": "v5_train_00723",
+    "split": "train",
+    "category": "outerwear",
+    "source_image": "../fashion_data/raw/fashionpedia/images/test/4f9742189256a459260eb22543154825.jpg",
+    "garment_id": "fashionpedia_ann_875",
+    "garment_bbox": [
+      163.0,
+      230.0,
+      470.0,
+      786.0
+    ],
+    "draft_sleeve_length": "three_quarter",
+    "parts": [
+      {
+        "part_annotation_id": 871,
+        "image_file": "4f9742189256a459260eb22543154825.jpg",
+        "part_bbox_xywh": [
+          389.0,
+          420.0,
+          31.0,
+          34.0
+        ],
+        "native_attributes": [
+          {
+            "id": 159,
+            "name": "three quarter (length)",
+            "supercategory": "length",
+            "level": 1,
+            "taxonomy_id": "att000164_00"
+          },
+          {
+            "id": 204,
+            "name": "set-in sleeve",
+            "supercategory": "nickname",
+            "level": 1,
+            "taxonomy_id": "att000210_00"
+          }
+        ],
+        "label_hint": "three_quarter",
+        "association_status": "PROPOSED_SELECTED_GARMENT",
+        "ranked_garment_coverages": [
+          {
+            "garment_annotation_id": 875,
+            "part_coverage": 1.0
+          },
+          {
+            "garment_annotation_id": 867,
+            "part_coverage": 0.0
+          }
+        ],
+        "proposed_record_id": "v5_train_00723",
+        "association_confirmed": false
+      },
+      {
+        "part_annotation_id": 872,
+        "image_file": "4f9742189256a459260eb22543154825.jpg",
+        "part_bbox_xywh": [
+          170.0,
+          418.0,
+          12.0,
+          29.0
+        ],
+        "native_attributes": [
+          {
+            "id": 159,
+            "name": "three quarter (length)",
+            "supercategory": "length",
+            "level": 1,
+            "taxonomy_id": "att000164_00"
+          },
+          {
+            "id": 204,
+            "name": "set-in sleeve",
+            "supercategory": "nickname",
+            "level": 1,
+            "taxonomy_id": "att000210_00"
+          }
+        ],
+        "label_hint": "three_quarter",
+        "association_status": "PROPOSED_SELECTED_GARMENT",
+        "ranked_garment_coverages": [
+          {
+            "garment_annotation_id": 875,
+            "part_coverage": 1.0
+          },
+          {
+            "garment_annotation_id": 867,
+            "part_coverage": 0.0
+          }
+        ],
+        "proposed_record_id": "v5_train_00723",
+        "association_confirmed": false
+      }
+    ],
+    "review_status": "pending",
+    "confirmed_training_label": false,
+    "source_image_sha256": "c9ad53064cec695e1c073479a6c72aa9f83c6a2d597d5b3ca6e679a4ac40f129"
+  },
+  {
+    "record_id": "v5_train_00157",
+    "split": "train",
+    "category": "outerwear",
+    "source_image": "../fashion_data/raw/fashionpedia/images/test/035b280e6bfd861226dbd2d1c8f89873.jpg",
+    "garment_id": "fashionpedia_ann_190",
+    "garment_bbox": [
+      190.0,
+      392.0,
+      361.0,
+      774.0
+    ],
+    "draft_sleeve_length": "long",
+    "parts": [
+      {
+        "part_annotation_id": 196,
+        "image_file": "035b280e6bfd861226dbd2d1c8f89873.jpg",
+        "part_bbox_xywh": [
+          309.0,
+          616.0,
+          39.0,
+          78.0
+        ],
+        "native_attributes": [
+          {
+            "id": 160,
+            "name": "wrist-length",
+            "supercategory": "length",
+            "level": 1,
+            "taxonomy_id": "att000165_00"
+          }
+        ],
+        "label_hint": "long",
+        "association_status": "PROPOSED_SELECTED_GARMENT",
+        "ranked_garment_coverages": [
+          {
+            "garment_annotation_id": 190,
+            "part_coverage": 0.9974554707379135
+          },
+          {
+            "garment_annotation_id": 202,
+            "part_coverage": 0.0016963528413910093
+          },
+          {
+            "garment_annotation_id": 191,
+            "part_coverage": 0.0
+          }
+        ],
+        "proposed_record_id": "v5_train_00157",
+        "association_confirmed": false
+      },
+      {
+        "part_annotation_id": 203,
+        "image_file": "035b280e6bfd861226dbd2d1c8f89873.jpg",
+        "part_bbox_xywh": [
+          201.0,
+          518.0,
+          32.0,
+          71.0
+        ],
+        "native_attributes": [
+          {
+            "id": 160,
+            "name": "wrist-length",
+            "supercategory": "length",
+            "level": 1,
+            "taxonomy_id": "att000165_00"
+          }
+        ],
+        "label_hint": "long",
+        "association_status": "PROPOSED_SELECTED_GARMENT",
+        "ranked_garment_coverages": [
+          {
+            "garment_annotation_id": 190,
+            "part_coverage": 1.0
+          },
+          {
+            "garment_annotation_id": 191,
+            "part_coverage": 0.0
+          },
+          {
+            "garment_annotation_id": 202,
+            "part_coverage": 0.0
+          }
+        ],
+        "proposed_record_id": "v5_train_00157",
+        "association_confirmed": false
+      }
+    ],
+    "review_status": "pending",
+    "confirmed_training_label": false,
+    "source_image_sha256": "6f36042706cabd1e055a60efbbaecdde1922c502210412a6281090695aa420dc"
+  },
+  {
+    "record_id": "v5_train_01303",
+    "split": "train",
+    "category": "top",
+    "source_image": "../fashion_data/raw/fashionpedia/images/test/9be97731b91f50cb1fabfa8d6d1bf441.jpg",
+    "garment_id": "fashionpedia_ann_3865",
+    "garment_bbox": [
+      261.0,
+      181.0,
+      498.0,
+      524.0
+    ],
+    "draft_sleeve_length": "long",
+    "parts": [
+      {
+        "part_annotation_id": 3862,
+        "image_file": "9be97731b91f50cb1fabfa8d6d1bf441.jpg",
+        "part_bbox_xywh": [
+          450.0,
+          211.0,
+          47.0,
+          258.0
+        ],
+        "native_attributes": [
+          {
+            "id": 160,
+            "name": "wrist-length",
+            "supercategory": "length",
+            "level": 1,
+            "taxonomy_id": "att000165_00"
+          },
+          {
+            "id": 206,
+            "name": "raglan (sleeve)",
+            "supercategory": "nickname",
+            "level": 1,
+            "taxonomy_id": "att000212_00"
+          }
+        ],
+        "label_hint": "long",
+        "association_status": "PROPOSED_SELECTED_GARMENT",
+        "ranked_garment_coverages": [
+          {
+            "garment_annotation_id": 3865,
+            "part_coverage": 1.0
+          },
+          {
+            "garment_annotation_id": 3866,
+            "part_coverage": 0.0013132760267430754
+          }
+        ],
+        "proposed_record_id": "v5_train_01303",
+        "association_confirmed": false
+      },
+      {
+        "part_annotation_id": 3863,
+        "image_file": "9be97731b91f50cb1fabfa8d6d1bf441.jpg",
+        "part_bbox_xywh": [
+          261.0,
+          243.0,
+          57.0,
+          280.0
+        ],
+        "native_attributes": [
+          {
+            "id": 160,
+            "name": "wrist-length",
+            "supercategory": "length",
+            "level": 1,
+            "taxonomy_id": "att000165_00"
+          },
+          {
+            "id": 206,
+            "name": "raglan (sleeve)",
+            "supercategory": "nickname",
+            "level": 1,
+            "taxonomy_id": "att000212_00"
+          }
+        ],
+        "label_hint": "long",
+        "association_status": "PROPOSED_SELECTED_GARMENT",
+        "ranked_garment_coverages": [
+          {
+            "garment_annotation_id": 3865,
+            "part_coverage": 1.0
+          },
+          {
+            "garment_annotation_id": 3866,
+            "part_coverage": 0.0002963841138114997
+          }
+        ],
+        "proposed_record_id": "v5_train_01303",
+        "association_confirmed": false
+      }
+    ],
+    "review_status": "pending",
+    "confirmed_training_label": false,
+    "source_image_sha256": "1a86f554d953b56d463fdd568b28ec403e179482c318f004aba7b76ec2d58a8c"
+  }
+]

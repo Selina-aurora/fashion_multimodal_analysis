@@ -1,0 +1,12 @@
+[
+  {
+    "record_id": "v5_train_01075",
+    "field": "side",
+    "source_value": "image_left",
+    "experiment_value": "image_right",
+    "changed_by": "assistant_visual_audit_20261012",
+    "reason": "Batch2 #11: all four selected points are on the arm on the image right. Metadata correction only; points, ratio and class unchanged.",
+    "human_reconfirmation": false,
+    "original_submission_preserved": true
+  }
+]

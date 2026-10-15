@@ -1,0 +1,4 @@
+﻿status,n,mean_total_ms,mean_dino_ms,mean_sam_ms,sam_invoked_count
+detected,40,234.706,125.7909,107.3453,40
+missed,30,125.463,124.6917,0,0
+rejected_region_geometry,10,122.0334,120.8204,0,0

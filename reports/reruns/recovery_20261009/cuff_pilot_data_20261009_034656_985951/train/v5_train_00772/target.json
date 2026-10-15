@@ -1,0 +1,31 @@
+{
+  "record_id": "v5_train_00772",
+  "split": "train",
+  "presence": "absent",
+  "category": "top",
+  "source_dataset": "Fashionpedia",
+  "source_image_sha256": "bbbaea0f5049b31de205ec5021503b0bf8aa4259fed07b2f02ef1d5db5b053c6",
+  "native_crop_xyxy": [
+    149,
+    306,
+    552,
+    738
+  ],
+  "input_crop_xyxy": [
+    108,
+    262,
+    593,
+    782
+  ],
+  "context_padding_fraction": 0.1,
+  "crop_size": [
+    485,
+    520
+  ],
+  "image": "train/v5_train_00772/image.png",
+  "garment_mask": "train/v5_train_00772/garment_mask.png",
+  "cuff_boxes_xyxy_local": [],
+  "box_audit": [],
+  "image_sha256": "a07e8bd904087ec47d69d2e4cb79a614b9261b8aca06fed849757fee9fb6ea2e",
+  "garment_mask_sha256": "a947bae64c7b0a571b47a0fcb6f2cc65719082d0bddd3f2d330e5df3940f4707"
+}

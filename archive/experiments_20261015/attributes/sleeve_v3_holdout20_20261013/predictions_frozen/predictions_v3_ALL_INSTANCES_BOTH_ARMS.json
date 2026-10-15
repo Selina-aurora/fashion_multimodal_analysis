@@ -1,0 +1,1871 @@
+[
+  {
+    "image_id": "holdout_001",
+    "size": [
+      1024,
+      683
+    ],
+    "instances": []
+  },
+  {
+    "image_id": "holdout_002",
+    "size": [
+      1024,
+      683
+    ],
+    "instances": [
+      {
+        "instance_id": 2,
+        "category": "outerwear",
+        "predicted_person_id": 0,
+        "mask_file": "masks/holdout_002_2.png",
+        "bbox": [
+          478.3681335449219,
+          54.7083740234375,
+          650.5791015625,
+          352.95635986328125
+        ],
+        "arms": [
+          {
+            "anatomical_side": "left",
+            "image_side": "image_right",
+            "v2_cuff_px": null,
+            "v2_ratio": null,
+            "v3_proposal": {
+              "status": "abstain",
+              "reason": "no_valid_v2_arm_seed",
+              "A_outer_px": null,
+              "B_inner_px": null,
+              "midpoint_px": null,
+              "metrics": {}
+            }
+          },
+          {
+            "anatomical_side": "right",
+            "image_side": "image_left",
+            "v2_cuff_px": [
+              505.2482429979118,
+              217.64700335465375
+            ],
+            "v2_ratio": 0.79,
+            "v3_proposal": {
+              "status": "proposal_requires_review",
+              "reason": null,
+              "A_outer_px": [
+                492.97158770942707,
+                209.2736363089047
+              ],
+              "B_inner_px": [
+                510.855102073015,
+                228.4478880576109
+              ],
+              "midpoint_px": [
+                501.9133448912211,
+                218.8607621832578
+              ],
+              "metrics": {
+                "run_span_px": 24.0,
+                "search_half_width_px": 43.92,
+                "range_along_px": 10.56,
+                "relative_tilt": 0.44,
+                "track_count": 17,
+                "clipped_left": false,
+                "clipped_right": false,
+                "center_to_seed_px": 3.55
+              }
+            }
+          }
+        ]
+      },
+      {
+        "instance_id": 7,
+        "category": "top",
+        "predicted_person_id": 0,
+        "mask_file": "masks/holdout_002_7.png",
+        "bbox": [
+          498.7861022949219,
+          62.99068069458008,
+          635.0198364257812,
+          258.7755126953125
+        ],
+        "arms": [
+          {
+            "anatomical_side": "left",
+            "image_side": "image_right",
+            "v2_cuff_px": null,
+            "v2_ratio": null,
+            "v3_proposal": {
+              "status": "abstain",
+              "reason": "no_valid_v2_arm_seed",
+              "A_outer_px": null,
+              "B_inner_px": null,
+              "midpoint_px": null,
+              "metrics": {}
+            }
+          },
+          {
+            "anatomical_side": "right",
+            "image_side": "image_left",
+            "v2_cuff_px": null,
+            "v2_ratio": null,
+            "v3_proposal": {
+              "status": "abstain",
+              "reason": "no_valid_v2_arm_seed",
+              "A_outer_px": null,
+              "B_inner_px": null,
+              "midpoint_px": null,
+              "metrics": {}
+            }
+          }
+        ]
+      },
+      {
+        "instance_id": 13,
+        "category": "top",
+        "predicted_person_id": 0,
+        "mask_file": "masks/holdout_002_13.png",
+        "bbox": [
+          499.4161376953125,
+          43.40137481689453,
+          599.4244995117188,
+          189.44580078125
+        ],
+        "arms": [
+          {
+            "anatomical_side": "left",
+            "image_side": "image_right",
+            "v2_cuff_px": null,
+            "v2_ratio": null,
+            "v3_proposal": {
+              "status": "abstain",
+              "reason": "no_valid_v2_arm_seed",
+              "A_outer_px": null,
+              "B_inner_px": null,
+              "midpoint_px": null,
+              "metrics": {}
+            }
+          },
+          {
+            "anatomical_side": "right",
+            "image_side": "image_left",
+            "v2_cuff_px": [
+              522.6047250195501,
+              127.05787869997896
+            ],
+            "v2_ratio": 0.24,
+            "v3_proposal": {
+              "status": "abstain",
+              "reason": "boundary_span_too_narrow",
+              "A_outer_px": null,
+              "B_inner_px": null,
+              "midpoint_px": null,
+              "metrics": {
+                "run_span_px": 18.0,
+                "search_half_width_px": 43.92,
+                "range_along_px": 10.47,
+                "relative_tilt": 0.582,
+                "track_count": 13,
+                "clipped_left": false,
+                "clipped_right": false
+              }
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "image_id": "holdout_003",
+    "size": [
+      682,
+      1024
+    ],
+    "instances": [
+      {
+        "instance_id": 0,
+        "category": "dress",
+        "predicted_person_id": 0,
+        "mask_file": "masks/holdout_003_0.png",
+        "bbox": [
+          231.91522216796875,
+          320.5539245605469,
+          561.4241943359375,
+          941.6365356445312
+        ],
+        "arms": [
+          {
+            "anatomical_side": "left",
+            "image_side": "image_right",
+            "v2_cuff_px": [
+              426.4591020228556,
+              376.11490808725006
+            ],
+            "v2_ratio": 0.17,
+            "v3_proposal": {
+              "status": "abstain",
+              "reason": "boundary_span_too_narrow",
+              "A_outer_px": null,
+              "B_inner_px": null,
+              "midpoint_px": null,
+              "metrics": {
+                "run_span_px": 22.5,
+                "search_half_width_px": 57.42,
+                "range_along_px": 23.17,
+                "relative_tilt": 1.03,
+                "track_count": 16,
+                "clipped_left": false,
+                "clipped_right": false
+              }
+            }
+          },
+          {
+            "anatomical_side": "right",
+            "image_side": "image_left",
+            "v2_cuff_px": null,
+            "v2_ratio": null,
+            "v3_proposal": {
+              "status": "abstain",
+              "reason": "no_valid_v2_arm_seed",
+              "A_outer_px": null,
+              "B_inner_px": null,
+              "midpoint_px": null,
+              "metrics": {}
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "image_id": "holdout_004",
+    "size": [
+      1024,
+      731
+    ],
+    "instances": [
+      {
+        "instance_id": 0,
+        "category": "top",
+        "predicted_person_id": 0,
+        "mask_file": "masks/holdout_004_0.png",
+        "bbox": [
+          340.8995056152344,
+          364.2524108886719,
+          615.8739624023438,
+          712.5223388671875
+        ],
+        "arms": [
+          {
+            "anatomical_side": "left",
+            "image_side": "image_right",
+            "v2_cuff_px": null,
+            "v2_ratio": null,
+            "v3_proposal": {
+              "status": "abstain",
+              "reason": "no_valid_v2_arm_seed",
+              "A_outer_px": null,
+              "B_inner_px": null,
+              "midpoint_px": null,
+              "metrics": {}
+            }
+          },
+          {
+            "anatomical_side": "right",
+            "image_side": "image_left",
+            "v2_cuff_px": null,
+            "v2_ratio": null,
+            "v3_proposal": {
+              "status": "abstain",
+              "reason": "no_valid_v2_arm_seed",
+              "A_outer_px": null,
+              "B_inner_px": null,
+              "midpoint_px": null,
+              "metrics": {}
+            }
+          }
+        ]
+      },
+      {
+        "instance_id": 1,
+        "category": "top",
+        "predicted_person_id": 0,
+        "mask_file": "masks/holdout_004_1.png",
+        "bbox": [
+          243.52862548828125,
+          285.29736328125,
+          705.7916870117188,
+          723.2656860351562
+        ],
+        "arms": [
+          {
+            "anatomical_side": "left",
+            "image_side": "image_right",
+            "v2_cuff_px": null,
+            "v2_ratio": null,
+            "v3_proposal": {
+              "status": "abstain",
+              "reason": "no_valid_v2_arm_seed",
+              "A_outer_px": null,
+              "B_inner_px": null,
+              "midpoint_px": null,
+              "metrics": {}
+            }
+          },
+          {
+            "anatomical_side": "right",
+            "image_side": "image_left",
+            "v2_cuff_px": null,
+            "v2_ratio": null,
+            "v3_proposal": {
+              "status": "abstain",
+              "reason": "no_valid_v2_arm_seed",
+              "A_outer_px": null,
+              "B_inner_px": null,
+              "midpoint_px": null,
+              "metrics": {}
+            }
+          }
+        ]
+      },
+      {
+        "instance_id": 3,
+        "category": "outerwear",
+        "predicted_person_id": 0,
+        "mask_file": "masks/holdout_004_3.png",
+        "bbox": [
+          208.83441162109375,
+          229.66860961914062,
+          754.7847290039062,
+          711.983642578125
+        ],
+        "arms": [
+          {
+            "anatomical_side": "left",
+            "image_side": "image_right",
+            "v2_cuff_px": [
+              674.6927400110831,
+              293.4842927849684
+            ],
+            "v2_ratio": 0.78,
+            "v3_proposal": {
+              "status": "proposal_requires_review",
+              "reason": null,
+              "A_outer_px": [
+                714.9832340102633,
+                280.6085480961018
+              ],
+              "B_inner_px": [
+                641.463009766881,
+                355.5756606905999
+              ],
+              "midpoint_px": [
+                678.2231218885722,
+                318.09210439335084
+              ],
+              "metrics": {
+                "run_span_px": 105.0,
+                "search_half_width_px": 72.0,
+                "range_along_px": 25.5,
+                "relative_tilt": 0.243,
+                "track_count": 71,
+                "clipped_left": false,
+                "clipped_right": false,
+                "center_to_seed_px": 24.86
+              }
+            }
+          },
+          {
+            "anatomical_side": "right",
+            "image_side": "image_left",
+            "v2_cuff_px": null,
+            "v2_ratio": null,
+            "v3_proposal": {
+              "status": "abstain",
+              "reason": "no_valid_v2_arm_seed",
+              "A_outer_px": null,
+              "B_inner_px": null,
+              "midpoint_px": null,
+              "metrics": {}
+            }
+          }
+        ]
+      },
+      {
+        "instance_id": 5,
+        "category": "dress",
+        "predicted_person_id": 0,
+        "mask_file": "masks/holdout_004_5.png",
+        "bbox": [
+          227.8939208984375,
+          232.50033569335938,
+          682.10791015625,
+          725.939697265625
+        ],
+        "arms": [
+          {
+            "anatomical_side": "left",
+            "image_side": "image_right",
+            "v2_cuff_px": null,
+            "v2_ratio": null,
+            "v3_proposal": {
+              "status": "abstain",
+              "reason": "no_valid_v2_arm_seed",
+              "A_outer_px": null,
+              "B_inner_px": null,
+              "midpoint_px": null,
+              "metrics": {}
+            }
+          },
+          {
+            "anatomical_side": "right",
+            "image_side": "image_left",
+            "v2_cuff_px": null,
+            "v2_ratio": null,
+            "v3_proposal": {
+              "status": "abstain",
+              "reason": "no_valid_v2_arm_seed",
+              "A_outer_px": null,
+              "B_inner_px": null,
+              "midpoint_px": null,
+              "metrics": {}
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "image_id": "holdout_005",
+    "size": [
+      1024,
+      736
+    ],
+    "instances": [
+      {
+        "instance_id": 0,
+        "category": "top",
+        "predicted_person_id": 0,
+        "mask_file": "masks/holdout_005_0.png",
+        "bbox": [
+          452.2666931152344,
+          206.37649536132812,
+          652.4370727539062,
+          457.85137939453125
+        ],
+        "arms": [
+          {
+            "anatomical_side": "left",
+            "image_side": "image_right",
+            "v2_cuff_px": null,
+            "v2_ratio": null,
+            "v3_proposal": {
+              "status": "abstain",
+              "reason": "no_valid_v2_arm_seed",
+              "A_outer_px": null,
+              "B_inner_px": null,
+              "midpoint_px": null,
+              "metrics": {}
+            }
+          },
+          {
+            "anatomical_side": "right",
+            "image_side": "image_left",
+            "v2_cuff_px": null,
+            "v2_ratio": null,
+            "v3_proposal": {
+              "status": "abstain",
+              "reason": "no_valid_v2_arm_seed",
+              "A_outer_px": null,
+              "B_inner_px": null,
+              "midpoint_px": null,
+              "metrics": {}
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "image_id": "holdout_006",
+    "size": [
+      1024,
+      682
+    ],
+    "instances": [
+      {
+        "instance_id": 0,
+        "category": "top",
+        "predicted_person_id": 0,
+        "mask_file": "masks/holdout_006_0.png",
+        "bbox": [
+          444.6619873046875,
+          95.66722106933594,
+          629.8894653320312,
+          320.3072509765625
+        ],
+        "arms": [
+          {
+            "anatomical_side": "left",
+            "image_side": "image_right",
+            "v2_cuff_px": [
+              606.457346607517,
+              189.04998108521355
+            ],
+            "v2_ratio": 0.24,
+            "v3_proposal": {
+              "status": "proposal_requires_review",
+              "reason": null,
+              "A_outer_px": [
+                629.3077219125114,
+                179.89797031975283
+              ],
+              "B_inner_px": [
+                590.7125332311977,
+                202.88253964316755
+              ],
+              "midpoint_px": [
+                610.0101275718546,
+                191.3902549814602
+              ],
+              "metrics": {
+                "run_span_px": 42.0,
+                "search_half_width_px": 69.09,
+                "range_along_px": 15.93,
+                "relative_tilt": 0.379,
+                "track_count": 29,
+                "clipped_left": false,
+                "clipped_right": false,
+                "center_to_seed_px": 4.25
+              }
+            }
+          },
+          {
+            "anatomical_side": "right",
+            "image_side": "image_left",
+            "v2_cuff_px": [
+              465.0495471553304,
+              197.26903724955167
+            ],
+            "v2_ratio": 0.41,
+            "v3_proposal": {
+              "status": "abstain",
+              "reason": "boundary_tilt_or_neighbor",
+              "A_outer_px": null,
+              "B_inner_px": null,
+              "midpoint_px": null,
+              "metrics": {
+                "run_span_px": 24.0,
+                "search_half_width_px": 46.92,
+                "range_along_px": 18.4,
+                "relative_tilt": 0.767,
+                "track_count": 17,
+                "clipped_left": false,
+                "clipped_right": false
+              }
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "image_id": "holdout_007",
+    "size": [
+      683,
+      1024
+    ],
+    "instances": [
+      {
+        "instance_id": 0,
+        "category": "top",
+        "predicted_person_id": 0,
+        "mask_file": "masks/holdout_007_0.png",
+        "bbox": [
+          65.9863052368164,
+          336.6283264160156,
+          507.2744140625,
+          656.8819580078125
+        ],
+        "arms": [
+          {
+            "anatomical_side": "left",
+            "image_side": "image_right",
+            "v2_cuff_px": [
+              465.06765760691167,
+              542.0354061211091
+            ],
+            "v2_ratio": 0.26,
+            "v3_proposal": {
+              "status": "abstain",
+              "reason": "boundary_span_too_narrow",
+              "A_outer_px": null,
+              "B_inner_px": null,
+              "midpoint_px": null,
+              "metrics": {
+                "run_span_px": 55.5,
+                "search_half_width_px": 80.0,
+                "range_along_px": 63.74,
+                "relative_tilt": 1.148,
+                "track_count": 38,
+                "clipped_left": false,
+                "clipped_right": false
+              }
+            }
+          },
+          {
+            "anatomical_side": "right",
+            "image_side": "image_left",
+            "v2_cuff_px": [
+              138.1254372466878,
+              519.775437663943
+            ],
+            "v2_ratio": 0.22,
+            "v3_proposal": {
+              "status": "abstain",
+              "reason": "boundary_tilt_or_neighbor",
+              "A_outer_px": null,
+              "B_inner_px": null,
+              "midpoint_px": null,
+              "metrics": {
+                "run_span_px": 103.5,
+                "search_half_width_px": 80.0,
+                "range_along_px": 51.12,
+                "relative_tilt": 0.494,
+                "track_count": 70,
+                "clipped_left": false,
+                "clipped_right": false
+              }
+            }
+          }
+        ]
+      },
+      {
+        "instance_id": 1,
+        "category": "dress",
+        "predicted_person_id": 0,
+        "mask_file": "masks/holdout_007_1.png",
+        "bbox": [
+          106.39268493652344,
+          315.8001708984375,
+          534.459228515625,
+          977.5406494140625
+        ],
+        "arms": [
+          {
+            "anatomical_side": "left",
+            "image_side": "image_right",
+            "v2_cuff_px": [
+              463.2316778413259,
+              532.4033115171416
+            ],
+            "v2_ratio": 0.24,
+            "v3_proposal": {
+              "status": "abstain",
+              "reason": "boundary_span_too_narrow",
+              "A_outer_px": null,
+              "B_inner_px": null,
+              "midpoint_px": null,
+              "metrics": {
+                "run_span_px": 48.0,
+                "search_half_width_px": 80.0,
+                "range_along_px": 64.03,
+                "relative_tilt": 1.334,
+                "track_count": 33,
+                "clipped_left": false,
+                "clipped_right": false
+              }
+            }
+          },
+          {
+            "anatomical_side": "right",
+            "image_side": "image_left",
+            "v2_cuff_px": [
+              136.75837133898256,
+              529.8703460595287
+            ],
+            "v2_ratio": 0.24,
+            "v3_proposal": {
+              "status": "abstain",
+              "reason": "boundary_span_too_narrow",
+              "A_outer_px": null,
+              "B_inner_px": null,
+              "midpoint_px": null,
+              "metrics": {
+                "run_span_px": 66.0,
+                "search_half_width_px": 80.0,
+                "range_along_px": 34.33,
+                "relative_tilt": 0.52,
+                "track_count": 45,
+                "clipped_left": false,
+                "clipped_right": false
+              }
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "image_id": "holdout_008",
+    "size": [
+      683,
+      1024
+    ],
+    "instances": [
+      {
+        "instance_id": 1,
+        "category": "top",
+        "predicted_person_id": 0,
+        "mask_file": "masks/holdout_008_1.png",
+        "bbox": [
+          239.77877807617188,
+          217.7382354736328,
+          469.26995849609375,
+          442.52947998046875
+        ],
+        "arms": [
+          {
+            "anatomical_side": "left",
+            "image_side": "image_right",
+            "v2_cuff_px": [
+              467.68672402848136,
+              417.35559429450075
+            ],
+            "v2_ratio": 0.685,
+            "v3_proposal": {
+              "status": "abstain",
+              "reason": "boundary_span_too_narrow",
+              "A_outer_px": null,
+              "B_inner_px": null,
+              "midpoint_px": null,
+              "metrics": {
+                "run_span_px": 28.5,
+                "search_half_width_px": 64.24,
+                "range_along_px": 9.23,
+                "relative_tilt": 0.324,
+                "track_count": 20,
+                "clipped_left": false,
+                "clipped_right": false
+              }
+            }
+          },
+          {
+            "anatomical_side": "right",
+            "image_side": "image_left",
+            "v2_cuff_px": [
+              271.51790468863413,
+              279.9509659436992
+            ],
+            "v2_ratio": 0.11357142857142857,
+            "v3_proposal": {
+              "status": "abstain",
+              "reason": "ambiguous_competing_boundary_tracks",
+              "A_outer_px": null,
+              "B_inner_px": null,
+              "midpoint_px": null,
+              "metrics": {}
+            }
+          }
+        ]
+      },
+      {
+        "instance_id": 5,
+        "category": "dress",
+        "predicted_person_id": 0,
+        "mask_file": "masks/holdout_008_5.png",
+        "bbox": [
+          272.0184020996094,
+          256.5715026855469,
+          443.21954345703125,
+          730.7935180664062
+        ],
+        "arms": [
+          {
+            "anatomical_side": "left",
+            "image_side": "image_right",
+            "v2_cuff_px": null,
+            "v2_ratio": null,
+            "v3_proposal": {
+              "status": "abstain",
+              "reason": "no_valid_v2_arm_seed",
+              "A_outer_px": null,
+              "B_inner_px": null,
+              "midpoint_px": null,
+              "metrics": {}
+            }
+          },
+          {
+            "anatomical_side": "right",
+            "image_side": "image_left",
+            "v2_cuff_px": null,
+            "v2_ratio": null,
+            "v3_proposal": {
+              "status": "abstain",
+              "reason": "no_valid_v2_arm_seed",
+              "A_outer_px": null,
+              "B_inner_px": null,
+              "midpoint_px": null,
+              "metrics": {}
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "image_id": "holdout_009",
+    "size": [
+      632,
+      1024
+    ],
+    "instances": [
+      {
+        "instance_id": 1,
+        "category": "dress",
+        "predicted_person_id": 0,
+        "mask_file": "masks/holdout_009_1.png",
+        "bbox": [
+          209.10006713867188,
+          202.41773986816406,
+          409.8925476074219,
+          571.7540283203125
+        ],
+        "arms": [
+          {
+            "anatomical_side": "left",
+            "image_side": "image_right",
+            "v2_cuff_px": null,
+            "v2_ratio": null,
+            "v3_proposal": {
+              "status": "abstain",
+              "reason": "no_valid_v2_arm_seed",
+              "A_outer_px": null,
+              "B_inner_px": null,
+              "midpoint_px": null,
+              "metrics": {}
+            }
+          },
+          {
+            "anatomical_side": "right",
+            "image_side": "image_left",
+            "v2_cuff_px": null,
+            "v2_ratio": null,
+            "v3_proposal": {
+              "status": "abstain",
+              "reason": "no_valid_v2_arm_seed",
+              "A_outer_px": null,
+              "B_inner_px": null,
+              "midpoint_px": null,
+              "metrics": {}
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "image_id": "holdout_010",
+    "size": [
+      683,
+      1024
+    ],
+    "instances": [
+      {
+        "instance_id": 0,
+        "category": "dress",
+        "predicted_person_id": 0,
+        "mask_file": "masks/holdout_010_0.png",
+        "bbox": [
+          195.3654327392578,
+          466.4937438964844,
+          516.46728515625,
+          1009.3133544921875
+        ],
+        "arms": [
+          {
+            "anatomical_side": "left",
+            "image_side": "image_right",
+            "v2_cuff_px": null,
+            "v2_ratio": null,
+            "v3_proposal": {
+              "status": "abstain",
+              "reason": "no_valid_v2_arm_seed",
+              "A_outer_px": null,
+              "B_inner_px": null,
+              "midpoint_px": null,
+              "metrics": {}
+            }
+          },
+          {
+            "anatomical_side": "right",
+            "image_side": "image_left",
+            "v2_cuff_px": null,
+            "v2_ratio": null,
+            "v3_proposal": {
+              "status": "abstain",
+              "reason": "no_valid_v2_arm_seed",
+              "A_outer_px": null,
+              "B_inner_px": null,
+              "midpoint_px": null,
+              "metrics": {}
+            }
+          }
+        ]
+      },
+      {
+        "instance_id": 2,
+        "category": "outerwear",
+        "predicted_person_id": 0,
+        "mask_file": "masks/holdout_010_2.png",
+        "bbox": [
+          163.23391723632812,
+          375.190185546875,
+          549.3811645507812,
+          782.020751953125
+        ],
+        "arms": [
+          {
+            "anatomical_side": "left",
+            "image_side": "image_right",
+            "v2_cuff_px": [
+              507.3580070750452,
+              749.0924439062028
+            ],
+            "v2_ratio": 0.72,
+            "v3_proposal": {
+              "status": "partial_requires_review",
+              "reason": "inner_endpoint_merges_with_torso",
+              "A_outer_px": [
+                543.4618683547936,
+                742.7399360064487
+              ],
+              "B_inner_px": null,
+              "midpoint_px": null,
+              "metrics": {
+                "run_span_px": 115.5,
+                "search_half_width_px": 80.0,
+                "range_along_px": 21.67,
+                "relative_tilt": 0.188,
+                "track_count": 78,
+                "clipped_left": false,
+                "clipped_right": true
+              }
+            }
+          },
+          {
+            "anatomical_side": "right",
+            "image_side": "image_left",
+            "v2_cuff_px": [
+              202.09891433812598,
+              758.9215694644132
+            ],
+            "v2_ratio": 0.77,
+            "v3_proposal": {
+              "status": "partial_requires_review",
+              "reason": "inner_endpoint_merges_with_torso",
+              "A_outer_px": [
+                167.81179975724885,
+                742.5835949440473
+              ],
+              "B_inner_px": null,
+              "midpoint_px": null,
+              "metrics": {
+                "run_span_px": 115.5,
+                "search_half_width_px": 80.0,
+                "range_along_px": 29.91,
+                "relative_tilt": 0.259,
+                "track_count": 78,
+                "clipped_left": true,
+                "clipped_right": false
+              }
+            }
+          }
+        ]
+      },
+      {
+        "instance_id": 3,
+        "category": "top",
+        "predicted_person_id": 0,
+        "mask_file": "masks/holdout_010_3.png",
+        "bbox": [
+          182.78297424316406,
+          359.5628356933594,
+          521.1972045898438,
+          780.6688232421875
+        ],
+        "arms": [
+          {
+            "anatomical_side": "left",
+            "image_side": "image_right",
+            "v2_cuff_px": [
+              507.730405259865,
+              753.6711953863943
+            ],
+            "v2_ratio": 0.73,
+            "v3_proposal": {
+              "status": "partial_requires_review",
+              "reason": "inner_endpoint_merges_with_torso",
+              "A_outer_px": [
+                519.676553510972,
+                746.3539299009004
+              ],
+              "B_inner_px": null,
+              "midpoint_px": null,
+              "metrics": {
+                "run_span_px": 91.5,
+                "search_half_width_px": 80.0,
+                "range_along_px": 23.2,
+                "relative_tilt": 0.254,
+                "track_count": 62,
+                "clipped_left": false,
+                "clipped_right": true
+              }
+            }
+          },
+          {
+            "anatomical_side": "right",
+            "image_side": "image_left",
+            "v2_cuff_px": [
+              202.09891433812598,
+              758.9215694644132
+            ],
+            "v2_ratio": 0.77,
+            "v3_proposal": {
+              "status": "partial_requires_review",
+              "reason": "inner_endpoint_merges_with_torso",
+              "A_outer_px": [
+                183.50952618479477,
+                753.1066994868586
+              ],
+              "B_inner_px": null,
+              "midpoint_px": null,
+              "metrics": {
+                "run_span_px": 99.0,
+                "search_half_width_px": 80.0,
+                "range_along_px": 19.17,
+                "relative_tilt": 0.194,
+                "track_count": 67,
+                "clipped_left": true,
+                "clipped_right": false
+              }
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "image_id": "holdout_011",
+    "size": [
+      681,
+      1024
+    ],
+    "instances": [
+      {
+        "instance_id": 2,
+        "category": "dress",
+        "predicted_person_id": 0,
+        "mask_file": "masks/holdout_011_2.png",
+        "bbox": [
+          233.4551239013672,
+          233.94834899902344,
+          499.4480285644531,
+          638.3933715820312
+        ],
+        "arms": [
+          {
+            "anatomical_side": "left",
+            "image_side": "image_right",
+            "v2_cuff_px": null,
+            "v2_ratio": null,
+            "v3_proposal": {
+              "status": "abstain",
+              "reason": "no_valid_v2_arm_seed",
+              "A_outer_px": null,
+              "B_inner_px": null,
+              "midpoint_px": null,
+              "metrics": {}
+            }
+          },
+          {
+            "anatomical_side": "right",
+            "image_side": "image_left",
+            "v2_cuff_px": null,
+            "v2_ratio": null,
+            "v3_proposal": {
+              "status": "abstain",
+              "reason": "no_valid_v2_arm_seed",
+              "A_outer_px": null,
+              "B_inner_px": null,
+              "midpoint_px": null,
+              "metrics": {}
+            }
+          }
+        ]
+      },
+      {
+        "instance_id": 3,
+        "category": "top",
+        "predicted_person_id": 0,
+        "mask_file": "masks/holdout_011_3.png",
+        "bbox": [
+          224.46054077148438,
+          239.59861755371094,
+          499.91204833984375,
+          617.4295654296875
+        ],
+        "arms": [
+          {
+            "anatomical_side": "left",
+            "image_side": "image_right",
+            "v2_cuff_px": null,
+            "v2_ratio": null,
+            "v3_proposal": {
+              "status": "abstain",
+              "reason": "no_valid_v2_arm_seed",
+              "A_outer_px": null,
+              "B_inner_px": null,
+              "midpoint_px": null,
+              "metrics": {}
+            }
+          },
+          {
+            "anatomical_side": "right",
+            "image_side": "image_left",
+            "v2_cuff_px": null,
+            "v2_ratio": null,
+            "v3_proposal": {
+              "status": "abstain",
+              "reason": "no_valid_v2_arm_seed",
+              "A_outer_px": null,
+              "B_inner_px": null,
+              "midpoint_px": null,
+              "metrics": {}
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "image_id": "holdout_012",
+    "size": [
+      1024,
+      683
+    ],
+    "instances": [
+      {
+        "instance_id": 2,
+        "category": "top",
+        "predicted_person_id": 0,
+        "mask_file": "masks/holdout_012_2.png",
+        "bbox": [
+          488.14654541015625,
+          316.94122314453125,
+          616.8092041015625,
+          515.1467895507812
+        ],
+        "arms": [
+          {
+            "anatomical_side": "left",
+            "image_side": "image_right",
+            "v2_cuff_px": null,
+            "v2_ratio": null,
+            "v3_proposal": {
+              "status": "abstain",
+              "reason": "no_valid_v2_arm_seed",
+              "A_outer_px": null,
+              "B_inner_px": null,
+              "midpoint_px": null,
+              "metrics": {}
+            }
+          },
+          {
+            "anatomical_side": "right",
+            "image_side": "image_left",
+            "v2_cuff_px": null,
+            "v2_ratio": null,
+            "v3_proposal": {
+              "status": "abstain",
+              "reason": "no_valid_v2_arm_seed",
+              "A_outer_px": null,
+              "B_inner_px": null,
+              "midpoint_px": null,
+              "metrics": {}
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "image_id": "holdout_013",
+    "size": [
+      683,
+      1024
+    ],
+    "instances": [
+      {
+        "instance_id": 2,
+        "category": "dress",
+        "predicted_person_id": 0,
+        "mask_file": "masks/holdout_013_2.png",
+        "bbox": [
+          220.13641357421875,
+          248.78607177734375,
+          477.58050537109375,
+          824.7996826171875
+        ],
+        "arms": [
+          {
+            "anatomical_side": "left",
+            "image_side": "image_right",
+            "v2_cuff_px": null,
+            "v2_ratio": null,
+            "v3_proposal": {
+              "status": "abstain",
+              "reason": "no_valid_v2_arm_seed",
+              "A_outer_px": null,
+              "B_inner_px": null,
+              "midpoint_px": null,
+              "metrics": {}
+            }
+          },
+          {
+            "anatomical_side": "right",
+            "image_side": "image_left",
+            "v2_cuff_px": null,
+            "v2_ratio": null,
+            "v3_proposal": {
+              "status": "abstain",
+              "reason": "no_valid_v2_arm_seed",
+              "A_outer_px": null,
+              "B_inner_px": null,
+              "midpoint_px": null,
+              "metrics": {}
+            }
+          }
+        ]
+      },
+      {
+        "instance_id": 4,
+        "category": "outerwear",
+        "predicted_person_id": 0,
+        "mask_file": "masks/holdout_013_4.png",
+        "bbox": [
+          197.4128875732422,
+          271.4188537597656,
+          488.8688049316406,
+          638.0962524414062
+        ],
+        "arms": [
+          {
+            "anatomical_side": "left",
+            "image_side": "image_right",
+            "v2_cuff_px": null,
+            "v2_ratio": null,
+            "v3_proposal": {
+              "status": "abstain",
+              "reason": "no_valid_v2_arm_seed",
+              "A_outer_px": null,
+              "B_inner_px": null,
+              "midpoint_px": null,
+              "metrics": {}
+            }
+          },
+          {
+            "anatomical_side": "right",
+            "image_side": "image_left",
+            "v2_cuff_px": null,
+            "v2_ratio": null,
+            "v3_proposal": {
+              "status": "abstain",
+              "reason": "no_valid_v2_arm_seed",
+              "A_outer_px": null,
+              "B_inner_px": null,
+              "midpoint_px": null,
+              "metrics": {}
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "image_id": "holdout_014",
+    "size": [
+      683,
+      1024
+    ],
+    "instances": [
+      {
+        "instance_id": 1,
+        "category": "dress",
+        "predicted_person_id": 2,
+        "mask_file": "masks/holdout_014_1.png",
+        "bbox": [
+          437.44293212890625,
+          227.7106170654297,
+          616.9993286132812,
+          605.8284301757812
+        ],
+        "arms": [
+          {
+            "anatomical_side": "left",
+            "image_side": "image_left",
+            "v2_cuff_px": null,
+            "v2_ratio": null,
+            "v3_proposal": {
+              "status": "abstain",
+              "reason": "no_valid_v2_arm_seed",
+              "A_outer_px": null,
+              "B_inner_px": null,
+              "midpoint_px": null,
+              "metrics": {}
+            }
+          },
+          {
+            "anatomical_side": "right",
+            "image_side": "image_right",
+            "v2_cuff_px": null,
+            "v2_ratio": null,
+            "v3_proposal": {
+              "status": "abstain",
+              "reason": "no_valid_v2_arm_seed",
+              "A_outer_px": null,
+              "B_inner_px": null,
+              "midpoint_px": null,
+              "metrics": {}
+            }
+          }
+        ]
+      },
+      {
+        "instance_id": 2,
+        "category": "dress",
+        "predicted_person_id": 0,
+        "mask_file": "masks/holdout_014_2.png",
+        "bbox": [
+          215.823486328125,
+          214.33499145507812,
+          493.1541748046875,
+          710.9374389648438
+        ],
+        "arms": [
+          {
+            "anatomical_side": "left",
+            "image_side": "image_right",
+            "v2_cuff_px": null,
+            "v2_ratio": null,
+            "v3_proposal": {
+              "status": "abstain",
+              "reason": "no_valid_v2_arm_seed",
+              "A_outer_px": null,
+              "B_inner_px": null,
+              "midpoint_px": null,
+              "metrics": {}
+            }
+          },
+          {
+            "anatomical_side": "right",
+            "image_side": "image_left",
+            "v2_cuff_px": null,
+            "v2_ratio": null,
+            "v3_proposal": {
+              "status": "abstain",
+              "reason": "no_valid_v2_arm_seed",
+              "A_outer_px": null,
+              "B_inner_px": null,
+              "midpoint_px": null,
+              "metrics": {}
+            }
+          }
+        ]
+      },
+      {
+        "instance_id": 3,
+        "category": "outerwear",
+        "predicted_person_id": 0,
+        "mask_file": "masks/holdout_014_3.png",
+        "bbox": [
+          196.02183532714844,
+          214.3365020751953,
+          623.174560546875,
+          680.3419799804688
+        ],
+        "arms": [
+          {
+            "anatomical_side": "left",
+            "image_side": "image_right",
+            "v2_cuff_px": null,
+            "v2_ratio": null,
+            "v3_proposal": {
+              "status": "abstain",
+              "reason": "no_valid_v2_arm_seed",
+              "A_outer_px": null,
+              "B_inner_px": null,
+              "midpoint_px": null,
+              "metrics": {}
+            }
+          },
+          {
+            "anatomical_side": "right",
+            "image_side": "image_left",
+            "v2_cuff_px": null,
+            "v2_ratio": null,
+            "v3_proposal": {
+              "status": "abstain",
+              "reason": "no_valid_v2_arm_seed",
+              "A_outer_px": null,
+              "B_inner_px": null,
+              "midpoint_px": null,
+              "metrics": {}
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "image_id": "holdout_015",
+    "size": [
+      490,
+      1024
+    ],
+    "instances": [
+      {
+        "instance_id": 2,
+        "category": "dress",
+        "predicted_person_id": 0,
+        "mask_file": "masks/holdout_015_2.png",
+        "bbox": [
+          97.78829956054688,
+          217.90841674804688,
+          474.6930236816406,
+          711.308349609375
+        ],
+        "arms": [
+          {
+            "anatomical_side": "left",
+            "image_side": "image_right",
+            "v2_cuff_px": null,
+            "v2_ratio": null,
+            "v3_proposal": {
+              "status": "abstain",
+              "reason": "no_valid_v2_arm_seed",
+              "A_outer_px": null,
+              "B_inner_px": null,
+              "midpoint_px": null,
+              "metrics": {}
+            }
+          },
+          {
+            "anatomical_side": "right",
+            "image_side": "image_left",
+            "v2_cuff_px": null,
+            "v2_ratio": null,
+            "v3_proposal": {
+              "status": "abstain",
+              "reason": "no_valid_v2_arm_seed",
+              "A_outer_px": null,
+              "B_inner_px": null,
+              "midpoint_px": null,
+              "metrics": {}
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "image_id": "holdout_016",
+    "size": [
+      768,
+      1024
+    ],
+    "instances": [
+      {
+        "instance_id": 2,
+        "category": "top",
+        "predicted_person_id": 0,
+        "mask_file": "masks/holdout_016_2.png",
+        "bbox": [
+          296.81298828125,
+          230.6881866455078,
+          478.35028076171875,
+          487.7901611328125
+        ],
+        "arms": [
+          {
+            "anatomical_side": "left",
+            "image_side": "image_right",
+            "v2_cuff_px": [
+              468.28092248715166,
+              354.66277179608664
+            ],
+            "v2_ratio": 0.35,
+            "v3_proposal": {
+              "status": "proposal_requires_review",
+              "reason": null,
+              "A_outer_px": [
+                476.7038191219913,
+                354.8602769291147
+              ],
+              "B_inner_px": [
+                438.7349418123193,
+                369.763932225638
+              ],
+              "midpoint_px": [
+                457.71938046715525,
+                362.3121045773763
+              ],
+              "metrics": {
+                "run_span_px": 39.0,
+                "search_half_width_px": 65.38,
+                "range_along_px": 11.95,
+                "relative_tilt": 0.306,
+                "track_count": 27,
+                "clipped_left": false,
+                "clipped_right": false,
+                "center_to_seed_px": 13.04
+              }
+            }
+          },
+          {
+            "anatomical_side": "right",
+            "image_side": "image_left",
+            "v2_cuff_px": null,
+            "v2_ratio": null,
+            "v3_proposal": {
+              "status": "abstain",
+              "reason": "no_valid_v2_arm_seed",
+              "A_outer_px": null,
+              "B_inner_px": null,
+              "midpoint_px": null,
+              "metrics": {}
+            }
+          }
+        ]
+      },
+      {
+        "instance_id": 6,
+        "category": "outerwear",
+        "predicted_person_id": 0,
+        "mask_file": "masks/holdout_016_6.png",
+        "bbox": [
+          237.35289001464844,
+          217.17828369140625,
+          497.3137512207031,
+          527.784912109375
+        ],
+        "arms": [
+          {
+            "anatomical_side": "left",
+            "image_side": "image_right",
+            "v2_cuff_px": [
+              468.6666232894309,
+              359.6774179774032
+            ],
+            "v2_ratio": 0.37,
+            "v3_proposal": {
+              "status": "proposal_requires_review",
+              "reason": null,
+              "A_outer_px": [
+                487.1995176205075,
+                354.40114388098704
+              ],
+              "B_inner_px": [
+                431.6581270979176,
+                375.55393415298613
+              ],
+              "midpoint_px": [
+                459.4288223592125,
+                364.9775390169866
+              ],
+              "metrics": {
+                "run_span_px": 57.0,
+                "search_half_width_px": 65.38,
+                "range_along_px": 16.83,
+                "relative_tilt": 0.295,
+                "track_count": 39,
+                "clipped_left": false,
+                "clipped_right": false,
+                "center_to_seed_px": 10.65
+              }
+            }
+          },
+          {
+            "anatomical_side": "right",
+            "image_side": "image_left",
+            "v2_cuff_px": [
+              288.80886348927487,
+              324.34214990951614
+            ],
+            "v2_ratio": 0.29,
+            "v3_proposal": {
+              "status": "abstain",
+              "reason": "boundary_tilt_or_neighbor",
+              "A_outer_px": null,
+              "B_inner_px": null,
+              "midpoint_px": null,
+              "metrics": {
+                "run_span_px": 37.5,
+                "search_half_width_px": 64.1,
+                "range_along_px": 25.28,
+                "relative_tilt": 0.674,
+                "track_count": 26,
+                "clipped_left": false,
+                "clipped_right": false
+              }
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "image_id": "holdout_017",
+    "size": [
+      1024,
+      768
+    ],
+    "instances": []
+  },
+  {
+    "image_id": "holdout_018",
+    "size": [
+      683,
+      1024
+    ],
+    "instances": [
+      {
+        "instance_id": 3,
+        "category": "top",
+        "predicted_person_id": 0,
+        "mask_file": "masks/holdout_018_3.png",
+        "bbox": [
+          222.47970581054688,
+          185.1773681640625,
+          483.82611083984375,
+          530.63037109375
+        ],
+        "arms": [
+          {
+            "anatomical_side": "left",
+            "image_side": "image_right",
+            "v2_cuff_px": [
+              454.7919137465989,
+              310.31874410028036
+            ],
+            "v2_ratio": 0.36,
+            "v3_proposal": {
+              "status": "proposal_requires_review",
+              "reason": null,
+              "A_outer_px": [
+                482.49652424647127,
+                293.1729010604062
+              ],
+              "B_inner_px": [
+                434.840435099696,
+                328.0961256240839
+              ],
+              "midpoint_px": [
+                458.66847967308365,
+                310.6345133422451
+              ],
+              "metrics": {
+                "run_span_px": 57.0,
+                "search_half_width_px": 57.51,
+                "range_along_px": 15.55,
+                "relative_tilt": 0.273,
+                "track_count": 39,
+                "clipped_left": false,
+                "clipped_right": false,
+                "center_to_seed_px": 3.89
+              }
+            }
+          },
+          {
+            "anatomical_side": "right",
+            "image_side": "image_left",
+            "v2_cuff_px": [
+              239.13904765102976,
+              328.25663465228155
+            ],
+            "v2_ratio": 0.32,
+            "v3_proposal": {
+              "status": "proposal_requires_review",
+              "reason": null,
+              "A_outer_px": [
+                222.49965630512963,
+                315.3761935684194
+              ],
+              "B_inner_px": [
+                270.4258799103381,
+                354.4700312080819
+              ],
+              "midpoint_px": [
+                246.46276810773387,
+                334.9231123882506
+              ],
+              "metrics": {
+                "run_span_px": 57.0,
+                "search_half_width_px": 73.41,
+                "range_along_px": 24.01,
+                "relative_tilt": 0.421,
+                "track_count": 39,
+                "clipped_left": false,
+                "clipped_right": false,
+                "center_to_seed_px": 9.9
+              }
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "image_id": "holdout_019",
+    "size": [
+      634,
+      1024
+    ],
+    "instances": [
+      {
+        "instance_id": 3,
+        "category": "outerwear",
+        "predicted_person_id": 0,
+        "mask_file": "masks/holdout_019_3.png",
+        "bbox": [
+          174.460205078125,
+          253.31898498535156,
+          395.41845703125,
+          755.6032104492188
+        ],
+        "arms": [
+          {
+            "anatomical_side": "left",
+            "image_side": "image_right",
+            "v2_cuff_px": null,
+            "v2_ratio": null,
+            "v3_proposal": {
+              "status": "abstain",
+              "reason": "no_valid_v2_arm_seed",
+              "A_outer_px": null,
+              "B_inner_px": null,
+              "midpoint_px": null,
+              "metrics": {}
+            }
+          },
+          {
+            "anatomical_side": "right",
+            "image_side": "image_left",
+            "v2_cuff_px": null,
+            "v2_ratio": null,
+            "v3_proposal": {
+              "status": "abstain",
+              "reason": "no_valid_v2_arm_seed",
+              "A_outer_px": null,
+              "B_inner_px": null,
+              "midpoint_px": null,
+              "metrics": {}
+            }
+          }
+        ]
+      },
+      {
+        "instance_id": 6,
+        "category": "dress",
+        "predicted_person_id": 0,
+        "mask_file": "masks/holdout_019_6.png",
+        "bbox": [
+          167.49966430664062,
+          275.236083984375,
+          393.6846618652344,
+          746.4266357421875
+        ],
+        "arms": [
+          {
+            "anatomical_side": "left",
+            "image_side": "image_right",
+            "v2_cuff_px": null,
+            "v2_ratio": null,
+            "v3_proposal": {
+              "status": "abstain",
+              "reason": "no_valid_v2_arm_seed",
+              "A_outer_px": null,
+              "B_inner_px": null,
+              "midpoint_px": null,
+              "metrics": {}
+            }
+          },
+          {
+            "anatomical_side": "right",
+            "image_side": "image_left",
+            "v2_cuff_px": null,
+            "v2_ratio": null,
+            "v3_proposal": {
+              "status": "abstain",
+              "reason": "no_valid_v2_arm_seed",
+              "A_outer_px": null,
+              "B_inner_px": null,
+              "midpoint_px": null,
+              "metrics": {}
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "image_id": "holdout_020",
+    "size": [
+      681,
+      1024
+    ],
+    "instances": [
+      {
+        "instance_id": 1,
+        "category": "outerwear",
+        "predicted_person_id": 0,
+        "mask_file": "masks/holdout_020_1.png",
+        "bbox": [
+          152.84646606445312,
+          231.3569793701172,
+          554.943115234375,
+          868.9725952148438
+        ],
+        "arms": [
+          {
+            "anatomical_side": "left",
+            "image_side": "image_right",
+            "v2_cuff_px": null,
+            "v2_ratio": null,
+            "v3_proposal": {
+              "status": "abstain",
+              "reason": "no_valid_v2_arm_seed",
+              "A_outer_px": null,
+              "B_inner_px": null,
+              "midpoint_px": null,
+              "metrics": {}
+            }
+          },
+          {
+            "anatomical_side": "right",
+            "image_side": "image_left",
+            "v2_cuff_px": null,
+            "v2_ratio": null,
+            "v3_proposal": {
+              "status": "abstain",
+              "reason": "no_valid_v2_arm_seed",
+              "A_outer_px": null,
+              "B_inner_px": null,
+              "midpoint_px": null,
+              "metrics": {}
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

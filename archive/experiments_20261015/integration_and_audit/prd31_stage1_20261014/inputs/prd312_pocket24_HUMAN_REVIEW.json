@@ -1,0 +1,667 @@
+{
+  "schema_version": "prd312_pocket_human_review_v1",
+  "source_cases_sha256": "29612e8629463203f36a880ab5942a7079cbec968c58c2e75ef1137cae45c124",
+  "export_timestamp": "2026-10-13T14:31:07.735Z",
+  "records": [
+    {
+      "record_id": "v5_train_00810",
+      "split": "train",
+      "category": "top",
+      "source_image_sha256": "587986a331a60f7877dba12a0395641cf67281c00b859afdd1f5a7a105b889dd",
+      "garment_annotation_id": 3845,
+      "case_note": "",
+      "parts": [
+        {
+          "part_annotation_id": 3846,
+          "part_type_proposal": "welt (pocket)",
+          "review": {
+            "association": "yes",
+            "bbox": "yes",
+            "type": "yes",
+            "note": ""
+          }
+        },
+        {
+          "part_annotation_id": 3847,
+          "part_type_proposal": "welt (pocket)",
+          "review": {
+            "association": "yes",
+            "bbox": "yes",
+            "type": "yes",
+            "note": ""
+          }
+        }
+      ]
+    },
+    {
+      "record_id": "v5_train_01531",
+      "split": "train",
+      "category": "top",
+      "source_image_sha256": "7c226c4b333797363a4a976d99ed3ae792af5251243fa90e9413ec678ab86057",
+      "garment_annotation_id": 9272,
+      "case_note": "",
+      "parts": [
+        {
+          "part_annotation_id": 9274,
+          "part_type_proposal": "flap (pocket)",
+          "review": {
+            "association": "yes",
+            "bbox": "yes",
+            "type": "yes",
+            "note": ""
+          }
+        }
+      ]
+    },
+    {
+      "record_id": "v5_train_00330",
+      "split": "train",
+      "category": "top",
+      "source_image_sha256": "dcf5c21401cabe845aab03f7009a9936b2833fdbef0b5ba9527a9cd75dd6d5ad",
+      "garment_annotation_id": 4873,
+      "case_note": "",
+      "parts": [
+        {
+          "part_annotation_id": 4869,
+          "part_type_proposal": "flap (pocket)",
+          "review": {
+            "association": "yes",
+            "bbox": "yes",
+            "type": "yes",
+            "note": "P1属于酒红色绗缝马甲，翻盖及按扣结构清晰，疑似flap pocket。候选框偏大，包含较多非口袋区域，建议复核实际口袋开口。"
+          }
+        },
+        {
+          "part_annotation_id": 4870,
+          "part_type_proposal": "flap (pocket)",
+          "review": {
+            "association": "yes",
+            "bbox": "yes",
+            "type": "yes",
+            "note": "P2位于马甲侧边，候选框与衬衫袖子重叠，仅可见局部深色缝隙，无法确认完整口袋及袋盖结构。flap类型依据不足，建议标记为定位不准确、类型待复核。"
+          }
+        }
+      ]
+    },
+    {
+      "record_id": "v5_train_01283",
+      "split": "train",
+      "category": "top",
+      "source_image_sha256": "efa0b4274ccfa3102dad25e86f95b924cc714ab6618fc7d6e3ca8a2ed35d86a2",
+      "garment_annotation_id": 1683,
+      "case_note": "",
+      "parts": [
+        {
+          "part_annotation_id": 1687,
+          "part_type_proposal": "flap (pocket)",
+          "review": {
+            "association": "yes",
+            "bbox": "yes",
+            "type": "yes",
+            "note": ""
+          }
+        },
+        {
+          "part_annotation_id": 1688,
+          "part_type_proposal": "flap (pocket)",
+          "review": {
+            "association": "yes",
+            "bbox": "yes",
+            "type": "yes",
+            "note": ""
+          }
+        }
+      ]
+    },
+    {
+      "record_id": "v5_train_01076",
+      "split": "train",
+      "category": "pants",
+      "source_image_sha256": "edcaa83c6fe3e63cb463429fa57816681c3e26200b371bc2ea40e87734bd0ccc",
+      "garment_annotation_id": 9118,
+      "case_note": "",
+      "parts": [
+        {
+          "part_annotation_id": 9119,
+          "part_type_proposal": "curved (pocket)",
+          "review": {
+            "association": "yes",
+            "bbox": "yes",
+            "type": "yes",
+            "note": ""
+          }
+        }
+      ]
+    },
+    {
+      "record_id": "v5_train_01648",
+      "split": "train",
+      "category": "pants",
+      "source_image_sha256": "9e2428a31490a5c22feb5e437a3700b87b4a80d05157f1d3471567160f22cadc",
+      "garment_annotation_id": 5203,
+      "case_note": "",
+      "parts": [
+        {
+          "part_annotation_id": 5201,
+          "part_type_proposal": "patch (pocket)",
+          "review": {
+            "association": "yes",
+            "bbox": "yes",
+            "type": "yes",
+            "note": ""
+          }
+        },
+        {
+          "part_annotation_id": 5202,
+          "part_type_proposal": "patch (pocket)",
+          "review": {
+            "association": "yes",
+            "bbox": "yes",
+            "type": "yes",
+            "note": ""
+          }
+        }
+      ]
+    },
+    {
+      "record_id": "v5_train_01284",
+      "split": "train",
+      "category": "pants",
+      "source_image_sha256": "efa0b4274ccfa3102dad25e86f95b924cc714ab6618fc7d6e3ca8a2ed35d86a2",
+      "garment_annotation_id": 1689,
+      "case_note": "",
+      "parts": [
+        {
+          "part_annotation_id": 1690,
+          "part_type_proposal": "patch (pocket)",
+          "review": {
+            "association": "no",
+            "bbox": "no",
+            "type": "no",
+            "note": "P1位于黑色裤子下缘与金属栏杆交界附近，未发现明确的贴袋轮廓或袋口结构，候选框定位不准确，疑似背景边缘误检。"
+          }
+        },
+        {
+          "part_annotation_id": 1691,
+          "part_type_proposal": "patch (pocket)",
+          "review": {
+            "association": "no",
+            "bbox": "no",
+            "type": "no",
+            "note": "P2位于裤子与金属栏杆交界处，候选框极窄，未发现可辨认的口袋结构，不符合patch pocket特征，判为疑似误检。"
+          }
+        }
+      ]
+    },
+    {
+      "record_id": "v5_train_00414",
+      "split": "train",
+      "category": "pants",
+      "source_image_sha256": "f62e1c9d4a0cd7015a047e77172fc905c81f9e85fdca27f83dc44588f04add33",
+      "garment_annotation_id": 9016,
+      "case_note": "",
+      "parts": [
+        {
+          "part_annotation_id": 9020,
+          "part_type_proposal": "slash (pocket)",
+          "review": {
+            "association": "yes",
+            "bbox": "yes",
+            "type": "yes",
+            "note": ""
+          }
+        }
+      ]
+    },
+    {
+      "record_id": "v5_train_01712",
+      "split": "train",
+      "category": "skirt",
+      "source_image_sha256": "1622426b9b02834f821be75daee4b8be7ad7df8000f8902925ac958ed6682403",
+      "garment_annotation_id": 3876,
+      "case_note": "",
+      "parts": [
+        {
+          "part_annotation_id": 3877,
+          "part_type_proposal": "welt (pocket)",
+          "review": {
+            "association": "yes",
+            "bbox": "yes",
+            "type": "yes",
+            "note": ""
+          }
+        }
+      ]
+    },
+    {
+      "record_id": "v5_train_00390",
+      "split": "train",
+      "category": "skirt",
+      "source_image_sha256": "aa2ad846603f8a1b8977818f8f1183408e1faa2be96563de4efdbe6b65ad255d",
+      "garment_annotation_id": 5157,
+      "case_note": "",
+      "parts": [
+        {
+          "part_annotation_id": 5158,
+          "part_type_proposal": "patch (pocket)",
+          "review": {
+            "association": "yes",
+            "bbox": "yes",
+            "type": "yes",
+            "note": ""
+          }
+        },
+        {
+          "part_annotation_id": 5159,
+          "part_type_proposal": "patch (pocket)",
+          "review": {
+            "association": "yes",
+            "bbox": "uncertain",
+            "type": "uncertain",
+            "note": "P2位于黑色裙装侧面，区域较暗，局部线迹可见，但口袋边界及结构不清晰，无法可靠区分口袋与侧缝或装饰结构，暂无法确认定位及口袋类型。"
+          }
+        }
+      ]
+    },
+    {
+      "record_id": "v5_train_00719",
+      "split": "train",
+      "category": "skirt",
+      "source_image_sha256": "c9ad53064cec695e1c073479a6c72aa9f83c6a2d597d5b3ca6e679a4ac40f129",
+      "garment_annotation_id": 865,
+      "case_note": "",
+      "parts": [
+        {
+          "part_annotation_id": 870,
+          "part_type_proposal": "slash (pocket)",
+          "review": {
+            "association": "yes",
+            "bbox": "yes",
+            "type": "yes",
+            "note": ""
+          }
+        }
+      ]
+    },
+    {
+      "record_id": "v5_train_01738",
+      "split": "train",
+      "category": "outerwear",
+      "source_image_sha256": "633205271d09cf08b1dcaf87d1f2609a1a2961a2dfc3029cd1f4c0a1d2e79f8d",
+      "garment_annotation_id": 3884,
+      "case_note": "",
+      "parts": [
+        {
+          "part_annotation_id": 3887,
+          "part_type_proposal": "patch (pocket)",
+          "review": {
+            "association": "yes",
+            "bbox": "yes",
+            "type": "yes",
+            "note": ""
+          }
+        }
+      ]
+    },
+    {
+      "record_id": "v5_train_00510",
+      "split": "train",
+      "category": "outerwear",
+      "source_image_sha256": "d3cf696cb1f7167dc6dab72a5ed0dde9b7b71936fb25b1e1e2df1fb9dbb0c01b",
+      "garment_annotation_id": 177,
+      "case_note": "",
+      "parts": [
+        {
+          "part_annotation_id": 184,
+          "part_type_proposal": "slash (pocket)",
+          "review": {
+            "association": "yes",
+            "bbox": "yes",
+            "type": "yes",
+            "note": ""
+          }
+        },
+        {
+          "part_annotation_id": 185,
+          "part_type_proposal": "slash (pocket)",
+          "review": {
+            "association": "yes",
+            "bbox": "yes",
+            "type": "yes",
+            "note": ""
+          }
+        }
+      ]
+    },
+    {
+      "record_id": "v5_train_01216",
+      "split": "train",
+      "category": "outerwear",
+      "source_image_sha256": "b4cd61b5525c948cbfa68dd4456691e34d9fa19d71da65431408d6acdcb10476",
+      "garment_annotation_id": 8431,
+      "case_note": "",
+      "parts": [
+        {
+          "part_annotation_id": 8437,
+          "part_type_proposal": "slash (pocket)",
+          "review": {
+            "association": "yes",
+            "bbox": "yes",
+            "type": "yes",
+            "note": ""
+          }
+        },
+        {
+          "part_annotation_id": 8438,
+          "part_type_proposal": "slash (pocket)",
+          "review": {
+            "association": "yes",
+            "bbox": "yes",
+            "type": "yes",
+            "note": ""
+          }
+        }
+      ]
+    },
+    {
+      "record_id": "v5_train_00298",
+      "split": "train",
+      "category": "outerwear",
+      "source_image_sha256": "e644a918096bf290dad38c705f510f66d24e6d77ab3411f1efa284359eb884bc",
+      "garment_annotation_id": 7405,
+      "case_note": "",
+      "parts": [
+        {
+          "part_annotation_id": 7411,
+          "part_type_proposal": "slash (pocket)",
+          "review": {
+            "association": "yes",
+            "bbox": "yes",
+            "type": "yes",
+            "note": ""
+          }
+        },
+        {
+          "part_annotation_id": 7412,
+          "part_type_proposal": "slash (pocket)",
+          "review": {
+            "association": "yes",
+            "bbox": "yes",
+            "type": "yes",
+            "note": ""
+          }
+        }
+      ]
+    },
+    {
+      "record_id": "v5_train_00477",
+      "split": "train",
+      "category": "dress",
+      "source_image_sha256": "c9795060812a7fc9e4eef63d9b941112ade63244f4503f0e4671556700754186",
+      "garment_annotation_id": 4026,
+      "case_note": "",
+      "parts": [
+        {
+          "part_annotation_id": 4037,
+          "part_type_proposal": "patch (pocket)",
+          "review": {
+            "association": "yes",
+            "bbox": "yes",
+            "type": "yes",
+            "note": ""
+          }
+        },
+        {
+          "part_annotation_id": 4038,
+          "part_type_proposal": "patch (pocket)",
+          "review": {
+            "association": "yes",
+            "bbox": "yes",
+            "type": "yes",
+            "note": ""
+          }
+        }
+      ]
+    },
+    {
+      "record_id": "v5_train_00195",
+      "split": "train",
+      "category": "dress",
+      "source_image_sha256": "a4c9f43aa4f68781526d2f01c988acfc71bd0d73b4cfe1395422164129e2b043",
+      "garment_annotation_id": 1786,
+      "case_note": "",
+      "parts": [
+        {
+          "part_annotation_id": 1787,
+          "part_type_proposal": "patch (pocket)",
+          "review": {
+            "association": "yes",
+            "bbox": "yes",
+            "type": "yes",
+            "note": ""
+          }
+        },
+        {
+          "part_annotation_id": 1788,
+          "part_type_proposal": "patch (pocket)",
+          "review": {
+            "association": "yes",
+            "bbox": "yes",
+            "type": "yes",
+            "note": ""
+          }
+        }
+      ]
+    },
+    {
+      "record_id": "v5_train_00466",
+      "split": "train",
+      "category": "dress",
+      "source_image_sha256": "91340e3d04e3c5fd689885e09a510a84d4a7e02cf79bd772f949af3aea6ce519",
+      "garment_annotation_id": 4400,
+      "case_note": "",
+      "parts": [
+        {
+          "part_annotation_id": 4403,
+          "part_type_proposal": "patch (pocket)",
+          "review": {
+            "association": "yes",
+            "bbox": "yes",
+            "type": "yes",
+            "note": ""
+          }
+        },
+        {
+          "part_annotation_id": 4405,
+          "part_type_proposal": "slash (pocket)",
+          "review": {
+            "association": "yes",
+            "bbox": "yes",
+            "type": "yes",
+            "note": ""
+          }
+        },
+        {
+          "part_annotation_id": 4406,
+          "part_type_proposal": "slash (pocket)",
+          "review": {
+            "association": "yes",
+            "bbox": "yes",
+            "type": "yes",
+            "note": ""
+          }
+        }
+      ]
+    },
+    {
+      "record_id": "v5_train_00714",
+      "split": "train",
+      "category": "dress",
+      "source_image_sha256": "30a9b06fdb0d47436f8f68ee5c2927e5ae9218b20ef89920ca42f1ca3f0c0712",
+      "garment_annotation_id": 2697,
+      "case_note": "",
+      "parts": [
+        {
+          "part_annotation_id": 2698,
+          "part_type_proposal": "flap (pocket)",
+          "review": {
+            "association": "yes",
+            "bbox": "yes",
+            "type": "yes",
+            "note": ""
+          }
+        }
+      ]
+    },
+    {
+      "record_id": "v5_validation_00046",
+      "split": "val",
+      "category": "top",
+      "source_image_sha256": "2f60ebbd03f1ae1151ab4643cccc3b05cda61a457853c1ad83ca6c9f07ceeff3",
+      "garment_annotation_id": 6505,
+      "case_note": "",
+      "parts": [
+        {
+          "part_annotation_id": 6500,
+          "part_type_proposal": "flap (pocket)",
+          "review": {
+            "association": "yes",
+            "bbox": "yes",
+            "type": "yes",
+            "note": ""
+          }
+        },
+        {
+          "part_annotation_id": 6501,
+          "part_type_proposal": "flap (pocket)",
+          "review": {
+            "association": "yes",
+            "bbox": "yes",
+            "type": "yes",
+            "note": ""
+          }
+        }
+      ]
+    },
+    {
+      "record_id": "v5_validation_00047",
+      "split": "val",
+      "category": "pants",
+      "source_image_sha256": "2f60ebbd03f1ae1151ab4643cccc3b05cda61a457853c1ad83ca6c9f07ceeff3",
+      "garment_annotation_id": 6509,
+      "case_note": "",
+      "parts": [
+        {
+          "part_annotation_id": 6507,
+          "part_type_proposal": "curved (pocket)",
+          "review": {
+            "association": "yes",
+            "bbox": "yes",
+            "type": "yes",
+            "note": ""
+          }
+        },
+        {
+          "part_annotation_id": 6508,
+          "part_type_proposal": "curved (pocket)",
+          "review": {
+            "association": "yes",
+            "bbox": "yes",
+            "type": "yes",
+            "note": ""
+          }
+        }
+      ]
+    },
+    {
+      "record_id": "v5_validation_00052",
+      "split": "val",
+      "category": "outerwear",
+      "source_image_sha256": "4c586e958e94a7170b3296bbd5fc97cc1c337750f80d8155f175949394a966e0",
+      "garment_annotation_id": 3404,
+      "case_note": "",
+      "parts": [
+        {
+          "part_annotation_id": 3409,
+          "part_type_proposal": "patch (pocket)",
+          "review": {
+            "association": "yes",
+            "bbox": "yes",
+            "type": "yes",
+            "note": ""
+          }
+        },
+        {
+          "part_annotation_id": 3410,
+          "part_type_proposal": "patch (pocket)",
+          "review": {
+            "association": "yes",
+            "bbox": "yes",
+            "type": "yes",
+            "note": ""
+          }
+        }
+      ]
+    },
+    {
+      "record_id": "v5_validation_00062",
+      "split": "val",
+      "category": "outerwear",
+      "source_image_sha256": "df91edad8133b9d732873c9a4df1d76a5bb76799a3aff8948337c47fec241b9d",
+      "garment_annotation_id": 6083,
+      "case_note": "",
+      "parts": [
+        {
+          "part_annotation_id": 6079,
+          "part_type_proposal": "patch (pocket)",
+          "review": {
+            "association": "yes",
+            "bbox": "yes",
+            "type": "yes",
+            "note": ""
+          }
+        },
+        {
+          "part_annotation_id": 6085,
+          "part_type_proposal": "patch (pocket)",
+          "review": {
+            "association": "yes",
+            "bbox": "yes",
+            "type": "yes",
+            "note": ""
+          }
+        }
+      ]
+    },
+    {
+      "record_id": "v5_validation_00066",
+      "split": "val",
+      "category": "pants",
+      "source_image_sha256": "bf88cc3aa332176552eb6c44e6a624ca2bf05d23f056a937f6000cb75849ebb6",
+      "garment_annotation_id": 2419,
+      "case_note": "",
+      "parts": [
+        {
+          "part_annotation_id": 2425,
+          "part_type_proposal": "patch (pocket)",
+          "review": {
+            "association": "yes",
+            "bbox": "yes",
+            "type": "yes",
+            "note": ""
+          }
+        },
+        {
+          "part_annotation_id": 2426,
+          "part_type_proposal": "curved (pocket)",
+          "review": {
+            "association": "yes",
+            "bbox": "yes",
+            "type": "yes",
+            "note": ""
+          }
+        }
+      ]
+    }
+  ]
+}

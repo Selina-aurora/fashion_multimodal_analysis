@@ -1,0 +1,38 @@
+{
+  "status": "METADATA_AUDIT_ONLY_PENDING_HUMAN_REVIEW",
+  "candidate_garment_records": 24,
+  "native_part_proposals_in_queue": 42,
+  "unique_native_parts": 42,
+  "unique_source_images": 22,
+  "review_cases_by_split": {
+    "train": 19,
+    "val": 5
+  },
+  "by_garment_category": {
+    "top": 5,
+    "pants": 6,
+    "skirt": 3,
+    "outerwear": 6,
+    "dress": 4
+  },
+  "by_native_pocket_type": {
+    "welt (pocket)": 3,
+    "flap (pocket)": 8,
+    "curved (pocket)": 4,
+    "patch (pocket)": 17,
+    "slash (pocket)": 10
+  },
+  "core400_overlap_source_sha": 0,
+  "holdout20_overlap_source_sha": 0,
+  "train_val_overlap_source_sha_within_queue": 0,
+  "image_files_present_in_this_archive": 0,
+  "all_associations_human_confirmed": false,
+  "human_review_completed": 0,
+  "original_review_cases_sha256": "29612e8629463203f36a880ab5942a7079cbec968c58c2e75ef1137cae45c124",
+  "risks": [
+    "24 records from 22 images, repeated images represent different garment targets",
+    "train/val origins must remain disjoint for model comparisons",
+    "all 42 part associations remain human-unconfirmed",
+    "risk flags in triage are selection hints, not error rates"
+  ]
+}

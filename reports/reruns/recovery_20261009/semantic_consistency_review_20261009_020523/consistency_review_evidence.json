@@ -1,0 +1,496 @@
+[
+  {
+    "case_id": "case_01",
+    "instance_id": "pred_0000",
+    "category_candidate": "shoe",
+    "evidence": {
+      "reason": "grounding_and_pattern_attribute_disagree",
+      "region": "pattern",
+      "grounding_phrase": "stripe",
+      "grounding_pattern_candidate": "striped",
+      "attribute_pattern_candidate": "solid",
+      "automatic_action": "require_review_no_label_override"
+    },
+    "semantic_review_status": "pending"
+  },
+  {
+    "case_id": "case_01",
+    "instance_id": "pred_0001",
+    "category_candidate": "pants",
+    "evidence": {
+      "reason": "grounding_and_pattern_attribute_disagree",
+      "region": "pattern",
+      "grounding_phrase": "floral pattern",
+      "grounding_pattern_candidate": "floral",
+      "attribute_pattern_candidate": "solid",
+      "automatic_action": "require_review_no_label_override"
+    },
+    "semantic_review_status": "pending"
+  },
+  {
+    "case_id": "case_01",
+    "instance_id": "pred_0002",
+    "category_candidate": "top",
+    "evidence": {
+      "reason": "different_regions_share_near_identical_box",
+      "regions": [
+        "hem",
+        "waist"
+      ],
+      "bbox_iou": 1.0,
+      "automatic_action": "require_review_keep_geometry",
+      "note": "Near-identical boxes are a review cue, not proof either region is false."
+    },
+    "semantic_review_status": "pending"
+  },
+  {
+    "case_id": "case_01",
+    "instance_id": "pred_0003",
+    "category_candidate": "shoe",
+    "evidence": {
+      "reason": "grounding_and_pattern_attribute_disagree",
+      "region": "pattern",
+      "grounding_phrase": "floral pattern",
+      "grounding_pattern_candidate": "floral",
+      "attribute_pattern_candidate": "solid",
+      "automatic_action": "require_review_no_label_override"
+    },
+    "semantic_review_status": "pending"
+  },
+  {
+    "case_id": "case_03",
+    "instance_id": "pred_0000",
+    "category_candidate": "outerwear",
+    "evidence": {
+      "reason": "grounding_and_pattern_attribute_disagree",
+      "region": "pattern",
+      "grounding_phrase": "floral pattern",
+      "grounding_pattern_candidate": "floral",
+      "attribute_pattern_candidate": "solid",
+      "automatic_action": "require_review_no_label_override"
+    },
+    "semantic_review_status": "pending"
+  },
+  {
+    "case_id": "case_04",
+    "instance_id": "pred_0000",
+    "category_candidate": "outerwear",
+    "evidence": {
+      "reason": "different_regions_share_near_identical_box",
+      "regions": [
+        "cuff",
+        "hem"
+      ],
+      "bbox_iou": 1.0,
+      "automatic_action": "require_review_keep_geometry",
+      "note": "Near-identical boxes are a review cue, not proof either region is false."
+    },
+    "semantic_review_status": "pending"
+  },
+  {
+    "case_id": "case_04",
+    "instance_id": "pred_0000",
+    "category_candidate": "outerwear",
+    "evidence": {
+      "reason": "grounding_and_pattern_attribute_disagree",
+      "region": "pattern",
+      "grounding_phrase": "floral pattern",
+      "grounding_pattern_candidate": "floral",
+      "attribute_pattern_candidate": "polka_dot",
+      "automatic_action": "require_review_no_label_override"
+    },
+    "semantic_review_status": "pending"
+  },
+  {
+    "case_id": "case_04",
+    "instance_id": "pred_0001",
+    "category_candidate": "dress",
+    "evidence": {
+      "reason": "different_regions_share_near_identical_box",
+      "regions": [
+        "cuff",
+        "hem"
+      ],
+      "bbox_iou": 1.0,
+      "automatic_action": "require_review_keep_geometry",
+      "note": "Near-identical boxes are a review cue, not proof either region is false."
+    },
+    "semantic_review_status": "pending"
+  },
+  {
+    "case_id": "case_04",
+    "instance_id": "pred_0001",
+    "category_candidate": "dress",
+    "evidence": {
+      "reason": "grounding_and_pattern_attribute_disagree",
+      "region": "pattern",
+      "grounding_phrase": "floral pattern",
+      "grounding_pattern_candidate": "floral",
+      "attribute_pattern_candidate": "polka_dot",
+      "automatic_action": "require_review_no_label_override"
+    },
+    "semantic_review_status": "pending"
+  },
+  {
+    "case_id": "case_05",
+    "instance_id": "pred_0000",
+    "category_candidate": "dress",
+    "evidence": {
+      "reason": "grounding_and_pattern_attribute_disagree",
+      "region": "pattern",
+      "grounding_phrase": "floral pattern",
+      "grounding_pattern_candidate": "floral",
+      "attribute_pattern_candidate": "solid",
+      "automatic_action": "require_review_no_label_override"
+    },
+    "semantic_review_status": "pending"
+  },
+  {
+    "case_id": "case_06",
+    "instance_id": "pred_0000",
+    "category_candidate": "shoe",
+    "evidence": {
+      "reason": "grounding_and_pattern_attribute_disagree",
+      "region": "pattern",
+      "grounding_phrase": "floral pattern",
+      "grounding_pattern_candidate": "floral",
+      "attribute_pattern_candidate": "solid",
+      "automatic_action": "require_review_no_label_override"
+    },
+    "semantic_review_status": "pending"
+  },
+  {
+    "case_id": "case_06",
+    "instance_id": "pred_0001",
+    "category_candidate": "shoe",
+    "evidence": {
+      "reason": "grounding_and_pattern_attribute_disagree",
+      "region": "pattern",
+      "grounding_phrase": "floral pattern",
+      "grounding_pattern_candidate": "floral",
+      "attribute_pattern_candidate": "solid",
+      "automatic_action": "require_review_no_label_override"
+    },
+    "semantic_review_status": "pending"
+  },
+  {
+    "case_id": "case_06",
+    "instance_id": "pred_0002",
+    "category_candidate": "dress",
+    "evidence": {
+      "reason": "grounding_and_pattern_attribute_disagree",
+      "region": "pattern",
+      "grounding_phrase": "floral pattern",
+      "grounding_pattern_candidate": "floral",
+      "attribute_pattern_candidate": "animal_print",
+      "automatic_action": "require_review_no_label_override"
+    },
+    "semantic_review_status": "pending"
+  },
+  {
+    "case_id": "case_06",
+    "instance_id": "pred_0003",
+    "category_candidate": "top",
+    "evidence": {
+      "reason": "different_regions_share_near_identical_box",
+      "regions": [
+        "hem",
+        "waist"
+      ],
+      "bbox_iou": 1.0,
+      "automatic_action": "require_review_keep_geometry",
+      "note": "Near-identical boxes are a review cue, not proof either region is false."
+    },
+    "semantic_review_status": "pending"
+  },
+  {
+    "case_id": "case_06",
+    "instance_id": "pred_0003",
+    "category_candidate": "top",
+    "evidence": {
+      "reason": "grounding_and_pattern_attribute_disagree",
+      "region": "pattern",
+      "grounding_phrase": "floral pattern",
+      "grounding_pattern_candidate": "floral",
+      "attribute_pattern_candidate": "animal_print",
+      "automatic_action": "require_review_no_label_override"
+    },
+    "semantic_review_status": "pending"
+  },
+  {
+    "case_id": "case_07",
+    "instance_id": "pred_0000",
+    "category_candidate": "shoe",
+    "evidence": {
+      "reason": "grounding_and_pattern_attribute_disagree",
+      "region": "pattern",
+      "grounding_phrase": "floral pattern",
+      "grounding_pattern_candidate": "floral",
+      "attribute_pattern_candidate": "solid",
+      "automatic_action": "require_review_no_label_override"
+    },
+    "semantic_review_status": "pending"
+  },
+  {
+    "case_id": "case_07",
+    "instance_id": "pred_0001",
+    "category_candidate": "outerwear",
+    "evidence": {
+      "reason": "different_regions_share_near_identical_box",
+      "regions": [
+        "cuff",
+        "hem"
+      ],
+      "bbox_iou": 0.9204784224987878,
+      "automatic_action": "require_review_keep_geometry",
+      "note": "Near-identical boxes are a review cue, not proof either region is false."
+    },
+    "semantic_review_status": "pending"
+  },
+  {
+    "case_id": "case_07",
+    "instance_id": "pred_0001",
+    "category_candidate": "outerwear",
+    "evidence": {
+      "reason": "different_regions_share_near_identical_box",
+      "regions": [
+        "cuff",
+        "pocket"
+      ],
+      "bbox_iou": 0.9883720930232558,
+      "automatic_action": "require_review_keep_geometry",
+      "note": "Near-identical boxes are a review cue, not proof either region is false."
+    },
+    "semantic_review_status": "pending"
+  },
+  {
+    "case_id": "case_07",
+    "instance_id": "pred_0001",
+    "category_candidate": "outerwear",
+    "evidence": {
+      "reason": "different_regions_share_near_identical_box",
+      "regions": [
+        "hem",
+        "pocket"
+      ],
+      "bbox_iou": 0.9305555555555556,
+      "automatic_action": "require_review_keep_geometry",
+      "note": "Near-identical boxes are a review cue, not proof either region is false."
+    },
+    "semantic_review_status": "pending"
+  },
+  {
+    "case_id": "case_07",
+    "instance_id": "pred_0001",
+    "category_candidate": "outerwear",
+    "evidence": {
+      "reason": "grounding_and_pattern_attribute_disagree",
+      "region": "pattern",
+      "grounding_phrase": "floral pattern",
+      "grounding_pattern_candidate": "floral",
+      "attribute_pattern_candidate": "solid",
+      "automatic_action": "require_review_no_label_override"
+    },
+    "semantic_review_status": "pending"
+  },
+  {
+    "case_id": "case_07",
+    "instance_id": "pred_0002",
+    "category_candidate": "shoe",
+    "evidence": {
+      "reason": "grounding_and_pattern_attribute_disagree",
+      "region": "pattern",
+      "grounding_phrase": "floral pattern",
+      "grounding_pattern_candidate": "floral",
+      "attribute_pattern_candidate": "solid",
+      "automatic_action": "require_review_no_label_override"
+    },
+    "semantic_review_status": "pending"
+  },
+  {
+    "case_id": "case_07",
+    "instance_id": "pred_0003",
+    "category_candidate": "pants",
+    "evidence": {
+      "reason": "grounding_and_pattern_attribute_disagree",
+      "region": "pattern",
+      "grounding_phrase": "stripe",
+      "grounding_pattern_candidate": "striped",
+      "attribute_pattern_candidate": "solid",
+      "automatic_action": "require_review_no_label_override"
+    },
+    "semantic_review_status": "pending"
+  },
+  {
+    "case_id": "case_07",
+    "instance_id": "pred_0005",
+    "category_candidate": "accessory",
+    "evidence": {
+      "reason": "grounding_and_pattern_attribute_disagree",
+      "region": "pattern",
+      "grounding_phrase": "floral pattern",
+      "grounding_pattern_candidate": "floral",
+      "attribute_pattern_candidate": "solid",
+      "automatic_action": "require_review_no_label_override"
+    },
+    "semantic_review_status": "pending"
+  },
+  {
+    "case_id": "case_07",
+    "instance_id": "pred_0006",
+    "category_candidate": "accessory",
+    "evidence": {
+      "reason": "grounding_and_pattern_attribute_disagree",
+      "region": "pattern",
+      "grounding_phrase": "floral pattern",
+      "grounding_pattern_candidate": "floral",
+      "attribute_pattern_candidate": "solid",
+      "automatic_action": "require_review_no_label_override"
+    },
+    "semantic_review_status": "pending"
+  },
+  {
+    "case_id": "case_07",
+    "instance_id": "pred_0007",
+    "category_candidate": "top",
+    "evidence": {
+      "reason": "different_regions_share_near_identical_box",
+      "regions": [
+        "hem",
+        "waist"
+      ],
+      "bbox_iou": 1.0,
+      "automatic_action": "require_review_keep_geometry",
+      "note": "Near-identical boxes are a review cue, not proof either region is false."
+    },
+    "semantic_review_status": "pending"
+  },
+  {
+    "case_id": "case_08",
+    "instance_id": "pred_0000",
+    "category_candidate": "accessory",
+    "evidence": {
+      "reason": "grounding_and_pattern_attribute_disagree",
+      "region": "pattern",
+      "grounding_phrase": "floral pattern",
+      "grounding_pattern_candidate": "floral",
+      "attribute_pattern_candidate": "solid",
+      "automatic_action": "require_review_no_label_override"
+    },
+    "semantic_review_status": "pending"
+  },
+  {
+    "case_id": "case_08",
+    "instance_id": "pred_0001",
+    "category_candidate": "shoe",
+    "evidence": {
+      "reason": "grounding_and_pattern_attribute_disagree",
+      "region": "pattern",
+      "grounding_phrase": "floral pattern",
+      "grounding_pattern_candidate": "floral",
+      "attribute_pattern_candidate": "solid",
+      "automatic_action": "require_review_no_label_override"
+    },
+    "semantic_review_status": "pending"
+  },
+  {
+    "case_id": "case_08",
+    "instance_id": "pred_0002",
+    "category_candidate": "skirt",
+    "evidence": {
+      "reason": "grounding_and_pattern_attribute_disagree",
+      "region": "pattern",
+      "grounding_phrase": "printed floral pattern",
+      "grounding_pattern_candidate": "floral",
+      "attribute_pattern_candidate": "camouflage",
+      "automatic_action": "require_review_no_label_override"
+    },
+    "semantic_review_status": "pending"
+  },
+  {
+    "case_id": "case_08",
+    "instance_id": "pred_0003",
+    "category_candidate": "pants",
+    "evidence": {
+      "reason": "grounding_and_pattern_attribute_disagree",
+      "region": "pattern",
+      "grounding_phrase": "floral pattern",
+      "grounding_pattern_candidate": "floral",
+      "attribute_pattern_candidate": "solid",
+      "automatic_action": "require_review_no_label_override"
+    },
+    "semantic_review_status": "pending"
+  },
+  {
+    "case_id": "case_08",
+    "instance_id": "pred_0004",
+    "category_candidate": "top",
+    "evidence": {
+      "reason": "different_regions_share_near_identical_box",
+      "regions": [
+        "hem",
+        "pocket"
+      ],
+      "bbox_iou": 1.0,
+      "automatic_action": "require_review_keep_geometry",
+      "note": "Near-identical boxes are a review cue, not proof either region is false."
+    },
+    "semantic_review_status": "pending"
+  },
+  {
+    "case_id": "case_08",
+    "instance_id": "pred_0006",
+    "category_candidate": "outerwear",
+    "evidence": {
+      "reason": "grounding_and_pattern_attribute_disagree",
+      "region": "pattern",
+      "grounding_phrase": "floral pattern",
+      "grounding_pattern_candidate": "floral",
+      "attribute_pattern_candidate": "solid",
+      "automatic_action": "require_review_no_label_override"
+    },
+    "semantic_review_status": "pending"
+  },
+  {
+    "case_id": "case_08",
+    "instance_id": "pred_0007",
+    "category_candidate": "top",
+    "evidence": {
+      "reason": "grounding_and_pattern_attribute_disagree",
+      "region": "pattern",
+      "grounding_phrase": "floral pattern",
+      "grounding_pattern_candidate": "floral",
+      "attribute_pattern_candidate": "polka_dot",
+      "automatic_action": "require_review_no_label_override"
+    },
+    "semantic_review_status": "pending"
+  },
+  {
+    "case_id": "case_08",
+    "instance_id": "pred_0008",
+    "category_candidate": "shoe",
+    "evidence": {
+      "reason": "grounding_and_pattern_attribute_disagree",
+      "region": "pattern",
+      "grounding_phrase": "floral pattern",
+      "grounding_pattern_candidate": "floral",
+      "attribute_pattern_candidate": "solid",
+      "automatic_action": "require_review_no_label_override"
+    },
+    "semantic_review_status": "pending"
+  },
+  {
+    "case_id": "case_08",
+    "instance_id": "pred_0009",
+    "category_candidate": "accessory",
+    "evidence": {
+      "reason": "grounding_and_pattern_attribute_disagree",
+      "region": "pattern",
+      "grounding_phrase": "floral pattern",
+      "grounding_pattern_candidate": "floral",
+      "attribute_pattern_candidate": "solid",
+      "automatic_action": "require_review_no_label_override"
+    },
+    "semantic_review_status": "pending"
+  }
+]

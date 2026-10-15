@@ -1,0 +1,64 @@
+{
+  "eligible_cases": 2,
+  "skipped": [],
+  "cases": [
+    {
+      "case_id": "case_01",
+      "roi_category": "top",
+      "proposals": [
+        {
+          "region": "collar",
+          "box": [
+            1,
+            0,
+            124,
+            169
+          ]
+        },
+        {
+          "region": "decoration",
+          "box": [
+            1,
+            0,
+            125,
+            169
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "case_02",
+      "roi_category": "dress",
+      "proposals": [
+        {
+          "region": "collar",
+          "box": [
+            4,
+            2,
+            262,
+            571
+          ]
+        },
+        {
+          "region": "cuff",
+          "box": [
+            3,
+            2,
+            262,
+            571
+          ]
+        },
+        {
+          "region": "decoration",
+          "box": [
+            3,
+            2,
+            263,
+            571
+          ]
+        }
+      ]
+    }
+  ],
+  "description": "Real DINO proposals, generated outside SAM timing; not part-region GT."
+}

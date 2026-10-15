@@ -1,0 +1,21 @@
+{
+  "status": "PILOT_TRAINING_COMPLETED",
+  "completed_epochs": 40,
+  "best_epoch": 27,
+  "best_development_f1": 0.5333333333333333,
+  "elapsed_minutes": 3.9114168008168537,
+  "output_dir": "/workspace/fashion_multimodal_analysis/reports/reruns/recovery_20261009/cuff_expanded_train_v3_20261009_052743_791119",
+  "formal_prd_acceptance": false,
+  "weight_files": {
+    "checkpoint_best.pth": {
+      "path": "/workspace/fashion_multimodal_analysis/reports/reruns/recovery_20261009/cuff_expanded_train_v3_20261009_052743_791119/checkpoint_best.pth",
+      "sha256": "52f8d78ffa032b9135eea8ba8ea511e942e2f12cd793f49bbca324f720a91c84"
+    },
+    "checkpoint_last.pth": {
+      "path": "/workspace/fashion_multimodal_analysis/reports/reruns/recovery_20261009/cuff_expanded_train_v3_20261009_052743_791119/checkpoint_last.pth",
+      "sha256": "15220e236afda21262a4c18b2b470802c5e0e75d901cfdc118829b38e36fe13d"
+    }
+  },
+  "limitations": "controlled pilot using native target garment ROI/mask; not end-to-end prediction or blind PRD acceptance",
+  "result_archive_excludes_weights": true
+}

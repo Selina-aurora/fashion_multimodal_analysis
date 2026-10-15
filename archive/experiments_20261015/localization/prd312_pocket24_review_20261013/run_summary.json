@@ -1,0 +1,11 @@
+{
+  "status": "EXPORT_READY_PENDING_HUMAN_REVIEW",
+  "case_count": 24,
+  "unique_source_images": 22,
+  "parts": 42,
+  "train_cases": 19,
+  "val_cases": 5,
+  "source_cases_sha256": "29612e8629463203f36a880ab5942a7079cbec968c58c2e75ef1137cae45c124",
+  "reviewed_parts": 0,
+  "GT_updated": false
+}

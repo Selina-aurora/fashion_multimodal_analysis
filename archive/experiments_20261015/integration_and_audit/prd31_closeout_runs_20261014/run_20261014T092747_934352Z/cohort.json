@@ -1,0 +1,194 @@
+[
+  {
+    "case_id": "case_01",
+    "source_image": "/workspace/fashion_data/raw/fashionpedia/images/test/33cfdcbd48019b09e36a78c428bbae1d.jpg",
+    "source_sha256": "2f60ebbd03f1ae1151ab4643cccc3b05cda61a457853c1ad83ca6c9f07ceeff3",
+    "stage15_pred_category": "top",
+    "stage15_crop_sha256": "4b8879d5a77b250f2c963fa6e2ce6ef68c5dab18175c09ae634e53837657f4c4",
+    "stage15_crop_size": [
+      302,
+      319
+    ],
+    "display_original_size": [
+      679,
+      1024
+    ],
+    "display_original_sha256": "f9a7bafe18e8937f3c6d9426124df7e8d72350ca9118ef5b2c50b9a2e6216c52"
+  },
+  {
+    "case_id": "case_02",
+    "source_image": "/workspace/fashion_data/raw/fashionpedia/images/test/33846044d27032d3988b9b4b7e22e252.jpg",
+    "source_sha256": "f89b6d83f9ff6648b1d6312af4a9cd14be4b808254e9224a7e18020bdcb6619d",
+    "stage15_pred_category": "top",
+    "stage15_crop_sha256": "186682b94f8cc274454bb4b2fbad15809aa769b558a295b4f59792e2d81495f3",
+    "stage15_crop_size": [
+      238,
+      475
+    ],
+    "display_original_size": [
+      682,
+      1024
+    ],
+    "display_original_sha256": "ce2ce13281a9431ef5ab9be9ce06ddc3fa3122357ee558804d0a04a2804375bb"
+  },
+  {
+    "case_id": "case_03",
+    "source_image": "/workspace/fashion_data/raw/train/train/image/114238.jpg",
+    "source_sha256": "d9e4c2cfdb0b0d41182e6199fa266a7372237afc6a7c7608c21b9a44fec568a2",
+    "stage15_pred_category": "top",
+    "stage15_crop_sha256": "07f00c46ff91a4c2afcd5aff9b6a7946156eaef61e3277498862abf9894d0b9d",
+    "stage15_crop_size": [
+      455,
+      612
+    ],
+    "display_original_size": [
+      640,
+      960
+    ],
+    "display_original_sha256": "f1555c8e20796ad2930c0d6f7a63503e15f43faaab5f0a4ab53bf0f8c669b4ee"
+  },
+  {
+    "case_id": "case_04",
+    "source_image": "/workspace/fashion_data/raw/fashionpedia/images/test/3bf082a96a03a1c8f75e1d1d0ebf42d2.jpg",
+    "source_sha256": "4c586e958e94a7170b3296bbd5fc97cc1c337750f80d8155f175949394a966e0",
+    "stage15_pred_category": "top",
+    "stage15_crop_sha256": "c6900d37cff2ad55530290f1fea3a0db10b198d9f89555e7d42b7536851b4c49",
+    "stage15_crop_size": [
+      84,
+      145
+    ],
+    "display_original_size": [
+      682,
+      1024
+    ],
+    "display_original_sha256": "7ab0dc6058d52630bc7518d95d4128fb32103632329546a65130e72d3c81e5f6"
+  },
+  {
+    "case_id": "case_05",
+    "source_image": "/workspace/fashion_data/raw/fashionpedia/images/test/89144779b3e40421facdb2eb70309356.jpg",
+    "source_sha256": "f2cfb45495139081cf86430588c2584f81ae8f9b106e17aee3fcf506ad3dc81c",
+    "stage15_pred_category": "top",
+    "stage15_crop_sha256": "6a0cfa0cc07d47b841d53a44f6fe66017081ccb6e267bd37c748df945a785c6b",
+    "stage15_crop_size": [
+      122,
+      168
+    ],
+    "display_original_size": [
+      682,
+      1024
+    ],
+    "display_original_sha256": "595dca6f0365ea2d6a8422ca44c8f9240b5f7f0989d08fb8133c82cb461aaed5"
+  },
+  {
+    "case_id": "case_06",
+    "source_image": "/workspace/fashion_data/raw/fashionpedia/images/test/77435fc234059dcb9e0bb3d73382bcc7.jpg",
+    "source_sha256": "bf88cc3aa332176552eb6c44e6a624ca2bf05d23f056a937f6000cb75849ebb6",
+    "stage15_pred_category": "top",
+    "stage15_crop_sha256": "c8f38bd46a2bd597f1d0446caa9a881d9719dc36d9115886baea59a6669dc64b",
+    "stage15_crop_size": [
+      137,
+      174
+    ],
+    "display_original_size": [
+      1024,
+      813
+    ],
+    "display_original_sha256": "43d2ab403ae2fa2e6c30a437eabf7b888ac347e40cb9ed0b85f3ef0a4cee6e0d"
+  },
+  {
+    "case_id": "case_07",
+    "source_image": "/workspace/fashion_data/raw/fashionpedia/images/test/89f6e3ad94e5493906b4f3d0e16bdae1.jpg",
+    "source_sha256": "25245e70eb36bc3ab994d824d41e9b5641185d5f8dd31433a8914afb31e553b1",
+    "stage15_pred_category": "top",
+    "stage15_crop_sha256": "b6c74113a1bb414de67a469436c1c1a0f557df643f29c0eb284053264fdf5f0f",
+    "stage15_crop_size": [
+      585,
+      536
+    ],
+    "display_original_size": [
+      682,
+      1024
+    ],
+    "display_original_sha256": "b755e5741989692e3da3a800b19de8d4ed8b9fd16e9011b87a65040b9e89941c"
+  },
+  {
+    "case_id": "case_08",
+    "source_image": "/workspace/fashion_data/raw/fashionpedia/images/test/dd4525a10b6110df29f0a6b19e6b924b.jpg",
+    "source_sha256": "61fe69dc195f9e07a8b45a3f8eee9cc5f146dca40fe7e6cb700874fe29163342",
+    "stage15_pred_category": "dress",
+    "stage15_crop_sha256": "2d95f3febb3db5b3ee2d08f3e34add3ecaea4e7850ed649e33816a71d7467120",
+    "stage15_crop_size": [
+      225,
+      515
+    ],
+    "display_original_size": [
+      1024,
+      681
+    ],
+    "display_original_sha256": "fc8a5b3531d186cca26d7b72a05ed61bd218a02d4d130503a07e824830520e48"
+  },
+  {
+    "case_id": "case_09",
+    "source_image": "/workspace/fashion_data/raw/fashionpedia/images/test/cdd175f26ac87c01ec64fb2f02268654.jpg",
+    "source_sha256": "a9c2fff42a0fe64a3776c9fd101502a972a53281e9e5990e97c0356b13ca0b84",
+    "stage15_pred_category": "dress",
+    "stage15_crop_sha256": "e98503cc229a6737c547712dab60830cf078c8eb444b65979c45c49bb70d9d0a",
+    "stage15_crop_size": [
+      199,
+      348
+    ],
+    "display_original_size": [
+      683,
+      1024
+    ],
+    "display_original_sha256": "5a6044914ac6b98f65f86ec7642015ee747dae0a5c53e7e0133192eb6d4dc952"
+  },
+  {
+    "case_id": "case_10",
+    "source_image": "/workspace/fashion_data/raw/fashionpedia/images/test/fac6412c2873388612c4ec4cda414ac6.jpg",
+    "source_sha256": "ece935cec2674684214f689bd878663ec5e15acdde69725a183078daa16fd0e6",
+    "stage15_pred_category": "top",
+    "stage15_crop_sha256": "c38b0b16a0e216e3016418a91d4d97967ea3fa531c02ed76a0def091d1c52576",
+    "stage15_crop_size": [
+      102,
+      202
+    ],
+    "display_original_size": [
+      682,
+      1024
+    ],
+    "display_original_sha256": "075286f423cc20ba2b73ceb39380c891ecf63f5f7982752f89cce57d44ce21d1"
+  },
+  {
+    "case_id": "case_11",
+    "source_image": "/workspace/fashion_data/raw/train/train/image/004648.jpg",
+    "source_sha256": "be50a11c80ad7c0c61d44e14d1c8e97ba047947def8d6317dafb7f6eb14ed632",
+    "stage15_pred_category": "top",
+    "stage15_crop_sha256": "e18c39e03596a53d8806824b3c49752cc02450bb551b5d4572bf8ccf4f3ea658",
+    "stage15_crop_size": [
+      250,
+      223
+    ],
+    "display_original_size": [
+      658,
+      590
+    ],
+    "display_original_sha256": "2134ab21a188e0e13ce3845b71586512c30ac6ac66bd4d0ade78dff33c0d7cfe"
+  },
+  {
+    "case_id": "case_12",
+    "source_image": "/workspace/fashion_data/raw/train/train/image/015031.jpg",
+    "source_sha256": "b8afc1fff47b66e1459d7bb466b0204b97daa8b411054703781d5f3830165787",
+    "stage15_pred_category": "top",
+    "stage15_crop_sha256": "59de21a9827c023e3bd3652c5945f1652a3c78616dfb2501c4f756b70e148996",
+    "stage15_crop_size": [
+      236,
+      233
+    ],
+    "display_original_size": [
+      468,
+      702
+    ],
+    "display_original_sha256": "e4681070ec62da975fe67027d127fa72870f3b85b14ee873c8d130fe5d8897fe"
+  }
+]

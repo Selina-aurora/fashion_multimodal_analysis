@@ -1,0 +1,6 @@
+{
+  "patch_version": "semantic_consistency_review_20261009_v1",
+  "expected_source_sha256": {
+    "src/fashion_multimodal_analysis/integration/pipeline.py": "b0fbc6673d13d205108d6f616782f87e5d3026df0a2c35cd21faf7b1b2a36ab1"
+  }
+}

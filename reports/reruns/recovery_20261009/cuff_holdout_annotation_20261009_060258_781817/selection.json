@@ -1,0 +1,396 @@
+{
+  "status": "FROZEN_CUFF_HOLDOUT_PENDING_ANNOTATION",
+  "selection_sha256": "f36d08d710565703406c5fa48c29ccea78ea2ca30429ea2991b5f2bed60d47cd",
+  "candidate_checkpoint": "/workspace/fashion_multimodal_analysis/reports/reruns/recovery_20261009/cuff_expanded_train_v3_20261009_052743_791119/checkpoint_best.pth",
+  "candidate_sha256": "52f8d78ffa032b9135eea8ba8ea511e942e2f12cd793f49bbca324f720a91c84",
+  "candidate_epoch": 27,
+  "role": "cuff_holdout_not_used_for_cuff_training_or_tuning; original_segmentation_val",
+  "definition": "Whole independent cuff band when present; otherwise visible sleeve-end opening. Target garment only, separate box per visible opening.",
+  "limitations": [
+    "Original segmentation model used these source images for validation, so not a blind end-to-end benchmark.",
+    "Exact file hashes/path exclusion does not establish perceptual deduplication.",
+    "Small holdout batch; no formal PRD acceptance claim.",
+    "Freeze this candidate and report all reviewed usable cases, not only successes.",
+    "Do not train or tune thresholds on this batch; if later used for development it loses holdout role."
+  ],
+  "cases": [
+    {
+      "record_id": "v5_validation_00014",
+      "source_dataset": "DeepFashion2",
+      "category": "top",
+      "fine_category": "short_sleeve_top",
+      "source_image_reference": "../fashion_data/raw/train/train/image/096778.jpg",
+      "garment_id": "item1_short_sleeve_top",
+      "garment_bbox": [
+        267.0,
+        222.0,
+        530.0,
+        407.0
+      ],
+      "image_width": 750,
+      "image_height": 1143,
+      "source_image_sha256": "f1a8dd47ca0411c6675af302978a81f16b91e88d85222776791bd3b8112ff3ff",
+      "presence": "pending",
+      "cuff_boxes": [],
+      "review_status": "pending",
+      "source_file_relative": "source_images/v5_validation_00014.jpg"
+    },
+    {
+      "record_id": "v5_validation_00027",
+      "source_dataset": "DeepFashion2",
+      "category": "top",
+      "fine_category": "long_sleeve_top",
+      "source_image_reference": "../fashion_data/raw/train/train/image/174323.jpg",
+      "garment_id": "item1_long_sleeve_top",
+      "garment_bbox": [
+        71.0,
+        138.0,
+        597.0,
+        745.0
+      ],
+      "image_width": 640,
+      "image_height": 960,
+      "source_image_sha256": "ced008e6111b7f2b8382ddefc44160c25e9a5339069bfab2791bdf6512828fb6",
+      "presence": "pending",
+      "cuff_boxes": [],
+      "review_status": "pending",
+      "source_file_relative": "source_images/v5_validation_00027.jpg"
+    },
+    {
+      "record_id": "v5_validation_00016",
+      "source_dataset": "DeepFashion2",
+      "category": "top",
+      "fine_category": "short_sleeve_top",
+      "source_image_reference": "../fashion_data/raw/train/train/image/101034.jpg",
+      "garment_id": "item1_short_sleeve_top",
+      "garment_bbox": [
+        153.0,
+        116.0,
+        406.0,
+        377.0
+      ],
+      "image_width": 468,
+      "image_height": 702,
+      "source_image_sha256": "1ff3fc0f63441fd6a488ef2ee2a1c482e1760e78b98cfd7f7f8df91468bfbd60",
+      "presence": "pending",
+      "cuff_boxes": [],
+      "review_status": "pending",
+      "source_file_relative": "source_images/v5_validation_00016.jpg"
+    },
+    {
+      "record_id": "v5_validation_00046",
+      "source_dataset": "Fashionpedia",
+      "category": "top",
+      "fine_category": "shirt, blouse",
+      "source_image_reference": "../fashion_data/raw/fashionpedia/images/test/33cfdcbd48019b09e36a78c428bbae1d.jpg",
+      "garment_id": "fashionpedia_ann_6505",
+      "garment_bbox": [
+        234.0,
+        194.0,
+        530.0,
+        504.0
+      ],
+      "image_width": 679,
+      "image_height": 1024,
+      "source_image_sha256": "2f60ebbd03f1ae1151ab4643cccc3b05cda61a457853c1ad83ca6c9f07ceeff3",
+      "presence": "pending",
+      "cuff_boxes": [],
+      "review_status": "pending",
+      "source_file_relative": "source_images/v5_validation_00046.jpg"
+    },
+    {
+      "record_id": "v5_validation_00053",
+      "source_dataset": "Fashionpedia",
+      "category": "top",
+      "fine_category": "top, t-shirt, sweatshirt",
+      "source_image_reference": "../fashion_data/raw/fashionpedia/images/test/3bf082a96a03a1c8f75e1d1d0ebf42d2.jpg",
+      "garment_id": "fashionpedia_ann_3411",
+      "garment_bbox": [
+        306.0,
+        487.0,
+        379.0,
+        621.0
+      ],
+      "image_width": 682,
+      "image_height": 1024,
+      "source_image_sha256": "4c586e958e94a7170b3296bbd5fc97cc1c337750f80d8155f175949394a966e0",
+      "presence": "pending",
+      "cuff_boxes": [],
+      "review_status": "pending",
+      "source_file_relative": "source_images/v5_validation_00053.jpg"
+    },
+    {
+      "record_id": "v5_validation_00035",
+      "source_dataset": "Fashionpedia",
+      "category": "top",
+      "fine_category": "top, t-shirt, sweatshirt",
+      "source_image_reference": "../fashion_data/raw/fashionpedia/images/test/311db0d6f5b7be84ac3c952a443ef981.jpg",
+      "garment_id": "fashionpedia_ann_6951",
+      "garment_bbox": [
+        342.0,
+        251.0,
+        531.0,
+        405.0
+      ],
+      "image_width": 680,
+      "image_height": 1024,
+      "source_image_sha256": "68cc723eca099c94e3b8b6b62ab7f67a024963cec1329f19f41abbf9cdced0d6",
+      "presence": "pending",
+      "cuff_boxes": [],
+      "review_status": "pending",
+      "source_file_relative": "source_images/v5_validation_00035.jpg"
+    },
+    {
+      "record_id": "v5_validation_00013",
+      "source_dataset": "DeepFashion2",
+      "category": "outerwear",
+      "fine_category": "long_sleeve_outwear",
+      "source_image_reference": "../fashion_data/raw/train/train/image/092719.jpg",
+      "garment_id": "item1_long_sleeve_outwear",
+      "garment_bbox": [
+        76.0,
+        98.0,
+        468.0,
+        574.0
+      ],
+      "image_width": 468,
+      "image_height": 624,
+      "source_image_sha256": "cf6b7b4aaafa31a9c1fa0a046ddcbf028f9a094bcc7b94932c2bce599438a0e9",
+      "presence": "pending",
+      "cuff_boxes": [],
+      "review_status": "pending",
+      "source_file_relative": "source_images/v5_validation_00013.jpg"
+    },
+    {
+      "record_id": "v5_validation_00018",
+      "source_dataset": "DeepFashion2",
+      "category": "outerwear",
+      "fine_category": "long_sleeve_outwear",
+      "source_image_reference": "../fashion_data/raw/train/train/image/114238.jpg",
+      "garment_id": "item1_long_sleeve_outwear",
+      "garment_bbox": [
+        126.0,
+        200.0,
+        640.0,
+        957.0
+      ],
+      "image_width": 640,
+      "image_height": 960,
+      "source_image_sha256": "d9e4c2cfdb0b0d41182e6199fa266a7372237afc6a7c7608c21b9a44fec568a2",
+      "presence": "pending",
+      "cuff_boxes": [],
+      "review_status": "pending",
+      "source_file_relative": "source_images/v5_validation_00018.jpg"
+    },
+    {
+      "record_id": "v5_validation_00024",
+      "source_dataset": "DeepFashion2",
+      "category": "outerwear",
+      "fine_category": "long_sleeve_outwear",
+      "source_image_reference": "../fashion_data/raw/train/train/image/146128.jpg",
+      "garment_id": "item1_long_sleeve_outwear",
+      "garment_bbox": [
+        5.0,
+        127.0,
+        305.0,
+        395.0
+      ],
+      "image_width": 305,
+      "image_height": 395,
+      "source_image_sha256": "67ad0a245ba72e5cd1d27fc259a0113fba1721adb50c6d7a4b7f23e14e50077c",
+      "presence": "pending",
+      "cuff_boxes": [],
+      "review_status": "pending",
+      "source_file_relative": "source_images/v5_validation_00024.jpg"
+    },
+    {
+      "record_id": "v5_validation_00036",
+      "source_dataset": "Fashionpedia",
+      "category": "outerwear",
+      "fine_category": "cardigan",
+      "source_image_reference": "../fashion_data/raw/fashionpedia/images/test/32227cade6d3646824f9c0f3fa9dc9e7.jpg",
+      "garment_id": "fashionpedia_ann_7673",
+      "garment_bbox": [
+        99.0,
+        208.0,
+        326.0,
+        545.0
+      ],
+      "image_width": 532,
+      "image_height": 1024,
+      "source_image_sha256": "ba1a04bce9114beba860ee784d34f2a2c43b4fee2e7680e69726795e5b4b79fe",
+      "presence": "pending",
+      "cuff_boxes": [],
+      "review_status": "pending",
+      "source_file_relative": "source_images/v5_validation_00036.jpg"
+    },
+    {
+      "record_id": "v5_validation_00062",
+      "source_dataset": "Fashionpedia",
+      "category": "outerwear",
+      "fine_category": "coat",
+      "source_image_reference": "../fashion_data/raw/fashionpedia/images/test/4f23f05daee3cbdd96295f84825e3581.jpg",
+      "garment_id": "fashionpedia_ann_6083",
+      "garment_bbox": [
+        218.0,
+        187.0,
+        535.0,
+        635.0
+      ],
+      "image_width": 683,
+      "image_height": 1024,
+      "source_image_sha256": "df91edad8133b9d732873c9a4df1d76a5bb76799a3aff8948337c47fec241b9d",
+      "presence": "pending",
+      "cuff_boxes": [],
+      "review_status": "pending",
+      "source_file_relative": "source_images/v5_validation_00062.jpg"
+    },
+    {
+      "record_id": "v5_validation_00064",
+      "source_dataset": "Fashionpedia",
+      "category": "outerwear",
+      "fine_category": "jacket",
+      "source_image_reference": "../fashion_data/raw/fashionpedia/images/test/77435fc234059dcb9e0bb3d73382bcc7.jpg",
+      "garment_id": "fashionpedia_ann_2414",
+      "garment_bbox": [
+        544.0,
+        300.0,
+        669.0,
+        493.0
+      ],
+      "image_width": 1024,
+      "image_height": 813,
+      "source_image_sha256": "bf88cc3aa332176552eb6c44e6a624ca2bf05d23f056a937f6000cb75849ebb6",
+      "presence": "pending",
+      "cuff_boxes": [],
+      "review_status": "pending",
+      "source_file_relative": "source_images/v5_validation_00064.jpg"
+    },
+    {
+      "record_id": "v5_validation_00031",
+      "source_dataset": "DeepFashion2",
+      "category": "dress",
+      "fine_category": "long_sleeve_dress",
+      "source_image_reference": "../fashion_data/raw/train/train/image/184087.jpg",
+      "garment_id": "item1_long_sleeve_dress",
+      "garment_bbox": [
+        186.0,
+        4.0,
+        760.0,
+        1067.0
+      ],
+      "image_width": 790,
+      "image_height": 1192,
+      "source_image_sha256": "800d5ad44da59bfa4fd719ff459524b3acebb3c49acbd0a6cb062b68092b54ac",
+      "presence": "pending",
+      "cuff_boxes": [],
+      "review_status": "pending",
+      "source_file_relative": "source_images/v5_validation_00031.jpg"
+    },
+    {
+      "record_id": "v5_validation_00006",
+      "source_dataset": "DeepFashion2",
+      "category": "dress",
+      "fine_category": "short_sleeve_dress",
+      "source_image_reference": "../fashion_data/raw/train/train/image/019779.jpg",
+      "garment_id": "item1_short_sleeve_dress",
+      "garment_bbox": [
+        63.0,
+        189.0,
+        466.0,
+        624.0
+      ],
+      "image_width": 468,
+      "image_height": 624,
+      "source_image_sha256": "6f342b460e05950dfa5e796e8524237bba8225dc9a9eef6b91387f11ee6f49da",
+      "presence": "pending",
+      "cuff_boxes": [],
+      "review_status": "pending",
+      "source_file_relative": "source_images/v5_validation_00006.jpg"
+    },
+    {
+      "record_id": "v5_validation_00005",
+      "source_dataset": "DeepFashion2",
+      "category": "dress",
+      "fine_category": "short_sleeve_dress",
+      "source_image_reference": "../fashion_data/raw/train/train/image/015031.jpg",
+      "garment_id": "item1_short_sleeve_dress",
+      "garment_bbox": [
+        55.0,
+        239.0,
+        349.0,
+        644.0
+      ],
+      "image_width": 468,
+      "image_height": 702,
+      "source_image_sha256": "b8afc1fff47b66e1459d7bb466b0204b97daa8b411054703781d5f3830165787",
+      "presence": "pending",
+      "cuff_boxes": [],
+      "review_status": "pending",
+      "source_file_relative": "source_images/v5_validation_00005.jpg"
+    },
+    {
+      "record_id": "v5_validation_00072",
+      "source_dataset": "Fashionpedia",
+      "category": "dress",
+      "fine_category": "dress",
+      "source_image_reference": "../fashion_data/raw/fashionpedia/images/test/89144779b3e40421facdb2eb70309356.jpg",
+      "garment_id": "fashionpedia_ann_8517",
+      "garment_bbox": [
+        107.0,
+        248.0,
+        352.0,
+        711.0
+      ],
+      "image_width": 682,
+      "image_height": 1024,
+      "source_image_sha256": "f2cfb45495139081cf86430588c2584f81ae8f9b106e17aee3fcf506ad3dc81c",
+      "presence": "pending",
+      "cuff_boxes": [],
+      "review_status": "pending",
+      "source_file_relative": "source_images/v5_validation_00072.jpg"
+    },
+    {
+      "record_id": "v5_validation_00085",
+      "source_dataset": "Fashionpedia",
+      "category": "dress",
+      "fine_category": "dress",
+      "source_image_reference": "../fashion_data/raw/fashionpedia/images/test/fac6412c2873388612c4ec4cda414ac6.jpg",
+      "garment_id": "fashionpedia_ann_7325",
+      "garment_bbox": [
+        192.0,
+        229.0,
+        479.0,
+        753.0
+      ],
+      "image_width": 682,
+      "image_height": 1024,
+      "source_image_sha256": "ece935cec2674684214f689bd878663ec5e15acdde69725a183078daa16fd0e6",
+      "presence": "pending",
+      "cuff_boxes": [],
+      "review_status": "pending",
+      "source_file_relative": "source_images/v5_validation_00085.jpg"
+    },
+    {
+      "record_id": "v5_validation_00081",
+      "source_dataset": "Fashionpedia",
+      "category": "dress",
+      "fine_category": "dress",
+      "source_image_reference": "../fashion_data/raw/fashionpedia/images/test/dd4525a10b6110df29f0a6b19e6b924b.jpg",
+      "garment_id": "fashionpedia_ann_2757",
+      "garment_bbox": [
+        521.0,
+        125.0,
+        753.0,
+        646.0
+      ],
+      "image_width": 1024,
+      "image_height": 681,
+      "source_image_sha256": "61fe69dc195f9e07a8b45a3f8eee9cc5f146dca40fe7e6cb700874fe29163342",
+      "presence": "pending",
+      "cuff_boxes": [],
+      "review_status": "pending",
+      "source_file_relative": "source_images/v5_validation_00081.jpg"
+    }
+  ]
+}

@@ -1,0 +1,251 @@
+{
+  "role": "diagnostic only; threshold .4 remains the reported operating point",
+  "run_dir": "reports/reruns/recovery_20261009/cuff_pilot_train_20261009_035531_110137",
+  "dataset_json_sha256": "3b87013ddd6fc7602957ab1ad76e9deff75737f84e91eff16e9db1da74037fe3",
+  "checkpoints": {
+    "checkpoint_best.pth": {
+      "train": {
+        "operating_point_0.4": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 34,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "negative_images": 9,
+          "negative_images_with_fp": 0
+        },
+        "diagnostic_thresholds_only": {
+          "0.4": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 34,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "negative_images": 9,
+            "negative_images_with_fp": 0
+          },
+          "0.1": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 34,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "negative_images": 9,
+            "negative_images_with_fp": 0
+          },
+          "0.05": {
+            "tp": 0,
+            "fp": 1,
+            "fn": 34,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "negative_images": 9,
+            "negative_images_with_fp": 0
+          },
+          "0.01": {
+            "tp": 0,
+            "fp": 146,
+            "fn": 34,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "negative_images": 9,
+            "negative_images_with_fp": 9
+          }
+        },
+        "rpn_gt_coverage_iou_0.5": 23,
+        "gt_boxes": 34,
+        "rpn_best_iou_mean": 0.5665230829926098,
+        "oracle_gt_box_cuff_score_mean": 0.0006027169799936286
+      },
+      "development_val": {
+        "operating_point_0.4": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 9,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "negative_images": 3,
+          "negative_images_with_fp": 0
+        },
+        "diagnostic_thresholds_only": {
+          "0.4": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 9,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "negative_images": 3,
+            "negative_images_with_fp": 0
+          },
+          "0.1": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 9,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "negative_images": 3,
+            "negative_images_with_fp": 0
+          },
+          "0.05": {
+            "tp": 0,
+            "fp": 1,
+            "fn": 9,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "negative_images": 3,
+            "negative_images_with_fp": 0
+          },
+          "0.01": {
+            "tp": 0,
+            "fp": 27,
+            "fn": 9,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "negative_images": 3,
+            "negative_images_with_fp": 3
+          }
+        },
+        "rpn_gt_coverage_iou_0.5": 7,
+        "gt_boxes": 9,
+        "rpn_best_iou_mean": 0.6139731009801229,
+        "oracle_gt_box_cuff_score_mean": 8.38756401435603e-05
+      }
+    },
+    "checkpoint_last.pth": {
+      "train": {
+        "operating_point_0.4": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 34,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "negative_images": 9,
+          "negative_images_with_fp": 0
+        },
+        "diagnostic_thresholds_only": {
+          "0.4": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 34,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "negative_images": 9,
+            "negative_images_with_fp": 0
+          },
+          "0.1": {
+            "tp": 9,
+            "fp": 148,
+            "fn": 25,
+            "precision": 0.05732484076433121,
+            "recall": 0.2647058823529412,
+            "f1": 0.09424083769633508,
+            "negative_images": 9,
+            "negative_images_with_fp": 6
+          },
+          "0.05": {
+            "tp": 17,
+            "fp": 500,
+            "fn": 17,
+            "precision": 0.03288201160541586,
+            "recall": 0.5,
+            "f1": 0.06170598911070781,
+            "negative_images": 9,
+            "negative_images_with_fp": 9
+          },
+          "0.01": {
+            "tp": 25,
+            "fp": 2292,
+            "fn": 9,
+            "precision": 0.01078981441519206,
+            "recall": 0.7352941176470589,
+            "f1": 0.02126754572522331,
+            "negative_images": 9,
+            "negative_images_with_fp": 9
+          }
+        },
+        "rpn_gt_coverage_iou_0.5": 27,
+        "gt_boxes": 34,
+        "rpn_best_iou_mean": 0.6674007352660684,
+        "oracle_gt_box_cuff_score_mean": 0.06633143146310057
+      },
+      "development_val": {
+        "operating_point_0.4": {
+          "tp": 0,
+          "fp": 1,
+          "fn": 9,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "negative_images": 3,
+          "negative_images_with_fp": 0
+        },
+        "diagnostic_thresholds_only": {
+          "0.4": {
+            "tp": 0,
+            "fp": 1,
+            "fn": 9,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "negative_images": 3,
+            "negative_images_with_fp": 0
+          },
+          "0.1": {
+            "tp": 2,
+            "fp": 48,
+            "fn": 7,
+            "precision": 0.04,
+            "recall": 0.2222222222222222,
+            "f1": 0.06779661016949153,
+            "negative_images": 3,
+            "negative_images_with_fp": 2
+          },
+          "0.05": {
+            "tp": 5,
+            "fp": 159,
+            "fn": 4,
+            "precision": 0.03048780487804878,
+            "recall": 0.5555555555555556,
+            "f1": 0.057803468208092484,
+            "negative_images": 3,
+            "negative_images_with_fp": 3
+          },
+          "0.01": {
+            "tp": 7,
+            "fp": 779,
+            "fn": 2,
+            "precision": 0.008905852417302799,
+            "recall": 0.7777777777777778,
+            "f1": 0.01761006289308176,
+            "negative_images": 3,
+            "negative_images_with_fp": 3
+          }
+        },
+        "rpn_gt_coverage_iou_0.5": 7,
+        "gt_boxes": 9,
+        "rpn_best_iou_mean": 0.6434601578447554,
+        "oracle_gt_box_cuff_score_mean": 0.046196930459700525
+      }
+    }
+  },
+  "limitations": [
+    "Train results measure fitting, not generalization.",
+    "Development threshold comparisons are diagnostic, not acceptance.",
+    "GT ROI classification uses cuff labels only to isolate classification behavior.",
+    "RPN coverage uses ground truth for measurement only.",
+    "Prediction overlays show up to ten boxes >= .001; these are not operating-point predictions.",
+    "No weights or annotations modified."
+  ]
+}

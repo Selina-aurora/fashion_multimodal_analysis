@@ -1,0 +1,46 @@
+{
+  "status": "STAGE13_STRICT_BATCH_TIMING_COMPLETED",
+  "project_files_modified": false,
+  "checkpoint": {
+    "device": "NVIDIA GeForce RTX 4090",
+    "torch": "2.13.0+cu132",
+    "checkpoint_sha256": "c5ba795225349b1c521aac0517ac7c493d9818dcc17d558ac4a3f6f8669452f0",
+    "min_size": 640,
+    "max_size": 1024
+  },
+  "result": {
+    "status": "STAGE13_STRICT_BATCH_TIMING_COMPLETED",
+    "cases": 8,
+    "queries": 32,
+    "warmups": 3,
+    "timed_passes": 5,
+    "timed_group_count": 40,
+    "strict_grounding": true,
+    "native_dino_batch_parity_passes": 32,
+    "final_region_parity_passes": 32,
+    "repeat_region_parity_passes": 160,
+    "repeat_region_parity_total": 160,
+    "detected_production": 16,
+    "detected_batch": 16,
+    "detected_mask_pixel_equal": 15,
+    "detected_both_count": 16,
+    "min_detected_mask_iou": 0.999630011878566,
+    "mean_production_group_ms": 703.3137,
+    "mean_batch_group_ms": 530.5088,
+    "mean_production_amortized_ms_per_query": 175.8284,
+    "mean_batch_amortized_ms_per_query": 132.6272,
+    "mean_group_speedup_ratio": 1.3236,
+    "ratio_of_mean_group_times": 1.3257,
+    "timing_valid_for_speedup": true,
+    "integration_decision": "DIAGNOSTIC_ONLY_MORE_VALIDATION_REQUIRED",
+    "notes": [
+      "A/B uses production strict raw crop, REGION_PROMPTS and all gates.",
+      "Native DINO candidate parity is checked outside both timed regions.",
+      "Both measured branches include complete region postprocessing; model and project untouched.",
+      "Batch speedup applies to grouped requests, not single-query PRD 30ms criterion.",
+      "Only 8 previously used diagnostic images; no held-out semantics/part GT.",
+      "Pass thresholds permit minor mask differences; pixel-identical count reported separately.",
+      "No formal 3.1.2 localization accuracy or 30ms acceptance."
+    ]
+  }
+}

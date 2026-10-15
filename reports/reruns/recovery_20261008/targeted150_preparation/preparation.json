@@ -1,0 +1,1225 @@
+{
+  "status": "PREPARED_NOT_TRAINED",
+  "seed": 20261008,
+  "selected_images": 150,
+  "added_instances": 276,
+  "total_instances": 2315,
+  "train_images": 625,
+  "input_sha256": {
+    "configs/prd_8class_train_v5_full_targets.csv": "36ff78831b20e492d787c66161f05747433f8e85f7a089fd5df981c2bdf476e6",
+    "configs/prd_8class_val_v2_full_targets.csv": "39141f545ea5512d16ed074788b6f98474b33baff111d3b663ec0ffcc4c40b93",
+    "benchmark/prd_3_1_v1/manifests/segmentation_test_v1.csv": "c83204aca87c9c4dee304b774fd459bf5a18a2d1d65f0a3a9a79b92721224b89"
+  },
+  "output_sha256": "6e9f1e042ade2edcbc9c022f53d8e92620da9c37f0542ea477cc9070d969d098",
+  "added_classes": {
+    "outerwear": 104,
+    "skirt": 19,
+    "pants": 96,
+    "dress": 10,
+    "top": 47
+  },
+  "selected": [
+    {
+      "group": "short_sleeve_outerwear",
+      "source_image": "/workspace/fashion_data/raw/train/train/image/081539.jpg",
+      "annotation_ref": "item1",
+      "annotation_sha256": "0c089d4eebd8b38584027450f44207ace4d56cf20672400b69e526295475eeef",
+      "file_sha256": "347673eda5674f32c1b41099aba205b67ac05effa1d7f7f2fe29d2d43ece2b7d",
+      "rgb_pixel_sha256": "f86e2cb60738e66a7f6645504444a5414f2fbbcd279cb051e238bd3d9a2174fb"
+    },
+    {
+      "group": "short_sleeve_outerwear",
+      "source_image": "/workspace/fashion_data/raw/train/train/image/106851.jpg",
+      "annotation_ref": "item1",
+      "annotation_sha256": "83888d95f03f2ee666218dd7955caebaa34a248adc914ff876ddd5885d558b0a",
+      "file_sha256": "ce7754f071ca4b0b6718d490d0a00282ed1ccc0201a5c979d6826a84d6d279ea",
+      "rgb_pixel_sha256": "20ccdeb03ce4d7bfc81d2d6b7200bb141bb601d63fbc761380c138edcffffca0"
+    },
+    {
+      "group": "short_sleeve_outerwear",
+      "source_image": "/workspace/fashion_data/raw/train/train/image/189169.jpg",
+      "annotation_ref": "item1",
+      "annotation_sha256": "e1b2503b0f3fde1d8d6db8c4752ab333669b4a9ab62a9613a89be09782a8f28b",
+      "file_sha256": "1dc082bcfee7898452c54c4b102158da0c392872e5c7fcf1b904094be1edd663",
+      "rgb_pixel_sha256": "a2fc4c42581d73aa03dedeb2fd8103c8e3c990548a612f2826aab0ff05eb9ff6"
+    },
+    {
+      "group": "short_sleeve_outerwear",
+      "source_image": "/workspace/fashion_data/raw/train/train/image/157761.jpg",
+      "annotation_ref": "item1",
+      "annotation_sha256": "2c1375abb1f7edbaa391753834e158c8ea97e75f2172511e15a384832c1da9f2",
+      "file_sha256": "2e4772630b922e2fa9299e0c6341899fc9cc4a136f3c45d43ddc395394f17cf6",
+      "rgb_pixel_sha256": "de688fb5fd3f5bd56d8ff0297f170bb10458abc0e4ecac2a49f3bb547bab2997"
+    },
+    {
+      "group": "short_sleeve_outerwear",
+      "source_image": "/workspace/fashion_data/raw/train/train/image/101611.jpg",
+      "annotation_ref": "item1",
+      "annotation_sha256": "8915a47928c3218a89af5edb236b87e5cbbc170fd5c68ef80e64581e18d1bbb4",
+      "file_sha256": "3e4a93fbffaed3dc72d820bb6ffa696938d6a7a59dc9bf84bf67c9edfcb45a37",
+      "rgb_pixel_sha256": "8fe9d77519e4023bf3b86a2575f3bd764f99fc61bb565d19dfc40088a1a9e860"
+    },
+    {
+      "group": "short_sleeve_outerwear",
+      "source_image": "/workspace/fashion_data/raw/train/train/image/081551.jpg",
+      "annotation_ref": "item1",
+      "annotation_sha256": "7a4791b7588ebdf7b3bbbeddfbe74bf41d79895e5597e4b1425f9631baf31ca6",
+      "file_sha256": "d5b4930531104cc2c25687eef4a6c8d01538451953dd98360bc4c7c3ec06ca2d",
+      "rgb_pixel_sha256": "2b67b34d9d5fde7779feef0997258391fc45c4fb287b9f8db5f180c31dc7d9b2"
+    },
+    {
+      "group": "short_sleeve_outerwear",
+      "source_image": "/workspace/fashion_data/raw/train/train/image/157753.jpg",
+      "annotation_ref": "item1",
+      "annotation_sha256": "d255f1c7414f025d40ac012bf127d6b0b46d7a1e236b62931e70675503de3275",
+      "file_sha256": "9b9d44395684a86cbfe07f1aefb614c353d5be76dfab4e10b244152000d9bd4c",
+      "rgb_pixel_sha256": "c8e9892da85daeb9bdc8adcd9a5866628daf89852635470ad4a96a1965ae8ccf"
+    },
+    {
+      "group": "short_sleeve_outerwear",
+      "source_image": "/workspace/fashion_data/raw/train/train/image/189168.jpg",
+      "annotation_ref": "item1",
+      "annotation_sha256": "41be69963f2b5738c8c305401da97aaf81acdcb7ffcb5a2354579e98bfe93f70",
+      "file_sha256": "6b16a1a873895ab65d147c863d923a59021f6e7b62a557da2348f72a429ba313",
+      "rgb_pixel_sha256": "a9a2d98846338964bbbee34cc0f4588ae26a99e960d505e8d9bd30d2f2552ebe"
+    },
+    {
+      "group": "short_sleeve_outerwear",
+      "source_image": "/workspace/fashion_data/raw/train/train/image/106855.jpg",
+      "annotation_ref": "item1",
+      "annotation_sha256": "163f81962ea1a32d46a51e59ed44cfe72bb14e241a5d26b3ee2d3d0a60dcf5ee",
+      "file_sha256": "625a614f3f14fd096b57c0aa30a96999df9440f570d45da130cec660d5e608e9",
+      "rgb_pixel_sha256": "6f00ca2df7048d69d925f4c9a3287379ef28f79b0ade22f446b6bbdd81808c23"
+    },
+    {
+      "group": "short_sleeve_outerwear",
+      "source_image": "/workspace/fashion_data/raw/train/train/image/118507.jpg",
+      "annotation_ref": "item1",
+      "annotation_sha256": "6cd7d9a02e1512576cd782d647f4831081621091b5034e24072862d8de7467a0",
+      "file_sha256": "ac19e12a13ffdf4137c59ac1adab7b602fd31ed223dfb3255f8cac0d341659f8",
+      "rgb_pixel_sha256": "2c840078756f25f14af50d24867ebd7cb45f2f3bf6b4d2bfbd931cfc5c75bc59"
+    },
+    {
+      "group": "short_sleeve_outerwear",
+      "source_image": "/workspace/fashion_data/raw/train/train/image/070245.jpg",
+      "annotation_ref": "item2",
+      "annotation_sha256": "9eaf0d6ede8a6f563cca26c6c2cc61c5d9a9e3658612878d09407b956a038e76",
+      "file_sha256": "3479fdde7ee8a6854432dc787d5695bded580ab4906319a53b1ec1a44abce347",
+      "rgb_pixel_sha256": "e566756c0c062690c3651f5c5926173bcd1911f7d2160a10733e51cb59562ded"
+    },
+    {
+      "group": "short_sleeve_outerwear",
+      "source_image": "/workspace/fashion_data/raw/train/train/image/094418.jpg",
+      "annotation_ref": "item2",
+      "annotation_sha256": "15fbdb6fb0473471882119f0d3bf9375e212fc57d2dc9678249314796ad9d646",
+      "file_sha256": "88089bbcd0c624cf0f396656c311bcce085196be17714d6a0d2769f6f20ab07b",
+      "rgb_pixel_sha256": "7ffbf9d512929e07ad247a3e9e19cad59e8ae82ac2d5396280868d7dd35deffa"
+    },
+    {
+      "group": "short_sleeve_outerwear",
+      "source_image": "/workspace/fashion_data/raw/train/train/image/189163.jpg",
+      "annotation_ref": "item1",
+      "annotation_sha256": "72bc90d691c5b0417ec2122b735e2d5d9e885fa8b6f3565cd6c3098ebbab1393",
+      "file_sha256": "b8502101c7f7caed8397356c95285d942d9594b780ff37e374f054b2b0aa56a5",
+      "rgb_pixel_sha256": "cc57585882845abf677a910c2a2da8c886dcdb264d68c214137964fdb17c3523"
+    },
+    {
+      "group": "short_sleeve_outerwear",
+      "source_image": "/workspace/fashion_data/raw/train/train/image/093675.jpg",
+      "annotation_ref": "item2",
+      "annotation_sha256": "f38c39e2dcbef2391172313cf3ca7467f4532ac397c6834cdfa1a3378da5fd9d",
+      "file_sha256": "72b1438c90ca8d7034a8ca6f03d6b3f94cb49b092f3050d634f82c6847a17068",
+      "rgb_pixel_sha256": "86073b3c02efc9ab72adac489407192ed047622f7f973292c1567d0372bc5adb"
+    },
+    {
+      "group": "short_sleeve_outerwear",
+      "source_image": "/workspace/fashion_data/raw/train/train/image/118516.jpg",
+      "annotation_ref": "item1",
+      "annotation_sha256": "2c26c51bffd0a814c98a9e71a87ce5ec4bfeb6c9d0f28cebc9f9d69b3753b85f",
+      "file_sha256": "8df6f8ce9dfd5407ef4473b8a2b730a16555a29fb3e01e84df9a3e97112ba288",
+      "rgb_pixel_sha256": "d8077bb688577abd1e9b6f8b0090eb5cf08ae11e678a6bbc0cd6a6807e9a6d71"
+    },
+    {
+      "group": "short_sleeve_outerwear",
+      "source_image": "/workspace/fashion_data/raw/train/train/image/189170.jpg",
+      "annotation_ref": "item1",
+      "annotation_sha256": "80780510ebae05765ff5c0031596c238d740d824e7e592b456efe7fa2ad5b031",
+      "file_sha256": "443979d93bd7d8dbe366397f7f99fce742b98e903d9f958739b7665d2d4c6dbd",
+      "rgb_pixel_sha256": "7c11c57a405f0c0fb5b4ab883c8b8d3964cfd7c1aa70093aad82fe3bc5868751"
+    },
+    {
+      "group": "short_sleeve_outerwear",
+      "source_image": "/workspace/fashion_data/raw/train/train/image/023381.jpg",
+      "annotation_ref": "item1",
+      "annotation_sha256": "a56ac1f2c362ebdb02941431b8cec52df500087b575324c0df6f296eaa3cecef",
+      "file_sha256": "61f4535a630ae8f507ea0d629a15a9ce91ea6cf0bfe887dbe0ba688109afface",
+      "rgb_pixel_sha256": "8aafba0f97531391c5a0ddd6193365bb080a15dc4e2786523892bd664870c6ea"
+    },
+    {
+      "group": "short_sleeve_outerwear",
+      "source_image": "/workspace/fashion_data/raw/train/train/image/189166.jpg",
+      "annotation_ref": "item1",
+      "annotation_sha256": "365f1e51c805f76e90d4a6bf951ad36fa54df28ac5650dc2bcfebb752c837d71",
+      "file_sha256": "06120862b20c5195c7358225c5ac2d776dcab9563d6d5e670b35eda54067010e",
+      "rgb_pixel_sha256": "ac1033fd74c0ce34ea447cd7cade7c2a55c80cad8ffb2eb1917bdce06b8d2606"
+    },
+    {
+      "group": "short_sleeve_outerwear",
+      "source_image": "/workspace/fashion_data/raw/train/train/image/032601.jpg",
+      "annotation_ref": "item1",
+      "annotation_sha256": "04ea7c92fd6fa0a6a54d347312ff7109b08b8224b9c9438aaa74769c37b3c249",
+      "file_sha256": "a91c3ad8eb22abdd7fc83f30074d541396ead78856e11a16b8066b94c4e99388",
+      "rgb_pixel_sha256": "01dfc2ad5bb77347e535d3233a084da25062b07ffb784c8a65d22d5146e47049"
+    },
+    {
+      "group": "short_sleeve_outerwear",
+      "source_image": "/workspace/fashion_data/raw/train/train/image/082974.jpg",
+      "annotation_ref": "item1",
+      "annotation_sha256": "253635f11c2ee8076fa7276759df63c0ec047952db02f0d17855e1b01db8b0e1",
+      "file_sha256": "3b3b16bf99316e32efa406b26b2b6558b7c8383ab11615ebcc35b04303fb7c26",
+      "rgb_pixel_sha256": "7a479786fea82b907dfe2541411f3cc29cb0b54d6ba8c5fd9a1480ce369e8acd"
+    },
+    {
+      "group": "short_sleeve_outerwear",
+      "source_image": "/workspace/fashion_data/raw/train/train/image/174106.jpg",
+      "annotation_ref": "item1",
+      "annotation_sha256": "1f40871f7aeb7cbf12d9c46e090eabd763ad9534b48cf11a989fef92ee407419",
+      "file_sha256": "a612ef3ccc44b7819a0f34d8e7d311480c322879d126631049eff7efff6ce603",
+      "rgb_pixel_sha256": "3cec161a33fc4cea9c5ecd0ff7cdfcf5fad0e56132429b97bc90dce8477377c2"
+    },
+    {
+      "group": "short_sleeve_outerwear",
+      "source_image": "/workspace/fashion_data/raw/train/train/image/018627.jpg",
+      "annotation_ref": "item1",
+      "annotation_sha256": "78872fc4e5f127c77bf425d59b493d5ab16bb4bd3fe0468a42a7974fd9e8abac",
+      "file_sha256": "a8d21d6ee292c2320e37ac5459c56ef0d38bf82708dd08c64e0ef1ca4f19404b",
+      "rgb_pixel_sha256": "5590b6313e23496db05dc0c993e91317e9380aa5ecead531c019cf18f90e213f"
+    },
+    {
+      "group": "short_sleeve_outerwear",
+      "source_image": "/workspace/fashion_data/raw/train/train/image/087596.jpg",
+      "annotation_ref": "item1",
+      "annotation_sha256": "239d30e19e6ba383f75e67c9b062a340db0a98648046bdb07ecf0aff6e2761b4",
+      "file_sha256": "5e3d1e85a953a96a88d2b4504cd375052cc691e66ef39f81f9023a9e83dce87b",
+      "rgb_pixel_sha256": "da65c5934045d5b9b72eb61951ff38f615319edb20d03a8542d4208f768ab5b2"
+    },
+    {
+      "group": "short_sleeve_outerwear",
+      "source_image": "/workspace/fashion_data/raw/train/train/image/118513.jpg",
+      "annotation_ref": "item1",
+      "annotation_sha256": "d3ac113580f85bee6bf5083c71ef0b27850c5af7ff41e51d0727d0ce5fd31c40",
+      "file_sha256": "5715768fbc1806945b3c8bb8e41d980b0970ec803973b1303fbf05d26616ccf0",
+      "rgb_pixel_sha256": "2ef96779daeeb72152e7fbef8d0ad6882741f7338a8bfdff812979a3533b5031"
+    },
+    {
+      "group": "short_sleeve_outerwear",
+      "source_image": "/workspace/fashion_data/raw/train/train/image/164857.jpg",
+      "annotation_ref": "item2",
+      "annotation_sha256": "58a73383289a2e2ea75663d302b43f705ce5b82e11ab040d3c56b06bfdf825f4",
+      "file_sha256": "ee65f90b1d9411277c7fb485e17c01cfae2c81ed71204fa202eef7a62cf2a4b1",
+      "rgb_pixel_sha256": "4058f084a8af9bff2ea0279bbf49900b4c48d8d55041bc5b6e96f37fe030d3c6"
+    },
+    {
+      "group": "short_sleeve_outerwear",
+      "source_image": "/workspace/fashion_data/raw/train/train/image/006656.jpg",
+      "annotation_ref": "item1",
+      "annotation_sha256": "5839978f60a9c1daaf82174c16bc496a548767539a65067757e141a5548eb36c",
+      "file_sha256": "18a93b4c8a76511c12e97d35ca8b2fe7ef58c768f87c5501e6d20afc3c7f55c0",
+      "rgb_pixel_sha256": "6328a015a906d318334521660fd9aacac362776a7672a50113cc53e3ac5c94fb"
+    },
+    {
+      "group": "short_sleeve_outerwear",
+      "source_image": "/workspace/fashion_data/raw/train/train/image/079717.jpg",
+      "annotation_ref": "item1",
+      "annotation_sha256": "e029e08a0fd4f41181bcd340ed11f177e2e5ab1c4bc12a06e3d5be9bc9f5a63e",
+      "file_sha256": "97521f0c43e835ac11b94833c485faa0c4e206a08a8859f53c771973e10420c0",
+      "rgb_pixel_sha256": "0685f8aed323ff335e594a125250d57f24ce89d8a524b92b02111ff36a05b766"
+    },
+    {
+      "group": "short_sleeve_outerwear",
+      "source_image": "/workspace/fashion_data/raw/train/train/image/173917.jpg",
+      "annotation_ref": "item1",
+      "annotation_sha256": "d9fedc8d98e03369e9edbcf3e746729cc716c185d723c96c0d899db0e27e593b",
+      "file_sha256": "6e49a3f617769d825a6c7cec08c1fcb25e5782ea4207d6e0cb5e89e762d0ef92",
+      "rgb_pixel_sha256": "e31e9c4ac5cae8589b7f9e8f9423f84b85a0a21456f6974e5b8152e50ae52986"
+    },
+    {
+      "group": "short_sleeve_outerwear",
+      "source_image": "/workspace/fashion_data/raw/train/train/image/082973.jpg",
+      "annotation_ref": "item1",
+      "annotation_sha256": "7e3dd4f7d1205135f0ae47de8a168def0c97146588f4149cb7d890bac038ed99",
+      "file_sha256": "9f1f3ffbd9dea71ca3a06a959224e6794e2c8d6185dfdd9d6c356f034ac0bc02",
+      "rgb_pixel_sha256": "617d39d8418d74b5f05e39b76c1cc80e271d1f5fabf909b328f45a78c4378674"
+    },
+    {
+      "group": "short_sleeve_outerwear",
+      "source_image": "/workspace/fashion_data/raw/train/train/image/135931.jpg",
+      "annotation_ref": "item1",
+      "annotation_sha256": "814c39286eae54674cc7ef4f475f03e309912987b8e4a901f060de169ac7764e",
+      "file_sha256": "6593739a76700b9189112d9a7b5aba952a0d43b0bae56cf74fa232338346c919",
+      "rgb_pixel_sha256": "454523383295684048fd380137564e414bf551c2f9462b54bf24093588426895"
+    },
+    {
+      "group": "short_sleeve_outerwear",
+      "source_image": "/workspace/fashion_data/raw/train/train/image/151476.jpg",
+      "annotation_ref": "item1",
+      "annotation_sha256": "c637696fde530a6e05165ebe5ab759f9058272f6e0ffed39a486fd9bf7cc80de",
+      "file_sha256": "365ecb45c6695577392daad0dd89d03b1f40e711d222d26d6a5aff5bdf7a90ff",
+      "rgb_pixel_sha256": "b89e3b0505a63aae667b3aad95214455f466f1997fc66af97f46973a00d0b09a"
+    },
+    {
+      "group": "short_sleeve_outerwear",
+      "source_image": "/workspace/fashion_data/raw/train/train/image/118503.jpg",
+      "annotation_ref": "item1",
+      "annotation_sha256": "30109287b4b3bf1343296747299b73cc434306b486ad13faa33dc31203d4990e",
+      "file_sha256": "791bf4eebf47398b31b2756883f01f6669a966d6740581a5a1b640e9b6b3b017",
+      "rgb_pixel_sha256": "a3879c4a4a51961d74be0f68dfa87b215845e4c7a1134b5c0953fa0ae659c947"
+    },
+    {
+      "group": "short_sleeve_outerwear",
+      "source_image": "/workspace/fashion_data/raw/train/train/image/093683.jpg",
+      "annotation_ref": "item1",
+      "annotation_sha256": "68263e331f5c65d4b601df0061bc83e606f11f8618be6c97fad50dad5e6e41b2",
+      "file_sha256": "75f94ab820956751f6a49479002bda36c6b5d4f1beb4b93ff0673877f7901711",
+      "rgb_pixel_sha256": "0af0900aec582d6d655d478c91aa4a976d693a37ab8175d686f8d0a3892b62f4"
+    },
+    {
+      "group": "short_sleeve_outerwear",
+      "source_image": "/workspace/fashion_data/raw/train/train/image/179040.jpg",
+      "annotation_ref": "item1",
+      "annotation_sha256": "c3c6100f3a2e3ff010336885fac6bcef20d86c9b52bf8df2362aaa00b8df2fe4",
+      "file_sha256": "412f9a48e6b842392751ff75a1be832166994b2d26769cdcd5c172e590b6db20",
+      "rgb_pixel_sha256": "8443521766980baad9870682f4cf3274d5d53accce2feab37c095a0dcd693ad9"
+    },
+    {
+      "group": "short_sleeve_outerwear",
+      "source_image": "/workspace/fashion_data/raw/train/train/image/124706.jpg",
+      "annotation_ref": "item1",
+      "annotation_sha256": "f324a8b25a3556c6c4af919238af79d6fe141909db4f7fe3c33f7da87fe5cb89",
+      "file_sha256": "0ab5d79f26a36d9ed5449a175b22ddda8693cba2f823102689428fe396dbc86e",
+      "rgb_pixel_sha256": "8d300a6c5256cb7afbe746fc90e0f72d19355169416a6a85c90ba949a47a8260"
+    },
+    {
+      "group": "short_sleeve_outerwear",
+      "source_image": "/workspace/fashion_data/raw/train/train/image/062407.jpg",
+      "annotation_ref": "item1",
+      "annotation_sha256": "eeaed5401f5fa01cd9f2a2b71618f0294d672c8448d174f5ec2522df740ec184",
+      "file_sha256": "a173beb60d3999fbc93fb8877398f2f1deb969ba54051ffa8ce04a2f91981580",
+      "rgb_pixel_sha256": "a37f15689bfe7162bd9d5a296d9c3a1211b40bf33f885f123ddb75904acf02c9"
+    },
+    {
+      "group": "short_sleeve_outerwear",
+      "source_image": "/workspace/fashion_data/raw/train/train/image/179041.jpg",
+      "annotation_ref": "item1",
+      "annotation_sha256": "16f069dc2fa9b8b61c3012d13c70329d14c62774da20b409d46362695219d9b2",
+      "file_sha256": "5aef79a0ba75b27a32ab2a905cc388d4cba131f99d3147fd6fdea0bdd596490b",
+      "rgb_pixel_sha256": "9bdfe34100f2a2626bf97e1eb6efcd9c0e5330c70577d09a54789f20407e78ea"
+    },
+    {
+      "group": "short_sleeve_outerwear",
+      "source_image": "/workspace/fashion_data/raw/train/train/image/153246.jpg",
+      "annotation_ref": "item2",
+      "annotation_sha256": "6423f893f9b1ca053494173252bd8a01e98a82b146239520538ebeb90abc9163",
+      "file_sha256": "355a561c321434c1ef79eb810300db4ad86fbfb3ee03ecc4fe947b7304fbf6f1",
+      "rgb_pixel_sha256": "9b7033150c940cc531ed59a52383d515ee6ee2c59a9a1482a719fb7825c8da4f"
+    },
+    {
+      "group": "short_sleeve_outerwear",
+      "source_image": "/workspace/fashion_data/raw/train/train/image/020561.jpg",
+      "annotation_ref": "item1",
+      "annotation_sha256": "62c66f453c23a2847c8d5349c4bcd716cfde66e402841ac4b1efb6f59f68472d",
+      "file_sha256": "c03a20c81095f738d698053faceef1d0737630b61193eb01743136bac5fba944",
+      "rgb_pixel_sha256": "1485d5f51b8962dd0f2a24b916295f4988be049373a15ca7967139228b9bf80b"
+    },
+    {
+      "group": "short_sleeve_outerwear",
+      "source_image": "/workspace/fashion_data/raw/train/train/image/140345.jpg",
+      "annotation_ref": "item1",
+      "annotation_sha256": "d500aa646c9a1f27f118c0cfe726fd05441e086c9ad10ea94a7cb6e3e7a5fc06",
+      "file_sha256": "9a650ebb61203d32352da0e5df3bfcf5ce5153aba55a6de01de23008f27de439",
+      "rgb_pixel_sha256": "81a92d3fae762aa015bf9c3a73af8be52165363d4cbebce0fa71affa5b60308f"
+    },
+    {
+      "group": "short_sleeve_outerwear",
+      "source_image": "/workspace/fashion_data/raw/train/train/image/186403.jpg",
+      "annotation_ref": "item1",
+      "annotation_sha256": "7c7143cb0a86f804f5951f50f220febe4d250c37291d2ca71ffcbe02e57205b5",
+      "file_sha256": "323a2583894a5d545908b330625490946e643259f8364d75978ef4b500886c8c",
+      "rgb_pixel_sha256": "8849913b442b31545c6ccf6866aa1dfcca026bc68e5defd7e9a80cf603bfc883"
+    },
+    {
+      "group": "short_sleeve_outerwear",
+      "source_image": "/workspace/fashion_data/raw/train/train/image/187614.jpg",
+      "annotation_ref": "item1",
+      "annotation_sha256": "1347ede0113b01f1905bdcd924480f5da5eb567f463428efa9fa357f2ae485ce",
+      "file_sha256": "4dd9ffafdbc377e912eb610059d740fdc2bad90881482640dc04d97fefdb751f",
+      "rgb_pixel_sha256": "b954c3d3c3d35e8849896b2d344ed3ac32e442c6c897a7a25f9c2bf87ad28f95"
+    },
+    {
+      "group": "short_sleeve_outerwear",
+      "source_image": "/workspace/fashion_data/raw/train/train/image/189188.jpg",
+      "annotation_ref": "item1",
+      "annotation_sha256": "144d66edada8d10c540f622e24f47688e65f6c6762292d875d3efa407019b06d",
+      "file_sha256": "553cc4867fb59dfb0cc28bb5a6b03b905228f7f750d75c7ea06bf1095808c46c",
+      "rgb_pixel_sha256": "b11a24e752dec6921f1b5a6d1ef8f489476f8b26c44ee30d31034b54de4a5718"
+    },
+    {
+      "group": "short_sleeve_outerwear",
+      "source_image": "/workspace/fashion_data/raw/train/train/image/140338.jpg",
+      "annotation_ref": "item1",
+      "annotation_sha256": "d4a449291b65d3a2a445f799b161027054b7163e82ab74d6ab228358df5b316b",
+      "file_sha256": "b239b1ad97e32ae05cd984c6bda5f87e8c3d6a045fd48b7facdbe2b6d509cca5",
+      "rgb_pixel_sha256": "9f2d827e67de0ff3e179799384ef7a535506cb01897c0afd1e4c1ae9d34a438f"
+    },
+    {
+      "group": "short_sleeve_outerwear",
+      "source_image": "/workspace/fashion_data/raw/train/train/image/118509.jpg",
+      "annotation_ref": "item1",
+      "annotation_sha256": "16be4ec658f04a5eee6c75078c22a60e45af7e2ea25edfd3d8b8eb971fcc96c4",
+      "file_sha256": "abc2257f0940ca479071aa114fd6a9437f6cd9432105517ecf68111aeaa8823b",
+      "rgb_pixel_sha256": "a9af52a600bb0385758a2fbd097dc4cb9209046d6950871a193be261a4a45c98"
+    },
+    {
+      "group": "short_sleeve_outerwear",
+      "source_image": "/workspace/fashion_data/raw/train/train/image/060729.jpg",
+      "annotation_ref": "item1",
+      "annotation_sha256": "b5ffc21a8f512a26fb140fb8586dedea97a0837b8d254fa2b9ac766e1b163d42",
+      "file_sha256": "0f6fbee54b179acfe13589849f91f838c63f110675af4b7766954d0d1a6b7fe7",
+      "rgb_pixel_sha256": "da03a9182c60677132147080f79039252e3b400997dd00872319f357537c6e0d"
+    },
+    {
+      "group": "short_sleeve_outerwear",
+      "source_image": "/workspace/fashion_data/raw/train/train/image/014821.jpg",
+      "annotation_ref": "item1",
+      "annotation_sha256": "3361b2e4a50d55d2a81941ef9233a4724913390e20d846f384883628059317dd",
+      "file_sha256": "f3e50c3578ae3f55fe475ba09529b27fa2ce68cf98f87a243b949acd9e3ee557",
+      "rgb_pixel_sha256": "a19cf7affbeeff6b9fceab68de24953c31c4b6fb660c2fafbbbc2e6b1d126816"
+    },
+    {
+      "group": "short_sleeve_outerwear",
+      "source_image": "/workspace/fashion_data/raw/train/train/image/006658.jpg",
+      "annotation_ref": "item1",
+      "annotation_sha256": "fd90beb0118dfd6aea439ba8228f4dcd2d7899f33be97242e490140bcb4515f5",
+      "file_sha256": "23d2495f0e20b2221dbe92ca62f97e8c759c867ff0a4c6a76068633f7272169a",
+      "rgb_pixel_sha256": "4226e654d6e8a9ab47dcfaa39002861abc9b748331b0fb85045de15fef293c39"
+    },
+    {
+      "group": "short_sleeve_outerwear",
+      "source_image": "/workspace/fashion_data/raw/train/train/image/140334.jpg",
+      "annotation_ref": "item1",
+      "annotation_sha256": "9c8285ad0377eccad0584781db13e5d8ba5290a116be05657632587882e5430c",
+      "file_sha256": "f6a2de136da346c74e9a302aee9a6aee18d8ddcb4b3834128e139b72571d5195",
+      "rgb_pixel_sha256": "3e01a367bf88dcfe90835c42ff5d9e7eaceea8d3091d89a2924c30f7ce2ccffa"
+    },
+    {
+      "group": "short_sleeve_outerwear",
+      "source_image": "/workspace/fashion_data/raw/train/train/image/093681.jpg",
+      "annotation_ref": "item1",
+      "annotation_sha256": "5270fdd59a727d9c12c449218b59e151245d5a1ea480f4762f45c94a08bf21df",
+      "file_sha256": "cf10957ffc1aae91698be8e56e0db6d09f00d04704cab2cb86eada74912adce0",
+      "rgb_pixel_sha256": "0f0921d3226d5ec879643589e025e35fb2065400849274a56038947e9e3e7ab3"
+    },
+    {
+      "group": "long_sleeve_outerwear",
+      "source_image": "/workspace/fashion_data/raw/train/train/image/104364.jpg",
+      "annotation_ref": "item2",
+      "annotation_sha256": "d17db5b00f9d12c0b8af16f8887174fb5c4463f2ef4e7325ffbe65238f7dc157",
+      "file_sha256": "9e552342b265947c29554a497eb6967603b54e01415a242897189523379d402b",
+      "rgb_pixel_sha256": "36a92771c4c7ba28ff2c9d63f4b27e576bef8646556f035cba28f91731d8bd66"
+    },
+    {
+      "group": "long_sleeve_outerwear",
+      "source_image": "/workspace/fashion_data/raw/train/train/image/128901.jpg",
+      "annotation_ref": "item1",
+      "annotation_sha256": "ee57adf067b6c5bcf6fd6ffb56e5751146dcdddb3d66d069f2476c04156ea6f7",
+      "file_sha256": "5a4fd5e73baa584ce718a5e312f7a04b66eb573370dc6cd60b22aa30c56e5e10",
+      "rgb_pixel_sha256": "264fc63ea0c2616cf6ad7e2b14e58b70f5e378ea3b15d25315df47871ccdba1e"
+    },
+    {
+      "group": "long_sleeve_outerwear",
+      "source_image": "/workspace/fashion_data/raw/train/train/image/053074.jpg",
+      "annotation_ref": "item1",
+      "annotation_sha256": "8c276280f4b7243d5bbd1825aab62c3dbfbeed2417b9127e4c6009ee50a864a2",
+      "file_sha256": "22014295610a857d62b2f8dffa928ae61325fbd440ae0fc2f52ae0fdf3b7c5b3",
+      "rgb_pixel_sha256": "f60807be49f46e1a9e9966ef9c392c73700a8b72cedb2fa1f8744b8c0e6a2721"
+    },
+    {
+      "group": "long_sleeve_outerwear",
+      "source_image": "/workspace/fashion_data/raw/train/train/image/056856.jpg",
+      "annotation_ref": "item1",
+      "annotation_sha256": "fb7d18b39639be807db81831d5e0802e8fe3cae5e07d31e491a280532f39ee11",
+      "file_sha256": "5e6547849fe1b84d095c0b3dd35ba3ad4d84a6a6e6f271a7fe69984dd1227eaa",
+      "rgb_pixel_sha256": "c3a9660d2cb198967046e1c074c4f8806a83072ce71714edadfb8dc4b75359b4"
+    },
+    {
+      "group": "long_sleeve_outerwear",
+      "source_image": "/workspace/fashion_data/raw/train/train/image/124767.jpg",
+      "annotation_ref": "item1",
+      "annotation_sha256": "f0fca8799dba3ac9bdb9b8b522244f2a2e08bfa520fe4c760f03515bf87381f7",
+      "file_sha256": "650877f53a068881bc770ce2dbaa5720506bbc779a88b384c43eadfd6ed19db9",
+      "rgb_pixel_sha256": "f16d99abafcd3823c0e241a22c26bfa2d19e5fb9fe90efbf1eba6a5125979435"
+    },
+    {
+      "group": "long_sleeve_outerwear",
+      "source_image": "/workspace/fashion_data/raw/train/train/image/037406.jpg",
+      "annotation_ref": "item1",
+      "annotation_sha256": "6b5d42dbb7828d65ca78fbd9b8bf487ab2d0a7a8ae62be0d1630b9674af1359b",
+      "file_sha256": "06f46dfcecc69065a9155532f1c72cc9ff9386d83640cc4a2475ee77d524aa9d",
+      "rgb_pixel_sha256": "1aa2ce51bee79b4c2d599f7c6ecf3ff23892e38a70634c0db95f9995d72df6a6"
+    },
+    {
+      "group": "long_sleeve_outerwear",
+      "source_image": "/workspace/fashion_data/raw/train/train/image/181231.jpg",
+      "annotation_ref": "item1",
+      "annotation_sha256": "f4243cb94a246873df4c9c480bb754c9778d5d360c0cfe9b8df770f0f26437b9",
+      "file_sha256": "a4c80f0a3f01110d2d943fc172e2fa37f7e81521fc7067b8a750fb9eb520d3ea",
+      "rgb_pixel_sha256": "f942da9f282556699d62fad35abc35d18baa1682606510112a829c55a6e3f03c"
+    },
+    {
+      "group": "long_sleeve_outerwear",
+      "source_image": "/workspace/fashion_data/raw/train/train/image/026769.jpg",
+      "annotation_ref": "item1",
+      "annotation_sha256": "269b7238a6f39be5a974cd52a9c48f08ba63808f63953548e0ddb233aee74bcb",
+      "file_sha256": "b17c91aa9f687020190918874d3b858ac16210849853bafc4db2883ce9a4028f",
+      "rgb_pixel_sha256": "0d7026d2540f5b197f64040abb638f13e91cc7c2191e99736d1959bef1220bfb"
+    },
+    {
+      "group": "long_sleeve_outerwear",
+      "source_image": "/workspace/fashion_data/raw/train/train/image/151214.jpg",
+      "annotation_ref": "item1",
+      "annotation_sha256": "2475621350c59340ab6eae3c247454c7f7c38203a3ed222d10db1008e84108ae",
+      "file_sha256": "92eed140cc713b8db5db8ed4022e9459a0dd4c3e7bf4995e8fc9e4fe32c67aaf",
+      "rgb_pixel_sha256": "0ea26e93722e8b17fe5385e0b77110cbc59772f3c471dcd34924adec60852318"
+    },
+    {
+      "group": "long_sleeve_outerwear",
+      "source_image": "/workspace/fashion_data/raw/train/train/image/129573.jpg",
+      "annotation_ref": "item1",
+      "annotation_sha256": "dac4b8ee16dd2f012e27f254af39d6f5402f5e15cee4920921d06c457c98caaa",
+      "file_sha256": "445095db54c8919092a64ca2c77ffc64773327c7d4f7e05beff28faa9f6cf63a",
+      "rgb_pixel_sha256": "dfaed39526a12206715c74518fada8f9447e0f63c4c066fc944b2329780d95fa"
+    },
+    {
+      "group": "long_sleeve_outerwear",
+      "source_image": "/workspace/fashion_data/raw/train/train/image/028599.jpg",
+      "annotation_ref": "item1",
+      "annotation_sha256": "2b2e54d3b005dc4f525deec566d0a675683d66c5f2d78de2abb2b6ce7b36ddf6",
+      "file_sha256": "63036b2070d9db29dec5a1b2a4a04ae717db229fc738671c9f1b203273e15e52",
+      "rgb_pixel_sha256": "3bce0ec589910a2e2a9497afc9c27d2c2fdb6a34261765b6ffef78a603343699"
+    },
+    {
+      "group": "long_sleeve_outerwear",
+      "source_image": "/workspace/fashion_data/raw/train/train/image/158409.jpg",
+      "annotation_ref": "item1",
+      "annotation_sha256": "461661e65ebbbba73233f16b909ae0fd79a210348b16978b56c94d75f9613f59",
+      "file_sha256": "eb0a10a87fe5a5a653bfeaa6a3a9ebc99561d7ac8e388c2bcdf07b33ef6d39f1",
+      "rgb_pixel_sha256": "abfc32085fb0df2be8db53aa9fecc99f95ffc4b3eb8dcd220088a6a81e384f5f"
+    },
+    {
+      "group": "long_sleeve_outerwear",
+      "source_image": "/workspace/fashion_data/raw/train/train/image/045089.jpg",
+      "annotation_ref": "item1",
+      "annotation_sha256": "38ec48bb9942ea40dec56f71056c6cec3028ba787a7c3eae63132db3998fde3a",
+      "file_sha256": "99efdb0f04261e740f59e77d669202814695801b6717b07be7ea38429b2570be",
+      "rgb_pixel_sha256": "2c4c7b14183a972f4a19a1ef66a7759451ef801d30689018de2766e352c5ca5f"
+    },
+    {
+      "group": "long_sleeve_outerwear",
+      "source_image": "/workspace/fashion_data/raw/train/train/image/062397.jpg",
+      "annotation_ref": "item1",
+      "annotation_sha256": "d0e25a7a3e3300a9c4ef0e592e77ba9e2bca87368c48faf590fa96eb38804e55",
+      "file_sha256": "cc4b17d4240d2de6a8183da24704b988a147e55ad542c80361754857db8ba620",
+      "rgb_pixel_sha256": "217d4dfd5ce9fc90c344d1f9c7dd2175e9564f0cd08b0428f012bc2b2c5ceb19"
+    },
+    {
+      "group": "long_sleeve_outerwear",
+      "source_image": "/workspace/fashion_data/raw/train/train/image/062336.jpg",
+      "annotation_ref": "item1",
+      "annotation_sha256": "d1ea7ad9d38e6857e3245d3c2fb0f64737f735a10b1ca5828819dde1677b9948",
+      "file_sha256": "99a4caca60421a3861b5a2b6a5346bbf21f0d6e34008253a28b08ecb6cb0160d",
+      "rgb_pixel_sha256": "bf53d4c17f100461a60c4bf0286c9a6c6f85daa35a3d53ffdc5835bb5b22ecfe"
+    },
+    {
+      "group": "long_sleeve_outerwear",
+      "source_image": "/workspace/fashion_data/raw/train/train/image/076975.jpg",
+      "annotation_ref": "item3",
+      "annotation_sha256": "ff0284fa7e4920faf6cd7e34d3fffa186f0f72448a72b462c937b6a71d21572b",
+      "file_sha256": "1b91c7fb91d0d3fa58958a7b78e757797cdfc3d1cb24b97ef5173f176b0583ec",
+      "rgb_pixel_sha256": "991441bd00ecb9ca2c74fbc97210898aec33c3211f5070004dc59ad0387981e2"
+    },
+    {
+      "group": "long_sleeve_outerwear",
+      "source_image": "/workspace/fashion_data/raw/train/train/image/163146.jpg",
+      "annotation_ref": "item1",
+      "annotation_sha256": "430593e2dafd51cfe42f38d0b44e89b4648191d6eb495d55e37ca65042c4eff1",
+      "file_sha256": "f303b1b98a8a5b7d53d76e1d1f727106440dbfbcfbe6b8bddd51055f372215aa",
+      "rgb_pixel_sha256": "f0df94798c787f456ac91d6f96a590282d0958fca30a2f2d529f39dc3961efd2"
+    },
+    {
+      "group": "long_sleeve_outerwear",
+      "source_image": "/workspace/fashion_data/raw/train/train/image/082071.jpg",
+      "annotation_ref": "item1",
+      "annotation_sha256": "598f31784ff931ee206434170d129728ac57eb22a6b4dbe46c202144aea536b3",
+      "file_sha256": "13edbc40d887ab6f2c3f0be4a691f34e361478fcbd398a6d399d3ba40f4d3c47",
+      "rgb_pixel_sha256": "b01556b4ff8dc524ea3917aade6657219a8585a082c1eb0c3a60beca6d6077c2"
+    },
+    {
+      "group": "long_sleeve_outerwear",
+      "source_image": "/workspace/fashion_data/raw/train/train/image/091871.jpg",
+      "annotation_ref": "item1",
+      "annotation_sha256": "b5d7c3cfb8d9148c1602ba55abcf0ca5b5ec6e7a6653f41afa66fc3baa937989",
+      "file_sha256": "e7849171b3b34937a9b4536c9278fc647f0364d68bd41ebf84e76553cb360c99",
+      "rgb_pixel_sha256": "f7a97aa16fa1081c9e2f4c5218e8b6f7a7f3d2b52f5cf96ecf5b9a013c3d11d5"
+    },
+    {
+      "group": "long_sleeve_outerwear",
+      "source_image": "/workspace/fashion_data/raw/train/train/image/007224.jpg",
+      "annotation_ref": "item1",
+      "annotation_sha256": "de57b8b5142e40c4ca481a7f720dbd24ad0f513f2ae728734dcec57899acc440",
+      "file_sha256": "c0ef6e65863cf5f44c815dc7c08e9e3ad87aaeeeed295eb821e7a130a8d631fb",
+      "rgb_pixel_sha256": "2b4114e701e867f406a0fb69784cb4ebdb12650d79d39275486d7f75fe91a865"
+    },
+    {
+      "group": "long_sleeve_outerwear",
+      "source_image": "/workspace/fashion_data/raw/train/train/image/186330.jpg",
+      "annotation_ref": "item2",
+      "annotation_sha256": "bc1af86db1fb74aa9fd92673325446b20fef06b422f4d0d9a8c8cfa7824e2a7a",
+      "file_sha256": "43db4da1a97cf26733f07d433c7f22dd062312e84a711d60b8d31cdf02e8bae3",
+      "rgb_pixel_sha256": "3df6644978a4afe723fe80b4880b86e35523e79c92ccd571e43c44e5d9cf7813"
+    },
+    {
+      "group": "long_sleeve_outerwear",
+      "source_image": "/workspace/fashion_data/raw/train/train/image/105507.jpg",
+      "annotation_ref": "item1",
+      "annotation_sha256": "087dd9226e04235825b495ce5dc5d4ca741219a1373a04ae7f93aaad608216f3",
+      "file_sha256": "6285913d9515c9648ae11993850d11f27ab5224f327b45ff7f4926e9854bccc2",
+      "rgb_pixel_sha256": "3b7f627353dbbff9491f6112e5dbc8cbbfb89d9e6d537d27dac5c9ee992c2f1e"
+    },
+    {
+      "group": "long_sleeve_outerwear",
+      "source_image": "/workspace/fashion_data/raw/train/train/image/115012.jpg",
+      "annotation_ref": "item1",
+      "annotation_sha256": "1b577aa61b39025778a5faa68103ea8a27000c971a06db34e9296112c955ab5e",
+      "file_sha256": "bc8622fa99da33640fb987258e4aa020b1a40e71dbf2241252d0f0f1d7c001eb",
+      "rgb_pixel_sha256": "f8822382260ecd4de3ca8610712766ccf7b95a6b6d1ffd6c6612d659168ce4b7"
+    },
+    {
+      "group": "long_sleeve_outerwear",
+      "source_image": "/workspace/fashion_data/raw/train/train/image/043011.jpg",
+      "annotation_ref": "item1",
+      "annotation_sha256": "959254fbe8e21f3851b5477ff5730b2377362fffc7b1931b0c6ced44db0cfd65",
+      "file_sha256": "c5f21edb101ff8e8b1ac1d3e1289f51c9d0f56485903775344bd4882b782e0b9",
+      "rgb_pixel_sha256": "1620dc97f71447562353f393e6ecc5dbed45582125e865de8cff52cef2e45adb"
+    },
+    {
+      "group": "long_sleeve_outerwear",
+      "source_image": "/workspace/fashion_data/raw/train/train/image/143395.jpg",
+      "annotation_ref": "item1",
+      "annotation_sha256": "1ac66fea251a94991e29d3a4062d4bea50288d5ae20db0e82e11269021ac1d83",
+      "file_sha256": "67448e23b17c5e0ec1eb87bf4ad32f0e9b182286d2538f7572e9da1d2eabedbc",
+      "rgb_pixel_sha256": "7c680e4c0a5ae7020144698c59ddb4df9ee32b643d632c4062cf367ca29c6d61"
+    },
+    {
+      "group": "long_sleeve_outerwear",
+      "source_image": "/workspace/fashion_data/raw/train/train/image/003684.jpg",
+      "annotation_ref": "item1",
+      "annotation_sha256": "495b37584227548bae73482b6241464887b74b6c1f7c54a6da7d0978ae3ff497",
+      "file_sha256": "5052b55df4c2f7ed65b1ad35ac54607e84ed909467226d338f89e0f70268e23c",
+      "rgb_pixel_sha256": "c08234bce160fd9a0e9e97f49ffb94ef4ca054c5ba8e7f3e3f2b204f73defda3"
+    },
+    {
+      "group": "long_sleeve_outerwear",
+      "source_image": "/workspace/fashion_data/raw/train/train/image/125792.jpg",
+      "annotation_ref": "item1",
+      "annotation_sha256": "f96d87ccda148b4f67dde32fde78de4bed893e806277bccf6a729cde99e6364d",
+      "file_sha256": "64bf68bf2b6073e49a348cb257caf329347993d15e1b239de87ef51ffdda4aec",
+      "rgb_pixel_sha256": "26cff3db7dbb1b342ebb7b30da7e93374f88ae002fb89cf2525a02075efdc1d9"
+    },
+    {
+      "group": "long_sleeve_outerwear",
+      "source_image": "/workspace/fashion_data/raw/train/train/image/055546.jpg",
+      "annotation_ref": "item1",
+      "annotation_sha256": "2ddc6c37a525bf30a24cef4416eae7e170a7faf409d61ede45cd9d00047a9bef",
+      "file_sha256": "1db43a145205672f62c6aac6e4ccc0b0c6432d2a4c61d03edfd1df0b7253f37c",
+      "rgb_pixel_sha256": "d392e00af82e7ff8edcf2988c1a76e603797d1c24bc2cd3eb779e6df7f30ef91"
+    },
+    {
+      "group": "long_sleeve_outerwear",
+      "source_image": "/workspace/fashion_data/raw/train/train/image/128360.jpg",
+      "annotation_ref": "item1",
+      "annotation_sha256": "2094822ad16958e73caee052f17c885bd25aad1210dd02909a79d39359f64cce",
+      "file_sha256": "76e469693bccc70b9890bb303b5fc46d805bdb15358665b7c076b337a3574c5a",
+      "rgb_pixel_sha256": "fa8a7fa72c391ecb9f0f32540ba44ea3437a5a480dea7ed51adc25169c5b9c52"
+    },
+    {
+      "group": "long_sleeve_outerwear",
+      "source_image": "/workspace/fashion_data/raw/train/train/image/014216.jpg",
+      "annotation_ref": "item1",
+      "annotation_sha256": "f28dc41cb924b1f60cd4610a979fe147f632cca23de9bb78ecbfafe8d8d10905",
+      "file_sha256": "45841e352f3054b27dea2b6462c35934fc6456ce92929ac507beae4883c7444f",
+      "rgb_pixel_sha256": "242b24a66fe2dbf1e67d0718222000bf95ae49c0aaee6bf5d347d395f01a6e76"
+    },
+    {
+      "group": "long_sleeve_outerwear",
+      "source_image": "/workspace/fashion_data/raw/train/train/image/103179.jpg",
+      "annotation_ref": "item1",
+      "annotation_sha256": "ba2bdc182a7f28fd0b3e41717d0e0259698e9c58bbbe6d5b6b5e15437f06270d",
+      "file_sha256": "3a4236a2c0d5595138cea6369fede3cf20b1d899837547c71179f41c7cff4d70",
+      "rgb_pixel_sha256": "5143d86e96a2b55fecd63ba28b3eebf12611a6d496c982f4e194dd53ede0d485"
+    },
+    {
+      "group": "long_sleeve_outerwear",
+      "source_image": "/workspace/fashion_data/raw/train/train/image/171992.jpg",
+      "annotation_ref": "item1",
+      "annotation_sha256": "4434b8df9b56977403a8bd1c1e9d7732561e4bc665149fb470b094195fc581d0",
+      "file_sha256": "1ad0e5457c0d90c70f3d463dfced0b2ed7fcedc23dbbdeaa10c19db44dcc169e",
+      "rgb_pixel_sha256": "e6fd284b5a5013d8f5650f70b8bc0ffe80edc2c34e915c71e1d5c81cc8db2fb3"
+    },
+    {
+      "group": "long_sleeve_outerwear",
+      "source_image": "/workspace/fashion_data/raw/train/train/image/034276.jpg",
+      "annotation_ref": "item1",
+      "annotation_sha256": "5a3cc39f681fc55c67424b4e28e04dcb248b1eada52ab5b825d13df32235351b",
+      "file_sha256": "b1d0b50361da271d2cd3d0caa4f70bc05e4ad8011e5aff7c1ff5d7ebcb5c2dd9",
+      "rgb_pixel_sha256": "84ca0c0ee1956cbcf5e98b62eee526c3c6832e299cc650b23aa1f308a34685b6"
+    },
+    {
+      "group": "long_sleeve_outerwear",
+      "source_image": "/workspace/fashion_data/raw/train/train/image/033929.jpg",
+      "annotation_ref": "item1",
+      "annotation_sha256": "ded3093033e6e95af1c071076567a6a001af3b2b7281470a51c1b6fab1b61f9d",
+      "file_sha256": "bd6d628921f8eb02afa7b4545a36f9707444eb670584596120d507798f16c8e5",
+      "rgb_pixel_sha256": "ec0f1582f78a0be59147cdc44047c0cac1739c75905e4d55748bac654bc6bc66"
+    },
+    {
+      "group": "long_sleeve_outerwear",
+      "source_image": "/workspace/fashion_data/raw/train/train/image/010903.jpg",
+      "annotation_ref": "item2",
+      "annotation_sha256": "755294dddd744fc3a3904cf886f0bd593ed39484470c0e8f17b6bbd4014e63da",
+      "file_sha256": "21e84ffb2b4c3422c6e8ce675e36f442407eb15c99c63bf22762f3c9f650b9f2",
+      "rgb_pixel_sha256": "89930a64428670443bc83c43a4690df9fff9435efd6b6f54709e53ba563192d4"
+    },
+    {
+      "group": "long_sleeve_outerwear",
+      "source_image": "/workspace/fashion_data/raw/train/train/image/072170.jpg",
+      "annotation_ref": "item1",
+      "annotation_sha256": "c86caa663e76a79ceec97b8709fee3bd5a3c39de512b63e0815386c6e028a412",
+      "file_sha256": "faf499321e8a7c00d7407ac3e180e85f19071f8811957f07000a9892ac9673d0",
+      "rgb_pixel_sha256": "9eda31d220f7affe20f480b5383b6405f5b7a1f8b79feee9a25850cb722169f2"
+    },
+    {
+      "group": "long_sleeve_outerwear",
+      "source_image": "/workspace/fashion_data/raw/train/train/image/139591.jpg",
+      "annotation_ref": "item1",
+      "annotation_sha256": "b650f107cbf56dc29ee4d4f5bfabb10e8b0e406a229e2ebf6730d94a9ca2f2e6",
+      "file_sha256": "468906dc7ed1a74d7d30adf9d86f82439c9b24679f1ed9ad821b641d87883cb7",
+      "rgb_pixel_sha256": "4ff0fe96f7b65b6bda3599775ad56be88f35a26ef5df036cf7fd27b2d4a5d9f5"
+    },
+    {
+      "group": "long_sleeve_outerwear",
+      "source_image": "/workspace/fashion_data/raw/train/train/image/121260.jpg",
+      "annotation_ref": "item2",
+      "annotation_sha256": "afa2846ffe175ff108132b72607b01edcd7dc88cc46014b1e358f036776a996d",
+      "file_sha256": "359c7c098cdb724de584d768582ab931222ba0eee5b990b946f1ea5015d26738",
+      "rgb_pixel_sha256": "2008cdccb0976eb73c6abb2c54ba27d109be58d8e7bfb6e7b491fd06cc023798"
+    },
+    {
+      "group": "long_sleeve_outerwear",
+      "source_image": "/workspace/fashion_data/raw/train/train/image/042208.jpg",
+      "annotation_ref": "item1",
+      "annotation_sha256": "b0636206f99a6071affb328fb64b54c3cfe36577f2d359d95bc551e75c87a688",
+      "file_sha256": "12da620a7fd6f5f978876c8b876af836e85409f00cc9d15a202e0e9aa37efcc7",
+      "rgb_pixel_sha256": "ae7dbb8499c79dbb137b6027c3ce70957c5b3408e657ec6e3f38532a4746466e"
+    },
+    {
+      "group": "long_sleeve_outerwear",
+      "source_image": "/workspace/fashion_data/raw/train/train/image/129981.jpg",
+      "annotation_ref": "item1",
+      "annotation_sha256": "3c169b57b29bcb1adbc8da8065186af394e3602c9df6dac9b50f083d30de7d63",
+      "file_sha256": "2e15ee98d7e703dbfe747523e8dec1dbbd86e0d76bbcaa329bd800755cedd2cf",
+      "rgb_pixel_sha256": "c3400a725f481c23757b312c9460578d703935385a08e3a6fa5eaa5846083bb2"
+    },
+    {
+      "group": "long_sleeve_outerwear",
+      "source_image": "/workspace/fashion_data/raw/train/train/image/147037.jpg",
+      "annotation_ref": "item1",
+      "annotation_sha256": "2dbf5da5c8a4e34219a0b0e223a651565213f5cf1412c929a7257826b64b843c",
+      "file_sha256": "c72fd9d927157fd04312d15c1fe902f2c576de7a28ea7c9cf16aeaaaca6c4bb9",
+      "rgb_pixel_sha256": "f34a2434e58577ae2155aaeb35fe19a9efbe3d2fc072163f5331de2781147514"
+    },
+    {
+      "group": "long_sleeve_outerwear",
+      "source_image": "/workspace/fashion_data/raw/train/train/image/120343.jpg",
+      "annotation_ref": "item1",
+      "annotation_sha256": "0f35d3e059db6b556c9794dd573be1be66a916470199ad9b1382867d0043a68e",
+      "file_sha256": "8d4e1d21f8fe015b20847aa8b376df2704f5f076816fd55cf4346487442a76e5",
+      "rgb_pixel_sha256": "b83984d7c1d5bb95081b33f8f09d4dec6fdfc085a017eecf02bd5497466de296"
+    },
+    {
+      "group": "long_sleeve_outerwear",
+      "source_image": "/workspace/fashion_data/raw/train/train/image/002664.jpg",
+      "annotation_ref": "item1",
+      "annotation_sha256": "fdb8b3fb76ec98710f28dc5444100eb1f537bfefaeb15043111e3cc1d22e2101",
+      "file_sha256": "1084509f73fc8444f893eace012e21898a16f7d2dcca8cb07949810b1a8fa6f3",
+      "rgb_pixel_sha256": "1d0a28afb7d465a856be8e1955e7c0876ccbfbcb0fd7ac3a7e618820c509412e"
+    },
+    {
+      "group": "long_sleeve_outerwear",
+      "source_image": "/workspace/fashion_data/raw/train/train/image/082099.jpg",
+      "annotation_ref": "item1",
+      "annotation_sha256": "19915701d51231b326439a66f45c143f74d7f58e37fdf62fa1dd7f279f7e0948",
+      "file_sha256": "cb6e4a2c9aab43e5fd6c051426d481c0a8190ff3d9cec44425c1f915c8a4aa75",
+      "rgb_pixel_sha256": "3b10b8c869e723b757b47c8425a7a05aa3244ed6d3bb12c44a095e44fd622832"
+    },
+    {
+      "group": "long_sleeve_outerwear",
+      "source_image": "/workspace/fashion_data/raw/train/train/image/116285.jpg",
+      "annotation_ref": "item2",
+      "annotation_sha256": "4e1a4bd30f60261987a69014e5d1be3bf03a762ff3536cfaa2dc59bb9ef8190d",
+      "file_sha256": "e4ccca38e9c365ff12cb372320a856547b2d27fbae4f49358da483aabcd01daf",
+      "rgb_pixel_sha256": "da932511d1c5345f5f8a8d12f2d8f396a3f0ee65e7d6c272d0867b1af81877d4"
+    },
+    {
+      "group": "long_sleeve_outerwear",
+      "source_image": "/workspace/fashion_data/raw/train/train/image/132610.jpg",
+      "annotation_ref": "item1",
+      "annotation_sha256": "4fcc8492fdd57ebe852f74870a25931505062ba500a56090b1e2a4830b03b37a",
+      "file_sha256": "f6c6bb5580c4cc3d588fb2470de84d34cc55f065f2e18b5c487baf900a843862",
+      "rgb_pixel_sha256": "09baf285e515070db27300bb65293dda482ff291b2f6e492a421713a83b3cb67"
+    },
+    {
+      "group": "long_sleeve_outerwear",
+      "source_image": "/workspace/fashion_data/raw/train/train/image/073616.jpg",
+      "annotation_ref": "item1",
+      "annotation_sha256": "3f38cc02e52e7b73486fa6cac3d85a5c59cfb7d24b62e12d8abe96b829f94014",
+      "file_sha256": "23de533a79db8e1a97b78d120b94d83ef0ebd4f66ee0210a69924cc4a35de67b",
+      "rgb_pixel_sha256": "43fcfde050d016ada6f98d0fe4f5f35181b905d4fdb62276a0c4ab3e2021c489"
+    },
+    {
+      "group": "long_sleeve_outerwear",
+      "source_image": "/workspace/fashion_data/raw/train/train/image/141234.jpg",
+      "annotation_ref": "item1",
+      "annotation_sha256": "7044e5fff49b1c1cd1f6a4d1c852cc3f245c70ff13927bb7232ea9a525e6585b",
+      "file_sha256": "5034590e0df9dba00f96952131c4cccba1c613db0c7ca2213c4f04a04362d78b",
+      "rgb_pixel_sha256": "0a6cea9fb36c342bc9c1d406ffe495adf06a10c41a4e2bc93a4c5474ec7a0d3d"
+    },
+    {
+      "group": "long_sleeve_outerwear",
+      "source_image": "/workspace/fashion_data/raw/train/train/image/086266.jpg",
+      "annotation_ref": "item1",
+      "annotation_sha256": "9316fc71d45aaf8b7345b12c974802e8bfb6d6672c426b6b8b40fa5ffe909e09",
+      "file_sha256": "a5fec347b7114c0af7d549f5595f6c42c6ffb4407875378db1fbca27c77229f3",
+      "rgb_pixel_sha256": "f90603c82dd8295d22267337939df9e2f7bad3f3368c37a8d785d8aa32d7c916"
+    },
+    {
+      "group": "long_sleeve_outerwear",
+      "source_image": "/workspace/fashion_data/raw/train/train/image/082122.jpg",
+      "annotation_ref": "item1",
+      "annotation_sha256": "6bb4e109c866d1af9d4efc06a5decb30ebaa047ae97bdf3b432d9649b777ca34",
+      "file_sha256": "48547e8857c45b23899efb063e4ce3db58c29fc9f5279c81180a6ab096fd10be",
+      "rgb_pixel_sha256": "642a45a13768239d327d6934592c27a640b54dd21b108836c7295592295e63a0"
+    },
+    {
+      "group": "shorts",
+      "source_image": "/workspace/fashion_data/raw/train/train/image/108969.jpg",
+      "annotation_ref": "item2",
+      "annotation_sha256": "a78e0dc996b909b7908675c45b68f750f031134bd8d499e59cc1c9c7f92586b5",
+      "file_sha256": "bce65589c0a593d21936e36503bf6bebe5fd2470578c8950c543698f57ca4cce",
+      "rgb_pixel_sha256": "ad9dc664cc0254558392546365d26a3c8ffdcfbfa07eb1f45370cad8064098e9"
+    },
+    {
+      "group": "shorts",
+      "source_image": "/workspace/fashion_data/raw/train/train/image/073712.jpg",
+      "annotation_ref": "item2",
+      "annotation_sha256": "e2c43f17733727e1574f5ba60c807cd91adfa3d764f468d41e9c29ccaa258234",
+      "file_sha256": "58fd5d80d7b731a0501a1f11da0bbb975a08ae8d7ab3840b54831cfa0de9261e",
+      "rgb_pixel_sha256": "053d8e0d50956e0851ad7229ae2b3453afc8b6364441ac9f3ee6cccb73cb9d45"
+    },
+    {
+      "group": "shorts",
+      "source_image": "/workspace/fashion_data/raw/train/train/image/013520.jpg",
+      "annotation_ref": "item2",
+      "annotation_sha256": "a0ba50b21f2ae4f6a6e13d006af5da4d1cc61cfdd56431f284d17261f94e391c",
+      "file_sha256": "a745a1c56dcb914d4004540ff0bca09fab1290a6c028cbf67c496d3c2d86c58d",
+      "rgb_pixel_sha256": "78b10e9590428b5c7fd84fe09057e553188c8fc864e630381abfe9545b58c8b8"
+    },
+    {
+      "group": "shorts",
+      "source_image": "/workspace/fashion_data/raw/train/train/image/123092.jpg",
+      "annotation_ref": "item2",
+      "annotation_sha256": "bd048d3daf8463c6a6d61efcccdcc8b3aa78e20b8c690e1991400f9b7fff7fc2",
+      "file_sha256": "5cdcea1f958fd2a2f9406dc2338a21d297f15f21b7c0028b547e053f6273926d",
+      "rgb_pixel_sha256": "c817ee93988f505729c9d611eb71bb771151fa1194521150faf819bc0b7957c4"
+    },
+    {
+      "group": "shorts",
+      "source_image": "/workspace/fashion_data/raw/train/train/image/168114.jpg",
+      "annotation_ref": "item2",
+      "annotation_sha256": "ae04651eb5acd0f48ea5bcd27863cb65c4103b1271b10733aa626d22cb9fdc38",
+      "file_sha256": "e42ff200eb78079c485dc7675a79fc1f359a7081f077c7a0c7a34a2b7ee6aec0",
+      "rgb_pixel_sha256": "f1b8bf19c60365896bdc752da4fc6709c161c8a84458c8b960c88f4dbf5144c2"
+    },
+    {
+      "group": "shorts",
+      "source_image": "/workspace/fashion_data/raw/train/train/image/052977.jpg",
+      "annotation_ref": "item2",
+      "annotation_sha256": "6436acb80ad1a6d1e10f12fb37908c14eb7e5595b7300668c7eea5a377beed47",
+      "file_sha256": "21b2f5dc04de5c2306439f51824f9d17028b54401b85239e43d1ad54554964ea",
+      "rgb_pixel_sha256": "de10fbb14de1046bd455f6b11a55ecb0415493a5e915c0dc2ddbe23b95ec9429"
+    },
+    {
+      "group": "shorts",
+      "source_image": "/workspace/fashion_data/raw/train/train/image/102848.jpg",
+      "annotation_ref": "item2",
+      "annotation_sha256": "423863ad832391b2015cf110aef95b3e44e04e761f6125493741e7813636053d",
+      "file_sha256": "80e5ef8bc1b6013c2edc97e734277535d8b294230fb134a11660b1e8adb41a61",
+      "rgb_pixel_sha256": "00c641245939c403560d5d83b7d3440b8e30423295ce6fd5bae79638f00c6ca8"
+    },
+    {
+      "group": "shorts",
+      "source_image": "/workspace/fashion_data/raw/train/train/image/111447.jpg",
+      "annotation_ref": "item2",
+      "annotation_sha256": "3a0f7498fa7c4a6ed5d1bd1a01c28bd0ebd3c9d58b808ffd8658180538830d4f",
+      "file_sha256": "7d74a1c483cb500f5ee606099216dc1f7937b8c94cb5887a76d028525c5d5726",
+      "rgb_pixel_sha256": "ebfda0d5a0057358d82ab8e778abd5e0cddf40e8c2f0b444d87322d2bb4f9579"
+    },
+    {
+      "group": "shorts",
+      "source_image": "/workspace/fashion_data/raw/train/train/image/105219.jpg",
+      "annotation_ref": "item2",
+      "annotation_sha256": "ed5edd203019edcfcb41d129785dd8aadd9be74b512f5f871ed667bb879c26df",
+      "file_sha256": "987aa5dcd862b406a3addc1f57c32e7f23decd087662c3c1cb78bef8de026d85",
+      "rgb_pixel_sha256": "bcad310b8ae9f0a9e2fc55b7eb0b3517e4a956ccb2921e7e99c261c751ca59d5"
+    },
+    {
+      "group": "shorts",
+      "source_image": "/workspace/fashion_data/raw/train/train/image/128430.jpg",
+      "annotation_ref": "item2",
+      "annotation_sha256": "3556dd0d2a5d723c867399ac691fddcf8b0969c8c05f6c040dddedbbf5dab82c",
+      "file_sha256": "12a6232944482db1fb0f559fa21d5b5166934120109565bc71cb45a3cc73732c",
+      "rgb_pixel_sha256": "6ec6ed0bd43b873018c5076e2ada48d2e064e4ad5f7d1a6d4bd450e09b15e2b4"
+    },
+    {
+      "group": "shorts",
+      "source_image": "/workspace/fashion_data/raw/train/train/image/168983.jpg",
+      "annotation_ref": "item2",
+      "annotation_sha256": "1cae534eabd34c6e1bf7ba796635045a38a23ce6fdc3b1775d9b88a915ee893d",
+      "file_sha256": "393f6aeab745e965fb680949699374a2e1eefcdbf12b224b1e36374c548abb1c",
+      "rgb_pixel_sha256": "98db799c691a81d60cee1c0024a95caec5857f6bfbe24e8d26472fb5cacd463e"
+    },
+    {
+      "group": "shorts",
+      "source_image": "/workspace/fashion_data/raw/train/train/image/056207.jpg",
+      "annotation_ref": "item2",
+      "annotation_sha256": "78a44f74ea6f3300d0a871b31887915e74859fc56aeb9af3dfef1addd82b6c91",
+      "file_sha256": "ea2d575fa66e669436039c89f3a17289aec84a851918c10038514ae2760d51c9",
+      "rgb_pixel_sha256": "18e503912e0711ea9b9ef2d6475cecc9d5e3dd752d0088e83129dcbad9d5c8bc"
+    },
+    {
+      "group": "shorts",
+      "source_image": "/workspace/fashion_data/raw/train/train/image/054686.jpg",
+      "annotation_ref": "item2",
+      "annotation_sha256": "a8945c90426be74250ed0fcfd98b400bc031da22d6fe102a6d4b2db916900b49",
+      "file_sha256": "82947de7bd8db50667ad391555e783a5a1ddce690d94d742d1e0c58c43a09bb2",
+      "rgb_pixel_sha256": "e8ad0ea1eb63731324c85c0a9b41067f8d0fffcd7ab5a6759473ac0ce925b220"
+    },
+    {
+      "group": "shorts",
+      "source_image": "/workspace/fashion_data/raw/train/train/image/121040.jpg",
+      "annotation_ref": "item2",
+      "annotation_sha256": "9d77255ad98c4c613aea7bd19e47bc5e4df152092686c7ffe049bb166f3f198a",
+      "file_sha256": "e43506b5d81d81171251b10efb53be51065616bcf05db184197c5d2b1753dcd8",
+      "rgb_pixel_sha256": "dc267768789fdd93510d5cd1b94b7aa77fa02e97051f8b2479be1ba73be5999c"
+    },
+    {
+      "group": "shorts",
+      "source_image": "/workspace/fashion_data/raw/train/train/image/119117.jpg",
+      "annotation_ref": "item2",
+      "annotation_sha256": "946f9c02f4abc44ea1d35833ee4e6db13f446ebb806b6fc9c438a4dcf01fbf7a",
+      "file_sha256": "c355da7f3c14c529f65322111c769059608edbe066e4e09ea2d1b4898d31a15d",
+      "rgb_pixel_sha256": "9148d79d0440d56b29ce762410574352871170a8159ba7e7016a0b5db2ff2cab"
+    },
+    {
+      "group": "shorts",
+      "source_image": "/workspace/fashion_data/raw/train/train/image/190351.jpg",
+      "annotation_ref": "item2",
+      "annotation_sha256": "c44ac546d2b230ed42fa74ff3447d254457d72012fa07af189b713eef7f22211",
+      "file_sha256": "433b98c3afae49745ccf4dd5eb53c32af53112e2d0de09cc0f26ce3de7586d56",
+      "rgb_pixel_sha256": "b1a43808faa80eb3f20b7687320552759650a59169d57dbe47eb0bce698ae327"
+    },
+    {
+      "group": "shorts",
+      "source_image": "/workspace/fashion_data/raw/train/train/image/061447.jpg",
+      "annotation_ref": "item1",
+      "annotation_sha256": "f09619498fb47738499145620c25c372cd2e3244c6e14c508401f51785efcf08",
+      "file_sha256": "ce85963ec99fd21b5305fe1239edb26ca4926079f88e4416fbd9f3842daa7ebb",
+      "rgb_pixel_sha256": "b5523861c798d88f51dc2b9477b03cf5dd6aa3d8cdce33264db4be39e3be57ae"
+    },
+    {
+      "group": "shorts",
+      "source_image": "/workspace/fashion_data/raw/train/train/image/033178.jpg",
+      "annotation_ref": "item2",
+      "annotation_sha256": "66df582bd45631d9c0a93ec146bdd3eae01c9c6245f3ed0f02b3e0ccd3e78e12",
+      "file_sha256": "58f622ae2fc17d2a56ac98cce5cc1ec7498ff39ed08386902800fe17f772935a",
+      "rgb_pixel_sha256": "79b9a58c6dfe3e5aa45d8109ee743c36796cde1d9ac7bbaf24fa1829bb8828c8"
+    },
+    {
+      "group": "shorts",
+      "source_image": "/workspace/fashion_data/raw/train/train/image/008881.jpg",
+      "annotation_ref": "item2",
+      "annotation_sha256": "80f1ffdf259addfb2e8abfedd34be0046108528bbe5693ca5fad9ebe50988a3a",
+      "file_sha256": "63a1f51c61a01f408e4abe58e1932cbcb9beac32431cfce41afb70f823f93043",
+      "rgb_pixel_sha256": "e45520a7f3573c8a8a9fed764c53340fd00c61a45758b9369b321d4413802259"
+    },
+    {
+      "group": "shorts",
+      "source_image": "/workspace/fashion_data/raw/train/train/image/156571.jpg",
+      "annotation_ref": "item1",
+      "annotation_sha256": "034786277673e0c1ae3ff6fa98394ca1b04865ddb50a03579adda83228ec97bb",
+      "file_sha256": "512302bcf5289242227daa999fa5821aa1e8d7adfbc9e95c42f58c7426184380",
+      "rgb_pixel_sha256": "f2c62256b872886ed1bed901f3e622e04a75bf47f88968df58bc87057d3dca71"
+    },
+    {
+      "group": "shorts",
+      "source_image": "/workspace/fashion_data/raw/train/train/image/187176.jpg",
+      "annotation_ref": "item2",
+      "annotation_sha256": "39e87f85b0f8bf02c3af7bf6a6a9857a076bb62823b19eb7ec75a1c82414948b",
+      "file_sha256": "1c87994dfb2c0197d69c09d996c756e369cd1edbe908568415ef5330d14a84d3",
+      "rgb_pixel_sha256": "852371d1a4588becb4d2bdd4a38c3b72aa804cdf59aa7f20731713b6975ae129"
+    },
+    {
+      "group": "shorts",
+      "source_image": "/workspace/fashion_data/raw/train/train/image/087162.jpg",
+      "annotation_ref": "item2",
+      "annotation_sha256": "9d803227601f7931c59527ab2796c6a22072c2eb84e823e9ecaed06e2518be23",
+      "file_sha256": "7276d06d9ab861713fcbf7d673b1da3fb1fe6d80e072f32304edb01d923368be",
+      "rgb_pixel_sha256": "8ab3e1d72c3f907291e22b221b8de03c99d998b9b5eaab75f1e2560e2988f9e6"
+    },
+    {
+      "group": "shorts",
+      "source_image": "/workspace/fashion_data/raw/train/train/image/142171.jpg",
+      "annotation_ref": "item1",
+      "annotation_sha256": "0909ada749724cc4db4e5eecc7f236882bc3bbf6b3f67ab49d56f31e4b894220",
+      "file_sha256": "bc828d8ebb3ab4f59233a142b6e0deda843593d9148e226f1f69a7828078367b",
+      "rgb_pixel_sha256": "1d7ec99661fd1bda96bf22ab749c597ee0e44794b7897e9b820356554de1d682"
+    },
+    {
+      "group": "shorts",
+      "source_image": "/workspace/fashion_data/raw/train/train/image/013178.jpg",
+      "annotation_ref": "item1",
+      "annotation_sha256": "da28b2109254dfb08a097e2b93307ccb580ec5aa887f08aaab0a7384f0c7ecdf",
+      "file_sha256": "75d97b70fe655325f2e869b8d7fe7caf643f4fbb7890b5888dfbf46c146c47e4",
+      "rgb_pixel_sha256": "b2e7a45f09886fc18fe2a3775ea828cb13f12c95454017fa9e053e32f4b44102"
+    },
+    {
+      "group": "shorts",
+      "source_image": "/workspace/fashion_data/raw/train/train/image/125830.jpg",
+      "annotation_ref": "item2",
+      "annotation_sha256": "3cf024f8539e60b39eccc914151c2c89d9dabd36978d9fff331c1f1df14937c0",
+      "file_sha256": "a0641e8ccf1fbd8695af833d7b5f5d5525a710ffc9617195ade5eeff8e9443b9",
+      "rgb_pixel_sha256": "5aecea7cdb6e21b898c07d502bf15a2281fa31967ffa5ed98be7537afb2201b5"
+    },
+    {
+      "group": "shorts",
+      "source_image": "/workspace/fashion_data/raw/train/train/image/046476.jpg",
+      "annotation_ref": "item2",
+      "annotation_sha256": "7a1d487c2fe942c82e22bd31756c1ee60716a986f30cd75a65143c8b5c7dbfec",
+      "file_sha256": "91c591b23cff37988a9ba7e9acbbfec5f84b9233692b14085c3421adc19cdd70",
+      "rgb_pixel_sha256": "a201f1a73fc78ef56f904bac6f462b1964cec648dcf7e694c91ee1c5bcfd0df3"
+    },
+    {
+      "group": "shorts",
+      "source_image": "/workspace/fashion_data/raw/train/train/image/136470.jpg",
+      "annotation_ref": "item2",
+      "annotation_sha256": "f00aff59e73e50fc033db849237ea1668000bce3dfc2520069f693ef75ae5912",
+      "file_sha256": "f62112f417dcf217f0ca511bdd0237258507a19ad0b3899d5ecc5f9ef152426d",
+      "rgb_pixel_sha256": "a28605c750e6ad1d9df6e7d8a1087ccb763add01f8abf598d7ad7d0070f31da9"
+    },
+    {
+      "group": "shorts",
+      "source_image": "/workspace/fashion_data/raw/train/train/image/082966.jpg",
+      "annotation_ref": "item2",
+      "annotation_sha256": "9052048ff5451d8d5aa48dab9ab3831cc497c97b8865e91cfd1cb178bc373cac",
+      "file_sha256": "a2d2d1dbd91dea36c8290728b6d5762eacf3929a76551f698e0cc63b3df0fe6f",
+      "rgb_pixel_sha256": "20db7aae887138be45e0a44ec2f8e30927af53c9f1a3efc9ac0c9315aa4f8d48"
+    },
+    {
+      "group": "shorts",
+      "source_image": "/workspace/fashion_data/raw/train/train/image/111685.jpg",
+      "annotation_ref": "item2",
+      "annotation_sha256": "5811f07b2efdc273066b7405621b2e1bb25cd8f9d016f57d7a5d2c41dbd9b2ac",
+      "file_sha256": "615fd6a1a56f6aaa59a31068fd009baf83f9c66c83d0a01bdd012c3e7ad8605c",
+      "rgb_pixel_sha256": "7c28a88df24a32dec537b7065eefdd1e0cd1aec7cbbe1a0467131ef80cf5d288"
+    },
+    {
+      "group": "shorts",
+      "source_image": "/workspace/fashion_data/raw/train/train/image/033184.jpg",
+      "annotation_ref": "item2",
+      "annotation_sha256": "14347c417f679120295f49f7465ddab2b346432b70b44164efae45f3284081c8",
+      "file_sha256": "86c454ebd4d3f0c4000f7f75773c125186ba6027b24e374f71eb815635ae4781",
+      "rgb_pixel_sha256": "f1d7a3a01cd3a16d56fb65c5152eaff7ed07fcb57c5aeadebb70aa11ae80e784"
+    },
+    {
+      "group": "shorts",
+      "source_image": "/workspace/fashion_data/raw/train/train/image/052357.jpg",
+      "annotation_ref": "item2",
+      "annotation_sha256": "24581008cdbbe433c6069ee7836898bc96d8d3229e1d99c49e503a05cc454218",
+      "file_sha256": "c9a1a4b896f6cac357423867f25846d4ce87999d9d2d32dcf7cbd38d25767b33",
+      "rgb_pixel_sha256": "3c754b0db1d84825c88e29d244aedf834d91234d4ce482ace34f60daf827008d"
+    },
+    {
+      "group": "shorts",
+      "source_image": "/workspace/fashion_data/raw/train/train/image/114520.jpg",
+      "annotation_ref": "item1",
+      "annotation_sha256": "ff6442d567db50bfa6be67ff4b7cdcec888af8b185331e404a8438bdedc88a55",
+      "file_sha256": "8c52210cc74abbe38e8a151bda3ef0a13544c700c31ded02b93a9862e9ccd590",
+      "rgb_pixel_sha256": "d9b1d2cdd0792046645a8df96adb2289a0da771cb74de6da348cc5f451e68058"
+    },
+    {
+      "group": "shorts",
+      "source_image": "/workspace/fashion_data/raw/train/train/image/126249.jpg",
+      "annotation_ref": "item1",
+      "annotation_sha256": "24b18e396dba04e9b6cbb7b1b3edbfc73f72fda880bdea750f46d81704400e27",
+      "file_sha256": "ce58bc9649f9d06db4b6b920f69d3772dd792441caaed283a1f3e712be1072f9",
+      "rgb_pixel_sha256": "6101830edb7d43ef65a81b087af3951f03bd5c53140586e3c30d2bb3acf5730f"
+    },
+    {
+      "group": "shorts",
+      "source_image": "/workspace/fashion_data/raw/train/train/image/054528.jpg",
+      "annotation_ref": "item2",
+      "annotation_sha256": "115fcfc605972ac0b8bcbb7f6101b7f191fa5d15d7e387f070b05da32b974456",
+      "file_sha256": "e6f20a1b82c74181ea57c2007c7fbb94a1518e65fa28b529ac157f1a3a2b2cc7",
+      "rgb_pixel_sha256": "bc54b5f18ad297fc22659e57d209037f3d2a81953b05bddfb6f89189166a081c"
+    },
+    {
+      "group": "shorts",
+      "source_image": "/workspace/fashion_data/raw/train/train/image/108383.jpg",
+      "annotation_ref": "item2",
+      "annotation_sha256": "78353811e63222b3f2c1e2aaedeb3def92b2aef5e33ca045d39e24cde5bb7d01",
+      "file_sha256": "360b864a23ba78f807b1f5ce1e60d32712c6de6b3808db51e4159df9f8c03a1a",
+      "rgb_pixel_sha256": "eabfb71d84709b7f7429c7d75c0f2f8dc85f7893d6b7e3d6abf6c1a624162d50"
+    },
+    {
+      "group": "shorts",
+      "source_image": "/workspace/fashion_data/raw/train/train/image/126682.jpg",
+      "annotation_ref": "item2",
+      "annotation_sha256": "3f8f22c1a294f7d375fe13ad4795c00fdbd5ca7a36d69123e956b4acef8ed583",
+      "file_sha256": "f01df6ded5a640ea8719f6d77e7e77e05fa37aa681e785f4c4b1b1b7889ecec7",
+      "rgb_pixel_sha256": "3fd92d310e25e0d177a9a6bb951685896ed2fa28c09573404b4995cf84f35064"
+    },
+    {
+      "group": "shorts",
+      "source_image": "/workspace/fashion_data/raw/train/train/image/058060.jpg",
+      "annotation_ref": "item2",
+      "annotation_sha256": "9a0a38d3042cd351e30a17db3c7427ea5878c2d75a86945c42905068eec03925",
+      "file_sha256": "32486f85a17e3150ea267a5e383287cf48ef4db9e2daec31248d29f067c8a3d2",
+      "rgb_pixel_sha256": "926fbc5ccc22451af46fb9cb10d916002d559d0d6407d9770841dcdbbf2d0370"
+    },
+    {
+      "group": "shorts",
+      "source_image": "/workspace/fashion_data/raw/train/train/image/123257.jpg",
+      "annotation_ref": "item2",
+      "annotation_sha256": "5c7e7a560440df6704a87a06c7cf29f0c4371a7e2fcace599edaa642915be0ca",
+      "file_sha256": "ed066f78a1ea6b126e5b3be259776ce985f416bff2f7d9ef1a27478b70372759",
+      "rgb_pixel_sha256": "e47ca37d8a7594301975abe99e2171916fbdb869980430be1d95031f840b4969"
+    },
+    {
+      "group": "shorts",
+      "source_image": "/workspace/fashion_data/raw/train/train/image/126759.jpg",
+      "annotation_ref": "item2",
+      "annotation_sha256": "f36d29473e46c005b49080d3889095bd2d0db31a4494cb0eea7a9fd571ac0fa7",
+      "file_sha256": "b56667aa80a7f6c52c34f84ffa251f0ad7c79f98618b138866a3d6950c4b0ab4",
+      "rgb_pixel_sha256": "2d3602596522133d9aaf50532b015778183032956a0c538094f9f2da7c1840d6"
+    },
+    {
+      "group": "shorts",
+      "source_image": "/workspace/fashion_data/raw/train/train/image/080325.jpg",
+      "annotation_ref": "item2",
+      "annotation_sha256": "92c1d3be70080add78d9e39a54dcc54a0242b4adc92c0b1bbd8615306c586806",
+      "file_sha256": "9cd09ad6078faa67f206c78e5460e2c6c582da3fe459913f61a1a58eafda7456",
+      "rgb_pixel_sha256": "1a082a291ea1dbc8e6a36d8c30d505adfc3422729e2b2149f54ecdd8d1ac0b51"
+    },
+    {
+      "group": "shorts",
+      "source_image": "/workspace/fashion_data/raw/train/train/image/050443.jpg",
+      "annotation_ref": "item2",
+      "annotation_sha256": "3a7424a4dbfd763d27f6231215e61263a9352a3bec75ef456aa62f388de6d9ca",
+      "file_sha256": "450f00e4780682de7a28af16469182bb0720ac09fd2342b4ec52af91066025da",
+      "rgb_pixel_sha256": "1a8f3a926c0885f66c3417bb63bf852798ace554fd2f6d44ff796c187e76190e"
+    },
+    {
+      "group": "shorts",
+      "source_image": "/workspace/fashion_data/raw/train/train/image/188028.jpg",
+      "annotation_ref": "item2",
+      "annotation_sha256": "12db582623bb765d43527564c756c1a92b471d4fa7a6bcd98a21341bd4840d7b",
+      "file_sha256": "0b842c77a6511f9413f1dd85ccba356c451e9bff86e9d013f7535401561e8266",
+      "rgb_pixel_sha256": "99fff702f3452bce62ef209db8681a06ec012d80758c6d6a0ef91805f7b88f80"
+    },
+    {
+      "group": "shorts",
+      "source_image": "/workspace/fashion_data/raw/train/train/image/011859.jpg",
+      "annotation_ref": "item1",
+      "annotation_sha256": "2eb95720d4e7e872db0a365b41aeb724218677b305d026b7a0d07ddcb372643b",
+      "file_sha256": "00cb625613e31c454f7bd59bd11566270635c23ad84caceeaea5b22e080c6198",
+      "rgb_pixel_sha256": "fb36c983ee653d377c113b5a293fceaf82a27632647b753f815f64c8760b2bb6"
+    },
+    {
+      "group": "shorts",
+      "source_image": "/workspace/fashion_data/raw/train/train/image/175081.jpg",
+      "annotation_ref": "item1",
+      "annotation_sha256": "57940f064c1d0a8dd172fa92ef160131c4ad83a6d36eb3819b7d6c738bbe2b96",
+      "file_sha256": "37b741a29840dd1e67ca55f786ee61b52369d9562f6aef4826aabc6969743503",
+      "rgb_pixel_sha256": "3992f99ea8cc6551d5af2d1eb4e4a16b6a8aa500618d5cbb850fad71fce8cb71"
+    },
+    {
+      "group": "shorts",
+      "source_image": "/workspace/fashion_data/raw/train/train/image/183892.jpg",
+      "annotation_ref": "item3",
+      "annotation_sha256": "180901ab4e5a6efb1d0dcc94d7a8baf186deaf0b9a34345b236240425fa44f7e",
+      "file_sha256": "5374f0d60a9e61004309bca1ca1ac80d71cfa1767bcdb6d732a7ab89e4dc0402",
+      "rgb_pixel_sha256": "759cde006f4ecd458f5f4817c0a98dae21addd9d98e3dc7d99ea392fec796a7b"
+    },
+    {
+      "group": "shorts",
+      "source_image": "/workspace/fashion_data/raw/train/train/image/120931.jpg",
+      "annotation_ref": "item1",
+      "annotation_sha256": "8140e5f44e60499f5861d9ccb8624eb16556e8b4139cea2831f17ad5b3817607",
+      "file_sha256": "a11faac0bf67a12e8ac286bee5ea53146d2ef6f2f339e7607d7ba9c27ed5f020",
+      "rgb_pixel_sha256": "d820e572d9ebdf7ea40fc87c13e6fa94002f46ae59f53f07e36de59d8cd32278"
+    },
+    {
+      "group": "shorts",
+      "source_image": "/workspace/fashion_data/raw/train/train/image/144896.jpg",
+      "annotation_ref": "item2",
+      "annotation_sha256": "32f7e383ae4f981877faeadb25939eca2cb8c31fc4528e0f6bc691039381dbeb",
+      "file_sha256": "3e54c86d07a74ef6167077b77ebacee132fd37b81b9e7da1c9078e5b4dc80dea",
+      "rgb_pixel_sha256": "e7e8710695624569219ee449c08fbba056b836d83dc3f8ced6d576421cc46748"
+    },
+    {
+      "group": "shorts",
+      "source_image": "/workspace/fashion_data/raw/train/train/image/101451.jpg",
+      "annotation_ref": "item2",
+      "annotation_sha256": "912fbe2edeb413c6adcc9b0d21fb9bcbbd89286a56ae0f0dc6a8bde53506a49e",
+      "file_sha256": "e407efc7719442679b97b49bee3b239de12f6814fe3c06a6455efc3a6b509cc3",
+      "rgb_pixel_sha256": "b4e7c70841df77b8502d974033dd2774596003114c691fd19d1177e1bcc6deea"
+    },
+    {
+      "group": "shorts",
+      "source_image": "/workspace/fashion_data/raw/train/train/image/148490.jpg",
+      "annotation_ref": "item2",
+      "annotation_sha256": "8bb832fe7e64fb2a5b5f726969b1c3b74786160c301f6c2dd800c36ec7b46a7b",
+      "file_sha256": "0d7d5fc6ebdc27b4a35c4fe398034c5579215b74db9e8f6ce683a2e743ae004c",
+      "rgb_pixel_sha256": "28f48eebfcffea3c7d38724bd3febc88a1ac24b87f6fbb76e7e9fe1dfc6da30b"
+    },
+    {
+      "group": "shorts",
+      "source_image": "/workspace/fashion_data/raw/train/train/image/155089.jpg",
+      "annotation_ref": "item3",
+      "annotation_sha256": "0f0f799db0d03d53ffc0c6d743ce15f3739d3879a9508d22f3374274762806c9",
+      "file_sha256": "a82420c758bc5d9a7a71f781cfb5ecbb6baf3de21ad5ba0aa7a6822bf485f804",
+      "rgb_pixel_sha256": "adc10444dd8a0389970491963ee270c1a353ff69f9f0e39e552c283d95c5b421"
+    }
+  ],
+  "skipped": [],
+  "duplicate_check": "Source paths, exact file bytes and exact RGB pixels; near duplicates not certified"
+}

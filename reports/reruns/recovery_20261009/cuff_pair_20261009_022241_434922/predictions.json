@@ -1,0 +1,1763 @@
+[
+  {
+    "sample_id": "SEGTEST1_0045",
+    "draft_presence": "present",
+    "review_status": "ASSISTANT_DRAFT_PENDING_HUMAN_REVIEW",
+    "garment_match_iou": 0.5474490911276819,
+    "segment_ms": 458.4906209493056,
+    "matched_category_correct": false,
+    "all_predicted_garments": [
+      {
+        "instance_id": "pred_0001",
+        "category": "dress",
+        "bbox": [
+          83.47434997558594,
+          133.80035400390625,
+          352.04425048828125,
+          613.6932983398438
+        ],
+        "score": 0.8670286536216736,
+        "call_order": [
+          "candidate",
+          "baseline"
+        ],
+        "candidate": {
+          "prediction": {
+            "status": "detected",
+            "target_region": "cuff",
+            "model_phrase": "short sleeve cuff long sleeve cuff",
+            "score": 0.3259490728378296,
+            "bbox": [
+              100.0,
+              431.0,
+              271.0,
+              613.0
+            ],
+            "proposal_bbox": [
+              91.0,
+              427.0,
+              272.0,
+              614.0
+            ],
+            "proposal_crop_area_ratio": 0.26062216062216065,
+            "local_mask_constrained_to_proposal": true,
+            "sam_pixels_removed_outside_proposal": 0,
+            "geometry_rejections": [],
+            "sam_score": 0.9765344262123108,
+            "coordinate_space": "original_image",
+            "crop_origin": [
+              83,
+              133,
+              353,
+              614
+            ],
+            "semantic_target_correct": null,
+            "semantic_review_status": "pending",
+            "grounding_input_view": "raw_crop",
+            "semantic_note": "Strict semantic correctness needs reviewed output; no automatic manual grade is fabricated."
+          },
+          "elapsed_ms": 497.1652270760387
+        },
+        "baseline": {
+          "prediction": {
+            "status": "rejected_region_geometry",
+            "target_region": "cuff",
+            "bbox": null,
+            "rejected_proposals": [
+              {
+                "reason": "local_region_covers_whole_garment",
+                "crop_area_ratio": 1.0,
+                "proposal": {
+                  "label": "sleeve cuff",
+                  "score": 0.3590856194496155,
+                  "box": [
+                    0.5175590515136719,
+                    -0.18014690279960632,
+                    269.6703796386719,
+                    480.8194885253906
+                  ]
+                }
+              }
+            ],
+            "semantic_review_status": "pending",
+            "semantic_note": "Rejected geometry is not an absence label or a correct detection."
+          },
+          "elapsed_ms": 142.0009449357167
+        }
+      },
+      {
+        "instance_id": "pred_0002",
+        "category": "outerwear",
+        "bbox": [
+          29.835325241088867,
+          103.59146881103516,
+          378.0429382324219,
+          604.7142944335938
+        ],
+        "score": 0.4853620231151581,
+        "call_order": [
+          "baseline",
+          "candidate"
+        ],
+        "baseline": {
+          "prediction": {
+            "status": "missed",
+            "target_region": "cuff",
+            "bbox": null
+          },
+          "elapsed_ms": 134.28361900150776
+        },
+        "candidate": {
+          "prediction": {
+            "status": "detected",
+            "target_region": "cuff",
+            "model_phrase": "short sleeve cuff long sleeve cuff",
+            "score": 0.33112743496894836,
+            "bbox": [
+              116.0,
+              433.0,
+              270.0,
+              603.0
+            ],
+            "proposal_bbox": [
+              84.0,
+              425.0,
+              273.0,
+              605.0
+            ],
+            "proposal_crop_area_ratio": 0.19362549800796813,
+            "local_mask_constrained_to_proposal": true,
+            "sam_pixels_removed_outside_proposal": 0,
+            "geometry_rejections": [],
+            "sam_score": 0.9933338165283203,
+            "coordinate_space": "original_image",
+            "crop_origin": [
+              29,
+              103,
+              379,
+              605
+            ],
+            "semantic_target_correct": null,
+            "semantic_review_status": "pending",
+            "grounding_input_view": "raw_crop",
+            "semantic_note": "Strict semantic correctness needs reviewed output; no automatic manual grade is fabricated."
+          },
+          "elapsed_ms": 233.62153198104352
+        }
+      }
+    ],
+    "arms": {
+      "baseline": {
+        "prediction": {
+          "status": "missed",
+          "target_region": "cuff",
+          "bbox": null
+        },
+        "draft_best_cuff_iou": 0.0,
+        "draft_positive_bbox50_hit": false,
+        "draft_negative_false_detection": false
+      },
+      "candidate": {
+        "prediction": {
+          "status": "detected",
+          "target_region": "cuff",
+          "model_phrase": "short sleeve cuff long sleeve cuff",
+          "score": 0.33112743496894836,
+          "bbox": [
+            116.0,
+            433.0,
+            270.0,
+            603.0
+          ],
+          "proposal_bbox": [
+            84.0,
+            425.0,
+            273.0,
+            605.0
+          ],
+          "proposal_crop_area_ratio": 0.19362549800796813,
+          "local_mask_constrained_to_proposal": true,
+          "sam_pixels_removed_outside_proposal": 0,
+          "geometry_rejections": [],
+          "sam_score": 0.9933338165283203,
+          "coordinate_space": "original_image",
+          "crop_origin": [
+            29,
+            103,
+            379,
+            605
+          ],
+          "semantic_target_correct": null,
+          "semantic_review_status": "pending",
+          "grounding_input_view": "raw_crop",
+          "semantic_note": "Strict semantic correctness needs reviewed output; no automatic manual grade is fabricated."
+        },
+        "draft_best_cuff_iou": 0.0,
+        "draft_positive_bbox50_hit": false,
+        "draft_negative_false_detection": false
+      }
+    }
+  },
+  {
+    "sample_id": "SEGTEST1_0156",
+    "draft_presence": "present",
+    "review_status": "ASSISTANT_DRAFT_PENDING_HUMAN_REVIEW",
+    "garment_match_iou": 0.923226338793066,
+    "segment_ms": 85.69242397788912,
+    "matched_category_correct": true,
+    "all_predicted_garments": [
+      {
+        "instance_id": "pred_0000",
+        "category": "dress",
+        "bbox": [
+          152.148193359375,
+          50.771156311035156,
+          453.7030334472656,
+          725.196044921875
+        ],
+        "score": 0.8191270232200623,
+        "call_order": [
+          "candidate",
+          "baseline"
+        ],
+        "candidate": {
+          "prediction": {
+            "status": "rejected_region_geometry",
+            "target_region": "cuff",
+            "bbox": null,
+            "rejected_proposals": [
+              {
+                "reason": "local_region_covers_whole_garment",
+                "crop_area_ratio": 0.849112426035503,
+                "proposal": {
+                  "label": "short sleeve cuff long sleeve cuff",
+                  "score": 0.3869996964931488,
+                  "box": [
+                    0.08301877975463867,
+                    101.16028594970703,
+                    302.08197021484375,
+                    674.9796752929688
+                  ]
+                }
+              },
+              {
+                "reason": "local_region_covers_whole_garment",
+                "crop_area_ratio": 0.8505917159763313,
+                "proposal": {
+                  "label": "short sleeve cuff sleeve cuff",
+                  "score": 0.31559693813323975,
+                  "box": [
+                    0.04548752307891846,
+                    100.98148345947266,
+                    302.0442810058594,
+                    674.6543579101562
+                  ]
+                }
+              }
+            ],
+            "semantic_review_status": "pending",
+            "semantic_note": "Rejected geometry is not an absence label or a correct detection."
+          },
+          "elapsed_ms": 127.58448696695268
+        },
+        "baseline": {
+          "prediction": {
+            "status": "rejected_region_geometry",
+            "target_region": "cuff",
+            "bbox": null,
+            "rejected_proposals": [
+              {
+                "reason": "local_region_covers_whole_garment",
+                "crop_area_ratio": 0.8609467455621301,
+                "proposal": {
+                  "label": "sleeve cuff",
+                  "score": 0.516595184803009,
+                  "box": [
+                    0.08319878578186035,
+                    94.73405456542969,
+                    302.08056640625,
+                    675.5955200195312
+                  ]
+                }
+              }
+            ],
+            "semantic_review_status": "pending",
+            "semantic_note": "Rejected geometry is not an absence label or a correct detection."
+          },
+          "elapsed_ms": 115.89061701670289
+        }
+      },
+      {
+        "instance_id": "pred_0001",
+        "category": "outerwear",
+        "bbox": [
+          0.0,
+          129.1057586669922,
+          468.0,
+          724.275146484375
+        ],
+        "score": 0.7290025949478149,
+        "call_order": [
+          "baseline",
+          "candidate"
+        ],
+        "baseline": {
+          "prediction": {
+            "status": "rejected_region_geometry",
+            "target_region": "cuff",
+            "bbox": null,
+            "rejected_proposals": [
+              {
+                "reason": "local_region_covers_whole_garment",
+                "crop_area_ratio": 0.9580536912751678,
+                "proposal": {
+                  "label": "sleeve cuff",
+                  "score": 0.5825104117393494,
+                  "box": [
+                    0.02510547637939453,
+                    25.265872955322266,
+                    468.0251159667969,
+                    595.913330078125
+                  ]
+                }
+              }
+            ],
+            "semantic_review_status": "pending",
+            "semantic_note": "Rejected geometry is not an absence label or a correct detection."
+          },
+          "elapsed_ms": 127.3884188849479
+        },
+        "candidate": {
+          "prediction": {
+            "status": "rejected_region_geometry",
+            "target_region": "cuff",
+            "bbox": null,
+            "rejected_proposals": [
+              {
+                "reason": "local_region_covers_whole_garment",
+                "crop_area_ratio": 0.9563758389261745,
+                "proposal": {
+                  "label": "short sleeve cuff long sleeve cuff",
+                  "score": 0.42483800649642944,
+                  "box": [
+                    -0.001478433609008789,
+                    26.192790985107422,
+                    467.99853515625,
+                    595.484375
+                  ]
+                }
+              },
+              {
+                "reason": "local_region_covers_whole_garment",
+                "crop_area_ratio": 0.9546979865771812,
+                "proposal": {
+                  "label": "short sleeve cuff",
+                  "score": 0.3223647177219391,
+                  "box": [
+                    -0.0505596399307251,
+                    26.29973793029785,
+                    467.94927978515625,
+                    594.685546875
+                  ]
+                }
+              }
+            ],
+            "semantic_review_status": "pending",
+            "semantic_note": "Rejected geometry is not an absence label or a correct detection."
+          },
+          "elapsed_ms": 119.66222594492137
+        }
+      },
+      {
+        "instance_id": "pred_0002",
+        "category": "dress",
+        "bbox": [
+          1.7828855514526367,
+          117.28044128417969,
+          261.45831298828125,
+          720.805419921875
+        ],
+        "score": 0.6322320103645325,
+        "call_order": [
+          "candidate",
+          "baseline"
+        ],
+        "candidate": {
+          "prediction": {
+            "status": "detected",
+            "target_region": "cuff",
+            "model_phrase": "short sleeve cuff sleeve cuff",
+            "score": 0.3125991225242615,
+            "bbox": [
+              17.0,
+              691.0,
+              194.0,
+              715.0
+            ],
+            "proposal_bbox": [
+              1.0,
+              685.0,
+              262.0,
+              721.0
+            ],
+            "proposal_crop_area_ratio": 0.059602649006622516,
+            "local_mask_constrained_to_proposal": true,
+            "sam_pixels_removed_outside_proposal": 0,
+            "geometry_rejections": [
+              {
+                "reason": "local_region_covers_whole_garment",
+                "crop_area_ratio": 0.9354304635761589,
+                "proposal": {
+                  "label": "short sleeve cuff long sleeve cuff",
+                  "score": 0.3308180570602417,
+                  "box": [
+                    -0.029425710439682007,
+                    35.821327209472656,
+                    260.96551513671875,
+                    599.912353515625
+                  ]
+                }
+              }
+            ],
+            "sam_score": 0.9916883111000061,
+            "coordinate_space": "original_image",
+            "crop_origin": [
+              1,
+              117,
+              262,
+              721
+            ],
+            "semantic_target_correct": null,
+            "semantic_review_status": "pending",
+            "grounding_input_view": "raw_crop",
+            "semantic_note": "Strict semantic correctness needs reviewed output; no automatic manual grade is fabricated."
+          },
+          "elapsed_ms": 224.88065296784043
+        },
+        "baseline": {
+          "prediction": {
+            "status": "rejected_region_geometry",
+            "target_region": "cuff",
+            "bbox": null,
+            "rejected_proposals": [
+              {
+                "reason": "local_region_covers_whole_garment",
+                "crop_area_ratio": 1.0,
+                "proposal": {
+                  "label": "sleeve cuff",
+                  "score": 0.44395896792411804,
+                  "box": [
+                    -0.004869282245635986,
+                    0.6789647340774536,
+                    260.9950866699219,
+                    603.1285400390625
+                  ]
+                }
+              },
+              {
+                "reason": "local_region_covers_whole_garment",
+                "crop_area_ratio": 0.9437086092715232,
+                "proposal": {
+                  "label": "sleeve cuff",
+                  "score": 0.3236362636089325,
+                  "box": [
+                    -0.025909870862960815,
+                    33.989566802978516,
+                    260.9729919433594,
+                    602.2222290039062
+                  ]
+                }
+              }
+            ],
+            "semantic_review_status": "pending",
+            "semantic_note": "Rejected geometry is not an absence label or a correct detection."
+          },
+          "elapsed_ms": 114.95106003712863
+        }
+      }
+    ],
+    "arms": {
+      "baseline": {
+        "prediction": {
+          "status": "rejected_region_geometry",
+          "target_region": "cuff",
+          "bbox": null,
+          "rejected_proposals": [
+            {
+              "reason": "local_region_covers_whole_garment",
+              "crop_area_ratio": 0.9580536912751678,
+              "proposal": {
+                "label": "sleeve cuff",
+                "score": 0.5825104117393494,
+                "box": [
+                  0.02510547637939453,
+                  25.265872955322266,
+                  468.0251159667969,
+                  595.913330078125
+                ]
+              }
+            }
+          ],
+          "semantic_review_status": "pending",
+          "semantic_note": "Rejected geometry is not an absence label or a correct detection."
+        },
+        "draft_best_cuff_iou": 0.0,
+        "draft_positive_bbox50_hit": false,
+        "draft_negative_false_detection": false
+      },
+      "candidate": {
+        "prediction": {
+          "status": "rejected_region_geometry",
+          "target_region": "cuff",
+          "bbox": null,
+          "rejected_proposals": [
+            {
+              "reason": "local_region_covers_whole_garment",
+              "crop_area_ratio": 0.9563758389261745,
+              "proposal": {
+                "label": "short sleeve cuff long sleeve cuff",
+                "score": 0.42483800649642944,
+                "box": [
+                  -0.001478433609008789,
+                  26.192790985107422,
+                  467.99853515625,
+                  595.484375
+                ]
+              }
+            },
+            {
+              "reason": "local_region_covers_whole_garment",
+              "crop_area_ratio": 0.9546979865771812,
+              "proposal": {
+                "label": "short sleeve cuff",
+                "score": 0.3223647177219391,
+                "box": [
+                  -0.0505596399307251,
+                  26.29973793029785,
+                  467.94927978515625,
+                  594.685546875
+                ]
+              }
+            }
+          ],
+          "semantic_review_status": "pending",
+          "semantic_note": "Rejected geometry is not an absence label or a correct detection."
+        },
+        "draft_best_cuff_iou": 0.0,
+        "draft_positive_bbox50_hit": false,
+        "draft_negative_false_detection": false
+      }
+    }
+  },
+  {
+    "sample_id": "SEGTEST1_0169",
+    "draft_presence": "present",
+    "review_status": "ASSISTANT_DRAFT_PENDING_HUMAN_REVIEW",
+    "garment_match_iou": 0.7163268888443329,
+    "segment_ms": 83.62627995666116,
+    "matched_category_correct": false,
+    "all_predicted_garments": [
+      {
+        "instance_id": "pred_0000",
+        "category": "dress",
+        "bbox": [
+          50.17902755737305,
+          195.86505126953125,
+          377.9786376953125,
+          700.015380859375
+        ],
+        "score": 0.8919785618782043,
+        "call_order": [
+          "baseline",
+          "candidate"
+        ],
+        "baseline": {
+          "prediction": {
+            "status": "detected",
+            "target_region": "cuff",
+            "model_phrase": "sleeve cuff",
+            "score": 0.573760449886322,
+            "bbox": [
+              204.0,
+              401.0,
+              231.0,
+              452.0
+            ],
+            "proposal_bbox": [
+              203.0,
+              399.0,
+              232.0,
+              453.0
+            ],
+            "proposal_crop_area_ratio": 0.009435553841704424,
+            "local_mask_constrained_to_proposal": true,
+            "sam_pixels_removed_outside_proposal": 0,
+            "geometry_rejections": [],
+            "sam_score": 0.9363982081413269,
+            "coordinate_space": "original_image",
+            "crop_origin": [
+              50,
+              195,
+              378,
+              701
+            ],
+            "semantic_target_correct": null,
+            "semantic_review_status": "pending",
+            "grounding_input_view": "raw_crop",
+            "semantic_note": "Strict semantic correctness needs reviewed output; no automatic manual grade is fabricated."
+          },
+          "elapsed_ms": 248.28733899630606
+        },
+        "candidate": {
+          "prediction": {
+            "status": "detected",
+            "target_region": "cuff",
+            "model_phrase": "short sleeve cuff",
+            "score": 0.4289959669113159,
+            "bbox": [
+              204.0,
+              401.0,
+              231.0,
+              452.0
+            ],
+            "proposal_bbox": [
+              202.0,
+              398.0,
+              232.0,
+              453.0
+            ],
+            "proposal_crop_area_ratio": 0.009941675503711559,
+            "local_mask_constrained_to_proposal": true,
+            "sam_pixels_removed_outside_proposal": 0,
+            "geometry_rejections": [],
+            "sam_score": 0.9360373616218567,
+            "coordinate_space": "original_image",
+            "crop_origin": [
+              50,
+              195,
+              378,
+              701
+            ],
+            "semantic_target_correct": null,
+            "semantic_review_status": "pending",
+            "grounding_input_view": "raw_crop",
+            "semantic_note": "Strict semantic correctness needs reviewed output; no automatic manual grade is fabricated."
+          },
+          "elapsed_ms": 239.42035296931863
+        }
+      },
+      {
+        "instance_id": "pred_0001",
+        "category": "top",
+        "bbox": [
+          138.13453674316406,
+          179.1084747314453,
+          362.92132568359375,
+          535.4638061523438
+        ],
+        "score": 0.6360386610031128,
+        "call_order": [
+          "candidate",
+          "baseline"
+        ],
+        "candidate": {
+          "prediction": {
+            "status": "detected",
+            "target_region": "cuff",
+            "model_phrase": "short sleeve cuff long sleeve cuff",
+            "score": 0.38005515933036804,
+            "bbox": [
+              288.0,
+              368.0,
+              361.0,
+              428.0
+            ],
+            "proposal_bbox": [
+              286.0,
+              366.0,
+              363.0,
+              429.0
+            ],
+            "proposal_crop_area_ratio": 0.0603921568627451,
+            "local_mask_constrained_to_proposal": true,
+            "sam_pixels_removed_outside_proposal": 0,
+            "geometry_rejections": [],
+            "sam_score": 0.9670723080635071,
+            "coordinate_space": "original_image",
+            "crop_origin": [
+              138,
+              179,
+              363,
+              536
+            ],
+            "semantic_target_correct": null,
+            "semantic_review_status": "pending",
+            "grounding_input_view": "raw_crop",
+            "semantic_note": "Strict semantic correctness needs reviewed output; no automatic manual grade is fabricated."
+          },
+          "elapsed_ms": 247.717919992283
+        },
+        "baseline": {
+          "prediction": {
+            "status": "detected",
+            "target_region": "cuff",
+            "model_phrase": "sleeve cuff",
+            "score": 0.48961952328681946,
+            "bbox": [
+              205.0,
+              401.0,
+              231.0,
+              451.0
+            ],
+            "proposal_bbox": [
+              203.0,
+              398.0,
+              234.0,
+              453.0
+            ],
+            "proposal_crop_area_ratio": 0.021226268285091814,
+            "local_mask_constrained_to_proposal": true,
+            "sam_pixels_removed_outside_proposal": 0,
+            "geometry_rejections": [],
+            "sam_score": 0.9124154448509216,
+            "coordinate_space": "original_image",
+            "crop_origin": [
+              138,
+              179,
+              363,
+              536
+            ],
+            "semantic_target_correct": null,
+            "semantic_review_status": "pending",
+            "grounding_input_view": "raw_crop",
+            "semantic_note": "Strict semantic correctness needs reviewed output; no automatic manual grade is fabricated."
+          },
+          "elapsed_ms": 238.70144097600132
+        }
+      }
+    ],
+    "arms": {
+      "baseline": {
+        "prediction": {
+          "status": "detected",
+          "target_region": "cuff",
+          "model_phrase": "sleeve cuff",
+          "score": 0.48961952328681946,
+          "bbox": [
+            205.0,
+            401.0,
+            231.0,
+            451.0
+          ],
+          "proposal_bbox": [
+            203.0,
+            398.0,
+            234.0,
+            453.0
+          ],
+          "proposal_crop_area_ratio": 0.021226268285091814,
+          "local_mask_constrained_to_proposal": true,
+          "sam_pixels_removed_outside_proposal": 0,
+          "geometry_rejections": [],
+          "sam_score": 0.9124154448509216,
+          "coordinate_space": "original_image",
+          "crop_origin": [
+            138,
+            179,
+            363,
+            536
+          ],
+          "semantic_target_correct": null,
+          "semantic_review_status": "pending",
+          "grounding_input_view": "raw_crop",
+          "semantic_note": "Strict semantic correctness needs reviewed output; no automatic manual grade is fabricated."
+        },
+        "draft_best_cuff_iou": 0.0,
+        "draft_positive_bbox50_hit": false,
+        "draft_negative_false_detection": false
+      },
+      "candidate": {
+        "prediction": {
+          "status": "detected",
+          "target_region": "cuff",
+          "model_phrase": "short sleeve cuff long sleeve cuff",
+          "score": 0.38005515933036804,
+          "bbox": [
+            288.0,
+            368.0,
+            361.0,
+            428.0
+          ],
+          "proposal_bbox": [
+            286.0,
+            366.0,
+            363.0,
+            429.0
+          ],
+          "proposal_crop_area_ratio": 0.0603921568627451,
+          "local_mask_constrained_to_proposal": true,
+          "sam_pixels_removed_outside_proposal": 0,
+          "geometry_rejections": [],
+          "sam_score": 0.9670723080635071,
+          "coordinate_space": "original_image",
+          "crop_origin": [
+            138,
+            179,
+            363,
+            536
+          ],
+          "semantic_target_correct": null,
+          "semantic_review_status": "pending",
+          "grounding_input_view": "raw_crop",
+          "semantic_note": "Strict semantic correctness needs reviewed output; no automatic manual grade is fabricated."
+        },
+        "draft_best_cuff_iou": 0.19845360824742267,
+        "draft_positive_bbox50_hit": false,
+        "draft_negative_false_detection": false
+      }
+    }
+  },
+  {
+    "sample_id": "SEGTEST1_0213",
+    "draft_presence": "present",
+    "review_status": "ASSISTANT_DRAFT_PENDING_HUMAN_REVIEW",
+    "garment_match_iou": 0.7496960644676538,
+    "segment_ms": 88.00162503030151,
+    "matched_category_correct": true,
+    "all_predicted_garments": [
+      {
+        "instance_id": "pred_0000",
+        "category": "top",
+        "bbox": [
+          157.06436157226562,
+          40.28569793701172,
+          684.7301025390625,
+          436.00970458984375
+        ],
+        "score": 0.9916632175445557,
+        "call_order": [
+          "candidate",
+          "baseline"
+        ],
+        "candidate": {
+          "prediction": {
+            "status": "detected",
+            "target_region": "cuff",
+            "model_phrase": "short sleeve cuff long sleeve cuff",
+            "score": 0.4461279511451721,
+            "bbox": [
+              545.0,
+              66.0,
+              570.0,
+              97.0
+            ],
+            "proposal_bbox": [
+              543.0,
+              40.0,
+              627.0,
+              105.0
+            ],
+            "proposal_crop_area_ratio": 0.02604762995191207,
+            "local_mask_constrained_to_proposal": true,
+            "sam_pixels_removed_outside_proposal": 0,
+            "geometry_rejections": [],
+            "sam_score": 0.9685561060905457,
+            "coordinate_space": "original_image",
+            "crop_origin": [
+              157,
+              40,
+              685,
+              437
+            ],
+            "semantic_target_correct": null,
+            "semantic_review_status": "pending",
+            "grounding_input_view": "raw_crop",
+            "semantic_note": "Strict semantic correctness needs reviewed output; no automatic manual grade is fabricated."
+          },
+          "elapsed_ms": 240.30164000578225
+        },
+        "baseline": {
+          "prediction": {
+            "status": "detected",
+            "target_region": "cuff",
+            "model_phrase": "sleeve cuff",
+            "score": 0.5823001861572266,
+            "bbox": [
+              277.0,
+              142.0,
+              357.0,
+              193.0
+            ],
+            "proposal_bbox": [
+              275.0,
+              137.0,
+              357.0,
+              195.0
+            ],
+            "proposal_crop_area_ratio": 0.02268910770170216,
+            "local_mask_constrained_to_proposal": true,
+            "sam_pixels_removed_outside_proposal": 0,
+            "geometry_rejections": [],
+            "sam_score": 0.9775416851043701,
+            "coordinate_space": "original_image",
+            "crop_origin": [
+              157,
+              40,
+              685,
+              437
+            ],
+            "semantic_target_correct": null,
+            "semantic_review_status": "pending",
+            "grounding_input_view": "raw_crop",
+            "semantic_note": "Strict semantic correctness needs reviewed output; no automatic manual grade is fabricated."
+          },
+          "elapsed_ms": 232.55694203544408
+        }
+      },
+      {
+        "instance_id": "pred_0001",
+        "category": "dress",
+        "bbox": [
+          215.43994140625,
+          18.046245574951172,
+          669.1176147460938,
+          822.8565673828125
+        ],
+        "score": 0.968404233455658,
+        "call_order": [
+          "baseline",
+          "candidate"
+        ],
+        "baseline": {
+          "prediction": {
+            "status": "detected",
+            "target_region": "cuff",
+            "model_phrase": "sleeve cuff",
+            "score": 0.6194183230400085,
+            "bbox": [
+              278.0,
+              140.0,
+              356.0,
+              193.0
+            ],
+            "proposal_bbox": [
+              275.0,
+              136.0,
+              357.0,
+              195.0
+            ],
+            "proposal_crop_area_ratio": 0.01320865469933793,
+            "local_mask_constrained_to_proposal": true,
+            "sam_pixels_removed_outside_proposal": 0,
+            "geometry_rejections": [],
+            "sam_score": 0.970011293888092,
+            "coordinate_space": "original_image",
+            "crop_origin": [
+              215,
+              18,
+              670,
+              823
+            ],
+            "semantic_target_correct": null,
+            "semantic_review_status": "pending",
+            "grounding_input_view": "raw_crop",
+            "semantic_note": "Strict semantic correctness needs reviewed output; no automatic manual grade is fabricated."
+          },
+          "elapsed_ms": 255.78698702156544
+        },
+        "candidate": {
+          "prediction": {
+            "status": "detected",
+            "target_region": "cuff",
+            "model_phrase": "short sleeve cuff long sleeve cuff",
+            "score": 0.3762374520301819,
+            "bbox": [
+              340.0,
+              273.0,
+              556.0,
+              453.0
+            ],
+            "proposal_bbox": [
+              336.0,
+              273.0,
+              559.0,
+              454.0
+            ],
+            "proposal_crop_area_ratio": 0.11019862125452187,
+            "local_mask_constrained_to_proposal": true,
+            "sam_pixels_removed_outside_proposal": 136,
+            "geometry_rejections": [],
+            "sam_score": 0.9806594848632812,
+            "coordinate_space": "original_image",
+            "crop_origin": [
+              215,
+              18,
+              670,
+              823
+            ],
+            "semantic_target_correct": null,
+            "semantic_review_status": "pending",
+            "grounding_input_view": "raw_crop",
+            "semantic_note": "Strict semantic correctness needs reviewed output; no automatic manual grade is fabricated."
+          },
+          "elapsed_ms": 262.5482559669763
+        }
+      }
+    ],
+    "arms": {
+      "baseline": {
+        "prediction": {
+          "status": "detected",
+          "target_region": "cuff",
+          "model_phrase": "sleeve cuff",
+          "score": 0.6194183230400085,
+          "bbox": [
+            278.0,
+            140.0,
+            356.0,
+            193.0
+          ],
+          "proposal_bbox": [
+            275.0,
+            136.0,
+            357.0,
+            195.0
+          ],
+          "proposal_crop_area_ratio": 0.01320865469933793,
+          "local_mask_constrained_to_proposal": true,
+          "sam_pixels_removed_outside_proposal": 0,
+          "geometry_rejections": [],
+          "sam_score": 0.970011293888092,
+          "coordinate_space": "original_image",
+          "crop_origin": [
+            215,
+            18,
+            670,
+            823
+          ],
+          "semantic_target_correct": null,
+          "semantic_review_status": "pending",
+          "grounding_input_view": "raw_crop",
+          "semantic_note": "Strict semantic correctness needs reviewed output; no automatic manual grade is fabricated."
+        },
+        "draft_best_cuff_iou": 0.0,
+        "draft_positive_bbox50_hit": false,
+        "draft_negative_false_detection": false
+      },
+      "candidate": {
+        "prediction": {
+          "status": "detected",
+          "target_region": "cuff",
+          "model_phrase": "short sleeve cuff long sleeve cuff",
+          "score": 0.3762374520301819,
+          "bbox": [
+            340.0,
+            273.0,
+            556.0,
+            453.0
+          ],
+          "proposal_bbox": [
+            336.0,
+            273.0,
+            559.0,
+            454.0
+          ],
+          "proposal_crop_area_ratio": 0.11019862125452187,
+          "local_mask_constrained_to_proposal": true,
+          "sam_pixels_removed_outside_proposal": 136,
+          "geometry_rejections": [],
+          "sam_score": 0.9806594848632812,
+          "coordinate_space": "original_image",
+          "crop_origin": [
+            215,
+            18,
+            670,
+            823
+          ],
+          "semantic_target_correct": null,
+          "semantic_review_status": "pending",
+          "grounding_input_view": "raw_crop",
+          "semantic_note": "Strict semantic correctness needs reviewed output; no automatic manual grade is fabricated."
+        },
+        "draft_best_cuff_iou": 0.0,
+        "draft_positive_bbox50_hit": false,
+        "draft_negative_false_detection": false
+      }
+    }
+  },
+  {
+    "sample_id": "SEGTEST1_0199",
+    "draft_presence": "present",
+    "review_status": "ASSISTANT_DRAFT_PENDING_HUMAN_REVIEW",
+    "garment_match_iou": 0.8332723396065429,
+    "segment_ms": 22.885687998495996,
+    "matched_category_correct": true,
+    "all_predicted_garments": [
+      {
+        "instance_id": "pred_0000",
+        "category": "outerwear",
+        "bbox": [
+          65.39187622070312,
+          76.20547485351562,
+          397.1112365722656,
+          619.294189453125
+        ],
+        "score": 0.9735941886901855,
+        "call_order": [
+          "baseline",
+          "candidate"
+        ],
+        "baseline": {
+          "prediction": {
+            "status": "detected",
+            "target_region": "cuff",
+            "model_phrase": "sleeve cuff",
+            "score": 0.33450889587402344,
+            "bbox": [
+              86.0,
+              91.0,
+              203.0,
+              580.0
+            ],
+            "proposal_bbox": [
+              79.0,
+              87.0,
+              207.0,
+              586.0
+            ],
+            "proposal_crop_area_ratio": 0.3525878819996467,
+            "local_mask_constrained_to_proposal": true,
+            "sam_pixels_removed_outside_proposal": 0,
+            "geometry_rejections": [
+              {
+                "reason": "local_region_covers_whole_garment",
+                "crop_area_ratio": 0.8998465377141848,
+                "proposal": {
+                  "label": "sleeve cuff",
+                  "score": 0.38571569323539734,
+                  "box": [
+                    13.350791931152344,
+                    6.0587921142578125,
+                    331.557861328125,
+                    516.1141357421875
+                  ]
+                }
+              }
+            ],
+            "sam_score": 0.9577406048774719,
+            "coordinate_space": "original_image",
+            "crop_origin": [
+              65,
+              76,
+              398,
+              620
+            ],
+            "semantic_target_correct": null,
+            "semantic_review_status": "pending",
+            "grounding_input_view": "raw_crop",
+            "semantic_note": "Strict semantic correctness needs reviewed output; no automatic manual grade is fabricated."
+          },
+          "elapsed_ms": 263.47662205807865
+        },
+        "candidate": {
+          "prediction": {
+            "status": "detected",
+            "target_region": "cuff",
+            "model_phrase": "short sleeve cuff long sleeve cuff",
+            "score": 0.3676515221595764,
+            "bbox": [
+              86.0,
+              91.0,
+              203.0,
+              580.0
+            ],
+            "proposal_bbox": [
+              79.0,
+              89.0,
+              206.0,
+              585.0
+            ],
+            "proposal_crop_area_ratio": 0.34773008302420066,
+            "local_mask_constrained_to_proposal": true,
+            "sam_pixels_removed_outside_proposal": 0,
+            "geometry_rejections": [],
+            "sam_score": 0.9589570760726929,
+            "coordinate_space": "original_image",
+            "crop_origin": [
+              65,
+              76,
+              398,
+              620
+            ],
+            "semantic_target_correct": null,
+            "semantic_review_status": "pending",
+            "grounding_input_view": "raw_crop",
+            "semantic_note": "Strict semantic correctness needs reviewed output; no automatic manual grade is fabricated."
+          },
+          "elapsed_ms": 255.28454303275794
+        }
+      },
+      {
+        "instance_id": "pred_0001",
+        "category": "dress",
+        "bbox": [
+          240.3692626953125,
+          95.02921295166016,
+          406.9565124511719,
+          609.6528930664062
+        ],
+        "score": 0.43912452459335327,
+        "call_order": [
+          "candidate",
+          "baseline"
+        ],
+        "candidate": {
+          "prediction": {
+            "status": "detected",
+            "target_region": "cuff",
+            "model_phrase": "short sleeve cuff long sleeve cuff",
+            "score": 0.3767320513725281,
+            "bbox": [
+              264.0,
+              111.0,
+              302.0,
+              224.0
+            ],
+            "proposal_bbox": [
+              250.0,
+              95.0,
+              305.0,
+              229.0
+            ],
+            "proposal_crop_area_ratio": 0.08569269228533224,
+            "local_mask_constrained_to_proposal": true,
+            "sam_pixels_removed_outside_proposal": 0,
+            "geometry_rejections": [],
+            "sam_score": 0.9809421896934509,
+            "coordinate_space": "original_image",
+            "crop_origin": [
+              240,
+              95,
+              407,
+              610
+            ],
+            "semantic_target_correct": null,
+            "semantic_review_status": "pending",
+            "grounding_input_view": "raw_crop",
+            "semantic_note": "Strict semantic correctness needs reviewed output; no automatic manual grade is fabricated."
+          },
+          "elapsed_ms": 198.5283800167963
+        },
+        "baseline": {
+          "prediction": {
+            "status": "detected",
+            "target_region": "cuff",
+            "model_phrase": "sleeve cuff",
+            "score": 0.41037115454673767,
+            "bbox": [
+              264.0,
+              111.0,
+              302.0,
+              224.0
+            ],
+            "proposal_bbox": [
+              250.0,
+              95.0,
+              304.0,
+              229.0
+            ],
+            "proposal_crop_area_ratio": 0.08413464333468984,
+            "local_mask_constrained_to_proposal": true,
+            "sam_pixels_removed_outside_proposal": 0,
+            "geometry_rejections": [],
+            "sam_score": 0.9810144901275635,
+            "coordinate_space": "original_image",
+            "crop_origin": [
+              240,
+              95,
+              407,
+              610
+            ],
+            "semantic_target_correct": null,
+            "semantic_review_status": "pending",
+            "grounding_input_view": "raw_crop",
+            "semantic_note": "Strict semantic correctness needs reviewed output; no automatic manual grade is fabricated."
+          },
+          "elapsed_ms": 188.334317994304
+        }
+      }
+    ],
+    "arms": {
+      "baseline": {
+        "prediction": {
+          "status": "detected",
+          "target_region": "cuff",
+          "model_phrase": "sleeve cuff",
+          "score": 0.33450889587402344,
+          "bbox": [
+            86.0,
+            91.0,
+            203.0,
+            580.0
+          ],
+          "proposal_bbox": [
+            79.0,
+            87.0,
+            207.0,
+            586.0
+          ],
+          "proposal_crop_area_ratio": 0.3525878819996467,
+          "local_mask_constrained_to_proposal": true,
+          "sam_pixels_removed_outside_proposal": 0,
+          "geometry_rejections": [
+            {
+              "reason": "local_region_covers_whole_garment",
+              "crop_area_ratio": 0.8998465377141848,
+              "proposal": {
+                "label": "sleeve cuff",
+                "score": 0.38571569323539734,
+                "box": [
+                  13.350791931152344,
+                  6.0587921142578125,
+                  331.557861328125,
+                  516.1141357421875
+                ]
+              }
+            }
+          ],
+          "sam_score": 0.9577406048774719,
+          "coordinate_space": "original_image",
+          "crop_origin": [
+            65,
+            76,
+            398,
+            620
+          ],
+          "semantic_target_correct": null,
+          "semantic_review_status": "pending",
+          "grounding_input_view": "raw_crop",
+          "semantic_note": "Strict semantic correctness needs reviewed output; no automatic manual grade is fabricated."
+        },
+        "draft_best_cuff_iou": 0.011951303155006858,
+        "draft_positive_bbox50_hit": false,
+        "draft_negative_false_detection": false
+      },
+      "candidate": {
+        "prediction": {
+          "status": "detected",
+          "target_region": "cuff",
+          "model_phrase": "short sleeve cuff long sleeve cuff",
+          "score": 0.3676515221595764,
+          "bbox": [
+            86.0,
+            91.0,
+            203.0,
+            580.0
+          ],
+          "proposal_bbox": [
+            79.0,
+            89.0,
+            206.0,
+            585.0
+          ],
+          "proposal_crop_area_ratio": 0.34773008302420066,
+          "local_mask_constrained_to_proposal": true,
+          "sam_pixels_removed_outside_proposal": 0,
+          "geometry_rejections": [],
+          "sam_score": 0.9589570760726929,
+          "coordinate_space": "original_image",
+          "crop_origin": [
+            65,
+            76,
+            398,
+            620
+          ],
+          "semantic_target_correct": null,
+          "semantic_review_status": "pending",
+          "grounding_input_view": "raw_crop",
+          "semantic_note": "Strict semantic correctness needs reviewed output; no automatic manual grade is fabricated."
+        },
+        "draft_best_cuff_iou": 0.011951303155006858,
+        "draft_positive_bbox50_hit": false,
+        "draft_negative_false_detection": false
+      }
+    }
+  },
+  {
+    "sample_id": "SEGTEST1_0040",
+    "draft_presence": "absent",
+    "review_status": "ASSISTANT_DRAFT_PENDING_HUMAN_REVIEW",
+    "garment_match_iou": 0.30285318325759275,
+    "segment_ms": 21.042163018137217,
+    "matched_category_correct": false,
+    "all_predicted_garments": [
+      {
+        "instance_id": "pred_0000",
+        "category": "dress",
+        "bbox": [
+          204.05429077148438,
+          197.4310760498047,
+          291.3186340332031,
+          407.2063293457031
+        ],
+        "score": 0.937393307685852,
+        "call_order": [
+          "candidate",
+          "baseline"
+        ],
+        "candidate": {
+          "prediction": {
+            "status": "detected",
+            "target_region": "cuff",
+            "model_phrase": "short long sleeve cuff",
+            "score": 0.3701050877571106,
+            "bbox": [
+              205.0,
+              307.0,
+              286.0,
+              406.0
+            ],
+            "proposal_bbox": [
+              205.0,
+              306.0,
+              288.0,
+              407.0
+            ],
+            "proposal_crop_area_ratio": 0.4514756570443774,
+            "local_mask_constrained_to_proposal": true,
+            "sam_pixels_removed_outside_proposal": 0,
+            "geometry_rejections": [],
+            "sam_score": 0.9683287143707275,
+            "coordinate_space": "original_image",
+            "crop_origin": [
+              204,
+              197,
+              292,
+              408
+            ],
+            "semantic_target_correct": null,
+            "semantic_review_status": "pending",
+            "grounding_input_view": "raw_crop",
+            "semantic_note": "Strict semantic correctness needs reviewed output; no automatic manual grade is fabricated."
+          },
+          "elapsed_ms": 210.9265149338171
+        },
+        "baseline": {
+          "prediction": {
+            "status": "missed",
+            "target_region": "cuff",
+            "bbox": null
+          },
+          "elapsed_ms": 108.30210300628096
+        }
+      }
+    ],
+    "arms": {
+      "baseline": {
+        "prediction": {
+          "status": "segmentation_missed",
+          "bbox": null
+        },
+        "draft_best_cuff_iou": 0.0,
+        "draft_positive_bbox50_hit": false,
+        "draft_negative_false_detection": false
+      },
+      "candidate": {
+        "prediction": {
+          "status": "segmentation_missed",
+          "bbox": null
+        },
+        "draft_best_cuff_iou": 0.0,
+        "draft_positive_bbox50_hit": false,
+        "draft_negative_false_detection": false
+      }
+    }
+  },
+  {
+    "sample_id": "SEGTEST1_0044",
+    "draft_presence": "absent",
+    "review_status": "ASSISTANT_DRAFT_PENDING_HUMAN_REVIEW",
+    "garment_match_iou": 0.47775596818211635,
+    "segment_ms": 27.802880038507283,
+    "matched_category_correct": false,
+    "all_predicted_garments": [
+      {
+        "instance_id": "pred_0000",
+        "category": "dress",
+        "bbox": [
+          190.4346466064453,
+          144.012939453125,
+          323.4661865234375,
+          450.23382568359375
+        ],
+        "score": 0.9847785830497742,
+        "call_order": [
+          "baseline",
+          "candidate"
+        ],
+        "baseline": {
+          "prediction": {
+            "status": "empty_mask",
+            "target_region": "cuff",
+            "bbox": null
+          },
+          "elapsed_ms": 209.90505395457149
+        },
+        "candidate": {
+          "prediction": {
+            "status": "empty_mask",
+            "target_region": "cuff",
+            "bbox": null
+          },
+          "elapsed_ms": 208.49882194306701
+        }
+      }
+    ],
+    "arms": {
+      "baseline": {
+        "prediction": {
+          "status": "segmentation_missed",
+          "bbox": null
+        },
+        "draft_best_cuff_iou": 0.0,
+        "draft_positive_bbox50_hit": false,
+        "draft_negative_false_detection": false
+      },
+      "candidate": {
+        "prediction": {
+          "status": "segmentation_missed",
+          "bbox": null
+        },
+        "draft_best_cuff_iou": 0.0,
+        "draft_positive_bbox50_hit": false,
+        "draft_negative_false_detection": false
+      }
+    }
+  },
+  {
+    "sample_id": "SEGTEST1_0226",
+    "draft_presence": "absent",
+    "review_status": "ASSISTANT_DRAFT_PENDING_HUMAN_REVIEW",
+    "garment_match_iou": 0.8642730955869969,
+    "segment_ms": 91.06376103591174,
+    "matched_category_correct": true,
+    "all_predicted_garments": [
+      {
+        "instance_id": "pred_0002",
+        "category": "dress",
+        "bbox": [
+          263.4146423339844,
+          204.18716430664062,
+          434.3361511230469,
+          554.7952880859375
+        ],
+        "score": 0.9671255350112915,
+        "call_order": [
+          "candidate",
+          "baseline"
+        ],
+        "candidate": {
+          "prediction": {
+            "status": "rejected_region_geometry",
+            "target_region": "cuff",
+            "bbox": null,
+            "rejected_proposals": [
+              {
+                "reason": "local_region_covers_whole_garment",
+                "crop_area_ratio": 0.8682170542635659,
+                "proposal": {
+                  "label": "short sleeve cuff long sleeve cuff",
+                  "score": 0.40743809938430786,
+                  "box": [
+                    16.495834350585938,
+                    7.617827892303467,
+                    171.73568725585938,
+                    342.05450439453125
+                  ]
+                }
+              }
+            ],
+            "semantic_review_status": "pending",
+            "semantic_note": "Rejected geometry is not an absence label or a correct detection."
+          },
+          "elapsed_ms": 130.8763560373336
+        },
+        "baseline": {
+          "prediction": {
+            "status": "rejected_region_geometry",
+            "target_region": "cuff",
+            "bbox": null,
+            "rejected_proposals": [
+              {
+                "reason": "local_region_covers_whole_garment",
+                "crop_area_ratio": 0.8845822566752799,
+                "proposal": {
+                  "label": "sleeve cuff",
+                  "score": 0.4251354932785034,
+                  "box": [
+                    14.617222785949707,
+                    6.02716588973999,
+                    171.9328155517578,
+                    343.0970153808594
+                  ]
+                }
+              }
+            ],
+            "semantic_review_status": "pending",
+            "semantic_note": "Rejected geometry is not an absence label or a correct detection."
+          },
+          "elapsed_ms": 121.55659799464047
+        }
+      },
+      {
+        "instance_id": "pred_0004",
+        "category": "top",
+        "bbox": [
+          277.7550354003906,
+          233.02362060546875,
+          419.9978332519531,
+          421.5645751953125
+        ],
+        "score": 0.6677040457725525,
+        "call_order": [
+          "candidate",
+          "baseline"
+        ],
+        "candidate": {
+          "prediction": {
+            "status": "missed",
+            "target_region": "cuff",
+            "bbox": null
+          },
+          "elapsed_ms": 127.53838195931166
+        },
+        "baseline": {
+          "prediction": {
+            "status": "empty_mask",
+            "target_region": "cuff",
+            "bbox": null
+          },
+          "elapsed_ms": 222.68766292836517
+        }
+      },
+      {
+        "instance_id": "pred_0007",
+        "category": "top",
+        "bbox": [
+          297.865966796875,
+          292.7520446777344,
+          398.17181396484375,
+          387.7602233886719
+        ],
+        "score": 0.40616828203201294,
+        "call_order": [
+          "baseline",
+          "candidate"
+        ],
+        "baseline": {
+          "prediction": {
+            "status": "detected",
+            "target_region": "cuff",
+            "model_phrase": "sleeve cuff",
+            "score": 0.3241303563117981,
+            "bbox": [
+              310.0,
+              317.0,
+              315.0,
+              330.0
+            ],
+            "proposal_bbox": [
+              297.0,
+              292.0,
+              320.0,
+              332.0
+            ],
+            "proposal_crop_area_ratio": 0.09395424836601307,
+            "local_mask_constrained_to_proposal": true,
+            "sam_pixels_removed_outside_proposal": 0,
+            "geometry_rejections": [],
+            "sam_score": 0.9772712588310242,
+            "coordinate_space": "original_image",
+            "crop_origin": [
+              297,
+              292,
+              399,
+              388
+            ],
+            "semantic_target_correct": null,
+            "semantic_review_status": "pending",
+            "grounding_input_view": "raw_crop",
+            "semantic_note": "Strict semantic correctness needs reviewed output; no automatic manual grade is fabricated."
+          },
+          "elapsed_ms": 223.2608099002391
+        },
+        "candidate": {
+          "prediction": {
+            "status": "missed",
+            "target_region": "cuff",
+            "bbox": null
+          },
+          "elapsed_ms": 104.76213996298611
+        }
+      }
+    ],
+    "arms": {
+      "baseline": {
+        "prediction": {
+          "status": "rejected_region_geometry",
+          "target_region": "cuff",
+          "bbox": null,
+          "rejected_proposals": [
+            {
+              "reason": "local_region_covers_whole_garment",
+              "crop_area_ratio": 0.8845822566752799,
+              "proposal": {
+                "label": "sleeve cuff",
+                "score": 0.4251354932785034,
+                "box": [
+                  14.617222785949707,
+                  6.02716588973999,
+                  171.9328155517578,
+                  343.0970153808594
+                ]
+              }
+            }
+          ],
+          "semantic_review_status": "pending",
+          "semantic_note": "Rejected geometry is not an absence label or a correct detection."
+        },
+        "draft_best_cuff_iou": 0.0,
+        "draft_positive_bbox50_hit": false,
+        "draft_negative_false_detection": false
+      },
+      "candidate": {
+        "prediction": {
+          "status": "rejected_region_geometry",
+          "target_region": "cuff",
+          "bbox": null,
+          "rejected_proposals": [
+            {
+              "reason": "local_region_covers_whole_garment",
+              "crop_area_ratio": 0.8682170542635659,
+              "proposal": {
+                "label": "short sleeve cuff long sleeve cuff",
+                "score": 0.40743809938430786,
+                "box": [
+                  16.495834350585938,
+                  7.617827892303467,
+                  171.73568725585938,
+                  342.05450439453125
+                ]
+              }
+            }
+          ],
+          "semantic_review_status": "pending",
+          "semantic_note": "Rejected geometry is not an absence label or a correct detection."
+        },
+        "draft_best_cuff_iou": 0.0,
+        "draft_positive_bbox50_hit": false,
+        "draft_negative_false_detection": false
+      }
+    }
+  }
+]

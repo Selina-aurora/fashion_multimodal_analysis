@@ -1,0 +1,55 @@
+{
+  "status": "BATCH2_REVIEW_COMPLETE",
+  "batch1_confirmed": 12,
+  "batch1_valid_side_labels": 7,
+  "batch2_expected": 20,
+  "batch2_confirmed_valid": 20,
+  "pending": [],
+  "invalid": [],
+  "states_by_experiment_split": {
+    "train": {
+      "sleeveless": 3,
+      "unmeasurable": 6,
+      "measurable": 11
+    },
+    "dev": {
+      "measurable": 7,
+      "unmeasurable": 3,
+      "sleeveless": 2
+    }
+  },
+  "paired_train_count": 14,
+  "paired_dev_count": 9,
+  "paired_train_class_support": {
+    "sleeveless": 3,
+    "short": 4,
+    "three_quarter": 2,
+    "long": 3,
+    "cap": 1,
+    "elbow": 1
+  },
+  "paired_dev_class_support": {
+    "cap": 2,
+    "short": 2,
+    "elbow": 1,
+    "three_quarter": 1,
+    "long": 1,
+    "sleeveless": 2
+  },
+  "dev_fixed_target_count": 12,
+  "dev_valid_continuous_labels": 9,
+  "dev_label_coverage": 0.75,
+  "label_coverage_is_not_model_accuracy": true,
+  "model_fit_performed": false,
+  "changed_historical_classes": [
+    {
+      "record_id": "v5_train_01994",
+      "old": "cap",
+      "current": "sleeveless",
+      "source": "20261012_explicit_sleeve_absence_confirmation"
+    }
+  ],
+  "warnings": [
+    "Small, selected, previously used train/dev pool: diagnostic pilot only, not a new blind test."
+  ]
+}

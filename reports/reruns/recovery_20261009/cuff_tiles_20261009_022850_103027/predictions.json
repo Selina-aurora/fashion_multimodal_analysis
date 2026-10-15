@@ -1,0 +1,2712 @@
+[
+  {
+    "sample_id": "SEGTEST1_0045",
+    "draft_presence": "present",
+    "garment_match_iou": 0.5474490911276819,
+    "category_correct": false,
+    "all_instances": [
+      {
+        "instance_id": "pred_0001",
+        "category": "dress",
+        "bbox": [
+          83.47434997558594,
+          133.80035400390625,
+          352.04425048828125,
+          613.6932983398438
+        ],
+        "score": 0.8670286536216736,
+        "baseline_candidates": [],
+        "expanded_candidates": [
+          {
+            "view": "tile_3",
+            "bbox": [
+              177.13531589508057,
+              301,
+              288.03887939453125,
+              613.9493408203125
+            ],
+            "score": 0.40835893154144287,
+            "phrase": "sleeve cuff"
+          },
+          {
+            "view": "tile_1",
+            "bbox": [
+              279.8155212402344,
+              302.2931671142578,
+              352.91107177734375,
+              445.9799499511719
+            ],
+            "score": 0.3811027407646179,
+            "phrase": "sleeve cuff"
+          },
+          {
+            "view": "tile_3",
+            "bbox": [
+              187.78567790985107,
+              440.17893981933594,
+              269.0331268310547,
+              614
+            ],
+            "score": 0.3531978130340576,
+            "phrase": "sleeve cuff"
+          },
+          {
+            "view": "tile_3",
+            "bbox": [
+              279.88204193115234,
+              301.781911611557,
+              352.9762725830078,
+              613.6483154296875
+            ],
+            "score": 0.3409987688064575,
+            "phrase": "sleeve cuff"
+          },
+          {
+            "view": "tile_2",
+            "bbox": [
+              92.82778263092041,
+              429.6353454589844,
+              179.45872497558594,
+              614
+            ],
+            "score": 0.3366667926311493,
+            "phrase": "sleeve cuff"
+          },
+          {
+            "view": "tile_2",
+            "bbox": [
+              187.06172943115234,
+              436.96388244628906,
+              258.9796905517578,
+              613.8908996582031
+            ],
+            "score": 0.3149055242538452,
+            "phrase": "sleeve cuff"
+          },
+          {
+            "view": "tile_2",
+            "bbox": [
+              92.66574478149414,
+              428.7185745239258,
+              258.92523193359375,
+              614
+            ],
+            "score": 0.30492955446243286,
+            "phrase": "sleeve cuff"
+          }
+        ],
+        "rejected": [
+          {
+            "view": "full",
+            "bbox": [
+              83.51755905151367,
+              133,
+              352.6703796386719,
+              613.8194885253906
+            ],
+            "score": 0.3590856194496155,
+            "phrase": "sleeve cuff",
+            "reason": "search_crop_area_guard",
+            "parent_area_ratio": 0.9964881922682962,
+            "view_area_ratio": 0.9964881922682962
+          },
+          {
+            "view": "tile_0",
+            "bbox": [
+              83.03694725036621,
+              133,
+              259,
+              445.8500671386719
+            ],
+            "score": 0.39975136518478394,
+            "phrase": "sleeve cuff",
+            "reason": "search_crop_area_guard",
+            "parent_area_ratio": 0.4238858309590251,
+            "view_area_ratio": 0.999311154274045
+          },
+          {
+            "view": "tile_1",
+            "bbox": [
+              177.01156044006348,
+              133,
+              353,
+              445.8949890136719
+            ],
+            "score": 0.5641303658485413,
+            "phrase": "sleeve cuff",
+            "reason": "search_crop_area_guard",
+            "parent_area_ratio": 0.42400786065018553,
+            "view_area_ratio": 0.9995988393595628
+          },
+          {
+            "view": "tile_2",
+            "bbox": [
+              88.81954860687256,
+              301,
+              259,
+              613.8781433105469
+            ],
+            "score": 0.4700019955635071,
+            "phrase": "sleeve cuff",
+            "reason": "search_crop_area_guard",
+            "parent_area_ratio": 0.4099926361718063,
+            "view_area_ratio": 0.9665579374751758
+          }
+        ],
+        "grounding_calls": [
+          {
+            "view": "full",
+            "model_seconds": 0.26994461996946484
+          },
+          {
+            "view": "tile_0",
+            "model_seconds": 0.09601616009604186
+          },
+          {
+            "view": "tile_1",
+            "model_seconds": 0.0937998320441693
+          },
+          {
+            "view": "tile_2",
+            "model_seconds": 0.09280067391227931
+          },
+          {
+            "view": "tile_3",
+            "model_seconds": 0.09306970005854964
+          }
+        ]
+      },
+      {
+        "instance_id": "pred_0002",
+        "category": "outerwear",
+        "bbox": [
+          29.835325241088867,
+          103.59146881103516,
+          378.0429382324219,
+          604.7142944335938
+        ],
+        "score": 0.4853620231151581,
+        "baseline_candidates": [],
+        "expanded_candidates": [
+          {
+            "view": "tile_3",
+            "bbox": [
+              312.7073059082031,
+              278,
+              378.64503479003906,
+              289.7731523513794
+            ],
+            "score": 0.41466039419174194,
+            "phrase": "sleeve cuff"
+          },
+          {
+            "view": "tile_2",
+            "bbox": [
+              91.03622436523438,
+              429.7559814453125,
+              179.27850341796875,
+              605
+            ],
+            "score": 0.3239363431930542,
+            "phrase": "sleeve cuff"
+          },
+          {
+            "view": "tile_2",
+            "bbox": [
+              129.77281951904297,
+              278,
+              257,
+              399.1436767578125
+            ],
+            "score": 0.31727147102355957,
+            "phrase": "sleeve cuff"
+          }
+        ],
+        "rejected": [
+          {
+            "view": "tile_0",
+            "bbox": [
+              29.00414490699768,
+              103,
+              257,
+              429.97454833984375
+            ],
+            "score": 0.3359302878379822,
+            "phrase": "sleeve cuff",
+            "reason": "search_crop_area_guard",
+            "parent_area_ratio": 0.42429619659869605,
+            "view_area_ratio": 0.9999039881752092
+          },
+          {
+            "view": "tile_1",
+            "bbox": [
+              151,
+              118.05869483947754,
+              378.6945495605469,
+              429.9154968261719
+            ],
+            "score": 0.5418049693107605,
+            "phrase": "sleeve cuff",
+            "reason": "search_crop_area_guard",
+            "parent_area_ratio": 0.40414396161498595,
+            "view_area_ratio": 0.9524128716099713
+          },
+          {
+            "view": "tile_2",
+            "bbox": [
+              88.14091110229492,
+              278,
+              256.9722442626953,
+              604.8984069824219
+            ],
+            "score": 0.432925820350647,
+            "phrase": "sleeve cuff",
+            "reason": "search_crop_area_guard",
+            "parent_area_ratio": 0.3141189178079307,
+            "view_area_ratio": 0.74025824693993
+          }
+        ],
+        "grounding_calls": [
+          {
+            "view": "full",
+            "model_seconds": 0.09561129903886467
+          },
+          {
+            "view": "tile_0",
+            "model_seconds": 0.0877634841017425
+          },
+          {
+            "view": "tile_1",
+            "model_seconds": 0.08761257003061473
+          },
+          {
+            "view": "tile_2",
+            "model_seconds": 0.08784348401241004
+          },
+          {
+            "view": "tile_3",
+            "model_seconds": 0.0877865869551897
+          }
+        ]
+      }
+    ],
+    "arms": {
+      "baseline": {
+        "selected": null,
+        "proposal_count": 0,
+        "draft_selected_iou": 0,
+        "draft_any_candidate_iou": 0,
+        "draft_selected_hit": false,
+        "draft_any_candidate_hit": false,
+        "negative_has_proposal": false
+      },
+      "expanded": {
+        "selected": {
+          "view": "tile_3",
+          "bbox": [
+            312.7073059082031,
+            278,
+            378.64503479003906,
+            289.7731523513794
+          ],
+          "score": 0.41466039419174194,
+          "phrase": "sleeve cuff"
+        },
+        "proposal_count": 3,
+        "draft_selected_iou": 0.28648711800665444,
+        "draft_any_candidate_iou": 0.28648711800665444,
+        "draft_selected_hit": false,
+        "draft_any_candidate_hit": false,
+        "negative_has_proposal": false
+      }
+    }
+  },
+  {
+    "sample_id": "SEGTEST1_0156",
+    "draft_presence": "present",
+    "garment_match_iou": 0.923226338793066,
+    "category_correct": true,
+    "all_instances": [
+      {
+        "instance_id": "pred_0000",
+        "category": "dress",
+        "bbox": [
+          152.148193359375,
+          50.771156311035156,
+          453.7030334472656,
+          725.196044921875
+        ],
+        "score": 0.8191270232200623,
+        "baseline_candidates": [],
+        "expanded_candidates": [
+          {
+            "view": "tile_1",
+            "bbox": [
+              257.1031368672848,
+              168.10785675048828,
+              431.6800079345703,
+              489.7071228027344
+            ],
+            "score": 0.45272985100746155,
+            "phrase": "sleeve cuff"
+          },
+          {
+            "view": "tile_0",
+            "bbox": [
+              159.62885189056396,
+              157.7241668701172,
+              268.0306396484375,
+              224.01211547851562
+            ],
+            "score": 0.3924519121646881,
+            "phrase": "sleeve cuff"
+          },
+          {
+            "view": "tile_2",
+            "bbox": [
+              224.4940948486328,
+              692.2752685546875,
+              319.7607421875,
+              725.982177734375
+            ],
+            "score": 0.36458709836006165,
+            "phrase": "sleeve cuff"
+          },
+          {
+            "view": "tile_2",
+            "bbox": [
+              152.13615569472313,
+              691.965087890625,
+              321.7075653076172,
+              725.9415283203125
+            ],
+            "score": 0.3598079979419708,
+            "phrase": "sleeve cuff"
+          },
+          {
+            "view": "tile_1",
+            "bbox": [
+              257.116563975811,
+              168.08438873291016,
+              432.4725646972656,
+              318.0156555175781
+            ],
+            "score": 0.3571930527687073,
+            "phrase": "sleeve cuff"
+          },
+          {
+            "view": "tile_1",
+            "bbox": [
+              353.62916564941406,
+              224.84071350097656,
+              432.6078338623047,
+              317.43133544921875
+            ],
+            "score": 0.34650060534477234,
+            "phrase": "sleeve cuff"
+          }
+        ],
+        "rejected": [
+          {
+            "view": "full",
+            "bbox": [
+              152.08319878578186,
+              144.7340545654297,
+              454,
+              725.5955200195312
+            ],
+            "score": 0.516595184803009,
+            "phrase": "sleeve cuff",
+            "reason": "search_crop_area_guard",
+            "parent_area_ratio": 0.8590258023360311,
+            "view_area_ratio": 0.8590258023360311
+          },
+          {
+            "view": "tile_0",
+            "bbox": [
+              152.05447167158127,
+              154.55821228027344,
+              349,
+              489.9819641113281
+            ],
+            "score": 0.3953036665916443,
+            "phrase": "sleeve cuff",
+            "reason": "search_crop_area_guard",
+            "parent_area_ratio": 0.32358344771673786,
+            "view_area_ratio": 0.7621159208383418
+          },
+          {
+            "view": "tile_3",
+            "bbox": [
+              257.05649131536484,
+              286,
+              454,
+              725.9642944335938
+            ],
+            "score": 0.532904863357544,
+            "phrase": "sleeve cuff",
+            "reason": "search_crop_area_guard",
+            "parent_area_ratio": 0.4244294047656249,
+            "view_area_ratio": 0.9996321163095507
+          }
+        ],
+        "grounding_calls": [
+          {
+            "view": "full",
+            "model_seconds": 0.09120511508081108
+          },
+          {
+            "view": "tile_0",
+            "model_seconds": 0.0844975229119882
+          },
+          {
+            "view": "tile_1",
+            "model_seconds": 0.08285919297486544
+          },
+          {
+            "view": "tile_2",
+            "model_seconds": 0.08317190001253039
+          },
+          {
+            "view": "tile_3",
+            "model_seconds": 0.08261508296709508
+          }
+        ]
+      },
+      {
+        "instance_id": "pred_0001",
+        "category": "outerwear",
+        "bbox": [
+          0.0,
+          129.1057586669922,
+          468.0,
+          724.275146484375
+        ],
+        "score": 0.7290025949478149,
+        "baseline_candidates": [],
+        "expanded_candidates": [
+          {
+            "view": "tile_2",
+            "bbox": [
+              1.316317081451416,
+              686.3861999511719,
+              304.8226623535156,
+              724.9765014648438
+            ],
+            "score": 0.32832586765289307,
+            "phrase": "sleeve cuff"
+          }
+        ],
+        "rejected": [
+          {
+            "view": "full",
+            "bbox": [
+              0.02510547637939453,
+              154.26587295532227,
+              468,
+              724.913330078125
+            ],
+            "score": 0.5825104117393494,
+            "phrase": "sleeve cuff",
+            "reason": "search_crop_area_guard",
+            "parent_area_ratio": 0.9574108141069233,
+            "view_area_ratio": 0.9574108141069233
+          },
+          {
+            "view": "tile_0",
+            "bbox": [
+              0.02906888723373413,
+              154.19402694702148,
+              305,
+              517
+            ],
+            "score": 0.5771754384040833,
+            "phrase": "sleeve cuff",
+            "reason": "search_crop_area_guard",
+            "parent_area_ratio": 0.3966804172232262,
+            "view_area_ratio": 0.9349778216599632
+          },
+          {
+            "view": "tile_1",
+            "bbox": [
+              163.19196555018425,
+              154.9140396118164,
+              453.2393798828125,
+              516.8785705566406
+            ],
+            "score": 0.43249601125717163,
+            "phrase": "sleeve cuff",
+            "reason": "search_crop_area_guard",
+            "parent_area_ratio": 0.3763941815833078,
+            "view_area_ratio": 0.8871630579742174
+          },
+          {
+            "view": "tile_2",
+            "bbox": [
+              0.03741323947906494,
+              337.12976336479187,
+              305,
+              725
+            ],
+            "score": 0.4489208161830902,
+            "phrase": "sleeve cuff",
+            "reason": "search_crop_area_guard",
+            "parent_area_ratio": 0.42407327586935856,
+            "view_area_ratio": 0.9995429330039585
+          },
+          {
+            "view": "tile_2",
+            "bbox": [
+              0.056328922510147095,
+              337.330872297287,
+              237.62191772460938,
+              717.6737365722656
+            ],
+            "score": 0.3252955973148346,
+            "phrase": "sleeve cuff",
+            "reason": "search_crop_area_guard",
+            "parent_area_ratio": 0.3239415781067595,
+            "view_area_ratio": 0.7635319967733836
+          },
+          {
+            "view": "tile_3",
+            "bbox": [
+              163.0407400727272,
+              337.03975462913513,
+              468,
+              725
+            ],
+            "score": 0.5487624406814575,
+            "phrase": "sleeve cuff",
+            "reason": "search_crop_area_guard",
+            "parent_area_ratio": 0.4241670585581301,
+            "view_area_ratio": 0.9997639792927338
+          },
+          {
+            "view": "tile_3",
+            "bbox": [
+              201.62923431396484,
+              337,
+              468,
+              724.9904174804688
+            ],
+            "score": 0.31598371267318726,
+            "phrase": "sleeve cuff",
+            "reason": "search_crop_area_guard",
+            "parent_area_ratio": 0.3705232338923195,
+            "view_area_ratio": 0.8733252035078325
+          }
+        ],
+        "grounding_calls": [
+          {
+            "view": "full",
+            "model_seconds": 0.09155390993691981
+          },
+          {
+            "view": "tile_0",
+            "model_seconds": 0.08559380390215665
+          },
+          {
+            "view": "tile_1",
+            "model_seconds": 0.08383324404712766
+          },
+          {
+            "view": "tile_2",
+            "model_seconds": 0.08365307399071753
+          },
+          {
+            "view": "tile_3",
+            "model_seconds": 0.08365862490609288
+          }
+        ]
+      },
+      {
+        "instance_id": "pred_0002",
+        "category": "dress",
+        "bbox": [
+          1.7828855514526367,
+          117.28044128417969,
+          261.45831298828125,
+          720.805419921875
+        ],
+        "score": 0.6322320103645325,
+        "baseline_candidates": [],
+        "expanded_candidates": [
+          {
+            "view": "tile_2",
+            "bbox": [
+              1.650373101234436,
+              685.8910217285156,
+              170.8582763671875,
+              720.89697265625
+            ],
+            "score": 0.4677634537220001,
+            "phrase": "sleeve cuff"
+          },
+          {
+            "view": "tile_1",
+            "bbox": [
+              204.6911392211914,
+              117.04902774095535,
+              261.9947204589844,
+              176.53740310668945
+            ],
+            "score": 0.35621654987335205,
+            "phrase": "sleeve cuff"
+          },
+          {
+            "view": "tile_2",
+            "bbox": [
+              1.0613287091255188,
+              328,
+              47.9482421875,
+              534.2793579101562
+            ],
+            "score": 0.3054645359516144,
+            "phrase": "sleeve cuff"
+          }
+        ],
+        "rejected": [
+          {
+            "view": "full",
+            "bbox": [
+              1,
+              117.67896473407745,
+              261.9950866699219,
+              720.1285400390625
+            ],
+            "score": 0.44395896792411804,
+            "phrase": "sleeve cuff",
+            "reason": "search_crop_area_guard",
+            "parent_area_ratio": 0.9974142950000139,
+            "view_area_ratio": 0.9974142950000139
+          },
+          {
+            "view": "full",
+            "bbox": [
+              1,
+              150.98956680297852,
+              261.9729919433594,
+              719.2222290039062
+            ],
+            "score": 0.3236362636089325,
+            "phrase": "sleeve cuff",
+            "reason": "search_crop_area_guard",
+            "parent_area_ratio": 0.9406852019392832,
+            "view_area_ratio": 0.9406852019392832
+          },
+          {
+            "view": "tile_0",
+            "bbox": [
+              1.0395888090133667,
+              137.24542427062988,
+              171,
+              509.871337890625
+            ],
+            "score": 0.6568585634231567,
+            "phrase": "sleeve cuff",
+            "reason": "search_crop_area_guard",
+            "parent_area_ratio": 0.4017384327933282,
+            "view_area_ratio": 0.9479367385012938
+          },
+          {
+            "view": "tile_1",
+            "bbox": [
+              92.02842247486115,
+              117.65409755706787,
+              262,
+              509.6521301269531
+            ],
+            "score": 0.4449772536754608,
+            "phrase": "sleeve cuff",
+            "reason": "search_crop_area_guard",
+            "parent_area_ratio": 0.4226518229850432,
+            "view_area_ratio": 0.997283699785274
+          },
+          {
+            "view": "tile_2",
+            "bbox": [
+              1.0441789627075195,
+              328,
+              171,
+              720.8943481445312
+            ],
+            "score": 0.4292623996734619,
+            "phrase": "sleeve cuff",
+            "reason": "search_crop_area_guard",
+            "parent_area_ratio": 0.42357895968013776,
+            "view_area_ratio": 0.9994713593745792
+          },
+          {
+            "view": "tile_3",
+            "bbox": [
+              92,
+              328,
+              261.98475646972656,
+              720.2536926269531
+            ],
+            "score": 0.487117737531662,
+            "phrase": "sleeve cuff",
+            "reason": "search_crop_area_guard",
+            "parent_area_ratio": 0.4229602675366243,
+            "view_area_ratio": 0.9980115015049185
+          }
+        ],
+        "grounding_calls": [
+          {
+            "view": "full",
+            "model_seconds": 0.08810974494554102
+          },
+          {
+            "view": "tile_0",
+            "model_seconds": 0.0856172579806298
+          },
+          {
+            "view": "tile_1",
+            "model_seconds": 0.0809669349109754
+          },
+          {
+            "view": "tile_2",
+            "model_seconds": 0.08071327803190798
+          },
+          {
+            "view": "tile_3",
+            "model_seconds": 0.08113266609143466
+          }
+        ]
+      }
+    ],
+    "arms": {
+      "baseline": {
+        "selected": null,
+        "proposal_count": 0,
+        "draft_selected_iou": 0,
+        "draft_any_candidate_iou": 0,
+        "draft_selected_hit": false,
+        "draft_any_candidate_hit": false,
+        "negative_has_proposal": false
+      },
+      "expanded": {
+        "selected": {
+          "view": "tile_2",
+          "bbox": [
+            1.316317081451416,
+            686.3861999511719,
+            304.8226623535156,
+            724.9765014648438
+          ],
+          "score": 0.32832586765289307,
+          "phrase": "sleeve cuff"
+        },
+        "proposal_count": 1,
+        "draft_selected_iou": 0.0,
+        "draft_any_candidate_iou": 0.0,
+        "draft_selected_hit": false,
+        "draft_any_candidate_hit": false,
+        "negative_has_proposal": false
+      }
+    }
+  },
+  {
+    "sample_id": "SEGTEST1_0169",
+    "draft_presence": "present",
+    "garment_match_iou": 0.7163268888443329,
+    "category_correct": false,
+    "all_instances": [
+      {
+        "instance_id": "pred_0000",
+        "category": "dress",
+        "bbox": [
+          50.17902755737305,
+          195.86505126953125,
+          377.9786376953125,
+          700.015380859375
+        ],
+        "score": 0.8919785618782043,
+        "baseline_candidates": [
+          {
+            "view": "full",
+            "bbox": [
+              203.6325225830078,
+              399.244384765625,
+              231.70065307617188,
+              452.2196350097656
+            ],
+            "score": 0.573760449886322,
+            "phrase": "sleeve cuff"
+          },
+          {
+            "view": "full",
+            "bbox": [
+              286.88929748535156,
+              366.7549743652344,
+              362.4974365234375,
+              429.10057067871094
+            ],
+            "score": 0.3464800715446472,
+            "phrase": "sleeve cuff"
+          },
+          {
+            "view": "full",
+            "bbox": [
+              116.7632827758789,
+              301.19947814941406,
+              155.46018981933594,
+              363.58177185058594
+            ],
+            "score": 0.32964378595352173,
+            "phrase": "sleeve cuff"
+          }
+        ],
+        "expanded_candidates": [
+          {
+            "view": "tile_0",
+            "bbox": [
+              203.7960662841797,
+              398.92872619628906,
+              232.50836181640625,
+              452.1745300292969
+            ],
+            "score": 0.5928376317024231,
+            "phrase": "sleeve cuff"
+          },
+          {
+            "view": "full",
+            "bbox": [
+              203.6325225830078,
+              399.244384765625,
+              231.70065307617188,
+              452.2196350097656
+            ],
+            "score": 0.573760449886322,
+            "phrase": "sleeve cuff"
+          },
+          {
+            "view": "tile_2",
+            "bbox": [
+              203.67079162597656,
+              399.00011253356934,
+              232.73770141601562,
+              452.5278778076172
+            ],
+            "score": 0.5716953277587891,
+            "phrase": "sleeve cuff"
+          },
+          {
+            "view": "tile_3",
+            "bbox": [
+              203.75181579589844,
+              398.7871398925781,
+              232.11561584472656,
+              452.2171630859375
+            ],
+            "score": 0.5052017569541931,
+            "phrase": "sleeve cuff"
+          },
+          {
+            "view": "tile_1",
+            "bbox": [
+              203.76793670654297,
+              399.0790252685547,
+              232.87882232666016,
+              452.2185363769531
+            ],
+            "score": 0.4555177092552185,
+            "phrase": "sleeve cuff"
+          },
+          {
+            "view": "tile_3",
+            "bbox": [
+              288.32757568359375,
+              372.0020173713565,
+              374.20606994628906,
+              428.5947914123535
+            ],
+            "score": 0.4143921434879303,
+            "phrase": "sleeve cuff"
+          },
+          {
+            "view": "tile_1",
+            "bbox": [
+              287.10164642333984,
+              364.75404357910156,
+              372.04583740234375,
+              428.8114929199219
+            ],
+            "score": 0.36701500415802,
+            "phrase": "sleeve cuff"
+          },
+          {
+            "view": "full",
+            "bbox": [
+              286.88929748535156,
+              366.7549743652344,
+              362.4974365234375,
+              429.10057067871094
+            ],
+            "score": 0.3464800715446472,
+            "phrase": "sleeve cuff"
+          },
+          {
+            "view": "full",
+            "bbox": [
+              116.7632827758789,
+              301.19947814941406,
+              155.46018981933594,
+              363.58177185058594
+            ],
+            "score": 0.32964378595352173,
+            "phrase": "sleeve cuff"
+          },
+          {
+            "view": "tile_1",
+            "bbox": [
+              303.00465393066406,
+              276.1788787841797,
+              375.99114990234375,
+              376.56512451171875
+            ],
+            "score": 0.32526224851608276,
+            "phrase": "sleeve cuff"
+          }
+        ],
+        "rejected": [],
+        "grounding_calls": [
+          {
+            "view": "full",
+            "model_seconds": 0.10004534607287496
+          },
+          {
+            "view": "tile_0",
+            "model_seconds": 0.09662485506851226
+          },
+          {
+            "view": "tile_1",
+            "model_seconds": 0.0920219300314784
+          },
+          {
+            "view": "tile_2",
+            "model_seconds": 0.09196700702887028
+          },
+          {
+            "view": "tile_3",
+            "model_seconds": 0.09194814192596823
+          }
+        ]
+      },
+      {
+        "instance_id": "pred_0001",
+        "category": "top",
+        "bbox": [
+          138.13453674316406,
+          179.1084747314453,
+          362.92132568359375,
+          535.4638061523438
+        ],
+        "score": 0.6360386610031128,
+        "baseline_candidates": [
+          {
+            "view": "full",
+            "bbox": [
+              203.6133270263672,
+              398.8929901123047,
+              233.0044708251953,
+              452.5174560546875
+            ],
+            "score": 0.48961952328681946,
+            "phrase": "sleeve cuff"
+          },
+          {
+            "view": "full",
+            "bbox": [
+              287.26629638671875,
+              367.14952087402344,
+              362.7205352783203,
+              428.660400390625
+            ],
+            "score": 0.4329637289047241,
+            "phrase": "sleeve cuff"
+          }
+        ],
+        "expanded_candidates": [
+          {
+            "view": "tile_2",
+            "bbox": [
+              203.8586654663086,
+              399.09500885009766,
+              229.24993896484375,
+              450.493896484375
+            ],
+            "score": 0.5576699376106262,
+            "phrase": "sleeve cuff"
+          },
+          {
+            "view": "full",
+            "bbox": [
+              203.6133270263672,
+              398.8929901123047,
+              233.0044708251953,
+              452.5174560546875
+            ],
+            "score": 0.48961952328681946,
+            "phrase": "sleeve cuff"
+          },
+          {
+            "view": "full",
+            "bbox": [
+              287.26629638671875,
+              367.14952087402344,
+              362.7205352783203,
+              428.660400390625
+            ],
+            "score": 0.4329637289047241,
+            "phrase": "sleeve cuff"
+          },
+          {
+            "view": "tile_1",
+            "bbox": [
+              287.1673583984375,
+              366.65606689453125,
+              362.9919738769531,
+              411.9934387207031
+            ],
+            "score": 0.3825637400150299,
+            "phrase": "sleeve cuff"
+          },
+          {
+            "view": "tile_3",
+            "bbox": [
+              216.01543843746185,
+              364.7192687988281,
+              363,
+              469.263427734375
+            ],
+            "score": 0.339430034160614,
+            "phrase": "sleeve cuff"
+          },
+          {
+            "view": "tile_3",
+            "bbox": [
+              216.00649693608284,
+              398.75858306884766,
+              229.24345207214355,
+              470.62062072753906
+            ],
+            "score": 0.30021578073501587,
+            "phrase": "sleeve cuff"
+          }
+        ],
+        "rejected": [
+          {
+            "view": "tile_0",
+            "bbox": [
+              138.01514929533005,
+              179,
+              285,
+              411.9766082763672
+            ],
+            "score": 0.41583433747291565,
+            "phrase": "sleeve cuff",
+            "reason": "search_crop_area_guard",
+            "parent_area_ratio": 0.42631848098577285,
+            "view_area_ratio": 0.9997965602517359
+          },
+          {
+            "view": "tile_1",
+            "bbox": [
+              216.0115218758583,
+              185.38512754440308,
+              363,
+              412
+            ],
+            "score": 0.39446234703063965,
+            "phrase": "sleeve cuff",
+            "reason": "search_crop_area_guard",
+            "parent_area_ratio": 0.4146875222227783,
+            "view_area_ratio": 0.9725197869418314
+          },
+          {
+            "view": "tile_3",
+            "bbox": [
+              216,
+              303.0442190170288,
+              362.99827575683594,
+              536
+            ],
+            "score": 0.35758844017982483,
+            "phrase": "sleeve cuff",
+            "reason": "search_crop_area_guard",
+            "parent_area_ratio": 0.4263193044766122,
+            "view_area_ratio": 0.9997984914917485
+          }
+        ],
+        "grounding_calls": [
+          {
+            "view": "full",
+            "model_seconds": 0.10122012498322874
+          },
+          {
+            "view": "tile_0",
+            "model_seconds": 0.09598057402763516
+          },
+          {
+            "view": "tile_1",
+            "model_seconds": 0.09414502198342234
+          },
+          {
+            "view": "tile_2",
+            "model_seconds": 0.09405232802964747
+          },
+          {
+            "view": "tile_3",
+            "model_seconds": 0.09395336196757853
+          }
+        ]
+      }
+    ],
+    "arms": {
+      "baseline": {
+        "selected": {
+          "view": "full",
+          "bbox": [
+            203.6133270263672,
+            398.8929901123047,
+            233.0044708251953,
+            452.5174560546875
+          ],
+          "score": 0.48961952328681946,
+          "phrase": "sleeve cuff"
+        },
+        "proposal_count": 2,
+        "draft_selected_iou": 0.0,
+        "draft_any_candidate_iou": 0.1992838216507212,
+        "draft_selected_hit": false,
+        "draft_any_candidate_hit": false,
+        "negative_has_proposal": false
+      },
+      "expanded": {
+        "selected": {
+          "view": "tile_2",
+          "bbox": [
+            203.8586654663086,
+            399.09500885009766,
+            229.24993896484375,
+            450.493896484375
+          ],
+          "score": 0.5576699376106262,
+          "phrase": "sleeve cuff"
+        },
+        "proposal_count": 6,
+        "draft_selected_iou": 0.0,
+        "draft_any_candidate_iou": 0.1992838216507212,
+        "draft_selected_hit": false,
+        "draft_any_candidate_hit": false,
+        "negative_has_proposal": false
+      }
+    }
+  },
+  {
+    "sample_id": "SEGTEST1_0213",
+    "draft_presence": "present",
+    "garment_match_iou": 0.7496960644676538,
+    "category_correct": true,
+    "all_instances": [
+      {
+        "instance_id": "pred_0000",
+        "category": "top",
+        "bbox": [
+          157.06436157226562,
+          40.28569793701172,
+          684.7301025390625,
+          436.00970458984375
+        ],
+        "score": 0.9916632175445557,
+        "baseline_candidates": [
+          {
+            "view": "full",
+            "bbox": [
+              275.32920837402344,
+              137.01148986816406,
+              356.5570373535156,
+              194.44247436523438
+            ],
+            "score": 0.5823001861572266,
+            "phrase": "sleeve cuff"
+          },
+          {
+            "view": "full",
+            "bbox": [
+              543.6352233886719,
+              40.01992132514715,
+              626.1191711425781,
+              104.81241607666016
+            ],
+            "score": 0.5714297890663147,
+            "phrase": "sleeve cuff"
+          }
+        ],
+        "expanded_candidates": [
+          {
+            "view": "tile_1",
+            "bbox": [
+              543.5350646972656,
+              40,
+              626.2123107910156,
+              104.58525085449219
+            ],
+            "score": 0.6449684500694275,
+            "phrase": "sleeve cuff"
+          },
+          {
+            "view": "full",
+            "bbox": [
+              275.32920837402344,
+              137.01148986816406,
+              356.5570373535156,
+              194.44247436523438
+            ],
+            "score": 0.5823001861572266,
+            "phrase": "sleeve cuff"
+          },
+          {
+            "view": "full",
+            "bbox": [
+              543.6352233886719,
+              40.01992132514715,
+              626.1191711425781,
+              104.81241607666016
+            ],
+            "score": 0.5714297890663147,
+            "phrase": "sleeve cuff"
+          },
+          {
+            "view": "tile_0",
+            "bbox": [
+              275.5961456298828,
+              137.55572509765625,
+              356.219482421875,
+              194.6931610107422
+            ],
+            "score": 0.503733217716217,
+            "phrase": "sleeve cuff"
+          },
+          {
+            "view": "tile_3",
+            "bbox": [
+              547.6156921386719,
+              178,
+              631.3628845214844,
+              273.42356872558594
+            ],
+            "score": 0.41985830664634705,
+            "phrase": "sleeve cuff"
+          },
+          {
+            "view": "tile_2",
+            "bbox": [
+              236.269775390625,
+              178,
+              353.5874481201172,
+              422.727294921875
+            ],
+            "score": 0.3789023160934448,
+            "phrase": "sleeve cuff"
+          },
+          {
+            "view": "tile_3",
+            "bbox": [
+              341.033154964447,
+              272.8544006347656,
+              558.5165100097656,
+              436.8040466308594
+            ],
+            "score": 0.36893215775489807,
+            "phrase": "sleeve cuff"
+          },
+          {
+            "view": "tile_0",
+            "bbox": [
+              250.25180053710938,
+              137.48950958251953,
+              356.4914245605469,
+              298.9976501464844
+            ],
+            "score": 0.3382577896118164,
+            "phrase": "sleeve cuff"
+          },
+          {
+            "view": "tile_2",
+            "bbox": [
+              157.99192702770233,
+              178,
+              279.25465393066406,
+              352.5918731689453
+            ],
+            "score": 0.32946524024009705,
+            "phrase": "sleeve cuff"
+          }
+        ],
+        "rejected": [
+          {
+            "view": "tile_3",
+            "bbox": [
+              341,
+              178,
+              568.2058715820312,
+              436.9626770019531
+            ],
+            "score": 0.3025233745574951,
+            "phrase": "sleeve cuff",
+            "reason": "search_crop_area_guard",
+            "parent_area_ratio": 0.2806934620231509,
+            "view_area_ratio": 0.660387006548496
+          }
+        ],
+        "grounding_calls": [
+          {
+            "view": "full",
+            "model_seconds": 0.09376376599539071
+          },
+          {
+            "view": "tile_0",
+            "model_seconds": 0.08504452102351934
+          },
+          {
+            "view": "tile_1",
+            "model_seconds": 0.08564622304402292
+          },
+          {
+            "view": "tile_2",
+            "model_seconds": 0.08551107801031321
+          },
+          {
+            "view": "tile_3",
+            "model_seconds": 0.0855031938990578
+          }
+        ]
+      },
+      {
+        "instance_id": "pred_0001",
+        "category": "dress",
+        "bbox": [
+          215.43994140625,
+          18.046245574951172,
+          669.1176147460938,
+          822.8565673828125
+        ],
+        "score": 0.968404233455658,
+        "baseline_candidates": [
+          {
+            "view": "full",
+            "bbox": [
+              275.28542709350586,
+              136.885498046875,
+              356.5733947753906,
+              194.38584899902344
+            ],
+            "score": 0.6194183230400085,
+            "phrase": "sleeve cuff"
+          },
+          {
+            "view": "full",
+            "bbox": [
+              542.7771301269531,
+              18.33316421508789,
+              626.478759765625,
+              104.95181274414062
+            ],
+            "score": 0.528497576713562,
+            "phrase": "sleeve cuff"
+          }
+        ],
+        "expanded_candidates": [
+          {
+            "view": "tile_0",
+            "bbox": [
+              274.90298080444336,
+              136.98397827148438,
+              356.8047790527344,
+              195.03688049316406
+            ],
+            "score": 0.7026364803314209,
+            "phrase": "sleeve cuff"
+          },
+          {
+            "view": "full",
+            "bbox": [
+              275.28542709350586,
+              136.885498046875,
+              356.5733947753906,
+              194.38584899902344
+            ],
+            "score": 0.6194183230400085,
+            "phrase": "sleeve cuff"
+          },
+          {
+            "view": "tile_2",
+            "bbox": [
+              337.57926177978516,
+              299,
+              510.5934143066406,
+              454.01026916503906
+            ],
+            "score": 0.5737343430519104,
+            "phrase": "sleeve cuff"
+          },
+          {
+            "view": "tile_1",
+            "bbox": [
+              543.1707611083984,
+              18,
+              626.3422546386719,
+              104.76331329345703
+            ],
+            "score": 0.5625446438789368,
+            "phrase": "sleeve cuff"
+          },
+          {
+            "view": "full",
+            "bbox": [
+              542.7771301269531,
+              18.33316421508789,
+              626.478759765625,
+              104.95181274414062
+            ],
+            "score": 0.528497576713562,
+            "phrase": "sleeve cuff"
+          },
+          {
+            "view": "tile_3",
+            "bbox": [
+              517.7920227050781,
+              768.4965515136719,
+              645.4912109375,
+              822.9431762695312
+            ],
+            "score": 0.47098508477211,
+            "phrase": "sleeve cuff"
+          },
+          {
+            "view": "tile_3",
+            "bbox": [
+              374.23389291763306,
+              299.08845138549805,
+              558.4022064208984,
+              452.6122589111328
+            ],
+            "score": 0.3949541449546814,
+            "phrase": "sleeve cuff"
+          }
+        ],
+        "rejected": [
+          {
+            "view": "tile_3",
+            "bbox": [
+              374.7614266872406,
+              299,
+              663.4566345214844,
+              822.7908325195312
+            ],
+            "score": 0.3905473053455353,
+            "phrase": "sleeve cuff",
+            "reason": "search_crop_area_guard",
+            "parent_area_ratio": 0.41284800561298923,
+            "view_area_ratio": 0.9749323244783992
+          }
+        ],
+        "grounding_calls": [
+          {
+            "view": "full",
+            "model_seconds": 0.09783485007937998
+          },
+          {
+            "view": "tile_0",
+            "model_seconds": 0.09348981000948697
+          },
+          {
+            "view": "tile_1",
+            "model_seconds": 0.09344486508052796
+          },
+          {
+            "view": "tile_2",
+            "model_seconds": 0.09352315310388803
+          },
+          {
+            "view": "tile_3",
+            "model_seconds": 0.09353778092190623
+          }
+        ]
+      }
+    ],
+    "arms": {
+      "baseline": {
+        "selected": {
+          "view": "full",
+          "bbox": [
+            275.28542709350586,
+            136.885498046875,
+            356.5733947753906,
+            194.38584899902344
+          ],
+          "score": 0.6194183230400085,
+          "phrase": "sleeve cuff"
+        },
+        "proposal_count": 2,
+        "draft_selected_iou": 0.0,
+        "draft_any_candidate_iou": 0.0,
+        "draft_selected_hit": false,
+        "draft_any_candidate_hit": false,
+        "negative_has_proposal": false
+      },
+      "expanded": {
+        "selected": {
+          "view": "tile_0",
+          "bbox": [
+            274.90298080444336,
+            136.98397827148438,
+            356.8047790527344,
+            195.03688049316406
+          ],
+          "score": 0.7026364803314209,
+          "phrase": "sleeve cuff"
+        },
+        "proposal_count": 7,
+        "draft_selected_iou": 0.0,
+        "draft_any_candidate_iou": 0.0,
+        "draft_selected_hit": false,
+        "draft_any_candidate_hit": false,
+        "negative_has_proposal": false
+      }
+    }
+  },
+  {
+    "sample_id": "SEGTEST1_0199",
+    "draft_presence": "present",
+    "garment_match_iou": 0.8332723396065429,
+    "category_correct": true,
+    "all_instances": [
+      {
+        "instance_id": "pred_0000",
+        "category": "outerwear",
+        "bbox": [
+          65.39187622070312,
+          76.20547485351562,
+          397.1112365722656,
+          619.294189453125
+        ],
+        "score": 0.9735941886901855,
+        "baseline_candidates": [
+          {
+            "view": "full",
+            "bbox": [
+              79.57285499572754,
+              87.76024532318115,
+              206.86964416503906,
+              585.429443359375
+            ],
+            "score": 0.33450889587402344,
+            "phrase": "sleeve cuff"
+          }
+        ],
+        "expanded_candidates": [
+          {
+            "view": "tile_2",
+            "bbox": [
+              79.88659381866455,
+              266.0506823062897,
+              177.1612319946289,
+              586.5110168457031
+            ],
+            "score": 0.4418802261352539,
+            "phrase": "sleeve cuff"
+          },
+          {
+            "view": "tile_3",
+            "bbox": [
+              256.83792877197266,
+              440.12823486328125,
+              352.36962890625,
+              593.746826171875
+            ],
+            "score": 0.41225841641426086,
+            "phrase": "sleeve cuff"
+          },
+          {
+            "view": "tile_1",
+            "bbox": [
+              251.10305786132812,
+              90.77866649627686,
+              303.72901153564453,
+              228.6085662841797
+            ],
+            "score": 0.40309157967567444,
+            "phrase": "sleeve cuff"
+          },
+          {
+            "view": "tile_3",
+            "bbox": [
+              256.5429916381836,
+              266,
+              397.51641845703125,
+              594.1107177734375
+            ],
+            "score": 0.3902093172073364,
+            "phrase": "sleeve cuff"
+          },
+          {
+            "view": "tile_0",
+            "bbox": [
+              140.20983123779297,
+              87.63172626495361,
+              206.71139526367188,
+              186.76372528076172
+            ],
+            "score": 0.35779809951782227,
+            "phrase": "sleeve cuff"
+          },
+          {
+            "view": "full",
+            "bbox": [
+              79.57285499572754,
+              87.76024532318115,
+              206.86964416503906,
+              585.429443359375
+            ],
+            "score": 0.33450889587402344,
+            "phrase": "sleeve cuff"
+          },
+          {
+            "view": "tile_1",
+            "bbox": [
+              181.12188550829887,
+              81.65747594833374,
+              303.6295623779297,
+              252.7859344482422
+            ],
+            "score": 0.3269466459751129,
+            "phrase": "sleeve cuff"
+          },
+          {
+            "view": "tile_1",
+            "bbox": [
+              181.01185177639127,
+              86.26962852478027,
+              207.13220024108887,
+              257.4436950683594
+            ],
+            "score": 0.3140415549278259,
+            "phrase": "sleeve cuff"
+          }
+        ],
+        "rejected": [
+          {
+            "view": "full",
+            "bbox": [
+              78.35079193115234,
+              82.05879211425781,
+              396.557861328125,
+              592.1141357421875
+            ],
+            "score": 0.38571569323539734,
+            "phrase": "sleeve cuff",
+            "reason": "search_crop_area_guard",
+            "parent_area_ratio": 0.8959504511466027,
+            "view_area_ratio": 0.8959504511466027
+          },
+          {
+            "view": "tile_0",
+            "bbox": [
+              80.46989440917969,
+              77.46737098693848,
+              281.6197967529297,
+              429.60101318359375
+            ],
+            "score": 0.3729800581932068,
+            "phrase": "sleeve cuff",
+            "reason": "search_crop_area_guard",
+            "parent_area_ratio": 0.39100671115861935,
+            "view_area_ratio": 0.9220709695619024
+          },
+          {
+            "view": "tile_1",
+            "bbox": [
+              181,
+              78.64514374732971,
+              397.836181640625,
+              429.5309143066406
+            ],
+            "score": 0.3697640001773834,
+            "phrase": "sleeve cuff",
+            "reason": "search_crop_area_guard",
+            "parent_area_ratio": 0.42000491675559426,
+            "view_area_ratio": 0.9904544596332814
+          },
+          {
+            "view": "tile_2",
+            "bbox": [
+              78.6560468673706,
+              266,
+              279.43218994140625,
+              588.9834289550781
+            ],
+            "score": 0.3990233838558197,
+            "phrase": "sleeve cuff",
+            "reason": "search_crop_area_guard",
+            "parent_area_ratio": 0.3579721291646098,
+            "view_area_ratio": 0.8441689075793094
+          }
+        ],
+        "grounding_calls": [
+          {
+            "view": "full",
+            "model_seconds": 0.10278245294466615
+          },
+          {
+            "view": "tile_0",
+            "model_seconds": 0.09589382098056376
+          },
+          {
+            "view": "tile_1",
+            "model_seconds": 0.09608260495588183
+          },
+          {
+            "view": "tile_2",
+            "model_seconds": 0.09644859388936311
+          },
+          {
+            "view": "tile_3",
+            "model_seconds": 0.09609855501912534
+          }
+        ]
+      },
+      {
+        "instance_id": "pred_0001",
+        "category": "dress",
+        "bbox": [
+          240.3692626953125,
+          95.02921295166016,
+          406.9565124511719,
+          609.6528930664062
+        ],
+        "score": 0.43912452459335327,
+        "baseline_candidates": [
+          {
+            "view": "full",
+            "bbox": [
+              250.8176145553589,
+              95.15291407704353,
+              303.85843658447266,
+              228.75186157226562
+            ],
+            "score": 0.41037115454673767,
+            "phrase": "sleeve cuff"
+          },
+          {
+            "view": "full",
+            "bbox": [
+              240,
+              95.18250155448914,
+              260.05089950561523,
+              129.2221336364746
+            ],
+            "score": 0.32015419006347656,
+            "phrase": "sleeve cuff"
+          }
+        ],
+        "expanded_candidates": [
+          {
+            "view": "tile_0",
+            "bbox": [
+              251.01977348327637,
+              95,
+              303.0064239501953,
+              228.9658660888672
+            ],
+            "score": 0.521289050579071,
+            "phrase": "sleeve cuff"
+          },
+          {
+            "view": "tile_1",
+            "bbox": [
+              398.8179702758789,
+              359.1919250488281,
+              407,
+              400.6468505859375
+            ],
+            "score": 0.45685067772865295,
+            "phrase": "sleeve cuff"
+          },
+          {
+            "view": "full",
+            "bbox": [
+              250.8176145553589,
+              95.15291407704353,
+              303.85843658447266,
+              228.75186157226562
+            ],
+            "score": 0.41037115454673767,
+            "phrase": "sleeve cuff"
+          },
+          {
+            "view": "tile_2",
+            "bbox": [
+              257.60973739624023,
+              438.7823486328125,
+              348.7140579223633,
+              594.3031005859375
+            ],
+            "score": 0.3957183361053467,
+            "phrase": "sleeve cuff"
+          },
+          {
+            "view": "tile_2",
+            "bbox": [
+              321.6131591796875,
+              546.4495849609375,
+              348.9856643676758,
+              607.6739807128906
+            ],
+            "score": 0.3858264684677124,
+            "phrase": "sleeve cuff"
+          },
+          {
+            "view": "tile_3",
+            "bbox": [
+              398.71240997314453,
+              358.9628219604492,
+              406.9906234741211,
+              400.80992889404297
+            ],
+            "score": 0.3734876811504364,
+            "phrase": "sleeve cuff"
+          },
+          {
+            "view": "tile_0",
+            "bbox": [
+              240,
+              95.10087359696627,
+              260.2790222167969,
+              128.63330459594727
+            ],
+            "score": 0.34863346815109253,
+            "phrase": "sleeve cuff"
+          },
+          {
+            "view": "full",
+            "bbox": [
+              240,
+              95.18250155448914,
+              260.05089950561523,
+              129.2221336364746
+            ],
+            "score": 0.32015419006347656,
+            "phrase": "sleeve cuff"
+          }
+        ],
+        "rejected": [
+          {
+            "view": "full",
+            "bbox": [
+              247.3056058883667,
+              95,
+              405.7855529785156,
+              598.3866271972656
+            ],
+            "score": 0.37287667393684387,
+            "phrase": "sleeve cuff",
+            "reason": "search_crop_area_guard",
+            "parent_area_ratio": 0.9275819550504177,
+            "view_area_ratio": 0.9275819550504177
+          },
+          {
+            "view": "tile_1",
+            "bbox": [
+              298.2196279168129,
+              121.13077163696289,
+              404.83531951904297,
+              429.7872009277344
+            ],
+            "score": 0.30433669686317444,
+            "phrase": "sleeve cuff",
+            "reason": "search_crop_area_guard",
+            "parent_area_ratio": 0.3826244831848198,
+            "view_area_ratio": 0.9012082343231665
+          },
+          {
+            "view": "tile_2",
+            "bbox": [
+              257.3160285949707,
+              275,
+              348.8976821899414,
+              597.9367065429688
+            ],
+            "score": 0.3561481535434723,
+            "phrase": "sleeve cuff",
+            "reason": "search_crop_area_guard",
+            "parent_area_ratio": 0.34387625826078566,
+            "view_area_ratio": 0.8099432450148946
+          }
+        ],
+        "grounding_calls": [
+          {
+            "view": "full",
+            "model_seconds": 0.0783832969609648
+          },
+          {
+            "view": "tile_0",
+            "model_seconds": 0.07625113904941827
+          },
+          {
+            "view": "tile_1",
+            "model_seconds": 0.07159128703642637
+          },
+          {
+            "view": "tile_2",
+            "model_seconds": 0.0715238299453631
+          },
+          {
+            "view": "tile_3",
+            "model_seconds": 0.07127975102048367
+          }
+        ]
+      }
+    ],
+    "arms": {
+      "baseline": {
+        "selected": {
+          "view": "full",
+          "bbox": [
+            79.57285499572754,
+            87.76024532318115,
+            206.86964416503906,
+            585.429443359375
+          ],
+          "score": 0.33450889587402344,
+          "phrase": "sleeve cuff"
+        },
+        "proposal_count": 1,
+        "draft_selected_iou": 0.014962384630773129,
+        "draft_any_candidate_iou": 0.014962384630773129,
+        "draft_selected_hit": false,
+        "draft_any_candidate_hit": false,
+        "negative_has_proposal": false
+      },
+      "expanded": {
+        "selected": {
+          "view": "tile_2",
+          "bbox": [
+            79.88659381866455,
+            266.0506823062897,
+            177.1612319946289,
+            586.5110168457031
+          ],
+          "score": 0.4418802261352539,
+          "phrase": "sleeve cuff"
+        },
+        "proposal_count": 8,
+        "draft_selected_iou": 0.029587225821062768,
+        "draft_any_candidate_iou": 0.03290388333357484,
+        "draft_selected_hit": false,
+        "draft_any_candidate_hit": false,
+        "negative_has_proposal": false
+      }
+    }
+  },
+  {
+    "sample_id": "SEGTEST1_0040",
+    "draft_presence": "absent",
+    "garment_match_iou": 0.30285318325759275,
+    "category_correct": false,
+    "all_instances": [
+      {
+        "instance_id": "pred_0000",
+        "category": "dress",
+        "bbox": [
+          204.05429077148438,
+          197.4310760498047,
+          291.3186340332031,
+          407.2063293457031
+        ],
+        "score": 0.937393307685852,
+        "baseline_candidates": [],
+        "expanded_candidates": [
+          {
+            "view": "tile_1",
+            "bbox": [
+              234.02233958244324,
+              245.5994110107422,
+              279.522274017334,
+              334.8965148925781
+            ],
+            "score": 0.45295682549476624,
+            "phrase": "sleeve cuff"
+          },
+          {
+            "view": "tile_0",
+            "bbox": [
+              242.01769638061523,
+              246.60663986206055,
+              261.99848556518555,
+              309.46998596191406
+            ],
+            "score": 0.38408124446868896,
+            "phrase": "sleeve cuff"
+          },
+          {
+            "view": "tile_0",
+            "bbox": [
+              212.92055416107178,
+              227.74737358093262,
+              261.97242736816406,
+              310.52542877197266
+            ],
+            "score": 0.3660270571708679,
+            "phrase": "sleeve cuff"
+          },
+          {
+            "view": "tile_1",
+            "bbox": [
+              271.8549995422363,
+              274.8542022705078,
+              291.99370193481445,
+              334.9508819580078
+            ],
+            "score": 0.3309878408908844,
+            "phrase": "sleeve cuff"
+          }
+        ],
+        "rejected": [
+          {
+            "view": "tile_0",
+            "bbox": [
+              211.18901538848877,
+              227.8794651031494,
+              261.9551200866699,
+              334.86436462402344
+            ],
+            "score": 0.340644508600235,
+            "phrase": "sleeve cuff",
+            "reason": "search_crop_area_guard",
+            "parent_area_ratio": 0.292503587365418,
+            "view_area_ratio": 0.678561545502384
+          },
+          {
+            "view": "tile_2",
+            "bbox": [
+              204.20671200752258,
+              270.0229572057724,
+              261.9017105102539,
+              408
+            ],
+            "score": 0.4889724552631378,
+            "phrase": "sleeve cuff",
+            "reason": "search_crop_area_guard",
+            "parent_area_ratio": 0.42872604897804056,
+            "view_area_ratio": 0.994575871742161
+          },
+          {
+            "view": "tile_3",
+            "bbox": [
+              234,
+              270.11628717184067,
+              291.96097564697266,
+              406.9979553222656
+            ],
+            "score": 0.3053353726863861,
+            "phrase": "sleeve cuff",
+            "reason": "search_crop_area_guard",
+            "parent_area_ratio": 0.42728323105255134,
+            "view_area_ratio": 0.9912287648905264
+          },
+          {
+            "view": "tile_3",
+            "bbox": [
+              234.04720801115036,
+              270.14676654338837,
+              288.5931816101074,
+              406.8161315917969
+            ],
+            "score": 0.30399641394615173,
+            "phrase": "sleeve cuff",
+            "reason": "search_crop_area_guard",
+            "parent_area_ratio": 0.40148446670167576,
+            "view_area_ratio": 0.9313797573359215
+          }
+        ],
+        "grounding_calls": [
+          {
+            "view": "full",
+            "model_seconds": 0.08383576897904277
+          },
+          {
+            "view": "tile_0",
+            "model_seconds": 0.08062583405990154
+          },
+          {
+            "view": "tile_1",
+            "model_seconds": 0.07866367395035923
+          },
+          {
+            "view": "tile_2",
+            "model_seconds": 0.07872226496692747
+          },
+          {
+            "view": "tile_3",
+            "model_seconds": 0.07875623891595751
+          }
+        ]
+      }
+    ],
+    "arms": {
+      "baseline": {
+        "selected": null,
+        "proposal_count": 0,
+        "draft_selected_iou": 0,
+        "draft_any_candidate_iou": 0,
+        "draft_selected_hit": false,
+        "draft_any_candidate_hit": false,
+        "negative_has_proposal": false
+      },
+      "expanded": {
+        "selected": null,
+        "proposal_count": 0,
+        "draft_selected_iou": 0,
+        "draft_any_candidate_iou": 0,
+        "draft_selected_hit": false,
+        "draft_any_candidate_hit": false,
+        "negative_has_proposal": false
+      }
+    }
+  },
+  {
+    "sample_id": "SEGTEST1_0044",
+    "draft_presence": "absent",
+    "garment_match_iou": 0.47775596818211635,
+    "category_correct": false,
+    "all_instances": [
+      {
+        "instance_id": "pred_0000",
+        "category": "dress",
+        "bbox": [
+          190.4346466064453,
+          144.012939453125,
+          323.4661865234375,
+          450.23382568359375
+        ],
+        "score": 0.9847785830497742,
+        "baseline_candidates": [
+          {
+            "view": "full",
+            "bbox": [
+              295.5880355834961,
+              155.3802490234375,
+              319.4835205078125,
+              173.6003875732422
+            ],
+            "score": 0.6390649080276489,
+            "phrase": "sleeve cuff"
+          }
+        ],
+        "expanded_candidates": [
+          {
+            "view": "tile_1",
+            "bbox": [
+              296.6325454711914,
+              156.22131061553955,
+              319.63560485839844,
+              173.3903350830078
+            ],
+            "score": 0.6524150371551514,
+            "phrase": "sleeve cuff"
+          },
+          {
+            "view": "full",
+            "bbox": [
+              295.5880355834961,
+              155.3802490234375,
+              319.4835205078125,
+              173.6003875732422
+            ],
+            "score": 0.6390649080276489,
+            "phrase": "sleeve cuff"
+          },
+          {
+            "view": "tile_3",
+            "bbox": [
+              256.3803939819336,
+              434.67076110839844,
+              293.40006256103516,
+              450.9614715576172
+            ],
+            "score": 0.3788653612136841,
+            "phrase": "sleeve cuff"
+          },
+          {
+            "view": "tile_3",
+            "bbox": [
+              239.80716133117676,
+              434.3831481933594,
+              294.0205535888672,
+              450.95591735839844
+            ],
+            "score": 0.30793383717536926,
+            "phrase": "sleeve cuff"
+          }
+        ],
+        "rejected": [
+          {
+            "view": "tile_0",
+            "bbox": [
+              190.40456557273865,
+              153.7034397125244,
+              277.8672790527344,
+              343.6829071044922
+            ],
+            "score": 0.42193132638931274,
+            "phrase": "sleeve cuff",
+            "reason": "search_crop_area_guard",
+            "parent_area_ratio": 0.40391170508011737,
+            "view_area_ratio": 0.9440977115673789
+          },
+          {
+            "view": "tile_2",
+            "bbox": [
+              191.82990646362305,
+              251,
+              277.94617462158203,
+              447.8236389160156
+            ],
+            "score": 0.4477415382862091,
+            "phrase": "sleeve cuff",
+            "reason": "search_crop_area_guard",
+            "parent_area_ratio": 0.412020936086268,
+            "view_area_ratio": 0.9630521175407326
+          },
+          {
+            "view": "tile_3",
+            "bbox": [
+              236.16507720947266,
+              251.08885860443115,
+              323.7530746459961,
+              446.507568359375
+            ],
+            "score": 0.45160946249961853,
+            "phrase": "sleeve cuff",
+            "reason": "search_crop_area_guard",
+            "parent_area_ratio": 0.4160711130600598,
+            "view_area_ratio": 0.9725189459695874
+          }
+        ],
+        "grounding_calls": [
+          {
+            "view": "full",
+            "model_seconds": 0.08244212798308581
+          },
+          {
+            "view": "tile_0",
+            "model_seconds": 0.08513360004872084
+          },
+          {
+            "view": "tile_1",
+            "model_seconds": 0.08418788097333163
+          },
+          {
+            "view": "tile_2",
+            "model_seconds": 0.08235135802533478
+          },
+          {
+            "view": "tile_3",
+            "model_seconds": 0.08242089906707406
+          }
+        ]
+      }
+    ],
+    "arms": {
+      "baseline": {
+        "selected": null,
+        "proposal_count": 0,
+        "draft_selected_iou": 0,
+        "draft_any_candidate_iou": 0,
+        "draft_selected_hit": false,
+        "draft_any_candidate_hit": false,
+        "negative_has_proposal": false
+      },
+      "expanded": {
+        "selected": null,
+        "proposal_count": 0,
+        "draft_selected_iou": 0,
+        "draft_any_candidate_iou": 0,
+        "draft_selected_hit": false,
+        "draft_any_candidate_hit": false,
+        "negative_has_proposal": false
+      }
+    }
+  },
+  {
+    "sample_id": "SEGTEST1_0226",
+    "draft_presence": "absent",
+    "garment_match_iou": 0.8642730955869969,
+    "category_correct": true,
+    "all_instances": [
+      {
+        "instance_id": "pred_0002",
+        "category": "dress",
+        "bbox": [
+          263.4146423339844,
+          204.18716430664062,
+          434.3361511230469,
+          554.7952880859375
+        ],
+        "score": 0.9671255350112915,
+        "baseline_candidates": [],
+        "expanded_candidates": [
+          {
+            "view": "tile_1",
+            "bbox": [
+              361.35387420654297,
+              233.82811546325684,
+              405.9239044189453,
+              327.00360107421875
+            ],
+            "score": 0.33130142092704773,
+            "phrase": "sleeve cuff"
+          },
+          {
+            "view": "tile_3",
+            "bbox": [
+              376.00433349609375,
+              487.0196990966797,
+              401.55519104003906,
+              527.5788879394531
+            ],
+            "score": 0.31345024704933167,
+            "phrase": "sleeve cuff"
+          }
+        ],
+        "rejected": [
+          {
+            "view": "full",
+            "bbox": [
+              277.6172227859497,
+              210.02716588974,
+              434.9328155517578,
+              547.0970153808594
+            ],
+            "score": 0.4251354932785034,
+            "phrase": "sleeve cuff",
+            "reason": "search_crop_area_guard",
+            "parent_area_ratio": 0.8783267603554158,
+            "view_area_ratio": 0.8783267603554158
+          },
+          {
+            "view": "tile_2",
+            "bbox": [
+              283.33827209472656,
+              326.01996916532516,
+              375,
+              546.8596801757812
+            ],
+            "score": 0.5857250690460205,
+            "phrase": "sleeve cuff",
+            "reason": "search_crop_area_guard",
+            "parent_area_ratio": 0.33529698372291206,
+            "view_area_ratio": 0.7892447559778402
+          },
+          {
+            "view": "tile_3",
+            "bbox": [
+              323.0184850692749,
+              326.0609585046768,
+              435,
+              545.7245941162109
+            ],
+            "score": 0.43694594502449036,
+            "phrase": "sleeve cuff",
+            "reason": "search_crop_area_guard",
+            "parent_area_ratio": 0.4074449528087585,
+            "view_area_ratio": 0.9590715334907348
+          }
+        ],
+        "grounding_calls": [
+          {
+            "view": "full",
+            "model_seconds": 0.0951866100076586
+          },
+          {
+            "view": "tile_0",
+            "model_seconds": 0.08839167503174394
+          },
+          {
+            "view": "tile_1",
+            "model_seconds": 0.08809957606717944
+          },
+          {
+            "view": "tile_2",
+            "model_seconds": 0.08766537997871637
+          },
+          {
+            "view": "tile_3",
+            "model_seconds": 0.08718138909898698
+          }
+        ]
+      },
+      {
+        "instance_id": "pred_0004",
+        "category": "top",
+        "bbox": [
+          277.7550354003906,
+          233.02362060546875,
+          419.9978332519531,
+          421.5645751953125
+        ],
+        "score": 0.6677040457725525,
+        "baseline_candidates": [
+          {
+            "view": "full",
+            "bbox": [
+              277.00195187330246,
+              416.2906036376953,
+              285.19530391693115,
+              422
+            ],
+            "score": 0.3164731562137604,
+            "phrase": "sleeve cuff"
+          }
+        ],
+        "expanded_candidates": [
+          {
+            "view": "tile_2",
+            "bbox": [
+              277,
+              416.7127990722656,
+              284.8267025947571,
+              422
+            ],
+            "score": 0.44536423683166504,
+            "phrase": "sleeve cuff"
+          },
+          {
+            "view": "tile_0",
+            "bbox": [
+              277.00317627191544,
+              241.6612377166748,
+              322.0149955749512,
+              331.7368927001953
+            ],
+            "score": 0.42006924748420715,
+            "phrase": "sleeve cuff"
+          },
+          {
+            "view": "tile_1",
+            "bbox": [
+              361.2244453430176,
+              234.07543885707855,
+              405.9142074584961,
+              326.47522735595703
+            ],
+            "score": 0.3250325620174408,
+            "phrase": "sleeve cuff"
+          },
+          {
+            "view": "full",
+            "bbox": [
+              277.00195187330246,
+              416.2906036376953,
+              285.19530391693115,
+              422
+            ],
+            "score": 0.3164731562137604,
+            "phrase": "sleeve cuff"
+          }
+        ],
+        "rejected": [
+          {
+            "view": "tile_3",
+            "bbox": [
+              327.0009589791298,
+              299,
+              420,
+              421.93367767333984
+            ],
+            "score": 0.30614951252937317,
+            "phrase": "sleeve cuff",
+            "reason": "search_crop_area_guard",
+            "parent_area_ratio": 0.4230108459240525,
+            "view_area_ratio": 0.9994504880487253
+          }
+        ],
+        "grounding_calls": [
+          {
+            "view": "full",
+            "model_seconds": 0.09484340599738061
+          },
+          {
+            "view": "tile_0",
+            "model_seconds": 0.08643393393140286
+          },
+          {
+            "view": "tile_1",
+            "model_seconds": 0.08737678709439933
+          },
+          {
+            "view": "tile_2",
+            "model_seconds": 0.0866896950174123
+          },
+          {
+            "view": "tile_3",
+            "model_seconds": 0.08617412601597607
+          }
+        ]
+      },
+      {
+        "instance_id": "pred_0007",
+        "category": "top",
+        "bbox": [
+          297.865966796875,
+          292.7520446777344,
+          398.17181396484375,
+          387.7602233886719
+        ],
+        "score": 0.40616828203201294,
+        "baseline_candidates": [
+          {
+            "view": "full",
+            "bbox": [
+              297,
+              292,
+              319.9575843811035,
+              331.2254867553711
+            ],
+            "score": 0.3241303563117981,
+            "phrase": "sleeve cuff"
+          }
+        ],
+        "expanded_candidates": [
+          {
+            "view": "tile_0",
+            "bbox": [
+              297.01135155558586,
+              292.0109855234623,
+              320.04260635375977,
+              331.66067123413086
+            ],
+            "score": 0.41876158118247986,
+            "phrase": "sleeve cuff"
+          },
+          {
+            "view": "tile_0",
+            "bbox": [
+              324.95029067993164,
+              310.1707935333252,
+              362.45699310302734,
+              341.1545066833496
+            ],
+            "score": 0.40750014781951904,
+            "phrase": "sleeve cuff"
+          },
+          {
+            "view": "full",
+            "bbox": [
+              297,
+              292,
+              319.9575843811035,
+              331.2254867553711
+            ],
+            "score": 0.3241303563117981,
+            "phrase": "sleeve cuff"
+          },
+          {
+            "view": "tile_3",
+            "bbox": [
+              393.3077850341797,
+              325,
+              398.9983139038086,
+              358.01080322265625
+            ],
+            "score": 0.32363513112068176,
+            "phrase": "sleeve cuff"
+          },
+          {
+            "view": "tile_2",
+            "bbox": [
+              297.0068778246641,
+              330.56803798675537,
+              311.1893844604492,
+              349.37807273864746
+            ],
+            "score": 0.3228434920310974,
+            "phrase": "sleeve cuff"
+          }
+        ],
+        "rejected": [
+          {
+            "view": "tile_1",
+            "bbox": [
+              332.00119805336,
+              292.0008261203766,
+              399,
+              355
+            ],
+            "score": 0.37433528900146484,
+            "phrase": "sleeve cuff",
+            "reason": "search_crop_area_guard",
+            "parent_area_ratio": 0.4310528159275762,
+            "view_area_ratio": 0.999969005819196
+          }
+        ],
+        "grounding_calls": [
+          {
+            "view": "full",
+            "model_seconds": 0.08542987599503249
+          },
+          {
+            "view": "tile_0",
+            "model_seconds": 0.07753772696014494
+          },
+          {
+            "view": "tile_1",
+            "model_seconds": 0.07725895300973207
+          },
+          {
+            "view": "tile_2",
+            "model_seconds": 0.07752321008592844
+          },
+          {
+            "view": "tile_3",
+            "model_seconds": 0.07801529497373849
+          }
+        ]
+      }
+    ],
+    "arms": {
+      "baseline": {
+        "selected": null,
+        "proposal_count": 0,
+        "draft_selected_iou": 0,
+        "draft_any_candidate_iou": 0,
+        "draft_selected_hit": false,
+        "draft_any_candidate_hit": false,
+        "negative_has_proposal": false
+      },
+      "expanded": {
+        "selected": {
+          "view": "tile_1",
+          "bbox": [
+            361.35387420654297,
+            233.82811546325684,
+            405.9239044189453,
+            327.00360107421875
+          ],
+          "score": 0.33130142092704773,
+          "phrase": "sleeve cuff"
+        },
+        "proposal_count": 2,
+        "draft_selected_iou": 0,
+        "draft_any_candidate_iou": 0,
+        "draft_selected_hit": false,
+        "draft_any_candidate_hit": false,
+        "negative_has_proposal": true
+      }
+    }
+  }
+]

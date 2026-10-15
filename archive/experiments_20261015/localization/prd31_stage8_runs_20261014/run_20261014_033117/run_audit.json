@@ -1,0 +1,34 @@
+{
+  "status": "STAGE8_SAM_BATCH_FEASIBILITY_COMPLETED",
+  "project_files_modified": false,
+  "scope": "GPU diagnostic ONLY; no production changes",
+  "checkpoint": {
+    "device": "NVIDIA GeForce RTX 4090",
+    "torch": "2.13.0+cu132",
+    "checkpoint_sha256": "c5ba795225349b1c521aac0517ac7c493d9818dcc17d558ac4a3f6f8669452f0",
+    "min_size": 640,
+    "max_size": 1024
+  },
+  "result": {
+    "status": "STAGE8_SAM_BATCH_FEASIBILITY_COMPLETED",
+    "cases": 2,
+    "box_prompts_compared": 5,
+    "timed_rows": 10,
+    "mean_serial_total_ms": 273.8525,
+    "mean_batch_total_ms": 117.1421,
+    "mean_serial_per_box_ms": 109.7129,
+    "mean_batch_amortized_per_box_ms": 48.8374,
+    "mean_speedup_ratio": 2.3392,
+    "min_mask_iou": 1.0,
+    "max_score_abs_diff": 2.6226043701171875e-06,
+    "parity_screen_0_995": "PASS_DIAGNOSTIC_ONLY",
+    "scope": "same-image multiple-box SAM throughput, DINO not included; no full per-query latency claim",
+    "limitations": [
+      "No changes to app pipeline or model weights.",
+      "No comparison with human local-part GT.",
+      "Batch amortized latency only applies when multiple distinct proposals for same ROI are available.",
+      "Image input is reprocessed within each method; runs alternate order to mitigate ordering effects.",
+      "Full pipeline still invokes DINO for each query; 30ms per-query target not achieved by this test."
+    ]
+  }
+}

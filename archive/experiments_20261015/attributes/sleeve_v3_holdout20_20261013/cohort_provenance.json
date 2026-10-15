@@ -1,0 +1,48 @@
+{
+  "purpose": "fresh cohort for V3 dev_v1 fixed-rule diagnostic; independent of *geometry rule development* only",
+  "sampling_protocol": "deterministic seed+relative path; no GT, model prediction, or visual curation",
+  "seed": "prd31-v3-holdout-20261013-v1",
+  "selected_n": 20,
+  "candidate_dir": "/workspace/fashion_data/raw/fashionpedia/images/test",
+  "candidate_files_count": 3200,
+  "checked_frozen_manifest_sha256": {
+    "configs/prd_8class_train_v5_balanced150_20261008.csv": "e8c277055efe4d042b4353bf2d4553bddddc7706eead9398f07f5efcd90bb38f",
+    "configs/prd_8class_val_v2_full_targets.csv": "39141f545ea5512d16ed074788b6f98474b33baff111d3b663ec0ffcc4c40b93",
+    "benchmark/prd_3_1_v1/manifests/segmentation_test_v1.csv": "c83204aca87c9c4dee304b774fd459bf5a18a2d1d65f0a3a9a79b92721224b89"
+  },
+  "train_val_image_exclusions": {
+    "configs/prd_8class_train_v5_balanced150_20261008.csv": {
+      "rows": 2299,
+      "columns": [
+        "source_image"
+      ],
+      "distinct_images": 625,
+      "resolved_for_SHA": 2299
+    },
+    "configs/prd_8class_val_v2_full_targets.csv": {
+      "rows": 88,
+      "columns": [
+        "source_image"
+      ],
+      "distinct_images": 32,
+      "resolved_for_SHA": 88
+    }
+  },
+  "core400_n_sha256": 400,
+  "dev8_n_sha256": 8,
+  "historical_candidates_excluded_filenames": 68,
+  "historical_candidates_excluded_sha256": 68,
+  "excluded_counts_during_selection": {
+    "blocked_manifest_or_dev_filename": 1,
+    "blocked_train_val_core_or_dev_sha256": 2,
+    "duplicate_sha256": 0,
+    "broken_image": 0
+  },
+  "sampling_inference_rule_sha256": "74c129c6d319c6441d9bd596351a22c26738b7f2a87621b5641a73f08b533b38",
+  "selected_file_manifest_sha256": "d07f619d3b552b2cd70a57c92078da62df94859686fef03a28f1e93b713246eb",
+  "limitations": [
+    "Filename+byte-SHA exclusions cannot rule out visually near-identical recompressed duplicates",
+    "Selection not stratified by sleeve class; no target garment in some images is possible",
+    "This cohort cannot become a blind PRD test after examining its results"
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "original_human_rows": 48,
+  "unique_case_region_keys": 48,
+  "unique_images": 12,
+  "source_hash_joins_verified": true,
+  "reviewer_missing": 48,
+  "presence_counts": {
+    "yes": 29,
+    "uncertain": 11,
+    "no": 8
+  },
+  "grade_counts": {
+    "coarse": 8,
+    "missed": 8,
+    "uncertain": 5,
+    "wrong": 18,
+    "correct": 1,
+    "not_applicable": 8
+  },
+  "task_register_count": 144,
+  "new_human_annotations_completed": 0,
+  "new_gpu_inference_completed": false,
+  "original_review_sha256": "4c8a3bf5e370b05fd64247bae6bad485ccf47f6cde228ddc8ac8da484f05f095",
+  "original_review_modified": false
+}

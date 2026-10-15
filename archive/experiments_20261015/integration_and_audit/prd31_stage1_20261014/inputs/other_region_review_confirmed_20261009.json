@@ -1,0 +1,735 @@
+{
+  "schema_version": "other_region_semantic_review_v1",
+  "source": "cached_consistency_review_gpu_20261009",
+  "purpose": "Semantic review of 28 emitted pocket/hem/waist candidate boxes; does not estimate recall or GT bbox IoU",
+  "cases": [
+    {
+      "review_id": "case_01_pred_0001_pocket",
+      "case_id": "case_01",
+      "instance_id": "pred_0001",
+      "source_image_sha256": "8ef5b366ce86a81bd1ca20f4f161c682b4343c5ae83af4beba47c712699350fc",
+      "prediction_file_sha256": "608c2b7ac19081e6206e609dbea5672620edebdb69ece752d4d0ba3255444fb3",
+      "predicted_category": "pants",
+      "garment_bbox": [
+        436.3764343261719,
+        145.06719970703125,
+        613.2537231445312,
+        511.9195861816406
+      ],
+      "target_region": "pocket",
+      "region_bbox": [
+        450,
+        248,
+        452,
+        257
+      ],
+      "model_region_status": "detected",
+      "model_phrase": "pocket",
+      "review_status": "confirmed",
+      "verdict": "wrong_region",
+      "comment": "目标服装为黑色长裤，侧插袋开口位于画面左侧髋部、手掌插入处。当前红框偏离实际口袋开口，定位不准确，需重新定位。"
+    },
+    {
+      "review_id": "case_01_pred_0001_waist",
+      "case_id": "case_01",
+      "instance_id": "pred_0001",
+      "source_image_sha256": "8ef5b366ce86a81bd1ca20f4f161c682b4343c5ae83af4beba47c712699350fc",
+      "prediction_file_sha256": "608c2b7ac19081e6206e609dbea5672620edebdb69ece752d4d0ba3255444fb3",
+      "predicted_category": "pants",
+      "garment_bbox": [
+        436.3764343261719,
+        145.06719970703125,
+        613.2537231445312,
+        511.9195861816406
+      ],
+      "target_region": "waist",
+      "region_bbox": [
+        449,
+        181,
+        526,
+        221
+      ],
+      "model_region_status": "detected",
+      "model_phrase": "waist",
+      "review_status": "confirmed",
+      "verdict": "wrong_region",
+      "comment": "目标服装为黑色长裤，腰头实际位于蓝色上衣下摆与裤子交界处，部分受到上衣和手臂遮挡。当前红框主要覆盖手掌及侧插袋区域，未准确定位腰头，应标记为局部定位错误。"
+    },
+    {
+      "review_id": "case_01_pred_0002_hem",
+      "case_id": "case_01",
+      "instance_id": "pred_0002",
+      "source_image_sha256": "8ef5b366ce86a81bd1ca20f4f161c682b4343c5ae83af4beba47c712699350fc",
+      "prediction_file_sha256": "608c2b7ac19081e6206e609dbea5672620edebdb69ece752d4d0ba3255444fb3",
+      "predicted_category": "top",
+      "garment_bbox": [
+        443.0443420410156,
+        9.750590324401855,
+        568.3530883789062,
+        186.50953674316406
+      ],
+      "target_region": "hem",
+      "region_bbox": [
+        452,
+        172,
+        494,
+        178
+      ],
+      "model_region_status": "requires_review",
+      "model_phrase": "bottom hem",
+      "review_status": "confirmed",
+      "verdict": "correct",
+      "comment": "目标服装为蓝色短袖上衣，红框位于上衣与黑色裤子交界处，基本覆盖可见的局部下摆边缘。由于上衣部分塞入裤腰，下摆未完整露出，但当前红框定位基本合理。"
+    },
+    {
+      "review_id": "case_01_pred_0002_waist",
+      "case_id": "case_01",
+      "instance_id": "pred_0002",
+      "source_image_sha256": "8ef5b366ce86a81bd1ca20f4f161c682b4343c5ae83af4beba47c712699350fc",
+      "prediction_file_sha256": "608c2b7ac19081e6206e609dbea5672620edebdb69ece752d4d0ba3255444fb3",
+      "predicted_category": "top",
+      "garment_bbox": [
+        443.0443420410156,
+        9.750590324401855,
+        568.3530883789062,
+        186.50953674316406
+      ],
+      "target_region": "waist",
+      "region_bbox": [
+        452,
+        172,
+        494,
+        178
+      ],
+      "model_region_status": "requires_review",
+      "model_phrase": "waist waistband",
+      "review_status": "confirmed",
+      "verdict": "wrong_region",
+      "comment": "目标服装为蓝色短袖上衣，当前红框主要覆盖上衣下摆与黑色裤腰的交界区域，未准确定位独立的腰部结构。上衣下摆不应直接作为腰头标注，建议将该局部定位判定为错误。"
+    },
+    {
+      "review_id": "case_02_pred_0000_pocket",
+      "case_id": "case_02",
+      "instance_id": "pred_0000",
+      "source_image_sha256": "1d9497454cad3e23f832502468dd0a415223b12f6bc9f214fe6c5a8e3b9811b4",
+      "prediction_file_sha256": "51a5ace011a0ec15926cb50a7ddc7cea00269d89a1ff92089da2d72b0d7ddee9",
+      "predicted_category": "dress",
+      "garment_bbox": [
+        301.68499755859375,
+        0,
+        575.519287109375,
+        613.1810302734375
+      ],
+      "target_region": "pocket",
+      "region_bbox": [
+        359,
+        241,
+        477,
+        353
+      ],
+      "model_region_status": "detected",
+      "model_phrase": "pocket",
+      "review_status": "confirmed",
+      "verdict": "upstream_instance_error",
+      "comment": "图中实际服装为蓝色破洞牛仔裤，模型将裤腿错误识别为 dress，存在上游类别及实例归属错误。当前红框位于右侧裤腿膝盖附近的破洞区域，并非口袋，不应作为 pocket 的正确定位。建议修正服装类别为 pants，并删除错误的口袋预测。"
+    },
+    {
+      "review_id": "case_02_pred_0001_pocket",
+      "case_id": "case_02",
+      "instance_id": "pred_0001",
+      "source_image_sha256": "1d9497454cad3e23f832502468dd0a415223b12f6bc9f214fe6c5a8e3b9811b4",
+      "prediction_file_sha256": "51a5ace011a0ec15926cb50a7ddc7cea00269d89a1ff92089da2d72b0d7ddee9",
+      "predicted_category": "pants",
+      "garment_bbox": [
+        10.728805541992188,
+        49.242431640625,
+        318.415771484375,
+        567.67138671875
+      ],
+      "target_region": "pocket",
+      "region_bbox": [
+        192,
+        171,
+        252,
+        261
+      ],
+      "model_region_status": "detected",
+      "model_phrase": "pocket",
+      "review_status": "confirmed",
+      "verdict": "wrong_region",
+      "comment": "目标服装为蓝色破洞牛仔裤，pants 类别正确。当前红框位于裤腿中部的破洞装饰区域，并非真实口袋，属于局部定位错误。画面未显示完整腰部，无法确认实际口袋位置，不应将破洞作为 pocket 正例。"
+    },
+    {
+      "review_id": "case_02_pred_0001_hem",
+      "case_id": "case_02",
+      "instance_id": "pred_0001",
+      "source_image_sha256": "1d9497454cad3e23f832502468dd0a415223b12f6bc9f214fe6c5a8e3b9811b4",
+      "prediction_file_sha256": "51a5ace011a0ec15926cb50a7ddc7cea00269d89a1ff92089da2d72b0d7ddee9",
+      "predicted_category": "pants",
+      "garment_bbox": [
+        10.728805541992188,
+        49.242431640625,
+        318.415771484375,
+        567.67138671875
+      ],
+      "target_region": "hem",
+      "region_bbox": [
+        155,
+        395,
+        284,
+        423
+      ],
+      "model_region_status": "detected",
+      "model_phrase": "bottom hem",
+      "review_status": "confirmed",
+      "verdict": "wrong_region",
+      "comment": "目标服装为蓝色破洞牛仔裤，pants 类别正确。当前红框位于膝盖下方的裤腿褶皱区域，并非裤脚。实际裤脚位于画面底部、裤腿末端与脚踝交界处，当前预测存在明显的局部定位错误。"
+    },
+    {
+      "review_id": "case_02_pred_0001_waist",
+      "case_id": "case_02",
+      "instance_id": "pred_0001",
+      "source_image_sha256": "1d9497454cad3e23f832502468dd0a415223b12f6bc9f214fe6c5a8e3b9811b4",
+      "prediction_file_sha256": "51a5ace011a0ec15926cb50a7ddc7cea00269d89a1ff92089da2d72b0d7ddee9",
+      "predicted_category": "pants",
+      "garment_bbox": [
+        10.728805541992188,
+        49.242431640625,
+        318.415771484375,
+        567.67138671875
+      ],
+      "target_region": "waist",
+      "region_bbox": [
+        152,
+        314,
+        272,
+        397
+      ],
+      "model_region_status": "detected",
+      "model_phrase": "waist waistband",
+      "review_status": "confirmed",
+      "verdict": "wrong_region",
+      "comment": "红框定位到膝部破洞，非腰部；腰头未入镜"
+    },
+    {
+      "review_id": "case_02_pred_0002_pocket",
+      "case_id": "case_02",
+      "instance_id": "pred_0002",
+      "source_image_sha256": "1d9497454cad3e23f832502468dd0a415223b12f6bc9f214fe6c5a8e3b9811b4",
+      "prediction_file_sha256": "51a5ace011a0ec15926cb50a7ddc7cea00269d89a1ff92089da2d72b0d7ddee9",
+      "predicted_category": "pants",
+      "garment_bbox": [
+        318.09832763671875,
+        23.792633056640625,
+        556.353271484375,
+        568.62890625
+      ],
+      "target_region": "pocket",
+      "region_bbox": [
+        358,
+        240,
+        477,
+        354
+      ],
+      "model_region_status": "detected",
+      "model_phrase": "pocket",
+      "review_status": "confirmed",
+      "verdict": "wrong_region",
+      "comment": "将牛仔裤膝部破洞误识别为口袋"
+    },
+    {
+      "review_id": "case_04_pred_0000_pocket",
+      "case_id": "case_04",
+      "instance_id": "pred_0000",
+      "source_image_sha256": "cf6b7b4aaafa31a9c1fa0a046ddcbf028f9a094bcc7b94932c2bce599438a0e9",
+      "prediction_file_sha256": "966bc0dc6223cd1470c6b9d6c1d9a94dd76180d23cfaaf73a5ddbcfaae06ef11",
+      "predicted_category": "outerwear",
+      "garment_bbox": [
+        72.96729278564453,
+        31.300634384155273,
+        435.27557373046875,
+        595.7026977539062
+      ],
+      "target_region": "pocket",
+      "region_bbox": [
+        97,
+        271,
+        307,
+        572
+      ],
+      "model_region_status": "detected",
+      "model_phrase": "pocket",
+      "review_status": "confirmed",
+      "verdict": "wrong_region",
+      "comment": "目标服装为浅色针织开衫，outerwear 类别基本正确。当前红框覆盖外套胸腹部较大范围，未见明确的口袋结构或开口，不符合 pocket 的局部定位要求。由于图像模糊，无法确认是否存在真实口袋，应判定为定位错误，不将该区域作为口袋正例。"
+    },
+    {
+      "review_id": "case_04_pred_0000_hem",
+      "case_id": "case_04",
+      "instance_id": "pred_0000",
+      "source_image_sha256": "cf6b7b4aaafa31a9c1fa0a046ddcbf028f9a094bcc7b94932c2bce599438a0e9",
+      "prediction_file_sha256": "966bc0dc6223cd1470c6b9d6c1d9a94dd76180d23cfaaf73a5ddbcfaae06ef11",
+      "predicted_category": "outerwear",
+      "garment_bbox": [
+        72.96729278564453,
+        31.300634384155273,
+        435.27557373046875,
+        595.7026977539062
+      ],
+      "target_region": "hem",
+      "region_bbox": [
+        127,
+        509,
+        275,
+        591
+      ],
+      "model_region_status": "requires_review",
+      "model_phrase": "bottom hem",
+      "review_status": "confirmed",
+      "verdict": "correct",
+      "comment": "目标服装为浅色针织开衫，当前红框位于外套左侧下摆附近，覆盖了部分可见的下摆边缘。虽然包含少量深色裤子且未覆盖完整下摆，但主要定位区域基本正确。"
+    },
+    {
+      "review_id": "case_04_pred_0001_hem",
+      "case_id": "case_04",
+      "instance_id": "pred_0001",
+      "source_image_sha256": "cf6b7b4aaafa31a9c1fa0a046ddcbf028f9a094bcc7b94932c2bce599438a0e9",
+      "prediction_file_sha256": "966bc0dc6223cd1470c6b9d6c1d9a94dd76180d23cfaaf73a5ddbcfaae06ef11",
+      "predicted_category": "dress",
+      "garment_bbox": [
+        78.27731323242188,
+        52.30518341064453,
+        440.67901611328125,
+        572.2970581054688
+      ],
+      "target_region": "hem",
+      "region_bbox": [
+        129,
+        508,
+        275,
+        571
+      ],
+      "model_region_status": "requires_review",
+      "model_phrase": "bottom hem",
+      "review_status": "confirmed",
+      "verdict": "upstream_instance_error",
+      "comment": "图中实际服装为浅色针织开衫，内搭黑白条纹上衣，未见明确连衣裙。模型将外套区域错误识别为 dress，存在上游类别及实例归属错误。当前红框虽位于针织开衫下摆附近，但不能作为 dress 的正确下摆定位，应优先修正服装类别和实例归属。"
+    },
+    {
+      "review_id": "case_06_pred_0002_hem",
+      "case_id": "case_06",
+      "instance_id": "pred_0002",
+      "source_image_sha256": "68cc723eca099c94e3b8b6b62ab7f67a024963cec1329f19f41abbf9cdced0d6",
+      "prediction_file_sha256": "2e11901c3302d118f51aa25f0e7b023f72b34af9fae175b9579703fd6c9c11c4",
+      "predicted_category": "dress",
+      "garment_bbox": [
+        343.71746826171875,
+        237.4724578857422,
+        526.16552734375,
+        892.310546875
+      ],
+      "target_region": "hem",
+      "region_bbox": [
+        446,
+        867,
+        483,
+        887
+      ],
+      "model_region_status": "detected",
+      "model_phrase": "bottom hem",
+      "review_status": "confirmed",
+      "verdict": "wrong_region",
+      "comment": "目标服装为浅底棕色动物纹长款连衣裙，dress 类别正确。当前红框位于右脚鞋面附近，未准确覆盖连衣裙下摆。实际下摆位于双脚上方的裙摆末端，当前预测将鞋子区域误识别为下摆，属于局部定位错误。"
+    },
+    {
+      "review_id": "case_06_pred_0002_waist",
+      "case_id": "case_06",
+      "instance_id": "pred_0002",
+      "source_image_sha256": "68cc723eca099c94e3b8b6b62ab7f67a024963cec1329f19f41abbf9cdced0d6",
+      "prediction_file_sha256": "2e11901c3302d118f51aa25f0e7b023f72b34af9fae175b9579703fd6c9c11c4",
+      "predicted_category": "dress",
+      "garment_bbox": [
+        343.71746826171875,
+        237.4724578857422,
+        526.16552734375,
+        892.310546875
+      ],
+      "target_region": "waist",
+      "region_bbox": [
+        386,
+        359,
+        507,
+        404
+      ],
+      "model_region_status": "detected",
+      "model_phrase": "waist waistband",
+      "review_status": "confirmed",
+      "verdict": "correct",
+      "comment": "目标服装为浅底棕色动物纹连衣裙，dress 类别正确。当前红框位于上衣部分与裙摆连接处，覆盖了可见的腰部接缝和收腰区域，定位基本准确，可作为 waist 部位的有效预测。"
+    },
+    {
+      "review_id": "case_06_pred_0003_hem",
+      "case_id": "case_06",
+      "instance_id": "pred_0003",
+      "source_image_sha256": "68cc723eca099c94e3b8b6b62ab7f67a024963cec1329f19f41abbf9cdced0d6",
+      "prediction_file_sha256": "2e11901c3302d118f51aa25f0e7b023f72b34af9fae175b9579703fd6c9c11c4",
+      "predicted_category": "top",
+      "garment_bbox": [
+        349.46160888671875,
+        253.72467041015625,
+        534.6682739257812,
+        451.4455871582031
+      ],
+      "target_region": "hem",
+      "region_bbox": [
+        394,
+        369,
+        500,
+        423
+      ],
+      "model_region_status": "requires_review",
+      "model_phrase": "bottom hem",
+      "review_status": "confirmed",
+      "verdict": "upstream_instance_error",
+      "comment": "图中实际服装为浅底棕色动物纹长款连衣裙，上下部分通过腰部连接，属于同一件 dress。模型将上半部分单独识别为 top，存在实例拆分及归属错误。当前红框位于连衣裙腰部接缝附近，并非独立上衣的下摆，不应作为 top 的正确下摆定位。"
+    },
+    {
+      "review_id": "case_06_pred_0003_waist",
+      "case_id": "case_06",
+      "instance_id": "pred_0003",
+      "source_image_sha256": "68cc723eca099c94e3b8b6b62ab7f67a024963cec1329f19f41abbf9cdced0d6",
+      "prediction_file_sha256": "2e11901c3302d118f51aa25f0e7b023f72b34af9fae175b9579703fd6c9c11c4",
+      "predicted_category": "top",
+      "garment_bbox": [
+        349.46160888671875,
+        253.72467041015625,
+        534.6682739257812,
+        451.4455871582031
+      ],
+      "target_region": "waist",
+      "region_bbox": [
+        394,
+        369,
+        500,
+        423
+      ],
+      "model_region_status": "requires_review",
+      "model_phrase": "waist waistband",
+      "review_status": "confirmed",
+      "verdict": "upstream_instance_error",
+      "comment": "图中服装整体为浅底棕色动物纹长款连衣裙，上下部分在腰部相连，属于同一件 dress。模型将上半部分识别为独立 top，存在上游类别及实例拆分错误。当前红框虽然基本覆盖连衣裙腰部连接区域，但不能作为独立 top 实例的正确腰部定位，建议优先修正类别和实例归属。"
+    },
+    {
+      "review_id": "case_07_pred_0001_pocket",
+      "case_id": "case_07",
+      "instance_id": "pred_0001",
+      "source_image_sha256": "df91edad8133b9d732873c9a4df1d76a5bb76799a3aff8948337c47fec241b9d",
+      "prediction_file_sha256": "1d5f53a08f3ae72f5d0800a33cafce2f80881cdfe7825cf453b78824c0f63cd7",
+      "predicted_category": "outerwear",
+      "garment_bbox": [
+        218.64480590820312,
+        167.94996643066406,
+        528.9531860351562,
+        647.6387939453125
+      ],
+      "target_region": "pocket",
+      "region_bbox": [
+        422,
+        413,
+        507,
+        547
+      ],
+      "model_region_status": "requires_review",
+      "model_phrase": "pocket",
+      "review_status": "confirmed",
+      "verdict": "wrong_region",
+      "comment": "目标服装为深蓝绿色长款外套，outerwear 类别正确。当前红框主要覆盖人物手持的黑色斜挎包，并非外套口袋，属于其他物体干扰造成的局部定位错误。图中未见清晰的外套口袋开口，暂无法确认实际口袋位置，不应将包体作为 pocket 正例。"
+    },
+    {
+      "review_id": "case_07_pred_0001_hem",
+      "case_id": "case_07",
+      "instance_id": "pred_0001",
+      "source_image_sha256": "df91edad8133b9d732873c9a4df1d76a5bb76799a3aff8948337c47fec241b9d",
+      "prediction_file_sha256": "1d5f53a08f3ae72f5d0800a33cafce2f80881cdfe7825cf453b78824c0f63cd7",
+      "predicted_category": "outerwear",
+      "garment_bbox": [
+        218.64480590820312,
+        167.94996643066406,
+        528.9531860351562,
+        647.6387939453125
+      ],
+      "target_region": "hem",
+      "region_bbox": [
+        422,
+        411,
+        512,
+        547
+      ],
+      "model_region_status": "requires_review",
+      "model_phrase": "hem",
+      "review_status": "confirmed",
+      "verdict": "wrong_region",
+      "comment": "目标服装为深蓝绿色长款外套，outerwear 类别正确。当前红框主要覆盖人物手持的黑色斜挎包，并非外套下摆。实际下摆位于外套底部、大腿附近，当前预测受到包体遮挡干扰，属于明显的局部定位错误。"
+    },
+    {
+      "review_id": "case_07_pred_0003_waist",
+      "case_id": "case_07",
+      "instance_id": "pred_0003",
+      "source_image_sha256": "df91edad8133b9d732873c9a4df1d76a5bb76799a3aff8948337c47fec241b9d",
+      "prediction_file_sha256": "1d5f53a08f3ae72f5d0800a33cafce2f80881cdfe7825cf453b78824c0f63cd7",
+      "predicted_category": "pants",
+      "garment_bbox": [
+        274.3359069824219,
+        497.0727233886719,
+        429.58612060546875,
+        839.519287109375
+      ],
+      "target_region": "waist",
+      "region_bbox": [
+        350,
+        625,
+        365,
+        826
+      ],
+      "model_region_status": "detected",
+      "model_phrase": "waistband",
+      "review_status": "confirmed",
+      "verdict": "wrong_region",
+      "comment": "目标服装为黑色长裤，pants 类别正确。当前红框位于两条裤腿之间的背景空隙，明显偏离实际腰部位置。真实腰头受到黑色内搭及外套遮挡，无法完整确认，当前预测属于局部定位错误，不应作为 waist 正例。"
+    },
+    {
+      "review_id": "case_07_pred_0007_hem",
+      "case_id": "case_07",
+      "instance_id": "pred_0007",
+      "source_image_sha256": "df91edad8133b9d732873c9a4df1d76a5bb76799a3aff8948337c47fec241b9d",
+      "prediction_file_sha256": "1d5f53a08f3ae72f5d0800a33cafce2f80881cdfe7825cf453b78824c0f63cd7",
+      "predicted_category": "top",
+      "garment_bbox": [
+        325.3606872558594,
+        190.6814727783203,
+        403.7320251464844,
+        380.42340087890625
+      ],
+      "target_region": "hem",
+      "region_bbox": [
+        355,
+        339,
+        377,
+        366
+      ],
+      "model_region_status": "requires_review",
+      "model_phrase": "bottom hem",
+      "review_status": "confirmed",
+      "verdict": "wrong_region",
+      "comment": "目标服装为黑色内搭衬衫，top 类别正确。当前红框位于胸腹部，覆盖斜挎包背带上的金属配件，并非上衣下摆。实际下摆受到外套及裤腰遮挡，无法准确确认，当前预测属于其他物体干扰造成的局部定位错误，不应作为 hem 正例。"
+    },
+    {
+      "review_id": "case_07_pred_0007_waist",
+      "case_id": "case_07",
+      "instance_id": "pred_0007",
+      "source_image_sha256": "df91edad8133b9d732873c9a4df1d76a5bb76799a3aff8948337c47fec241b9d",
+      "prediction_file_sha256": "1d5f53a08f3ae72f5d0800a33cafce2f80881cdfe7825cf453b78824c0f63cd7",
+      "predicted_category": "top",
+      "garment_bbox": [
+        325.3606872558594,
+        190.6814727783203,
+        403.7320251464844,
+        380.42340087890625
+      ],
+      "target_region": "waist",
+      "region_bbox": [
+        355,
+        339,
+        377,
+        366
+      ],
+      "model_region_status": "requires_review",
+      "model_phrase": "waist waistband",
+      "review_status": "confirmed",
+      "verdict": "wrong_region",
+      "comment": "目标服装为黑色内搭衬衫，top 类别正确。当前红框位于胸腹部，覆盖斜挎包背带上的金属配件，并非上衣下摆。实际下摆受到外套及裤腰遮挡，无法准确确认，当前预测属于其他物体干扰造成的局部定位错误，不应作为 hem 正例。"
+    },
+    {
+      "review_id": "case_08_pred_0004_pocket",
+      "case_id": "case_08",
+      "instance_id": "pred_0004",
+      "source_image_sha256": "ba1a04bce9114beba860ee784d34f2a2c43b4fee2e7680e69726795e5b4b79fe",
+      "prediction_file_sha256": "3a4077c8220328bc4b60f1904d634e3e52c33026bbb9a0e05770b3a900dd81f5",
+      "predicted_category": "top",
+      "garment_bbox": [
+        139.066162109375,
+        227.38458251953125,
+        309.9280090332031,
+        476.14276123046875
+      ],
+      "target_region": "pocket",
+      "region_bbox": [
+        161,
+        311,
+        302,
+        472
+      ],
+      "model_region_status": "requires_review",
+      "model_phrase": "pocket",
+      "review_status": "confirmed",
+      "verdict": "wrong_region",
+      "comment": "目标服装为彩色拼接针织上衣，top 类别基本正确。当前红框覆盖胸腹部大面积格纹及几何拼接图案，未见明确的口袋开口或袋体结构，疑似将服装表面图案误识别为 pocket，属于局部定位错误，不应作为口袋正例。"
+    },
+    {
+      "review_id": "case_08_pred_0004_hem",
+      "case_id": "case_08",
+      "instance_id": "pred_0004",
+      "source_image_sha256": "ba1a04bce9114beba860ee784d34f2a2c43b4fee2e7680e69726795e5b4b79fe",
+      "prediction_file_sha256": "3a4077c8220328bc4b60f1904d634e3e52c33026bbb9a0e05770b3a900dd81f5",
+      "predicted_category": "top",
+      "garment_bbox": [
+        139.066162109375,
+        227.38458251953125,
+        309.9280090332031,
+        476.14276123046875
+      ],
+      "target_region": "hem",
+      "region_bbox": [
+        161,
+        311,
+        302,
+        472
+      ],
+      "model_region_status": "requires_review",
+      "model_phrase": "bottom hem",
+      "review_status": "confirmed",
+      "verdict": "wrong_region",
+      "comment": "目标服装为彩色拼接针织上衣，top 类别基本正确。当前红框覆盖胸腹部大面积彩色拼接图案，虽然下缘接近上衣底部，但未准确定位下摆边缘，框选范围明显过大。实际下摆位于紫色上衣与下方花卉裙装交界处，属于局部定位错误。"
+    },
+    {
+      "review_id": "case_08_pred_0005_pocket",
+      "case_id": "case_08",
+      "instance_id": "pred_0005",
+      "source_image_sha256": "ba1a04bce9114beba860ee784d34f2a2c43b4fee2e7680e69726795e5b4b79fe",
+      "prediction_file_sha256": "3a4077c8220328bc4b60f1904d634e3e52c33026bbb9a0e05770b3a900dd81f5",
+      "predicted_category": "dress",
+      "garment_bbox": [
+        135.66168212890625,
+        217.34762573242188,
+        309.0784606933594,
+        684.142578125
+      ],
+      "target_region": "pocket",
+      "region_bbox": [
+        160,
+        310,
+        301,
+        472
+      ],
+      "model_region_status": "detected",
+      "model_phrase": "pocket",
+      "review_status": "confirmed",
+      "verdict": "upstream_instance_error",
+      "comment": "图中可见彩色拼接针织上衣及下方花卉裙装，模型将不同服装区域合并为 dress，存在上游类别及实例归属错误。当前红框覆盖彩色上衣胸腹部的格纹和几何拼接图案，并非真实口袋，不能作为 dress 的 pocket 正确定位。建议优先修正服装实例归属，并删除错误的口袋预测。"
+    },
+    {
+      "review_id": "case_08_pred_0005_hem",
+      "case_id": "case_08",
+      "instance_id": "pred_0005",
+      "source_image_sha256": "ba1a04bce9114beba860ee784d34f2a2c43b4fee2e7680e69726795e5b4b79fe",
+      "prediction_file_sha256": "3a4077c8220328bc4b60f1904d634e3e52c33026bbb9a0e05770b3a900dd81f5",
+      "predicted_category": "dress",
+      "garment_bbox": [
+        135.66168212890625,
+        217.34762573242188,
+        309.0784606933594,
+        684.142578125
+      ],
+      "target_region": "hem",
+      "region_bbox": [
+        167,
+        459,
+        309,
+        661
+      ],
+      "model_region_status": "detected",
+      "model_phrase": "bottom hem",
+      "review_status": "confirmed",
+      "verdict": "upstream_instance_error",
+      "comment": "图中实际为彩色拼接针织上衣与独立花卉裙装的组合，模型将不同服装实例合并为 dress，存在上游类别及实例归属错误。当前红框主要覆盖花卉裙装主体及部分下摆，但不能作为 dress 的正确下摆定位。建议分别识别 top 和 skirt，并重新核对裙装下摆位置。"
+    },
+    {
+      "review_id": "case_08_pred_0005_waist",
+      "case_id": "case_08",
+      "instance_id": "pred_0005",
+      "source_image_sha256": "ba1a04bce9114beba860ee784d34f2a2c43b4fee2e7680e69726795e5b4b79fe",
+      "prediction_file_sha256": "3a4077c8220328bc4b60f1904d634e3e52c33026bbb9a0e05770b3a900dd81f5",
+      "predicted_category": "dress",
+      "garment_bbox": [
+        135.66168212890625,
+        217.34762573242188,
+        309.0784606933594,
+        684.142578125
+      ],
+      "target_region": "waist",
+      "region_bbox": [
+        254,
+        636,
+        268,
+        649
+      ],
+      "model_region_status": "detected",
+      "model_phrase": "waist waistband",
+      "review_status": "confirmed",
+      "verdict": "upstream_instance_error",
+      "comment": "图中实际为彩色拼接针织上衣与独立花卉裙装，模型将两件服装错误合并为 dress，存在上游类别及实例归属错误。当前红框位于花卉裙装下摆附近，并非腰部或腰头。实际腰部应位于上衣下摆与裙装上缘交界处，部分受到上衣遮挡。建议优先修正类别及实例归属，同时重新核对腰部定位。"
+    },
+    {
+      "review_id": "case_08_pred_0006_pocket",
+      "case_id": "case_08",
+      "instance_id": "pred_0006",
+      "source_image_sha256": "ba1a04bce9114beba860ee784d34f2a2c43b4fee2e7680e69726795e5b4b79fe",
+      "prediction_file_sha256": "3a4077c8220328bc4b60f1904d634e3e52c33026bbb9a0e05770b3a900dd81f5",
+      "predicted_category": "outerwear",
+      "garment_bbox": [
+        100.33010864257812,
+        211.43072509765625,
+        328.18408203125,
+        573.6913452148438
+      ],
+      "target_region": "pocket",
+      "region_bbox": [
+        265,
+        328,
+        268,
+        355
+      ],
+      "model_region_status": "detected",
+      "model_phrase": "pocket",
+      "review_status": "confirmed",
+      "verdict": "wrong_region",
+      "comment": "目标服装为彩色拼接针织开衫，outerwear 类别基本正确。当前红框位于开衫前侧纽扣门襟附近，未覆盖明确的口袋开口或袋体，疑似将门襟结构误识别为 pocket，属于局部定位错误。图中未见可靠的口袋结构，不应将该区域作为口袋正例。"
+    },
+    {
+      "review_id": "case_08_pred_0006_hem",
+      "case_id": "case_08",
+      "instance_id": "pred_0006",
+      "source_image_sha256": "ba1a04bce9114beba860ee784d34f2a2c43b4fee2e7680e69726795e5b4b79fe",
+      "prediction_file_sha256": "3a4077c8220328bc4b60f1904d634e3e52c33026bbb9a0e05770b3a900dd81f5",
+      "predicted_category": "outerwear",
+      "garment_bbox": [
+        100.33010864257812,
+        211.43072509765625,
+        328.18408203125,
+        573.6913452148438
+      ],
+      "target_region": "hem",
+      "region_bbox": [
+        166,
+        459,
+        302,
+        504
+      ],
+      "model_region_status": "detected",
+      "model_phrase": "bottom hem",
+      "review_status": "confirmed",
+      "verdict": "wrong_region",
+      "comment": "目标服装为彩色拼接针织开衫，outerwear 类别基本正确。当前红框主要覆盖下方花卉裙装的上部，只有上缘接近开衫下摆，未准确覆盖目标服装的下摆区域，存在跨服装实例的局部定位错误。实际下摆位于紫色开衫底部与花卉裙装交界处。"
+    }
+  ]
+}

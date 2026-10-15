@@ -1,0 +1,25 @@
+{
+  "n_images": 8,
+  "n_gt_annotated_arms": 8,
+  "n_bbox_matches": 8,
+  "n_associated_annotated_arms": 7,
+  "n_ratio_outputs": 6,
+  "ratio_coverage": 0.75,
+  "status_counts": {
+    "predicted": 6,
+    "annotated_side_unavailable": 1,
+    "no_stable_cuff_boundary": 1
+  },
+  "conditional_joint_mean_error_diag": 0.011604701547532511,
+  "conditional_joint_pck_005_diag": 1.0,
+  "conditional_cuff_mean_error_px": 16.34678003539496,
+  "conditional_cuff_mean_error_diag": 0.013353615863023242,
+  "conditional_cuff_mean_error_arm": 0.05792552901718046,
+  "conditional_ratio_MAE": 0.030802653309360103,
+  "conditional_ratio_RMSE": 0.042678188012663675,
+  "n_category_errors_on_matched_instances": 0,
+  "scope": "8 previously reviewed development examples; no blind-test or teacher acceptance claim",
+  "warning": "Report conditional errors WITH coverage. Both arms predicted; manual side is used only for evaluation matching. Person association accuracy still needs per-image review.",
+  "gt_labels_sha256": "cb34eff7920e99c6803546afc4aa29c5ae3c0a1adacd313ecd0a2619cc8cef15",
+  "predictions_sha256": "f20beef7f6e5fb0703cc162238b7736bc4e431a90c881555ded0231344b03b94"
+}

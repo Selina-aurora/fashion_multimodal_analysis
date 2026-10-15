@@ -1,0 +1,11 @@
+﻿priority,case,region,issue,suggested_action
+HIGH,case_11,pocket,presence=no，但备注写“无法确认是否存在隐藏式口袋”,复看原图；若不能排除隐藏式口袋，presence更宜uncertain。
+MEDIUM,case_05,pocket,presence=no；备注仅说明“可见区域未发现明确口袋”,确认no是否依据可靠，不能可靠确定则改uncertain；保留候选框疑似误检备注。
+MEDIUM,case_08,pocket,presence=no；依据为未观察到口袋,复看是否允许确认不存在；否则用uncertain。
+MEDIUM,case_09,pocket,presence=no；框落在挎包上，可确认跨对象错误,局部定位wrong的视觉结论可保留；部位存在性如不确定，应单独处理。
+MEDIUM,case_09,cuff,presence=no、模型detected，错误结论记为not_applicable,统计时必须单列为不存在部位的误检(FP)，不能当成模型正确。
+MEDIUM,case_05,pocket,presence=no、模型detected，错误结论记为not_applicable,统计为疑似不存在部位的误检；不要简单算作模型正确。
+MEDIUM,case_10,all,上游实例目标错配：裁剪落在背景牛仔服而非前景连衣裙,分离上游分割/裁剪错误与局部模型错误；暂不进入纯定位模型归因。
+LOW,case_03 / case_04 / case_07 / case_10,hem / cuff / pocket,6条presence=uncertain、localization=wrong,可保留明显的跨对象误定位判断；但因部位存在性不确定，不进入29条“可见部位”统计。
+HIGH,all,all,48条human_reviewer均为空,如果需要可追溯的人工GT/对外验收材料，补审核人标识、日期和复核规范；当前CSV不要自动署名。
+MEDIUM,all,all,48条均未画人工GT bbox或mask,只能做主观分类与错误分析，不能据此计算真实bbox/mask IoU或正式92%定位验收。

@@ -1,0 +1,90 @@
+[
+  {
+    "source_image": "/workspace/fashion_data/raw/train/train/image/013010.jpg",
+    "selection_category": "top",
+    "case_dir": "case_01",
+    "pipeline_status": "completed",
+    "instance_count": 4,
+    "failures": [],
+    "interface_issues": [],
+    "chain_wall_ms": 4550.386026035994,
+    "error": null
+  },
+  {
+    "source_image": "/workspace/fashion_data/raw/train/train/image/051719.jpg",
+    "selection_category": "pants",
+    "case_dir": "case_02",
+    "pipeline_status": "completed",
+    "instance_count": 3,
+    "failures": [],
+    "interface_issues": [],
+    "chain_wall_ms": 4450.24166116491,
+    "error": null
+  },
+  {
+    "source_image": "/workspace/fashion_data/raw/train/train/image/032014.jpg",
+    "selection_category": "skirt",
+    "case_dir": "case_03",
+    "pipeline_status": "completed",
+    "instance_count": 1,
+    "failures": [],
+    "interface_issues": [],
+    "chain_wall_ms": 2097.9977641254663,
+    "error": null
+  },
+  {
+    "source_image": "/workspace/fashion_data/raw/train/train/image/092719.jpg",
+    "selection_category": "outerwear",
+    "case_dir": "case_04",
+    "pipeline_status": "completed",
+    "instance_count": 2,
+    "failures": [],
+    "interface_issues": [],
+    "chain_wall_ms": 4227.576958015561,
+    "error": null
+  },
+  {
+    "source_image": "/workspace/fashion_data/raw/train/train/image/002278.jpg",
+    "selection_category": "dress",
+    "case_dir": "case_05",
+    "pipeline_status": "completed",
+    "instance_count": 1,
+    "failures": [],
+    "interface_issues": [],
+    "chain_wall_ms": 2023.9936728030443,
+    "error": null
+  },
+  {
+    "source_image": "/workspace/fashion_data/raw/fashionpedia/images/test/311db0d6f5b7be84ac3c952a443ef981.jpg",
+    "selection_category": "shoe",
+    "case_dir": "case_06",
+    "pipeline_status": "completed",
+    "instance_count": 4,
+    "failures": [],
+    "interface_issues": [],
+    "chain_wall_ms": 4563.790994230658,
+    "error": null
+  },
+  {
+    "source_image": "/workspace/fashion_data/raw/fashionpedia/images/test/4f23f05daee3cbdd96295f84825e3581.jpg",
+    "selection_category": "bag",
+    "case_dir": "case_07",
+    "pipeline_status": "completed",
+    "instance_count": 9,
+    "failures": [],
+    "interface_issues": [],
+    "chain_wall_ms": 8106.951125897467,
+    "error": null
+  },
+  {
+    "source_image": "/workspace/fashion_data/raw/fashionpedia/images/test/32227cade6d3646824f9c0f3fa9dc9e7.jpg",
+    "selection_category": "accessory",
+    "case_dir": "case_08",
+    "pipeline_status": "completed",
+    "instance_count": 10,
+    "failures": [],
+    "interface_issues": [],
+    "chain_wall_ms": 12138.301108963788,
+    "error": null
+  }
+]

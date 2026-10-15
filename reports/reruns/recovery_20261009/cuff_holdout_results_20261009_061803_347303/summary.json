@@ -1,0 +1,1147 @@
+{
+  "status": "FROZEN_CUFF_HOLDOUT_EVALUATION_COMPLETED",
+  "candidate_epoch": 27,
+  "candidate_sha256": "52f8d78ffa032b9135eea8ba8ea511e942e2f12cd793f49bbca324f720a91c84",
+  "base_sha256": "c5ba795225349b1c521aac0517ac7c493d9818dcc17d558ac4a3f6f8669452f0",
+  "annotations_sha256": "e955462cdc2bb9cd4b1b4bf3b961750eeb7c1660882b7eb3f5f32a892a09e62a",
+  "selected_images": 18,
+  "usable_images": 15,
+  "positive_images": 12,
+  "negative_images": 3,
+  "gt_cuff_boxes": 21,
+  "ambiguous_excluded": [
+    "v5_validation_00053",
+    "v5_validation_00013",
+    "v5_validation_00085"
+  ],
+  "confidence_threshold": 0.4,
+  "matching_iou": 0.5,
+  "native_roi_metrics": {
+    "tp": 3,
+    "fp": 3,
+    "fn": 18,
+    "precision": 0.5,
+    "recall": 0.14285714285714285,
+    "f1": 0.2222222222222222,
+    "negative_images": 3,
+    "negative_images_with_fp": 0
+  },
+  "predicted_roi_metrics": {
+    "tp": 5,
+    "fp": 1,
+    "fn": 16,
+    "precision": 0.8333333333333334,
+    "recall": 0.23809523809523808,
+    "f1": 0.37037037037037035,
+    "negative_images": 3,
+    "negative_images_with_fp": 0
+  },
+  "matched_predicted_targets": 13,
+  "unmatched_negative_targets": 0,
+  "cases": {
+    "native_roi": [
+      {
+        "record_id": "v5_validation_00014",
+        "category": "top",
+        "presence": "present",
+        "truth_boxes": [
+          [
+            273,
+            336,
+            325,
+            376
+          ],
+          [
+            471,
+            334,
+            525,
+            376
+          ]
+        ],
+        "predicted_boxes": [
+          [
+            459.0878448486328,
+            348.1300354003906,
+            527.0639038085938,
+            388.4889373779297
+          ],
+          [
+            263.99655532836914,
+            330.0280303955078,
+            320.76780700683594,
+            363.0926208496094
+          ]
+        ],
+        "scores": [
+          0.9300033450126648,
+          0.7773399949073792
+        ],
+        "crop_xyxy": [
+          240,
+          203,
+          557,
+          426
+        ],
+        "gt_boxes_not_fully_inside_crop": 0,
+        "tp": 0,
+        "fp": 2,
+        "fn": 2,
+        "matches": []
+      },
+      {
+        "record_id": "v5_validation_00027",
+        "category": "top",
+        "presence": "present",
+        "truth_boxes": [
+          [
+            224,
+            169,
+            285,
+            240
+          ]
+        ],
+        "predicted_boxes": [],
+        "scores": [],
+        "crop_xyxy": [
+          18,
+          77,
+          640,
+          806
+        ],
+        "gt_boxes_not_fully_inside_crop": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 1,
+        "matches": []
+      },
+      {
+        "record_id": "v5_validation_00016",
+        "category": "top",
+        "presence": "present",
+        "truth_boxes": [
+          [
+            156,
+            185,
+            187,
+            222
+          ],
+          [
+            344,
+            208,
+            406,
+            268
+          ]
+        ],
+        "predicted_boxes": [
+          [
+            337.50010681152344,
+            219.53599548339844,
+            407.25177001953125,
+            276.3890686035156
+          ]
+        ],
+        "scores": [
+          0.9711453914642334
+        ],
+        "crop_xyxy": [
+          127,
+          89,
+          432,
+          404
+        ],
+        "gt_boxes_not_fully_inside_crop": 0,
+        "tp": 1,
+        "fp": 0,
+        "fn": 1,
+        "matches": [
+          {
+            "prediction_index": 0,
+            "truth_index": 1,
+            "iou": 0.6419309142498677
+          }
+        ]
+      },
+      {
+        "record_id": "v5_validation_00046",
+        "category": "top",
+        "presence": "present",
+        "truth_boxes": [
+          [
+            237,
+            394,
+            293,
+            450
+          ],
+          [
+            464,
+            356,
+            527,
+            408
+          ]
+        ],
+        "predicted_boxes": [
+          [
+            235.33440589904785,
+            418.14524841308594,
+            295.5617904663086,
+            449.58868408203125
+          ]
+        ],
+        "scores": [
+          0.5217955112457275
+        ],
+        "crop_xyxy": [
+          204,
+          163,
+          560,
+          535
+        ],
+        "gt_boxes_not_fully_inside_crop": 0,
+        "tp": 1,
+        "fp": 0,
+        "fn": 1,
+        "matches": [
+          {
+            "prediction_index": 0,
+            "truth_index": 0,
+            "iou": 0.5386581852778111
+          }
+        ]
+      },
+      {
+        "record_id": "v5_validation_00035",
+        "category": "top",
+        "presence": "present",
+        "truth_boxes": [
+          [
+            347,
+            296,
+            394,
+            331
+          ],
+          [
+            497,
+            309,
+            533,
+            344
+          ]
+        ],
+        "predicted_boxes": [
+          [
+            349.29454040527344,
+            304.5495147705078,
+            393.97388458251953,
+            338.34493255615234
+          ]
+        ],
+        "scores": [
+          0.7199119329452515
+        ],
+        "crop_xyxy": [
+          323,
+          235,
+          550,
+          421
+        ],
+        "gt_boxes_not_fully_inside_crop": 0,
+        "tp": 1,
+        "fp": 0,
+        "fn": 1,
+        "matches": [
+          {
+            "prediction_index": 0,
+            "truth_index": 0,
+            "iou": 0.5989307905495799
+          }
+        ]
+      },
+      {
+        "record_id": "v5_validation_00018",
+        "category": "outerwear",
+        "presence": "present",
+        "truth_boxes": [
+          [
+            193,
+            601,
+            264,
+            660
+          ],
+          [
+            495,
+            444,
+            558,
+            510
+          ]
+        ],
+        "predicted_boxes": [
+          [
+            516.5343017578125,
+            311.1050109863281,
+            547.0128479003906,
+            348.44898986816406
+          ]
+        ],
+        "scores": [
+          0.7378011345863342
+        ],
+        "crop_xyxy": [
+          74,
+          124,
+          640,
+          960
+        ],
+        "gt_boxes_not_fully_inside_crop": 0,
+        "tp": 0,
+        "fp": 1,
+        "fn": 2,
+        "matches": []
+      },
+      {
+        "record_id": "v5_validation_00024",
+        "category": "outerwear",
+        "presence": "present",
+        "truth_boxes": [
+          [
+            6,
+            349,
+            118,
+            392
+          ]
+        ],
+        "predicted_boxes": [],
+        "scores": [],
+        "crop_xyxy": [
+          0,
+          100,
+          305,
+          395
+        ],
+        "gt_boxes_not_fully_inside_crop": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 1,
+        "matches": []
+      },
+      {
+        "record_id": "v5_validation_00036",
+        "category": "outerwear",
+        "presence": "present",
+        "truth_boxes": [
+          [
+            138,
+            525,
+            177,
+            543
+          ],
+          [
+            300,
+            459,
+            324,
+            480
+          ]
+        ],
+        "predicted_boxes": [],
+        "scores": [],
+        "crop_xyxy": [
+          76,
+          174,
+          349,
+          579
+        ],
+        "gt_boxes_not_fully_inside_crop": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 2,
+        "matches": []
+      },
+      {
+        "record_id": "v5_validation_00062",
+        "category": "outerwear",
+        "presence": "present",
+        "truth_boxes": [
+          [
+            495,
+            488,
+            534,
+            520
+          ],
+          [
+            230,
+            499,
+            262,
+            527
+          ]
+        ],
+        "predicted_boxes": [],
+        "scores": [],
+        "crop_xyxy": [
+          186,
+          142,
+          567,
+          680
+        ],
+        "gt_boxes_not_fully_inside_crop": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 2,
+        "matches": []
+      },
+      {
+        "record_id": "v5_validation_00064",
+        "category": "outerwear",
+        "presence": "present",
+        "truth_boxes": [
+          [
+            642,
+            441,
+            670,
+            475
+          ]
+        ],
+        "predicted_boxes": [],
+        "scores": [],
+        "crop_xyxy": [
+          531,
+          280,
+          682,
+          513
+        ],
+        "gt_boxes_not_fully_inside_crop": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 1,
+        "matches": []
+      },
+      {
+        "record_id": "v5_validation_00031",
+        "category": "dress",
+        "presence": "present",
+        "truth_boxes": [
+          [
+            352,
+            3,
+            412,
+            44
+          ],
+          [
+            558,
+            832,
+            612,
+            873
+          ]
+        ],
+        "predicted_boxes": [],
+        "scores": [],
+        "crop_xyxy": [
+          128,
+          0,
+          790,
+          1174
+        ],
+        "gt_boxes_not_fully_inside_crop": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 2,
+        "matches": []
+      },
+      {
+        "record_id": "v5_validation_00006",
+        "category": "dress",
+        "presence": "absent",
+        "truth_boxes": [],
+        "predicted_boxes": [],
+        "scores": [],
+        "crop_xyxy": [
+          22,
+          145,
+          468,
+          624
+        ],
+        "gt_boxes_not_fully_inside_crop": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "matches": []
+      },
+      {
+        "record_id": "v5_validation_00005",
+        "category": "dress",
+        "presence": "present",
+        "truth_boxes": [
+          [
+            186,
+            356,
+            235,
+            394
+          ],
+          [
+            245,
+            342,
+            279,
+            369
+          ]
+        ],
+        "predicted_boxes": [],
+        "scores": [],
+        "crop_xyxy": [
+          25,
+          198,
+          379,
+          685
+        ],
+        "gt_boxes_not_fully_inside_crop": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 2,
+        "matches": []
+      },
+      {
+        "record_id": "v5_validation_00072",
+        "category": "dress",
+        "presence": "absent",
+        "truth_boxes": [],
+        "predicted_boxes": [],
+        "scores": [],
+        "crop_xyxy": [
+          82,
+          201,
+          377,
+          758
+        ],
+        "gt_boxes_not_fully_inside_crop": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "matches": []
+      },
+      {
+        "record_id": "v5_validation_00081",
+        "category": "dress",
+        "presence": "absent",
+        "truth_boxes": [],
+        "predicted_boxes": [],
+        "scores": [],
+        "crop_xyxy": [
+          497,
+          72,
+          777,
+          681
+        ],
+        "gt_boxes_not_fully_inside_crop": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "matches": []
+      }
+    ],
+    "predicted_roi": [
+      {
+        "record_id": "v5_validation_00014",
+        "category": "top",
+        "presence": "present",
+        "truth_boxes": [
+          [
+            273,
+            336,
+            325,
+            376
+          ],
+          [
+            471,
+            334,
+            525,
+            376
+          ]
+        ],
+        "predicted_boxes": [
+          [
+            461.9692840576172,
+            342.3855438232422,
+            527.9510498046875,
+            388.9317321777344
+          ],
+          [
+            264.3085079193115,
+            334.0411376953125,
+            328.25516510009766,
+            367.87261962890625
+          ],
+          [
+            501.3694763183594,
+            371.3608093261719,
+            545.5372009277344,
+            428.43284606933594
+          ]
+        ],
+        "scores": [
+          0.965453028678894,
+          0.7507497072219849,
+          0.6916177272796631
+        ],
+        "target_association_status": "MATCHED_PREDICTED_TARGET",
+        "garment_iou": 0.820878434161174,
+        "predicted_garment_box": [
+          267.23089599609375,
+          218.09957885742188,
+          527.2048950195312,
+          441.3145751953125
+        ],
+        "crop_xyxy": [
+          241,
+          195,
+          554,
+          464
+        ],
+        "tp": 2,
+        "fp": 1,
+        "fn": 0,
+        "matches": [
+          {
+            "prediction_index": 0,
+            "truth_index": 1,
+            "iou": 0.5150881993417391
+          },
+          {
+            "prediction_index": 1,
+            "truth_index": 0,
+            "iou": 0.6408949954377321
+          }
+        ]
+      },
+      {
+        "record_id": "v5_validation_00027",
+        "category": "top",
+        "presence": "present",
+        "truth_boxes": [
+          [
+            224,
+            169,
+            285,
+            240
+          ]
+        ],
+        "predicted_boxes": [],
+        "scores": [],
+        "target_association_status": "MATCHED_PREDICTED_TARGET",
+        "garment_iou": 0.8302932792069789,
+        "predicted_garment_box": [
+          117.70779418945312,
+          170.81515502929688,
+          592.6810302734375,
+          728.947021484375
+        ],
+        "crop_xyxy": [
+          70,
+          115,
+          640,
+          785
+        ],
+        "tp": 0,
+        "fp": 0,
+        "fn": 1,
+        "matches": []
+      },
+      {
+        "record_id": "v5_validation_00016",
+        "category": "top",
+        "presence": "present",
+        "truth_boxes": [
+          [
+            156,
+            185,
+            187,
+            222
+          ],
+          [
+            344,
+            208,
+            406,
+            268
+          ]
+        ],
+        "predicted_boxes": [
+          [
+            336.77333068847656,
+            215.1769561767578,
+            407.7857971191406,
+            271.95709228515625
+          ]
+        ],
+        "scores": [
+          0.9460906386375427
+        ],
+        "target_association_status": "MATCHED_PREDICTED_TARGET",
+        "garment_iou": 0.8078961487476288,
+        "predicted_garment_box": [
+          125.13423919677734,
+          128.19691467285156,
+          401.12274169921875,
+          389.4890441894531
+        ],
+        "crop_xyxy": [
+          97,
+          102,
+          429,
+          416
+        ],
+        "tp": 1,
+        "fp": 0,
+        "fn": 1,
+        "matches": [
+          {
+            "prediction_index": 0,
+            "truth_index": 1,
+            "iou": 0.7315118147580195
+          }
+        ]
+      },
+      {
+        "record_id": "v5_validation_00046",
+        "category": "top",
+        "presence": "present",
+        "truth_boxes": [
+          [
+            237,
+            394,
+            293,
+            450
+          ],
+          [
+            464,
+            356,
+            527,
+            408
+          ]
+        ],
+        "predicted_boxes": [
+          [
+            237.28937149047852,
+            418.39227294921875,
+            294.49629974365234,
+            450.8576965332031
+          ]
+        ],
+        "scores": [
+          0.4970584511756897
+        ],
+        "target_association_status": "MATCHED_PREDICTED_TARGET",
+        "garment_iou": 0.9598354044697428,
+        "predicted_garment_box": [
+          234.0098876953125,
+          193.68597412109375,
+          535.0731201171875,
+          511.2055358886719
+        ],
+        "crop_xyxy": [
+          203,
+          161,
+          566,
+          543
+        ],
+        "tp": 1,
+        "fp": 0,
+        "fn": 1,
+        "matches": [
+          {
+            "prediction_index": 0,
+            "truth_index": 0,
+            "iou": 0.544767876777057
+          }
+        ]
+      },
+      {
+        "record_id": "v5_validation_00035",
+        "category": "top",
+        "presence": "present",
+        "truth_boxes": [
+          [
+            347,
+            296,
+            394,
+            331
+          ],
+          [
+            497,
+            309,
+            533,
+            344
+          ]
+        ],
+        "predicted_boxes": [
+          [
+            344.43006801605225,
+            299.5241241455078,
+            392.35871505737305,
+            335.92760467529297
+          ]
+        ],
+        "scores": [
+          0.5427096486091614
+        ],
+        "target_association_status": "MATCHED_PREDICTED_TARGET",
+        "garment_iou": 0.7177250777649431,
+        "predicted_garment_box": [
+          349.46160888671875,
+          253.72467041015625,
+          534.6682739257812,
+          451.4455871582031
+        ],
+        "crop_xyxy": [
+          330,
+          233,
+          554,
+          472
+        ],
+        "tp": 1,
+        "fp": 0,
+        "fn": 1,
+        "matches": [
+          {
+            "prediction_index": 0,
+            "truth_index": 0,
+            "iou": 0.7276546924304703
+          }
+        ]
+      },
+      {
+        "record_id": "v5_validation_00018",
+        "category": "outerwear",
+        "presence": "present",
+        "truth_boxes": [
+          [
+            193,
+            601,
+            264,
+            660
+          ],
+          [
+            495,
+            444,
+            558,
+            510
+          ]
+        ],
+        "predicted_boxes": [],
+        "scores": [],
+        "target_association_status": "MATCHED_PREDICTED_TARGET",
+        "garment_iou": 0.8553060771486878,
+        "predicted_garment_box": [
+          108.19479370117188,
+          265.9737854003906,
+          625.31103515625,
+          953.4560546875
+        ],
+        "crop_xyxy": [
+          56,
+          197,
+          640,
+          960
+        ],
+        "tp": 0,
+        "fp": 0,
+        "fn": 2,
+        "matches": []
+      },
+      {
+        "record_id": "v5_validation_00024",
+        "category": "outerwear",
+        "presence": "present",
+        "truth_boxes": [
+          [
+            6,
+            349,
+            118,
+            392
+          ]
+        ],
+        "predicted_boxes": [],
+        "scores": [],
+        "target_association_status": "GARMENT_CLASS_MISMATCH",
+        "garment_iou": 0.8155976872341816,
+        "predicted_garment_box": [
+          10.399847984313965,
+          130.8389129638672,
+          258.63494873046875,
+          395.0
+        ],
+        "crop_xyxy": null,
+        "tp": 0,
+        "fp": 0,
+        "fn": 1,
+        "matches": []
+      },
+      {
+        "record_id": "v5_validation_00036",
+        "category": "outerwear",
+        "presence": "present",
+        "truth_boxes": [
+          [
+            138,
+            525,
+            177,
+            543
+          ],
+          [
+            300,
+            459,
+            324,
+            480
+          ]
+        ],
+        "predicted_boxes": [],
+        "scores": [],
+        "target_association_status": "MATCHED_PREDICTED_TARGET",
+        "garment_iou": 0.8986636458964048,
+        "predicted_garment_box": [
+          100.33010864257812,
+          211.43072509765625,
+          328.18408203125,
+          573.6913452148438
+        ],
+        "crop_xyxy": [
+          77,
+          175,
+          351,
+          610
+        ],
+        "tp": 0,
+        "fp": 0,
+        "fn": 2,
+        "matches": []
+      },
+      {
+        "record_id": "v5_validation_00062",
+        "category": "outerwear",
+        "presence": "present",
+        "truth_boxes": [
+          [
+            495,
+            488,
+            534,
+            520
+          ],
+          [
+            230,
+            499,
+            262,
+            527
+          ]
+        ],
+        "predicted_boxes": [],
+        "scores": [],
+        "target_association_status": "MATCHED_PREDICTED_TARGET",
+        "garment_iou": 0.9155007385658998,
+        "predicted_garment_box": [
+          218.64480590820312,
+          167.94996643066406,
+          528.9531860351562,
+          647.6387939453125
+        ],
+        "crop_xyxy": [
+          187,
+          119,
+          560,
+          696
+        ],
+        "tp": 0,
+        "fp": 0,
+        "fn": 2,
+        "matches": []
+      },
+      {
+        "record_id": "v5_validation_00064",
+        "category": "outerwear",
+        "presence": "present",
+        "truth_boxes": [
+          [
+            642,
+            441,
+            670,
+            475
+          ]
+        ],
+        "predicted_boxes": [],
+        "scores": [],
+        "target_association_status": "GARMENT_CLASS_MISMATCH",
+        "garment_iou": 0.8707455688181496,
+        "predicted_garment_box": [
+          546.4498291015625,
+          296.3034973144531,
+          676.0591430664062,
+          484.04876708984375
+        ],
+        "crop_xyxy": null,
+        "tp": 0,
+        "fp": 0,
+        "fn": 1,
+        "matches": []
+      },
+      {
+        "record_id": "v5_validation_00031",
+        "category": "dress",
+        "presence": "present",
+        "truth_boxes": [
+          [
+            352,
+            3,
+            412,
+            44
+          ],
+          [
+            558,
+            832,
+            612,
+            873
+          ]
+        ],
+        "predicted_boxes": [],
+        "scores": [],
+        "target_association_status": "MATCHED_PREDICTED_TARGET",
+        "garment_iou": 0.8602085503262716,
+        "predicted_garment_box": [
+          168.18121337890625,
+          79.27401733398438,
+          769.731689453125,
+          1103.0992431640625
+        ],
+        "crop_xyxy": [
+          108,
+          0,
+          790,
+          1192
+        ],
+        "tp": 0,
+        "fp": 0,
+        "fn": 2,
+        "matches": []
+      },
+      {
+        "record_id": "v5_validation_00006",
+        "category": "dress",
+        "presence": "absent",
+        "truth_boxes": [],
+        "predicted_boxes": [],
+        "scores": [],
+        "target_association_status": "MATCHED_PREDICTED_TARGET",
+        "garment_iou": 0.8582563891651316,
+        "predicted_garment_box": [
+          77.50296783447266,
+          218.44485473632812,
+          454.9255065917969,
+          617.0872802734375
+        ],
+        "crop_xyxy": [
+          39,
+          178,
+          468,
+          624
+        ],
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "matches": []
+      },
+      {
+        "record_id": "v5_validation_00005",
+        "category": "dress",
+        "presence": "present",
+        "truth_boxes": [
+          [
+            186,
+            356,
+            235,
+            394
+          ],
+          [
+            245,
+            342,
+            279,
+            369
+          ]
+        ],
+        "predicted_boxes": [],
+        "scores": [],
+        "target_association_status": "MATCHED_PREDICTED_TARGET",
+        "garment_iou": 0.930861167493049,
+        "predicted_garment_box": [
+          48.588748931884766,
+          235.9423370361328,
+          360.5970764160156,
+          645.9115600585938
+        ],
+        "crop_xyxy": [
+          17,
+          194,
+          392,
+          687
+        ],
+        "tp": 0,
+        "fp": 0,
+        "fn": 2,
+        "matches": []
+      },
+      {
+        "record_id": "v5_validation_00072",
+        "category": "dress",
+        "presence": "absent",
+        "truth_boxes": [],
+        "predicted_boxes": [],
+        "scores": [],
+        "target_association_status": "MATCHED_PREDICTED_TARGET",
+        "garment_iou": 0.9022067143268426,
+        "predicted_garment_box": [
+          103.7738265991211,
+          262.3720703125,
+          341.1296081542969,
+          717.4884033203125
+        ],
+        "crop_xyxy": [
+          80,
+          216,
+          365,
+          764
+        ],
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "matches": []
+      },
+      {
+        "record_id": "v5_validation_00081",
+        "category": "dress",
+        "presence": "absent",
+        "truth_boxes": [],
+        "predicted_boxes": [],
+        "scores": [],
+        "target_association_status": "MATCHED_PREDICTED_TARGET",
+        "garment_iou": 0.9310204102555588,
+        "predicted_garment_box": [
+          518.4910888671875,
+          131.2171630859375,
+          742.3433227539062,
+          645.0548706054688
+        ],
+        "crop_xyxy": [
+          496,
+          79,
+          765,
+          681
+        ],
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "matches": []
+      }
+    ]
+  },
+  "formal_prd_acceptance": false,
+  "limitations": [
+    "These images were not used for cuff training or tuning; original segmentation used them for validation.",
+    "Not a blind end-to-end benchmark.",
+    "Labels apply to the specified garment only, not all garments in the image.",
+    "Ground truth garment association is for evaluation only; predicted crops/masks never use cuff labels.",
+    "Unmatched positive targets remain cuff misses; unmatched negatives do not establish absence success.",
+    "Fixed checkpoint/thresholds; no selection of another epoch or threshold on this holdout."
+  ],
+  "overlay_legend": "green=confirmed cuff; red=prediction; yellow=predicted garment"
+}

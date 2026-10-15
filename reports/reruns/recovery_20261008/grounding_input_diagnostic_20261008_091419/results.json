@@ -1,0 +1,839 @@
+[
+  {
+    "case_dir": "case_01",
+    "instance_id": "pred_0002",
+    "predicted_category": "top",
+    "source_image": "/workspace/fashion_data/raw/train/train/image/013010.jpg",
+    "source_sha256": "8ef5b366ce86a81bd1ca20f4f161c682b4343c5ae83af4beba47c712699350fc",
+    "view": "full_image",
+    "region": "collar",
+    "prompt": "collar. neckline.",
+    "view_size": [
+      747,
+      585
+    ],
+    "crop_origin": [
+      0,
+      0
+    ],
+    "garment_bbox": [
+      443.0443420410156,
+      9.750590324401855,
+      568.3530883789062,
+      186.50953674316406
+    ],
+    "visualization": "case_01_full_image_collar.jpg",
+    "detections": [
+      {
+        "label": "neckline",
+        "score": 0.33468350768089294,
+        "box": [
+          389.98004150390625,
+          4.204923152923584,
+          637.5345458984375,
+          563.6781616210938
+        ],
+        "original_image_bbox": [
+          389.98004150390625,
+          4.204923152923584,
+          637.5345458984375,
+          563.6781616210938
+        ]
+      }
+    ],
+    "dino_model_ms": 864.2484960146248
+  },
+  {
+    "case_dir": "case_01",
+    "instance_id": "pred_0002",
+    "predicted_category": "top",
+    "source_image": "/workspace/fashion_data/raw/train/train/image/013010.jpg",
+    "source_sha256": "8ef5b366ce86a81bd1ca20f4f161c682b4343c5ae83af4beba47c712699350fc",
+    "view": "full_image",
+    "region": "cuff",
+    "prompt": "sleeve cuff.",
+    "view_size": [
+      747,
+      585
+    ],
+    "crop_origin": [
+      0,
+      0
+    ],
+    "garment_bbox": [
+      443.0443420410156,
+      9.750590324401855,
+      568.3530883789062,
+      186.50953674316406
+    ],
+    "visualization": "case_01_full_image_cuff.jpg",
+    "detections": [],
+    "dino_model_ms": 85.40872018784285
+  },
+  {
+    "case_dir": "case_01",
+    "instance_id": "pred_0002",
+    "predicted_category": "top",
+    "source_image": "/workspace/fashion_data/raw/train/train/image/013010.jpg",
+    "source_sha256": "8ef5b366ce86a81bd1ca20f4f161c682b4343c5ae83af4beba47c712699350fc",
+    "view": "full_image",
+    "region": "hem",
+    "prompt": "hem. bottom hem.",
+    "view_size": [
+      747,
+      585
+    ],
+    "crop_origin": [
+      0,
+      0
+    ],
+    "garment_bbox": [
+      443.0443420410156,
+      9.750590324401855,
+      568.3530883789062,
+      186.50953674316406
+    ],
+    "visualization": "case_01_full_image_hem.jpg",
+    "detections": [
+      {
+        "label": "hem bottom hem",
+        "score": 0.4495186507701874,
+        "box": [
+          390.9620056152344,
+          507.9098205566406,
+          488.4648742675781,
+          565.093505859375
+        ],
+        "original_image_bbox": [
+          390.9620056152344,
+          507.9098205566406,
+          488.4648742675781,
+          565.093505859375
+        ]
+      },
+      {
+        "label": "hem bottom hem",
+        "score": 0.41227227449417114,
+        "box": [
+          556.1546020507812,
+          457.05364990234375,
+          637.4893188476562,
+          535.975830078125
+        ],
+        "original_image_bbox": [
+          556.1546020507812,
+          457.05364990234375,
+          637.4893188476562,
+          535.975830078125
+        ]
+      }
+    ],
+    "dino_model_ms": 85.21749777719378
+  },
+  {
+    "case_dir": "case_01",
+    "instance_id": "pred_0002",
+    "predicted_category": "top",
+    "source_image": "/workspace/fashion_data/raw/train/train/image/013010.jpg",
+    "source_sha256": "8ef5b366ce86a81bd1ca20f4f161c682b4343c5ae83af4beba47c712699350fc",
+    "view": "raw_crop",
+    "region": "collar",
+    "prompt": "collar. neckline.",
+    "view_size": [
+      126,
+      178
+    ],
+    "crop_origin": [
+      443,
+      9
+    ],
+    "garment_bbox": [
+      443.0443420410156,
+      9.750590324401855,
+      568.3530883789062,
+      186.50953674316406
+    ],
+    "visualization": "case_01_raw_crop_collar.jpg",
+    "detections": [
+      {
+        "label": "collar neck",
+        "score": 0.31602200865745544,
+        "box": [
+          32.33811569213867,
+          0.013289220631122589,
+          50.73616027832031,
+          18.96954345703125
+        ],
+        "original_image_bbox": [
+          475.3381156921387,
+          9.013289220631123,
+          493.7361602783203,
+          27.96954345703125
+        ]
+      }
+    ],
+    "dino_model_ms": 97.4226500838995
+  },
+  {
+    "case_dir": "case_01",
+    "instance_id": "pred_0002",
+    "predicted_category": "top",
+    "source_image": "/workspace/fashion_data/raw/train/train/image/013010.jpg",
+    "source_sha256": "8ef5b366ce86a81bd1ca20f4f161c682b4343c5ae83af4beba47c712699350fc",
+    "view": "raw_crop",
+    "region": "cuff",
+    "prompt": "sleeve cuff.",
+    "view_size": [
+      126,
+      178
+    ],
+    "crop_origin": [
+      443,
+      9
+    ],
+    "garment_bbox": [
+      443.0443420410156,
+      9.750590324401855,
+      568.3530883789062,
+      186.50953674316406
+    ],
+    "visualization": "case_01_raw_crop_cuff.jpg",
+    "detections": [],
+    "dino_model_ms": 88.53743690997362
+  },
+  {
+    "case_dir": "case_01",
+    "instance_id": "pred_0002",
+    "predicted_category": "top",
+    "source_image": "/workspace/fashion_data/raw/train/train/image/013010.jpg",
+    "source_sha256": "8ef5b366ce86a81bd1ca20f4f161c682b4343c5ae83af4beba47c712699350fc",
+    "view": "raw_crop",
+    "region": "hem",
+    "prompt": "hem. bottom hem.",
+    "view_size": [
+      126,
+      178
+    ],
+    "crop_origin": [
+      443,
+      9
+    ],
+    "garment_bbox": [
+      443.0443420410156,
+      9.750590324401855,
+      568.3530883789062,
+      186.50953674316406
+    ],
+    "visualization": "case_01_raw_crop_hem.jpg",
+    "detections": [
+      {
+        "label": "bottom hem",
+        "score": 0.43958041071891785,
+        "box": [
+          6.15585470199585,
+          162.37765502929688,
+          95.35366821289062,
+          177.9958038330078
+        ],
+        "original_image_bbox": [
+          449.15585470199585,
+          171.37765502929688,
+          538.3536682128906,
+          186.9958038330078
+        ]
+      }
+    ],
+    "dino_model_ms": 88.78184901550412
+  },
+  {
+    "case_dir": "case_01",
+    "instance_id": "pred_0002",
+    "predicted_category": "top",
+    "source_image": "/workspace/fashion_data/raw/train/train/image/013010.jpg",
+    "source_sha256": "8ef5b366ce86a81bd1ca20f4f161c682b4343c5ae83af4beba47c712699350fc",
+    "view": "masked_crop",
+    "region": "collar",
+    "prompt": "collar. neckline.",
+    "view_size": [
+      126,
+      178
+    ],
+    "crop_origin": [
+      443,
+      9
+    ],
+    "garment_bbox": [
+      443.0443420410156,
+      9.750590324401855,
+      568.3530883789062,
+      186.50953674316406
+    ],
+    "visualization": "case_01_masked_crop_collar.jpg",
+    "detections": [
+      {
+        "label": "neckline",
+        "score": 0.34100618958473206,
+        "box": [
+          1.8169541358947754,
+          0.04052877426147461,
+          123.74390411376953,
+          168.4195556640625
+        ],
+        "original_image_bbox": [
+          444.8169541358948,
+          9.040528774261475,
+          566.7439041137695,
+          177.4195556640625
+        ]
+      },
+      {
+        "label": "collar",
+        "score": 0.33392107486724854,
+        "box": [
+          1.8677942752838135,
+          0.04978567361831665,
+          123.67359924316406,
+          168.42864990234375
+        ],
+        "original_image_bbox": [
+          444.8677942752838,
+          9.049785673618317,
+          566.6735992431641,
+          177.42864990234375
+        ]
+      }
+    ],
+    "dino_model_ms": 89.00180412456393
+  },
+  {
+    "case_dir": "case_01",
+    "instance_id": "pred_0002",
+    "predicted_category": "top",
+    "source_image": "/workspace/fashion_data/raw/train/train/image/013010.jpg",
+    "source_sha256": "8ef5b366ce86a81bd1ca20f4f161c682b4343c5ae83af4beba47c712699350fc",
+    "view": "masked_crop",
+    "region": "cuff",
+    "prompt": "sleeve cuff.",
+    "view_size": [
+      126,
+      178
+    ],
+    "crop_origin": [
+      443,
+      9
+    ],
+    "garment_bbox": [
+      443.0443420410156,
+      9.750590324401855,
+      568.3530883789062,
+      186.50953674316406
+    ],
+    "visualization": "case_01_masked_crop_cuff.jpg",
+    "detections": [
+      {
+        "label": "sleeve cuff",
+        "score": 0.7573813199996948,
+        "box": [
+          1.598310112953186,
+          -0.07044261693954468,
+          123.93294525146484,
+          168.71192932128906
+        ],
+        "original_image_bbox": [
+          444.5983101129532,
+          8.929557383060455,
+          566.9329452514648,
+          177.71192932128906
+        ]
+      }
+    ],
+    "dino_model_ms": 88.67653971537948
+  },
+  {
+    "case_dir": "case_01",
+    "instance_id": "pred_0002",
+    "predicted_category": "top",
+    "source_image": "/workspace/fashion_data/raw/train/train/image/013010.jpg",
+    "source_sha256": "8ef5b366ce86a81bd1ca20f4f161c682b4343c5ae83af4beba47c712699350fc",
+    "view": "masked_crop",
+    "region": "hem",
+    "prompt": "hem. bottom hem.",
+    "view_size": [
+      126,
+      178
+    ],
+    "crop_origin": [
+      443,
+      9
+    ],
+    "garment_bbox": [
+      443.0443420410156,
+      9.750590324401855,
+      568.3530883789062,
+      186.50953674316406
+    ],
+    "visualization": "case_01_masked_crop_hem.jpg",
+    "detections": [
+      {
+        "label": "bottom hem",
+        "score": 0.5766429901123047,
+        "box": [
+          1.625849962234497,
+          -0.08685040473937988,
+          123.92327117919922,
+          168.79656982421875
+        ],
+        "original_image_bbox": [
+          444.6258499622345,
+          8.91314959526062,
+          566.9232711791992,
+          177.79656982421875
+        ]
+      },
+      {
+        "label": "hem",
+        "score": 0.38741326332092285,
+        "box": [
+          1.5547997951507568,
+          0.0027531981468200684,
+          123.93138122558594,
+          168.61936950683594
+        ],
+        "original_image_bbox": [
+          444.55479979515076,
+          9.00275319814682,
+          566.9313812255859,
+          177.61936950683594
+        ]
+      }
+    ],
+    "dino_model_ms": 89.04663007706404
+  },
+  {
+    "case_dir": "case_05",
+    "instance_id": "pred_0000",
+    "predicted_category": "dress",
+    "source_image": "/workspace/fashion_data/raw/train/train/image/002278.jpg",
+    "source_sha256": "5a47b48bf9bc11c84743a78becb19504efad400d5305939d4064c7b0dec3e8bc",
+    "view": "full_image",
+    "region": "collar",
+    "prompt": "collar. neckline.",
+    "view_size": [
+      468,
+      624
+    ],
+    "crop_origin": [
+      0,
+      0
+    ],
+    "garment_bbox": [
+      124.82437133789062,
+      263.5713806152344,
+      377.5016174316406,
+      617.2446899414062
+    ],
+    "visualization": "case_05_full_image_collar.jpg",
+    "detections": [
+      {
+        "label": "neckline",
+        "score": 0.37270331382751465,
+        "box": [
+          190.51248168945312,
+          249.66592407226562,
+          370.9568786621094,
+          363.1718444824219
+        ],
+        "original_image_bbox": [
+          190.51248168945312,
+          249.66592407226562,
+          370.9568786621094,
+          363.1718444824219
+        ]
+      }
+    ],
+    "dino_model_ms": 94.31150602176785
+  },
+  {
+    "case_dir": "case_05",
+    "instance_id": "pred_0000",
+    "predicted_category": "dress",
+    "source_image": "/workspace/fashion_data/raw/train/train/image/002278.jpg",
+    "source_sha256": "5a47b48bf9bc11c84743a78becb19504efad400d5305939d4064c7b0dec3e8bc",
+    "view": "full_image",
+    "region": "cuff",
+    "prompt": "sleeve cuff.",
+    "view_size": [
+      468,
+      624
+    ],
+    "crop_origin": [
+      0,
+      0
+    ],
+    "garment_bbox": [
+      124.82437133789062,
+      263.5713806152344,
+      377.5016174316406,
+      617.2446899414062
+    ],
+    "visualization": "case_05_full_image_cuff.jpg",
+    "detections": [
+      {
+        "label": "sleeve cuff",
+        "score": 0.35725051164627075,
+        "box": [
+          124.57862091064453,
+          250.45567321777344,
+          377.2478942871094,
+          621.746337890625
+        ],
+        "original_image_bbox": [
+          124.57862091064453,
+          250.45567321777344,
+          377.2478942871094,
+          621.746337890625
+        ]
+      }
+    ],
+    "dino_model_ms": 85.64663026481867
+  },
+  {
+    "case_dir": "case_05",
+    "instance_id": "pred_0000",
+    "predicted_category": "dress",
+    "source_image": "/workspace/fashion_data/raw/train/train/image/002278.jpg",
+    "source_sha256": "5a47b48bf9bc11c84743a78becb19504efad400d5305939d4064c7b0dec3e8bc",
+    "view": "full_image",
+    "region": "hem",
+    "prompt": "hem. bottom hem.",
+    "view_size": [
+      468,
+      624
+    ],
+    "crop_origin": [
+      0,
+      0
+    ],
+    "garment_bbox": [
+      124.82437133789062,
+      263.5713806152344,
+      377.5016174316406,
+      617.2446899414062
+    ],
+    "visualization": "case_05_full_image_hem.jpg",
+    "detections": [
+      {
+        "label": "bottom hem",
+        "score": 0.4702019691467285,
+        "box": [
+          123.39860534667969,
+          250.3662109375,
+          377.9979248046875,
+          622.4295654296875
+        ],
+        "original_image_bbox": [
+          123.39860534667969,
+          250.3662109375,
+          377.9979248046875,
+          622.4295654296875
+        ]
+      }
+    ],
+    "dino_model_ms": 85.98648197948933
+  },
+  {
+    "case_dir": "case_05",
+    "instance_id": "pred_0000",
+    "predicted_category": "dress",
+    "source_image": "/workspace/fashion_data/raw/train/train/image/002278.jpg",
+    "source_sha256": "5a47b48bf9bc11c84743a78becb19504efad400d5305939d4064c7b0dec3e8bc",
+    "view": "raw_crop",
+    "region": "collar",
+    "prompt": "collar. neckline.",
+    "view_size": [
+      254,
+      355
+    ],
+    "crop_origin": [
+      124,
+      263
+    ],
+    "garment_bbox": [
+      124.82437133789062,
+      263.5713806152344,
+      377.5016174316406,
+      617.2446899414062
+    ],
+    "visualization": "case_05_raw_crop_collar.jpg",
+    "detections": [
+      {
+        "label": "neckline",
+        "score": 0.35430338978767395,
+        "box": [
+          70.30227661132812,
+          0.21124206483364105,
+          249.6951446533203,
+          99.53968811035156
+        ],
+        "original_image_bbox": [
+          194.30227661132812,
+          263.21124206483364,
+          373.6951446533203,
+          362.53968811035156
+        ]
+      }
+    ],
+    "dino_model_ms": 96.0671971552074
+  },
+  {
+    "case_dir": "case_05",
+    "instance_id": "pred_0000",
+    "predicted_category": "dress",
+    "source_image": "/workspace/fashion_data/raw/train/train/image/002278.jpg",
+    "source_sha256": "5a47b48bf9bc11c84743a78becb19504efad400d5305939d4064c7b0dec3e8bc",
+    "view": "raw_crop",
+    "region": "cuff",
+    "prompt": "sleeve cuff.",
+    "view_size": [
+      254,
+      355
+    ],
+    "crop_origin": [
+      124,
+      263
+    ],
+    "garment_bbox": [
+      124.82437133789062,
+      263.5713806152344,
+      377.5016174316406,
+      617.2446899414062
+    ],
+    "visualization": "case_05_raw_crop_cuff.jpg",
+    "detections": [],
+    "dino_model_ms": 90.76697332784534
+  },
+  {
+    "case_dir": "case_05",
+    "instance_id": "pred_0000",
+    "predicted_category": "dress",
+    "source_image": "/workspace/fashion_data/raw/train/train/image/002278.jpg",
+    "source_sha256": "5a47b48bf9bc11c84743a78becb19504efad400d5305939d4064c7b0dec3e8bc",
+    "view": "raw_crop",
+    "region": "hem",
+    "prompt": "hem. bottom hem.",
+    "view_size": [
+      254,
+      355
+    ],
+    "crop_origin": [
+      124,
+      263
+    ],
+    "garment_bbox": [
+      124.82437133789062,
+      263.5713806152344,
+      377.5016174316406,
+      617.2446899414062
+    ],
+    "visualization": "case_05_raw_crop_hem.jpg",
+    "detections": [
+      {
+        "label": "bottom hem",
+        "score": 0.3718830645084381,
+        "box": [
+          0.1259915828704834,
+          -0.01768946647644043,
+          254.05001831054688,
+          354.97906494140625
+        ],
+        "original_image_bbox": [
+          124.12599158287048,
+          262.98231053352356,
+          378.0500183105469,
+          617.9790649414062
+        ]
+      },
+      {
+        "label": "hem",
+        "score": 0.36910226941108704,
+        "box": [
+          -0.0014836788177490234,
+          -0.021625161170959473,
+          253.99664306640625,
+          354.9783630371094
+        ],
+        "original_image_bbox": [
+          123.99851632118225,
+          262.97837483882904,
+          377.99664306640625,
+          617.9783630371094
+        ]
+      }
+    ],
+    "dino_model_ms": 89.47728388011456
+  },
+  {
+    "case_dir": "case_05",
+    "instance_id": "pred_0000",
+    "predicted_category": "dress",
+    "source_image": "/workspace/fashion_data/raw/train/train/image/002278.jpg",
+    "source_sha256": "5a47b48bf9bc11c84743a78becb19504efad400d5305939d4064c7b0dec3e8bc",
+    "view": "masked_crop",
+    "region": "collar",
+    "prompt": "collar. neckline.",
+    "view_size": [
+      254,
+      355
+    ],
+    "crop_origin": [
+      124,
+      263
+    ],
+    "garment_bbox": [
+      124.82437133789062,
+      263.5713806152344,
+      377.5016174316406,
+      617.2446899414062
+    ],
+    "visualization": "case_05_masked_crop_collar.jpg",
+    "detections": [
+      {
+        "label": "neckline",
+        "score": 0.3652738034725189,
+        "box": [
+          6.495795726776123,
+          0.49537912011146545,
+          247.7731170654297,
+          353.4568786621094
+        ],
+        "original_image_bbox": [
+          130.49579572677612,
+          263.49537912011147,
+          371.7731170654297,
+          616.4568786621094
+        ]
+      }
+    ],
+    "dino_model_ms": 88.15902099013329
+  },
+  {
+    "case_dir": "case_05",
+    "instance_id": "pred_0000",
+    "predicted_category": "dress",
+    "source_image": "/workspace/fashion_data/raw/train/train/image/002278.jpg",
+    "source_sha256": "5a47b48bf9bc11c84743a78becb19504efad400d5305939d4064c7b0dec3e8bc",
+    "view": "masked_crop",
+    "region": "cuff",
+    "prompt": "sleeve cuff.",
+    "view_size": [
+      254,
+      355
+    ],
+    "crop_origin": [
+      124,
+      263
+    ],
+    "garment_bbox": [
+      124.82437133789062,
+      263.5713806152344,
+      377.5016174316406,
+      617.2446899414062
+    ],
+    "visualization": "case_05_masked_crop_cuff.jpg",
+    "detections": [
+      {
+        "label": "sleeve cuff",
+        "score": 0.48929110169410706,
+        "box": [
+          6.973040580749512,
+          0.41282474994659424,
+          248.4239044189453,
+          354.2019958496094
+        ],
+        "original_image_bbox": [
+          130.9730405807495,
+          263.4128247499466,
+          372.4239044189453,
+          617.2019958496094
+        ]
+      },
+      {
+        "label": "sleeve cuff",
+        "score": 0.39420801401138306,
+        "box": [
+          205.10665893554688,
+          171.5153045654297,
+          249.20654296875,
+          247.85398864746094
+        ],
+        "original_image_bbox": [
+          329.1066589355469,
+          434.5153045654297,
+          373.20654296875,
+          510.85398864746094
+        ]
+      }
+    ],
+    "dino_model_ms": 89.49636900797486
+  },
+  {
+    "case_dir": "case_05",
+    "instance_id": "pred_0000",
+    "predicted_category": "dress",
+    "source_image": "/workspace/fashion_data/raw/train/train/image/002278.jpg",
+    "source_sha256": "5a47b48bf9bc11c84743a78becb19504efad400d5305939d4064c7b0dec3e8bc",
+    "view": "masked_crop",
+    "region": "hem",
+    "prompt": "hem. bottom hem.",
+    "view_size": [
+      254,
+      355
+    ],
+    "crop_origin": [
+      124,
+      263
+    ],
+    "garment_bbox": [
+      124.82437133789062,
+      263.5713806152344,
+      377.5016174316406,
+      617.2446899414062
+    ],
+    "visualization": "case_05_masked_crop_hem.jpg",
+    "detections": [
+      {
+        "label": "bottom hem",
+        "score": 0.5458762049674988,
+        "box": [
+          6.8906965255737305,
+          0.3861212730407715,
+          248.55075073242188,
+          353.8362731933594
+        ],
+        "original_image_bbox": [
+          130.89069652557373,
+          263.38612127304077,
+          372.5507507324219,
+          616.8362731933594
+        ]
+      },
+      {
+        "label": "hem",
+        "score": 0.37988078594207764,
+        "box": [
+          6.60629940032959,
+          0.35543978214263916,
+          248.5055694580078,
+          353.999267578125
+        ],
+        "original_image_bbox": [
+          130.6062994003296,
+          263.35543978214264,
+          372.5055694580078,
+          616.999267578125
+        ]
+      }
+    ],
+    "dino_model_ms": 88.68310181424022
+  }
+]

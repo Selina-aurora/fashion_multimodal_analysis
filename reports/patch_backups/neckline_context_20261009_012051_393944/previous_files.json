@@ -1,0 +1,8 @@
+{
+  "src/fashion_multimodal_analysis/integration/attribute_context.py": false,
+  "src/fashion_multimodal_analysis/integration/model_backends.py": true,
+  "scripts/compare_neckline_context_20261009.py": false,
+  "scripts/run_prd31_neckline_context_20261009.py": false,
+  "configs/prd31_review_regression_cases_20261008.json": true,
+  "tests/test_attribute_context.py": false
+}

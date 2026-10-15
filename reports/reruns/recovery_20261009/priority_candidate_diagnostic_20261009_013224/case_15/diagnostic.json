@@ -1,0 +1,146 @@
+{
+  "image_index": "388",
+  "source_dataset": "Fashionpedia",
+  "source_image": "../fashion_data/raw/fashionpedia/images/test/f4c8049f436b7edcb26c01d3219e14c2.jpg",
+  "record_id": "SEGTEST1_0353",
+  "garment_id": "fashionpedia_ann_7825",
+  "gt_class": "accessory",
+  "fine_category": "belt",
+  "pred_class": "",
+  "pred_score": "0.0",
+  "localized_bbox50": "False",
+  "bbox_iou": "0.0",
+  "class_correct": "False",
+  "mask_iou": "0.0",
+  "mask_iou_ge_0_50": "False",
+  "mask_iou_ge_0_85": "False",
+  "outcome": "missed",
+  "visualization_path": "",
+  "export_case": "case_15",
+  "selection_reason": "missed_accessory",
+  "source_copy": "case_15/source.jpg",
+  "evaluation_copy": null,
+  "evaluation_visualization_available": false,
+  "visualization_note": "Existing evaluation image only; absent images are not rerendered.",
+  "gt_bbox": [
+    274,
+    596,
+    372,
+    647
+  ],
+  "source_sha256": "96e057d09bc861c951a73306d365f2f3bc2e36ae7488c40ed6e9ba9c2bee24bf",
+  "image_size": [
+    682,
+    1024
+  ],
+  "gt_area_ratio": 0.00715668530058651,
+  "baseline_reproduction_drift": false,
+  "diagnostic": {
+    "diagnostic_group": "no_box50_candidate_above_0_05",
+    "baseline_0_40_match": null,
+    "best_score_localized_candidate": null,
+    "best_score_correct_class_candidate": null,
+    "max_bbox_iou": 0.06511499442889426
+  },
+  "candidates": [
+    {
+      "category": "top",
+      "score": 0.955863893032074,
+      "bbox": [
+        289.43011474609375,
+        325.74957275390625,
+        557.0771484375,
+        707.1987915039062
+      ],
+      "bbox_iou": 0.04093153185369741
+    },
+    {
+      "category": "dress",
+      "score": 0.6506513357162476,
+      "bbox": [
+        117.33946228027344,
+        462.78790283203125,
+        475.181884765625,
+        923.298095703125
+      ],
+      "bbox_iou": 0.030329495010422418
+    },
+    {
+      "category": "top",
+      "score": 0.46595829725265503,
+      "bbox": [
+        122.76353454589844,
+        522.8756713867188,
+        451.9906311035156,
+        897.5983276367188
+      ],
+      "bbox_iou": 0.040512657073851516
+    },
+    {
+      "category": "outerwear",
+      "score": 0.41381558775901794,
+      "bbox": [
+        119.62277221679688,
+        479.4317321777344,
+        451.467529296875,
+        912.3099975585938
+      ],
+      "bbox_iou": 0.034793291103342366
+    },
+    {
+      "category": "top",
+      "score": 0.32239624857902527,
+      "bbox": [
+        119.39109802246094,
+        353.8877868652344,
+        562.5343627929688,
+        852.183349609375
+      ],
+      "bbox_iou": 0.022634196347106544
+    },
+    {
+      "category": "dress",
+      "score": 0.16042117774486542,
+      "bbox": [
+        231.1378631591797,
+        317.3771667480469,
+        560.6779174804688,
+        790.9849853515625
+      ],
+      "bbox_iou": 0.03202352825500222
+    },
+    {
+      "category": "outerwear",
+      "score": 0.14861656725406647,
+      "bbox": [
+        98.48013305664062,
+        337.0928039550781,
+        586.8700561523438,
+        858.6201782226562
+      ],
+      "bbox_iou": 0.01962241462953122
+    },
+    {
+      "category": "pants",
+      "score": 0.1398497372865677,
+      "bbox": [
+        154.0750274658203,
+        547.2550048828125,
+        447.4018249511719,
+        891.8965454101562
+      ],
+      "bbox_iou": 0.049439820832367046
+    },
+    {
+      "category": "accessory",
+      "score": 0.08618555217981339,
+      "bbox": [
+        205.4899444580078,
+        559.8067626953125,
+        439.4100341796875,
+        887.9381103515625
+      ],
+      "bbox_iou": 0.06511499442889426
+    }
+  ]
+}

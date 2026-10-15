@@ -1,0 +1,529 @@
+{
+  "schema_version": "sleeve_v3_holdout20_blind_manual_v1",
+  "source": "blind_originals_only",
+  "frozen_manifest_sha256": "d07f619d3b552b2cd70a57c92078da62df94859686fef03a28f1e93b713246eb",
+  "records": [
+    {
+      "image_id": "holdout_001",
+      "sha256": "5b3014f73499ba60a4b4d995b60fb5d0c1792f408937c4c619236369b88c6c20",
+      "size": [
+        1024,
+        683
+      ],
+      "review_status": "no_sleeve_target",
+      "notes": "前景人物穿白色细肩带无袖上衣及蓝色牛仔裤，双侧手臂裸露，无独立袖片及可测量的袖口开口。肩带与肩部的交界不属于袖口，不生成A、B端点及V3开口中点。本张判定为无适合标注的袖口。",
+      "sleeves": []
+    },
+    {
+      "image_id": "holdout_002",
+      "sha256": "878e965d3a421928c1a4c0c1c406d96e414fc1dcf9f4a6566a005d340acd7652",
+      "size": [
+        1024,
+        683
+      ],
+      "review_status": "reviewed_sleeves",
+      "notes": "前景人物穿黑色厚外套，两侧袖口区域均可见。图像右侧手臂弯曲，袖口位于手腕与黑色衣袖交界处；图像左侧手臂自然下垂。由于袖口与衣身颜色接近，部分边界存在遮挡或不清晰，需要局部放大确认开口端点。背景车辆内人物不纳入标注。",
+      "sleeves": [
+        {
+          "record_no": 1,
+          "person_garment": "画面中央滑滑板的男性，身穿黑色带毛领连帽羽绒外套，目标为外套袖口，不包含内搭及其他衣物。",
+          "garment_category": "outerwear",
+          "image_side": "image_right",
+          "status": "measurable",
+          "confidence": "medium",
+          "A_outer_px": [
+            531.9,
+            255.5
+          ],
+          "B_inner_px": [
+            522.7,
+            216.4
+          ],
+          "notes": "黑色羽绒外套，图像右侧手臂屈肘，手部向身体中央弯曲。袖口上下边缘部分可辨，但深色衣料重叠，需进一步核对 A/B 是否对应同一开口的实际端点",
+          "midpoint_px": [
+            527.3,
+            235.95
+          ]
+        }
+      ]
+    },
+    {
+      "image_id": "holdout_003",
+      "sha256": "7accff2fb2fa701c653b0e70418589ed44f36f611d062bfda1728dc02ce79610",
+      "size": [
+        682,
+        1024
+      ],
+      "review_status": "no_sleeve_target",
+      "notes": "前景模特穿橙色印花无袖连衣裙，双侧上臂裸露，无独立袖片及可测量的袖口开口。肩部衣料与手臂交界不作为V3袖口端点。背景人物不纳入标注。本张无适合标注的袖口，不生成A/B坐标及V3开口中点。",
+      "sleeves": []
+    },
+    {
+      "image_id": "holdout_004",
+      "sha256": "4ec11d04678a90fcd519719a443e8f3d2b6644d02c3e4c0473e59233b8a83026",
+      "size": [
+        1024,
+        731
+      ],
+      "review_status": "reviewed_sleeves",
+      "notes": "",
+      "sleeves": [
+        {
+          "record_no": 1,
+          "person_garment": "前景女生的蓝色牛仔外套",
+          "garment_category": "outerwear",
+          "image_side": "image_left",
+          "status": "measurable",
+          "confidence": "medium",
+          "A_outer_px": [
+            291.3,
+            228
+          ],
+          "B_inner_px": [
+            330.6,
+            277.1
+          ],
+          "notes": "前景女生穿蓝色牛仔外套及白色印花T恤，双臂向上弯曲，牛仔外套双侧衣袖均卷至肘部附近。两侧袖口区域可见，但卷边存在褶皱和局部重叠，需要分别放大确认开口两端。以蓝色牛仔外套为目标服装，不将内搭T恤或衣料折痕误认为袖口边界。无法可靠确定的端点保留null。",
+          "midpoint_px": [
+            310.95,
+            252.55
+          ]
+        }
+      ]
+    },
+    {
+      "image_id": "holdout_005",
+      "sha256": "a939cb7564d7029ad0ffa8261253f06cdbb8b5b8bca68f238502fac2b51d65dd",
+      "size": [
+        1024,
+        736
+      ],
+      "review_status": "no_sleeve_target",
+      "notes": "前景人物穿白色无袖短款上衣及白色短裙，双侧肩膀和手臂裸露，没有独立袖片。上衣袖窿边缘及黑色装饰边不属于袖口开口，因此本张无适合进行V3端点标注的袖口，不生成A、B坐标及开口中点。",
+      "sleeves": []
+    },
+    {
+      "image_id": "holdout_006",
+      "sha256": "624460bb17fa9a85193ada8eda5b9abe7cf2865a3f479a50137ca88385fce203",
+      "size": [
+        1024,
+        682
+      ],
+      "review_status": "reviewed_sleeves",
+      "notes": "前景人物穿白色短袖T恤及红色短裙，两侧均有袖口。图像右侧袖口边界相对清晰，可以优先进行A、B端点标注；图像左侧袖口部分受到头发遮挡，需要局部放大确认。两侧袖口分别记录，不混用端点。背景行人不纳入审核。",
+      "sleeves": [
+        {
+          "record_no": 1,
+          "person_garment": "前景穿白色 T 恤的女生",
+          "garment_category": "top",
+          "image_side": "image_right",
+          "status": "measurable",
+          "confidence": "medium",
+          "A_outer_px": [
+            636.2,
+            178.2
+          ],
+          "B_inner_px": [
+            588,
+            195.4
+          ],
+          "notes": "",
+          "midpoint_px": [
+            612.1,
+            186.8
+          ]
+        }
+      ]
+    },
+    {
+      "image_id": "holdout_007",
+      "sha256": "e840015f7368edee8230a4348d228cd36efc8f676dcfe9eae08618c597410425",
+      "size": [
+        683,
+        1024
+      ],
+      "review_status": "reviewed_sleeves",
+      "notes": "前景人物穿红色印花短袖上衣，当前标注图像左侧袖口。袖口下缘基本清晰，A点位于袖口外侧端点，B点位于靠近腋下的内侧端点，两点属于同一段可见袖口开口。内侧局部存在衣料重叠，端点标注置信度为中。可用于V3二维开口中点的试验性测量。",
+      "sleeves": [
+        {
+          "record_no": 1,
+          "person_garment": "前景女性模特穿着的红底白色印花短袖上衣，当前标注图像左侧袖口",
+          "garment_category": "top",
+          "image_side": "image_left",
+          "status": "measurable",
+          "confidence": "medium",
+          "A_outer_px": [
+            63.3,
+            494.7
+          ],
+          "B_inner_px": [
+            175.1,
+            546.3
+          ],
+          "notes": "",
+          "midpoint_px": [
+            119.2,
+            520.5
+          ]
+        }
+      ]
+    },
+    {
+      "image_id": "holdout_008",
+      "sha256": "14abbd6cd2b3cdca2eb2ac34dcf137e010dd017eeab4b3d4c24afab91dd30064",
+      "size": [
+        683,
+        1024
+      ],
+      "review_status": "reviewed_sleeves",
+      "notes": "前景女模特穿黑白拼色中袖上衣及红粉色半身裙，双侧有黑色衣袖。本次主要审核图像左侧袖口，衣袖末端与裸露前臂的交界基本清晰，可进行V3端点标注。",
+      "sleeves": [
+        {
+          "record_no": 1,
+          "person_garment": "前景女模特穿着的黑白拼色中袖上衣，当前标注图像左侧黑色袖口",
+          "garment_category": "top",
+          "image_side": "image_left",
+          "status": "measurable",
+          "confidence": "medium",
+          "A_outer_px": [
+            216.4,
+            429.3
+          ],
+          "B_inner_px": [
+            261.2,
+            437.9
+          ],
+          "notes": "",
+          "midpoint_px": [
+            238.8,
+            433.6
+          ]
+        }
+      ]
+    },
+    {
+      "image_id": "holdout_009",
+      "sha256": "934fde5e614a2cd618570780a5c89749fa27fc62b04c21b63cd32e5b8cd50a75",
+      "size": [
+        632,
+        1024
+      ],
+      "review_status": "no_sleeve_target",
+      "notes": "前景女模特穿红黑印花无袖上衣及黑色短裤，双侧肩膀和上臂裸露，没有独立袖片或可测量的袖口开口。上衣肩部及袖窿边缘不属于V3袖口标注范围，因此本张无需建立袖口记录，不生成A、B端点及开口中点。",
+      "sleeves": []
+    },
+    {
+      "image_id": "holdout_010",
+      "sha256": "3c2cd00c53b8e4ef3b1ed7e34a98cf28481aa1304676cf8b1df16186e61c5a41",
+      "size": [
+        683,
+        1024
+      ],
+      "review_status": "reviewed_sleeves",
+      "notes": "前景女性模特穿白色针织开衫及白色长裙，双侧衣袖延伸至前臂中下部，两侧袖口区域基本可见。本次以白色针织开衫为目标服装，左右袖口分别记录，不将针织纹理或衣身边缘误认为袖口。",
+      "sleeves": [
+        {
+          "record_no": 1,
+          "person_garment": "前景女性模特穿着的白色针织开衫",
+          "garment_category": "outerwear",
+          "image_side": "image_left",
+          "status": "measurable",
+          "confidence": "medium",
+          "A_outer_px": [
+            163.1,
+            753.8
+          ],
+          "B_inner_px": [
+            221.6,
+            764.1
+          ],
+          "notes": "白色针织开衫袖口与裸露前臂的交界基本清晰，可以尝试独立标注开口外侧A点和内侧B点。由于衣物颜色较浅、针织边界存在轻微模糊，端点位置需结合原图局部放大确认，暂按中等置信度记录。",
+          "midpoint_px": [
+            192.35,
+            758.95
+          ]
+        }
+      ]
+    },
+    {
+      "image_id": "holdout_011",
+      "sha256": "fb4a27cd3758c78b39b6b1eb901e5c754e1352e708cb207818bfe4fd9652cda2",
+      "size": [
+        681,
+        1024
+      ],
+      "review_status": "reviewed_sleeves",
+      "notes": "前景女模特穿米驼色长袖针织连衣裙，双侧手臂自然下垂，袖口位于手腕附近，两侧袖口区域基本可见。本次以针织连衣裙为目标服装，左右袖口分别记录，不将衣袖褶皱或手腕位置误认为袖口端点。",
+      "sleeves": [
+        {
+          "record_no": 1,
+          "person_garment": "前景女模特穿着的米驼色长袖针织连衣裙",
+          "garment_category": "dress",
+          "image_side": "image_right",
+          "status": "measurable",
+          "confidence": "medium",
+          "A_outer_px": [
+            496,
+            508.6
+          ],
+          "B_inner_px": [
+            465,
+            519
+          ],
+          "notes": "当前标注图像右侧的米驼色针织袖口，袖口与手部交界基本可见。由于袖口区域较小且针织边界存在轻微模糊，需要局部放大确认A、B两端点。暂按中等置信度记录，确认两端可见后计算V3二维开口中点。",
+          "midpoint_px": [
+            480.5,
+            513.8
+          ]
+        }
+      ]
+    },
+    {
+      "image_id": "holdout_012",
+      "sha256": "a57c5cabc08c9f230d0bdc8466cac0c0f854dc6205af3491673b2635347d710e",
+      "size": [
+        1024,
+        683
+      ],
+      "review_status": "no_sleeve_target",
+      "notes": "前景女生穿黑色无袖背心及牛仔短裤，双侧肩膀和手臂裸露，没有独立袖片。背心肩部与袖窿边缘不属于V3袖口开口，因此本张无适合标注的袖口，不生成A、B端点及二维开口中点。",
+      "sleeves": []
+    },
+    {
+      "image_id": "holdout_013",
+      "sha256": "d775c35eeacc113f5d779dbb4ed4dede11cda7ce995e0c99c73de13a32677953",
+      "size": [
+        683,
+        1024
+      ],
+      "review_status": "reviewed_sleeves",
+      "notes": "前景金发女性穿橙棕色针织开衫，内搭蓝白印花连衣裙，双手插入口袋。两侧衣袖末端均可见，但手部与开衫口袋存在重叠。本次以橙棕色针织开衫为目标服装，分别审核两侧袖口。",
+      "sleeves": [
+        {
+          "record_no": 1,
+          "person_garment": "前景金发女性穿着的橙棕色针织开衫，内搭蓝白印花连衣裙",
+          "garment_category": "outerwear",
+          "image_side": "image_left",
+          "status": "measurable",
+          "confidence": "medium",
+          "A_outer_px": [
+            233.6,
+            535.8
+          ],
+          "B_inner_px": [
+            266.3,
+            517.1
+          ],
+          "notes": "前景金发女性穿橙棕色针织开衫，内搭蓝白印花连衣裙，双手插入口袋。两侧衣袖末端均可见，但手部与开衫口袋存在重叠。本次以橙棕色针织开衫为目标服装，分别审核两侧袖口。",
+          "midpoint_px": [
+            249.95,
+            526.45
+          ]
+        }
+      ]
+    },
+    {
+      "image_id": "holdout_014",
+      "sha256": "3df44c6651677afb43038273c9d578694cd4e015c0f234b807ddec2ed2210906",
+      "size": [
+        683,
+        1024
+      ],
+      "review_status": "reviewed_sleeves",
+      "notes": "",
+      "sleeves": [
+        {
+          "record_no": 1,
+          "person_garment": "前景女模特穿着的橙红色半透明薄开衫，内搭橙红色连衣裙",
+          "garment_category": "outerwear",
+          "image_side": "image_left",
+          "status": "measurable",
+          "confidence": "medium",
+          "A_outer_px": [
+            209.5,
+            520.5
+          ],
+          "B_inner_px": [
+            247.4,
+            523.9
+          ],
+          "notes": "当前审核图像左侧橙红色薄开衫袖口，衣袖末端与裸露手腕的交界基本可辨。由于薄纱材质透明且存在局部褶皱，需要放大确认开口外侧A点和内侧B点。暂按中等置信度记录，只有两端均可靠确认时才计算V3二维开口中点。",
+          "midpoint_px": [
+            228.45,
+            522.2
+          ]
+        }
+      ]
+    },
+    {
+      "image_id": "holdout_015",
+      "sha256": "89698503d8a1ad0d67a885702db018c2e91639bcbaaa5da8ac71f96ca5faa536",
+      "size": [
+        490,
+        1024
+      ],
+      "review_status": "no_sleeve_target",
+      "notes": "前景女性穿黑白竖条纹无袖连衣裙，双侧肩膀及手臂裸露，没有独立袖片或可测量的袖口开口。肩部衣料与手臂的交界属于袖窿边缘，不属于V3袖口端点标注范围。本张无适合标注的袖口，不生成A、B坐标及二维开口中点。",
+      "sleeves": []
+    },
+    {
+      "image_id": "holdout_016",
+      "sha256": "03cda25d082b923d64352fdceb3ae14930f6aa563d2671c334f943174430651e",
+      "size": [
+        768,
+        1024
+      ],
+      "review_status": "reviewed_sleeves",
+      "notes": "前景女性穿黑白竖条纹无袖连衣裙，双侧肩膀及手臂裸露，没有独立袖片或可测量的袖口开口。肩部衣料与手臂的交界属于袖窿边缘，不属于V3袖口端点标注范围。本张无适合标注的袖口，不生成A、B坐标及二维开口中点。",
+      "sleeves": [
+        {
+          "record_no": 1,
+          "person_garment": "前景女性穿黑色短袖上衣及黑色长裤，当前标注图像右侧袖口。。",
+          "garment_category": "top",
+          "image_side": "image_right",
+          "status": "measurable",
+          "confidence": "medium",
+          "A_outer_px": [
+            482.7,
+            355.3
+          ],
+          "B_inner_px": [
+            441.4,
+            362.7
+          ],
+          "notes": "",
+          "midpoint_px": [
+            462.05,
+            359
+          ]
+        }
+      ]
+    },
+    {
+      "image_id": "holdout_017",
+      "sha256": "ddbd5b5b7ed7802b50a228a33495706773cb47f1c23195298a48a459cbfde336",
+      "size": [
+        1024,
+        768
+      ],
+      "review_status": "reviewed_sleeves",
+      "notes": "前景女性穿黑色长袖外套及蓝色牛仔裤，夜间街景光线较暗，双臂弯曲并靠近身体。袖口区域受到手部姿态及深色衣料重叠影响，边界不够清晰。本次以黑色外套为目标服装，不纳入背景行人。",
+      "sleeves": [
+        {
+          "record_no": 1,
+          "person_garment": "前景夜间过马路、穿黑色长袖外套的女生",
+          "garment_category": "outerwear",
+          "image_side": "image_left",
+          "status": "endpoint_uncertain",
+          "confidence": "low",
+          "A_outer_px": null,
+          "B_inner_px": null,
+          "notes": "当前审核图像左侧黑色外套袖口，能够大致辨认袖口所在区域，但因光线不足、手部遮挡及衣料颜色接近，无法可靠确定同一段袖口开口的外侧A点和内侧B点。标注置信度为低，本次不强行补齐端点，A、B及V3二维中点均保留null。",
+          "midpoint_px": null
+        }
+      ]
+    },
+    {
+      "image_id": "holdout_018",
+      "sha256": "029a695093524f637144c48caf4384df4ae1c4f9cdf4131a27557754bba6c612",
+      "size": [
+        683,
+        1024
+      ],
+      "review_status": "reviewed_sleeves",
+      "notes": "前景男模特穿浅蓝色BRAVE印花短袖T恤及蓝色牛仔裤，双侧袖口可见。本次审核图像左侧袖口，袖口与裸露上臂的交界较清晰，可以进行V3端点标注。",
+      "sleeves": [
+        {
+          "record_no": 1,
+          "person_garment": "前景男模特穿着的浅蓝色 BRAVE 印花短袖T恤",
+          "garment_category": "top",
+          "image_side": "image_left",
+          "status": "measurable",
+          "confidence": "medium",
+          "A_outer_px": [
+            216.4,
+            321
+          ],
+          "B_inner_px": [
+            264.6,
+            334.8
+          ],
+          "notes": "图像左侧浅蓝色短袖的袖口开口基本清晰，A点位于袖口外侧端点，B点位于靠近衣身的内侧端点。两点属于同一段可见袖口开口，局部边界存在轻微模糊，端点标注置信度为中。确认点位后可计算V3二维开口中点。",
+          "midpoint_px": [
+            240.5,
+            327.9
+          ]
+        }
+      ]
+    },
+    {
+      "image_id": "holdout_019",
+      "sha256": "20be195898618c3d4d1eae61384fdd06b0dd6f62ae774dc774dcc43710185069",
+      "size": [
+        634,
+        1024
+      ],
+      "review_status": "reviewed_sleeves",
+      "notes": "前景女模特穿黑色长袖外搭及黑色长裤，图像右侧手臂自然下垂，袖口位于手腕附近。袖口区域基本可见，但衣物颜色较深，局部边界需要放大确认。本次以黑色外搭为目标服装，背景人员不纳入标注。",
+      "sleeves": [
+        {
+          "record_no": 1,
+          "person_garment": "前景女模特穿着的黑色长袖外搭，搭配黑色长裤",
+          "garment_category": "outerwear",
+          "image_side": "image_right",
+          "status": "measurable",
+          "confidence": "medium",
+          "A_outer_px": [
+            355.4,
+            593.5
+          ],
+          "B_inner_px": [
+            315.8,
+            581.5
+          ],
+          "notes": "当前审核图像右侧黑色长袖袖口，袖口与手部的交界基本可辨。由于黑色衣料、局部褶皱及袖口边缘阴影影响，需要放大核对外侧A点和内侧B点。暂按中等置信度记录，只有两端均可靠确认时才计算V3二维开口中点。",
+          "midpoint_px": [
+            335.6,
+            587.5
+          ]
+        }
+      ]
+    },
+    {
+      "image_id": "holdout_020",
+      "sha256": "5f99b8dc2d92618960df91f8e2f40b014b3050aacd0fc09d14b7aecb907a7bf9",
+      "size": [
+        681,
+        1024
+      ],
+      "review_status": "reviewed_sleeves",
+      "notes": "前景男模特穿浅灰色长款外套，内搭银灰色马甲及白色衬衫。两侧长袖袖口位于手腕附近，当前标注图像右侧袖口。袖口区域基本可见，目标为外层浅灰色外套，不将内搭马甲或外套前襟作为袖口。",
+      "sleeves": [
+        {
+          "record_no": 1,
+          "person_garment": "前景男模特穿着的浅灰色长款外套，内搭银灰色马甲",
+          "garment_category": "outerwear",
+          "image_side": "image_right",
+          "status": "measurable",
+          "confidence": "medium",
+          "A_outer_px": [
+            552.8,
+            704.5
+          ],
+          "B_inner_px": [
+            489.1,
+            704.5
+          ],
+          "notes": "图像右侧浅灰色外套袖口基本清晰，A点位于袖口外侧端点，B点位于内侧袖口与手腕交界附近，两点属于同一段可见开口。内侧局部受衣料褶皱影响，端点位置存在轻微不确定性，标注置信度为中，可计算V3二维开口中点。",
+          "midpoint_px": [
+            520.95,
+            704.5
+          ]
+        }
+      ]
+    }
+  ],
+  "exported_at": "2026-10-13T11:33:59.815Z",
+  "blind": true,
+  "no_predictions_seen_in_annotation_ui": true
+}

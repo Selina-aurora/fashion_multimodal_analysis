@@ -1,0 +1,10 @@
+{
+  "new_unit_tests_passed": 9,
+  "existing_guard_tests_passed": 10,
+  "cached_instances_verified": 34,
+  "png_masks_unchanged": true,
+  "raw_candidate_evidence_unchanged": true,
+  "installer_backup_checked": true,
+  "model_inference_run": false,
+  "accuracy_evaluated": false
+}

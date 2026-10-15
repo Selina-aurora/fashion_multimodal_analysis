@@ -1,0 +1,518 @@
+{
+  "schema_version": "attribute_review_v1",
+  "selection_sha256": "f36d08d710565703406c5fa48c29ccea78ea2ca30429ea2991b5f2bed60d47cd",
+  "purpose": "18-target diagnostic attribute review; not formal PRD acceptance; original segmentation validation images",
+  "draft_author": "assistant_visual_review_not_model_prediction",
+  "options": {
+    "primary_color": [
+      [
+        "black",
+        "黑"
+      ],
+      [
+        "white",
+        "白"
+      ],
+      [
+        "gray",
+        "灰"
+      ],
+      [
+        "beige",
+        "米色"
+      ],
+      [
+        "brown",
+        "棕"
+      ],
+      [
+        "red",
+        "红"
+      ],
+      [
+        "orange",
+        "橙"
+      ],
+      [
+        "yellow",
+        "黄"
+      ],
+      [
+        "green",
+        "绿"
+      ],
+      [
+        "blue",
+        "蓝"
+      ],
+      [
+        "purple",
+        "紫"
+      ],
+      [
+        "pink",
+        "粉"
+      ],
+      [
+        "unknown",
+        "看不清 / 无单一主色"
+      ]
+    ],
+    "pattern": [
+      [
+        "solid",
+        "素色 / 无印花"
+      ],
+      [
+        "striped",
+        "条纹"
+      ],
+      [
+        "checked_plaid",
+        "格纹"
+      ],
+      [
+        "floral",
+        "花卉"
+      ],
+      [
+        "graphic_logo",
+        "大图案 / 文字 / Logo"
+      ],
+      [
+        "polka_dot",
+        "波点"
+      ],
+      [
+        "animal_print",
+        "动物纹"
+      ],
+      [
+        "camouflage",
+        "迷彩"
+      ],
+      [
+        "geometric_abstract",
+        "几何 / 抽象"
+      ],
+      [
+        "other_pattern",
+        "其他图案"
+      ],
+      [
+        "unknown",
+        "看不清 / 无法判断"
+      ]
+    ],
+    "sleeve_length": [
+      [
+        "sleeveless",
+        "无袖"
+      ],
+      [
+        "cap",
+        "盖肩极短袖"
+      ],
+      [
+        "short",
+        "短袖（上臂）"
+      ],
+      [
+        "elbow",
+        "及肘"
+      ],
+      [
+        "three_quarter",
+        "七分袖（肘下至腕上）"
+      ],
+      [
+        "long",
+        "长袖（到手腕）"
+      ],
+      [
+        "unknown",
+        "看不清 / 袖型有歧义"
+      ]
+    ]
+  },
+  "cases": [
+    {
+      "record_id": "v5_validation_00014",
+      "source_dataset": "DeepFashion2",
+      "category": "top",
+      "garment_id": "item1_short_sleeve_top",
+      "garment_bbox": [
+        267.0,
+        222.0,
+        530.0,
+        407.0
+      ],
+      "source_image_sha256": "f1a8dd47ca0411c6675af302978a81f16b91e88d85222776791bd3b8112ff3ff",
+      "source_image_reference": "../fashion_data/raw/train/train/image/096778.jpg",
+      "number": 1,
+      "draft": {
+        "primary_color": "white",
+        "pattern": "graphic_logo",
+        "sleeve_length": "short"
+      },
+      "note": ""
+    },
+    {
+      "record_id": "v5_validation_00027",
+      "source_dataset": "DeepFashion2",
+      "category": "top",
+      "garment_id": "item1_long_sleeve_top",
+      "garment_bbox": [
+        71.0,
+        138.0,
+        597.0,
+        745.0
+      ],
+      "source_image_sha256": "ced008e6111b7f2b8382ddefc44160c25e9a5339069bfab2791bdf6512828fb6",
+      "source_image_reference": "../fashion_data/raw/train/train/image/174323.jpg",
+      "number": 2,
+      "draft": {
+        "primary_color": "pink",
+        "pattern": "solid",
+        "sleeve_length": "long"
+      },
+      "note": ""
+    },
+    {
+      "record_id": "v5_validation_00016",
+      "source_dataset": "DeepFashion2",
+      "category": "top",
+      "garment_id": "item1_short_sleeve_top",
+      "garment_bbox": [
+        153.0,
+        116.0,
+        406.0,
+        377.0
+      ],
+      "source_image_sha256": "1ff3fc0f63441fd6a488ef2ee2a1c482e1760e78b98cfd7f7f8df91468bfbd60",
+      "source_image_reference": "../fashion_data/raw/train/train/image/101034.jpg",
+      "number": 3,
+      "draft": {
+        "primary_color": "white",
+        "pattern": "graphic_logo",
+        "sleeve_length": "short"
+      },
+      "note": ""
+    },
+    {
+      "record_id": "v5_validation_00046",
+      "source_dataset": "Fashionpedia",
+      "category": "top",
+      "garment_id": "fashionpedia_ann_6505",
+      "garment_bbox": [
+        234.0,
+        194.0,
+        530.0,
+        504.0
+      ],
+      "source_image_sha256": "2f60ebbd03f1ae1151ab4643cccc3b05cda61a457853c1ad83ca6c9f07ceeff3",
+      "source_image_reference": "../fashion_data/raw/fashionpedia/images/test/33cfdcbd48019b09e36a78c428bbae1d.jpg",
+      "number": 4,
+      "draft": {
+        "primary_color": "purple",
+        "pattern": "checked_plaid",
+        "sleeve_length": "elbow"
+      },
+      "note": "袖子卷起，草稿按图片中可见末端在肘部附近标注。"
+    },
+    {
+      "record_id": "v5_validation_00053",
+      "source_dataset": "Fashionpedia",
+      "category": "top",
+      "garment_id": "fashionpedia_ann_3411",
+      "garment_bbox": [
+        306.0,
+        487.0,
+        379.0,
+        621.0
+      ],
+      "source_image_sha256": "4c586e958e94a7170b3296bbd5fc97cc1c337750f80d8155f175949394a966e0",
+      "source_image_reference": "../fashion_data/raw/fashionpedia/images/test/3bf082a96a03a1c8f75e1d1d0ebf42d2.jpg",
+      "number": 5,
+      "draft": {
+        "primary_color": "pink",
+        "pattern": "solid",
+        "sleeve_length": "unknown"
+      },
+      "note": "只判断粉色内搭；外套遮挡，袖长无法确定。"
+    },
+    {
+      "record_id": "v5_validation_00035",
+      "source_dataset": "Fashionpedia",
+      "category": "top",
+      "garment_id": "fashionpedia_ann_6951",
+      "garment_bbox": [
+        342.0,
+        251.0,
+        531.0,
+        405.0
+      ],
+      "source_image_sha256": "68cc723eca099c94e3b8b6b62ab7f67a024963cec1329f19f41abbf9cdced0d6",
+      "source_image_reference": "../fashion_data/raw/fashionpedia/images/test/311db0d6f5b7be84ac3c952a443ef981.jpg",
+      "number": 6,
+      "draft": {
+        "primary_color": "beige",
+        "pattern": "animal_print",
+        "sleeve_length": "short"
+      },
+      "note": "只判断上衣；斑马纹归动物纹，不归普通条纹。主色米色/棕色请重点核对。"
+    },
+    {
+      "record_id": "v5_validation_00013",
+      "source_dataset": "DeepFashion2",
+      "category": "outerwear",
+      "garment_id": "item1_long_sleeve_outwear",
+      "garment_bbox": [
+        76.0,
+        98.0,
+        468.0,
+        574.0
+      ],
+      "source_image_sha256": "cf6b7b4aaafa31a9c1fa0a046ddcbf028f9a094bcc7b94932c2bce599438a0e9",
+      "source_image_reference": "../fashion_data/raw/train/train/image/092719.jpg",
+      "number": 7,
+      "draft": {
+        "primary_color": "unknown",
+        "pattern": "solid",
+        "sleeve_length": "unknown"
+      },
+      "note": "画面偏色且模糊，主色和袖长先标为看不清；只看外层开衫。"
+    },
+    {
+      "record_id": "v5_validation_00018",
+      "source_dataset": "DeepFashion2",
+      "category": "outerwear",
+      "garment_id": "item1_long_sleeve_outwear",
+      "garment_bbox": [
+        126.0,
+        200.0,
+        640.0,
+        957.0
+      ],
+      "source_image_sha256": "d9e4c2cfdb0b0d41182e6199fa266a7372237afc6a7c7608c21b9a44fec568a2",
+      "source_image_reference": "../fashion_data/raw/train/train/image/114238.jpg",
+      "number": 8,
+      "draft": {
+        "primary_color": "black",
+        "pattern": "striped",
+        "sleeve_length": "three_quarter"
+      },
+      "note": "只判断条纹外衣；卷袖按可见末端标注，不按展开后长度猜测。"
+    },
+    {
+      "record_id": "v5_validation_00024",
+      "source_dataset": "DeepFashion2",
+      "category": "outerwear",
+      "garment_id": "item1_long_sleeve_outwear",
+      "garment_bbox": [
+        5.0,
+        127.0,
+        305.0,
+        395.0
+      ],
+      "source_image_sha256": "67ad0a245ba72e5cd1d27fc259a0113fba1721adb50c6d7a4b7f23e14e50077c",
+      "source_image_reference": "../fashion_data/raw/train/train/image/146128.jpg",
+      "number": 9,
+      "draft": {
+        "primary_color": "black",
+        "pattern": "floral",
+        "sleeve_length": "three_quarter"
+      },
+      "note": "只判断花纹外套，不判断白色内搭。袖长请重点核对。"
+    },
+    {
+      "record_id": "v5_validation_00036",
+      "source_dataset": "Fashionpedia",
+      "category": "outerwear",
+      "garment_id": "fashionpedia_ann_7673",
+      "garment_bbox": [
+        99.0,
+        208.0,
+        326.0,
+        545.0
+      ],
+      "source_image_sha256": "ba1a04bce9114beba860ee784d34f2a2c43b4fee2e7680e69726795e5b4b79fe",
+      "source_image_reference": "../fashion_data/raw/fashionpedia/images/test/32227cade6d3646824f9c0f3fa9dc9e7.jpg",
+      "number": 10,
+      "draft": {
+        "primary_color": "purple",
+        "pattern": "geometric_abstract",
+        "sleeve_length": "long"
+      },
+      "note": "几何装饰草稿为几何/抽象；若实际只有拼接色块，请改为素色/无印花。"
+    },
+    {
+      "record_id": "v5_validation_00062",
+      "source_dataset": "Fashionpedia",
+      "category": "outerwear",
+      "garment_id": "fashionpedia_ann_6083",
+      "garment_bbox": [
+        218.0,
+        187.0,
+        535.0,
+        635.0
+      ],
+      "source_image_sha256": "df91edad8133b9d732873c9a4df1d76a5bb76799a3aff8948337c47fec241b9d",
+      "source_image_reference": "../fashion_data/raw/fashionpedia/images/test/4f23f05daee3cbdd96295f84825e3581.jpg",
+      "number": 11,
+      "draft": {
+        "primary_color": "green",
+        "pattern": "solid",
+        "sleeve_length": "long"
+      },
+      "note": ""
+    },
+    {
+      "record_id": "v5_validation_00064",
+      "source_dataset": "Fashionpedia",
+      "category": "outerwear",
+      "garment_id": "fashionpedia_ann_2414",
+      "garment_bbox": [
+        544.0,
+        300.0,
+        669.0,
+        493.0
+      ],
+      "source_image_sha256": "bf88cc3aa332176552eb6c44e6a624ca2bf05d23f056a937f6000cb75849ebb6",
+      "source_image_reference": "../fashion_data/raw/fashionpedia/images/test/77435fc234059dcb9e0bb3d73382bcc7.jpg",
+      "number": 12,
+      "draft": {
+        "primary_color": "black",
+        "pattern": "solid",
+        "sleeve_length": "long"
+      },
+      "note": "目标是骑车人的外套；背景墙图案不算衣服图案。黑/灰请核对。"
+    },
+    {
+      "record_id": "v5_validation_00031",
+      "source_dataset": "DeepFashion2",
+      "category": "dress",
+      "garment_id": "item1_long_sleeve_dress",
+      "garment_bbox": [
+        186.0,
+        4.0,
+        760.0,
+        1067.0
+      ],
+      "source_image_sha256": "800d5ad44da59bfa4fd719ff459524b3acebb3c49acbd0a6cb062b68092b54ac",
+      "source_image_reference": "../fashion_data/raw/train/train/image/184087.jpg",
+      "number": 13,
+      "draft": {
+        "primary_color": "black",
+        "pattern": "solid",
+        "sleeve_length": "long"
+      },
+      "note": "按当前模型口径，蕾丝与网眼结构归素色/无印花；这不代表没有纹理。"
+    },
+    {
+      "record_id": "v5_validation_00006",
+      "source_dataset": "DeepFashion2",
+      "category": "dress",
+      "garment_id": "item1_short_sleeve_dress",
+      "garment_bbox": [
+        63.0,
+        189.0,
+        466.0,
+        624.0
+      ],
+      "source_image_sha256": "6f342b460e05950dfa5e796e8524237bba8225dc9a9eef6b91387f11ee6f49da",
+      "source_image_reference": "../fashion_data/raw/train/train/image/019779.jpg",
+      "number": 14,
+      "draft": {
+        "primary_color": "white",
+        "pattern": "solid",
+        "sleeve_length": "unknown"
+      },
+      "note": "露肩荷叶边的袖型有歧义，袖长先跳过，颜色和图案仍可确认。"
+    },
+    {
+      "record_id": "v5_validation_00005",
+      "source_dataset": "DeepFashion2",
+      "category": "dress",
+      "garment_id": "item1_short_sleeve_dress",
+      "garment_bbox": [
+        55.0,
+        239.0,
+        349.0,
+        644.0
+      ],
+      "source_image_sha256": "b8afc1fff47b66e1459d7bb466b0204b97daa8b411054703781d5f3830165787",
+      "source_image_reference": "../fashion_data/raw/train/train/image/015031.jpg",
+      "number": 15,
+      "draft": {
+        "primary_color": "green",
+        "pattern": "checked_plaid",
+        "sleeve_length": "short"
+      },
+      "note": ""
+    },
+    {
+      "record_id": "v5_validation_00072",
+      "source_dataset": "Fashionpedia",
+      "category": "dress",
+      "garment_id": "fashionpedia_ann_8517",
+      "garment_bbox": [
+        107.0,
+        248.0,
+        352.0,
+        711.0
+      ],
+      "source_image_sha256": "f2cfb45495139081cf86430588c2584f81ae8f9b106e17aee3fcf506ad3dc81c",
+      "source_image_reference": "../fashion_data/raw/fashionpedia/images/test/89144779b3e40421facdb2eb70309356.jpg",
+      "number": 16,
+      "draft": {
+        "primary_color": "purple",
+        "pattern": "solid",
+        "sleeve_length": "sleeveless"
+      },
+      "note": ""
+    },
+    {
+      "record_id": "v5_validation_00085",
+      "source_dataset": "Fashionpedia",
+      "category": "dress",
+      "garment_id": "fashionpedia_ann_7325",
+      "garment_bbox": [
+        192.0,
+        229.0,
+        479.0,
+        753.0
+      ],
+      "source_image_sha256": "ece935cec2674684214f689bd878663ec5e15acdde69725a183078daa16fd0e6",
+      "source_image_reference": "../fashion_data/raw/fashionpedia/images/test/fac6412c2873388612c4ec4cda414ac6.jpg",
+      "number": 17,
+      "draft": {
+        "primary_color": "black",
+        "pattern": "solid",
+        "sleeve_length": "unknown"
+      },
+      "note": "肩部装饰与极短袖有歧义，袖长先跳过。"
+    },
+    {
+      "record_id": "v5_validation_00081",
+      "source_dataset": "Fashionpedia",
+      "category": "dress",
+      "garment_id": "fashionpedia_ann_2757",
+      "garment_bbox": [
+        521.0,
+        125.0,
+        753.0,
+        646.0
+      ],
+      "source_image_sha256": "61fe69dc195f9e07a8b45a3f8eee9cc5f146dca40fe7e6cb700874fe29163342",
+      "source_image_reference": "../fashion_data/raw/fashionpedia/images/test/dd4525a10b6110df29f0a6b19e6b924b.jpg",
+      "number": 18,
+      "draft": {
+        "primary_color": "red",
+        "pattern": "solid",
+        "sleeve_length": "sleeveless"
+      },
+      "note": ""
+    }
+  ]
+}

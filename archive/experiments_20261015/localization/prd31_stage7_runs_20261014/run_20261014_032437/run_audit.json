@@ -1,0 +1,82 @@
+{
+  "status": "STAGE7_PROFILE_COMPLETED",
+  "dry_run": false,
+  "project_files_modified": false,
+  "source": "Stage6 same V5 Balanced150 eight-image diagnostic",
+  "checkpoint": {
+    "device": "NVIDIA GeForce RTX 4090",
+    "torch": "2.13.0+cu132",
+    "checkpoint_sha256": "c5ba795225349b1c521aac0517ac7c493d9818dcc17d558ac4a3f6f8669452f0",
+    "min_size": 640,
+    "max_size": 1024
+  },
+  "profile_summary": {
+    "status": "STAGE7_PROFILE_COMPLETED",
+    "profiled_queries": 16,
+    "timed_passes": 5,
+    "warmup_runs": 10,
+    "total_calls": 80,
+    "valid_calls": 80,
+    "error_calls": 0,
+    "all": {
+      "total_ms": {
+        "n": 80,
+        "mean_ms": 179.6558,
+        "median_ms": 180.4618,
+        "p95_ms": 244.6323
+      },
+      "dino_ms": {
+        "n": 80,
+        "mean_ms": 124.7574,
+        "median_ms": 125.4523,
+        "p95_ms": 131.3843
+      },
+      "sam_ms": {
+        "n": 80,
+        "mean_ms": 53.6726,
+        "median_ms": 49.4982,
+        "p95_ms": 116.6226
+      },
+      "other_overhead_ms": {
+        "n": 80,
+        "mean_ms": 1.2258,
+        "median_ms": 1.0485,
+        "p95_ms": 3.6355
+      }
+    },
+    "sam_invocations": 40,
+    "by_status": [
+      {
+        "status": "detected",
+        "n": 40,
+        "mean_total_ms": 234.706,
+        "mean_dino_ms": 125.7909,
+        "mean_sam_ms": 107.3453,
+        "sam_invoked_count": 40
+      },
+      {
+        "status": "missed",
+        "n": 30,
+        "mean_total_ms": 125.463,
+        "mean_dino_ms": 124.6917,
+        "mean_sam_ms": 0,
+        "sam_invoked_count": 0
+      },
+      {
+        "status": "rejected_region_geometry",
+        "n": 10,
+        "mean_total_ms": 122.0334,
+        "mean_dino_ms": 120.8204,
+        "mean_sam_ms": 0,
+        "sam_invoked_count": 0
+      }
+    ],
+    "notes": [
+      "CUDA synchronizations added inside per-phase wrappers; relative phase diagnostics only.",
+      "SAM is skipped for missed DINO proposals; zero indicates no call, not a zero-cost SAM inference.",
+      "Other overhead includes crop/mask geometry, Python bookkeeping, and synchronization overhead.",
+      "This is 8-image repeated-call development profiling; NOT independent latency acceptance.",
+      "No threshold sweeps, no model/data changes, no human-reviewed GT labels."
+    ]
+  }
+}

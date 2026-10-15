@@ -1,0 +1,103 @@
+def run_grounding_dino(
+    image: Image.Image,
+    prompt: str,
+    box_threshold: float,
+    text_threshold: float,
+    processor: Any,
+    model: Any,
+    device: Any,
+) -> tuple[Any, ...]:
+    # Grounding DINO text input works best with a trailing period.
+    """用图像与文本查询生成局部区域候选。
+
+    Args:
+        image: 本步骤处理的图像对象。
+        prompt: 提示文本。
+        box_threshold: 本步骤的 box 判定阈值。
+        text_threshold: 本步骤的 text 判定阈值。
+        processor: 与模型配套的输入处理器。
+        model: 已构建的模型对象，由调用方负责选择权重。
+        device: 当前计算设备，与输入张量和模型设备保持一致。
+
+    Returns:
+        按顺序返回 detections, elapsed 等结果。
+    """
+    text = prompt.strip()
+    if not text.endswith("."):
+        text += "."
+
+    inputs = processor(
+        images=image,
+        text=text,
+        return_tensors="pt",
+    )
+
+    inputs = {k: v.to(device) if torch.is_tensor(v) else v for k, v in inputs.items()}
+
+    if device.type == "cuda":
+        torch.cuda.synchronize()
+
+    t0 = time.perf_counter()
+
+    with torch.inference_mode():
+        outputs = model(**inputs)
+
+    if device.type == "cuda":
+        torch.cuda.synchronize()
+
+    elapsed = time.perf_counter() - t0
+
+    target_sizes = torch.tensor(
+        [[image.height, image.width]],
+        device=device,
+    )
+
+    # Current transformers API.
+    try:
+        processed = processor.post_process_grounded_object_detection(
+            outputs,
+            inputs["input_ids"],
+            box_threshold=box_threshold,
+            text_threshold=text_threshold,
+            target_sizes=target_sizes,
+        )
+    except TypeError:
+        # Compatibility with versions using threshold=...
+        processed = processor.post_process_grounded_object_detection(
+            outputs,
+            inputs["input_ids"],
+            threshold=box_threshold,
+            text_threshold=text_threshold,
+            target_sizes=target_sizes,
+        )
+
+    result = processed[0]
+
+    boxes = to_python(result.get("boxes", []))
+    scores = to_python(result.get("scores", []))
+    labels = result.get("text_labels", result.get("labels", []))
+    labels = to_python(labels)
+
+    detections = []
+
+    for i, box in enumerate(boxes):
+        score = float(scores[i]) if i < len(scores) else 0.0
+
+        label = ""
+        if i < len(labels):
+            label = str(labels[i])
+
+        detections.append(
+            {
+                "label": label,
+                "score": score,
+                "box": [float(v) for v in box],
+            }
+        )
+
+    detections.sort(
+        key=lambda d: d["score"],
+        reverse=True,
+    )
+
+    return detections, elapsed

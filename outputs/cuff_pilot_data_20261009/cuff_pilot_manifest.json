@@ -1,0 +1,1542 @@
+{
+  "status": "USER_REVIEWED_CUFF_PILOT_SPLIT_FROZEN",
+  "selection_sha256s": [
+    "79efe437e51a6c1bca487bb1a12d2485392fa9bb60c257862b643c993087ee63",
+    "de52c8652a3ea9b99834dc76f56fbc828b6f7171261d8e3f90038cffef8cff23"
+  ],
+  "annotation_inputs_sha256": [
+    "3093288bfaaa16b78579d852a4b93e943a20f20d3819d398d53c643e1d38c7ec",
+    "266060077b06f847e52c61225813f2c45d14c166e059d1e4fb6e80257566f515"
+  ],
+  "definition": "若有清楚独立的罗纹/扣式/翻折袖口带，框整个袖口带；没有独立带则框袖子末端开口的可见边缘，允许少量余量。各开口单独框；只标目标服装，不标内搭、整条袖子、手表、下摆。遮挡/截断或目标层不清标 ambiguous。",
+  "task": "target_garment_conditioned_cuff_bbox_detection",
+  "split_seed_label": "cuff_split_20261009",
+  "role": "training_and_development_validation_not_independent_blind_test",
+  "limitations": [
+    "All source images came from original segmentation training data.",
+    "No independent untouched end-to-end test set is established.",
+    "Annotations apply only to the specified garment, not every garment in the image.",
+    "Ambiguous cases are excluded, never used as empty-label negatives.",
+    "No original segmentation label, weight, or protected Core/val manifest is modified."
+  ],
+  "cases": [
+    {
+      "record_id": "df2_targeted150_20261008_00237",
+      "source_dataset": "DeepFashion2",
+      "category": "top",
+      "fine_category": "long_sleeve_top",
+      "source_image_reference": "../fashion_data/raw/train/train/image/114520.jpg",
+      "garment_id": "item2_long_sleeve_top",
+      "garment_bbox": [
+        87,
+        270,
+        614,
+        841
+      ],
+      "image_width": 750,
+      "image_height": 1076,
+      "source_image_sha256": "8c52210cc74abbe38e8a151bda3ef0a13544c700c31ded02b93a9862e9ccd590",
+      "presence": "present",
+      "cuff_boxes": [
+        [
+          437,
+          259,
+          493,
+          312
+        ],
+        [
+          153,
+          762,
+          225,
+          818
+        ]
+      ],
+      "review_status": "reviewed",
+      "source_file_relative": "source_images/df2_targeted150_20261008_00237.jpg",
+      "reviewed_at": "2026-10-09T03:07:15.015Z",
+      "pre_review_by": "assistant_visual_review",
+      "pre_review_note": "白色宽松上衣：右侧抬手袖端及左侧垂手袖端开口；宽口不等于独立罗纹带。",
+      "pre_review_priority": "normal",
+      "pilot_split": "train"
+    },
+    {
+      "record_id": "v5_train_00110",
+      "source_dataset": "DeepFashion2",
+      "category": "top",
+      "fine_category": "long_sleeve_top",
+      "source_image_reference": "../fashion_data/raw/train/train/image/165021.jpg",
+      "garment_id": "item1_long_sleeve_top",
+      "garment_bbox": [
+        1,
+        58,
+        468,
+        592
+      ],
+      "image_width": 468,
+      "image_height": 631,
+      "source_image_sha256": "4024569d6963470f1d2d8273a34bd94375aaa732a9fdb1bdd720fa3cea6f7e17",
+      "presence": "ambiguous",
+      "cuff_boxes": [],
+      "review_status": "reviewed",
+      "source_file_relative": "source_images/v5_train_00110.jpg",
+      "reviewed_at": "2026-10-09T03:07:17.107Z",
+      "pre_review_by": "assistant_visual_review",
+      "pre_review_note": "条纹上衣平铺，左右袖端都被图片边缘截断，不能从照片确认完整开口框。",
+      "pre_review_priority": "normal",
+      "pilot_split": "excluded_ambiguous"
+    },
+    {
+      "record_id": "df2_balanced150_20261008_00041",
+      "source_dataset": "DeepFashion2",
+      "category": "top",
+      "fine_category": "short_sleeve_top",
+      "source_image_reference": "../fashion_data/raw/train/train/image/181046.jpg",
+      "garment_id": "item1_short_sleeve_top",
+      "garment_bbox": [
+        1,
+        115,
+        467,
+        619
+      ],
+      "image_width": 468,
+      "image_height": 832,
+      "source_image_sha256": "0f3dacae99c6dcb74e1cb1dfdb3b3ef9e8c2c6435f636ce1ebd27b0060c68cd0",
+      "presence": "present",
+      "cuff_boxes": [
+        [
+          0,
+          397,
+          80,
+          436
+        ]
+      ],
+      "review_status": "reviewed",
+      "source_file_relative": "source_images/df2_balanced150_20261008_00041.jpg",
+      "reviewed_at": "2026-10-09T03:07:18.759Z",
+      "pre_review_by": "assistant_visual_review",
+      "pre_review_note": "目标为白色短袖上衣，左侧可见末端开口；蓝色波点层不标。左侧开口部分到图像边缘，需重点复核。",
+      "pre_review_priority": "high",
+      "pilot_split": "development_val"
+    },
+    {
+      "record_id": "v5_train_00063",
+      "source_dataset": "DeepFashion2",
+      "category": "top",
+      "fine_category": "short_sleeve_top",
+      "source_image_reference": "../fashion_data/raw/train/train/image/114803.jpg",
+      "garment_id": "item1_short_sleeve_top",
+      "garment_bbox": [
+        3,
+        15,
+        467,
+        755
+      ],
+      "image_width": 468,
+      "image_height": 832,
+      "source_image_sha256": "cdea85f53ca6795504a641eab6742154c4fa6edf67d5b14fe85a2f7631851fe6",
+      "presence": "ambiguous",
+      "cuff_boxes": [],
+      "review_status": "reviewed",
+      "source_file_relative": "source_images/v5_train_00063.jpg",
+      "reviewed_at": "2026-10-09T03:07:21.999Z",
+      "pre_review_by": "assistant_visual_review",
+      "pre_review_note": "平铺白色短袖上衣只拍到主体，袖端在左右画外。",
+      "pre_review_priority": "normal",
+      "pilot_split": "excluded_ambiguous"
+    },
+    {
+      "record_id": "df2_targeted150_20261008_00209",
+      "source_dataset": "DeepFashion2",
+      "category": "top",
+      "fine_category": "short_sleeve_top",
+      "source_image_reference": "../fashion_data/raw/train/train/image/033178.jpg",
+      "garment_id": "item1_short_sleeve_top",
+      "garment_bbox": [
+        132,
+        287,
+        622,
+        747
+      ],
+      "image_width": 640,
+      "image_height": 960,
+      "source_image_sha256": "58f622ae2fc17d2a56ac98cce5cc1ec7498ff39ed08386902800fe17f772935a",
+      "presence": "present",
+      "cuff_boxes": [
+        [
+          128,
+          485,
+          242,
+          542
+        ],
+        [
+          536,
+          399,
+          601,
+          480
+        ]
+      ],
+      "review_status": "reviewed",
+      "source_file_relative": "source_images/df2_targeted150_20261008_00209.jpg",
+      "reviewed_at": "2026-10-09T03:07:23.578Z",
+      "pre_review_by": "assistant_visual_review",
+      "pre_review_note": "白色短袖上衣两个开口；手表不属于袖口。",
+      "pre_review_priority": "normal",
+      "pilot_split": "train"
+    },
+    {
+      "record_id": "df2_targeted150_20261008_00191",
+      "source_dataset": "DeepFashion2",
+      "category": "top",
+      "fine_category": "short_sleeve_top",
+      "source_image_reference": "../fashion_data/raw/train/train/image/105219.jpg",
+      "garment_id": "item1_short_sleeve_top",
+      "garment_bbox": [
+        1,
+        2,
+        443,
+        452
+      ],
+      "image_width": 468,
+      "image_height": 835,
+      "source_image_sha256": "987aa5dcd862b406a3addc1f57c32e7f23decd087662c3c1cb78bef8de026d85",
+      "presence": "ambiguous",
+      "cuff_boxes": [],
+      "review_status": "reviewed",
+      "source_file_relative": "source_images/df2_targeted150_20261008_00191.jpg",
+      "reviewed_at": "2026-10-09T03:07:25.069Z",
+      "pre_review_by": "assistant_visual_review",
+      "pre_review_note": "灰色平铺服装肩部截断，侧边有折叠；不能用原 short_sleeve_top 名称推断可见袖口。",
+      "pre_review_priority": "normal",
+      "pilot_split": "excluded_ambiguous"
+    },
+    {
+      "record_id": "v5_train_01260",
+      "source_dataset": "Fashionpedia",
+      "category": "top",
+      "fine_category": "sweater",
+      "source_image_reference": "../fashion_data/raw/fashionpedia/images/test/9797ab044e643d98dce52db59e6625f7.jpg",
+      "garment_id": "fashionpedia_ann_641",
+      "garment_bbox": [
+        56,
+        43,
+        953,
+        893
+      ],
+      "image_width": 1024,
+      "image_height": 1020,
+      "source_image_sha256": "b94b1b606c7e9c20a26a6941b6de4409dcf8b7e2b485e82e9d8ed3f376ac9ab7",
+      "presence": "present",
+      "cuff_boxes": [
+        [
+          69,
+          811,
+          140,
+          877
+        ],
+        [
+          873,
+          150,
+          955,
+          210
+        ]
+      ],
+      "review_status": "reviewed",
+      "source_file_relative": "source_images/v5_train_01260.jpg",
+      "reviewed_at": "2026-10-09T03:07:26.463Z",
+      "pre_review_by": "assistant_visual_review",
+      "pre_review_note": "心形毛衣两个袖端；右侧覆盖部分手掌，框的是针织末端，需复核小边界。",
+      "pre_review_priority": "high",
+      "pilot_split": "train"
+    },
+    {
+      "record_id": "v5_train_01363",
+      "source_dataset": "Fashionpedia",
+      "category": "top",
+      "fine_category": "sweater",
+      "source_image_reference": "../fashion_data/raw/fashionpedia/images/test/a3f881917b1e3e8875dfe97f9ae98bee.jpg",
+      "garment_id": "fashionpedia_ann_1914",
+      "garment_bbox": [
+        314,
+        181,
+        979,
+        1024
+      ],
+      "image_width": 1024,
+      "image_height": 1024,
+      "source_image_sha256": "6c1faa6f3fa57132543f18769fc7a0b3fed698f76adb25a074aa5d6cd28c66d5",
+      "presence": "present",
+      "cuff_boxes": [
+        [
+          447,
+          345,
+          574,
+          451
+        ],
+        [
+          855,
+          850,
+          978,
+          958
+        ]
+      ],
+      "review_status": "reviewed",
+      "source_file_relative": "source_images/v5_train_01363.jpg",
+      "reviewed_at": "2026-10-09T03:07:27.961Z",
+      "pre_review_by": "assistant_visual_review",
+      "pre_review_note": "白毛衣两个翻折罗纹袖口；标袖口带，避开右侧手表。",
+      "pre_review_priority": "normal",
+      "pilot_split": "development_val"
+    },
+    {
+      "record_id": "v5_train_00456",
+      "source_dataset": "Fashionpedia",
+      "category": "top",
+      "fine_category": "top, t-shirt, sweatshirt",
+      "source_image_reference": "../fashion_data/raw/fashionpedia/images/test/2e279590988cb29535739095a188cd0b.jpg",
+      "garment_id": "fashionpedia_ann_5923",
+      "garment_bbox": [
+        22,
+        521,
+        586,
+        1024
+      ],
+      "image_width": 684,
+      "image_height": 1024,
+      "source_image_sha256": "aec42310b5350d9f2465f70edf40929e5556e45ff3435bb6aabe0130b6c68ebb",
+      "presence": "present",
+      "cuff_boxes": [
+        [
+          22,
+          804,
+          141,
+          850
+        ],
+        [
+          499,
+          769,
+          587,
+          805
+        ]
+      ],
+      "review_status": "reviewed",
+      "source_file_relative": "source_images/v5_train_00456.jpg",
+      "reviewed_at": "2026-10-09T03:07:29.329Z",
+      "pre_review_by": "assistant_visual_review",
+      "pre_review_note": "黑色短袖两侧开口；上面的红条纹本身不是袖口。",
+      "pre_review_priority": "normal",
+      "pilot_split": "train"
+    },
+    {
+      "record_id": "v5_train_00169",
+      "source_dataset": "Fashionpedia",
+      "category": "top",
+      "fine_category": "top, t-shirt, sweatshirt",
+      "source_image_reference": "../fashion_data/raw/fashionpedia/images/test/041a6b43ed7ddfa1ec6040d27e5ce9a8.jpg",
+      "garment_id": "fashionpedia_ann_1354",
+      "garment_bbox": [
+        132,
+        337,
+        623,
+        894
+      ],
+      "image_width": 680,
+      "image_height": 1024,
+      "source_image_sha256": "79a74253b3947bb006cf650750d66eb995a27e8ad376e99c6727896dbf790d90",
+      "presence": "present",
+      "cuff_boxes": [
+        [
+          151,
+          397,
+          230,
+          434
+        ],
+        [
+          506,
+          350,
+          603,
+          382
+        ]
+      ],
+      "review_status": "reviewed",
+      "source_file_relative": "source_images/v5_train_00169.jpg",
+      "reviewed_at": "2026-10-09T03:07:30.749Z",
+      "pre_review_by": "assistant_visual_review",
+      "pre_review_note": "棕色上衣双侧袖端开口；腕饰不标。",
+      "pre_review_priority": "normal",
+      "pilot_split": "train"
+    },
+    {
+      "record_id": "v5_train_01890",
+      "source_dataset": "Fashionpedia",
+      "category": "top",
+      "fine_category": "top, t-shirt, sweatshirt",
+      "source_image_reference": "../fashion_data/raw/fashionpedia/images/test/e7bd5aa16c1acc64616bf60ea3aa0c36.jpg",
+      "garment_id": "fashionpedia_ann_6043",
+      "garment_bbox": [
+        195,
+        374,
+        682,
+        854
+      ],
+      "image_width": 682,
+      "image_height": 1024,
+      "source_image_sha256": "e898fce3a3e88aabb692f70fab39557648b11e2caff7b0e22590d9e08ae32d34",
+      "presence": "present",
+      "cuff_boxes": [
+        [
+          193,
+          394,
+          258,
+          439
+        ]
+      ],
+      "review_status": "reviewed",
+      "source_file_relative": "source_images/v5_train_01890.jpg",
+      "reviewed_at": "2026-10-09T03:07:31.998Z",
+      "pre_review_by": "assistant_visual_review",
+      "pre_review_note": "黑色连帽上衣左侧手腕与袖端交界；右侧手腕不可见，不补框。",
+      "pre_review_priority": "normal",
+      "pilot_split": "train"
+    },
+    {
+      "record_id": "v5_train_02027",
+      "source_dataset": "Fashionpedia",
+      "category": "top",
+      "fine_category": "sweater",
+      "source_image_reference": "../fashion_data/raw/fashionpedia/images/test/fd860a8100f35a28da87cec4c565ecdd.jpg",
+      "garment_id": "fashionpedia_ann_1416",
+      "garment_bbox": [
+        293,
+        219,
+        745,
+        724
+      ],
+      "image_width": 1024,
+      "image_height": 1024,
+      "source_image_sha256": "25e6b962983339d1753774a8949f38180dc23741459832b69dc158f274102041",
+      "presence": "present",
+      "cuff_boxes": [
+        [
+          296,
+          599,
+          368,
+          683
+        ],
+        [
+          624,
+          607,
+          701,
+          701
+        ]
+      ],
+      "review_status": "reviewed",
+      "source_file_relative": "source_images/v5_train_02027.jpg",
+      "reviewed_at": "2026-10-09T03:07:33.639Z",
+      "pre_review_by": "assistant_visual_review",
+      "pre_review_note": "白毛衣两侧罗纹袖口带，避开手表和手镯。",
+      "pre_review_priority": "normal",
+      "pilot_split": "train"
+    },
+    {
+      "record_id": "v5_train_00021",
+      "source_dataset": "DeepFashion2",
+      "category": "outerwear",
+      "fine_category": "long_sleeve_outwear",
+      "source_image_reference": "../fashion_data/raw/train/train/image/033828.jpg",
+      "garment_id": "item2_long_sleeve_outwear",
+      "garment_bbox": [
+        25,
+        4,
+        633,
+        954
+      ],
+      "image_width": 640,
+      "image_height": 960,
+      "source_image_sha256": "fce894e96fea4aa4e80182eb427bd90c69d9ff00923a67c770ebc98add4d8571",
+      "presence": "present",
+      "cuff_boxes": [
+        [
+          47,
+          254,
+          134,
+          393
+        ],
+        [
+          476,
+          350,
+          611,
+          522
+        ]
+      ],
+      "review_status": "reviewed",
+      "source_file_relative": "source_images/v5_train_00021.jpg",
+      "reviewed_at": "2026-10-09T03:07:35.929Z",
+      "pre_review_by": "assistant_visual_review",
+      "pre_review_note": "黄色外套两侧卷起袖口；框卷边带，不框手镯。",
+      "pre_review_priority": "normal",
+      "pilot_split": "train"
+    },
+    {
+      "record_id": "df2_targeted150_20261008_00036",
+      "source_dataset": "DeepFashion2",
+      "category": "outerwear",
+      "fine_category": "short_sleeve_outwear",
+      "source_image_reference": "../fashion_data/raw/train/train/image/082974.jpg",
+      "garment_id": "item1_short_sleeve_outwear",
+      "garment_bbox": [
+        25,
+        109,
+        586,
+        944
+      ],
+      "image_width": 640,
+      "image_height": 960,
+      "source_image_sha256": "3b3b16bf99316e32efa406b26b2b6558b7c8383ab11615ebcc35b04303fb7c26",
+      "presence": "present",
+      "cuff_boxes": [
+        [
+          468,
+          455,
+          537,
+          529
+        ]
+      ],
+      "review_status": "reviewed",
+      "source_file_relative": "source_images/df2_targeted150_20261008_00036.jpg",
+      "reviewed_at": "2026-10-09T03:07:37.868Z",
+      "pre_review_by": "assistant_visual_review",
+      "pre_review_note": "白色拼花外套右侧清楚的白色袖口带；左侧抬手袖端遮挡不补。",
+      "pre_review_priority": "normal",
+      "pilot_split": "train"
+    },
+    {
+      "record_id": "df2_targeted150_20261008_00097",
+      "source_dataset": "DeepFashion2",
+      "category": "outerwear",
+      "fine_category": "long_sleeve_outwear",
+      "source_image_reference": "../fashion_data/raw/train/train/image/026769.jpg",
+      "garment_id": "item1_long_sleeve_outwear",
+      "garment_bbox": [
+        176,
+        8,
+        733,
+        805
+      ],
+      "image_width": 880,
+      "image_height": 880,
+      "source_image_sha256": "b17c91aa9f687020190918874d3b858ac16210849853bafc4db2883ce9a4028f",
+      "presence": "present",
+      "cuff_boxes": [
+        [
+          304,
+          171,
+          379,
+          263
+        ],
+        [
+          652,
+          171,
+          728,
+          264
+        ]
+      ],
+      "review_status": "reviewed",
+      "source_file_relative": "source_images/df2_targeted150_20261008_00097.jpg",
+      "reviewed_at": "2026-10-09T03:07:40.208Z",
+      "pre_review_by": "assistant_visual_review",
+      "pre_review_note": "深蓝外套两个带扣袖口；框袖端带，避开裸手。",
+      "pre_review_priority": "normal",
+      "pilot_split": "development_val"
+    },
+    {
+      "record_id": "df2_targeted150_20261008_00101",
+      "source_dataset": "DeepFashion2",
+      "category": "outerwear",
+      "fine_category": "long_sleeve_outwear",
+      "source_image_reference": "../fashion_data/raw/train/train/image/129573.jpg",
+      "garment_id": "item1_long_sleeve_outwear",
+      "garment_bbox": [
+        0,
+        1,
+        468,
+        624
+      ],
+      "image_width": 468,
+      "image_height": 624,
+      "source_image_sha256": "445095db54c8919092a64ca2c77ffc64773327c7d4f7e05beff28faa9f6cf63a",
+      "presence": "ambiguous",
+      "cuff_boxes": [],
+      "review_status": "reviewed",
+      "source_file_relative": "source_images/df2_targeted150_20261008_00101.jpg",
+      "reviewed_at": "2026-10-09T03:07:41.787Z",
+      "pre_review_by": "assistant_visual_review",
+      "pre_review_note": "白色拉链外套近景；袖端在右下画外。",
+      "pre_review_priority": "normal",
+      "pilot_split": "excluded_ambiguous"
+    },
+    {
+      "record_id": "df2_targeted150_20261008_00041",
+      "source_dataset": "DeepFashion2",
+      "category": "outerwear",
+      "fine_category": "short_sleeve_outwear",
+      "source_image_reference": "../fashion_data/raw/train/train/image/087596.jpg",
+      "garment_id": "item1_short_sleeve_outwear",
+      "garment_bbox": [
+        0,
+        13,
+        466,
+        607
+      ],
+      "image_width": 468,
+      "image_height": 624,
+      "source_image_sha256": "5e3d1e85a953a96a88d2b4504cd375052cc691e66ef39f81f9023a9e83dce87b",
+      "presence": "ambiguous",
+      "cuff_boxes": [],
+      "review_status": "reviewed",
+      "source_file_relative": "source_images/df2_targeted150_20261008_00041.jpg",
+      "reviewed_at": "2026-10-09T03:07:43.379Z",
+      "pre_review_by": "assistant_visual_review",
+      "pre_review_note": "印花短袖衬衣平铺且袖子折入，袖端与衣身折边混在一起；需人工展开或替换图。",
+      "pre_review_priority": "high",
+      "pilot_split": "excluded_ambiguous"
+    },
+    {
+      "record_id": "df2_targeted150_20261008_00035",
+      "source_dataset": "DeepFashion2",
+      "category": "outerwear",
+      "fine_category": "short_sleeve_outwear",
+      "source_image_reference": "../fashion_data/raw/train/train/image/032601.jpg",
+      "garment_id": "item1_short_sleeve_outwear",
+      "garment_bbox": [
+        0,
+        14,
+        456,
+        509
+      ],
+      "image_width": 468,
+      "image_height": 624,
+      "source_image_sha256": "a91c3ad8eb22abdd7fc83f30074d541396ead78856e11a16b8066b94c4e99388",
+      "presence": "present",
+      "cuff_boxes": [
+        [
+          1,
+          135,
+          96,
+          281
+        ],
+        [
+          403,
+          204,
+          455,
+          281
+        ]
+      ],
+      "review_status": "reviewed",
+      "source_file_relative": "source_images/df2_targeted150_20261008_00035.jpg",
+      "reviewed_at": "2026-10-09T02:58:10.124Z",
+      "pre_review_by": "assistant_visual_review",
+      "pre_review_note": "衣架上的条纹短袖外套，两侧翻折袖口；左边靠图边需复核。",
+      "pre_review_priority": "normal",
+      "pilot_split": "train"
+    },
+    {
+      "record_id": "v5_train_01045",
+      "source_dataset": "Fashionpedia",
+      "category": "outerwear",
+      "fine_category": "jacket",
+      "source_image_reference": "../fashion_data/raw/fashionpedia/images/test/7b66a70eae5ccb7bf914f674b7153c5b.jpg",
+      "garment_id": "fashionpedia_ann_8069",
+      "garment_bbox": [
+        0,
+        88,
+        635,
+        927
+      ],
+      "image_width": 680,
+      "image_height": 1024,
+      "source_image_sha256": "27f2a3eb664c1d5ce4c3dbcbbb29c7eec19cf8071098dbe7212ef94230804bb9",
+      "presence": "present",
+      "cuff_boxes": [
+        [
+          108,
+          682,
+          152,
+          762
+        ],
+        [
+          438,
+          83,
+          504,
+          134
+        ]
+      ],
+      "review_status": "reviewed",
+      "source_file_relative": "source_images/v5_train_01045.jpg",
+      "reviewed_at": "2026-10-09T03:07:45.543Z",
+      "pre_review_by": "assistant_visual_review",
+      "pre_review_note": "黑色外套：腰边手腕袖端和抬手袖端；不标衣身下摆。",
+      "pre_review_priority": "normal",
+      "pilot_split": "train"
+    },
+    {
+      "record_id": "v5_train_00503",
+      "source_dataset": "Fashionpedia",
+      "category": "outerwear",
+      "fine_category": "jacket",
+      "source_image_reference": "../fashion_data/raw/fashionpedia/images/test/32e566cd7c0388f44f1a09e10e2ac96c.jpg",
+      "garment_id": "fashionpedia_ann_5699",
+      "garment_bbox": [
+        105,
+        157,
+        950,
+        682
+      ],
+      "image_width": 1024,
+      "image_height": 682,
+      "source_image_sha256": "e7114c3546161ec22d8fd5e63e63d6a7c3e23210d05193b7515d0c0c8c5c668d",
+      "presence": "present",
+      "cuff_boxes": [
+        [
+          288,
+          174,
+          361,
+          279
+        ],
+        [
+          677,
+          154,
+          759,
+          253
+        ]
+      ],
+      "review_status": "reviewed",
+      "source_file_relative": "source_images/v5_train_00503.jpg",
+      "reviewed_at": "2026-10-09T03:07:47.227Z",
+      "pre_review_by": "assistant_visual_review",
+      "pre_review_note": "黑皮夹克左右翻折袖口带，裸露前臂不包括在框内。",
+      "pre_review_priority": "normal",
+      "pilot_split": "train"
+    },
+    {
+      "record_id": "v5_train_00298",
+      "source_dataset": "Fashionpedia",
+      "category": "outerwear",
+      "fine_category": "coat",
+      "source_image_reference": "../fashion_data/raw/fashionpedia/images/test/15b3536fd4cd5f7c40b1ef1a611402e5.jpg",
+      "garment_id": "fashionpedia_ann_7405",
+      "garment_bbox": [
+        113,
+        162,
+        636,
+        942
+      ],
+      "image_width": 660,
+      "image_height": 1024,
+      "source_image_sha256": "e644a918096bf290dad38c705f510f66d24e6d77ab3411f1efa284359eb884bc",
+      "presence": "present",
+      "cuff_boxes": [
+        [
+          155,
+          573,
+          192,
+          630
+        ],
+        [
+          467,
+          572,
+          564,
+          637
+        ]
+      ],
+      "review_status": "reviewed",
+      "source_file_relative": "source_images/v5_train_00298.jpg",
+      "reviewed_at": "2026-10-09T03:07:49.029Z",
+      "pre_review_by": "assistant_visual_review",
+      "pre_review_note": "深色大衣两側手腕袖端开口；腰部不是袖口。",
+      "pre_review_priority": "normal",
+      "pilot_split": "train"
+    },
+    {
+      "record_id": "v5_train_00665",
+      "source_dataset": "Fashionpedia",
+      "category": "outerwear",
+      "fine_category": "coat",
+      "source_image_reference": "../fashion_data/raw/fashionpedia/images/test/47c2e3e2ff0bfcacd0b42339314862d3.jpg",
+      "garment_id": "fashionpedia_ann_3305",
+      "garment_bbox": [
+        73,
+        188,
+        581,
+        1024
+      ],
+      "image_width": 682,
+      "image_height": 1024,
+      "source_image_sha256": "809588e1a5f33dd125821af573f794915d01f8d1cb0b23f24fd537715ffcbd43",
+      "presence": "ambiguous",
+      "cuff_boxes": [],
+      "review_status": "reviewed",
+      "source_file_relative": "source_images/v5_train_00665.jpg",
+      "reviewed_at": "2026-10-09T03:07:50.582Z",
+      "pre_review_by": "assistant_visual_review",
+      "pre_review_note": "驼色大衣披在肩上，空袖与衣身重叠，袖端未清楚分辨；灰色内搭不标。",
+      "pre_review_priority": "normal",
+      "pilot_split": "excluded_ambiguous"
+    },
+    {
+      "record_id": "v5_train_01153",
+      "source_dataset": "Fashionpedia",
+      "category": "outerwear",
+      "fine_category": "coat",
+      "source_image_reference": "../fashion_data/raw/fashionpedia/images/test/871b1533f5ecd9f4de3d7942ab3dfcc1.jpg",
+      "garment_id": "fashionpedia_ann_8728",
+      "garment_bbox": [
+        107,
+        501,
+        609,
+        1024
+      ],
+      "image_width": 683,
+      "image_height": 1024,
+      "source_image_sha256": "6166cf50d86b3ac61b7d1c1bb060d9cb96c73be6fc47f97da48f86bdb570c81d",
+      "presence": "present",
+      "cuff_boxes": [
+        [
+          364,
+          726,
+          420,
+          857
+        ],
+        [
+          526,
+          870,
+          598,
+          979
+        ]
+      ],
+      "review_status": "reviewed",
+      "source_file_relative": "source_images/v5_train_01153.jpg",
+      "reviewed_at": "2026-10-09T03:07:52.097Z",
+      "pre_review_by": "assistant_visual_review",
+      "pre_review_note": "灰色大衣两个可见袖端；开口带少量边界余量。",
+      "pre_review_priority": "normal",
+      "pilot_split": "train"
+    },
+    {
+      "record_id": "v5_train_00237",
+      "source_dataset": "Fashionpedia",
+      "category": "outerwear",
+      "fine_category": "coat",
+      "source_image_reference": "../fashion_data/raw/fashionpedia/images/test/0d25b761d9b146cfa820b2a7364b5bf7.jpg",
+      "garment_id": "fashionpedia_ann_6646",
+      "garment_bbox": [
+        296,
+        42,
+        781,
+        682
+      ],
+      "image_width": 1024,
+      "image_height": 682,
+      "source_image_sha256": "0bf3598b752c26f60f53a9069c0daabc91b3b313c74d626134599079871c2dab",
+      "presence": "present",
+      "cuff_boxes": [
+        [
+          599,
+          387,
+          647,
+          429
+        ]
+      ],
+      "review_status": "reviewed",
+      "source_file_relative": "source_images/v5_train_00237.jpg",
+      "reviewed_at": "2026-10-09T03:07:55.342Z",
+      "pre_review_by": "assistant_visual_review",
+      "pre_review_note": "蓝色大衣右側袖子末端，手在袋内；左側被包和手套遮挡，不补。",
+      "pre_review_priority": "high",
+      "pilot_split": "development_val"
+    },
+    {
+      "record_id": "df2_balanced150_20261008_00027",
+      "source_dataset": "DeepFashion2",
+      "category": "dress",
+      "fine_category": "long_sleeve_dress",
+      "source_image_reference": "../fashion_data/raw/train/train/image/064962.jpg",
+      "garment_id": "item1_long_sleeve_dress",
+      "garment_bbox": [
+        0,
+        0,
+        468,
+        624
+      ],
+      "image_width": 468,
+      "image_height": 624,
+      "source_image_sha256": "1da72025cc6181725befcfdbc4e7b0d5b561dd4ba11b0d767b8a44f416566c17",
+      "presence": "ambiguous",
+      "cuff_boxes": [],
+      "review_status": "reviewed",
+      "source_file_relative": "source_images/df2_balanced150_20261008_00027.jpg",
+      "reviewed_at": "2026-10-09T03:07:56.654Z",
+      "pre_review_by": "assistant_visual_review",
+      "pre_review_note": "黑色长袖裙两侧袖端截断到画外，不能作无袖负例。",
+      "pre_review_priority": "normal",
+      "pilot_split": "excluded_ambiguous"
+    },
+    {
+      "record_id": "v5_train_00017",
+      "source_dataset": "DeepFashion2",
+      "category": "dress",
+      "fine_category": "sling_dress",
+      "source_image_reference": "../fashion_data/raw/train/train/image/030847.jpg",
+      "garment_id": "item1_sling_dress",
+      "garment_bbox": [
+        0,
+        0,
+        467,
+        504
+      ],
+      "image_width": 468,
+      "image_height": 624,
+      "source_image_sha256": "caf9e364eafb4bd482bf78418478a85ac3cdd6f02ded1f288c93728bab3e0c81",
+      "presence": "ambiguous",
+      "cuff_boxes": [],
+      "review_status": "reviewed",
+      "source_file_relative": "source_images/v5_train_00017.jpg",
+      "reviewed_at": "2026-10-09T03:07:58.188Z",
+      "pre_review_by": "assistant_visual_review",
+      "pre_review_note": "迷彩裙只拍胸部以下，肩袖结构画外；不依据 sling_dress 名称自动标无袖。",
+      "pre_review_priority": "normal",
+      "pilot_split": "excluded_ambiguous"
+    },
+    {
+      "record_id": "df2_balanced150_20261008_00022",
+      "source_dataset": "DeepFashion2",
+      "category": "dress",
+      "fine_category": "long_sleeve_dress",
+      "source_image_reference": "../fashion_data/raw/train/train/image/186157.jpg",
+      "garment_id": "item1_long_sleeve_dress",
+      "garment_bbox": [
+        3,
+        0,
+        467,
+        806
+      ],
+      "image_width": 468,
+      "image_height": 832,
+      "source_image_sha256": "dc04369a95d20bba15701956be1ad23bf2d637510a402f1ba4e31e4f7f5ced77",
+      "presence": "ambiguous",
+      "cuff_boxes": [],
+      "review_status": "reviewed",
+      "source_file_relative": "source_images/df2_balanced150_20261008_00022.jpg",
+      "reviewed_at": "2026-10-09T03:07:59.701Z",
+      "pre_review_by": "assistant_visual_review",
+      "pre_review_note": "灰色裙身与白色衬衣式袖子可能是内搭也可能是一件拼接裙；目标层归属需核对原掩码，暂不标正负。",
+      "pre_review_priority": "high",
+      "pilot_split": "excluded_ambiguous"
+    },
+    {
+      "record_id": "df2_balanced150_20261008_00013",
+      "source_dataset": "DeepFashion2",
+      "category": "dress",
+      "fine_category": "short_sleeve_dress",
+      "source_image_reference": "../fashion_data/raw/train/train/image/078421.jpg",
+      "garment_id": "item1_short_sleeve_dress",
+      "garment_bbox": [
+        4,
+        7,
+        467,
+        620
+      ],
+      "image_width": 468,
+      "image_height": 624,
+      "source_image_sha256": "0f05867782d841a778e128e95eb0a2eeeba792f26152a56e0936dc32557a3210",
+      "presence": "ambiguous",
+      "cuff_boxes": [],
+      "review_status": "reviewed",
+      "source_file_relative": "source_images/df2_balanced150_20261008_00013.jpg",
+      "reviewed_at": "2026-10-09T03:08:01.203Z",
+      "pre_review_by": "assistant_visual_review",
+      "pre_review_note": "花裙短袖两侧开口被图边截断且拍摄姿态遮挡；保留为歧义样本。",
+      "pre_review_priority": "normal",
+      "pilot_split": "excluded_ambiguous"
+    },
+    {
+      "record_id": "df2_balanced150_20261008_00003",
+      "source_dataset": "DeepFashion2",
+      "category": "dress",
+      "fine_category": "short_sleeve_dress",
+      "source_image_reference": "../fashion_data/raw/train/train/image/047157.jpg",
+      "garment_id": "item1_short_sleeve_dress",
+      "garment_bbox": [
+        183,
+        356,
+        605,
+        949
+      ],
+      "image_width": 750,
+      "image_height": 961,
+      "source_image_sha256": "ad048c59fb04f42bf703b5344d9928d461aad6c925af43f114cdffaf26294013",
+      "presence": "present",
+      "cuff_boxes": [
+        [
+          183,
+          486,
+          278,
+          548
+        ],
+        [
+          528,
+          529,
+          607,
+          578
+        ]
+      ],
+      "review_status": "reviewed",
+      "source_file_relative": "source_images/df2_balanced150_20261008_00003.jpg",
+      "reviewed_at": "2026-10-09T03:08:02.779Z",
+      "pre_review_by": "assistant_visual_review",
+      "pre_review_note": "浅色蕾丝裙两个短袖末端的波浪开口边缘；透明袖仍是袖子。",
+      "pre_review_priority": "normal",
+      "pilot_split": "development_val"
+    },
+    {
+      "record_id": "df2_balanced150_20261008_00025",
+      "source_dataset": "DeepFashion2",
+      "category": "dress",
+      "fine_category": "long_sleeve_dress",
+      "source_image_reference": "../fashion_data/raw/train/train/image/005049.jpg",
+      "garment_id": "item1_long_sleeve_dress",
+      "garment_bbox": [
+        99,
+        23,
+        519,
+        478
+      ],
+      "image_width": 640,
+      "image_height": 480,
+      "source_image_sha256": "c998dd71c37db8bb50915f500f751285cd9969f28915a76c74b4efd45679e106",
+      "presence": "present",
+      "cuff_boxes": [
+        [
+          98,
+          382,
+          179,
+          440
+        ],
+        [
+          433,
+          390,
+          503,
+          440
+        ]
+      ],
+      "review_status": "reviewed",
+      "source_file_relative": "source_images/df2_balanced150_20261008_00025.jpg",
+      "reviewed_at": "2026-10-09T03:08:06.211Z",
+      "pre_review_by": "assistant_visual_review",
+      "pre_review_note": "蓝白格纹裙两个肘部袖口带；下方截断的是裙身，不是袖口。",
+      "pre_review_priority": "normal",
+      "pilot_split": "train"
+    },
+    {
+      "record_id": "v5_train_00136",
+      "source_dataset": "Fashionpedia",
+      "category": "dress",
+      "fine_category": "dress",
+      "source_image_reference": "../fashion_data/raw/fashionpedia/images/test/0094940c58c343b742f48ae26eb5e9fa.jpg",
+      "garment_id": "fashionpedia_ann_7443",
+      "garment_bbox": [
+        10,
+        230,
+        588,
+        824
+      ],
+      "image_width": 683,
+      "image_height": 1024,
+      "source_image_sha256": "fff009679bef54ff4fb71b3541fa36690cae777ceaca888d7d955f2e6756924d",
+      "presence": "ambiguous",
+      "cuff_boxes": [],
+      "review_status": "reviewed",
+      "source_file_relative": "source_images/v5_train_00136.jpg",
+      "reviewed_at": "2026-10-09T03:08:10.154Z",
+      "pre_review_by": "assistant_visual_review",
+      "pre_review_note": "红裙肩部存在网纱和刺绣，极短袖与肩饰界线不清；不把露臂直接算无袖。",
+      "pre_review_priority": "high",
+      "pilot_split": "excluded_ambiguous"
+    },
+    {
+      "record_id": "v5_train_00304",
+      "source_dataset": "Fashionpedia",
+      "category": "dress",
+      "fine_category": "dress",
+      "source_image_reference": "../fashion_data/raw/fashionpedia/images/test/16b7202138bdbb600ee49eadfe63f5f6.jpg",
+      "garment_id": "fashionpedia_ann_1053",
+      "garment_bbox": [
+        37,
+        205,
+        557,
+        1005
+      ],
+      "image_width": 682,
+      "image_height": 1024,
+      "source_image_sha256": "ced98476915a20cf5ef5bec3ebcc12792a0de656411b6f77f3a39820a7f4c3ea",
+      "presence": "present",
+      "cuff_boxes": [
+        [
+          231,
+          402,
+          256,
+          447
+        ],
+        [
+          447,
+          409,
+          475,
+          451
+        ]
+      ],
+      "review_status": "reviewed",
+      "source_file_relative": "source_images/v5_train_00304.jpg",
+      "reviewed_at": "2026-10-09T03:08:12.417Z",
+      "pre_review_by": "assistant_visual_review",
+      "pre_review_note": "黑色蕾丝长裙两侧手腕袖端；纹样与肤色交界需复核。",
+      "pre_review_priority": "high",
+      "pilot_split": "train"
+    },
+    {
+      "record_id": "v5_train_00895",
+      "source_dataset": "Fashionpedia",
+      "category": "dress",
+      "fine_category": "dress",
+      "source_image_reference": "../fashion_data/raw/fashionpedia/images/test/66944533f2aa560438fb0b83b33aa106.jpg",
+      "garment_id": "fashionpedia_ann_7384",
+      "garment_bbox": [
+        177,
+        416,
+        691,
+        983
+      ],
+      "image_width": 1024,
+      "image_height": 1024,
+      "source_image_sha256": "326374941ed7d55272b4b507714d93636cf1d1701e37214ba5632f2c44295170",
+      "presence": "absent",
+      "cuff_boxes": [],
+      "review_status": "reviewed",
+      "source_file_relative": "source_images/v5_train_00895.jpg",
+      "reviewed_at": "2026-10-09T03:08:14.176Z",
+      "pre_review_by": "assistant_visual_review",
+      "pre_review_note": "白色婚纱两臂裸露，肩部装饰与手上配饰不构成袖子末端开口。",
+      "pre_review_priority": "normal",
+      "pilot_split": "train"
+    },
+    {
+      "record_id": "v5_train_00256",
+      "source_dataset": "Fashionpedia",
+      "category": "dress",
+      "fine_category": "dress",
+      "source_image_reference": "../fashion_data/raw/fashionpedia/images/test/0fd47405bde971ea795259fa8790ef40.jpg",
+      "garment_id": "fashionpedia_ann_4906",
+      "garment_bbox": [
+        185,
+        188,
+        683,
+        989
+      ],
+      "image_width": 683,
+      "image_height": 1024,
+      "source_image_sha256": "6142a23d073c1785bc6ac9e17dcbde04c8acb7fcd4686da69a7c7ae1d421642c",
+      "presence": "present",
+      "cuff_boxes": [
+        [
+          312,
+          197,
+          433,
+          270
+        ],
+        [
+          182,
+          598,
+          312,
+          642
+        ]
+      ],
+      "review_status": "reviewed",
+      "source_file_relative": "source_images/v5_train_00256.jpg",
+      "reviewed_at": "2026-10-09T03:08:15.714Z",
+      "pre_review_by": "assistant_visual_review",
+      "pre_review_note": "格纹裙是短袖；人物倾斜并抬臂，不能误当无袖。两侧短袖开口待复核。",
+      "pre_review_priority": "high",
+      "pilot_split": "train"
+    },
+    {
+      "record_id": "v5_train_00276",
+      "source_dataset": "Fashionpedia",
+      "category": "dress",
+      "fine_category": "dress",
+      "source_image_reference": "../fashion_data/raw/fashionpedia/images/test/12416f707a0428adc08bc899bc6d84c8.jpg",
+      "garment_id": "fashionpedia_ann_450",
+      "garment_bbox": [
+        121,
+        286,
+        613,
+        1024
+      ],
+      "image_width": 682,
+      "image_height": 1024,
+      "source_image_sha256": "d9d0675eb6291def49d9dba41be99d1acdb0d0cdc078bcb9c9dee90c816c27e7",
+      "presence": "present",
+      "cuff_boxes": [
+        [
+          520,
+          505,
+          594,
+          570
+        ]
+      ],
+      "review_status": "reviewed",
+      "source_file_relative": "source_images/v5_train_00276.jpg",
+      "reviewed_at": "2026-10-09T03:08:17.411Z",
+      "pre_review_by": "assistant_visual_review",
+      "pre_review_note": "黑色缎面裙近侧翻折短袖末端；远侧袖端不可见，不补。",
+      "pre_review_priority": "normal",
+      "pilot_split": "development_val"
+    },
+    {
+      "record_id": "v5_train_01632",
+      "source_dataset": "Fashionpedia",
+      "category": "dress",
+      "fine_category": "dress",
+      "source_image_reference": "../fashion_data/raw/fashionpedia/images/test/c59652d40810f10a443756d41bfa1287.jpg",
+      "garment_id": "fashionpedia_ann_3499",
+      "garment_bbox": [
+        126,
+        212,
+        614,
+        1019
+      ],
+      "image_width": 618,
+      "image_height": 1024,
+      "source_image_sha256": "a36bc372b38756ea3caf5bcc43f4d0c548b75bff677a02e3c293e9bde69aca17",
+      "presence": "present",
+      "cuff_boxes": [
+        [
+          155,
+          345,
+          196,
+          370
+        ],
+        [
+          290,
+          393,
+          337,
+          424
+        ]
+      ],
+      "review_status": "reviewed",
+      "source_file_relative": "source_images/v5_train_01632.jpg",
+      "reviewed_at": "2026-10-09T03:08:20.639Z",
+      "pre_review_by": "assistant_visual_review",
+      "pre_review_note": "黑蕾丝裙两个肘部袖端；交叉手臂不等于袖口遮挡全部。",
+      "pre_review_priority": "high",
+      "pilot_split": "train"
+    },
+    {
+      "record_id": "v5_train_00772",
+      "source_dataset": "Fashionpedia",
+      "category": "top",
+      "fine_category": "vest",
+      "source_image_reference": "../fashion_data/raw/fashionpedia/images/test/56e5e99c58d6d12337e92e6a73f3c8d5.jpg",
+      "garment_id": "fashionpedia_ann_6659",
+      "garment_bbox": [
+        149,
+        306,
+        552,
+        738
+      ],
+      "image_width": 682,
+      "image_height": 1024,
+      "source_image_sha256": "bbbaea0f5049b31de205ec5021503b0bf8aa4259fed07b2f02ef1d5db5b053c6",
+      "source_file_relative": "source_images/v5_train_00772.jpg",
+      "presence": "absent",
+      "cuff_boxes": [],
+      "review_status": "reviewed",
+      "reviewed_at": "2026-10-09T03:18:12.286Z",
+      "pre_review_by": "assistant_visual_review",
+      "pre_review_note": "目标是蓝色牛仔背心，无袖；紫色衬衣的卷袖属于内搭，不标到背心。",
+      "pilot_split": "train"
+    },
+    {
+      "record_id": "v5_train_00340",
+      "source_dataset": "Fashionpedia",
+      "category": "top",
+      "fine_category": "vest",
+      "source_image_reference": "../fashion_data/raw/fashionpedia/images/test/1f0d72ecd966170babc209b45abe8983.jpg",
+      "garment_id": "fashionpedia_ann_3175",
+      "garment_bbox": [
+        247,
+        104,
+        553,
+        457
+      ],
+      "image_width": 680,
+      "image_height": 1024,
+      "source_image_sha256": "3a91a0bce3353fb89912db0ef27ebf159eac3dc3415f891972e2faa567cebe10",
+      "source_file_relative": "source_images/v5_train_00340.jpg",
+      "presence": "absent",
+      "cuff_boxes": [],
+      "review_status": "reviewed",
+      "reviewed_at": "2026-10-09T03:18:14.614Z",
+      "pre_review_by": "assistant_visual_review",
+      "pre_review_note": "目标是黑色流苏背心，肩部与手臂裸露；悬垂流苏不是袖口。",
+      "pilot_split": "train"
+    },
+    {
+      "record_id": "v5_train_00330",
+      "source_dataset": "Fashionpedia",
+      "category": "top",
+      "fine_category": "vest",
+      "source_image_reference": "../fashion_data/raw/fashionpedia/images/test/1ca6fb4b937bb1f34797d3315266a546.jpg",
+      "garment_id": "fashionpedia_ann_4873",
+      "garment_bbox": [
+        358,
+        339,
+        663,
+        682
+      ],
+      "image_width": 1024,
+      "image_height": 682,
+      "source_image_sha256": "dcf5c21401cabe845aab03f7009a9936b2833fdbef0b5ba9527a9cd75dd6d5ad",
+      "source_file_relative": "source_images/v5_train_00330.jpg",
+      "presence": "absent",
+      "cuff_boxes": [],
+      "review_status": "reviewed",
+      "reviewed_at": "2026-10-09T03:18:16.362Z",
+      "pre_review_by": "assistant_visual_review",
+      "pre_review_note": "目标是酒红色背心，无袖；蓝白条纹衬衣的翻折袖口属于内搭。",
+      "pilot_split": "train"
+    },
+    {
+      "record_id": "v5_train_01283",
+      "source_dataset": "Fashionpedia",
+      "category": "top",
+      "fine_category": "vest",
+      "source_image_reference": "../fashion_data/raw/fashionpedia/images/test/9947f3f56aa4fab3b07bca98b09d7bfe.jpg",
+      "garment_id": "fashionpedia_ann_1683",
+      "garment_bbox": [
+        252,
+        0,
+        535,
+        282
+      ],
+      "image_width": 1024,
+      "image_height": 768,
+      "source_image_sha256": "efa0b4274ccfa3102dad25e86f95b924cc714ab6618fc7d6e3ca8a2ed35d86a2",
+      "source_file_relative": "source_images/v5_train_01283.jpg",
+      "presence": "absent",
+      "cuff_boxes": [],
+      "review_status": "reviewed",
+      "reviewed_at": "2026-10-09T03:18:19.179Z",
+      "pre_review_by": "assistant_visual_review",
+      "pre_review_note": "目标是牛仔背心，无袖；红色短袖内搭的袖口不属于目标。",
+      "pilot_split": "development_val"
+    },
+    {
+      "record_id": "v5_train_00109",
+      "source_dataset": "DeepFashion2",
+      "category": "top",
+      "fine_category": "vest",
+      "source_image_reference": "../fashion_data/raw/train/train/image/163017.jpg",
+      "garment_id": "item2_vest",
+      "garment_bbox": [
+        3,
+        27,
+        421,
+        515
+      ],
+      "image_width": 468,
+      "image_height": 702,
+      "source_image_sha256": "e7fa570eb1d147c3256a81876287ad1cf035998209020a5baa60653987d0f92a",
+      "source_file_relative": "source_images/v5_train_00109.jpg",
+      "presence": "ambiguous",
+      "cuff_boxes": [],
+      "review_status": "reviewed",
+      "reviewed_at": "2026-10-09T03:26:31.945Z",
+      "pre_review_by": "assistant_visual_review",
+      "pre_review_note": "白色上衣肩部向外延伸，可能是极短袖，也可能是落肩式无袖；袖口定义边界需确认，暂不作为正例或负例。",
+      "pilot_split": "excluded_ambiguous"
+    },
+    {
+      "record_id": "df2_targeted150_20261008_00248",
+      "source_dataset": "DeepFashion2",
+      "category": "top",
+      "fine_category": "vest",
+      "source_image_reference": "../fashion_data/raw/train/train/image/123257.jpg",
+      "garment_id": "item1_vest",
+      "garment_bbox": [
+        266,
+        30,
+        668,
+        591
+      ],
+      "image_width": 880,
+      "image_height": 1320,
+      "source_image_sha256": "ed066f78a1ea6b126e5b3be259776ce985f416bff2f7d9ef1a27478b70372759",
+      "source_file_relative": "source_images/df2_targeted150_20261008_00248.jpg",
+      "presence": "absent",
+      "cuff_boxes": [],
+      "review_status": "reviewed",
+      "reviewed_at": "2026-10-09T03:34:48.532Z",
+      "pre_review_by": "assistant_visual_review",
+      "pre_review_note": "蓝紫色上衣两侧袖窿清楚，手臂裸露，无袖。",
+      "pilot_split": "train"
+    },
+    {
+      "record_id": "v5_train_00074",
+      "source_dataset": "DeepFashion2",
+      "category": "top",
+      "fine_category": "vest",
+      "source_image_reference": "../fashion_data/raw/train/train/image/125082.jpg",
+      "garment_id": "item1_vest",
+      "garment_bbox": [
+        33,
+        34,
+        428,
+        561
+      ],
+      "image_width": 468,
+      "image_height": 625,
+      "source_image_sha256": "08d9b1b4aa091a8070c8286dcd4e38af3329d73749fad31bffcc16281013d7c1",
+      "source_file_relative": "source_images/v5_train_00074.jpg",
+      "presence": "absent",
+      "cuff_boxes": [],
+      "review_status": "reviewed",
+      "reviewed_at": "2026-10-09T03:34:53.455Z",
+      "pre_review_by": "assistant_visual_review",
+      "pre_review_note": "平铺灰色背心两侧袖窿与肩带清楚，确实无袖；下摆不是袖口。",
+      "pilot_split": "development_val"
+    },
+    {
+      "record_id": "df2_targeted150_20261008_00186",
+      "source_dataset": "DeepFashion2",
+      "category": "top",
+      "fine_category": "sling",
+      "source_image_reference": "../fashion_data/raw/train/train/image/102848.jpg",
+      "garment_id": "item1_sling",
+      "garment_bbox": [
+        176,
+        276,
+        465,
+        688
+      ],
+      "image_width": 640,
+      "image_height": 960,
+      "source_image_sha256": "80e5ef8bc1b6013c2edc97e734277535d8b294230fb134a11660b1e8adb41a61",
+      "source_file_relative": "source_images/df2_targeted150_20261008_00186.jpg",
+      "presence": "absent",
+      "cuff_boxes": [],
+      "review_status": "reviewed",
+      "reviewed_at": "2026-10-09T03:34:57.469Z",
+      "pre_review_by": "assistant_visual_review",
+      "pre_review_note": "白色吊带上衣两侧手臂裸露，确实无袖；手腕配饰不标。",
+      "pilot_split": "train"
+    },
+    {
+      "record_id": "v5_train_00047",
+      "source_dataset": "DeepFashion2",
+      "category": "dress",
+      "fine_category": "sling_dress",
+      "source_image_reference": "../fashion_data/raw/train/train/image/089313.jpg",
+      "garment_id": "item1_sling_dress",
+      "garment_bbox": [
+        0,
+        206,
+        421,
+        624
+      ],
+      "image_width": 468,
+      "image_height": 624,
+      "source_image_sha256": "314bff0ecc5cac4b78f9f8b90a9c5eafaab87d9d82440d97fe5911f276a80197",
+      "source_file_relative": "source_images/v5_train_00047.jpg",
+      "presence": "absent",
+      "cuff_boxes": [],
+      "review_status": "reviewed",
+      "reviewed_at": "2026-10-09T03:35:01.063Z",
+      "pre_review_by": "assistant_visual_review",
+      "pre_review_note": "目标是黑色吊带裙，无袖；身侧其他黑布与伸出的手不是袖口。",
+      "pilot_split": "train"
+    },
+    {
+      "record_id": "df2_balanced150_20261008_00064",
+      "source_dataset": "DeepFashion2",
+      "category": "dress",
+      "fine_category": "sling_dress",
+      "source_image_reference": "../fashion_data/raw/train/train/image/070219.jpg",
+      "garment_id": "item2_sling_dress",
+      "garment_bbox": [
+        238,
+        317,
+        608,
+        1180
+      ],
+      "image_width": 880,
+      "image_height": 1320,
+      "source_image_sha256": "909c25e98e480aea92dbd7b86e8eaef481fb1d2ca090769e0cee158262cdf383",
+      "source_file_relative": "source_images/df2_balanced150_20261008_00064.jpg",
+      "presence": "absent",
+      "cuff_boxes": [],
+      "review_status": "reviewed",
+      "reviewed_at": "2026-10-09T03:35:08.097Z",
+      "pre_review_by": "assistant_visual_review",
+      "pre_review_note": "目标是牛仔背带裙，无袖；白色星形图案内搭的短袖不属于裙子。",
+      "pilot_split": "train"
+    },
+    {
+      "record_id": "df2_balanced150_20261008_00062",
+      "source_dataset": "DeepFashion2",
+      "category": "dress",
+      "fine_category": "sling_dress",
+      "source_image_reference": "../fashion_data/raw/train/train/image/055908.jpg",
+      "garment_id": "item1_sling_dress",
+      "garment_bbox": [
+        116,
+        88,
+        481,
+        613
+      ],
+      "image_width": 750,
+      "image_height": 689,
+      "source_image_sha256": "d9aac98bd3fa22494fd98de318f5ab0e7e54c0ffe0b63a990e129afd0d00242c",
+      "source_file_relative": "source_images/df2_balanced150_20261008_00062.jpg",
+      "presence": "absent",
+      "cuff_boxes": [],
+      "review_status": "reviewed",
+      "reviewed_at": "2026-10-09T03:35:11.047Z",
+      "pre_review_by": "assistant_visual_review",
+      "pre_review_note": "紫色吊带裙肩带与袖窿清楚，无袖；裙身荷叶层边缘不标成袖口。",
+      "pilot_split": "development_val"
+    },
+    {
+      "record_id": "df2_balanced150_20261008_00046",
+      "source_dataset": "DeepFashion2",
+      "category": "dress",
+      "fine_category": "sling_dress",
+      "source_image_reference": "../fashion_data/raw/train/train/image/147619.jpg",
+      "garment_id": "item1_sling_dress",
+      "garment_bbox": [
+        30,
+        70,
+        392,
+        578
+      ],
+      "image_width": 468,
+      "image_height": 624,
+      "source_image_sha256": "b7a4d8a5fb0d962c3f75d9263343bb3ee9438874906850d651ec809364f9bd80",
+      "source_file_relative": "source_images/df2_balanced150_20261008_00046.jpg",
+      "presence": "absent",
+      "cuff_boxes": [],
+      "review_status": "reviewed",
+      "reviewed_at": "2026-10-09T03:35:16.251Z",
+      "pre_review_by": "assistant_visual_review",
+      "pre_review_note": "目标是灰褐色背带裙，无袖；白色衬衣式内搭两侧长袖不属于目标，目标框不覆盖其袖端。",
+      "pilot_split": "train"
+    }
+  ]
+}

@@ -1,0 +1,540 @@
+[
+  {
+    "sample_id": "SEGTEST1_0045",
+    "draft_presence": "present",
+    "review_status": "ASSISTANT_DRAFT_PENDING_HUMAN_REVIEW",
+    "controlled_reference_crop": [
+      14,
+      118,
+      386,
+      403
+    ],
+    "all_controlled_candidates": [],
+    "rejected": [
+      {
+        "bbox": [
+          14,
+          118,
+          385.9662170410156,
+          402.9096984863281
+        ],
+        "score": 0.35984110832214355,
+        "phrase": "sleeve cuff",
+        "crop_area_ratio": 0.9995923669520453,
+        "reason": "search_crop_area_guard"
+      }
+    ],
+    "model_seconds": 0.8455071069765836,
+    "prior_segmentation_match_iou": 0.5474490911276819,
+    "prior_category_correct": false,
+    "arms": {
+      "predicted_crop": {
+        "selected": null,
+        "proposal_count": 0,
+        "draft_selected_iou": 0,
+        "draft_any_candidate_iou": 0,
+        "draft_selected_hit": false,
+        "draft_any_candidate_hit": false,
+        "negative_has_proposal": false
+      },
+      "reference_crop": {
+        "selected": null,
+        "proposal_count": 0,
+        "draft_selected_iou": 0,
+        "draft_any_candidate_iou": 0,
+        "draft_selected_hit": false,
+        "draft_any_candidate_hit": false,
+        "negative_has_proposal": false
+      }
+    }
+  },
+  {
+    "sample_id": "SEGTEST1_0156",
+    "draft_presence": "present",
+    "review_status": "ASSISTANT_DRAFT_PENDING_HUMAN_REVIEW",
+    "controlled_reference_crop": [
+      0,
+      157,
+      466,
+      741
+    ],
+    "all_controlled_candidates": [],
+    "rejected": [
+      {
+        "bbox": [
+          0,
+          157.22049832344055,
+          465.99786376953125,
+          735.5301513671875
+        ],
+        "score": 0.5729090571403503,
+        "phrase": "sleeve cuff",
+        "crop_area_ratio": 0.9902517156934744,
+        "reason": "search_crop_area_guard"
+      }
+    ],
+    "model_seconds": 0.09311727795284241,
+    "prior_segmentation_match_iou": 0.923226338793066,
+    "prior_category_correct": true,
+    "arms": {
+      "predicted_crop": {
+        "selected": null,
+        "proposal_count": 0,
+        "draft_selected_iou": 0,
+        "draft_any_candidate_iou": 0,
+        "draft_selected_hit": false,
+        "draft_any_candidate_hit": false,
+        "negative_has_proposal": false
+      },
+      "reference_crop": {
+        "selected": null,
+        "proposal_count": 0,
+        "draft_selected_iou": 0,
+        "draft_any_candidate_iou": 0,
+        "draft_selected_hit": false,
+        "draft_any_candidate_hit": false,
+        "negative_has_proposal": false
+      }
+    }
+  },
+  {
+    "sample_id": "SEGTEST1_0169",
+    "draft_presence": "present",
+    "review_status": "ASSISTANT_DRAFT_PENDING_HUMAN_REVIEW",
+    "controlled_reference_crop": [
+      97,
+      165,
+      383,
+      556
+    ],
+    "all_controlled_candidates": [
+      {
+        "bbox": [
+          203.8688507080078,
+          399.03807067871094,
+          232.79600524902344,
+          452.9697265625
+        ],
+        "score": 0.5423828959465027,
+        "phrase": "sleeve cuff",
+        "crop_area_ratio": 0.013951043088398412
+      },
+      {
+        "bbox": [
+          287.0490264892578,
+          366.68663024902344,
+          365.8567810058594,
+          428.5130920410156
+        ],
+        "score": 0.3923759460449219,
+        "phrase": "sleeve cuff",
+        "crop_area_ratio": 0.043571303842875234
+      }
+    ],
+    "rejected": [],
+    "model_seconds": 0.0962918970035389,
+    "prior_segmentation_match_iou": 0.7163268888443329,
+    "prior_category_correct": false,
+    "arms": {
+      "predicted_crop": {
+        "selected": {
+          "view": "full",
+          "bbox": [
+            203.6133270263672,
+            398.8929901123047,
+            233.0044708251953,
+            452.5174560546875
+          ],
+          "score": 0.48961952328681946,
+          "phrase": "sleeve cuff"
+        },
+        "proposal_count": 2,
+        "draft_selected_iou": 0.0,
+        "draft_any_candidate_iou": 0.1992838216507212,
+        "draft_selected_hit": false,
+        "draft_any_candidate_hit": false,
+        "negative_has_proposal": false
+      },
+      "reference_crop": {
+        "selected": {
+          "bbox": [
+            203.8688507080078,
+            399.03807067871094,
+            232.79600524902344,
+            452.9697265625
+          ],
+          "score": 0.5423828959465027,
+          "phrase": "sleeve cuff",
+          "crop_area_ratio": 0.013951043088398412
+        },
+        "proposal_count": 2,
+        "draft_selected_iou": 0.0,
+        "draft_any_candidate_iou": 0.19176612005631016,
+        "draft_selected_hit": false,
+        "draft_any_candidate_hit": false,
+        "negative_has_proposal": false
+      }
+    }
+  },
+  {
+    "sample_id": "SEGTEST1_0213",
+    "draft_presence": "present",
+    "review_status": "ASSISTANT_DRAFT_PENDING_HUMAN_REVIEW",
+    "controlled_reference_crop": [
+      144,
+      17,
+      709,
+      879
+    ],
+    "all_controlled_candidates": [
+      {
+        "bbox": [
+          275.0613098144531,
+          136.77061462402344,
+          356.93544006347656,
+          194.54786682128906
+        ],
+        "score": 0.5744472146034241,
+        "phrase": "sleeve cuff",
+        "crop_area_ratio": 0.009712876561668894
+      },
+      {
+        "bbox": [
+          543.18017578125,
+          17.383561819791794,
+          626.6775207519531,
+          104.93909454345703
+        ],
+        "score": 0.5028169751167297,
+        "phrase": "sleeve cuff",
+        "crop_area_ratio": 0.015010686240932925
+      }
+    ],
+    "rejected": [],
+    "model_seconds": 0.10064559406600893,
+    "prior_segmentation_match_iou": 0.7496960644676538,
+    "prior_category_correct": true,
+    "arms": {
+      "predicted_crop": {
+        "selected": {
+          "view": "full",
+          "bbox": [
+            275.28542709350586,
+            136.885498046875,
+            356.5733947753906,
+            194.38584899902344
+          ],
+          "score": 0.6194183230400085,
+          "phrase": "sleeve cuff"
+        },
+        "proposal_count": 2,
+        "draft_selected_iou": 0.0,
+        "draft_any_candidate_iou": 0.0,
+        "draft_selected_hit": false,
+        "draft_any_candidate_hit": false,
+        "negative_has_proposal": false
+      },
+      "reference_crop": {
+        "selected": {
+          "bbox": [
+            275.0613098144531,
+            136.77061462402344,
+            356.93544006347656,
+            194.54786682128906
+          ],
+          "score": 0.5744472146034241,
+          "phrase": "sleeve cuff",
+          "crop_area_ratio": 0.009712876561668894
+        },
+        "proposal_count": 2,
+        "draft_selected_iou": 0.0,
+        "draft_any_candidate_iou": 0.0,
+        "draft_selected_hit": false,
+        "draft_any_candidate_hit": false,
+        "negative_has_proposal": false
+      }
+    }
+  },
+  {
+    "sample_id": "SEGTEST1_0199",
+    "draft_presence": "present",
+    "review_status": "ASSISTANT_DRAFT_PENDING_HUMAN_REVIEW",
+    "controlled_reference_crop": [
+      30,
+      84,
+      410,
+      599
+    ],
+    "all_controlled_candidates": [],
+    "rejected": [
+      {
+        "bbox": [
+          76.58876419067383,
+          84.30317291617393,
+          404.6531677246094,
+          593.0676879882812
+        ],
+        "score": 0.3506573736667633,
+        "phrase": "sleeve cuff",
+        "crop_area_ratio": 0.8528744362614351,
+        "reason": "search_crop_area_guard"
+      }
+    ],
+    "model_seconds": 0.09543415403459221,
+    "prior_segmentation_match_iou": 0.8332723396065429,
+    "prior_category_correct": true,
+    "arms": {
+      "predicted_crop": {
+        "selected": {
+          "view": "full",
+          "bbox": [
+            79.57285499572754,
+            87.76024532318115,
+            206.86964416503906,
+            585.429443359375
+          ],
+          "score": 0.33450889587402344,
+          "phrase": "sleeve cuff"
+        },
+        "proposal_count": 1,
+        "draft_selected_iou": 0.014962384630773129,
+        "draft_any_candidate_iou": 0.014962384630773129,
+        "draft_selected_hit": false,
+        "draft_any_candidate_hit": false,
+        "negative_has_proposal": false
+      },
+      "reference_crop": {
+        "selected": null,
+        "proposal_count": 0,
+        "draft_selected_iou": 0,
+        "draft_any_candidate_iou": 0,
+        "draft_selected_hit": false,
+        "draft_any_candidate_hit": false,
+        "negative_has_proposal": false
+      }
+    }
+  },
+  {
+    "sample_id": "SEGTEST1_0040",
+    "draft_presence": "absent",
+    "review_status": "ASSISTANT_DRAFT_PENDING_HUMAN_REVIEW",
+    "controlled_reference_crop": [
+      216,
+      228,
+      282,
+      312
+    ],
+    "all_controlled_candidates": [
+      {
+        "bbox": [
+          241.6847381591797,
+          246.31404304504395,
+          275.7922782897949,
+          311.9829788208008
+        ],
+        "score": 0.3442181944847107,
+        "phrase": "sleeve cuff",
+        "crop_area_ratio": 0.40400538641890704
+      }
+    ],
+    "rejected": [
+      {
+        "bbox": [
+          216,
+          228.1759511232376,
+          276.41619873046875,
+          311.98905181884766
+        ],
+        "score": 0.4309197962284088,
+        "phrase": "sleeve cuff",
+        "crop_area_ratio": 0.9133601998273386,
+        "reason": "search_crop_area_guard"
+      },
+      {
+        "bbox": [
+          216.00032651424408,
+          228,
+          282,
+          311.9972610473633
+        ],
+        "score": 0.33131125569343567,
+        "phrase": "sleeve cuff",
+        "crop_area_ratio": 0.9999624463967859,
+        "reason": "search_crop_area_guard"
+      }
+    ],
+    "model_seconds": 0.09034487407188863,
+    "prior_segmentation_match_iou": 0.30285318325759275,
+    "prior_category_correct": false,
+    "arms": {
+      "predicted_crop": {
+        "selected": null,
+        "proposal_count": 0,
+        "draft_selected_iou": 0,
+        "draft_any_candidate_iou": 0,
+        "draft_selected_hit": false,
+        "draft_any_candidate_hit": false,
+        "negative_has_proposal": false
+      },
+      "reference_crop": {
+        "selected": {
+          "bbox": [
+            241.6847381591797,
+            246.31404304504395,
+            275.7922782897949,
+            311.9829788208008
+          ],
+          "score": 0.3442181944847107,
+          "phrase": "sleeve cuff",
+          "crop_area_ratio": 0.40400538641890704
+        },
+        "proposal_count": 1,
+        "draft_selected_iou": 0,
+        "draft_any_candidate_iou": 0,
+        "draft_selected_hit": false,
+        "draft_any_candidate_hit": false,
+        "negative_has_proposal": true
+      }
+    }
+  },
+  {
+    "sample_id": "SEGTEST1_0044",
+    "draft_presence": "absent",
+    "review_status": "ASSISTANT_DRAFT_PENDING_HUMAN_REVIEW",
+    "controlled_reference_crop": [
+      171,
+      152,
+      340,
+      320
+    ],
+    "all_controlled_candidates": [
+      {
+        "bbox": [
+          295.86915588378906,
+          156.22628927230835,
+          319.6169891357422,
+          173.40166473388672
+        ],
+        "score": 0.42817366123199463,
+        "phrase": "sleeve cuff",
+        "crop_area_ratio": 0.014365946481447258
+      },
+      {
+        "bbox": [
+          176.16556072235107,
+          317.3331298828125,
+          197.34645080566406,
+          319.9865264892578
+        ],
+        "score": 0.40128862857818604,
+        "phrase": "sleeve cuff",
+        "crop_area_ratio": 0.0019794766789431478
+      }
+    ],
+    "rejected": [],
+    "model_seconds": 0.08363583800382912,
+    "prior_segmentation_match_iou": 0.47775596818211635,
+    "prior_category_correct": false,
+    "arms": {
+      "predicted_crop": {
+        "selected": null,
+        "proposal_count": 0,
+        "draft_selected_iou": 0,
+        "draft_any_candidate_iou": 0,
+        "draft_selected_hit": false,
+        "draft_any_candidate_hit": false,
+        "negative_has_proposal": false
+      },
+      "reference_crop": {
+        "selected": {
+          "bbox": [
+            295.86915588378906,
+            156.22628927230835,
+            319.6169891357422,
+            173.40166473388672
+          ],
+          "score": 0.42817366123199463,
+          "phrase": "sleeve cuff",
+          "crop_area_ratio": 0.014365946481447258
+        },
+        "proposal_count": 2,
+        "draft_selected_iou": 0,
+        "draft_any_candidate_iou": 0,
+        "draft_selected_hit": false,
+        "draft_any_candidate_hit": false,
+        "negative_has_proposal": true
+      }
+    }
+  },
+  {
+    "sample_id": "SEGTEST1_0226",
+    "draft_presence": "absent",
+    "review_status": "ASSISTANT_DRAFT_PENDING_HUMAN_REVIEW",
+    "controlled_reference_crop": [
+      278,
+      207,
+      440,
+      549
+    ],
+    "all_controlled_candidates": [
+      {
+        "bbox": [
+          278.03213983774185,
+          210.76344466209412,
+          405.6553955078125,
+          334.2767105102539
+        ],
+        "score": 0.3742290139198303,
+        "phrase": "sleeve cuff",
+        "crop_area_ratio": 0.28451312370921056
+      }
+    ],
+    "rejected": [
+      {
+        "bbox": [
+          278.22126615047455,
+          210.39495396614075,
+          436.06300354003906,
+          546.801025390625
+        ],
+        "score": 0.39572277665138245,
+        "phrase": "sleeve cuff",
+        "crop_area_ratio": 0.9583950397451182,
+        "reason": "search_crop_area_guard"
+      }
+    ],
+    "model_seconds": 0.09458275302313268,
+    "prior_segmentation_match_iou": 0.8642730955869969,
+    "prior_category_correct": true,
+    "arms": {
+      "predicted_crop": {
+        "selected": null,
+        "proposal_count": 0,
+        "draft_selected_iou": 0,
+        "draft_any_candidate_iou": 0,
+        "draft_selected_hit": false,
+        "draft_any_candidate_hit": false,
+        "negative_has_proposal": false
+      },
+      "reference_crop": {
+        "selected": {
+          "bbox": [
+            278.03213983774185,
+            210.76344466209412,
+            405.6553955078125,
+            334.2767105102539
+          ],
+          "score": 0.3742290139198303,
+          "phrase": "sleeve cuff",
+          "crop_area_ratio": 0.28451312370921056
+        },
+        "proposal_count": 1,
+        "draft_selected_iou": 0,
+        "draft_any_candidate_iou": 0,
+        "draft_selected_hit": false,
+        "draft_any_candidate_hit": false,
+        "negative_has_proposal": true
+      }
+    }
+  }
+]

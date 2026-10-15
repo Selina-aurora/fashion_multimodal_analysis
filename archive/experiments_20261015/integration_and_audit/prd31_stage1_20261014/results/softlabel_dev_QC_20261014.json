@@ -1,0 +1,30 @@
+{
+  "n_soft_targets": 18,
+  "n_training_candidates": 10,
+  "n_unique_candidate_source_hashes": 10,
+  "candidate_human_class_distribution": {
+    "short": 2,
+    "cap": 2,
+    "elbow": 6
+  },
+  "candidate_soft_top1_distribution": {
+    "short": 2,
+    "cap": 2,
+    "elbow": 6
+  },
+  "candidate_human_soft_top1_disagreement": [],
+  "probability_invalid_ids": [],
+  "ratio_invalid_ids": [],
+  "candidate_core400_sha_overlap": [],
+  "candidate_v3_holdout20_sha_overlap": [],
+  "candidate_internal_duplicate_sha": 0,
+  "runtime_train_val_image_hash_audit_done": false,
+  "training_authorized": false,
+  "model_trained": false,
+  "status": "DEVELOPMENT_LABEL_DATA_QC_ONLY",
+  "limitations": [
+    "Candidate vs frozen Core400 and V3 holdout image-hash checks do not establish full train/val split isolation.",
+    "Four classes only; source ratio is old projected-arm definition, distinct from V3 opening midpoint.",
+    "Human-label agreement does not imply predictive accuracy."
+  ]
+}

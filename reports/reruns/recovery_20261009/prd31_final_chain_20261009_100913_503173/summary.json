@@ -1,0 +1,19 @@
+{
+  "status": "FULL_CHAIN_INTERFACE_PASS",
+  "images": 8,
+  "predicted_instances": 34,
+  "geometry_tests_passed": 14,
+  "contract_checks": 3066,
+  "interface_issues": 0,
+  "failed_downstream_calls": 0,
+  "model_inference_run": true,
+  "semantic_consistency_review_enabled": true,
+  "accuracy_evaluated": false,
+  "formal_prd_acceptance": false,
+  "scope": "Installed-source GPU rerun on 8 existing diagnostic images; interface completion only.",
+  "limitations": [
+    "Not a blind accuracy test or latency benchmark.",
+    "Requires-review statuses preserve uncertainty; they do not fix semantic predictions.",
+    "Semantic errors documented by previous human reviews remain unresolved."
+  ]
+}

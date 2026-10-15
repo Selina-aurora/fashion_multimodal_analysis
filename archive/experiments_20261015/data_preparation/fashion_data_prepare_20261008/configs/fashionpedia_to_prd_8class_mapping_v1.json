@@ -1,0 +1,52 @@
+{
+  "schema_version": "prd-3.1.1-fashionpedia-map-v1",
+  "notes": [
+    "Current project data covers only five PRD categories.",
+    "Fashionpedia can be used as a supplementary source for shoe, bag and accessory classes.",
+    "Accessory mapping is intentionally broad and can be narrowed later."
+  ],
+  "mapping": {
+    "top": [
+      "shirt, blouse",
+      "top, t-shirt, sweatshirt",
+      "sweater",
+      "cardigan",
+      "vest"
+    ],
+    "pants": [
+      "pants",
+      "shorts"
+    ],
+    "skirt": [
+      "skirt"
+    ],
+    "outerwear": [
+      "jacket",
+      "coat",
+      "cape"
+    ],
+    "dress": [
+      "dress",
+      "jumpsuit"
+    ],
+    "shoe": [
+      "shoe"
+    ],
+    "bag": [
+      "bag, wallet"
+    ],
+    "accessory": [
+      "glasses",
+      "hat",
+      "headband, head covering, hair accessory",
+      "tie",
+      "glove",
+      "watch",
+      "belt",
+      "leg warmer",
+      "tights, stockings",
+      "sock",
+      "scarf"
+    ]
+  }
+}

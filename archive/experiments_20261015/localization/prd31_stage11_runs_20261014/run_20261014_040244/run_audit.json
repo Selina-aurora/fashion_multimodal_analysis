@@ -1,0 +1,70 @@
+{
+  "status": "STAGE11_ROOTCAUSE_DIAGNOSTIC_COMPLETED",
+  "project_files_modified": false,
+  "checkpoint": {
+    "device": "NVIDIA GeForce RTX 4090",
+    "torch": "2.13.0+cu132",
+    "checkpoint_sha256": "c5ba795225349b1c521aac0517ac7c493d9818dcc17d558ac4a3f6f8669452f0",
+    "min_size": 640,
+    "max_size": 1024
+  },
+  "runtime_source_audit": {
+    "runtime_ModelBackends_ground": {
+      "source_file": "/workspace/fashion_multimodal_analysis/src/fashion_multimodal_analysis/integration/model_backends.py",
+      "sha256": "5700b3fa3484b8bfd961355ac8448c79a8bcb84c30c70c57963cc87ca833810b",
+      "source_lines": 160,
+      "tokens": {
+        "rejected_region_geometry": true,
+        "semantic": true,
+        "max_local_region_crop_area_ratio": true,
+        "neckline_context": false,
+        "crop_bounds": true,
+        "run_grounding_dino": true,
+        "run_sam": true
+      }
+    },
+    "runtime_run_grounding_dino": {
+      "source_file": "/workspace/fashion_multimodal_analysis/src/fashion_multimodal_analysis/grounding/refinement/run_shoulder_waist_pattern_groundingdino_refinement_v1.py",
+      "sha256": "992b63810eba53beb8f8d34a285c75783bb8a04e04e6485b846300f5311c2151",
+      "source_lines": 103,
+      "tokens": {
+        "rejected_region_geometry": false,
+        "semantic": false,
+        "max_local_region_crop_area_ratio": false,
+        "neckline_context": false,
+        "crop_bounds": false,
+        "run_grounding_dino": true,
+        "run_sam": false
+      }
+    },
+    "experimental_predict_dino": {
+      "source_file": "/workspace/prd31_stage11_parity_rootcause_20261014/scripts/stage9_dino_impl.py",
+      "sha256": "fd85fba41c051e73bf3f5c3d8104158b45f4353f6d109e7a1dd4239afa4b83e8",
+      "source_lines": 22,
+      "tokens": {
+        "rejected_region_geometry": false,
+        "semantic": false,
+        "max_local_region_crop_area_ratio": false,
+        "neckline_context": false,
+        "crop_bounds": false,
+        "run_grounding_dino": false,
+        "run_sam": false
+      }
+    }
+  },
+  "result": {
+    "status": "STAGE11_ROOTCAUSE_DIAGNOSTIC_COMPLETED",
+    "cases": 4,
+    "queries": 16,
+    "native_vs_helper_serial_pass": 16,
+    "helper_serial_vs_batch_pass": 16,
+    "native_vs_helper_batch_pass": 16,
+    "production_status_counts": {
+      "detected": 8,
+      "missed": 3,
+      "rejected_region_geometry": 5
+    },
+    "scope": "read-only same-image same-prompt candidate parity; no localization GT or speed acceptance",
+    "next_step": "Inspect runtime ground source and proposal differences; do not integrate Stage10 experimental path"
+  }
+}

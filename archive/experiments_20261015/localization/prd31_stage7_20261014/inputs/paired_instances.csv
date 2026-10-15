@@ -1,0 +1,9 @@
+﻿pair_id,source_image,garment_id,category,bbox_iou_matched,garment_mask_iou,attributes_comparable,attributes_agree,evaluated_regions
+valpair_01,/workspace/fashion_data/raw/fashionpedia/images/test/311db0d6f5b7be84ac3c952a443ef981.jpg,fashionpedia_ann_6951,top,0.717725,0.750161,6,5,collar;cuff
+valpair_02,/workspace/fashion_data/raw/fashionpedia/images/test/33cfdcbd48019b09e36a78c428bbae1d.jpg,fashionpedia_ann_6509,pants,0.921552,0.910737,4,4,pocket;waist
+valpair_03,/workspace/fashion_data/raw/train/train/image/142658.jpg,item2_skirt,skirt,0.868403,0.929387,4,3,waist;pattern
+valpair_04,/workspace/fashion_data/raw/fashionpedia/images/test/3bf082a96a03a1c8f75e1d1d0ebf42d2.jpg,fashionpedia_ann_3404,outerwear,0.874153,0.886874,6,4,pocket;shoulder
+valpair_05,/workspace/fashion_data/raw/fashionpedia/images/test/33846044d27032d3988b9b4b7e22e252.jpg,fashionpedia_ann_4588,dress,0.596264,0.671953,6,1,shoulder;waist
+valpair_06,/workspace/fashion_data/raw/fashionpedia/images/test/311db0d6f5b7be84ac3c952a443ef981.jpg,fashionpedia_ann_6949,shoe,0.875687,0.890446,2,2,decoration;pattern
+valpair_07,/workspace/fashion_data/raw/fashionpedia/images/test/77435fc234059dcb9e0bb3d73382bcc7.jpg,fashionpedia_ann_2418,bag,0.740016,0.72595,2,1,pattern;decoration
+valpair_08,/workspace/fashion_data/raw/fashionpedia/images/test/32227cade6d3646824f9c0f3fa9dc9e7.jpg,fashionpedia_ann_7678,accessory,0.636246,0.486179,2,1,decoration;pattern

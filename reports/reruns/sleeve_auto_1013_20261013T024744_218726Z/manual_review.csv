@@ -1,0 +1,9 @@
+﻿record_id,correct_garment,correct_person,correct_arm,cuff_is_real_sleeve_boundary,failure_stage,notes
+v5_train_00415,,,,,,
+v5_train_00484,,,,,,
+v5_train_00533,,,,,,
+v5_train_01055,,,,,,
+v5_train_01155,,,,,,
+v5_train_01230,,,,,,
+v5_train_01445,,,,,,
+v5_train_01508,,,,,,

@@ -1,0 +1,166 @@
+{
+  "purpose": "TRAIN-only sleeveless category supplement; weak draft requires visual confirmation",
+  "labels": [
+    "sleeveless",
+    "cap",
+    "short",
+    "elbow",
+    "three_quarter",
+    "long"
+  ],
+  "association_thresholds": null,
+  "cases": [
+    {
+      "record_id": "df2_targeted150_20261008_00271",
+      "split": "train",
+      "source_dataset": "DeepFashion2",
+      "category": "top",
+      "fine_category": "vest",
+      "source_image": "../fashion_data/raw/train/train/image/148490.jpg",
+      "source_image_sha256": "0d7d5fc6ebdc27b4a35c4fe398034c5579215b74db9e8f6ce683a2e743ae004c",
+      "garment_id": "item1_vest",
+      "garment_bbox": [
+        145.0,
+        142.0,
+        361.0,
+        441.0
+      ],
+      "draft_sleeve_length": "sleeveless",
+      "review_status": "pending",
+      "confirmed_training_label": false
+    },
+    {
+      "record_id": "df2_targeted150_20261008_00228",
+      "split": "train",
+      "source_dataset": "DeepFashion2",
+      "category": "top",
+      "fine_category": "vest",
+      "source_image": "../fashion_data/raw/train/train/image/082966.jpg",
+      "source_image_sha256": "a2d2d1dbd91dea36c8290728b6d5762eacf3929a76551f698e0cc63b3df0fe6f",
+      "garment_id": "item1_vest",
+      "garment_bbox": [
+        285.0,
+        252.0,
+        484.0,
+        450.0
+      ],
+      "draft_sleeve_length": "sleeveless",
+      "review_status": "pending",
+      "confirmed_training_label": false
+    },
+    {
+      "record_id": "df2_targeted150_20261008_00186",
+      "split": "train",
+      "source_dataset": "DeepFashion2",
+      "category": "top",
+      "fine_category": "sling",
+      "source_image": "../fashion_data/raw/train/train/image/102848.jpg",
+      "source_image_sha256": "80e5ef8bc1b6013c2edc97e734277535d8b294230fb134a11660b1e8adb41a61",
+      "garment_id": "item1_sling",
+      "garment_bbox": [
+        176.0,
+        276.0,
+        465.0,
+        688.0
+      ],
+      "draft_sleeve_length": "sleeveless",
+      "review_status": "pending",
+      "confirmed_training_label": false
+    },
+    {
+      "record_id": "df2_targeted150_20261008_00188",
+      "split": "train",
+      "source_dataset": "DeepFashion2",
+      "category": "top",
+      "fine_category": "vest",
+      "source_image": "../fashion_data/raw/train/train/image/111447.jpg",
+      "source_image_sha256": "7d74a1c483cb500f5ee606099216dc1f7937b8c94cb5887a76d028525c5d5726",
+      "garment_id": "item1_vest",
+      "garment_bbox": [
+        139.0,
+        14.0,
+        296.0,
+        239.0
+      ],
+      "draft_sleeve_length": "sleeveless",
+      "review_status": "pending",
+      "confirmed_training_label": false
+    },
+    {
+      "record_id": "df2_balanced150_20261008_00029",
+      "split": "train",
+      "source_dataset": "DeepFashion2",
+      "category": "dress",
+      "fine_category": "vest_dress",
+      "source_image": "../fashion_data/raw/train/train/image/179563.jpg",
+      "source_image_sha256": "49102fca866d8cd8813bd927eb4e38d7ac622f321b74f166e8b73089db3e2d09",
+      "garment_id": "item1_vest_dress",
+      "garment_bbox": [
+        272.0,
+        49.0,
+        490.0,
+        368.0
+      ],
+      "draft_sleeve_length": "sleeveless",
+      "review_status": "pending",
+      "confirmed_training_label": false
+    },
+    {
+      "record_id": "df2_balanced150_20261008_00043",
+      "split": "train",
+      "source_dataset": "DeepFashion2",
+      "category": "dress",
+      "fine_category": "vest_dress",
+      "source_image": "../fashion_data/raw/train/train/image/152990.jpg",
+      "source_image_sha256": "fd1455e7b948dcd63693af5637399c0d5fb85c682895f563bb5f60aa5a2c19e6",
+      "garment_id": "item1_vest_dress",
+      "garment_bbox": [
+        113.0,
+        0.0,
+        333.0,
+        704.0
+      ],
+      "draft_sleeve_length": "sleeveless",
+      "review_status": "pending",
+      "confirmed_training_label": false
+    },
+    {
+      "record_id": "v5_train_00073",
+      "split": "train",
+      "source_dataset": "DeepFashion2",
+      "category": "dress",
+      "fine_category": "sling_dress",
+      "source_image": "../fashion_data/raw/train/train/image/120729.jpg",
+      "source_image_sha256": "10d29cd8d2b24f541f3f185a71474cda79e76809df54e4e06034aece9d50fe87",
+      "garment_id": "item2_sling_dress",
+      "garment_bbox": [
+        261.0,
+        252.0,
+        424.0,
+        742.0
+      ],
+      "draft_sleeve_length": "sleeveless",
+      "review_status": "pending",
+      "confirmed_training_label": false
+    },
+    {
+      "record_id": "df2_balanced150_20261008_00056",
+      "split": "train",
+      "source_dataset": "DeepFashion2",
+      "category": "dress",
+      "fine_category": "sling_dress",
+      "source_image": "../fashion_data/raw/train/train/image/142726.jpg",
+      "source_image_sha256": "e237849abef2bfa98615f5efe9cde617d8f18c9664dd5680cca8d8ba914d5edf",
+      "garment_id": "item1_sling_dress",
+      "garment_bbox": [
+        121.0,
+        136.0,
+        206.0,
+        326.0
+      ],
+      "draft_sleeve_length": "sleeveless",
+      "review_status": "pending",
+      "confirmed_training_label": false
+    }
+  ]
+}

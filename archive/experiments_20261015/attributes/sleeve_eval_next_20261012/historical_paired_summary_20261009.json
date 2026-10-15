@@ -1,0 +1,51 @@
+{
+  "source": "reports/reruns/recovery_20261009/sleeve_linear_train_20261009_073022_027703",
+  "comparison": "same raw garment bbox, frozen CLIP text prompts vs 44-label trained linear head",
+  "scopes": {
+    "train": {
+      "eligible": 32,
+      "head_correct": 32,
+      "prompt_correct": 7,
+      "both_correct": 7,
+      "head_only": 25,
+      "prompt_only": 0,
+      "both_wrong": 0,
+      "head_accuracy": 1.0,
+      "prompt_accuracy": 0.21875
+    },
+    "dev": {
+      "eligible": 12,
+      "head_correct": 7,
+      "prompt_correct": 4,
+      "both_correct": 3,
+      "head_only": 4,
+      "prompt_only": 1,
+      "both_wrong": 4,
+      "head_accuracy": 0.5833333333333334,
+      "prompt_accuracy": 0.3333333333333333
+    },
+    "diagnostic_gt_roi": {
+      "eligible": 15,
+      "head_correct": 5,
+      "prompt_correct": 7,
+      "both_correct": 2,
+      "head_only": 3,
+      "prompt_only": 5,
+      "both_wrong": 5,
+      "head_accuracy": 0.3333333333333333,
+      "prompt_accuracy": 0.4666666666666667
+    },
+    "diagnostic_predicted_roi": {
+      "eligible": 15,
+      "head_correct": 4,
+      "prompt_correct": 4,
+      "both_correct": 1,
+      "head_only": 3,
+      "prompt_only": 3,
+      "both_wrong": 8,
+      "head_accuracy": 0.26666666666666666,
+      "prompt_accuracy": 0.26666666666666666
+    }
+  },
+  "experimental_only": true
+}

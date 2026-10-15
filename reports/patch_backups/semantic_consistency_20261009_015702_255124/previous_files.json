@@ -1,0 +1,6 @@
+{
+  "src/fashion_multimodal_analysis/integration/pipeline.py": true,
+  "src/fashion_multimodal_analysis/integration/semantic_consistency.py": false,
+  "scripts/review_prd31_consistency_20261009.py": false,
+  "tests/test_semantic_consistency.py": false
+}

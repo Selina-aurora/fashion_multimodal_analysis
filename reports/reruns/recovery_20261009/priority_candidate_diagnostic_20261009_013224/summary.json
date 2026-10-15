@@ -1,0 +1,16 @@
+{
+  "cases": 24,
+  "checkpoint_sha256": "c5ba795225349b1c521aac0517ac7c493d9818dcc17d558ac4a3f6f8669452f0",
+  "manifest_sha256": "c83204aca87c9c4dee304b774fd459bf5a18a2d1d65f0a3a9a79b92721224b89",
+  "diagnostic_group_counts": {
+    "localized_category_confusion": 12,
+    "no_box50_candidate_above_0_05": 10,
+    "correct_class_candidate_below_0_40": 2
+  },
+  "baseline_reproduction_drift_count": 0,
+  "internal_model_score_floor": 0.05,
+  "formal_score_threshold_unchanged": 0.4,
+  "accuracy_evaluated": false,
+  "prd_acceptance_evaluated": false,
+  "note": "Selected failures are not representative accuracy; candidate absence applies only to post-NMS, capped model outputs. GT used for analysis only."
+}

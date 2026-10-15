@@ -1,0 +1,9 @@
+﻿case,pass,query_count,production_group_ms,batch_group_ms,ratio_production_over_batch,timing_note
+case_01,1,4,725.518,1054.3667,0.6881,Batch arm includes extra native DINO parity calls; not optimized end-to-end throughput
+case_01,2,4,702.899,1048.6168,0.6703,Batch arm includes extra native DINO parity calls; not optimized end-to-end throughput
+case_02,1,4,572.5417,978.5454,0.5851,Batch arm includes extra native DINO parity calls; not optimized end-to-end throughput
+case_02,2,4,567.6325,956.6238,0.5934,Batch arm includes extra native DINO parity calls; not optimized end-to-end throughput
+case_03,1,4,598.8967,984.1439,0.6085,Batch arm includes extra native DINO parity calls; not optimized end-to-end throughput
+case_03,2,4,606.872,973.3536,0.6235,Batch arm includes extra native DINO parity calls; not optimized end-to-end throughput
+case_04,1,4,999.3089,1186.5794,0.8422,Batch arm includes extra native DINO parity calls; not optimized end-to-end throughput
+case_04,2,4,1035.305,1157.2646,0.8946,Batch arm includes extra native DINO parity calls; not optimized end-to-end throughput

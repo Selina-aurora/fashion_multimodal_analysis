@@ -1,0 +1,219 @@
+{
+  "status": "DRAFT_DEVELOPMENT_PROPOSALS_ONLY",
+  "formal_accuracy": null,
+  "experiment": "full ROI vs full ROI + four overlapping 65% width/height tiles",
+  "prompt": "sleeve cuff.",
+  "checkpoint_sha256": "c5ba795225349b1c521aac0517ac7c493d9818dcc17d558ac4a3f6f8669452f0",
+  "labels_sha256": "5585886ee599e600fea1eedb55876ac172b7aa0d08cf83f1d36b7c1451b7935f",
+  "backend_sha256": "0efd47f3a29e6c25d7396717cb4fc1b1540ed30c16df171a9ad7b93fade7f7ec",
+  "script_sha256": "95cf830740c8944f65dab79ff21cd5c0b87b55efd8c3310a8737e7d23dfb42cb",
+  "config": {
+    "benchmark_version": "prd_3_1_v2",
+    "status": "DRAFT_REQUIRES_HUMAN_REVIEW",
+    "seed": 20260930,
+    "required_regions": [
+      "collar",
+      "cuff",
+      "hem",
+      "pocket",
+      "shoulder",
+      "waist",
+      "pattern",
+      "decoration"
+    ],
+    "required_attributes": [
+      "primary_color",
+      "pattern",
+      "sleeve_length",
+      "neckline",
+      "silhouette_fit",
+      "fashion_style"
+    ],
+    "required_prd_classes": [
+      "top",
+      "pants",
+      "skirt",
+      "outerwear",
+      "dress",
+      "shoe",
+      "bag",
+      "accessory"
+    ],
+    "min_reviewed_positive_per_region": 5,
+    "attribute_taxonomy": {
+      "primary_color": [
+        "black",
+        "white",
+        "gray",
+        "red",
+        "orange",
+        "yellow",
+        "green",
+        "blue",
+        "purple",
+        "pink",
+        "brown",
+        "beige"
+      ],
+      "pattern": [
+        "solid",
+        "striped",
+        "checked_plaid",
+        "polka_dot",
+        "floral",
+        "animal_print",
+        "geometric_abstract",
+        "graphic_logo",
+        "camouflage",
+        "other_pattern"
+      ],
+      "sleeve_length": [
+        "sleeveless",
+        "cap",
+        "short",
+        "elbow",
+        "three_quarter",
+        "long"
+      ],
+      "neckline": [
+        "crew",
+        "v_neck",
+        "round_scoop",
+        "square",
+        "boat",
+        "halter",
+        "off_shoulder",
+        "one_shoulder",
+        "turtleneck",
+        "mock_neck",
+        "polo",
+        "shirt_collar",
+        "hooded",
+        "other"
+      ],
+      "silhouette_fit": [
+        "slim_fitted",
+        "regular_straight",
+        "loose_oversized",
+        "slim_tapered",
+        "straight",
+        "wide_leg",
+        "flared",
+        "a_line",
+        "fitted"
+      ],
+      "fashion_style": [
+        "casual",
+        "formal",
+        "sporty",
+        "streetwear",
+        "elegant",
+        "minimalist",
+        "vintage",
+        "romantic"
+      ]
+    },
+    "segmentation_checkpoint": "outputs/recovery_20261008/v5_balanced150/checkpoint_last.pth",
+    "train_manifest": "configs/prd_8class_train_v5_balanced150_20261008.csv",
+    "val_manifest": "configs/prd_8class_val_v2_full_targets.csv",
+    "grounding_model": "IDEA-Research/grounding-dino-tiny",
+    "sam_model": "facebook/sam-vit-base",
+    "clip_model": "openai/clip-vit-base-patch32",
+    "score_threshold": 0.4,
+    "mask_threshold": 0.5,
+    "bbox_match_iou": 0.5,
+    "grounding_box_threshold": 0.3,
+    "grounding_text_threshold": 0.25,
+    "warmup_runs": 10,
+    "timed_passes": 5,
+    "accuracy_targets": {
+      "mask_iou": 0.85,
+      "grounding": 0.92,
+      "attributes": 0.88
+    },
+    "latency_targets_ms": {
+      "segmentation": 50,
+      "grounding": 30,
+      "attributes": 20
+    },
+    "test_isolation_note": "Core source images have prior segmentation regression history. New labels are not automatically a pristine blind holdout.",
+    "category_fit_taxonomy": {
+      "top": [
+        "slim_fitted",
+        "regular_straight",
+        "loose_oversized"
+      ],
+      "outerwear": [
+        "slim_fitted",
+        "regular_straight",
+        "loose_oversized"
+      ],
+      "pants": [
+        "slim_tapered",
+        "straight",
+        "wide_leg",
+        "flared"
+      ],
+      "skirt": [
+        "straight",
+        "a_line",
+        "flared"
+      ],
+      "dress": [
+        "fitted",
+        "straight",
+        "a_line",
+        "flared"
+      ]
+    },
+    "reference_segmentation_sha256": "c83204aca87c9c4dee304b774fd459bf5a18a2d1d65f0a3a9a79b92721224b89",
+    "checkpoint_settings": {
+      "batch_size": 1,
+      "workers": 2,
+      "min_size": 640,
+      "max_size": 1024,
+      "seed": 20260921,
+      "lr": 0.0025,
+      "momentum": 0.9,
+      "weight_decay": 0.0005,
+      "step_size": 5,
+      "gamma": 0.1,
+      "sampler_alpha": 0.5,
+      "no_hflip": false,
+      "no_balanced_sampler": false
+    },
+    "neckline_context_pair": false,
+    "neckline_context_expansion": 2.0,
+    "strict_region_grounding": true,
+    "max_local_region_crop_area_ratio": 0.65,
+    "regression_patch_version": "neckline_context_pair_20261009_v1",
+    "semantic_consistency_review": false
+  },
+  "cases": 8,
+  "positive_denominator": 5,
+  "negative_denominator": 3,
+  "segmentation_matches": 6,
+  "matched_negative_count": 1,
+  "arms": {
+    "baseline": {
+      "draft_selected_positive_hits": 0,
+      "draft_any_candidate_positive_hits": 0,
+      "draft_negative_with_proposals": 0
+    },
+    "expanded": {
+      "draft_selected_positive_hits": 0,
+      "draft_any_candidate_positive_hits": 0,
+      "draft_negative_with_proposals": 1
+    }
+  },
+  "limitations": [
+    "Compares DINO proposal boxes BEFORE SAM, not previous SAM-refined output.",
+    "Any-candidate hit uses draft labels as an evaluation oracle, never product selection.",
+    "Scores across different crops are not calibrated; highest score selection is diagnostic.",
+    "No formal absence prediction; segmentation misses are not correct negatives.",
+    "No proposal is automatically promoted to the product pipeline.",
+    "Known Core images and assistant draft labels; not independent blind acceptance.",
+    "Tile union retains baseline candidates: oracle coverage can only stay or increase; assess selected hits separately.",
+    "Four additional DINO calls per eligible garment: no latency acceptance claim."
+  ]
+}

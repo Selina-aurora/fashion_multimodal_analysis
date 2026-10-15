@@ -1,0 +1,190 @@
+{
+  "image_index": "338",
+  "source_dataset": "Fashionpedia",
+  "source_image": "../fashion_data/raw/fashionpedia/images/test/992c89a774b9f246db9ab54865273b26.jpg",
+  "record_id": "SEGTEST1_0358",
+  "garment_id": "fashionpedia_ann_1523",
+  "gt_class": "accessory",
+  "fine_category": "watch",
+  "pred_class": "",
+  "pred_score": "0.0",
+  "localized_bbox50": "False",
+  "bbox_iou": "0.0",
+  "class_correct": "False",
+  "mask_iou": "0.0",
+  "mask_iou_ge_0_50": "False",
+  "mask_iou_ge_0_85": "False",
+  "outcome": "missed",
+  "visualization_path": "",
+  "export_case": "case_18",
+  "selection_reason": "missed_accessory",
+  "source_copy": "case_18/source.jpg",
+  "evaluation_copy": null,
+  "evaluation_visualization_available": false,
+  "visualization_note": "Existing evaluation image only; absent images are not rerendered.",
+  "gt_bbox": [
+    45,
+    937,
+    111,
+    993
+  ],
+  "source_sha256": "a897c3b281d0411d614e2cf33f3f7ac861a8b72fafc7113b58fa3640693ae6d7",
+  "image_size": [
+    682,
+    1024
+  ],
+  "gt_area_ratio": 0.005292338709677419,
+  "baseline_reproduction_drift": false,
+  "diagnostic": {
+    "diagnostic_group": "no_box50_candidate_above_0_05",
+    "baseline_0_40_match": null,
+    "best_score_localized_candidate": null,
+    "best_score_correct_class_candidate": null,
+    "max_bbox_iou": 0.01221493670301642
+  },
+  "candidates": [
+    {
+      "category": "top",
+      "score": 0.9356368184089661,
+      "bbox": [
+        32.57229232788086,
+        328.01837158203125,
+        653.673095703125,
+        753.73095703125
+      ],
+      "bbox_iou": 0.0
+    },
+    {
+      "category": "top",
+      "score": 0.8959217071533203,
+      "bbox": [
+        181.88766479492188,
+        611.403564453125,
+        470.2906494140625,
+        915.7971801757812
+      ],
+      "bbox_iou": 0.0
+    },
+    {
+      "category": "outerwear",
+      "score": 0.6713895201683044,
+      "bbox": [
+        0.0,
+        302.0087585449219,
+        675.0341186523438,
+        1008.5909423828125
+      ],
+      "bbox_iou": 0.007748962437098869
+    },
+    {
+      "category": "top",
+      "score": 0.6202765107154846,
+      "bbox": [
+        110.5224609375,
+        526.8099975585938,
+        519.1385498046875,
+        981.7373657226562
+      ],
+      "bbox_iou": 0.00011269911823916787
+    },
+    {
+      "category": "outerwear",
+      "score": 0.3559037148952484,
+      "bbox": [
+        60.28289794921875,
+        588.0381469726562,
+        623.48583984375,
+        992.015380859375
+      ],
+      "bbox_iou": 0.01221493670301642
+    },
+    {
+      "category": "accessory",
+      "score": 0.21127425134181976,
+      "bbox": [
+        164.02236938476562,
+        604.2926025390625,
+        469.94537353515625,
+        914.4144897460938
+      ],
+      "bbox_iou": 0.0
+    },
+    {
+      "category": "dress",
+      "score": 0.13843593001365662,
+      "bbox": [
+        18.603233337402344,
+        242.6976318359375,
+        668.6395263671875,
+        1011.1129150390625
+      ],
+      "bbox_iou": 0.007399431660613435
+    },
+    {
+      "category": "dress",
+      "score": 0.13361132144927979,
+      "bbox": [
+        97.4785385131836,
+        515.2059326171875,
+        516.707763671875,
+        1006.9771728515625
+      ],
+      "bbox_iou": 0.0036211790458475566
+    },
+    {
+      "category": "dress",
+      "score": 0.12255391478538513,
+      "bbox": [
+        226.21766662597656,
+        629.8637084960938,
+        459.77386474609375,
+        897.8726806640625
+      ],
+      "bbox_iou": 0.0
+    },
+    {
+      "category": "outerwear",
+      "score": 0.07713105529546738,
+      "bbox": [
+        154.54922485351562,
+        607.6458129882812,
+        523.552734375,
+        906.0838623046875
+      ],
+      "bbox_iou": 0.0
+    },
+    {
+      "category": "pants",
+      "score": 0.0647815614938736,
+      "bbox": [
+        411.2197265625,
+        473.2998962402344,
+        658.8739013671875,
+        991.2413330078125
+      ],
+      "bbox_iou": 0.0
+    },
+    {
+      "category": "accessory",
+      "score": 0.05744811147451401,
+      "bbox": [
+        477.9231872558594,
+        695.2202758789062,
+        663.1439819335938,
+        1010.4428100585938
+      ],
+      "bbox_iou": 0.0
+    },
+    {
+      "category": "outerwear",
+      "score": 0.05215710401535034,
+      "bbox": [
+        398.0186462402344,
+        354.8228454589844,
+        665.1311645507812,
+        1000.7791137695312
+      ],
+      "bbox_iou": 0.0
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "status": "STAGE12_STRICT_PROTOCOL_PARITY_COMPLETED",
+  "cases": 4,
+  "queries": 16,
+  "strict_grounding": true,
+  "native_dino_batch_parity_passes": 16,
+  "final_region_parity_passes": 16,
+  "final_region_parity_failures": 0,
+  "detected_production": 8,
+  "detected_batch": 8,
+  "integration_decision": "EXPLORATORY_ONLY_MORE_TESTS_REQUIRED",
+  "timing_valid_for_speedup": false,
+  "reason_timing_not_valid": "Batch path intentionally re-runs native DINO serial for parity checking; timings are diagnostic only.",
+  "notes": [
+    "Production strict protocol replicated: raw crop+REGION_PROMPTS+semantic/geometry gates+local mask constraints.",
+    "Same fixed diagnostic images; 4 cases cannot establish generalization.",
+    "No part GT: this is NOT 92% grounding accuracy validation.",
+    "Do not modify project, frozen benchmark, or model weights."
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "status": "STAGE6_FAILED",
+  "mode": "all",
+  "dry_run": true,
+  "project_files_modified": false,
+  "scope": "warmed latency and/or controlled GT/pred garment ROI development diagnostic",
+  "generated_by": "run_stage6.py",
+  "error": "ValueError: Protected input changed: configs/prd_8class_val_v2_full_targets.csv"
+}

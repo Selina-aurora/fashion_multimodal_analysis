@@ -1,0 +1,35 @@
+{
+  "date": "2026-10-15",
+  "remote_base_commit": "06a1335be2f65b5380e58c72d50dcc8d1acc2134",
+  "source_text_files": 3018,
+  "identical_to_remote_files": 1509,
+  "source_to_archive_hash_mismatches": 0,
+  "python_files_parsed": 178,
+  "python_parse_failures": 0,
+  "cpu_test_results": {
+    "quality_guards": 10,
+    "attribute_context": 11,
+    "semantic_consistency": 9,
+    "total_passed": 30
+  },
+  "apply_script_checks": [
+    "read_only_preview",
+    "branch_creation_and_exact_staging",
+    "no_commit_or_push",
+    "dirty_worktree_rejected",
+    "committed_conflict_rejected"
+  ],
+  "apply_script_fixture_payload_files": 1516,
+  "apply_script_fixture_note": "真实本地Git临时仓库，使用本包文件；仅将测试副本的base_commit改为临时仓库提交。之后新增本校验报告并刷新清单，不改应用脚本。",
+  "new_document_links": "原首页3处缺失规范/PRD链接改为注明原件未附；新增结果链接已核对。",
+  "credential_pattern_matches": 0,
+  "runtime_gpu_hashes_preserved": true,
+  "gpu_inference_run_this_update": false,
+  "remote_mutations": false,
+  "limitations": [
+    "未运行完整历史测试或GPU推理",
+    "本包无图片、mask、权重和审核HTML",
+    "归档脚本保留历史路径，只作查阅及复现追踪",
+    "未在Windows本机实测；脚本仅用Python标准库和Git"
+  ]
+}

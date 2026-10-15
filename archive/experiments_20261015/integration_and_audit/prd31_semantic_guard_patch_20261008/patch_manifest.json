@@ -1,0 +1,13 @@
+{
+  "patch_version": "semantic_guards_20261008_v1",
+  "expected_source_sha256": {
+    "src/fashion_multimodal_analysis/integration/model_backends.py": "6bfb902f9030293798a2a222c80a93d11766ccd4d63554b61045d051e56028d7",
+    "src/fashion_multimodal_analysis/integration/pipeline.py": "1afa5a0cad7e7159375e53e5f4630803c5aac28d956539a857486eb335547aa4"
+  },
+  "validation": {
+    "unit_tests_passed": 10,
+    "gpu_inference_run": false,
+    "accuracy_evaluated": false,
+    "prd_acceptance_evaluated": false
+  }
+}

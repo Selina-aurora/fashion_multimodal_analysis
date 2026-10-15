@@ -1,0 +1,32 @@
+{
+  "task": "target_garment_conditioned_cuff_boxes",
+  "dataset_dir": "/workspace/fashion_multimodal_analysis/reports/reruns/recovery_20261009/cuff_pilot_data_20261009_034656_985951",
+  "manifest_sha256": "85c9d2e491d1c2bbe22316867cef9081b39f4d46813056238c5f6a636ead811f",
+  "base_checkpoint": "/workspace/fashion_multimodal_analysis/outputs/recovery_20261008/v5_balanced150/checkpoint_last.pth",
+  "base_checkpoint_sha256": "c5ba795225349b1c521aac0517ac7c493d9818dcc17d558ac4a3f6f8669452f0",
+  "dataset_json_sha256": "3b87013ddd6fc7602957ab1ad76e9deff75737f84e91eff16e9db1da74037fe3",
+  "epochs": 15,
+  "seed": 20261009,
+  "input": "RGB + binary target garment mask; full RGB context retained",
+  "context_padding_fraction": 0.1,
+  "min_size": 640,
+  "max_size": 1024,
+  "batch_size": 1,
+  "workers": 0,
+  "confidence_threshold": 0.4,
+  "matching_iou": 0.5,
+  "optimizer": "SGD lr=.001 momentum=.9 weight_decay=.0005",
+  "lr_milestones": [
+    8,
+    12
+  ],
+  "selection": "highest development_val F1; ties retain earlier epoch",
+  "limitations": [
+    "All source images came from original segmentation training data.",
+    "No independent untouched end-to-end test set is established.",
+    "Annotations apply only to the specified garment, not every garment in the image.",
+    "Ambiguous cases are excluded, never used as empty-label negatives.",
+    "No original segmentation label, weight, or protected Core/val manifest is modified."
+  ],
+  "role": "controlled pilot using native target garment ROI/mask; not end-to-end prediction or blind PRD acceptance"
+}

@@ -1,0 +1,16 @@
+{
+  "experiment": "existing_resolution_candidate_revalidated_on_Core400",
+  "checkpoint_sha256": "c5ba795225349b1c521aac0517ac7c493d9818dcc17d558ac4a3f6f8669452f0",
+  "core_manifest_sha256": "c83204aca87c9c4dee304b774fd459bf5a18a2d1d65f0a3a9a79b92721224b89",
+  "checkpoint": "/workspace/fashion_multimodal_analysis/outputs/recovery_20261008/v5_balanced150/checkpoint_last.pth",
+  "manifest": "/workspace/fashion_multimodal_analysis/benchmark/prd_3_1_v1/manifests/segmentation_test_v1.csv",
+  "score_threshold": 0.4,
+  "mask_threshold": 0.5,
+  "bbox_match_iou": 0.5,
+  "warmup_runs": 10,
+  "timed_passes": 5,
+  "weights_modified": false,
+  "training_started": false,
+  "formal_prd_acceptance": false,
+  "note": "Fixed Core regression, not an unseen blind holdout. No further resolution sweep."
+}

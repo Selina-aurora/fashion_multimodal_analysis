@@ -1,0 +1,40 @@
+{
+  "schema_version": "3.1.3-v2-per-garment",
+  "scope_note": "Attributes are extracted per garment instance, not per full outfit image. Material/fabric composition and manufacturing process are intentionally excluded from the current stage.",
+  "garment_record": {
+    "source_image": "relative/path/to/source.jpg",
+    "garment_id": "garment_01",
+    "garment_category": "top|pants|skirt|outerwear|dress|shoes|bag|accessory|unknown",
+    "region_source": "crop|mask|whole_image_fallback",
+    "crop_path": "relative/path/to/garment_crop.jpg",
+    "mask_path": "optional relative/path/to/mask.png",
+    "attributes": {
+      "primary_color": {
+        "label": "single color label",
+        "score": "relative CLIP score; not calibrated"
+      },
+      "secondary_colors": {
+        "labels": [
+          "zero or more color labels"
+        ],
+        "rule": "Only populated when the instance is judged multicolor and additional color candidates are sufficiently strong."
+      },
+      "color_mode": {
+        "label": "single_color|multicolor",
+        "score": "relative CLIP score; not calibrated"
+      },
+      "pattern": {
+        "label": "solid|striped|checked|floral|graphic|polka_dot|animal|camouflage|geometric|abstract|other|unknown",
+        "score": "relative CLIP score; not calibrated"
+      },
+      "sleeve_length": {
+        "label": "sleeveless|cap|short|elbow|three_quarter|long|unknown|not_applicable",
+        "score": "relative CLIP score; not calibrated"
+      },
+      "neckline": {
+        "label": "crew|v_neck|round|square|boat|halter|off_shoulder|one_shoulder|turtleneck|mock_neck|polo|shirt_collar|hooded|other|unknown|not_applicable",
+        "score": "relative CLIP score; not calibrated"
+      }
+    }
+  }
+}

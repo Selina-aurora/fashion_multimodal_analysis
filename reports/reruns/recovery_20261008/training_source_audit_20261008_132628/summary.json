@@ -1,0 +1,12 @@
+{
+  "status": "training_source_audit_completed",
+  "training_images": 625,
+  "training_rows": 2299,
+  "images_with_review_flags": 6,
+  "issue_counts": {
+    "unmapped_foreground_jumpsuit": 6
+  },
+  "labels_modified": false,
+  "training_started": false,
+  "note": "Missing-source/unsupported-object flags require review. They do not prove all source labels are correct. Only jumpsuit is screened as unsupported foreground; this is not an exhaustive open-set audit."
+}

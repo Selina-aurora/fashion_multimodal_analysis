@@ -1,0 +1,202 @@
+[
+  {
+    "image_id": "holdout_001",
+    "path": "/workspace/fashion_data/raw/fashionpedia/images/test/a2b5ec83b7656e331622ac3c00606161.jpg",
+    "sha256": "5b3014f73499ba60a4b4d995b60fb5d0c1792f408937c4c619236369b88c6c20",
+    "size": [
+      1024,
+      683
+    ],
+    "source_name": "a2b5ec83b7656e331622ac3c00606161.jpg"
+  },
+  {
+    "image_id": "holdout_002",
+    "path": "/workspace/fashion_data/raw/fashionpedia/images/test/2f393444ea158b33118dfd0f3280fd1e.jpg",
+    "sha256": "878e965d3a421928c1a4c0c1c406d96e414fc1dcf9f4a6566a005d340acd7652",
+    "size": [
+      1024,
+      683
+    ],
+    "source_name": "2f393444ea158b33118dfd0f3280fd1e.jpg"
+  },
+  {
+    "image_id": "holdout_003",
+    "path": "/workspace/fashion_data/raw/fashionpedia/images/test/04f6e414deea516f05612aa595c7a65e.jpg",
+    "sha256": "7accff2fb2fa701c653b0e70418589ed44f36f611d062bfda1728dc02ce79610",
+    "size": [
+      682,
+      1024
+    ],
+    "source_name": "04f6e414deea516f05612aa595c7a65e.jpg"
+  },
+  {
+    "image_id": "holdout_004",
+    "path": "/workspace/fashion_data/raw/fashionpedia/images/test/cf9ee579dfff83db95d3ad350557245a.jpg",
+    "sha256": "4ec11d04678a90fcd519719a443e8f3d2b6644d02c3e4c0473e59233b8a83026",
+    "size": [
+      1024,
+      731
+    ],
+    "source_name": "cf9ee579dfff83db95d3ad350557245a.jpg"
+  },
+  {
+    "image_id": "holdout_005",
+    "path": "/workspace/fashion_data/raw/fashionpedia/images/test/fe36df2687aeea8690f934ac1aef9354.jpg",
+    "sha256": "a939cb7564d7029ad0ffa8261253f06cdbb8b5b8bca68f238502fac2b51d65dd",
+    "size": [
+      1024,
+      736
+    ],
+    "source_name": "fe36df2687aeea8690f934ac1aef9354.jpg"
+  },
+  {
+    "image_id": "holdout_006",
+    "path": "/workspace/fashion_data/raw/fashionpedia/images/test/7c8931f9b57b9e4074240a3e61b21dff.jpg",
+    "sha256": "624460bb17fa9a85193ada8eda5b9abe7cf2865a3f479a50137ca88385fce203",
+    "size": [
+      1024,
+      682
+    ],
+    "source_name": "7c8931f9b57b9e4074240a3e61b21dff.jpg"
+  },
+  {
+    "image_id": "holdout_007",
+    "path": "/workspace/fashion_data/raw/fashionpedia/images/test/ed53e55790431be00ad38d6548f70f93.jpg",
+    "sha256": "e840015f7368edee8230a4348d228cd36efc8f676dcfe9eae08618c597410425",
+    "size": [
+      683,
+      1024
+    ],
+    "source_name": "ed53e55790431be00ad38d6548f70f93.jpg"
+  },
+  {
+    "image_id": "holdout_008",
+    "path": "/workspace/fashion_data/raw/fashionpedia/images/test/98dd1c8d0eab1c584990ed6a3aa483ca.jpg",
+    "sha256": "14abbd6cd2b3cdca2eb2ac34dcf137e010dd017eeab4b3d4c24afab91dd30064",
+    "size": [
+      683,
+      1024
+    ],
+    "source_name": "98dd1c8d0eab1c584990ed6a3aa483ca.jpg"
+  },
+  {
+    "image_id": "holdout_009",
+    "path": "/workspace/fashion_data/raw/fashionpedia/images/test/a0157697c907f7fb762702ca3e9ab259.jpg",
+    "sha256": "934fde5e614a2cd618570780a5c89749fa27fc62b04c21b63cd32e5b8cd50a75",
+    "size": [
+      632,
+      1024
+    ],
+    "source_name": "a0157697c907f7fb762702ca3e9ab259.jpg"
+  },
+  {
+    "image_id": "holdout_010",
+    "path": "/workspace/fashion_data/raw/fashionpedia/images/test/0dc0c471a32907df9e6f3f85b1d1897b.jpg",
+    "sha256": "3c2cd00c53b8e4ef3b1ed7e34a98cf28481aa1304676cf8b1df16186e61c5a41",
+    "size": [
+      683,
+      1024
+    ],
+    "source_name": "0dc0c471a32907df9e6f3f85b1d1897b.jpg"
+  },
+  {
+    "image_id": "holdout_011",
+    "path": "/workspace/fashion_data/raw/fashionpedia/images/test/98d5cef48d91a5f387c24958fc11e024.jpg",
+    "sha256": "fb4a27cd3758c78b39b6b1eb901e5c754e1352e708cb207818bfe4fd9652cda2",
+    "size": [
+      681,
+      1024
+    ],
+    "source_name": "98d5cef48d91a5f387c24958fc11e024.jpg"
+  },
+  {
+    "image_id": "holdout_012",
+    "path": "/workspace/fashion_data/raw/fashionpedia/images/test/1894401d7f537c348a237a8043630521.jpg",
+    "sha256": "a57c5cabc08c9f230d0bdc8466cac0c0f854dc6205af3491673b2635347d710e",
+    "size": [
+      1024,
+      683
+    ],
+    "source_name": "1894401d7f537c348a237a8043630521.jpg"
+  },
+  {
+    "image_id": "holdout_013",
+    "path": "/workspace/fashion_data/raw/fashionpedia/images/test/11669ac85fec72431334f523bc53c45f.jpg",
+    "sha256": "d775c35eeacc113f5d779dbb4ed4dede11cda7ce995e0c99c73de13a32677953",
+    "size": [
+      683,
+      1024
+    ],
+    "source_name": "11669ac85fec72431334f523bc53c45f.jpg"
+  },
+  {
+    "image_id": "holdout_014",
+    "path": "/workspace/fashion_data/raw/fashionpedia/images/test/7bac23d7c40fc7475a4370255dd9a4da.jpg",
+    "sha256": "3df44c6651677afb43038273c9d578694cd4e015c0f234b807ddec2ed2210906",
+    "size": [
+      683,
+      1024
+    ],
+    "source_name": "7bac23d7c40fc7475a4370255dd9a4da.jpg"
+  },
+  {
+    "image_id": "holdout_015",
+    "path": "/workspace/fashion_data/raw/fashionpedia/images/test/6350070620d5693afb9a6d58943381f2.jpg",
+    "sha256": "89698503d8a1ad0d67a885702db018c2e91639bcbaaa5da8ac71f96ca5faa536",
+    "size": [
+      490,
+      1024
+    ],
+    "source_name": "6350070620d5693afb9a6d58943381f2.jpg"
+  },
+  {
+    "image_id": "holdout_016",
+    "path": "/workspace/fashion_data/raw/fashionpedia/images/test/a984744f0ebcaedd8c4d5aa1b9d54b5b.jpg",
+    "sha256": "03cda25d082b923d64352fdceb3ae14930f6aa563d2671c334f943174430651e",
+    "size": [
+      768,
+      1024
+    ],
+    "source_name": "a984744f0ebcaedd8c4d5aa1b9d54b5b.jpg"
+  },
+  {
+    "image_id": "holdout_017",
+    "path": "/workspace/fashion_data/raw/fashionpedia/images/test/81f67b4843e942a80831813776dc7e7c.jpg",
+    "sha256": "ddbd5b5b7ed7802b50a228a33495706773cb47f1c23195298a48a459cbfde336",
+    "size": [
+      1024,
+      768
+    ],
+    "source_name": "81f67b4843e942a80831813776dc7e7c.jpg"
+  },
+  {
+    "image_id": "holdout_018",
+    "path": "/workspace/fashion_data/raw/fashionpedia/images/test/cbe421f0f567af8dc6dee22ae239e846.jpg",
+    "sha256": "029a695093524f637144c48caf4384df4ae1c4f9cdf4131a27557754bba6c612",
+    "size": [
+      683,
+      1024
+    ],
+    "source_name": "cbe421f0f567af8dc6dee22ae239e846.jpg"
+  },
+  {
+    "image_id": "holdout_019",
+    "path": "/workspace/fashion_data/raw/fashionpedia/images/test/ccbb2abe14a148570d6cd791a97c8521.jpg",
+    "sha256": "20be195898618c3d4d1eae61384fdd06b0dd6f62ae774dc774dcc43710185069",
+    "size": [
+      634,
+      1024
+    ],
+    "source_name": "ccbb2abe14a148570d6cd791a97c8521.jpg"
+  },
+  {
+    "image_id": "holdout_020",
+    "path": "/workspace/fashion_data/raw/fashionpedia/images/test/c8110d529733b4e233fd393dd6f5f0c0.jpg",
+    "sha256": "5f99b8dc2d92618960df91f8e2f40b014b3050aacd0fc09d14b7aecb907a7bf9",
+    "size": [
+      681,
+      1024
+    ],
+    "source_name": "c8110d529733b4e233fd393dd6f5f0c0.jpg"
+  }
+]
