@@ -1,0 +1,30 @@
+{
+  "candidate_id": "PRD31_CANDIDATE_20261022_WHITE_SAM_REUSE",
+  "status": "ENTRY_LOCAL_CHECKED_GPU_STARTUP_PENDING",
+  "stable_fallback": "PRD31_CANDIDATE_20261021_WHITE_REUSE",
+  "default_entry": "scripts/run_candidate.py --mode white-sam",
+  "fallback_entry": "scripts/run_candidate.py --mode white",
+  "configuration_sha256": "f435d62677a6bbd9fe137cbdc2da4d765a3fecdc130fb45f1c8b70474493ce93",
+  "segmentation_checkpoint_sha256": "c5ba795225349b1c521aac0517ac7c493d9818dcc17d558ac4a3f6f8669452f0",
+  "production_sources": {
+    "src/fashion_multimodal_analysis/integration/quality_guards.py": "5252a7a2c52e81ee655a467fb45f924dd09bc6bfd82de5b26eb789f70589514a",
+    "src/fashion_multimodal_analysis/integration/region_semantics.py": "c21cedf6d9bb450eea8de9b5f9fa7ad45d55f463ea1240211484a936b8208255",
+    "src/fashion_multimodal_analysis/integration/model_backends.py": "0efd47f3a29e6c25d7396717cb4fc1b1540ed30c16df171a9ad7b93fade7f7ec",
+    "src/fashion_multimodal_analysis/integration/pipeline.py": "8c6e8b3278cc94fdbc934defbd7f51aa5081dabb1d767a03c9160854dc22da68"
+  },
+  "verified_sam_helpers_sha256": {
+    "white_reuse.py": "0eea8dd5fcc29eaefd89be13fabf44156820c59b8a4f30e0e4ffe486fe00c8e7",
+    "sam_vision_reuse.py": "380d8c28b0f50e319a81105d58ae8d491252abfc42aa085dd10edd50cc90ed0f",
+    "sam_reuse_logic.py": "bdb2dfdd725ca613ff6bf51e391e1640dfc741cf971d91adcd35c1c07745fc84"
+  },
+  "prior_gpu_evidence": "run_20261021_092427_361331",
+  "prior_fixed24_mean_ms": 3590.7850095963418,
+  "prior_same_run_reduction_percent": 15.952647546195209,
+  "standalone_entry_GPU_check_pending": true,
+  "new_candidate_sample_selection_GPU_host_pending": true,
+  "compile_screen_GPU_pending": true,
+  "compiled_model_is_delivery_default": false,
+  "production_installed": false,
+  "new_training": false,
+  "closed_direction": "manual rectangular ROI and boundary constraint input variants"
+}

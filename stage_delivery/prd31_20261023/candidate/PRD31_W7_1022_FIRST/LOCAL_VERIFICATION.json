@@ -1,0 +1,16 @@
+{
+  "date": "2026-10-22",
+  "status": "LOCAL_READY_GPU_PENDING",
+  "cpu_standin_tests": {"passed": 11, "failed": 0, "real_torch_cuda": false},
+  "cli_help_checks": {
+    "passed": 5,
+    "scripts": ["run_1022.py", "run_candidate.py", "collect_new_regression.py", "core_compile_probe.py", "run_new_regression.py"]
+  },
+  "gpu_entry_initialization": "PENDING",
+  "new_image_selection_and_regression": "PENDING",
+  "compiled_core_probe": "PENDING",
+  "new_sample_count": "TARGET_20_NOT_YET_SELECTED",
+  "formal_accuracy": "NOT_EVALUATED",
+  "production_install": false,
+  "notes": "Local tests use CPU stand-ins. They do not establish actual CUDA/compiler compatibility or new performance results."
+}
