@@ -11,12 +11,11 @@ from dataclasses import dataclass, field
 from typing import Any
 
 from fashion_multimodal_analysis.evaluation.protocol import original_box, valid_box
-from fashion_multimodal_analysis.integration.quality_guards import overlap_review_flags
 
 
 @dataclass
 class GarmentROI:
-    """保存单个预测服饰的ID、类别、置信度、原图xyxy框和整图mask。"""
+    """保存 GarmentROI 的数据/运行职责。"""
 
     instance_id: str
     category: str
@@ -81,8 +80,11 @@ def roi_images(image: Any, roi: Any) -> tuple[Any, ...]:
     )
 
 
+from fashion_multimodal_analysis.integration.quality_guards import overlap_review_flags
+
+
 class FashionPipeline:
-    """按服饰实例串联分割、区域定位及属性后端，隔离并记录单步失败。
+    """保存 FashionPipeline 的数据/运行职责。
 
     Attributes:
         backend: backend。
@@ -156,12 +158,8 @@ class FashionPipeline:
         # 标记重叠供复核；叠穿常有框重叠，不能自动删除或合并。
         review_flags = overlap_review_flags(rois)
         for roi in rois:
-            item = {
-                "roi": roi,
-                "regions": {},
-                "attributes": {},
-                "review_flags": review_flags[roi.instance_id],
-            }
+            item = {"roi": roi, "regions": {}, "attributes": {},
+                    "review_flags": review_flags[roi.instance_id]}
             for region in queries:
                 try:
                     prediction, elapsed = self.backend.ground(image, roi, region)
@@ -193,23 +191,16 @@ class FashionPipeline:
                 )
                 item["attributes"] = predictions
                 sleeve = predictions.get("sleeve_length", {})
-                if (
-                    sleeve.get("status") == "predicted"
-                    and sleeve.get("label") == "sleeveless"
-                ):
+                if sleeve.get("status") == "predicted" and sleeve.get("label") == "sleeveless":
                     # 无袖本身也是模型预测，不能据此生成“无袖口”的真值。
                     # 将 cuff missed 与真实漏检区分，交给人工确认适用性。
-                    item["review_flags"].append(
-                        {
-                            "reason": "cuff_applicability_requires_review",
-                            "predicted_sleeve_length": "sleeveless",
-                            "cuff_status": item["regions"]
-                            .get("cuff", {})
-                            .get("status"),
-                            "automatic_action": "none",
-                            "note": "Do not count cuff missed as a confirmed miss before sleeve applicability review.",
-                        }
-                    )
+                    item["review_flags"].append({
+                        "reason": "cuff_applicability_requires_review",
+                        "predicted_sleeve_length": "sleeveless",
+                        "cuff_status": item["regions"].get("cuff", {}).get("status"),
+                        "automatic_action": "none",
+                        "note": "Do not count cuff missed as a confirmed miss before sleeve applicability review.",
+                    })
                 result["timings"].append(
                     {
                         "module": "attributes",
@@ -236,15 +227,8 @@ class FashionPipeline:
                 )
             # 默认不启用候选规则；只有显式配置开启时改变交付状态。
             # 属性已经计算完毕，再检查跨模块矛盾，防止伪造 GT 或覆盖类别。
-            if getattr(self.backend, "config", {}).get(
-                "semantic_consistency_review", False
-            ):
-                from fashion_multimodal_analysis.integration.semantic_consistency import (
-                    apply_consistency_review,
-                )
-
-                item["review_flags"].extend(
-                    apply_consistency_review(item["regions"], item["attributes"])
-                )
+            if getattr(self.backend, "config", {}).get("semantic_consistency_review", False):
+                from fashion_multimodal_analysis.integration.semantic_consistency import apply_consistency_review
+                item["review_flags"].extend(apply_consistency_review(item["regions"], item["attributes"]))
             result["instances"].append(item)
         return result

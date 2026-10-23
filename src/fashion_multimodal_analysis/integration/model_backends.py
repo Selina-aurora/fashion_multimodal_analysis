@@ -25,15 +25,15 @@ from fashion_multimodal_analysis.integration.pipeline import (
     crop_bounds,
     roi_images,
 )
-from fashion_multimodal_analysis.integration.quality_guards import (
-    LOCAL_REGIONS,
-    constrain_local_mask,
-    proposal_area_ratio,
-)
 from fashion_multimodal_analysis.integration.region_semantics import (
     REGION_PROMPTS,
     phrase_matches,
     supports_region,
+)
+
+
+from fashion_multimodal_analysis.integration.quality_guards import (
+    LOCAL_REGIONS, constrain_local_mask, proposal_area_ratio,
 )
 
 
@@ -236,7 +236,6 @@ class ModelBackends:
         Returns:
             本步骤计算或解析得到的结果；函数体保留了具体结构和空值处理规则。
         """
-
         def infer() -> dict[str, Any]:
             """推理。
 
@@ -262,7 +261,6 @@ class ModelBackends:
             from fashion_multimodal_analysis.grounding.refinement.run_shoulder_waist_pattern_groundingdino_refinement_v1 import (
                 run_grounding_dino,
             )
-
             crop, garment_mask, origin = roi_images(image, roi)
             isolated = Image.composite(
                 crop, Image.new("RGB", crop.size, "white"), garment_mask
@@ -284,12 +282,8 @@ class ModelBackends:
                 if valid_box(d["box"]) and math.isfinite(d["score"])
             ]
             if strict_regions:
-                rejected = [
-                    d for d in detections if not phrase_matches(region, d["label"])
-                ]
-                detections = [
-                    d for d in detections if phrase_matches(region, d["label"])
-                ]
+                rejected = [d for d in detections if not phrase_matches(region, d["label"])]
+                detections = [d for d in detections if phrase_matches(region, d["label"])]
                 if not detections and rejected:
                     return {
                         "status": "rejected_wrong_phrase",
@@ -317,28 +311,21 @@ class ModelBackends:
                 try:
                     candidate_box = crop_bounds(candidate["box"], crop.size)
                 except ValueError:
-                    geometry_rejections.append(
-                        {"reason": "outside_crop", "proposal": candidate}
-                    )
+                    geometry_rejections.append({"reason": "outside_crop", "proposal": candidate})
                     continue
                 area_ratio = proposal_area_ratio(candidate_box, crop.size)
                 if strict_regions and region in LOCAL_REGIONS and area_ratio > limit:
-                    geometry_rejections.append(
-                        {
-                            "reason": "local_region_covers_whole_garment",
-                            "crop_area_ratio": float(area_ratio),
-                            "proposal": candidate,
-                        }
-                    )
+                    geometry_rejections.append({
+                        "reason": "local_region_covers_whole_garment",
+                        "crop_area_ratio": float(area_ratio), "proposal": candidate,
+                    })
                     continue
                 chosen = candidate, candidate_box
                 break
             if chosen is None:
                 return {
-                    "status": "rejected_region_geometry",
-                    "target_region": region,
-                    "bbox": None,
-                    "mask": None,
+                    "status": "rejected_region_geometry", "target_region": region,
+                    "bbox": None, "mask": None,
                     "rejected_proposals": geometry_rejections,
                     "semantic_review_status": "pending",
                     "semantic_note": "Rejected geometry is not an absence label or a correct detection.",
@@ -384,12 +371,8 @@ class ModelBackends:
                 "bbox": original_box(refined, origin),
                 "mask": full,
                 "proposal_bbox": original_box(local_box, origin),
-                "proposal_crop_area_ratio": float(
-                    proposal_area_ratio(local_box, crop.size)
-                ),
-                "local_mask_constrained_to_proposal": bool(
-                    strict_regions and region in LOCAL_REGIONS
-                ),
+                "proposal_crop_area_ratio": float(proposal_area_ratio(local_box, crop.size)),
+                "local_mask_constrained_to_proposal": bool(strict_regions and region in LOCAL_REGIONS),
                 "sam_pixels_removed_outside_proposal": int(clipped_pixels),
                 "geometry_rejections": geometry_rejections,
                 "sam_score": float(sam_score),
@@ -513,43 +496,26 @@ class ModelBackends:
                         )
                         # 仅新候选启用；默认和 controlled GT 路径保持原行为。
                         # 保存原裁剪预测，与保留皮肤/边界上下文的原图裁剪配对。
-                        if not controlled and self.config.get(
-                            "neckline_context_pair", False
-                        ):
+                        if not controlled and self.config.get("neckline_context_pair", False):
                             from fashion_multimodal_analysis.integration.attribute_context import (
-                                neckline_context_bounds,
-                                paired_neckline_result,
+                                neckline_context_bounds, paired_neckline_result,
                             )
-
                             context_bounds = neckline_context_bounds(
-                                collar["bbox"],
-                                roi.bbox,
-                                image.size,
-                                float(
-                                    self.config.get("neckline_context_expansion", 2.0)
-                                ),
+                                collar["bbox"], roi.bbox, image.size,
+                                float(self.config.get("neckline_context_expansion", 2.0)),
                             )
                             context_feature = self.pattern.encode_image(
-                                image.crop(context_bounds),
-                                self.clip_model,
-                                self.clip_processor,
-                                self.device,
+                                image.crop(context_bounds), self.clip_model,
+                                self.clip_processor, self.device,
                             )
                             legacy_pred = self.pattern.classify_with_prototypes(
-                                feature,
-                                *self.design_proto["neckline"],
-                                self.clip_model,
+                                feature, *self.design_proto["neckline"], self.clip_model,
                             )
                             context_pred = self.pattern.classify_with_prototypes(
-                                context_feature,
-                                *self.design_proto["neckline"],
-                                self.clip_model,
+                                context_feature, *self.design_proto["neckline"], self.clip_model,
                             )
                             result[name] = paired_neckline_result(
-                                legacy_pred,
-                                context_pred,
-                                bounds,
-                                context_bounds,
+                                legacy_pred, context_pred, bounds, context_bounds,
                             )
                             continue
                     elif feature is None:

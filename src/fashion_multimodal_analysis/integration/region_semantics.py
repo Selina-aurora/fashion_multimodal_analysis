@@ -3,7 +3,6 @@
 These guards reject known wrong object phrases. They do not establish that a
 returned region is visually correct or that a missed region is absent.
 """
-
 import re
 
 REGION_PROMPTS = {
@@ -30,7 +29,7 @@ UPPER = {"top", "outerwear", "dress"}
 CLOTHING = UPPER | {"pants", "skirt"}
 
 
-def supports_region(category: str, region: str) -> bool:
+def supports_region(category, region):
     """Route structural clothing queries; pattern/detail queries remain universal."""
     if region in {"collar", "cuff", "shoulder"}:
         return category in UPPER
@@ -39,7 +38,7 @@ def supports_region(category: str, region: str) -> bool:
     return region in {"pattern", "decoration"}
 
 
-def phrase_matches(region: str, label: str) -> bool:
+def phrase_matches(region, label):
     """Require a target word instead of accepting a generic 'garment' phrase."""
     tokens = set(re.findall(r"[a-z]+", str(label).lower()))
     tokens |= {token[:-1] for token in list(tokens) if token.endswith("s")}
