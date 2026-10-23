@@ -1,0 +1,79 @@
+[
+  {
+    "path": "src/fashion_multimodal_analysis/integration/quality_guards.py",
+    "sha256": "5252a7a2c52e81ee655a467fb45f924dd09bc6bfd82de5b26eb789f70589514a",
+    "source": "GitHub archive/runtime_snapshot_20261014 at 10af06f000d5903be37109e76a00d5dbe2271116",
+    "github_active_source_changed": true,
+    "prior_github_sha256": "ecfe4125756cb8640709817750da85c7db4f6251994b6f9f4779a2e6cc7529c5"
+  },
+  {
+    "path": "src/fashion_multimodal_analysis/integration/region_semantics.py",
+    "sha256": "c21cedf6d9bb450eea8de9b5f9fa7ad45d55f463ea1240211484a936b8208255",
+    "source": "GitHub archive/runtime_snapshot_20261014 at 10af06f000d5903be37109e76a00d5dbe2271116",
+    "github_active_source_changed": true,
+    "prior_github_sha256": "dd4ca9430bfe7e817c757b7e2d0a5b968f154b3171bb4ab60c391fc7dc0ab011"
+  },
+  {
+    "path": "src/fashion_multimodal_analysis/integration/model_backends.py",
+    "sha256": "0efd47f3a29e6c25d7396717cb4fc1b1540ed30c16df171a9ad7b93fade7f7ec",
+    "source": "PRD31_TIMING_SOURCE_20261020(1).zip, original GPU source export",
+    "github_active_source_changed": true,
+    "prior_github_sha256": "075b8ef6007601987c046c1aeebc2ffd04fdc4a0e90dcacad59c6c8d7cdbabb1"
+  },
+  {
+    "path": "src/fashion_multimodal_analysis/integration/pipeline.py",
+    "sha256": "8c6e8b3278cc94fdbc934defbd7f51aa5081dabb1d767a03c9160854dc22da68",
+    "source": "PRD31_TIMING_SOURCE_20261020(1).zip, original GPU source export",
+    "github_active_source_changed": true,
+    "prior_github_sha256": "2bd02cbfaa4f98e3b901add17ce0f4c1280cffd41d4a47c13c208b3ba535b9dd"
+  },
+  {
+    "path": "src/fashion_multimodal_analysis/attributes/color/run_primary_color_baseline_v1.py",
+    "sha256": "1f3fdd371603a6d32b2803a6d3d71a62aa0a605fc3a4236e53e6cbf141274cb9",
+    "source": "GitHub active source at 10af06f000d5903be37109e76a00d5dbe2271116",
+    "github_active_source_changed": false,
+    "prior_github_sha256": "1f3fdd371603a6d32b2803a6d3d71a62aa0a605fc3a4236e53e6cbf141274cb9"
+  },
+  {
+    "path": "src/fashion_multimodal_analysis/attributes/pattern/run_pattern_hierarchical_v3.py",
+    "sha256": "4fe0c50478e60e5639a05d1b8c64abe7358999af23a133944ea640f99edb41f0",
+    "source": "GitHub active source at 10af06f000d5903be37109e76a00d5dbe2271116",
+    "github_active_source_changed": false,
+    "prior_github_sha256": "4fe0c50478e60e5639a05d1b8c64abe7358999af23a133944ea640f99edb41f0"
+  },
+  {
+    "path": "src/fashion_multimodal_analysis/attributes/design/run_design_attribute_labels_v1.py",
+    "sha256": "c7e2a14d333eda8318ef5c633f4ee12f283f16cfbada035370c2d30cdccdfbe9",
+    "source": "GitHub active source at 10af06f000d5903be37109e76a00d5dbe2271116",
+    "github_active_source_changed": false,
+    "prior_github_sha256": "c7e2a14d333eda8318ef5c633f4ee12f283f16cfbada035370c2d30cdccdfbe9"
+  },
+  {
+    "path": "src/fashion_multimodal_analysis/integration/attribute_context.py",
+    "sha256": "0d589b6361ffc85dda4ba8daf6277c17eeaeab39768e8bb5bacc215bbf2faf80",
+    "source": "GitHub archive/runtime_snapshot_20261014 at 10af06f000d5903be37109e76a00d5dbe2271116",
+    "github_active_source_changed": true,
+    "prior_github_sha256": "f62421ddf8de72a6bd3f22f2b5f70b39ef9b6f36d8bb8c2ad6ac6ac1054bc9f7"
+  },
+  {
+    "path": "src/fashion_multimodal_analysis/integration/semantic_consistency.py",
+    "sha256": "4aaa4c17604d272a557c1aa14a9acd6d1138a5129ec1a94ded622046acc8a49c",
+    "source": "GitHub archive/runtime_snapshot_20261014 at 10af06f000d5903be37109e76a00d5dbe2271116",
+    "github_active_source_changed": true,
+    "prior_github_sha256": "4ab901b5e577a4b3526622ce61b17f6eb500c43dc269d49425e6de2cfd1a1122"
+  },
+  {
+    "path": "src/fashion_multimodal_analysis/grounding/refinement/evaluate_sam_refinement_9case.py",
+    "sha256": "82286150f940db3816c62852fd4c6a9743a315151c0bf124835cedb409e810f4",
+    "source": "GitHub active source at 10af06f000d5903be37109e76a00d5dbe2271116",
+    "github_active_source_changed": false,
+    "prior_github_sha256": "82286150f940db3816c62852fd4c6a9743a315151c0bf124835cedb409e810f4"
+  },
+  {
+    "path": "src/fashion_multimodal_analysis/grounding/refinement/run_shoulder_waist_pattern_groundingdino_refinement_v1.py",
+    "sha256": "2eb26a63aa77cae8d077dac07290ccf80c409d61d47c5cc6a257752a97cbeec0",
+    "source": "GitHub active source at 10af06f000d5903be37109e76a00d5dbe2271116",
+    "github_active_source_changed": false,
+    "prior_github_sha256": "2eb26a63aa77cae8d077dac07290ccf80c409d61d47c5cc6a257752a97cbeec0"
+  }
+]
