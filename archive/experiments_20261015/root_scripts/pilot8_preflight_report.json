@@ -1,0 +1,78 @@
+{
+  "status": "PREFLIGHT_PASSED_CORE400_PENDING",
+  "source": "/workspace/sleeve_pilot8_controlled_20261012",
+  "checks": {
+    "train_csv": {
+      "path": "/workspace/fashion_multimodal_analysis/configs/prd_8class_train_v5_balanced150_20261008.csv",
+      "found": "e8c277055efe4d042b4353bf2d4553bddddc7706eead9398f07f5efcd90bb38f",
+      "expected": "e8c277055efe4d042b4353bf2d4553bddddc7706eead9398f07f5efcd90bb38f",
+      "pass": true
+    },
+    "val_csv": {
+      "path": "/workspace/fashion_multimodal_analysis/configs/prd_8class_val_v2_full_targets.csv",
+      "found": "39141f545ea5512d16ed074788b6f98474b33baff111d3b663ec0ffcc4c40b93",
+      "expected": "39141f545ea5512d16ed074788b6f98474b33baff111d3b663ec0ffcc4c40b93",
+      "pass": true
+    },
+    "pilot8_unique": true,
+    "old_split_record_disjoint": true,
+    "old_split_image_sha256_disjoint": true,
+    "all_source_images_verified": true,
+    "image_detail": [
+      {
+        "record_id": "v5_train_00415",
+        "path": "/workspace/fashion_data/raw/fashionpedia/images/test/28f3172e9e96bb17c1f9ec3697b175bc.jpg",
+        "sha256_ok": true,
+        "exists": true
+      },
+      {
+        "record_id": "v5_train_00484",
+        "path": "/workspace/fashion_data/raw/fashionpedia/images/test/3109762baa95cfc50b5a454db19d4143.jpg",
+        "sha256_ok": true,
+        "exists": true
+      },
+      {
+        "record_id": "v5_train_00533",
+        "path": "/workspace/fashion_data/raw/fashionpedia/images/test/3696956aa43b2641bdb8ee6fd0ea213f.jpg",
+        "sha256_ok": true,
+        "exists": true
+      },
+      {
+        "record_id": "v5_train_01055",
+        "path": "/workspace/fashion_data/raw/fashionpedia/images/test/7c3c0cd188f831a4533f8aa2f5902b64.jpg",
+        "sha256_ok": true,
+        "exists": true
+      },
+      {
+        "record_id": "v5_train_01155",
+        "path": "/workspace/fashion_data/raw/fashionpedia/images/test/88383c53ef2404f1596e41e45ebe5ddd.jpg",
+        "sha256_ok": true,
+        "exists": true
+      },
+      {
+        "record_id": "v5_train_01230",
+        "path": "/workspace/fashion_data/raw/fashionpedia/images/test/94351b1b66b1e37756eef9206883dd83.jpg",
+        "sha256_ok": true,
+        "exists": true
+      },
+      {
+        "record_id": "v5_train_01445",
+        "path": "/workspace/fashion_data/raw/fashionpedia/images/test/abe7f00720ada9f255b8d1355579dc0e.jpg",
+        "sha256_ok": true,
+        "exists": true
+      },
+      {
+        "record_id": "v5_train_01508",
+        "path": "/workspace/fashion_data/raw/fashionpedia/images/test/b22ea58665d776f693c9f13635499460.jpg",
+        "sha256_ok": true,
+        "exists": true
+      }
+    ],
+    "no_unreviewed_records": true,
+    "core400_overlap_checked": false,
+    "core400_overlap_free": null
+  },
+  "safe_to_automerge": false,
+  "training_executed": false,
+  "note": "Passing these checks does not establish model gain, valid Core400 coverage or experimental reproducibility. No data were modified."
+}

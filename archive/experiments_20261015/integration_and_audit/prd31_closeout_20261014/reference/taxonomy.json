@@ -1,0 +1,73 @@
+{
+  "primary_color": [
+    "black",
+    "white",
+    "gray",
+    "red",
+    "orange",
+    "yellow",
+    "green",
+    "blue",
+    "purple",
+    "pink",
+    "brown",
+    "beige"
+  ],
+  "pattern": [
+    "solid",
+    "striped",
+    "checked_plaid",
+    "polka_dot",
+    "floral",
+    "animal_print",
+    "geometric_abstract",
+    "graphic_logo",
+    "camouflage",
+    "other_pattern"
+  ],
+  "sleeve_length": [
+    "sleeveless",
+    "cap",
+    "short",
+    "elbow",
+    "three_quarter",
+    "long"
+  ],
+  "neckline": [
+    "crew",
+    "v_neck",
+    "round_scoop",
+    "square",
+    "boat",
+    "halter",
+    "off_shoulder",
+    "one_shoulder",
+    "turtleneck",
+    "mock_neck",
+    "polo",
+    "shirt_collar",
+    "hooded",
+    "other"
+  ],
+  "silhouette_fit": [
+    "slim_fitted",
+    "regular_straight",
+    "loose_oversized",
+    "slim_tapered",
+    "straight",
+    "wide_leg",
+    "flared",
+    "a_line",
+    "fitted"
+  ],
+  "fashion_style": [
+    "casual",
+    "formal",
+    "sporty",
+    "streetwear",
+    "elegant",
+    "minimalist",
+    "vintage",
+    "romantic"
+  ]
+}

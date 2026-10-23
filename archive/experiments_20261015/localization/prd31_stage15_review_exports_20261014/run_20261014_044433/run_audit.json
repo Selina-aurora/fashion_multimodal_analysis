@@ -1,0 +1,24 @@
+{
+  "status": "STAGE15_REVIEW_ASSETS_EXPORTED",
+  "project_files_modified": false,
+  "formal_semantic_accuracy": false,
+  "selection": {
+    "reference_cases": 12,
+    "candidate_count": 24,
+    "unique_val_images": 32,
+    "path_exclusion_only": true
+  },
+  "cases": 12,
+  "region_review_tasks": 48,
+  "model_status_distribution": {
+    "detected": 33,
+    "rejected_region_geometry": 8,
+    "missed": 4,
+    "empty_mask": 3
+  },
+  "replay_status_matches_stage14": 48,
+  "replay_status_mismatches": 0,
+  "human_reviews_completed": 0,
+  "accuracy_acceptance": false,
+  "note": "Model predictions are not human GT. Input selection is validation-manifest/development-only and only top/dress four region types."
+}

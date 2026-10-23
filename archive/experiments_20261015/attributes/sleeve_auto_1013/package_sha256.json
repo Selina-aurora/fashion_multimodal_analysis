@@ -1,0 +1,11 @@
+{
+  "README.md": "6101a70d47807902e4a72bb81ad7ccd48dc53f4b1ad26642be236b57b7e332e7",
+  "core400_sha256.txt": "b8eeac8d74f148f79d0db440042dcb29ffded223f60fe71873285d4b765cf3c4",
+  "evaluation_labels.json": "cb34eff7920e99c6803546afc4aa29c5ae3c0a1adacd313ecd0a2619cc8cef15",
+  "geometry.py": "a934f0cf4aaaeee4b8b223d8926d98c4eac6e59fa589530fbb10fe5f3495df4b",
+  "images.json": "cd7c8a2930069f9b7595b82e7fbae332da9e8926daddd193e7025a84fbb42bf3",
+  "pose_worker.py": "77f4bf75efb7607ae0c02b625ec5f1219f6f7c64195004d142e5657dd66bd043",
+  "reference_config.json": "8b5bd5191fde2609565d71c01db6c4af3b94d4c5cbe1af51265344e79c678d77",
+  "run.py": "459823f075384447c20cd1a5c3a6f773b49b5512ce4c352af71b44c593caf38c",
+  "test_geometry.py": "4a047fb930ec8e7180f8e1678c883c2621849fc412520b6966a392515311961c"
+}

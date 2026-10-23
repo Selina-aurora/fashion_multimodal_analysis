@@ -1,0 +1,1018 @@
+{
+  "supervised_head": {
+    "train": [
+      {
+        "record_id": "v5_train_01994",
+        "truth": "cap",
+        "predicted": "cap",
+        "score": 0.9018948674201965
+      },
+      {
+        "record_id": "v5_train_01373",
+        "truth": "cap",
+        "predicted": "cap",
+        "score": 0.8938137292861938
+      },
+      {
+        "record_id": "v5_train_01779",
+        "truth": "cap",
+        "predicted": "cap",
+        "score": 0.9371168613433838
+      },
+      {
+        "record_id": "v5_train_00474",
+        "truth": "short",
+        "predicted": "short",
+        "score": 0.8119964003562927
+      },
+      {
+        "record_id": "v5_train_01252",
+        "truth": "short",
+        "predicted": "short",
+        "score": 0.8067351579666138
+      },
+      {
+        "record_id": "v5_train_00276",
+        "truth": "short",
+        "predicted": "short",
+        "score": 0.7922113537788391
+      },
+      {
+        "record_id": "v5_train_00246",
+        "truth": "short",
+        "predicted": "short",
+        "score": 0.699613094329834
+      },
+      {
+        "record_id": "v5_train_00138",
+        "truth": "short",
+        "predicted": "short",
+        "score": 0.8107143640518188
+      },
+      {
+        "record_id": "v5_train_00425",
+        "truth": "short",
+        "predicted": "short",
+        "score": 0.7963494658470154
+      },
+      {
+        "record_id": "v5_train_00256",
+        "truth": "short",
+        "predicted": "short",
+        "score": 0.8949494957923889
+      },
+      {
+        "record_id": "v5_train_01335",
+        "truth": "short",
+        "predicted": "short",
+        "score": 0.7470740079879761
+      },
+      {
+        "record_id": "v5_train_00909",
+        "truth": "short",
+        "predicted": "short",
+        "score": 0.832741379737854
+      },
+      {
+        "record_id": "v5_train_00442",
+        "truth": "elbow",
+        "predicted": "elbow",
+        "score": 0.875909686088562
+      },
+      {
+        "record_id": "v5_train_00933",
+        "truth": "elbow",
+        "predicted": "elbow",
+        "score": 0.8035634756088257
+      },
+      {
+        "record_id": "v5_train_00939",
+        "truth": "elbow",
+        "predicted": "elbow",
+        "score": 0.847929060459137
+      },
+      {
+        "record_id": "v5_train_00733",
+        "truth": "elbow",
+        "predicted": "elbow",
+        "score": 0.8766041994094849
+      },
+      {
+        "record_id": "v5_train_01919",
+        "truth": "elbow",
+        "predicted": "elbow",
+        "score": 0.9215932488441467
+      },
+      {
+        "record_id": "v5_train_00996",
+        "truth": "elbow",
+        "predicted": "elbow",
+        "score": 0.8510560989379883
+      },
+      {
+        "record_id": "v5_train_01298",
+        "truth": "three_quarter",
+        "predicted": "three_quarter",
+        "score": 0.8924852609634399
+      },
+      {
+        "record_id": "v5_train_01963",
+        "truth": "three_quarter",
+        "predicted": "three_quarter",
+        "score": 0.9131394028663635
+      },
+      {
+        "record_id": "v5_train_01592",
+        "truth": "long",
+        "predicted": "long",
+        "score": 0.9175161719322205
+      },
+      {
+        "record_id": "v5_train_01453",
+        "truth": "three_quarter",
+        "predicted": "three_quarter",
+        "score": 0.8708903789520264
+      },
+      {
+        "record_id": "v5_train_00569",
+        "truth": "long",
+        "predicted": "long",
+        "score": 0.7970593571662903
+      },
+      {
+        "record_id": "v5_train_01662",
+        "truth": "long",
+        "predicted": "long",
+        "score": 0.9265906810760498
+      },
+      {
+        "record_id": "v5_train_00521",
+        "truth": "long",
+        "predicted": "long",
+        "score": 0.8647891879081726
+      },
+      {
+        "record_id": "v5_train_01317",
+        "truth": "long",
+        "predicted": "long",
+        "score": 0.8491227030754089
+      },
+      {
+        "record_id": "v5_train_00326",
+        "truth": "long",
+        "predicted": "long",
+        "score": 0.8531330227851868
+      },
+      {
+        "record_id": "df2_targeted150_20261008_00228",
+        "truth": "sleeveless",
+        "predicted": "sleeveless",
+        "score": 0.9202993512153625
+      },
+      {
+        "record_id": "df2_targeted150_20261008_00186",
+        "truth": "sleeveless",
+        "predicted": "sleeveless",
+        "score": 0.8668174147605896
+      },
+      {
+        "record_id": "df2_targeted150_20261008_00188",
+        "truth": "sleeveless",
+        "predicted": "sleeveless",
+        "score": 0.903213381767273
+      },
+      {
+        "record_id": "v5_train_00073",
+        "truth": "sleeveless",
+        "predicted": "sleeveless",
+        "score": 0.8208682537078857
+      },
+      {
+        "record_id": "df2_balanced150_20261008_00056",
+        "truth": "sleeveless",
+        "predicted": "sleeveless",
+        "score": 0.8118069171905518
+      }
+    ],
+    "dev": [
+      {
+        "record_id": "v5_train_01295",
+        "truth": "cap",
+        "predicted": "three_quarter",
+        "score": 0.43847018480300903
+      },
+      {
+        "record_id": "v5_train_00642",
+        "truth": "cap",
+        "predicted": "three_quarter",
+        "score": 0.30569618940353394
+      },
+      {
+        "record_id": "v5_train_01075",
+        "truth": "short",
+        "predicted": "long",
+        "score": 0.26842746138572693
+      },
+      {
+        "record_id": "v5_train_02036",
+        "truth": "short",
+        "predicted": "short",
+        "score": 0.4961460530757904
+      },
+      {
+        "record_id": "v5_train_01019",
+        "truth": "elbow",
+        "predicted": "three_quarter",
+        "score": 0.32116246223449707
+      },
+      {
+        "record_id": "v5_train_00714",
+        "truth": "elbow",
+        "predicted": "elbow",
+        "score": 0.6901743412017822
+      },
+      {
+        "record_id": "v5_train_01934",
+        "truth": "three_quarter",
+        "predicted": "three_quarter",
+        "score": 0.25028011202812195
+      },
+      {
+        "record_id": "v5_train_00735",
+        "truth": "three_quarter",
+        "predicted": "short",
+        "score": 0.5107272863388062
+      },
+      {
+        "record_id": "v5_train_01831",
+        "truth": "long",
+        "predicted": "long",
+        "score": 0.4781758189201355
+      },
+      {
+        "record_id": "v5_train_00701",
+        "truth": "long",
+        "predicted": "long",
+        "score": 0.6902229189872742
+      },
+      {
+        "record_id": "df2_targeted150_20261008_00271",
+        "truth": "sleeveless",
+        "predicted": "sleeveless",
+        "score": 0.8140002489089966
+      },
+      {
+        "record_id": "df2_balanced150_20261008_00029",
+        "truth": "sleeveless",
+        "predicted": "sleeveless",
+        "score": 0.3662019670009613
+      }
+    ],
+    "diagnostic_gt_roi": [
+      {
+        "record_id": "v5_validation_00014",
+        "truth": "short",
+        "predicted": "sleeveless",
+        "score": 0.28951379656791687,
+        "target_status": "GT_ROI"
+      },
+      {
+        "record_id": "v5_validation_00027",
+        "truth": "long",
+        "predicted": "short",
+        "score": 0.28352785110473633,
+        "target_status": "GT_ROI"
+      },
+      {
+        "record_id": "v5_validation_00016",
+        "truth": "short",
+        "predicted": "sleeveless",
+        "score": 0.3679881989955902,
+        "target_status": "GT_ROI"
+      },
+      {
+        "record_id": "v5_validation_00046",
+        "truth": "elbow",
+        "predicted": "elbow",
+        "score": 0.5237220525741577,
+        "target_status": "GT_ROI"
+      },
+      {
+        "record_id": "v5_validation_00053",
+        "truth": "unknown",
+        "predicted": "sleeveless",
+        "score": 0.34967729449272156,
+        "target_status": "GT_ROI"
+      },
+      {
+        "record_id": "v5_validation_00035",
+        "truth": "short",
+        "predicted": "elbow",
+        "score": 0.2689593434333801,
+        "target_status": "GT_ROI"
+      },
+      {
+        "record_id": "v5_validation_00013",
+        "truth": "unknown",
+        "predicted": "cap",
+        "score": 0.514943540096283,
+        "target_status": "GT_ROI"
+      },
+      {
+        "record_id": "v5_validation_00018",
+        "truth": "three_quarter",
+        "predicted": "sleeveless",
+        "score": 0.6874204277992249,
+        "target_status": "GT_ROI"
+      },
+      {
+        "record_id": "v5_validation_00024",
+        "truth": "three_quarter",
+        "predicted": "sleeveless",
+        "score": 0.6177946925163269,
+        "target_status": "GT_ROI"
+      },
+      {
+        "record_id": "v5_validation_00036",
+        "truth": "long",
+        "predicted": "cap",
+        "score": 0.2964901924133301,
+        "target_status": "GT_ROI"
+      },
+      {
+        "record_id": "v5_validation_00062",
+        "truth": "long",
+        "predicted": "long",
+        "score": 0.5424144268035889,
+        "target_status": "GT_ROI"
+      },
+      {
+        "record_id": "v5_validation_00064",
+        "truth": "long",
+        "predicted": "long",
+        "score": 0.3534146547317505,
+        "target_status": "GT_ROI"
+      },
+      {
+        "record_id": "v5_validation_00031",
+        "truth": "long",
+        "predicted": "three_quarter",
+        "score": 0.370317280292511,
+        "target_status": "GT_ROI"
+      },
+      {
+        "record_id": "v5_validation_00006",
+        "truth": "sleeveless",
+        "predicted": "sleeveless",
+        "score": 0.5099273324012756,
+        "target_status": "GT_ROI"
+      },
+      {
+        "record_id": "v5_validation_00005",
+        "truth": "short",
+        "predicted": "short",
+        "score": 0.4546763300895691,
+        "target_status": "GT_ROI"
+      },
+      {
+        "record_id": "v5_validation_00072",
+        "truth": "sleeveless",
+        "predicted": "short",
+        "score": 0.3729993402957916,
+        "target_status": "GT_ROI"
+      },
+      {
+        "record_id": "v5_validation_00085",
+        "truth": "unknown",
+        "predicted": "long",
+        "score": 0.29355481266975403,
+        "target_status": "GT_ROI"
+      },
+      {
+        "record_id": "v5_validation_00081",
+        "truth": "sleeveless",
+        "predicted": "long",
+        "score": 0.3517453670501709,
+        "target_status": "GT_ROI"
+      }
+    ],
+    "diagnostic_predicted_roi": [
+      {
+        "record_id": "v5_validation_00014",
+        "truth": "short",
+        "predicted": "sleeveless",
+        "score": 0.3198140859603882,
+        "target_status": "MATCHED_PREDICTED_TARGET"
+      },
+      {
+        "record_id": "v5_validation_00027",
+        "truth": "long",
+        "predicted": "elbow",
+        "score": 0.36017894744873047,
+        "target_status": "MATCHED_PREDICTED_TARGET"
+      },
+      {
+        "record_id": "v5_validation_00016",
+        "truth": "short",
+        "predicted": "sleeveless",
+        "score": 0.5215460658073425,
+        "target_status": "MATCHED_PREDICTED_TARGET"
+      },
+      {
+        "record_id": "v5_validation_00046",
+        "truth": "elbow",
+        "predicted": "elbow",
+        "score": 0.6370227932929993,
+        "target_status": "MATCHED_PREDICTED_TARGET"
+      },
+      {
+        "record_id": "v5_validation_00053",
+        "truth": "unknown",
+        "predicted": "elbow",
+        "score": 0.45701369643211365,
+        "target_status": "MATCHED_PREDICTED_TARGET"
+      },
+      {
+        "record_id": "v5_validation_00035",
+        "truth": "short",
+        "predicted": "elbow",
+        "score": 0.2384234070777893,
+        "target_status": "MATCHED_PREDICTED_TARGET"
+      },
+      {
+        "record_id": "v5_validation_00013",
+        "truth": "unknown",
+        "predicted": null,
+        "score": null,
+        "target_status": "GARMENT_CLASS_MISMATCH"
+      },
+      {
+        "record_id": "v5_validation_00018",
+        "truth": "three_quarter",
+        "predicted": "sleeveless",
+        "score": 0.6830809116363525,
+        "target_status": "MATCHED_PREDICTED_TARGET"
+      },
+      {
+        "record_id": "v5_validation_00024",
+        "truth": "three_quarter",
+        "predicted": null,
+        "score": null,
+        "target_status": "GARMENT_CLASS_MISMATCH"
+      },
+      {
+        "record_id": "v5_validation_00036",
+        "truth": "long",
+        "predicted": "cap",
+        "score": 0.35203811526298523,
+        "target_status": "MATCHED_PREDICTED_TARGET"
+      },
+      {
+        "record_id": "v5_validation_00062",
+        "truth": "long",
+        "predicted": "long",
+        "score": 0.5741802453994751,
+        "target_status": "MATCHED_PREDICTED_TARGET"
+      },
+      {
+        "record_id": "v5_validation_00064",
+        "truth": "long",
+        "predicted": null,
+        "score": null,
+        "target_status": "GARMENT_CLASS_MISMATCH"
+      },
+      {
+        "record_id": "v5_validation_00031",
+        "truth": "long",
+        "predicted": "three_quarter",
+        "score": 0.34746646881103516,
+        "target_status": "MATCHED_PREDICTED_TARGET"
+      },
+      {
+        "record_id": "v5_validation_00006",
+        "truth": "sleeveless",
+        "predicted": "sleeveless",
+        "score": 0.5336800217628479,
+        "target_status": "MATCHED_PREDICTED_TARGET"
+      },
+      {
+        "record_id": "v5_validation_00005",
+        "truth": "short",
+        "predicted": "short",
+        "score": 0.5863816142082214,
+        "target_status": "MATCHED_PREDICTED_TARGET"
+      },
+      {
+        "record_id": "v5_validation_00072",
+        "truth": "sleeveless",
+        "predicted": "short",
+        "score": 0.3027839958667755,
+        "target_status": "MATCHED_PREDICTED_TARGET"
+      },
+      {
+        "record_id": "v5_validation_00085",
+        "truth": "unknown",
+        "predicted": "elbow",
+        "score": 0.33481696248054504,
+        "target_status": "MATCHED_PREDICTED_TARGET"
+      },
+      {
+        "record_id": "v5_validation_00081",
+        "truth": "sleeveless",
+        "predicted": "long",
+        "score": 0.29273322224617004,
+        "target_status": "MATCHED_PREDICTED_TARGET"
+      }
+    ]
+  },
+  "same_raw_view_prompt_baseline": {
+    "train": [
+      {
+        "record_id": "v5_train_01994",
+        "truth": "cap",
+        "predicted": "sleeveless",
+        "score": 0.32899102568626404
+      },
+      {
+        "record_id": "v5_train_01373",
+        "truth": "cap",
+        "predicted": "elbow",
+        "score": 0.3253181278705597
+      },
+      {
+        "record_id": "v5_train_01779",
+        "truth": "cap",
+        "predicted": "sleeveless",
+        "score": 0.28811904788017273
+      },
+      {
+        "record_id": "v5_train_00474",
+        "truth": "short",
+        "predicted": "sleeveless",
+        "score": 0.3308100402355194
+      },
+      {
+        "record_id": "v5_train_01252",
+        "truth": "short",
+        "predicted": "long",
+        "score": 0.2639327943325043
+      },
+      {
+        "record_id": "v5_train_00276",
+        "truth": "short",
+        "predicted": "elbow",
+        "score": 0.5034043788909912
+      },
+      {
+        "record_id": "v5_train_00246",
+        "truth": "short",
+        "predicted": "short",
+        "score": 0.448323518037796
+      },
+      {
+        "record_id": "v5_train_00138",
+        "truth": "short",
+        "predicted": "long",
+        "score": 0.44400322437286377
+      },
+      {
+        "record_id": "v5_train_00425",
+        "truth": "short",
+        "predicted": "sleeveless",
+        "score": 0.37650707364082336
+      },
+      {
+        "record_id": "v5_train_00256",
+        "truth": "short",
+        "predicted": "elbow",
+        "score": 0.3122556805610657
+      },
+      {
+        "record_id": "v5_train_01335",
+        "truth": "short",
+        "predicted": "short",
+        "score": 0.39520499110221863
+      },
+      {
+        "record_id": "v5_train_00909",
+        "truth": "short",
+        "predicted": "sleeveless",
+        "score": 0.27666324377059937
+      },
+      {
+        "record_id": "v5_train_00442",
+        "truth": "elbow",
+        "predicted": "short",
+        "score": 0.3523740768432617
+      },
+      {
+        "record_id": "v5_train_00933",
+        "truth": "elbow",
+        "predicted": "short",
+        "score": 0.30185243487358093
+      },
+      {
+        "record_id": "v5_train_00939",
+        "truth": "elbow",
+        "predicted": "elbow",
+        "score": 0.3850325047969818
+      },
+      {
+        "record_id": "v5_train_00733",
+        "truth": "elbow",
+        "predicted": "long",
+        "score": 0.23269721865653992
+      },
+      {
+        "record_id": "v5_train_01919",
+        "truth": "elbow",
+        "predicted": "short",
+        "score": 0.45577311515808105
+      },
+      {
+        "record_id": "v5_train_00996",
+        "truth": "elbow",
+        "predicted": "elbow",
+        "score": 0.2886703610420227
+      },
+      {
+        "record_id": "v5_train_01298",
+        "truth": "three_quarter",
+        "predicted": "elbow",
+        "score": 0.36870571970939636
+      },
+      {
+        "record_id": "v5_train_01963",
+        "truth": "three_quarter",
+        "predicted": "sleeveless",
+        "score": 0.3603129982948303
+      },
+      {
+        "record_id": "v5_train_01592",
+        "truth": "long",
+        "predicted": "elbow",
+        "score": 0.7097658514976501
+      },
+      {
+        "record_id": "v5_train_01453",
+        "truth": "three_quarter",
+        "predicted": "elbow",
+        "score": 0.48108163475990295
+      },
+      {
+        "record_id": "v5_train_00569",
+        "truth": "long",
+        "predicted": "elbow",
+        "score": 0.39701661467552185
+      },
+      {
+        "record_id": "v5_train_01662",
+        "truth": "long",
+        "predicted": "long",
+        "score": 0.6335957050323486
+      },
+      {
+        "record_id": "v5_train_00521",
+        "truth": "long",
+        "predicted": "elbow",
+        "score": 0.36783283948898315
+      },
+      {
+        "record_id": "v5_train_01317",
+        "truth": "long",
+        "predicted": "elbow",
+        "score": 0.6388000845909119
+      },
+      {
+        "record_id": "v5_train_00326",
+        "truth": "long",
+        "predicted": "long",
+        "score": 0.21753114461898804
+      },
+      {
+        "record_id": "df2_targeted150_20261008_00228",
+        "truth": "sleeveless",
+        "predicted": "short",
+        "score": 0.39648956060409546
+      },
+      {
+        "record_id": "df2_targeted150_20261008_00186",
+        "truth": "sleeveless",
+        "predicted": "cap",
+        "score": 0.4046715795993805
+      },
+      {
+        "record_id": "df2_targeted150_20261008_00188",
+        "truth": "sleeveless",
+        "predicted": "sleeveless",
+        "score": 0.6023494601249695
+      },
+      {
+        "record_id": "v5_train_00073",
+        "truth": "sleeveless",
+        "predicted": "three_quarter",
+        "score": 0.29949113726615906
+      },
+      {
+        "record_id": "df2_balanced150_20261008_00056",
+        "truth": "sleeveless",
+        "predicted": "short",
+        "score": 0.2842560410499573
+      }
+    ],
+    "dev": [
+      {
+        "record_id": "v5_train_01295",
+        "truth": "cap",
+        "predicted": "sleeveless",
+        "score": 0.45559558272361755
+      },
+      {
+        "record_id": "v5_train_00642",
+        "truth": "cap",
+        "predicted": "short",
+        "score": 0.3742833733558655
+      },
+      {
+        "record_id": "v5_train_01075",
+        "truth": "short",
+        "predicted": "short",
+        "score": 0.6143255233764648
+      },
+      {
+        "record_id": "v5_train_02036",
+        "truth": "short",
+        "predicted": "long",
+        "score": 0.28893762826919556
+      },
+      {
+        "record_id": "v5_train_01019",
+        "truth": "elbow",
+        "predicted": "sleeveless",
+        "score": 0.2540600597858429
+      },
+      {
+        "record_id": "v5_train_00714",
+        "truth": "elbow",
+        "predicted": "short",
+        "score": 0.5558604598045349
+      },
+      {
+        "record_id": "v5_train_01934",
+        "truth": "three_quarter",
+        "predicted": "three_quarter",
+        "score": 0.25675639510154724
+      },
+      {
+        "record_id": "v5_train_00735",
+        "truth": "three_quarter",
+        "predicted": "long",
+        "score": 0.39321109652519226
+      },
+      {
+        "record_id": "v5_train_01831",
+        "truth": "long",
+        "predicted": "long",
+        "score": 0.3042837083339691
+      },
+      {
+        "record_id": "v5_train_00701",
+        "truth": "long",
+        "predicted": "cap",
+        "score": 0.369517058134079
+      },
+      {
+        "record_id": "df2_targeted150_20261008_00271",
+        "truth": "sleeveless",
+        "predicted": "sleeveless",
+        "score": 0.6337971687316895
+      },
+      {
+        "record_id": "df2_balanced150_20261008_00029",
+        "truth": "sleeveless",
+        "predicted": "cap",
+        "score": 0.30202654004096985
+      }
+    ],
+    "diagnostic_gt_roi": [
+      {
+        "record_id": "v5_validation_00014",
+        "truth": "short",
+        "predicted": "short",
+        "target_status": "GT_ROI"
+      },
+      {
+        "record_id": "v5_validation_00027",
+        "truth": "long",
+        "predicted": "long",
+        "target_status": "GT_ROI"
+      },
+      {
+        "record_id": "v5_validation_00016",
+        "truth": "short",
+        "predicted": "short",
+        "target_status": "GT_ROI"
+      },
+      {
+        "record_id": "v5_validation_00046",
+        "truth": "elbow",
+        "predicted": "short",
+        "target_status": "GT_ROI"
+      },
+      {
+        "record_id": "v5_validation_00053",
+        "truth": "unknown",
+        "predicted": "long",
+        "target_status": "GT_ROI"
+      },
+      {
+        "record_id": "v5_validation_00035",
+        "truth": "short",
+        "predicted": "cap",
+        "target_status": "GT_ROI"
+      },
+      {
+        "record_id": "v5_validation_00013",
+        "truth": "unknown",
+        "predicted": "long",
+        "target_status": "GT_ROI"
+      },
+      {
+        "record_id": "v5_validation_00018",
+        "truth": "three_quarter",
+        "predicted": "elbow",
+        "target_status": "GT_ROI"
+      },
+      {
+        "record_id": "v5_validation_00024",
+        "truth": "three_quarter",
+        "predicted": "sleeveless",
+        "target_status": "GT_ROI"
+      },
+      {
+        "record_id": "v5_validation_00036",
+        "truth": "long",
+        "predicted": "long",
+        "target_status": "GT_ROI"
+      },
+      {
+        "record_id": "v5_validation_00062",
+        "truth": "long",
+        "predicted": "elbow",
+        "target_status": "GT_ROI"
+      },
+      {
+        "record_id": "v5_validation_00064",
+        "truth": "long",
+        "predicted": "cap",
+        "target_status": "GT_ROI"
+      },
+      {
+        "record_id": "v5_validation_00031",
+        "truth": "long",
+        "predicted": "elbow",
+        "target_status": "GT_ROI"
+      },
+      {
+        "record_id": "v5_validation_00006",
+        "truth": "sleeveless",
+        "predicted": "sleeveless",
+        "target_status": "GT_ROI"
+      },
+      {
+        "record_id": "v5_validation_00005",
+        "truth": "short",
+        "predicted": "short",
+        "target_status": "GT_ROI"
+      },
+      {
+        "record_id": "v5_validation_00072",
+        "truth": "sleeveless",
+        "predicted": "sleeveless",
+        "target_status": "GT_ROI"
+      },
+      {
+        "record_id": "v5_validation_00085",
+        "truth": "unknown",
+        "predicted": "cap",
+        "target_status": "GT_ROI"
+      },
+      {
+        "record_id": "v5_validation_00081",
+        "truth": "sleeveless",
+        "predicted": "cap",
+        "target_status": "GT_ROI"
+      }
+    ],
+    "diagnostic_predicted_roi": [
+      {
+        "record_id": "v5_validation_00014",
+        "truth": "short",
+        "predicted": "short",
+        "target_status": "MATCHED_PREDICTED_TARGET"
+      },
+      {
+        "record_id": "v5_validation_00027",
+        "truth": "long",
+        "predicted": "elbow",
+        "target_status": "MATCHED_PREDICTED_TARGET"
+      },
+      {
+        "record_id": "v5_validation_00016",
+        "truth": "short",
+        "predicted": "short",
+        "target_status": "MATCHED_PREDICTED_TARGET"
+      },
+      {
+        "record_id": "v5_validation_00046",
+        "truth": "elbow",
+        "predicted": "short",
+        "target_status": "MATCHED_PREDICTED_TARGET"
+      },
+      {
+        "record_id": "v5_validation_00053",
+        "truth": "unknown",
+        "predicted": "long",
+        "target_status": "MATCHED_PREDICTED_TARGET"
+      },
+      {
+        "record_id": "v5_validation_00035",
+        "truth": "short",
+        "predicted": "cap",
+        "target_status": "MATCHED_PREDICTED_TARGET"
+      },
+      {
+        "record_id": "v5_validation_00013",
+        "truth": "unknown",
+        "predicted": null,
+        "target_status": "GARMENT_CLASS_MISMATCH"
+      },
+      {
+        "record_id": "v5_validation_00018",
+        "truth": "three_quarter",
+        "predicted": "long",
+        "target_status": "MATCHED_PREDICTED_TARGET"
+      },
+      {
+        "record_id": "v5_validation_00024",
+        "truth": "three_quarter",
+        "predicted": null,
+        "target_status": "GARMENT_CLASS_MISMATCH"
+      },
+      {
+        "record_id": "v5_validation_00036",
+        "truth": "long",
+        "predicted": "long",
+        "target_status": "MATCHED_PREDICTED_TARGET"
+      },
+      {
+        "record_id": "v5_validation_00062",
+        "truth": "long",
+        "predicted": "elbow",
+        "target_status": "MATCHED_PREDICTED_TARGET"
+      },
+      {
+        "record_id": "v5_validation_00064",
+        "truth": "long",
+        "predicted": null,
+        "target_status": "GARMENT_CLASS_MISMATCH"
+      },
+      {
+        "record_id": "v5_validation_00031",
+        "truth": "long",
+        "predicted": "elbow",
+        "target_status": "MATCHED_PREDICTED_TARGET"
+      },
+      {
+        "record_id": "v5_validation_00006",
+        "truth": "sleeveless",
+        "predicted": "short",
+        "target_status": "MATCHED_PREDICTED_TARGET"
+      },
+      {
+        "record_id": "v5_validation_00005",
+        "truth": "short",
+        "predicted": "short",
+        "target_status": "MATCHED_PREDICTED_TARGET"
+      },
+      {
+        "record_id": "v5_validation_00072",
+        "truth": "sleeveless",
+        "predicted": "short",
+        "target_status": "MATCHED_PREDICTED_TARGET"
+      },
+      {
+        "record_id": "v5_validation_00085",
+        "truth": "unknown",
+        "predicted": "sleeveless",
+        "target_status": "MATCHED_PREDICTED_TARGET"
+      },
+      {
+        "record_id": "v5_validation_00081",
+        "truth": "sleeveless",
+        "predicted": "elbow",
+        "target_status": "MATCHED_PREDICTED_TARGET"
+      }
+    ]
+  }
+}

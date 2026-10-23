@@ -1,0 +1,10 @@
+{
+  "status": "FAILED",
+  "formal_prd_acceptance": false,
+  "production_modified": false,
+  "gt_used_for_inference": false,
+  "cohort": "Stage15_DEV12_not_blind",
+  "manifest_sha256": "82fa7f3f57246c38d333e7e98a5cfda7cc66cd86d01ee0745f8a908c2f3a81e6",
+  "date_utc": "2026-10-14T09:23:43.757248+00:00",
+  "error": "[Errno 2] No such file or directory: 'git'"
+}

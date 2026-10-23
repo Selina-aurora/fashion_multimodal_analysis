@@ -35,3 +35,11 @@ dist/
 /gpu_packages/
 # Checked-in reports, benchmark assets and small output images are deliberate evidence.
 .cache/
+
+# Local GPU cache and temporary package products
+/hf_cache/
+/sleeve_pose_sandbox/.venv/
+*.before_*
+*.bak
+/github_update_inventory/
+/github_update_review.zip

@@ -1,0 +1,8 @@
+{
+  "stage12_source": "prd31_stage12_run_20261014_041148_UPLOAD_THIS.zip",
+  "stage12_parity_passes": "16/16 within tolerances",
+  "stage12_mask_pixel_equal": "7/8 detected",
+  "stage12_lowest_mask_iou": 0.999630011878566,
+  "stage12_timing_valid": false,
+  "next_stage_goal": "Stage13 timed no-extra-serial-DINO diagnostic, 8 images"
+}

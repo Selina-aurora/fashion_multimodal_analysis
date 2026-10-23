@@ -1,0 +1,30 @@
+{
+  "status": "FULL_TARGET_MANIFESTS_PREPARED",
+  "original_train_instances": 547,
+  "complete_train_instances": 2039,
+  "train_images": 475,
+  "train_classes": {
+    "dress": 164,
+    "pants": 199,
+    "top": 296,
+    "skirt": 88,
+    "outerwear": 155,
+    "shoe": 586,
+    "accessory": 416,
+    "bag": 135
+  },
+  "original_validation_instances": 43,
+  "complete_validation_instances": 88,
+  "validation_images": 32,
+  "input_sha256": {
+    "train_v4": "511e3f9be4ed749931e05a87a867afa331fa67c7fe89fb32de4eba8cb964aa6c",
+    "val_v1": "b6984415c31bb2060f230e78e0e8a12dfa011122201e29bdd3dc028928476ba1",
+    "core": "c83204aca87c9c4dee304b774fd459bf5a18a2d1d65f0a3a9a79b92721224b89",
+    "fashionpedia_raw": "f831f415edad12d52acde8b138fe7ebd1592b57bf0dcd6a3b63ba8cabd208223"
+  },
+  "output_sha256": {
+    "train_v5": "36ff78831b20e492d787c66161f05747433f8e85f7a089fd5df981c2bdf476e6",
+    "val_v2_full": "39141f545ea5512d16ed074788b6f98474b33baff111d3b663ec0ffcc4c40b93"
+  },
+  "scope": "Same source images, complete usable targets in the fixed eight-class taxonomy. No Core GT changes. Not content-level deduplication."
+}

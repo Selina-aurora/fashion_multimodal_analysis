@@ -1,0 +1,154 @@
+{
+  "status": "SLEEVE_CONTEXT_DIAGNOSTIC_COMPLETED",
+  "baseline_report": "/workspace/fashion_multimodal_analysis/reports/reruns/recovery_20261009/attribute_results_20261009_064127_332405",
+  "metrics": {
+    "gt_roi": {
+      "masked_baseline": {
+        "eligible": 15,
+        "emitted": 15,
+        "correct": 3,
+        "missing": 0,
+        "accuracy_all_eligible": 0.2,
+        "accuracy_on_emitted": 0.2,
+        "unknown_excluded": 3
+      },
+      "raw_garment": {
+        "eligible": 15,
+        "emitted": 15,
+        "correct": 7,
+        "missing": 0,
+        "accuracy_all_eligible": 0.4666666666666667,
+        "accuracy_on_emitted": 0.4666666666666667,
+        "unknown_excluded": 3
+      },
+      "raw_context_10pct": {
+        "eligible": 15,
+        "emitted": 15,
+        "correct": 4,
+        "missing": 0,
+        "accuracy_all_eligible": 0.26666666666666666,
+        "accuracy_on_emitted": 0.26666666666666666,
+        "unknown_excluded": 3
+      }
+    },
+    "predicted_roi": {
+      "masked_baseline": {
+        "eligible": 15,
+        "emitted": 13,
+        "correct": 3,
+        "missing": 2,
+        "accuracy_all_eligible": 0.2,
+        "accuracy_on_emitted": 0.23076923076923078,
+        "unknown_excluded": 3
+      },
+      "raw_garment": {
+        "eligible": 15,
+        "emitted": 13,
+        "correct": 4,
+        "missing": 2,
+        "accuracy_all_eligible": 0.26666666666666666,
+        "accuracy_on_emitted": 0.3076923076923077,
+        "unknown_excluded": 3
+      },
+      "raw_context_10pct": {
+        "eligible": 15,
+        "emitted": 13,
+        "correct": 4,
+        "missing": 2,
+        "accuracy_all_eligible": 0.26666666666666666,
+        "accuracy_on_emitted": 0.3076923076923077,
+        "unknown_excluded": 3
+      }
+    }
+  },
+  "paired_changes": {
+    "gt_roi": {
+      "raw_garment": {
+        "paired_eligible": 15,
+        "changed": [
+          "v5_validation_00014",
+          "v5_validation_00027",
+          "v5_validation_00062",
+          "v5_validation_00031",
+          "v5_validation_00006",
+          "v5_validation_00005",
+          "v5_validation_00081"
+        ],
+        "fixed": [
+          "v5_validation_00014",
+          "v5_validation_00027",
+          "v5_validation_00006",
+          "v5_validation_00005"
+        ],
+        "broken": []
+      },
+      "raw_context_10pct": {
+        "paired_eligible": 15,
+        "changed": [
+          "v5_validation_00014",
+          "v5_validation_00027",
+          "v5_validation_00018",
+          "v5_validation_00036",
+          "v5_validation_00062",
+          "v5_validation_00031",
+          "v5_validation_00006",
+          "v5_validation_00081"
+        ],
+        "fixed": [
+          "v5_validation_00014",
+          "v5_validation_00027"
+        ],
+        "broken": [
+          "v5_validation_00036"
+        ]
+      }
+    },
+    "predicted_roi": {
+      "raw_garment": {
+        "paired_eligible": 13,
+        "changed": [
+          "v5_validation_00014",
+          "v5_validation_00031",
+          "v5_validation_00006",
+          "v5_validation_00005",
+          "v5_validation_00072"
+        ],
+        "fixed": [
+          "v5_validation_00014",
+          "v5_validation_00005"
+        ],
+        "broken": [
+          "v5_validation_00072"
+        ]
+      },
+      "raw_context_10pct": {
+        "paired_eligible": 13,
+        "changed": [
+          "v5_validation_00014",
+          "v5_validation_00027",
+          "v5_validation_00036",
+          "v5_validation_00031",
+          "v5_validation_00006",
+          "v5_validation_00081"
+        ],
+        "fixed": [
+          "v5_validation_00014",
+          "v5_validation_00027"
+        ],
+        "broken": [
+          "v5_validation_00036"
+        ]
+      }
+    }
+  },
+  "clip_model": "openai/clip-vit-base-patch32",
+  "context_expansion_per_side": 0.1,
+  "production_changed": false,
+  "formal_prd_acceptance": false,
+  "limitations": [
+    "Same reviewed segmentation validation targets; this is development analysis, not independent validation.",
+    "Two fixed raw views, same model and sleeve prompts, no training or threshold tuning.",
+    "GT ROI and predicted ROI have different scope; association failures remain misses.",
+    "Even improved raw accuracy does not establish a production improvement without fresh reviewed evaluation."
+  ]
+}

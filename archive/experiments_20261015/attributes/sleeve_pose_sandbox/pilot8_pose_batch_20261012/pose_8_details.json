@@ -1,0 +1,314 @@
+[
+  {
+    "record_id": "v5_train_00415",
+    "current_class": "elbow",
+    "manual_ratio": 0.545583389491745,
+    "manual_side_in_image": "image_left",
+    "image": "/workspace/fashion_data/raw/fashionpedia/images/test/28f3172e9e96bb17c1f9ec3697b175bc.jpg",
+    "persons_detected": 1,
+    "matched_arm_available": true,
+    "matched_arm_diagnostic_only": {
+      "person_index": 0,
+      "coco_anatomical_side": "right",
+      "joint_coordinates": {
+        "shoulder": [
+          180.25088500976562,
+          254.3141326904297
+        ],
+        "elbow": [
+          119.84767150878906,
+          420.1742858886719
+        ],
+        "wrist": [
+          154.0532989501953,
+          534.052978515625
+        ]
+      },
+      "joint_confidences": {
+        "shoulder": 0.9937241673469543,
+        "elbow": 0.9831993579864502,
+        "wrist": 0.9851374626159668
+      },
+      "joint_error_normalized_diagonal": {
+        "shoulder": 0.014328349587426946,
+        "elbow": 0.010727652153358259,
+        "wrist": 0.010194296379196797
+      },
+      "mean_joint_distance": 0.011750099373327334
+    },
+    "visual_path": "/workspace/sleeve_pose_sandbox/pilot8_pose_batch_20261012/visuals/01_v5_train_00415.jpg"
+  },
+  {
+    "record_id": "v5_train_00484",
+    "current_class": "short",
+    "manual_ratio": 0.27903210170665765,
+    "manual_side_in_image": "image_right",
+    "image": "/workspace/fashion_data/raw/fashionpedia/images/test/3109762baa95cfc50b5a454db19d4143.jpg",
+    "persons_detected": 1,
+    "matched_arm_available": true,
+    "matched_arm_diagnostic_only": {
+      "person_index": 0,
+      "coco_anatomical_side": "left",
+      "joint_coordinates": {
+        "shoulder": [
+          351.8589782714844,
+          318.0018310546875
+        ],
+        "elbow": [
+          384.1622619628906,
+          438.3822326660156
+        ],
+        "wrist": [
+          394.9619140625,
+          544.6117553710938
+        ]
+      },
+      "joint_confidences": {
+        "shoulder": 0.9984740614891052,
+        "elbow": 0.9938623905181885,
+        "wrist": 0.9913454055786133
+      },
+      "joint_error_normalized_diagonal": {
+        "shoulder": 0.01884042473508568,
+        "elbow": 0.005954946592536645,
+        "wrist": 0.00507365757403552
+      },
+      "mean_joint_distance": 0.009956342967219282
+    },
+    "visual_path": "/workspace/sleeve_pose_sandbox/pilot8_pose_batch_20261012/visuals/02_v5_train_00484.jpg"
+  },
+  {
+    "record_id": "v5_train_00533",
+    "current_class": "short",
+    "manual_ratio": 0.2559956297099396,
+    "manual_side_in_image": "image_right",
+    "image": "/workspace/fashion_data/raw/fashionpedia/images/test/3696956aa43b2641bdb8ee6fd0ea213f.jpg",
+    "persons_detected": 2,
+    "matched_arm_available": true,
+    "matched_arm_diagnostic_only": {
+      "person_index": 0,
+      "coco_anatomical_side": "left",
+      "joint_coordinates": {
+        "shoulder": [
+          309.8359069824219,
+          239.8101348876953
+        ],
+        "elbow": [
+          334.4396057128906,
+          367.23028564453125
+        ],
+        "wrist": [
+          348.9736022949219,
+          475.589599609375
+        ]
+      },
+      "joint_confidences": {
+        "shoulder": 0.9978625178337097,
+        "elbow": 0.989174485206604,
+        "wrist": 0.981712281703949
+      },
+      "joint_error_normalized_diagonal": {
+        "shoulder": 0.026363194003447683,
+        "elbow": 0.0066961385782869165,
+        "wrist": 0.002707483903856453
+      },
+      "mean_joint_distance": 0.011922272161863685
+    },
+    "visual_path": "/workspace/sleeve_pose_sandbox/pilot8_pose_batch_20261012/visuals/03_v5_train_00533.jpg"
+  },
+  {
+    "record_id": "v5_train_01055",
+    "current_class": "cap",
+    "manual_ratio": 0.1535482485663157,
+    "manual_side_in_image": "image_left",
+    "image": "/workspace/fashion_data/raw/fashionpedia/images/test/7c3c0cd188f831a4533f8aa2f5902b64.jpg",
+    "persons_detected": 1,
+    "matched_arm_available": true,
+    "matched_arm_diagnostic_only": {
+      "person_index": 0,
+      "coco_anatomical_side": "right",
+      "joint_coordinates": {
+        "shoulder": [
+          272.5323486328125,
+          273.2628173828125
+        ],
+        "elbow": [
+          243.63572692871094,
+          401.405029296875
+        ],
+        "wrist": [
+          231.3496856689453,
+          518.9210815429688
+        ]
+      },
+      "joint_confidences": {
+        "shoulder": 0.9989759922027588,
+        "elbow": 0.9918993711471558,
+        "wrist": 0.9901543259620667
+      },
+      "joint_error_normalized_diagonal": {
+        "shoulder": 0.027807897371201734,
+        "elbow": 0.0091514452620756,
+        "wrist": 0.0025700529715538055
+      },
+      "mean_joint_distance": 0.01317646520161038
+    },
+    "visual_path": "/workspace/sleeve_pose_sandbox/pilot8_pose_batch_20261012/visuals/04_v5_train_01055.jpg"
+  },
+  {
+    "record_id": "v5_train_01155",
+    "current_class": "elbow",
+    "manual_ratio": 0.5563221810825029,
+    "manual_side_in_image": "image_left",
+    "image": "/workspace/fashion_data/raw/fashionpedia/images/test/88383c53ef2404f1596e41e45ebe5ddd.jpg",
+    "persons_detected": 1,
+    "matched_arm_available": true,
+    "matched_arm_diagnostic_only": {
+      "person_index": 0,
+      "coco_anatomical_side": "right",
+      "joint_coordinates": {
+        "shoulder": [
+          268.13409423828125,
+          302.33172607421875
+        ],
+        "elbow": [
+          239.9143524169922,
+          437.6969909667969
+        ],
+        "wrist": [
+          237.2152557373047,
+          536.8043823242188
+        ]
+      },
+      "joint_confidences": {
+        "shoulder": 0.9982830286026001,
+        "elbow": 0.9907678961753845,
+        "wrist": 0.9853004813194275
+      },
+      "joint_error_normalized_diagonal": {
+        "shoulder": 0.01436921219881953,
+        "elbow": 0.017113654484542617,
+        "wrist": 0.006846961787225041
+      },
+      "mean_joint_distance": 0.01277660949019573
+    },
+    "visual_path": "/workspace/sleeve_pose_sandbox/pilot8_pose_batch_20261012/visuals/05_v5_train_01155.jpg"
+  },
+  {
+    "record_id": "v5_train_01230",
+    "current_class": "cap",
+    "manual_ratio": 0.11800972087733183,
+    "manual_side_in_image": "image_right",
+    "image": "/workspace/fashion_data/raw/fashionpedia/images/test/94351b1b66b1e37756eef9206883dd83.jpg",
+    "persons_detected": 1,
+    "matched_arm_available": true,
+    "matched_arm_diagnostic_only": {
+      "person_index": 0,
+      "coco_anatomical_side": "left",
+      "joint_coordinates": {
+        "shoulder": [
+          743.7120971679688,
+          232.8348388671875
+        ],
+        "elbow": [
+          770.5747680664062,
+          381.13262939453125
+        ],
+        "wrist": [
+          682.1699829101562,
+          469.5989685058594
+        ]
+      },
+      "joint_confidences": {
+        "shoulder": 0.9839909076690674,
+        "elbow": 0.9597271084785461,
+        "wrist": 0.9678158760070801
+      },
+      "joint_error_normalized_diagonal": {
+        "shoulder": 0.039216896854767105,
+        "elbow": 0.0035836588590923363,
+        "wrist": 0.01615448475459701
+      },
+      "mean_joint_distance": 0.01965168015615215
+    },
+    "visual_path": "/workspace/sleeve_pose_sandbox/pilot8_pose_batch_20261012/visuals/06_v5_train_01230.jpg"
+  },
+  {
+    "record_id": "v5_train_01445",
+    "current_class": "cap",
+    "manual_ratio": 0.08302126853599445,
+    "manual_side_in_image": "image_left",
+    "image": "/workspace/fashion_data/raw/fashionpedia/images/test/abe7f00720ada9f255b8d1355579dc0e.jpg",
+    "persons_detected": 1,
+    "matched_arm_available": true,
+    "matched_arm_diagnostic_only": {
+      "person_index": 0,
+      "coco_anatomical_side": "right",
+      "joint_coordinates": {
+        "shoulder": [
+          213.40977478027344,
+          303.3509826660156
+        ],
+        "elbow": [
+          204.30628967285156,
+          456.1017761230469
+        ],
+        "wrist": [
+          216.98670959472656,
+          586.2888793945312
+        ]
+      },
+      "joint_confidences": {
+        "shoulder": 0.9994475245475769,
+        "elbow": 0.9951335787773132,
+        "wrist": 0.9914863109588623
+      },
+      "joint_error_normalized_diagonal": {
+        "shoulder": 0.02495294409766303,
+        "elbow": 0.0012719049355221883,
+        "wrist": 0.008209751132159467
+      },
+      "mean_joint_distance": 0.011478200055114894
+    },
+    "visual_path": "/workspace/sleeve_pose_sandbox/pilot8_pose_batch_20261012/visuals/07_v5_train_01445.jpg"
+  },
+  {
+    "record_id": "v5_train_01508",
+    "current_class": "elbow",
+    "manual_ratio": 0.5935462080271263,
+    "manual_side_in_image": "image_right",
+    "image": "/workspace/fashion_data/raw/fashionpedia/images/test/b22ea58665d776f693c9f13635499460.jpg",
+    "persons_detected": 1,
+    "matched_arm_available": true,
+    "matched_arm_diagnostic_only": {
+      "person_index": 0,
+      "coco_anatomical_side": "left",
+      "joint_coordinates": {
+        "shoulder": [
+          357.2134094238281,
+          222.3397979736328
+        ],
+        "elbow": [
+          395.8797912597656,
+          369.04949951171875
+        ],
+        "wrist": [
+          406.75360107421875,
+          498.1133728027344
+        ]
+      },
+      "joint_confidences": {
+        "shoulder": 0.9844862818717957,
+        "elbow": 0.9136655926704407,
+        "wrist": 0.9390143752098083
+      },
+      "joint_error_normalized_diagonal": {
+        "shoulder": 0.019421560416691346,
+        "elbow": 0.007686354817064512,
+        "wrist": 0.003410849516432938
+      },
+      "mean_joint_distance": 0.010172921583396265
+    },
+    "visual_path": "/workspace/sleeve_pose_sandbox/pilot8_pose_batch_20261012/visuals/08_v5_train_01508.jpg"
+  }
+]

@@ -1,0 +1,18 @@
+{
+  "status": "FULL_CHAIN_INTERFACE_PASS",
+  "model_inference_run": true,
+  "images": 8,
+  "predicted_instances": 34,
+  "failed_downstream_calls": 0,
+  "contract_checks": 3066,
+  "semantic_consistency_review_enabled": true,
+  "accuracy_evaluated": false,
+  "prd_latency_acceptance": false,
+  "formal_prd_acceptance": false,
+  "scope": "Existing V5 Balanced150 checkpoint on a fixed diagnostic image set; actual model inference and interface contracts.",
+  "limitations": [
+    "Only a GT-free integration/smoke check, not PRD benchmark metrics.",
+    "Single un-warmed diagnostic wall times must not be reported as acceptance latency.",
+    "No human sign-off or formal v2 benchmark freeze is fabricated."
+  ]
+}

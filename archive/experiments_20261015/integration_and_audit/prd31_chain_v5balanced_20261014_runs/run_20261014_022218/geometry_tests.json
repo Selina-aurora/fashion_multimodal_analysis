@@ -1,0 +1,62 @@
+{
+  "status": "PASS",
+  "model_inference_run": false,
+  "tests": [
+    {
+      "test": "fractional_roi_floor_ceil",
+      "status": "PASS"
+    },
+    {
+      "test": "crop_mask_size_alignment",
+      "status": "PASS"
+    },
+    {
+      "test": "offset_xyxy_mapping",
+      "status": "PASS"
+    },
+    {
+      "test": "anisotropic_scale_mapping",
+      "status": "PASS"
+    },
+    {
+      "test": "boundary_clipping",
+      "status": "PASS"
+    },
+    {
+      "test": "reject_zero_area",
+      "status": "PASS"
+    },
+    {
+      "test": "reject_nan",
+      "status": "PASS"
+    },
+    {
+      "test": "reject_outside",
+      "status": "PASS"
+    },
+    {
+      "test": "reject_wrong_mask_dimensions",
+      "status": "PASS"
+    },
+    {
+      "test": "all_predicted_instances_transferred",
+      "status": "PASS"
+    },
+    {
+      "test": "grounding_failure_recorded",
+      "status": "PASS"
+    },
+    {
+      "test": "remaining_stages_continue",
+      "status": "PASS"
+    },
+    {
+      "test": "attribute_failure_fields_present",
+      "status": "PASS"
+    },
+    {
+      "test": "segmentation_failure_stops_chain",
+      "status": "PASS"
+    }
+  ]
+}

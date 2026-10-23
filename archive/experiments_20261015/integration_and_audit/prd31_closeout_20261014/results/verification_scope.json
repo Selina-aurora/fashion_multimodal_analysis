@@ -1,0 +1,10 @@
+{
+  "python_evaluation_tests": 10,
+  "python_tests_passed": true,
+  "ui_logic_test_passed": true,
+  "ui_real_browser_rendered": false,
+  "reason": "No installed Chromium executable; used event/geometry/export DOM harness",
+  "gpu_inference_executed_here": false,
+  "human_annotations_added_here": 0,
+  "original_human_review_sha256_verified": true
+}

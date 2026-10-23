@@ -1,0 +1,31 @@
+{
+  "record_id": "df2_balanced150_20261008_00064",
+  "split": "train",
+  "presence": "absent",
+  "category": "dress",
+  "source_dataset": "DeepFashion2",
+  "source_image_sha256": "909c25e98e480aea92dbd7b86e8eaef481fb1d2ca090769e0cee158262cdf383",
+  "native_crop_xyxy": [
+    238,
+    317,
+    608,
+    1180
+  ],
+  "input_crop_xyxy": [
+    201,
+    230,
+    645,
+    1267
+  ],
+  "context_padding_fraction": 0.1,
+  "crop_size": [
+    444,
+    1037
+  ],
+  "image": "train/df2_balanced150_20261008_00064/image.png",
+  "garment_mask": "train/df2_balanced150_20261008_00064/garment_mask.png",
+  "cuff_boxes_xyxy_local": [],
+  "box_audit": [],
+  "image_sha256": "371934c1d20ea8eb05d4a5e600d3b598bc16f8d1bfe0091a229387943054f257",
+  "garment_mask_sha256": "f9115208a052afdfc0247c6be5d248b71b797b77242ff81aed4fb93c8ae41d13"
+}

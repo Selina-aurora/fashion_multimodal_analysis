@@ -498,6 +498,8 @@ class PipelineTests(unittest.TestCase):
     def test_neckline_uses_predicted_part_and_never_gt_proxy_in_track_b(self) -> None:
         """验证 Track B 领口使用预测局部区域，不能用 GT 代理。"""
         backend = object.__new__(ModelBackends)
+        # 与正常构造保持一致：空配置表示不启用候选上下文分支。
+        backend.config = {}
         backend.measure = lambda action: (action(), 1)
         seen = []
         backend.pattern = SimpleNamespace(

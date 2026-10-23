@@ -1,0 +1,8 @@
+{
+  "src/fashion_multimodal_analysis/integration/model_backends.py": "0efd47f3a29e6c25d7396717cb4fc1b1540ed30c16df171a9ad7b93fade7f7ec",
+  "src/fashion_multimodal_analysis/attributes/color/run_primary_color_baseline_v1.py": "1f3fdd371603a6d32b2803a6d3d71a62aa0a605fc3a4236e53e6cbf141274cb9",
+  "src/fashion_multimodal_analysis/attributes/pattern/run_pattern_hierarchical_v3.py": "4fe0c50478e60e5639a05d1b8c64abe7358999af23a133944ea640f99edb41f0",
+  "src/fashion_multimodal_analysis/attributes/design/run_design_attribute_labels_v1.py": "c7e2a14d333eda8318ef5c633f4ee12f283f16cfbada035370c2d30cdccdfbe9",
+  "src/fashion_multimodal_analysis/integration/attribute_context.py": "0d589b6361ffc85dda4ba8daf6277c17eeaeab39768e8bb5bacc215bbf2faf80",
+  "src/fashion_multimodal_analysis/integration/semantic_consistency.py": "4aaa4c17604d272a557c1aa14a9acd6d1138a5129ec1a94ded622046acc8a49c"
+}

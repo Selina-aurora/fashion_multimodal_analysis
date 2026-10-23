@@ -1,0 +1,175 @@
+{
+  "source_zip": "prd31_chain_v5balanced_run_20261014_022757_UPLOAD_THIS.zip",
+  "source_zip_sha256": "bff1b6aa8638f48e0994144d1c124a856dfbd84837855d1f27a486d572b84a1e",
+  "status": "FULL_CHAIN_INTERFACE_PASS",
+  "model_inference_run": true,
+  "images": 8,
+  "instances": 34,
+  "contract_checks": 3066,
+  "contract_issues": 0,
+  "failed_downstream_calls": 0,
+  "region_counts": {
+    "not_applicable": 102,
+    "requires_review": 40,
+    "detected": 72,
+    "empty_mask": 5,
+    "missed": 29,
+    "rejected_region_geometry": 24
+  },
+  "attribute_counts": {
+    "predicted": 100,
+    "requires_review": 31,
+    "not_applicable": 68,
+    "localization_missing": 5
+  },
+  "review_flags": {
+    "P1_PATTERN_DISAGREEMENT": 25,
+    "P1_SHARED_REGION_BOX": 15,
+    "P2_DECORATION_SPOTCHECK": 8
+  },
+  "total_review_queue_records": 48,
+  "region_by_type": [
+    {
+      "region": "collar",
+      "total": 34,
+      "not_applicable": 20,
+      "detected": 9,
+      "requires_review": 0,
+      "missed": 3,
+      "rejected_region_geometry": 1,
+      "empty_mask": 1
+    },
+    {
+      "region": "cuff",
+      "total": 34,
+      "not_applicable": 20,
+      "detected": 3,
+      "requires_review": 3,
+      "missed": 3,
+      "rejected_region_geometry": 4,
+      "empty_mask": 1
+    },
+    {
+      "region": "hem",
+      "total": 34,
+      "not_applicable": 14,
+      "detected": 4,
+      "requires_review": 7,
+      "missed": 0,
+      "rejected_region_geometry": 7,
+      "empty_mask": 2
+    },
+    {
+      "region": "pocket",
+      "total": 34,
+      "not_applicable": 14,
+      "detected": 7,
+      "requires_review": 2,
+      "missed": 7,
+      "rejected_region_geometry": 4,
+      "empty_mask": 0
+    },
+    {
+      "region": "shoulder",
+      "total": 34,
+      "not_applicable": 20,
+      "detected": 2,
+      "requires_review": 0,
+      "missed": 7,
+      "rejected_region_geometry": 5,
+      "empty_mask": 0
+    },
+    {
+      "region": "waist",
+      "total": 34,
+      "not_applicable": 14,
+      "detected": 5,
+      "requires_review": 3,
+      "missed": 9,
+      "rejected_region_geometry": 3,
+      "empty_mask": 0
+    },
+    {
+      "region": "pattern",
+      "total": 34,
+      "not_applicable": 0,
+      "detected": 8,
+      "requires_review": 25,
+      "missed": 0,
+      "rejected_region_geometry": 0,
+      "empty_mask": 1
+    },
+    {
+      "region": "decoration",
+      "total": 34,
+      "not_applicable": 0,
+      "detected": 34,
+      "requires_review": 0,
+      "missed": 0,
+      "rejected_region_geometry": 0,
+      "empty_mask": 0
+    }
+  ],
+  "attribute_by_type": [
+    {
+      "attribute": "primary_color",
+      "total": 34,
+      "predicted": 34,
+      "requires_review": 0,
+      "not_applicable": 0,
+      "localization_missing": 0
+    },
+    {
+      "attribute": "pattern",
+      "total": 34,
+      "predicted": 9,
+      "requires_review": 25,
+      "not_applicable": 0,
+      "localization_missing": 0
+    },
+    {
+      "attribute": "sleeve_length",
+      "total": 34,
+      "predicted": 14,
+      "requires_review": 0,
+      "not_applicable": 20,
+      "localization_missing": 0
+    },
+    {
+      "attribute": "neckline",
+      "total": 34,
+      "predicted": 3,
+      "requires_review": 6,
+      "not_applicable": 20,
+      "localization_missing": 5
+    },
+    {
+      "attribute": "silhouette_fit",
+      "total": 34,
+      "predicted": 20,
+      "requires_review": 0,
+      "not_applicable": 14,
+      "localization_missing": 0
+    },
+    {
+      "attribute": "fashion_style",
+      "total": 34,
+      "predicted": 20,
+      "requires_review": 0,
+      "not_applicable": 14,
+      "localization_missing": 0
+    }
+  ],
+  "gpu": "NVIDIA GeForce RTX 4090",
+  "checkpoint_sha256": "c5ba795225349b1c521aac0517ac7c493d9818dcc17d558ac4a3f6f8669452f0",
+  "formal_prd_acceptance": false,
+  "accuracy_evaluated": false,
+  "latency_acceptance": false,
+  "warnings": [
+    "Statuses and semantic consistency warnings are model-produced, not human ground truth.",
+    "Every predicted instance has decoration detected (34/34); review semantic false-positive risk.",
+    "A GT-free diagnostic is not proof of 92% grounding accuracy or 88% attribute accuracy.",
+    "Only single, un-warmed inference timing from 8 diagnostic images is available; do not compare directly with PRD targets.",
+    "Do not use the 8-case diagnostic to modify Core400 frozen GT, or automatically train on review flags."
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "status": "STAGE10_END_TO_END_AB_COMPLETED",
+  "project_files_modified": false,
+  "checkpoint": {
+    "device": "NVIDIA GeForce RTX 4090",
+    "torch": "2.13.0+cu132",
+    "checkpoint_sha256": "c5ba795225349b1c521aac0517ac7c493d9818dcc17d558ac4a3f6f8669452f0",
+    "min_size": 640,
+    "max_size": 1024
+  },
+  "result": {
+    "status": "STAGE10_END_TO_END_AB_COMPLETED",
+    "cases": 4,
+    "paired_queries": 16,
+    "timed_rows": 12,
+    "baseline_mean_group_ms": 735.6256,
+    "joint_batch_mean_group_ms": 576.1546,
+    "baseline_mean_amortized_ms": 183.9064,
+    "joint_batch_mean_amortized_ms": 144.0386,
+    "overall_speedup": 1.2768,
+    "mask_parity_within_tolerance": false,
+    "parity_passes": 0,
+    "parity_failures": 16,
+    "integration_decision": "DO_NOT_INTEGRATE",
+    "limitations": [
+      "Same frozen diagnostic images, no reviewed local-part GT.",
+      "Measured group throughput for multi-query same-instance; amortized ms/query is NOT standalone per-query latency.",
+      "No guarantee of 30ms PRD target, no official accuracy claim.",
+      "DINO image is duplicated across batch; GPU memory may increase.",
+      "Only warmed calls; model loading, disk IO, and ROI selection excluded.",
+      "Not a production patch."
+    ]
+  }
+}

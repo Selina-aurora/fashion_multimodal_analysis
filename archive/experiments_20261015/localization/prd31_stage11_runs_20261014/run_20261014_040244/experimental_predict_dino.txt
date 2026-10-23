@@ -1,0 +1,22 @@
+def predict_dino(backend, crop, phrases, batch):
+    """Measure identical API preprocessing, forward and postprocess for each variant."""
+    import torch
+    proc=backend.ground_processor
+    texts=[p.strip().rstrip('.')+'.' for p in phrases]
+    images=[crop]*len(texts)
+    if batch:
+        inp=proc(images=images,text=texts,return_tensors='pt',padding=True)
+        inp={k:v.to(backend.device) if torch.is_tensor(v) else v for k,v in inp.items()}
+        with torch.inference_mode():outs=backend.ground_model(**inp)
+        return serialize_dino(proc,outs,inp['input_ids'],crop.size,
+                backend.config['grounding_box_threshold'],backend.config['grounding_text_threshold'],
+                len(texts),backend.device)
+    output=[]
+    for text in texts:
+        inp=proc(images=crop,text=text,return_tensors='pt')
+        inp={k:v.to(backend.device) if torch.is_tensor(v) else v for k,v in inp.items()}
+        with torch.inference_mode():outs=backend.ground_model(**inp)
+        output.extend(serialize_dino(proc,outs,inp['input_ids'],crop.size,
+                backend.config['grounding_box_threshold'],backend.config['grounding_text_threshold'],
+                1,backend.device))
+    return output

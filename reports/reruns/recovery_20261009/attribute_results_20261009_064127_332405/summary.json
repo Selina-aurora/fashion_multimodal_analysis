@@ -1,0 +1,322 @@
+{
+  "status": "ATTRIBUTE_DIAGNOSTIC_COMPLETED",
+  "images": 18,
+  "formal_prd_acceptance": false,
+  "annotations_sha256": "578631308a786d0f49166a80b067476a65ad3fc20976aaf7d916988fc760d8c2",
+  "checkpoint_sha256": "c5ba795225349b1c521aac0517ac7c493d9818dcc17d558ac4a3f6f8669452f0",
+  "val_manifest_sha256": "39141f545ea5512d16ed074788b6f98474b33baff111d3b663ec0ffcc4c40b93",
+  "clip_model": "openai/clip-vit-base-patch32",
+  "segmentation_min_size": 640,
+  "segmentation_max_size": 1024,
+  "score_threshold": 0.4,
+  "mask_threshold": 0.5,
+  "association_iou": 0.5,
+  "association_policy": "Highest-IoU prediction above score threshold, then require IoU>=0.5 and correct class; one reviewed target per image",
+  "metrics": {
+    "gt_roi": {
+      "primary_color": {
+        "eligible_targets": 18,
+        "correct": 14,
+        "wrong_or_missing": 4,
+        "emitted": 18,
+        "missing": 0,
+        "accuracy_all_eligible": 0.7777777777777778,
+        "accuracy_on_emitted": 0.7777777777777778,
+        "unknown_gt_excluded": 0,
+        "confusion": {
+          "white": {
+            "white": 3,
+            "black": 1
+          },
+          "pink": {
+            "pink": 2
+          },
+          "purple": {
+            "purple": 3
+          },
+          "beige": {
+            "beige": 1
+          },
+          "black": {
+            "purple": 1,
+            "pink": 1,
+            "black": 3
+          },
+          "green": {
+            "blue": 1,
+            "green": 1
+          },
+          "red": {
+            "red": 1
+          }
+        }
+      },
+      "pattern": {
+        "eligible_targets": 18,
+        "correct": 13,
+        "wrong_or_missing": 5,
+        "emitted": 18,
+        "missing": 0,
+        "accuracy_all_eligible": 0.7222222222222222,
+        "accuracy_on_emitted": 0.7222222222222222,
+        "unknown_gt_excluded": 0,
+        "confusion": {
+          "graphic_logo": {
+            "graphic_logo": 2
+          },
+          "solid": {
+            "solid": 7,
+            "polka_dot": 1,
+            "striped": 1,
+            "other_pattern": 1
+          },
+          "checked_plaid": {
+            "checked_plaid": 2
+          },
+          "animal_print": {
+            "animal_print": 1
+          },
+          "striped": {
+            "striped": 1
+          },
+          "floral": {
+            "camouflage": 1
+          },
+          "geometric_abstract": {
+            "polka_dot": 1
+          }
+        }
+      },
+      "sleeve_length": {
+        "eligible_targets": 15,
+        "correct": 3,
+        "wrong_or_missing": 12,
+        "emitted": 15,
+        "missing": 0,
+        "accuracy_all_eligible": 0.2,
+        "accuracy_on_emitted": 0.2,
+        "unknown_gt_excluded": 3,
+        "confusion": {
+          "short": {
+            "sleeveless": 1,
+            "short": 1,
+            "cap": 2
+          },
+          "long": {
+            "elbow": 1,
+            "long": 1,
+            "three_quarter": 1,
+            "cap": 1,
+            "sleeveless": 1
+          },
+          "elbow": {
+            "short": 1
+          },
+          "three_quarter": {
+            "elbow": 1,
+            "sleeveless": 1
+          },
+          "sleeveless": {
+            "cap": 1,
+            "sleeveless": 1,
+            "elbow": 1
+          }
+        }
+      }
+    },
+    "predicted_roi": {
+      "primary_color": {
+        "eligible_targets": 18,
+        "correct": 11,
+        "wrong_or_missing": 7,
+        "emitted": 15,
+        "missing": 3,
+        "accuracy_all_eligible": 0.6111111111111112,
+        "accuracy_on_emitted": 0.7333333333333333,
+        "unknown_gt_excluded": 0,
+        "confusion": {
+          "white": {
+            "blue": 1,
+            "black": 1,
+            "<missing>": 1,
+            "white": 1
+          },
+          "pink": {
+            "pink": 2
+          },
+          "purple": {
+            "purple": 3
+          },
+          "beige": {
+            "beige": 1
+          },
+          "black": {
+            "blue": 1,
+            "<missing>": 2,
+            "black": 2
+          },
+          "green": {
+            "gray": 1,
+            "green": 1
+          },
+          "red": {
+            "red": 1
+          }
+        }
+      },
+      "pattern": {
+        "eligible_targets": 18,
+        "correct": 13,
+        "wrong_or_missing": 5,
+        "emitted": 15,
+        "missing": 3,
+        "accuracy_all_eligible": 0.7222222222222222,
+        "accuracy_on_emitted": 0.8666666666666667,
+        "unknown_gt_excluded": 0,
+        "confusion": {
+          "graphic_logo": {
+            "graphic_logo": 2
+          },
+          "solid": {
+            "solid": 7,
+            "<missing>": 2,
+            "polka_dot": 1
+          },
+          "checked_plaid": {
+            "checked_plaid": 2
+          },
+          "animal_print": {
+            "animal_print": 1
+          },
+          "striped": {
+            "striped": 1
+          },
+          "floral": {
+            "<missing>": 1
+          },
+          "geometric_abstract": {
+            "solid": 1
+          }
+        }
+      },
+      "sleeve_length": {
+        "eligible_targets": 15,
+        "correct": 3,
+        "wrong_or_missing": 12,
+        "emitted": 13,
+        "missing": 2,
+        "accuracy_all_eligible": 0.2,
+        "accuracy_on_emitted": 0.23076923076923078,
+        "unknown_gt_excluded": 3,
+        "confusion": {
+          "short": {
+            "sleeveless": 1,
+            "short": 1,
+            "cap": 2
+          },
+          "long": {
+            "elbow": 2,
+            "long": 1,
+            "<missing>": 1,
+            "cap": 1
+          },
+          "elbow": {
+            "short": 1
+          },
+          "three_quarter": {
+            "long": 1,
+            "<missing>": 1
+          },
+          "sleeveless": {
+            "cap": 1,
+            "sleeveless": 1,
+            "elbow": 1
+          }
+        }
+      }
+    }
+  },
+  "pattern_sensitivity_excluding_case_2": {
+    "gt_roi": {
+      "eligible_targets": 17,
+      "correct": 12,
+      "wrong_or_missing": 5,
+      "emitted": 17,
+      "missing": 0,
+      "accuracy_all_eligible": 0.7058823529411765,
+      "accuracy_on_emitted": 0.7058823529411765,
+      "unknown_gt_excluded": 0,
+      "confusion": {
+        "graphic_logo": {
+          "graphic_logo": 2
+        },
+        "checked_plaid": {
+          "checked_plaid": 2
+        },
+        "solid": {
+          "solid": 6,
+          "polka_dot": 1,
+          "striped": 1,
+          "other_pattern": 1
+        },
+        "animal_print": {
+          "animal_print": 1
+        },
+        "striped": {
+          "striped": 1
+        },
+        "floral": {
+          "camouflage": 1
+        },
+        "geometric_abstract": {
+          "polka_dot": 1
+        }
+      }
+    },
+    "predicted_roi": {
+      "eligible_targets": 17,
+      "correct": 12,
+      "wrong_or_missing": 5,
+      "emitted": 14,
+      "missing": 3,
+      "accuracy_all_eligible": 0.7058823529411765,
+      "accuracy_on_emitted": 0.8571428571428571,
+      "unknown_gt_excluded": 0,
+      "confusion": {
+        "graphic_logo": {
+          "graphic_logo": 2
+        },
+        "checked_plaid": {
+          "checked_plaid": 2
+        },
+        "solid": {
+          "solid": 6,
+          "<missing>": 2,
+          "polka_dot": 1
+        },
+        "animal_print": {
+          "animal_print": 1
+        },
+        "striped": {
+          "striped": 1
+        },
+        "floral": {
+          "<missing>": 1
+        },
+        "geometric_abstract": {
+          "solid": 1
+        }
+      }
+    }
+  },
+  "matched_predicted_targets": 15,
+  "pattern_label_review_note": "Case 2 confirmed solid with comment sleeve stripes; preserve confirmed label and report sensitivity without this target.",
+  "limitations": [
+    "Original segmentation validation images; small diagnostic, not blind end-to-end acceptance.",
+    "Only specified garments reviewed, not every instance in each image.",
+    "Unknown GT excluded per attribute; missing association counts wrong in all-eligible metrics.",
+    "GT target association used only for evaluation; GT attribute labels never used during inference.",
+    "Uses existing color/pattern/sleeve helpers and masked garment views; no region grounding/SAM calls.",
+    "Prompt-relative scores are not calibrated confidence; no accuracy inferred from them."
+  ]
+}

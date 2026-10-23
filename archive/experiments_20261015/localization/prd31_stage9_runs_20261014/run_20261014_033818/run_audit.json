@@ -1,0 +1,32 @@
+{
+  "status": "STAGE9_DINO_BATCH_DIAGNOSTIC_COMPLETED",
+  "project_files_modified": false,
+  "checkpoint": {
+    "device": "NVIDIA GeForce RTX 4090",
+    "torch": "2.13.0+cu132",
+    "checkpoint_sha256": "c5ba795225349b1c521aac0517ac7c493d9818dcc17d558ac4a3f6f8669452f0",
+    "min_size": 640,
+    "max_size": 1024
+  },
+  "result": {
+    "status": "STAGE9_DINO_BATCH_DIAGNOSTIC_COMPLETED",
+    "cases": 4,
+    "query_pairs_compared": 16,
+    "timed_rows": 20,
+    "mean_serial_total_ms": 503.5456,
+    "mean_batch_total_ms": 441.1952,
+    "mean_serial_per_query_ms": 125.8864,
+    "mean_batch_amortized_per_query_ms": 110.2988,
+    "mean_speedup_ratio": 1.1437,
+    "strict_candidate_parity": true,
+    "parity_failures": 0,
+    "limitations": [
+      "No SAM calls included in timed DINO variants.",
+      "Batch duplicates the same image, which need not reuse the image encoder.",
+      "Results on diagnostic images are not held-out semantic localization accuracy.",
+      "Batch GPU memory and scheduling may differ from production.",
+      "No PRD 30ms acceptance claim."
+    ],
+    "integration_status": "NOT_AUTHORIZED_EXPLORATORY"
+  }
+}

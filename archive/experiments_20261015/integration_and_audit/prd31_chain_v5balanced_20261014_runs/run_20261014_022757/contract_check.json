@@ -1,0 +1,103 @@
+{
+  "status": "PASS",
+  "images": 8,
+  "counts": {
+    "checks": 3066,
+    "instances": 34,
+    "region_records": 272,
+    "region_masks": 112,
+    "attribute_records": 204
+  },
+  "region_status_counts": {
+    "not_applicable": 102,
+    "requires_review": 40,
+    "detected": 72,
+    "empty_mask": 5,
+    "missed": 29,
+    "rejected_region_geometry": 24
+  },
+  "attribute_status_counts": {
+    "predicted": 100,
+    "requires_review": 31,
+    "not_applicable": 68,
+    "localization_missing": 5
+  },
+  "issues": [],
+  "evidence": [
+    {
+      "case": "case_01",
+      "image_size": [
+        747,
+        585
+      ],
+      "prediction_sha256": "1f22cf586ec4a079a664323d462b336874ad20e8a7ef2b5f4c7357adf56bb847",
+      "instances": 4
+    },
+    {
+      "case": "case_02",
+      "image_size": [
+        640,
+        640
+      ],
+      "prediction_sha256": "aa93f64db67dd6052e7c37bcf6d145d7bed8024fe0c1d481c8a20ee010683c4b",
+      "instances": 3
+    },
+    {
+      "case": "case_03",
+      "image_size": [
+        468,
+        631
+      ],
+      "prediction_sha256": "c18b16a8410e8429edc00784364233290140cdd93ed14735302d13448bf7fb7f",
+      "instances": 1
+    },
+    {
+      "case": "case_04",
+      "image_size": [
+        468,
+        624
+      ],
+      "prediction_sha256": "9db5f52a4b8617df00d91b582d099995c04f8415b2bad39c7f15d1fb5c33f5a2",
+      "instances": 2
+    },
+    {
+      "case": "case_05",
+      "image_size": [
+        468,
+        624
+      ],
+      "prediction_sha256": "767b02eb69b5237c6ee0794cbfbd728dde4b89be3f58bc0b9a6f3e85291ff12e",
+      "instances": 1
+    },
+    {
+      "case": "case_06",
+      "image_size": [
+        680,
+        1024
+      ],
+      "prediction_sha256": "27889f445dd39539f389a76b3d0e782cb4eab7887220b5b1f820373b98ed532b",
+      "instances": 4
+    },
+    {
+      "case": "case_07",
+      "image_size": [
+        683,
+        1024
+      ],
+      "prediction_sha256": "0a49290ca94a6dfe5ef58c1c47100af9bf5a884753f1476412a52099091cee8c",
+      "instances": 9
+    },
+    {
+      "case": "case_08",
+      "image_size": [
+        532,
+        1024
+      ],
+      "prediction_sha256": "7b7de4ac58c031ec1346bfd4abb7555b7f29f104cd0966b37c19430ac72fabb4",
+      "instances": 10
+    }
+  ],
+  "model_inference_run": true,
+  "semantic_accuracy_evaluated": false,
+  "formal_prd_acceptance": false
+}

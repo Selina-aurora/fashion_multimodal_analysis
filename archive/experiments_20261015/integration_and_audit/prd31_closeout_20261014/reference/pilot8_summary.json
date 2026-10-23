@@ -1,0 +1,56 @@
+{
+  "n": 8,
+  "mae": 0.2073539784246138,
+  "rmse": 0.25542197686013485,
+  "pearson": -0.1458324987754881,
+  "spearman": 0.19047619047619047,
+  "ordered_pairs_correct": 15,
+  "ordered_pairs_evaluable": 28,
+  "pairwise_order_accuracy": 0.5357142857142857,
+  "tied_pairs_omitted": 0,
+  "per_class": {
+    "cap": {
+      "n": 3,
+      "mae": 0.28362199734250987
+    },
+    "elbow": {
+      "n": 3,
+      "mae": 0.2172590734000888
+    },
+    "short": {
+      "n": 2,
+      "mae": 0.07809430758455724
+    }
+  },
+  "previous_classifier_accuracy": {
+    "linear_head": 0.25,
+    "clip_prompt": 0.375
+  },
+  "exploratory_fixed_anchor_class_accuracy": 0.25,
+  "fixed_anchor_mapping": {
+    "sleeveless": 0.0,
+    "cap": 0.18,
+    "short": 0.35,
+    "elbow": 0.55,
+    "three_quarter": 0.75,
+    "long": 1.0
+  },
+  "status": "PILOT8_CLIP_CONTINUOUS_DIAGNOSTIC_COMPLETED",
+  "not_an_anatomical_or_physical_ratio_model": true,
+  "no_training": true,
+  "production_modified": false,
+  "input_view": "raw_garment_gt_bbox_no_expansion (matched to prior 8-case experiment)",
+  "automated_target": "CLIP 6-class anchor probability expectation, not geometric shoulder-elbow-wrist-cuff prediction",
+  "gt_target": "human-labelled single-arm 2D sleeve coverage ratio",
+  "source_pilot_json_sha256": "cb34eff7920e99c6803546afc4aa29c5ae3c0a1adacd313ecd0a2619cc8cef15",
+  "source_code_sha256": "70d0f4e05fb0bb806db61008f7dc989f90fb3fa290f6a4dcde26b61ddce86cec",
+  "prior_8case_result_sha256": "8728b88a8b27ccc6542de722591d76dea4a4a64b70ab5d6da26d7254f9eee7a8",
+  "limitations": [
+    "8 train-origin annotated images: exploratory, not blind test",
+    "CLIP anchor expected value is not calibrated to physical sleeve coverage",
+    "Different six-prompt wordings from prior separate prompt classifier",
+    "Ground-truth garment bbox supplied; no full end-to-end predicted ROI",
+    "Same eight were previously inspected; no tuning from these observations"
+  ],
+  "next_step": "If ranking fails, test independent cuff and pose estimator without using GT keypoints at inference; reserve separate attribute holdout."
+}

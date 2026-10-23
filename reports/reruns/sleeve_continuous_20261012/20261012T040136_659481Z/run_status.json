@@ -1,0 +1,9 @@
+{
+  "status": "COMPLETE",
+  "model_fit_performed": true,
+  "timestamp_utc": "20261012T040136_659481Z",
+  "development_only": true,
+  "dev_target_count": 12,
+  "dev_evaluated_count": 9,
+  "no_dev_hyperparameter_selection": true
+}

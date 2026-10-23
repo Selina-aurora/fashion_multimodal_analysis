@@ -1,0 +1,3236 @@
+[
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 0,
+      "name": "classic (t-shirt)",
+      "supercategory": "nickname",
+      "level": 1,
+      "taxonomy_id": "att000002_00"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 1,
+      "name": "polo (shirt)",
+      "supercategory": "nickname",
+      "level": 1,
+      "taxonomy_id": "att000003_00"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 2,
+      "name": "undershirt",
+      "supercategory": "nickname",
+      "level": 1,
+      "taxonomy_id": "att000004_00"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 3,
+      "name": "henley (shirt)",
+      "supercategory": "nickname",
+      "level": 1,
+      "taxonomy_id": "att000005_00"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 4,
+      "name": "ringer (t-shirt)",
+      "supercategory": "nickname",
+      "level": 1,
+      "taxonomy_id": "att000006_00"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 5,
+      "name": "raglan (t-shirt)",
+      "supercategory": "nickname",
+      "level": 1,
+      "taxonomy_id": "att000007_00"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 6,
+      "name": "rugby (shirt)",
+      "supercategory": "nickname",
+      "level": 1,
+      "taxonomy_id": "att000008_00"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 7,
+      "name": "sailor (shirt)",
+      "supercategory": "nickname",
+      "level": 1,
+      "taxonomy_id": "att000009_00"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 8,
+      "name": "crop (top)",
+      "supercategory": "nickname",
+      "level": 1,
+      "taxonomy_id": "att000010_00"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 9,
+      "name": "halter (top)",
+      "supercategory": "nickname",
+      "level": 1,
+      "taxonomy_id": "att000011_00"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 10,
+      "name": "camisole",
+      "supercategory": "nickname",
+      "level": 1,
+      "taxonomy_id": "att000012_00"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 11,
+      "name": "tank (top)",
+      "supercategory": "nickname",
+      "level": 1,
+      "taxonomy_id": "att000013_00"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 12,
+      "name": "peasant (top)",
+      "supercategory": "nickname",
+      "level": 1,
+      "taxonomy_id": "att000014_00"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 13,
+      "name": "tube (top)",
+      "supercategory": "nickname",
+      "level": 1,
+      "taxonomy_id": "att000015_00"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 14,
+      "name": "tunic (top)",
+      "supercategory": "nickname",
+      "level": 1,
+      "taxonomy_id": "att000016_00"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 15,
+      "name": "smock (top)",
+      "supercategory": "nickname",
+      "level": 1,
+      "taxonomy_id": "att000017_00"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 16,
+      "name": "hoodie",
+      "supercategory": "nickname",
+      "level": 1,
+      "taxonomy_id": "att000018_00"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 17,
+      "name": "blazer",
+      "supercategory": "nickname",
+      "level": 1,
+      "taxonomy_id": "att000019_00"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 18,
+      "name": "pea (jacket)",
+      "supercategory": "nickname",
+      "level": 1,
+      "taxonomy_id": "att000020_00"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 19,
+      "name": "puffer (jacket)",
+      "supercategory": "nickname",
+      "level": 1,
+      "taxonomy_id": "att000021_00"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 20,
+      "name": "biker (jacket)",
+      "supercategory": "nickname",
+      "level": 1,
+      "taxonomy_id": "att000022_00"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 21,
+      "name": "trucker (jacket)",
+      "supercategory": "nickname",
+      "level": 1,
+      "taxonomy_id": "att000023_00"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 22,
+      "name": "bomber (jacket)",
+      "supercategory": "nickname",
+      "level": 1,
+      "taxonomy_id": "att000024_00"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 23,
+      "name": "anorak",
+      "supercategory": "nickname",
+      "level": 1,
+      "taxonomy_id": "att000025_00"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 24,
+      "name": "safari (jacket)",
+      "supercategory": "nickname",
+      "level": 1,
+      "taxonomy_id": "att000026_00"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 25,
+      "name": "mao (jacket)",
+      "supercategory": "nickname",
+      "level": 1,
+      "taxonomy_id": "att000027_00"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 26,
+      "name": "nehru (jacket)",
+      "supercategory": "nickname",
+      "level": 1,
+      "taxonomy_id": "att000028_00"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 27,
+      "name": "norfolk (jacket)",
+      "supercategory": "nickname",
+      "level": 1,
+      "taxonomy_id": "att000029_00"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 28,
+      "name": "classic military (jacket)",
+      "supercategory": "nickname",
+      "level": 1,
+      "taxonomy_id": "att000030_00"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 29,
+      "name": "track (jacket)",
+      "supercategory": "nickname",
+      "level": 1,
+      "taxonomy_id": "att000031_00"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 30,
+      "name": "windbreaker",
+      "supercategory": "nickname",
+      "level": 1,
+      "taxonomy_id": "att000032_00"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 31,
+      "name": "chanel (jacket)",
+      "supercategory": "nickname",
+      "level": 1,
+      "taxonomy_id": "att000033_00"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 32,
+      "name": "bolero",
+      "supercategory": "nickname",
+      "level": 1,
+      "taxonomy_id": "att000034_00"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 33,
+      "name": "tuxedo (jacket)",
+      "supercategory": "nickname",
+      "level": 1,
+      "taxonomy_id": "att000035_00"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 34,
+      "name": "varsity (jacket)",
+      "supercategory": "nickname",
+      "level": 1,
+      "taxonomy_id": "att000036_00"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 35,
+      "name": "crop (jacket)",
+      "supercategory": "nickname",
+      "level": 1,
+      "taxonomy_id": "att000037_00"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 36,
+      "name": "jeans",
+      "supercategory": "nickname",
+      "level": 1,
+      "taxonomy_id": "att000038_00"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 37,
+      "name": "sweatpants",
+      "supercategory": "nickname",
+      "level": 1,
+      "taxonomy_id": "att000039_00"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 38,
+      "name": "leggings",
+      "supercategory": "nickname",
+      "level": 1,
+      "taxonomy_id": "att000040_00"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 39,
+      "name": "hip-huggers (pants)",
+      "supercategory": "nickname",
+      "level": 1,
+      "taxonomy_id": "att000041_00"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 40,
+      "name": "cargo (pants)",
+      "supercategory": "nickname",
+      "level": 1,
+      "taxonomy_id": "att000042_00"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 41,
+      "name": "culottes",
+      "supercategory": "nickname",
+      "level": 1,
+      "taxonomy_id": "att000043_00"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 42,
+      "name": "capri (pants)",
+      "supercategory": "nickname",
+      "level": 1,
+      "taxonomy_id": "att000044_00"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 43,
+      "name": "harem (pants)",
+      "supercategory": "nickname",
+      "level": 1,
+      "taxonomy_id": "att000045_00"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 44,
+      "name": "sailor (pants)",
+      "supercategory": "nickname",
+      "level": 1,
+      "taxonomy_id": "att000046_00"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 45,
+      "name": "jodhpur",
+      "supercategory": "nickname",
+      "level": 1,
+      "taxonomy_id": "att000047_00"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 46,
+      "name": "peg (pants)",
+      "supercategory": "nickname",
+      "level": 1,
+      "taxonomy_id": "att000048_00"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 47,
+      "name": "camo (pants)",
+      "supercategory": "nickname",
+      "level": 1,
+      "taxonomy_id": "att000049_00"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 48,
+      "name": "track (pants)",
+      "supercategory": "nickname",
+      "level": 1,
+      "taxonomy_id": "att000050_00"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 49,
+      "name": "crop (pants)",
+      "supercategory": "nickname",
+      "level": 1,
+      "taxonomy_id": "att000051_00"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 50,
+      "name": "short (shorts)",
+      "supercategory": "nickname",
+      "level": 1,
+      "taxonomy_id": "att000052_00"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 51,
+      "name": "booty (shorts)",
+      "supercategory": "nickname",
+      "level": 1,
+      "taxonomy_id": "att000053_00"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 52,
+      "name": "bermuda (shorts)",
+      "supercategory": "nickname",
+      "level": 1,
+      "taxonomy_id": "att000054_00"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 53,
+      "name": "cargo (shorts)",
+      "supercategory": "nickname",
+      "level": 1,
+      "taxonomy_id": "att000055_00"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 54,
+      "name": "trunks",
+      "supercategory": "nickname",
+      "level": 1,
+      "taxonomy_id": "att000056_00"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 55,
+      "name": "boardshorts",
+      "supercategory": "nickname",
+      "level": 1,
+      "taxonomy_id": "att000057_00"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 56,
+      "name": "skort",
+      "supercategory": "nickname",
+      "level": 1,
+      "taxonomy_id": "att000058_00"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 57,
+      "name": "roll-up (shorts)",
+      "supercategory": "nickname",
+      "level": 1,
+      "taxonomy_id": "att000059_00"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 58,
+      "name": "tie-up (shorts)",
+      "supercategory": "nickname",
+      "level": 1,
+      "taxonomy_id": "att000060_00"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 59,
+      "name": "culotte (shorts)",
+      "supercategory": "nickname",
+      "level": 1,
+      "taxonomy_id": "att000061_00"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 60,
+      "name": "lounge (shorts)",
+      "supercategory": "nickname",
+      "level": 1,
+      "taxonomy_id": "att000062_00"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 61,
+      "name": "bloomers",
+      "supercategory": "nickname",
+      "level": 1,
+      "taxonomy_id": "att000063_00"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 62,
+      "name": "tutu (skirt)",
+      "supercategory": "nickname",
+      "level": 1,
+      "taxonomy_id": "att000064_00"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 63,
+      "name": "kilt",
+      "supercategory": "nickname",
+      "level": 1,
+      "taxonomy_id": "att000065_00"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 64,
+      "name": "wrap (skirt)",
+      "supercategory": "nickname",
+      "level": 1,
+      "taxonomy_id": "att000066_00"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 65,
+      "name": "skater (skirt)",
+      "supercategory": "nickname",
+      "level": 1,
+      "taxonomy_id": "att000067_00"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 66,
+      "name": "cargo (skirt)",
+      "supercategory": "nickname",
+      "level": 1,
+      "taxonomy_id": "att000068_00"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 67,
+      "name": "hobble (skirt)",
+      "supercategory": "nickname",
+      "level": 1,
+      "taxonomy_id": "att000069_00"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 68,
+      "name": "sheath (skirt)",
+      "supercategory": "nickname",
+      "level": 1,
+      "taxonomy_id": "att000070_00"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 69,
+      "name": "ball gown (skirt)",
+      "supercategory": "nickname",
+      "level": 1,
+      "taxonomy_id": "att000071_00"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 70,
+      "name": "gypsy (skirt)",
+      "supercategory": "nickname",
+      "level": 1,
+      "taxonomy_id": "att000072_00"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 71,
+      "name": "rah-rah (skirt)",
+      "supercategory": "nickname",
+      "level": 1,
+      "taxonomy_id": "att000073_00"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 72,
+      "name": "prairie (skirt)",
+      "supercategory": "nickname",
+      "level": 1,
+      "taxonomy_id": "att000074_00"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 73,
+      "name": "flamenco (skirt)",
+      "supercategory": "nickname",
+      "level": 1,
+      "taxonomy_id": "att000075_00"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 74,
+      "name": "accordion (skirt)",
+      "supercategory": "nickname",
+      "level": 1,
+      "taxonomy_id": "att000076_00"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 75,
+      "name": "sarong (skirt)",
+      "supercategory": "nickname",
+      "level": 1,
+      "taxonomy_id": "att000077_00"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 76,
+      "name": "tulip (skirt)",
+      "supercategory": "nickname",
+      "level": 1,
+      "taxonomy_id": "att000078_00"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 77,
+      "name": "dirndl (skirt)",
+      "supercategory": "nickname",
+      "level": 1,
+      "taxonomy_id": "att000079_00"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 78,
+      "name": "godet (skirt)",
+      "supercategory": "nickname",
+      "level": 1,
+      "taxonomy_id": "att000080_00"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 79,
+      "name": "blanket (coat)",
+      "supercategory": "nickname",
+      "level": 1,
+      "taxonomy_id": "att000081_00"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 80,
+      "name": "parka",
+      "supercategory": "nickname",
+      "level": 1,
+      "taxonomy_id": "att000082_00"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 81,
+      "name": "trench (coat)",
+      "supercategory": "nickname",
+      "level": 1,
+      "taxonomy_id": "att000083_00"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 82,
+      "name": "pea (coat)",
+      "supercategory": "nickname",
+      "level": 1,
+      "taxonomy_id": "att000084_00"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 83,
+      "name": "shearling (coat)",
+      "supercategory": "nickname",
+      "level": 1,
+      "taxonomy_id": "att000085_00"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 84,
+      "name": "teddy bear (coat)",
+      "supercategory": "nickname",
+      "level": 1,
+      "taxonomy_id": "att000086_00"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 85,
+      "name": "puffer (coat)",
+      "supercategory": "nickname",
+      "level": 1,
+      "taxonomy_id": "att000087_00"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 86,
+      "name": "duster (coat)",
+      "supercategory": "nickname",
+      "level": 1,
+      "taxonomy_id": "att000088_00"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 87,
+      "name": "raincoat",
+      "supercategory": "nickname",
+      "level": 1,
+      "taxonomy_id": "att000089_00"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 88,
+      "name": "kimono",
+      "supercategory": "nickname",
+      "level": 1,
+      "taxonomy_id": "att000090_00"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 89,
+      "name": "robe",
+      "supercategory": "nickname",
+      "level": 1,
+      "taxonomy_id": "att000091_00"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 90,
+      "name": "dress (coat )",
+      "supercategory": "nickname",
+      "level": 1,
+      "taxonomy_id": "att000092_00"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 91,
+      "name": "duffle (coat)",
+      "supercategory": "nickname",
+      "level": 1,
+      "taxonomy_id": "att000093_00"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 92,
+      "name": "wrap (coat)",
+      "supercategory": "nickname",
+      "level": 1,
+      "taxonomy_id": "att000094_00"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 93,
+      "name": "military (coat)",
+      "supercategory": "nickname",
+      "level": 1,
+      "taxonomy_id": "att000095_00"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 94,
+      "name": "swing (coat)",
+      "supercategory": "nickname",
+      "level": 1,
+      "taxonomy_id": "att000096_00"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 95,
+      "name": "halter (dress)",
+      "supercategory": "nickname",
+      "level": 1,
+      "taxonomy_id": "att000097_00"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 96,
+      "name": "wrap (dress)",
+      "supercategory": "nickname",
+      "level": 1,
+      "taxonomy_id": "att000098_00"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 97,
+      "name": "chemise (dress)",
+      "supercategory": "nickname",
+      "level": 1,
+      "taxonomy_id": "att000099_00"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 98,
+      "name": "slip (dress)",
+      "supercategory": "nickname",
+      "level": 1,
+      "taxonomy_id": "att000100_00"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 99,
+      "name": "cheongsams",
+      "supercategory": "nickname",
+      "level": 1,
+      "taxonomy_id": "att000101_00"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 100,
+      "name": "jumper (dress)",
+      "supercategory": "nickname",
+      "level": 1,
+      "taxonomy_id": "att000102_00"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 101,
+      "name": "shift (dress)",
+      "supercategory": "nickname",
+      "level": 1,
+      "taxonomy_id": "att000103_00"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 102,
+      "name": "sheath (dress)",
+      "supercategory": "nickname",
+      "level": 1,
+      "taxonomy_id": "att000104_00"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 103,
+      "name": "shirt (dress)",
+      "supercategory": "nickname",
+      "level": 1,
+      "taxonomy_id": "att000105_00"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 104,
+      "name": "sundress",
+      "supercategory": "nickname",
+      "level": 1,
+      "taxonomy_id": "att000106_00"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 105,
+      "name": "kaftan",
+      "supercategory": "nickname",
+      "level": 1,
+      "taxonomy_id": "att000107_00"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 106,
+      "name": "bodycon (dress)",
+      "supercategory": "nickname",
+      "level": 1,
+      "taxonomy_id": "att000108_00"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 107,
+      "name": "nightgown",
+      "supercategory": "nickname",
+      "level": 1,
+      "taxonomy_id": "att000109_00"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 108,
+      "name": "gown",
+      "supercategory": "nickname",
+      "level": 1,
+      "taxonomy_id": "att000110_00"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 109,
+      "name": "sweater (dress)",
+      "supercategory": "nickname",
+      "level": 1,
+      "taxonomy_id": "att000111_00"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 110,
+      "name": "tea (dress)",
+      "supercategory": "nickname",
+      "level": 1,
+      "taxonomy_id": "att000112_00"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 111,
+      "name": "blouson (dress)",
+      "supercategory": "nickname",
+      "level": 1,
+      "taxonomy_id": "att000113_00"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 112,
+      "name": "tunic (dress)",
+      "supercategory": "nickname",
+      "level": 1,
+      "taxonomy_id": "att000114_00"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 113,
+      "name": "skater (dress)",
+      "supercategory": "nickname",
+      "level": 1,
+      "taxonomy_id": "att000115_00"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 114,
+      "name": "asymmetrical",
+      "supercategory": "silhouette",
+      "level": 1,
+      "taxonomy_id": "att000117_00"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 115,
+      "name": "symmetrical",
+      "supercategory": "silhouette",
+      "level": 1,
+      "taxonomy_id": "att000118_00"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 116,
+      "name": "peplum",
+      "supercategory": "silhouette",
+      "level": 1,
+      "taxonomy_id": "att000119_00"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 117,
+      "name": "circle",
+      "supercategory": "silhouette",
+      "level": 1,
+      "taxonomy_id": "att000120_00"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 118,
+      "name": "flare",
+      "supercategory": "silhouette",
+      "level": 1,
+      "taxonomy_id": "att000121_00"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 119,
+      "name": "fit and flare",
+      "supercategory": "silhouette",
+      "level": 1,
+      "taxonomy_id": "att000122_00"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 120,
+      "name": "trumpet",
+      "supercategory": "silhouette",
+      "level": 1,
+      "taxonomy_id": "att000123_00"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 121,
+      "name": "mermaid",
+      "supercategory": "silhouette",
+      "level": 1,
+      "taxonomy_id": "att000124_00"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 122,
+      "name": "balloon",
+      "supercategory": "silhouette",
+      "level": 1,
+      "taxonomy_id": "att000125_00"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 123,
+      "name": "bell",
+      "supercategory": "silhouette",
+      "level": 1,
+      "taxonomy_id": "att000126_00"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 124,
+      "name": "bell bottom",
+      "supercategory": "silhouette",
+      "level": 1,
+      "taxonomy_id": "att000127_00"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 125,
+      "name": "bootcut",
+      "supercategory": "silhouette",
+      "level": 1,
+      "taxonomy_id": "att000128_00"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 126,
+      "name": "peg",
+      "supercategory": "silhouette",
+      "level": 1,
+      "taxonomy_id": "att000129_00"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 127,
+      "name": "pencil",
+      "supercategory": "silhouette",
+      "level": 1,
+      "taxonomy_id": "att000130_00"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 128,
+      "name": "straight",
+      "supercategory": "silhouette",
+      "level": 1,
+      "taxonomy_id": "att000131_00"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 129,
+      "name": "a-line",
+      "supercategory": "silhouette",
+      "level": 1,
+      "taxonomy_id": "att000132_00"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 130,
+      "name": "tent",
+      "supercategory": "silhouette",
+      "level": 1,
+      "taxonomy_id": "att000133_00"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 131,
+      "name": "baggy",
+      "supercategory": "silhouette",
+      "level": 1,
+      "taxonomy_id": "att000134_00"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 132,
+      "name": "wide leg",
+      "supercategory": "silhouette",
+      "level": 1,
+      "taxonomy_id": "att000135_00"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 133,
+      "name": "high low",
+      "supercategory": "silhouette",
+      "level": 1,
+      "taxonomy_id": "att000136_00"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 134,
+      "name": "curved (fit)",
+      "supercategory": "silhouette",
+      "level": 1,
+      "taxonomy_id": "att000137_00"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 135,
+      "name": "tight (fit)",
+      "supercategory": "silhouette",
+      "level": 1,
+      "taxonomy_id": "att000138_00"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 136,
+      "name": "regular (fit)",
+      "supercategory": "silhouette",
+      "level": 1,
+      "taxonomy_id": "att000139_00"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 137,
+      "name": "loose (fit)",
+      "supercategory": "silhouette",
+      "level": 1,
+      "taxonomy_id": "att000140_00"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 138,
+      "name": "oversized",
+      "supercategory": "silhouette",
+      "level": 1,
+      "taxonomy_id": "att000141_00"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 139,
+      "name": "empire waistline",
+      "supercategory": "waistline",
+      "level": 1,
+      "taxonomy_id": "att000143_00"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 140,
+      "name": "dropped waistline",
+      "supercategory": "waistline",
+      "level": 1,
+      "taxonomy_id": "att000144_00"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 141,
+      "name": "high waist",
+      "supercategory": "waistline",
+      "level": 1,
+      "taxonomy_id": "att000145_00"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 142,
+      "name": "normal waist",
+      "supercategory": "waistline",
+      "level": 1,
+      "taxonomy_id": "att000146_00"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 143,
+      "name": "low waist",
+      "supercategory": "waistline",
+      "level": 1,
+      "taxonomy_id": "att000147_00"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 144,
+      "name": "basque (wasitline)",
+      "supercategory": "waistline",
+      "level": 1,
+      "taxonomy_id": "att000148_00"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 145,
+      "name": "no waistline",
+      "supercategory": "waistline",
+      "level": 1,
+      "taxonomy_id": "att000149_00"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 146,
+      "name": "above-the-hip (length)",
+      "supercategory": "length",
+      "level": 1,
+      "taxonomy_id": "att000151_00"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 147,
+      "name": "hip (length)",
+      "supercategory": "length",
+      "level": 1,
+      "taxonomy_id": "att000152_00"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 148,
+      "name": "micro (length)",
+      "supercategory": "length",
+      "level": 1,
+      "taxonomy_id": "att000153_00"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 149,
+      "name": "mini (length)",
+      "supercategory": "length",
+      "level": 1,
+      "taxonomy_id": "att000154_00"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 150,
+      "name": "above-the-knee (length)",
+      "supercategory": "length",
+      "level": 1,
+      "taxonomy_id": "att000155_00"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 151,
+      "name": "knee (length)",
+      "supercategory": "length",
+      "level": 1,
+      "taxonomy_id": "att000156_00"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 152,
+      "name": "below the knee (length)",
+      "supercategory": "length",
+      "level": 1,
+      "taxonomy_id": "att000157_00"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 153,
+      "name": "midi",
+      "supercategory": "length",
+      "level": 1,
+      "taxonomy_id": "att000158_00"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 154,
+      "name": "maxi (length)",
+      "supercategory": "length",
+      "level": 1,
+      "taxonomy_id": "att000159_00"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 155,
+      "name": "floor (length)",
+      "supercategory": "length",
+      "level": 1,
+      "taxonomy_id": "att000160_00"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 156,
+      "name": "sleeveless",
+      "supercategory": "length",
+      "level": 1,
+      "taxonomy_id": "att000161_00"
+    },
+    "sleeve_related_candidate": true
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 157,
+      "name": "short (length)",
+      "supercategory": "length",
+      "level": 1,
+      "taxonomy_id": "att000162_00"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 158,
+      "name": "elbow-length",
+      "supercategory": "length",
+      "level": 1,
+      "taxonomy_id": "att000163_00"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 159,
+      "name": "three quarter (length)",
+      "supercategory": "length",
+      "level": 1,
+      "taxonomy_id": "att000164_00"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 160,
+      "name": "wrist-length",
+      "supercategory": "length",
+      "level": 1,
+      "taxonomy_id": "att000165_00"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 161,
+      "name": "asymmetric (collar)",
+      "supercategory": "nickname",
+      "level": 1,
+      "taxonomy_id": "att000166_00"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 162,
+      "name": "regular (collar)",
+      "supercategory": "nickname",
+      "level": 1,
+      "taxonomy_id": "att000167_00"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 163,
+      "name": "shirt (collar)",
+      "supercategory": "nickname",
+      "level": 1,
+      "taxonomy_id": "att000168_00"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 164,
+      "name": "polo (collar)",
+      "supercategory": "nickname",
+      "level": 1,
+      "taxonomy_id": "att000169_00"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 165,
+      "name": "chelsea (collar)",
+      "supercategory": "nickname",
+      "level": 1,
+      "taxonomy_id": "att000170_00"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 166,
+      "name": "banded (collar)",
+      "supercategory": "nickname",
+      "level": 1,
+      "taxonomy_id": "att000171_00"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 167,
+      "name": "mandarin (collar)",
+      "supercategory": "nickname",
+      "level": 1,
+      "taxonomy_id": "att000172_00"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 168,
+      "name": "peter pan (collar)",
+      "supercategory": "nickname",
+      "level": 1,
+      "taxonomy_id": "att000173_00"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 169,
+      "name": "bow (collar)",
+      "supercategory": "nickname",
+      "level": 1,
+      "taxonomy_id": "att000174_00"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 170,
+      "name": "stand-away (collar)",
+      "supercategory": "nickname",
+      "level": 1,
+      "taxonomy_id": "att000175_00"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 171,
+      "name": "jabot (collar)",
+      "supercategory": "nickname",
+      "level": 1,
+      "taxonomy_id": "att000176_00"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 172,
+      "name": "sailor (collar)",
+      "supercategory": "nickname",
+      "level": 1,
+      "taxonomy_id": "att000177_00"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 173,
+      "name": "oversized (collar)",
+      "supercategory": "nickname",
+      "level": 1,
+      "taxonomy_id": "att000178_00"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 174,
+      "name": "notched (lapel)",
+      "supercategory": "nickname",
+      "level": 1,
+      "taxonomy_id": "att000179_00"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 175,
+      "name": "peak (lapel)",
+      "supercategory": "nickname",
+      "level": 1,
+      "taxonomy_id": "att000180_00"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 176,
+      "name": "shawl (lapel)",
+      "supercategory": "nickname",
+      "level": 1,
+      "taxonomy_id": "att000181_00"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 177,
+      "name": "napoleon (lapel)",
+      "supercategory": "nickname",
+      "level": 1,
+      "taxonomy_id": "att000182_00"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 178,
+      "name": "oversized (lapel)",
+      "supercategory": "nickname",
+      "level": 1,
+      "taxonomy_id": "att000183_00"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 179,
+      "name": "collarless",
+      "supercategory": "neckline type",
+      "level": 1,
+      "taxonomy_id": "att000185_00"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 180,
+      "name": "asymmetric (neckline)",
+      "supercategory": "neckline type",
+      "level": 1,
+      "taxonomy_id": "att000186_00"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 181,
+      "name": "crew (neck)",
+      "supercategory": "neckline type",
+      "level": 1,
+      "taxonomy_id": "att000187_00"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 182,
+      "name": "round (neck)",
+      "supercategory": "neckline type",
+      "level": 1,
+      "taxonomy_id": "att000188_00"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 183,
+      "name": "v-neck",
+      "supercategory": "neckline type",
+      "level": 1,
+      "taxonomy_id": "att000189_00"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 184,
+      "name": "surplice (neck)",
+      "supercategory": "neckline type",
+      "level": 1,
+      "taxonomy_id": "att000190_00"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 185,
+      "name": "oval (neck)",
+      "supercategory": "neckline type",
+      "level": 1,
+      "taxonomy_id": "att000191_00"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 186,
+      "name": "u-neck",
+      "supercategory": "neckline type",
+      "level": 1,
+      "taxonomy_id": "att000192_00"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 187,
+      "name": "sweetheart (neckline)",
+      "supercategory": "neckline type",
+      "level": 1,
+      "taxonomy_id": "att000193_00"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 188,
+      "name": "queen anne (neck)",
+      "supercategory": "neckline type",
+      "level": 1,
+      "taxonomy_id": "att000194_00"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 189,
+      "name": "boat (neck)",
+      "supercategory": "neckline type",
+      "level": 1,
+      "taxonomy_id": "att000195_00"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 190,
+      "name": "scoop (neck)",
+      "supercategory": "neckline type",
+      "level": 1,
+      "taxonomy_id": "att000196_00"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 191,
+      "name": "square (neckline)",
+      "supercategory": "neckline type",
+      "level": 1,
+      "taxonomy_id": "att000197_00"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 192,
+      "name": "plunging (neckline)",
+      "supercategory": "neckline type",
+      "level": 1,
+      "taxonomy_id": "att000198_00"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 193,
+      "name": "keyhole (neck)",
+      "supercategory": "neckline type",
+      "level": 1,
+      "taxonomy_id": "att000199_00"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 194,
+      "name": "halter (neck)",
+      "supercategory": "neckline type",
+      "level": 1,
+      "taxonomy_id": "att000200_00"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 195,
+      "name": "crossover (neck)",
+      "supercategory": "neckline type",
+      "level": 1,
+      "taxonomy_id": "att000201_00"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 196,
+      "name": "choker (neck)",
+      "supercategory": "neckline type",
+      "level": 1,
+      "taxonomy_id": "att000202_00"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 197,
+      "name": "high (neck)",
+      "supercategory": "neckline type",
+      "level": 1,
+      "taxonomy_id": "att000203_00"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 198,
+      "name": "turtle (neck)",
+      "supercategory": "neckline type",
+      "level": 1,
+      "taxonomy_id": "att000204_00"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 199,
+      "name": "cowl (neck)",
+      "supercategory": "neckline type",
+      "level": 1,
+      "taxonomy_id": "att000205_00"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 200,
+      "name": "straight across (neck)",
+      "supercategory": "neckline type",
+      "level": 1,
+      "taxonomy_id": "att000206_00"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 201,
+      "name": "illusion (neck)",
+      "supercategory": "neckline type",
+      "level": 1,
+      "taxonomy_id": "att000207_00"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 202,
+      "name": "off-the-shoulder",
+      "supercategory": "neckline type",
+      "level": 1,
+      "taxonomy_id": "att000208_00"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 203,
+      "name": "one shoulder",
+      "supercategory": "neckline type",
+      "level": 1,
+      "taxonomy_id": "att000209_00"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 204,
+      "name": "set-in sleeve",
+      "supercategory": "nickname",
+      "level": 1,
+      "taxonomy_id": "att000210_00"
+    },
+    "sleeve_related_candidate": true
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 205,
+      "name": "dropped-shoulder sleeve",
+      "supercategory": "nickname",
+      "level": 1,
+      "taxonomy_id": "att000211_00"
+    },
+    "sleeve_related_candidate": true
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 206,
+      "name": "raglan (sleeve)",
+      "supercategory": "nickname",
+      "level": 1,
+      "taxonomy_id": "att000212_00"
+    },
+    "sleeve_related_candidate": true
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 207,
+      "name": "cap (sleeve)",
+      "supercategory": "nickname",
+      "level": 1,
+      "taxonomy_id": "att000213_00"
+    },
+    "sleeve_related_candidate": true
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 208,
+      "name": "tulip (sleeve)",
+      "supercategory": "nickname",
+      "level": 1,
+      "taxonomy_id": "att000214_00"
+    },
+    "sleeve_related_candidate": true
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 209,
+      "name": "puff (sleeve)",
+      "supercategory": "nickname",
+      "level": 1,
+      "taxonomy_id": "att000215_00"
+    },
+    "sleeve_related_candidate": true
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 210,
+      "name": "bell (sleeve)",
+      "supercategory": "nickname",
+      "level": 1,
+      "taxonomy_id": "att000216_00"
+    },
+    "sleeve_related_candidate": true
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 211,
+      "name": "circular flounce (sleeve)",
+      "supercategory": "nickname",
+      "level": 1,
+      "taxonomy_id": "att000217_00"
+    },
+    "sleeve_related_candidate": true
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 212,
+      "name": "poet (sleeve)",
+      "supercategory": "nickname",
+      "level": 1,
+      "taxonomy_id": "att000218_00"
+    },
+    "sleeve_related_candidate": true
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 213,
+      "name": "dolman (sleeve), batwing (sleeve)",
+      "supercategory": "nickname",
+      "level": 1,
+      "taxonomy_id": "combo000005"
+    },
+    "sleeve_related_candidate": true
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 214,
+      "name": "bishop (sleeve)",
+      "supercategory": "nickname",
+      "level": 1,
+      "taxonomy_id": "att000221_00"
+    },
+    "sleeve_related_candidate": true
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 215,
+      "name": "leg of mutton (sleeve)",
+      "supercategory": "nickname",
+      "level": 1,
+      "taxonomy_id": "att000222_00"
+    },
+    "sleeve_related_candidate": true
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 216,
+      "name": "kimono (sleeve)",
+      "supercategory": "nickname",
+      "level": 1,
+      "taxonomy_id": "att000223_00"
+    },
+    "sleeve_related_candidate": true
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 217,
+      "name": "cargo (pocket)",
+      "supercategory": "nickname",
+      "level": 1,
+      "taxonomy_id": "att000224_00"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 218,
+      "name": "patch (pocket)",
+      "supercategory": "nickname",
+      "level": 1,
+      "taxonomy_id": "att000225_00"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 219,
+      "name": "welt (pocket)",
+      "supercategory": "nickname",
+      "level": 1,
+      "taxonomy_id": "att000226_00"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 220,
+      "name": "kangaroo (pocket)",
+      "supercategory": "nickname",
+      "level": 1,
+      "taxonomy_id": "att000227_00"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 221,
+      "name": "seam (pocket)",
+      "supercategory": "nickname",
+      "level": 1,
+      "taxonomy_id": "att000228_00"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 222,
+      "name": "slash (pocket)",
+      "supercategory": "nickname",
+      "level": 1,
+      "taxonomy_id": "att000229_00"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 223,
+      "name": "curved (pocket)",
+      "supercategory": "nickname",
+      "level": 1,
+      "taxonomy_id": "att000230_00"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 224,
+      "name": "flap (pocket)",
+      "supercategory": "nickname",
+      "level": 1,
+      "taxonomy_id": "att000231_00"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 225,
+      "name": "single breasted",
+      "supercategory": "opening type",
+      "level": 1,
+      "taxonomy_id": "att000233_00"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 226,
+      "name": "double breasted",
+      "supercategory": "opening type",
+      "level": 1,
+      "taxonomy_id": "att000234_00"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 227,
+      "name": "lace up",
+      "supercategory": "opening type",
+      "level": 1,
+      "taxonomy_id": "att000235_00"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 228,
+      "name": "wrapping",
+      "supercategory": "opening type",
+      "level": 1,
+      "taxonomy_id": "att000236_00"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 229,
+      "name": "zip-up",
+      "supercategory": "opening type",
+      "level": 1,
+      "taxonomy_id": "att000237_00"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 230,
+      "name": "fly (opening)",
+      "supercategory": "opening type",
+      "level": 1,
+      "taxonomy_id": "att000238_00"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 231,
+      "name": "chained (opening)",
+      "supercategory": "opening type",
+      "level": 1,
+      "taxonomy_id": "att000239_00"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 232,
+      "name": "buckled (opening)",
+      "supercategory": "opening type",
+      "level": 1,
+      "taxonomy_id": "att000240_00"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 233,
+      "name": "toggled (opening)",
+      "supercategory": "opening type",
+      "level": 1,
+      "taxonomy_id": "att000241_00"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 234,
+      "name": "no opening",
+      "supercategory": "opening type",
+      "level": 1,
+      "taxonomy_id": "att000242_00"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 281,
+      "name": "plastic",
+      "supercategory": "non-textile material type",
+      "level": 1,
+      "taxonomy_id": "att000298_00"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 282,
+      "name": "rubber",
+      "supercategory": "non-textile material type",
+      "level": 1,
+      "taxonomy_id": "att000299_00"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 283,
+      "name": "metal",
+      "supercategory": "non-textile material type",
+      "level": 1,
+      "taxonomy_id": "att000300_00"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 285,
+      "name": "feather",
+      "supercategory": "non-textile material type",
+      "level": 1,
+      "taxonomy_id": "att000302_00"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 286,
+      "name": "gem",
+      "supercategory": "non-textile material type",
+      "level": 1,
+      "taxonomy_id": "att000303_00"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 287,
+      "name": "bone",
+      "supercategory": "non-textile material type",
+      "level": 1,
+      "taxonomy_id": "att000304_00"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 288,
+      "name": "ivory",
+      "supercategory": "non-textile material type",
+      "level": 1,
+      "taxonomy_id": "att000305_00"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 289,
+      "name": "fur",
+      "supercategory": "non-textile material type",
+      "level": 1,
+      "taxonomy_id": "att000306_00"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 290,
+      "name": "suede",
+      "supercategory": "leather",
+      "level": 2,
+      "taxonomy_id": "att000308_00"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 291,
+      "name": "shearling",
+      "supercategory": "leather",
+      "level": 2,
+      "taxonomy_id": "att000309_00"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 292,
+      "name": "crocodile",
+      "supercategory": "leather",
+      "level": 2,
+      "taxonomy_id": "att000310_00"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 293,
+      "name": "snakeskin",
+      "supercategory": "leather",
+      "level": 2,
+      "taxonomy_id": "att000311_00"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 294,
+      "name": "wood",
+      "supercategory": "non-textile material type",
+      "level": 1,
+      "taxonomy_id": "att000312_00"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 295,
+      "name": "no non-textile material",
+      "supercategory": "non-textile material type",
+      "level": 1,
+      "taxonomy_id": "att000313_00"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 296,
+      "name": "burnout",
+      "supercategory": "textile finishing, manufacturing techniques",
+      "level": 1,
+      "taxonomy_id": "att000316_00"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 297,
+      "name": "distressed",
+      "supercategory": "textile finishing, manufacturing techniques",
+      "level": 1,
+      "taxonomy_id": "att000317_00"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 298,
+      "name": "washed",
+      "supercategory": "textile finishing, manufacturing techniques",
+      "level": 1,
+      "taxonomy_id": "att000318_00"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 299,
+      "name": "embossed",
+      "supercategory": "textile finishing, manufacturing techniques",
+      "level": 1,
+      "taxonomy_id": "att000319_00"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 300,
+      "name": "frayed",
+      "supercategory": "textile finishing, manufacturing techniques",
+      "level": 1,
+      "taxonomy_id": "att000320_00"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 301,
+      "name": "printed",
+      "supercategory": "textile finishing, manufacturing techniques",
+      "level": 1,
+      "taxonomy_id": "att000321_00"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 302,
+      "name": "ruched",
+      "supercategory": "textile finishing, manufacturing techniques",
+      "level": 1,
+      "taxonomy_id": "att000322_00"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 303,
+      "name": "quilted",
+      "supercategory": "textile finishing, manufacturing techniques",
+      "level": 1,
+      "taxonomy_id": "att000323_00"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 304,
+      "name": "pleat",
+      "supercategory": "textile finishing, manufacturing techniques",
+      "level": 1,
+      "taxonomy_id": "att000324_00"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 305,
+      "name": "gathering",
+      "supercategory": "textile finishing, manufacturing techniques",
+      "level": 1,
+      "taxonomy_id": "att000325_00"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 306,
+      "name": "smocking",
+      "supercategory": "textile finishing, manufacturing techniques",
+      "level": 1,
+      "taxonomy_id": "att000326_00"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 307,
+      "name": "tiered",
+      "supercategory": "textile finishing, manufacturing techniques",
+      "level": 1,
+      "taxonomy_id": "att000327_00"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 308,
+      "name": "cutout",
+      "supercategory": "textile finishing, manufacturing techniques",
+      "level": 1,
+      "taxonomy_id": "att000328_00"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 309,
+      "name": "slit",
+      "supercategory": "textile finishing, manufacturing techniques",
+      "level": 1,
+      "taxonomy_id": "att000329_00"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 310,
+      "name": "perforated",
+      "supercategory": "textile finishing, manufacturing techniques",
+      "level": 1,
+      "taxonomy_id": "att000330_00"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 311,
+      "name": "lining",
+      "supercategory": "textile finishing, manufacturing techniques",
+      "level": 1,
+      "taxonomy_id": "att000331_00"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 312,
+      "name": "applique(a)",
+      "supercategory": "textile finishing, manufacturing techniques",
+      "level": 1,
+      "taxonomy_id": "att000332_00"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 313,
+      "name": "bead(a)",
+      "supercategory": "textile finishing, manufacturing techniques",
+      "level": 1,
+      "taxonomy_id": "att000333_00"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 314,
+      "name": "rivet(a)",
+      "supercategory": "textile finishing, manufacturing techniques",
+      "level": 1,
+      "taxonomy_id": "att000334_00"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 315,
+      "name": "sequin(a)",
+      "supercategory": "textile finishing, manufacturing techniques",
+      "level": 1,
+      "taxonomy_id": "att000335_00"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 316,
+      "name": "no special manufacturing technique",
+      "supercategory": "textile finishing, manufacturing techniques",
+      "level": 1,
+      "taxonomy_id": "att000336_00"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 317,
+      "name": "plain (pattern)",
+      "supercategory": "textile pattern",
+      "level": 1,
+      "taxonomy_id": "att000338_00"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 318,
+      "name": "abstract",
+      "supercategory": "textile pattern",
+      "level": 1,
+      "taxonomy_id": "att000339_00"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 319,
+      "name": "cartoon",
+      "supercategory": "textile pattern",
+      "level": 1,
+      "taxonomy_id": "att000340_00"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 320,
+      "name": "letters, numbers",
+      "supercategory": "textile pattern",
+      "level": 1,
+      "taxonomy_id": "combo000009"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 321,
+      "name": "camouflage",
+      "supercategory": "textile pattern",
+      "level": 1,
+      "taxonomy_id": "att000343_00"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 322,
+      "name": "check",
+      "supercategory": "textile pattern",
+      "level": 1,
+      "taxonomy_id": "att000344_00"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 323,
+      "name": "dot",
+      "supercategory": "textile pattern",
+      "level": 1,
+      "taxonomy_id": "att000345_00"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 324,
+      "name": "fair isle",
+      "supercategory": "textile pattern",
+      "level": 1,
+      "taxonomy_id": "att000346_00"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 325,
+      "name": "floral",
+      "supercategory": "textile pattern",
+      "level": 1,
+      "taxonomy_id": "att000347_00"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 326,
+      "name": "geometric",
+      "supercategory": "textile pattern",
+      "level": 1,
+      "taxonomy_id": "att000348_00"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 327,
+      "name": "paisley",
+      "supercategory": "textile pattern",
+      "level": 1,
+      "taxonomy_id": "att000349_00"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 328,
+      "name": "stripe",
+      "supercategory": "textile pattern",
+      "level": 1,
+      "taxonomy_id": "att000350_00"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 329,
+      "name": "houndstooth (pattern)",
+      "supercategory": "textile pattern",
+      "level": 1,
+      "taxonomy_id": "att000351_00"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 330,
+      "name": "herringbone (pattern)",
+      "supercategory": "textile pattern",
+      "level": 1,
+      "taxonomy_id": "att000352_00"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 331,
+      "name": "chevron",
+      "supercategory": "textile pattern",
+      "level": 1,
+      "taxonomy_id": "att000353_00"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 332,
+      "name": "argyle",
+      "supercategory": "textile pattern",
+      "level": 1,
+      "taxonomy_id": "att000354_00"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 333,
+      "name": "leopard",
+      "supercategory": "animal",
+      "level": 2,
+      "taxonomy_id": "att000356_00"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 334,
+      "name": "snakeskin (pattern)",
+      "supercategory": "animal",
+      "level": 2,
+      "taxonomy_id": "att000357_00"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 335,
+      "name": "cheetah",
+      "supercategory": "animal",
+      "level": 2,
+      "taxonomy_id": "att000358_00"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 336,
+      "name": "peacock",
+      "supercategory": "animal",
+      "level": 2,
+      "taxonomy_id": "att000359_00"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 337,
+      "name": "zebra",
+      "supercategory": "animal",
+      "level": 2,
+      "taxonomy_id": "att000360_00"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 338,
+      "name": "giraffe",
+      "supercategory": "animal",
+      "level": 2,
+      "taxonomy_id": "att000361_00"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 339,
+      "name": "toile de jouy",
+      "supercategory": "textile pattern",
+      "level": 1,
+      "taxonomy_id": "att000362_00"
+    },
+    "sleeve_related_candidate": false
+  },
+  {
+    "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "definition": {
+      "id": 340,
+      "name": "plant",
+      "supercategory": "textile pattern",
+      "level": 1,
+      "taxonomy_id": "att000363_00"
+    },
+    "sleeve_related_candidate": false
+  }
+]

@@ -1,0 +1,14 @@
+{
+  "status": "diagnostic_completed",
+  "images": 8,
+  "instances": 34,
+  "input_report": "/workspace/fashion_multimodal_analysis/reports/reruns/recovery_20261008/prd31_guard_regression_20261008_123738",
+  "clip_model": "openai/clip-vit-base-patch32",
+  "category_disagreement_counts": {
+    "raw_full": 17,
+    "masked_full": 20
+  },
+  "predictions_modified": false,
+  "accuracy_evaluated": false,
+  "note": "CLIP disagreement is a review signal, not a confirmed correction. Scores are prompt-relative, not calibrated probabilities."
+}

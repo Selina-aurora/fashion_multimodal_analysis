@@ -1,0 +1,22 @@
+{
+  "confirmed_images": 48,
+  "usable_images": 36,
+  "cuff_boxes": 43,
+  "splits": {
+    "train": {
+      "present": 18,
+      "absent": 9
+    },
+    "development_val": {
+      "present": 6,
+      "absent": 3
+    },
+    "excluded_ambiguous": {
+      "ambiguous": 12
+    }
+  },
+  "source_file_hashes_unique": 48,
+  "manifest_sha256": "85c9d2e491d1c2bbe22316867cef9081b39f4d46813056238c5f6a636ead811f",
+  "formal_accuracy": null,
+  "model_training_status": "NOT_STARTED"
+}

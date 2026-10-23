@@ -1,0 +1,68 @@
+{
+  "status": "PILOT8_FROZEN_CLASSIFIER_INFERENCE_COMPLETED",
+  "interpretation": "Eight reviewed train-origin images were not part of the historical 44-label head training/dev split; diagnostic only, not formal PRD acceptance.",
+  "n": 8,
+  "manual_class_counts": {
+    "elbow": 3,
+    "short": 2,
+    "cap": 3
+  },
+  "supervised_head": {
+    "eligible": 8,
+    "correct": 2,
+    "accuracy": 0.25,
+    "by_class": {
+      "cap": {
+        "n": 3,
+        "correct": 0
+      },
+      "short": {
+        "n": 2,
+        "correct": 0
+      },
+      "elbow": {
+        "n": 3,
+        "correct": 2
+      }
+    }
+  },
+  "same_raw_view_prompt_baseline": {
+    "eligible": 8,
+    "correct": 3,
+    "accuracy": 0.375,
+    "by_class": {
+      "cap": {
+        "n": 3,
+        "correct": 1
+      },
+      "short": {
+        "n": 2,
+        "correct": 1
+      },
+      "elbow": {
+        "n": 3,
+        "correct": 1
+      }
+    }
+  },
+  "paired": {
+    "head_only": 1,
+    "prompt_only": 2,
+    "both_wrong": 4,
+    "both_correct": 1
+  },
+  "no_training": true,
+  "production_modified": false,
+  "continuous_ratio_model_evaluated": false,
+  "reason": "Human ratios are reference annotations, not automated continuous-ratio predictions.",
+  "trained_head_sha256": "826bf1cdd911981fa5be8b176c76e4240a08fb01e56c01d5dade83011beec17c",
+  "pilot_sha256": "cb34eff7920e99c6803546afc4aa29c5ae3c0a1adacd313ecd0a2619cc8cef15",
+  "train_csv_sha256": "e8c277055efe4d042b4353bf2d4553bddddc7706eead9398f07f5efcd90bb38f",
+  "val_csv_sha256": "39141f545ea5512d16ed074788b6f98474b33baff111d3b663ec0ffcc4c40b93",
+  "limitations": [
+    "Only cap/short/elbow represented; no sleeveless/three-quarter/long.",
+    "Source data were previously selected and reviewed; cannot claim independent blind test.",
+    "Scores are not calibrated, sample size is 8.",
+    "ROI uses ground-truth garment bbox, not end-to-end predicted ROI."
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "modules": {
+    "ultralytics": false,
+    "mediapipe": false,
+    "mmpose": false,
+    "torchvision": true,
+    "cv2": false
+  },
+  "pose_weights": []
+}

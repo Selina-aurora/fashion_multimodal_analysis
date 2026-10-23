@@ -1,0 +1,296 @@
+{
+  "schema_version": "sleeve_continuous_pilot_v1",
+  "packet_id": "sleeve_apparent_2d_trial12_20261012_v1",
+  "manifest_digest": "0911468da7d54cbcafe53b449f11db787fc9dc5c00c5272dcbc76204e11efc3a",
+  "exported_at": "2026-10-12T03:09:12.182Z",
+  "source_review_sha256": "d1b1df2ba07ae2e1d9fcb089ded2efb91b8f556f0c76974d2d0d65233f35f441",
+  "quality_checks_version": "20261012_v2",
+  "measurement_scope": "single-side apparent 2D coverage; feasibility pilot",
+  "annotations": [
+    {
+      "record_id": "df2_targeted150_20261008_00228",
+      "source_image_sha256": "a2d2d1dbd91dea36c8290728b6d5762eacf3929a76551f698e0cc63b3df0fe6f",
+      "reviewer": "qyx",
+      "side": "image_left",
+      "state": "sleeveless",
+      "points": {},
+      "reason": "",
+      "review_status": "confirmed",
+      "same_arm_confirmed": false,
+      "sleeveless_confirmed": true,
+      "ratio": 0,
+      "measurement_method": "visible_sleeve_absence",
+      "confirmed_at": "2026-10-12T02:54:19.071Z"
+    },
+    {
+      "record_id": "df2_targeted150_20261008_00186",
+      "source_image_sha256": "80e5ef8bc1b6013c2edc97e734277535d8b294230fb134a11660b1e8adb41a61",
+      "reviewer": "qyx",
+      "side": "image_left",
+      "state": "sleeveless",
+      "points": {},
+      "reason": "",
+      "review_status": "confirmed",
+      "same_arm_confirmed": false,
+      "sleeveless_confirmed": true,
+      "ratio": 0,
+      "measurement_method": "visible_sleeve_absence",
+      "confirmed_at": "2026-10-12T02:54:11.141Z"
+    },
+    {
+      "record_id": "v5_train_01994",
+      "source_image_sha256": "1934f1e03cdc21a7b1ff3d5d5455f1c2b27272511cd41c27cd5592cadd500e9f",
+      "reviewer": "qyx",
+      "side": "image_left",
+      "state": "sleeveless",
+      "points": {},
+      "reason": "",
+      "review_status": "confirmed",
+      "same_arm_confirmed": false,
+      "sleeveless_confirmed": true,
+      "ratio": 0,
+      "measurement_method": "visible_sleeve_absence",
+      "confirmed_at": "2026-10-12T02:53:58.854Z"
+    },
+    {
+      "record_id": "v5_train_01373",
+      "source_image_sha256": "270c2917cf05a24ea4dc29c4d2aa5c35e552b2282a304633ee81f55dfa1a4915",
+      "reviewer": "qyx",
+      "side": "image_left",
+      "state": "unmeasurable",
+      "points": {
+        "shoulder": [
+          0.433671875,
+          0.0019218825073535444
+        ],
+        "elbow": [
+          0.451671875,
+          0.16242250946292758
+        ],
+        "wrist": [
+          0.401671875,
+          0.31992312469970585
+        ],
+        "cuff": [
+          0.417671875,
+          0.021421958679526093
+        ]
+      },
+      "reason": "肩关节中心被画面上缘截断，无法可靠确定完整手臂长度。",
+      "review_status": "confirmed",
+      "same_arm_confirmed": false,
+      "sleeveless_confirmed": false,
+      "ratio": null,
+      "projection_distance_ratio": 0.0420848995477914,
+      "arm_pixels": 322.9707281891715,
+      "elbow_angle_deg": 161.79961740591818,
+      "recheck_note": "第4张：肩关节位置被画面上缘截断，原肩点贴在图像边界，无法可靠确定完整手臂长度。建议保留为“无法可靠测量”，核对下方原因后确认。",
+      "source_review_sha256": "d1b1df2ba07ae2e1d9fcb089ded2efb91b8f556f0c76974d2d0d65233f35f441",
+      "measurement_method": "not_measured",
+      "confirmed_at": "2026-10-12T03:03:36.149Z"
+    },
+    {
+      "record_id": "v5_train_00474",
+      "source_image_sha256": "158f580676c76280f790d991f8b5cc1619fa15ace16c16cc2328893b95178c94",
+      "reviewer": "qyx",
+      "side": "image_left",
+      "state": "unmeasurable",
+      "points": {},
+      "reason": "人物侧身，肩部及袖口部分可见，但肩部位置受包带干扰，肘部和手腕关键点无法可靠定位。",
+      "review_status": "confirmed",
+      "same_arm_confirmed": false,
+      "sleeveless_confirmed": false,
+      "ratio": null,
+      "measurement_method": "not_measured",
+      "confirmed_at": "2026-10-12T02:49:30.663Z"
+    },
+    {
+      "record_id": "v5_train_01252",
+      "source_image_sha256": "22d2d9bf3217227affc5a38345224dcb309b6d9196a070de78447c765d2a1b83",
+      "reviewer": "qyx",
+      "side": "image_right",
+      "state": "measurable",
+      "points": {
+        "shoulder": [
+          0.4828486081932773,
+          0.22467275262793995
+        ],
+        "elbow": [
+          0.5101595325630253,
+          0.3521732506767605
+        ],
+        "wrist": [
+          0.5794872636554622,
+          0.49017378974136616
+        ],
+        "cuff": [
+          0.518562893907563,
+          0.3161731100512111
+        ]
+      },
+      "reason": "",
+      "review_status": "confirmed",
+      "same_arm_confirmed": true,
+      "sleeveless_confirmed": false,
+      "ratio": 0.34218535249586013,
+      "projection_distance_ratio": 0.0412697095039908,
+      "arm_pixels": 275.59273103194505,
+      "elbow_angle_deg": 168.9628510588159,
+      "measurement_method": "projected_arm_polyline_v1",
+      "confirmed_at": "2026-10-12T02:46:03.714Z"
+    },
+    {
+      "record_id": "v5_train_00939",
+      "source_image_sha256": "f9a183e41a0c51167c49fe7cde454b8706496a143439702fa9de503b566dd48e",
+      "reviewer": "qyx",
+      "side": "image_right",
+      "state": "unmeasurable",
+      "points": {},
+      "reason": "宽松不对称袖型遮挡肘部，无法准确确定肘关节中心及完整手臂关键点。",
+      "review_status": "confirmed",
+      "same_arm_confirmed": false,
+      "sleeveless_confirmed": false,
+      "ratio": null,
+      "confirmed_at": "2026-10-12T02:45:28.787Z",
+      "measurement_method": "not_measured"
+    },
+    {
+      "record_id": "v5_train_00933",
+      "source_image_sha256": "e23a9377cec3eca5b46d5ca8514cb75600844f276be72dbc05badd9cd54c4f9c",
+      "reviewer": "qyx",
+      "side": "image_right",
+      "state": "unmeasurable",
+      "points": {},
+      "reason": "人物侧身，宽松袖子遮挡肘部，手臂姿态不清，无法可靠定位四个关键点。",
+      "review_status": "confirmed",
+      "same_arm_confirmed": false,
+      "sleeveless_confirmed": false,
+      "ratio": null,
+      "measurement_method": "not_measured",
+      "confirmed_at": "2026-10-12T02:41:27.089Z"
+    },
+    {
+      "record_id": "v5_train_01298",
+      "source_image_sha256": "65ea98489c9aa2dab26bd7f03284da85db7918d4a8b878cc312e2c1560bdb135",
+      "reviewer": "qyx",
+      "side": "image_right",
+      "state": "measurable",
+      "points": {
+        "shoulder": [
+          0.5716042658608149,
+          0.24192282001101567
+        ],
+        "elbow": [
+          0.5626087109299507,
+          0.37242332977863196
+        ],
+        "wrist": [
+          0.5805998207916792,
+          0.48942378681166726
+        ],
+        "cuff": [
+          0.5895953757225434,
+          0.4534236461861179
+        ]
+      },
+      "reason": "",
+      "review_status": "confirmed",
+      "same_arm_confirmed": true,
+      "sleeveless_confirmed": false,
+      "ratio": 0.8582085657784206,
+      "projection_distance_ratio": 0.03883860166454124,
+      "arm_pixels": 248.25260558418853,
+      "elbow_angle_deg": 171.51153507793222,
+      "measurement_method": "projected_arm_polyline_v1",
+      "confirmed_at": "2026-10-12T02:37:25.542Z"
+    },
+    {
+      "record_id": "v5_train_01963",
+      "source_image_sha256": "d9c5409cfb2c3469ea3292212ada1f1e07a99b9351e8aa6fd8ce82cfa672582b",
+      "reviewer": "qyx",
+      "side": "image_left",
+      "state": "measurable",
+      "points": {
+        "shoulder": [
+          0.3561633428300095,
+          0.23442279071402622
+        ],
+        "elbow": [
+          0.32942070275403607,
+          0.3664233063410404
+        ],
+        "wrist": [
+          0.32455840455840457,
+          0.5224239157184207
+        ],
+        "cuff": [
+          0.3537321937321937,
+          0.438423587592139
+        ]
+      },
+      "reason": "",
+      "review_status": "confirmed",
+      "same_arm_confirmed": true,
+      "sleeveless_confirmed": false,
+      "ratio": 0.7082553763766845,
+      "projection_distance_ratio": 0.05667318237445067,
+      "arm_pixels": 289.0572438889334,
+      "elbow_angle_deg": 173.97663766540037,
+      "measurement_method": "projected_arm_polyline_v1",
+      "confirmed_at": "2026-10-12T02:36:57.240Z"
+    },
+    {
+      "record_id": "v5_train_01592",
+      "source_image_sha256": "aa99523ead533c94e8df668d2aeaa165aab97d3450d5a0da296e32d91b58b1a9",
+      "reviewer": "qyx",
+      "side": "image_right",
+      "state": "unmeasurable",
+      "points": {},
+      "reason": "腕部及袖口受到遮挡，无法可靠确定关键点位置",
+      "review_status": "confirmed",
+      "same_arm_confirmed": false,
+      "sleeveless_confirmed": false,
+      "ratio": null,
+      "confirmed_at": "2026-10-12T02:37:01.983Z",
+      "measurement_method": "not_measured"
+    },
+    {
+      "record_id": "v5_train_00569",
+      "source_image_sha256": "4c78e17f2d40831881362bdc54924382b1b763841efea44878ef169285857e53",
+      "reviewer": "qyx",
+      "side": "image_left",
+      "state": "measurable",
+      "points": {
+        "shoulder": [
+          0.3372220068374863,
+          0.20200860159609998
+        ],
+        "elbow": [
+          0.33271067564233603,
+          0.3925093457396318
+        ],
+        "wrist": [
+          0.3575229972156628,
+          0.5395099199606248
+        ],
+        "cuff": [
+          0.3733126563986889,
+          0.5350099023824312
+        ]
+      },
+      "reason": "",
+      "review_status": "confirmed",
+      "same_arm_confirmed": true,
+      "sleeveless_confirmed": false,
+      "ratio": 0.9902475581129676,
+      "projection_distance_ratio": 0.032313823635937725,
+      "arm_pixels": 338.4480793740328,
+      "elbow_angle_deg": 172.6933692326632,
+      "recheck_note": "第12张：3号腕点位于前臂，明显高于手与前臂连接处，导致旧工具把比例截到1。先点“3 腕”，在真正的腕关节中心重新点选；再核对4号袖口及另外两点。若腕部仍被袖子遮挡而无法判断，选“无法可靠测量”。不要为了让比例接近1而移动点位。",
+      "source_review_sha256": "d1b1df2ba07ae2e1d9fcb089ded2efb91b8f556f0c76974d2d0d65233f35f441",
+      "wrist_overshoot_ratio": 0,
+      "measurement_method": "projected_arm_polyline_v1",
+      "confirmed_at": "2026-10-12T03:09:09.248Z"
+    }
+  ]
+}

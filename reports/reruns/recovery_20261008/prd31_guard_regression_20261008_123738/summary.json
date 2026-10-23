@@ -1,0 +1,25 @@
+{
+  "status": "smoke_completed",
+  "images": 8,
+  "predicted_instances": 34,
+  "pipeline_status_counts": {
+    "completed": 8
+  },
+  "failed_downstream_calls": 0,
+  "interface_issues": 0,
+  "images_with_no_predictions": 0,
+  "review_flag_counts": {
+    "overlapping_instances_require_review": 32,
+    "cuff_applicability_requires_review": 2
+  },
+  "regression_patch_version": "semantic_guards_20261008_v1",
+  "accuracy_evaluated": false,
+  "prd_acceptance_evaluated": false,
+  "timing_note": "Single-pass diagnostic includes first-call effects; not acceptance latency. Wall time excludes image reading and saving.",
+  "review_note": "Use review.jpg and predictions.json for manual semantic review. Zero predictions do not prove absence or quantify missed GT.",
+  "input_sha256": {
+    "segmentation_checkpoint": "c5ba795225349b1c521aac0517ac7c493d9818dcc17d558ac4a3f6f8669452f0",
+    "train_manifest": "e8c277055efe4d042b4353bf2d4553bddddc7706eead9398f07f5efcd90bb38f",
+    "val_manifest": "39141f545ea5512d16ed074788b6f98474b33baff111d3b663ec0ffcc4c40b93"
+  }
+}

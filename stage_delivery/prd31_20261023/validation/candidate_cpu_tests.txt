@@ -1,0 +1,17 @@
+test_child_timeout_kills_process_and_preserves_log (test_workflow.WorkflowTests.test_child_timeout_kills_process_and_preserves_log) ... ok
+test_compile_benchmark_counts_both_modes_and_stops_on_output_drift (test_workflow.WorkflowTests.test_compile_benchmark_counts_both_modes_and_stops_on_output_drift) ... ok
+test_compiler_fallback_without_actual_graph_execution_is_rejected (test_workflow.WorkflowTests.test_compiler_fallback_without_actual_graph_execution_is_rejected) ... ok
+test_entry_uses_verified_sam_path_and_exports_linked_masks (test_workflow.WorkflowTests.test_entry_uses_verified_sam_path_and_exports_linked_masks) ... ok
+test_manifest_path_resolution_and_unknown_schema_fail (test_workflow.WorkflowTests.test_manifest_path_resolution_and_unknown_schema_fail) ... ok
+test_new_image_regression_is_one_pass_not_accuracy (test_workflow.WorkflowTests.test_new_image_regression_is_one_pass_not_accuracy) ... ok
+test_paired_core_failure_restores_every_method (test_workflow.WorkflowTests.test_paired_core_failure_restores_every_method) ... ok
+test_paired_core_wrappers_stable_inputs_reprepared_and_models_recomputed (test_workflow.WorkflowTests.test_paired_core_wrappers_stable_inputs_reprepared_and_models_recomputed) ... ok
+test_query_selection_reproducible_stratified_and_excludes_not_applicable (test_workflow.WorkflowTests.test_query_selection_reproducible_stratified_and_excludes_not_applicable) ... ok
+test_sampler_never_opens_sealed_names_and_filters_duplicates (test_workflow.WorkflowTests.test_sampler_never_opens_sealed_names_and_filters_duplicates) ... ok
+test_tracked_backend_records_execution_and_preserves_boxed_call_marker (test_workflow.WorkflowTests.test_tracked_backend_records_execution_and_preserves_boxed_call_marker) ... ok
+
+----------------------------------------------------------------------
+Ran 11 tests in 0.279s
+
+OK
+

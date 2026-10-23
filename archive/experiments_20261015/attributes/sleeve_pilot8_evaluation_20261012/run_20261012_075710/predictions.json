@@ -1,0 +1,82 @@
+[
+  {
+    "record_id": "v5_train_00415",
+    "truth": "elbow",
+    "human_ratio_gt_not_model_prediction": 0.545583389491745,
+    "supervised_head": "elbow",
+    "supervised_score_uncalibrated": 0.29564541578292847,
+    "prompt_baseline": "short",
+    "prompt_score_uncalibrated": 0.26276659965515137,
+    "source_image_sha256": "f62e1c9d4a0cd7015a047e77172fc905c81f9e85fdca27f83dc44588f04add33"
+  },
+  {
+    "record_id": "v5_train_00484",
+    "truth": "short",
+    "human_ratio_gt_not_model_prediction": 0.27903210170665765,
+    "supervised_head": "elbow",
+    "supervised_score_uncalibrated": 0.6047046780586243,
+    "prompt_baseline": "short",
+    "prompt_score_uncalibrated": 0.26481980085372925,
+    "source_image_sha256": "53b9adecbc7d65a901794134f43175bf8da7ee51c029157d466be2dee6df293b"
+  },
+  {
+    "record_id": "v5_train_00533",
+    "truth": "short",
+    "human_ratio_gt_not_model_prediction": 0.2559956297099396,
+    "supervised_head": "long",
+    "supervised_score_uncalibrated": 0.25532156229019165,
+    "prompt_baseline": "cap",
+    "prompt_score_uncalibrated": 0.44592058658599854,
+    "source_image_sha256": "854fe32c69f6a8718fe9215fcd84b2619e24b9830d2a96a19d5277babde3c1c6"
+  },
+  {
+    "record_id": "v5_train_01055",
+    "truth": "cap",
+    "human_ratio_gt_not_model_prediction": 0.1535482485663157,
+    "supervised_head": "sleeveless",
+    "supervised_score_uncalibrated": 0.22380846738815308,
+    "prompt_baseline": "cap",
+    "prompt_score_uncalibrated": 0.42322173714637756,
+    "source_image_sha256": "b364e6ed940f49101bea2c02cacac4d765e02916f1297867e5b1266cd356f765"
+  },
+  {
+    "record_id": "v5_train_01155",
+    "truth": "elbow",
+    "human_ratio_gt_not_model_prediction": 0.5563221810825029,
+    "supervised_head": "elbow",
+    "supervised_score_uncalibrated": 0.30475690960884094,
+    "prompt_baseline": "elbow",
+    "prompt_score_uncalibrated": 0.25889793038368225,
+    "source_image_sha256": "f63325a85091ce7c00b169f3f6e73b9c78f9c0785458e9319ce5680abc16e916"
+  },
+  {
+    "record_id": "v5_train_01230",
+    "truth": "cap",
+    "human_ratio_gt_not_model_prediction": 0.11800972087733183,
+    "supervised_head": "short",
+    "supervised_score_uncalibrated": 0.4663475751876831,
+    "prompt_baseline": "long",
+    "prompt_score_uncalibrated": 0.3535705804824829,
+    "source_image_sha256": "51322056bbbf477b41f35a3954839164127f17e6c3c19fbf368252528f16b986"
+  },
+  {
+    "record_id": "v5_train_01445",
+    "truth": "cap",
+    "human_ratio_gt_not_model_prediction": 0.08302126853599445,
+    "supervised_head": "short",
+    "supervised_score_uncalibrated": 0.4318046271800995,
+    "prompt_baseline": "sleeveless",
+    "prompt_score_uncalibrated": 0.7425562143325806,
+    "source_image_sha256": "36ec95313761a48cdc46ea026d9067397320a69938644dac5f50b3517552a887"
+  },
+  {
+    "record_id": "v5_train_01508",
+    "truth": "elbow",
+    "human_ratio_gt_not_model_prediction": 0.5935462080271263,
+    "supervised_head": "short",
+    "supervised_score_uncalibrated": 0.31338027119636536,
+    "prompt_baseline": "short",
+    "prompt_score_uncalibrated": 0.4218275249004364,
+    "source_image_sha256": "edc14f9cf4b0774f876108b84b21cec714f112e4813903d32e256745fbe7e886"
+  }
+]

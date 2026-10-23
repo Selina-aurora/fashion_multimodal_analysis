@@ -1,0 +1,11 @@
+{
+  "status": "DRY_RUN_PASS",
+  "project_files_modified": false,
+  "formal_semantic_accuracy": false,
+  "selection": {
+    "reference_cases": 12,
+    "candidate_count": 24,
+    "unique_val_images": 32,
+    "path_exclusion_only": true
+  }
+}

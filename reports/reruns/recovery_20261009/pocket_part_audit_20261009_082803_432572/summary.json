@@ -1,0 +1,55 @@
+{
+  "status": "NATIVE_POCKET_PART_AUDIT_COMPLETED",
+  "raw_coverage": [
+    {
+      "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+      "pocket_part_categories": [
+        {
+          "id": 32,
+          "name": "pocket",
+          "supercategory": "garment parts",
+          "level": 2,
+          "taxonomy_id": "obj000055_00"
+        }
+      ],
+      "native_pocket_parts": 541
+    }
+  ],
+  "all_native_pocket_category_counts": {
+    "pocket": 541
+  },
+  "all_native_pocket_attribute_names": {
+    "patch (pocket)": 119,
+    "slash (pocket)": 108,
+    "flap (pocket)": 113,
+    "curved (pocket)": 127,
+    "welt (pocket)": 55,
+    "seam (pocket)": 3,
+    "kangaroo (pocket)": 6,
+    "cargo (pocket)": 7
+  },
+  "pocket_parts_on_selected_garment_images": 208,
+  "selected_image_part_attribute_names": {
+    "slash (pocket)": 53,
+    "flap (pocket)": 44,
+    "patch (pocket)": 42,
+    "curved (pocket)": 45,
+    "welt (pocket)": 18,
+    "cargo (pocket)": 4,
+    "kangaroo (pocket)": 2
+  },
+  "train_garments_with_same_image_pocket_parts": 170,
+  "val_garments_with_same_image_pocket_parts": 5,
+  "selected_fashionpedia_garments_by_split": {
+    "train": 534,
+    "val": 13
+  },
+  "ownership_confirmed": false,
+  "training_started": false,
+  "formal_prd_acceptance": false,
+  "limitations": [
+    "Same-image pocket and garment annotations do not establish ownership.",
+    "Native pocket annotations must be visually checked before use as region ground truth.",
+    "No automatically generated garment labels; no train/val merging."
+  ]
+}

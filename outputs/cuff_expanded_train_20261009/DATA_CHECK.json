@@ -1,0 +1,8 @@
+{
+  "manifest_sha256": "94ad937c80a9ecc099d96ff0f5d833f05bcd22a9a3f58de3ce7f8d994261fb58",
+  "train_images": 67,
+  "development_val_images": 9,
+  "usable_images": 76,
+  "boxes": 98,
+  "ambiguous_excluded": 20
+}

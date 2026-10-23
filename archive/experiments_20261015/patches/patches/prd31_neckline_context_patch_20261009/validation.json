@@ -1,0 +1,12 @@
+{
+  "new_unit_tests_passed": 11,
+  "existing_guard_tests_passed": 10,
+  "checks": [
+    "Python compilation",
+    "paired report detects non-neckline drift",
+    "installer backs up existing backend",
+    "installer rejects unexpected source version"
+  ],
+  "model_inference_run": false,
+  "accuracy_evaluated": false
+}

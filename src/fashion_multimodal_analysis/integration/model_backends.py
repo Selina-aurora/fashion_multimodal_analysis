@@ -25,6 +25,16 @@ from fashion_multimodal_analysis.integration.pipeline import (
     crop_bounds,
     roi_images,
 )
+from fashion_multimodal_analysis.integration.region_semantics import (
+    REGION_PROMPTS,
+    phrase_matches,
+    supports_region,
+)
+
+
+from fashion_multimodal_analysis.integration.quality_guards import (
+    LOCAL_REGIONS, constrain_local_mask, proposal_area_ratio,
+)
 
 
 class ModelBackends:
@@ -95,6 +105,7 @@ class ModelBackends:
             cp,
             digest(resolve_path(config["train_manifest"])),
             digest(resolve_path(config["val_manifest"])),
+            settings=config.get("checkpoint_settings"),
         )
         saved = cp.get("args", {})
         self.segment_model = build_evaluation_model(
@@ -225,13 +236,6 @@ class ModelBackends:
         Returns:
             本步骤计算或解析得到的结果；函数体保留了具体结构和空值处理规则。
         """
-        from fashion_multimodal_analysis.grounding.refinement.evaluate_sam_refinement_9case import (
-            run_sam,
-        )
-        from fashion_multimodal_analysis.grounding.refinement.run_shoulder_waist_pattern_groundingdino_refinement_v1 import (
-            run_grounding_dino,
-        )
-
         def infer() -> dict[str, Any]:
             """推理。
 
@@ -242,13 +246,30 @@ class ModelBackends:
             Raises:
                 ValueError: SAM mask shape differs from garment crop
             """
+            strict_regions = self.config.get("strict_region_grounding", False)
+            if strict_regions and not supports_region(roi.category, region):
+                return {
+                    "status": "not_applicable",
+                    "target_region": region,
+                    "bbox": None,
+                    "mask": None,
+                    "routing_note": "Structural clothing query excluded for predicted category; not an absence label.",
+                }
+            from fashion_multimodal_analysis.grounding.refinement.evaluate_sam_refinement_9case import (
+                run_sam,
+            )
+            from fashion_multimodal_analysis.grounding.refinement.run_shoulder_waist_pattern_groundingdino_refinement_v1 import (
+                run_grounding_dino,
+            )
             crop, garment_mask, origin = roi_images(image, roi)
             isolated = Image.composite(
                 crop, Image.new("RGB", crop.size, "white"), garment_mask
             )
             detections, _ = run_grounding_dino(
-                isolated,
-                PROMPTS[region],
+                # In the strict diagnostic path retain neck/skin/background context.
+                # The predicted garment mask still constrains the SAM output below.
+                crop if strict_regions else isolated,
+                REGION_PROMPTS[region] if strict_regions else PROMPTS[region],
                 self.config["grounding_box_threshold"],
                 self.config["grounding_text_threshold"],
                 self.ground_processor,
@@ -260,6 +281,17 @@ class ModelBackends:
                 for d in detections
                 if valid_box(d["box"]) and math.isfinite(d["score"])
             ]
+            if strict_regions:
+                rejected = [d for d in detections if not phrase_matches(region, d["label"])]
+                detections = [d for d in detections if phrase_matches(region, d["label"])]
+                if not detections and rejected:
+                    return {
+                        "status": "rejected_wrong_phrase",
+                        "target_region": region,
+                        "bbox": None,
+                        "mask": None,
+                        "rejected_proposals": rejected,
+                    }
             if not detections:
                 return {
                     "status": "missed",
@@ -267,12 +299,50 @@ class ModelBackends:
                     "bbox": None,
                     "mask": None,
                 }
-            proposal = detections[0]
-            local_box = crop_bounds(proposal["box"], crop.size)
+            # DINO 的输出顺序不是排序接口；显式按分数选择合法候选。
+            # 阈值只控制几何保护，不改变 PRD 验收目标。
+            detections.sort(key=lambda candidate: -float(candidate["score"]))
+            geometry_rejections = []
+            chosen = None
+            limit = float(self.config.get("max_local_region_crop_area_ratio", 0.65))
+            if not 0 < limit <= 1:
+                raise ValueError("max_local_region_crop_area_ratio must be in (0, 1]")
+            for candidate in detections:
+                try:
+                    candidate_box = crop_bounds(candidate["box"], crop.size)
+                except ValueError:
+                    geometry_rejections.append({"reason": "outside_crop", "proposal": candidate})
+                    continue
+                area_ratio = proposal_area_ratio(candidate_box, crop.size)
+                if strict_regions and region in LOCAL_REGIONS and area_ratio > limit:
+                    geometry_rejections.append({
+                        "reason": "local_region_covers_whole_garment",
+                        "crop_area_ratio": float(area_ratio), "proposal": candidate,
+                    })
+                    continue
+                chosen = candidate, candidate_box
+                break
+            if chosen is None:
+                return {
+                    "status": "rejected_region_geometry", "target_region": region,
+                    "bbox": None, "mask": None,
+                    "rejected_proposals": geometry_rejections,
+                    "semantic_review_status": "pending",
+                    "semantic_note": "Rejected geometry is not an absence label or a correct detection.",
+                }
+            proposal, local_box = chosen
             mask, sam_score, _ = run_sam(
                 crop, local_box, self.sam_processor, self.sam_model, self.device
             )
-            mask = np.asarray(mask, dtype=bool) & (np.asarray(garment_mask) > 0)
+            raw_mask = np.asarray(mask, dtype=bool)
+            garment_array = np.asarray(garment_mask) > 0
+            if raw_mask.shape != garment_array.shape:
+                raise ValueError("SAM mask shape differs from garment crop")
+            mask = raw_mask & garment_array
+            raw_garment_pixels = int(mask.sum())
+            if strict_regions and region in LOCAL_REGIONS:
+                mask = constrain_local_mask(raw_mask, garment_mask, local_box)
+            clipped_pixels = raw_garment_pixels - int(mask.sum())
             # Both the local mask and bbox stay bound to this crop origin. No GT is used.
             ys, xs = np.nonzero(mask)
             if not len(xs):
@@ -301,11 +371,16 @@ class ModelBackends:
                 "bbox": original_box(refined, origin),
                 "mask": full,
                 "proposal_bbox": original_box(local_box, origin),
+                "proposal_crop_area_ratio": float(proposal_area_ratio(local_box, crop.size)),
+                "local_mask_constrained_to_proposal": bool(strict_regions and region in LOCAL_REGIONS),
+                "sam_pixels_removed_outside_proposal": int(clipped_pixels),
+                "geometry_rejections": geometry_rejections,
                 "sam_score": float(sam_score),
                 "coordinate_space": "original_image",
                 "crop_origin": origin,
                 "semantic_target_correct": None,
                 "semantic_review_status": "pending",
+                "grounding_input_view": "raw_crop" if strict_regions else "masked_crop",
                 "semantic_note": "Strict semantic correctness needs reviewed output; no automatic manual grade is fabricated.",
             }
 
@@ -419,6 +494,30 @@ class ModelBackends:
                         feature = self.pattern.encode_image(
                             local, self.clip_model, self.clip_processor, self.device
                         )
+                        # 仅新候选启用；默认和 controlled GT 路径保持原行为。
+                        # 保存原裁剪预测，与保留皮肤/边界上下文的原图裁剪配对。
+                        if not controlled and self.config.get("neckline_context_pair", False):
+                            from fashion_multimodal_analysis.integration.attribute_context import (
+                                neckline_context_bounds, paired_neckline_result,
+                            )
+                            context_bounds = neckline_context_bounds(
+                                collar["bbox"], roi.bbox, image.size,
+                                float(self.config.get("neckline_context_expansion", 2.0)),
+                            )
+                            context_feature = self.pattern.encode_image(
+                                image.crop(context_bounds), self.clip_model,
+                                self.clip_processor, self.device,
+                            )
+                            legacy_pred = self.pattern.classify_with_prototypes(
+                                feature, *self.design_proto["neckline"], self.clip_model,
+                            )
+                            context_pred = self.pattern.classify_with_prototypes(
+                                context_feature, *self.design_proto["neckline"], self.clip_model,
+                            )
+                            result[name] = paired_neckline_result(
+                                legacy_pred, context_pred, bounds, context_bounds,
+                            )
+                            continue
                     elif feature is None:
                         cached_feature = self.pattern.encode_image(
                             whole, self.clip_model, self.clip_processor, self.device

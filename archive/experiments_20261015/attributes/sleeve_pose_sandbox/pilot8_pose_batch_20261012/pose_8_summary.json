@@ -1,0 +1,15 @@
+{
+  "status": "POSE_8_DIAGNOSTIC_COMPLETED",
+  "labels_sha256": "cb34eff7920e99c6803546afc4aa29c5ae3c0a1adacd313ecd0a2619cc8cef15",
+  "pose_weights_path": "/workspace/sleeve_pose_sandbox/yolo11n-pose.pt",
+  "pose_weights_sha256": "869e83fcdffdc7371fa4e34cd8e51c838cc729571d1635e5141e3075e9319dc0",
+  "samples": 8,
+  "detections_with_matching_arm": 8,
+  "mean_keypoint_error_normalized_image_diagonal": 0.012610573873609966,
+  "median_keypoint_error_normalized_image_diagonal": 0.01183618576759551,
+  "gt_used_for_arm_matching_diagnostic_only": true,
+  "no_cuff_detection": true,
+  "no_automatic_sleeve_ratio_prediction": true,
+  "no_training_or_data_change": true,
+  "notes": "Keypoint error is not sleeve-length error. Manual GT used solely for side/person pairing; do not report as fully autonomous pipeline accuracy."
+}

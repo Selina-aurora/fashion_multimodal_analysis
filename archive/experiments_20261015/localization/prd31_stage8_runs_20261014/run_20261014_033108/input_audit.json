@@ -1,0 +1,25 @@
+{
+  "status": "INPUTS_VERIFIED",
+  "hashes": {
+    "configs/prd_8class_train_v5_balanced150_20261008.csv": {
+      "sha256": "e8c277055efe4d042b4353bf2d4553bddddc7706eead9398f07f5efcd90bb38f",
+      "expected_sha256": "e8c277055efe4d042b4353bf2d4553bddddc7706eead9398f07f5efcd90bb38f",
+      "match": true
+    },
+    "configs/prd_8class_val_v2_full_targets.csv": {
+      "sha256": "39141f545ea5512d16ed074788b6f98474b33baff111d3b663ec0ffcc4c40b93",
+      "expected_sha256": "39141f545ea5512d16ed074788b6f98474b33baff111d3b663ec0ffcc4c40b93",
+      "match": true
+    },
+    "benchmark/prd_3_1_v1/manifests/segmentation_test_v1.csv": {
+      "sha256": "c83204aca87c9c4dee304b774fd459bf5a18a2d1d65f0a3a9a79b92721224b89",
+      "expected_sha256": "c83204aca87c9c4dee304b774fd459bf5a18a2d1d65f0a3a9a79b92721224b89",
+      "match": true
+    }
+  },
+  "diagnostic_image_count": 8,
+  "val_rows": 88,
+  "checkpoint_path": "/workspace/fashion_multimodal_analysis/outputs/recovery_20261008/v5_balanced150/checkpoint_last.pth",
+  "accuracy_acceptance": false,
+  "latency_acceptance": false
+}

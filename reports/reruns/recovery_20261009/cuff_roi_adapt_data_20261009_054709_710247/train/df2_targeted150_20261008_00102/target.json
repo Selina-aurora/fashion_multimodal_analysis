@@ -1,0 +1,77 @@
+{
+  "record_id": "df2_targeted150_20261008_00102",
+  "split": "train",
+  "presence": "present",
+  "category": "outerwear",
+  "source_dataset": "DeepFashion2",
+  "source_image_sha256": "63036b2070d9db29dec5a1b2a4a04ae717db229fc738671c9f1b203273e15e52",
+  "native_crop_xyxy": [
+    223,
+    250,
+    576,
+    682
+  ],
+  "input_crop_xyxy": [
+    187,
+    206,
+    612,
+    726
+  ],
+  "context_padding_fraction": 0.1,
+  "crop_size": [
+    425,
+    520
+  ],
+  "image": "train/df2_targeted150_20261008_00102/image.png",
+  "garment_mask": "train/df2_targeted150_20261008_00102/garment_mask.png",
+  "cuff_boxes_xyxy_local": [
+    [
+      24,
+      266,
+      78,
+      310
+    ],
+    [
+      351,
+      204,
+      404,
+      252
+    ]
+  ],
+  "box_audit": [
+    {
+      "source_box": [
+        211,
+        472,
+        265,
+        516
+      ],
+      "local_box": [
+        24,
+        266,
+        78,
+        310
+      ],
+      "source_box_area_retained": 1.0,
+      "native_garment_mask_fraction_in_box": 0.5366161616161617
+    },
+    {
+      "source_box": [
+        538,
+        410,
+        591,
+        458
+      ],
+      "local_box": [
+        351,
+        204,
+        404,
+        252
+      ],
+      "source_box_area_retained": 1.0,
+      "native_garment_mask_fraction_in_box": 0.33294025157232704
+    }
+  ],
+  "image_sha256": "660afe6f48cd293786a26d68d4f45b549a5be70f0e470f133bf7817e362e9b33",
+  "garment_mask_sha256": "61c2b558e9019f7009eb2fda7b750edf9ff3ce748ab0188568e57c1aa6a03458"
+}

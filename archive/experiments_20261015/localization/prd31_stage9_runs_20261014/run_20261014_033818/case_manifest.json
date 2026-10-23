@@ -1,0 +1,62 @@
+{
+  "cases": [
+    {
+      "case": "case_01",
+      "category": "top",
+      "regions": [
+        "collar",
+        "cuff",
+        "hem",
+        "pocket"
+      ],
+      "crop_size": [
+        126,
+        178
+      ]
+    },
+    {
+      "case": "case_02",
+      "category": "dress",
+      "regions": [
+        "collar",
+        "cuff",
+        "hem",
+        "pocket"
+      ],
+      "crop_size": [
+        275,
+        614
+      ]
+    },
+    {
+      "case": "case_03",
+      "category": "outerwear",
+      "regions": [
+        "collar",
+        "cuff",
+        "hem",
+        "pocket"
+      ],
+      "crop_size": [
+        468,
+        576
+      ]
+    },
+    {
+      "case": "case_04",
+      "category": "outerwear",
+      "regions": [
+        "collar",
+        "cuff",
+        "hem",
+        "pocket"
+      ],
+      "crop_size": [
+        364,
+        565
+      ]
+    }
+  ],
+  "skipped": [],
+  "notes": "Predicted garment ROIs; identical isolated crop per query within each case; not human local-part GT."
+}

@@ -1,0 +1,244 @@
+{
+  "epoch": 18,
+  "metrics": {
+    "tp": 2,
+    "fp": 5,
+    "fn": 7,
+    "precision": 0.2857142857142857,
+    "recall": 0.2222222222222222,
+    "f1": 0.25,
+    "negative_images": 3,
+    "negative_images_with_fp": 0
+  },
+  "cases": [
+    {
+      "record_id": "df2_balanced150_20261008_00041",
+      "presence": "present",
+      "truth_boxes": [
+        [
+          0.0,
+          333.0,
+          80.0,
+          372.0
+        ]
+      ],
+      "predicted_boxes": [
+        [
+          1.8813402652740479,
+          328.4537353515625,
+          78.78079223632812,
+          366.45269775390625
+        ],
+        [
+          3.892068386077881,
+          312.0068359375,
+          86.80760955810547,
+          380.1034851074219
+        ]
+      ],
+      "scores": [
+        0.887942910194397,
+        0.42102158069610596
+      ],
+      "tp": 1,
+      "fp": 1,
+      "fn": 0,
+      "matches": [
+        {
+          "prediction_index": 0,
+          "truth_index": 0,
+          "iou": 0.7414371179052707
+        }
+      ]
+    },
+    {
+      "record_id": "v5_train_01363",
+      "presence": "present",
+      "truth_boxes": [
+        [
+          200.0,
+          249.0,
+          327.0,
+          355.0
+        ],
+        [
+          608.0,
+          754.0,
+          731.0,
+          862.0
+        ]
+      ],
+      "predicted_boxes": [
+        [
+          615.224853515625,
+          796.8507690429688,
+          727.0372924804688,
+          882.1253051757812
+        ],
+        [
+          603.6444702148438,
+          747.2470703125,
+          738.0947875976562,
+          895.5894775390625
+        ],
+        [
+          512.5272216796875,
+          785.8616943359375,
+          638.3890991210938,
+          928.0
+        ]
+      ],
+      "scores": [
+        0.9843206405639648,
+        0.8112307786941528,
+        0.7863889336585999
+      ],
+      "tp": 1,
+      "fp": 2,
+      "fn": 1,
+      "matches": [
+        {
+          "prediction_index": 1,
+          "truth_index": 1,
+          "iou": 0.6660421482672803
+        }
+      ]
+    },
+    {
+      "record_id": "df2_targeted150_20261008_00097",
+      "presence": "present",
+      "truth_boxes": [
+        [
+          184.0,
+          171.0,
+          259.0,
+          263.0
+        ],
+        [
+          532.0,
+          171.0,
+          608.0,
+          264.0
+        ]
+      ],
+      "predicted_boxes": [
+        [
+          545.1820068359375,
+          167.2943115234375,
+          615.3935546875,
+          213.54840087890625
+        ]
+      ],
+      "scores": [
+        0.8985757231712341
+      ],
+      "tp": 0,
+      "fp": 1,
+      "fn": 2,
+      "matches": []
+    },
+    {
+      "record_id": "v5_train_00237",
+      "presence": "present",
+      "truth_boxes": [
+        [
+          352.0,
+          387.0,
+          400.0,
+          429.0
+        ]
+      ],
+      "predicted_boxes": [],
+      "scores": [],
+      "tp": 0,
+      "fp": 0,
+      "fn": 1,
+      "matches": []
+    },
+    {
+      "record_id": "df2_balanced150_20261008_00003",
+      "presence": "present",
+      "truth_boxes": [
+        [
+          43.0,
+          190.0,
+          138.0,
+          252.0
+        ],
+        [
+          388.0,
+          233.0,
+          467.0,
+          282.0
+        ]
+      ],
+      "predicted_boxes": [
+        [
+          34.21805953979492,
+          167.41697692871094,
+          142.8435821533203,
+          236.45494079589844
+        ]
+      ],
+      "scores": [
+        0.8682753443717957
+      ],
+      "tp": 0,
+      "fp": 1,
+      "fn": 2,
+      "matches": []
+    },
+    {
+      "record_id": "v5_train_00276",
+      "presence": "present",
+      "truth_boxes": [
+        [
+          449.0,
+          293.0,
+          523.0,
+          358.0
+        ]
+      ],
+      "predicted_boxes": [],
+      "scores": [],
+      "tp": 0,
+      "fp": 0,
+      "fn": 1,
+      "matches": []
+    },
+    {
+      "record_id": "v5_train_01283",
+      "presence": "absent",
+      "truth_boxes": [],
+      "predicted_boxes": [],
+      "scores": [],
+      "tp": 0,
+      "fp": 0,
+      "fn": 0,
+      "matches": []
+    },
+    {
+      "record_id": "v5_train_00074",
+      "presence": "absent",
+      "truth_boxes": [],
+      "predicted_boxes": [],
+      "scores": [],
+      "tp": 0,
+      "fp": 0,
+      "fn": 0,
+      "matches": []
+    },
+    {
+      "record_id": "df2_balanced150_20261008_00062",
+      "presence": "absent",
+      "truth_boxes": [],
+      "predicted_boxes": [],
+      "scores": [],
+      "tp": 0,
+      "fp": 0,
+      "fn": 0,
+      "matches": []
+    }
+  ],
+  "overlay_legend": "green=confirmed cuff; red=prediction at score >= .4"
+}

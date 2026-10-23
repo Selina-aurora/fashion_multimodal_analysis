@@ -1,0 +1,231 @@
+{
+  "status": "DEVELOPMENT_ONLY_PENDING_HUMAN_REVIEW",
+  "checkpoint_sha256": "c5ba795225349b1c521aac0517ac7c493d9818dcc17d558ac4a3f6f8669452f0",
+  "definition": "Visible opening edge at sleeve end, including short sleeves; focus garment only; each opening separately.",
+  "evaluation_note": "Any-of visible sleeve opening bbox IoU >=0.5 is a provisional development diagnostic, not formal semantic accuracy; no cuff mask truth. Known Core images: not pristine blind holdout. Rejected or missing predictions do not establish correct absence.",
+  "cases": [
+    {
+      "sample_id": "SEGTEST1_0045",
+      "image": "images/SEGTEST1_0045.jpg",
+      "image_size": [
+        468,
+        624
+      ],
+      "image_sha256": "d64a4c4856f6f4921e29ed0c402976537b50e9c5f27ea0052d1e4cec7e6e3ac9",
+      "source_image_reference": "../fashion_data/raw/train/train/image/135885.jpg",
+      "source_note": "Exact embedded JPEG preview bytes from existing review HTML; not native raw-file byte identity. Dimensions match native metadata.",
+      "category": "top",
+      "garment_bbox": [
+        14.0,
+        118.0,
+        386.0,
+        403.0
+      ],
+      "draft_presence": "present",
+      "draft_cuff_boxes": [
+        [
+          334,
+          265,
+          382,
+          298
+        ]
+      ],
+      "note": "右侧短袖开口；只框袖子末端边缘。",
+      "review_status": "ASSISTANT_DRAFT_PENDING_HUMAN_REVIEW"
+    },
+    {
+      "sample_id": "SEGTEST1_0156",
+      "image": "images/SEGTEST1_0156.jpg",
+      "image_size": [
+        468,
+        831
+      ],
+      "image_sha256": "342ae1b17426e80207564558d0a911089385dec7315cd80e128e69729679da1e",
+      "source_image_reference": "../fashion_data/raw/train/train/image/118508.jpg",
+      "source_note": "Exact embedded JPEG preview bytes from existing review HTML; not native raw-file byte identity. Dimensions match native metadata.",
+      "category": "outerwear",
+      "garment_bbox": [
+        0.0,
+        157.0,
+        466.0,
+        741.0
+      ],
+      "draft_presence": "present",
+      "draft_cuff_boxes": [
+        [
+          398,
+          247,
+          438,
+          321
+        ]
+      ],
+      "note": "平铺外套右侧黑白条纹袖口；左侧袖口截断不标。",
+      "review_status": "ASSISTANT_DRAFT_PENDING_HUMAN_REVIEW"
+    },
+    {
+      "sample_id": "SEGTEST1_0169",
+      "image": "images/SEGTEST1_0169.jpg",
+      "image_size": [
+        468,
+        702
+      ],
+      "image_sha256": "43f5150adc2b0642e8d2f66095019aeea6c1fcbdc11aef99bf3468fb5566c90a",
+      "source_image_reference": "../fashion_data/raw/train/train/image/101410.jpg",
+      "source_note": "Exact embedded JPEG preview bytes from existing review HTML; not native raw-file byte identity. Dimensions match native metadata.",
+      "category": "outerwear",
+      "garment_bbox": [
+        97.0,
+        165.0,
+        383.0,
+        556.0
+      ],
+      "draft_presence": "present",
+      "draft_cuff_boxes": [
+        [
+          285,
+          384,
+          309,
+          434
+        ]
+      ],
+      "note": "橙色外套前臂处卷边开口；待复核边界。",
+      "review_status": "ASSISTANT_DRAFT_PENDING_HUMAN_REVIEW"
+    },
+    {
+      "sample_id": "SEGTEST1_0213",
+      "image": "images/SEGTEST1_0213.jpg",
+      "image_size": [
+        880,
+        880
+      ],
+      "image_sha256": "a32c7ba7c156d2ac2d9038ab6ad4b194ad4c3962dce92da624d23433eb7ced35",
+      "source_image_reference": "../fashion_data/raw/train/train/image/092487.jpg",
+      "source_note": "Exact embedded JPEG preview bytes from existing review HTML; not native raw-file byte identity. Dimensions match native metadata.",
+      "category": "dress",
+      "garment_bbox": [
+        144.0,
+        17.0,
+        709.0,
+        879.0
+      ],
+      "draft_presence": "present",
+      "draft_cuff_boxes": [
+        [
+          168,
+          315,
+          252,
+          355
+        ],
+        [
+          568,
+          233,
+          625,
+          280
+        ]
+      ],
+      "note": "粉色连衣裙两个短袖开口，分别标框，评价任一可见开口命中。",
+      "review_status": "ASSISTANT_DRAFT_PENDING_HUMAN_REVIEW"
+    },
+    {
+      "sample_id": "SEGTEST1_0199",
+      "image": "images/SEGTEST1_0199.jpg",
+      "image_size": [
+        468,
+        624
+      ],
+      "image_sha256": "daeaacef6e3e28732fdfee29dd3e68097e453df4a7e33ef08aad55b161466414",
+      "source_image_reference": "../fashion_data/raw/train/train/image/130702.jpg",
+      "source_note": "Exact embedded JPEG preview bytes from existing review HTML; not native raw-file byte identity. Dimensions match native metadata.",
+      "category": "outerwear",
+      "garment_bbox": [
+        30.0,
+        84.0,
+        410.0,
+        599.0
+      ],
+      "draft_presence": "present",
+      "draft_cuff_boxes": [
+        [
+          59,
+          350,
+          103,
+          391
+        ],
+        [
+          361,
+          359,
+          406,
+          401
+        ]
+      ],
+      "note": "衣架上白色外套袖子底端；薄纱边界待复核。",
+      "review_status": "ASSISTANT_DRAFT_PENDING_HUMAN_REVIEW"
+    },
+    {
+      "sample_id": "SEGTEST1_0040",
+      "image": "images/SEGTEST1_0040.jpg",
+      "image_size": [
+        468,
+        832
+      ],
+      "image_sha256": "0c246e971fb776698ba3d4b896dccbcfd65be6e47272aa0dd5fa0ac932718a03",
+      "source_image_reference": "../fashion_data/raw/train/train/image/135480.jpg",
+      "source_note": "Exact embedded JPEG preview bytes from existing review HTML; not native raw-file byte identity. Dimensions match native metadata.",
+      "category": "top",
+      "garment_bbox": [
+        216.0,
+        228.0,
+        282.0,
+        312.0
+      ],
+      "draft_presence": "absent",
+      "draft_cuff_boxes": [],
+      "note": "指定目标为无袖牛仔背心。",
+      "review_status": "ASSISTANT_DRAFT_PENDING_HUMAN_REVIEW"
+    },
+    {
+      "sample_id": "SEGTEST1_0044",
+      "image": "images/SEGTEST1_0044.jpg",
+      "image_size": [
+        468,
+        702
+      ],
+      "image_sha256": "d352244a72d662689074ba7d60c8e50a3b8761e1bf69655515fcfd885f33ec4b",
+      "source_image_reference": "../fashion_data/raw/train/train/image/179803.jpg",
+      "source_note": "Exact embedded JPEG preview bytes from existing review HTML; not native raw-file byte identity. Dimensions match native metadata.",
+      "category": "top",
+      "garment_bbox": [
+        171.0,
+        152.0,
+        340.0,
+        320.0
+      ],
+      "draft_presence": "absent",
+      "draft_cuff_boxes": [],
+      "note": "指定目标为黑色波点无袖上衣；白色内搭的袖口不属于目标。",
+      "review_status": "ASSISTANT_DRAFT_PENDING_HUMAN_REVIEW"
+    },
+    {
+      "sample_id": "SEGTEST1_0226",
+      "image": "images/SEGTEST1_0226.jpg",
+      "image_size": [
+        640,
+        972
+      ],
+      "image_sha256": "4b12e25d952966cf0bd1867e05bfb8f45e05080f6352ce22e0a401253fc5c290",
+      "source_image_reference": "../fashion_data/raw/train/train/image/106984.jpg",
+      "source_note": "Exact embedded JPEG preview bytes from existing review HTML; not native raw-file byte identity. Dimensions match native metadata.",
+      "category": "dress",
+      "garment_bbox": [
+        278.0,
+        207.0,
+        440.0,
+        549.0
+      ],
+      "draft_presence": "absent",
+      "draft_cuff_boxes": [],
+      "note": "指定目标为牛仔背带裙；黑色内搭短袖不属于目标。",
+      "review_status": "ASSISTANT_DRAFT_PENDING_HUMAN_REVIEW"
+    }
+  ]
+}

@@ -1,0 +1,107 @@
+[
+  {
+    "path": "README_GPU_COMMANDS.txt",
+    "bytes": 802,
+    "sha256": "28d4767a4571a82ee4d4ce2b4aa8d68d984be11f668cf1d8d1f041231fa79953"
+  },
+  {
+    "path": "README_stage1_progress_and_next.md",
+    "bytes": 4349,
+    "sha256": "df33e30a37dcd8d80f47eb3e92833242f7ccdb427f0f8ae1540b229645148ea2"
+  },
+  {
+    "path": "inputs/core400_source_sha256_20261012.txt",
+    "bytes": 26000,
+    "sha256": "b8eeac8d74f148f79d0db440042dcb29ffded223f60fe71873285d4b765cf3c4"
+  },
+  {
+    "path": "inputs/future_train_candidates_REQUIRES_ISOLATION_CHECK.csv",
+    "bytes": 2764,
+    "sha256": "ea65bd1d375b46651dbcaa33f3ea2a3c4ead496694570ecd081def857d5a6ed9"
+  },
+  {
+    "path": "inputs/other_region_review_confirmed_20261009.json",
+    "bytes": 29583,
+    "sha256": "c1f89da6b31ff8314601805cb8b00143b335e19874eaa30075e9e8e582f0e285"
+  },
+  {
+    "path": "inputs/prd312_pocket24_HUMAN_REVIEW.json",
+    "bytes": 18538,
+    "sha256": "e0ea48de1499a13201dad63e31d624c6ef8521af5d2160989d8fcff11279d338"
+  },
+  {
+    "path": "inputs/sleeve_v3_holdout20_BLIND_MANUAL_20261013_last.json",
+    "bytes": 20690,
+    "sha256": "75b7b122cd3e5453cce004dd3139caa3df7edede8f55d3c6fd5db38c12b38be5"
+  },
+  {
+    "path": "inputs/soft_targets_4class_DEVELOPMENT_ONLY.csv",
+    "bytes": 5003,
+    "sha256": "9d9a25d613762b3c2aaaa1c8ce6b25ae2ba466ecdc978ec4521027488a05c2ed"
+  },
+  {
+    "path": "inputs/softlabel_gate_report_20261013.json",
+    "bytes": 3249,
+    "sha256": "b7ca14e6d0dc149eec0166fa2255afcd30e36358491953e7e878fb82f77a1705"
+  },
+  {
+    "path": "prd31_acceptance_gap_current.csv",
+    "bytes": 1166,
+    "sha256": "eab12e7549ee65614583c957a7b8f4d529742eb7913e762dba99d2e73c8e98c5"
+  },
+  {
+    "path": "results/hem_waist_19_candidate_register.csv",
+    "bytes": 11419,
+    "sha256": "9cb61411b21141cc68e498252a876920dbddd0db524e3cf0a632ca908d53541c"
+  },
+  {
+    "path": "results/historical_28_candidate_error_register.csv",
+    "bytes": 16562,
+    "sha256": "947a9374a525f92be7ef70c5362a8351979de5fe916e3e55beda0296586d5872"
+  },
+  {
+    "path": "results/historical_28_summary_by_region.csv",
+    "bytes": 259,
+    "sha256": "f77280829ddc55c9f9086f447eb9960f3a32ea5399125c7a60b5bb918b098299"
+  },
+  {
+    "path": "results/pocket24_42_human_review_flat.csv",
+    "bytes": 3688,
+    "sha256": "35beda68df84ca14b649a78085aae8d4709b8886af5ab561b5e480fe18d62611"
+  },
+  {
+    "path": "results/pocket24_train_val_separate_summary.csv",
+    "bytes": 114,
+    "sha256": "eea85a29c2687568bfb6318ff38289975b02562a8c02ce59b2fdc299070620ae"
+  },
+  {
+    "path": "results/softlabel_dev_QC_20261014.json",
+    "bytes": 981,
+    "sha256": "fecc02c9b13ab3bc22598cfaba53defd62fadd3191b6082f821d5f174c74e5d2"
+  },
+  {
+    "path": "results/summary.json",
+    "bytes": 972,
+    "sha256": "2c75c10e2bb3ddd259f20bff34d6d8f678e4a83e9246163796e15afd129dae3e"
+  },
+  {
+    "path": "scripts/audit_regions.py",
+    "bytes": 5737,
+    "sha256": "928da23e9c1b482d1b7fdfb8eba877cb53f341952ad55b6ab9d87567c567ecd1"
+  },
+  {
+    "path": "scripts/gpu_preflight_readonly.py",
+    "bytes": 4059,
+    "sha256": "1d761fc900a57618111dc18b30f96d123a9d1c3ba3504096947f3be4fdf33ba2"
+  },
+  {
+    "path": "scripts/test_audit_and_preflight.py",
+    "bytes": 1424,
+    "sha256": "e53093718c98521230dcdbec5f908cd1427ed6d9f179d01ef4bb458ecb2c7b94"
+  },
+  {
+    "path": "scripts/verify_softlabel_dev.py",
+    "bytes": 2764,
+    "sha256": "da30c4eb12d84f06c73e41d747a326ab84cc5f306c83b0cb5c92c278c6abda0b"
+  }
+]

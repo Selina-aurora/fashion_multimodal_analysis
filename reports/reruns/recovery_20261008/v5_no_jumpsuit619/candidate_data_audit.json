@@ -1,0 +1,29 @@
+{
+  "original_images": 625,
+  "candidate_images": 619,
+  "original_instances": 2299,
+  "candidate_instances": 2282,
+  "excluded_images": [
+    "../fashion_data/raw/fashionpedia/images/test/5519b067d1037167b0acd664fcbb918e.jpg",
+    "../fashion_data/raw/fashionpedia/images/test/563c45745e1775a74e3a5b2513079b9d.jpg",
+    "../fashion_data/raw/fashionpedia/images/test/614e7297f89c14e73b691d7f76ed77f4.jpg",
+    "../fashion_data/raw/fashionpedia/images/test/6765044e8079cfe42ae6cac73cbf79c4.jpg",
+    "../fashion_data/raw/fashionpedia/images/test/73b8457583eb2fc453caef8b8307bff9.jpg",
+    "../fashion_data/raw/fashionpedia/images/test/d47fd4ffb3f8559ed563d59f03507e98.jpg"
+  ],
+  "class_counts": {
+    "dress": 219,
+    "pants": 278,
+    "top": 357,
+    "skirt": 99,
+    "outerwear": 209,
+    "shoe": 576,
+    "accessory": 411,
+    "bag": 133
+  },
+  "original_train_sha256": "e8c277055efe4d042b4353bf2d4553bddddc7706eead9398f07f5efcd90bb38f",
+  "candidate_train_sha256": "661970c12e0761767711ccf9645918ed507dbc66b0bb7aad9e890e17375465f9",
+  "unchanged_val_sha256": "39141f545ea5512d16ed074788b6f98474b33baff111d3b663ec0ffcc4c40b93",
+  "training_requested": true,
+  "note": "Only a controlled exclusion candidate; effectiveness has not been evaluated."
+}

@@ -1,0 +1,8 @@
+{
+  "src/fashion_multimodal_analysis/integration/model_backends.py": true,
+  "src/fashion_multimodal_analysis/integration/pipeline.py": true,
+  "src/fashion_multimodal_analysis/integration/quality_guards.py": false,
+  "scripts/run_prd31_review_regression_20261008.py": false,
+  "configs/prd31_review_regression_cases_20261008.json": false,
+  "tests/test_quality_guards.py": false
+}

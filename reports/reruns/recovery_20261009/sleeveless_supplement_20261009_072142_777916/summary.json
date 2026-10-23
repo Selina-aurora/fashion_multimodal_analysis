@@ -1,0 +1,20 @@
+{
+  "status": "SLEEVELESS_SUPPLEMENT_REQUIRES_REVIEW",
+  "previous_reviewed_targets": 40,
+  "previous_usable_targets": 37,
+  "previous_label_counts": {
+    "cap": 5,
+    "short": 11,
+    "elbow": 8,
+    "three_quarter": 5,
+    "long": 8
+  },
+  "supplement_candidates": 8,
+  "supplement_category_counts": {
+    "top": 4,
+    "dress": 4
+  },
+  "source_sha_exclusion": "All validation sources and all prior 40 reviewed sources excluded by exact hash",
+  "training_started": false,
+  "formal_prd_acceptance": false
+}

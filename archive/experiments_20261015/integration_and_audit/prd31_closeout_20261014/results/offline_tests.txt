@@ -1,0 +1,18 @@
+test_absence_false_positive_stays_separate (test_evaluation.EvaluationSafety.test_absence_false_positive_stays_separate) ... ok
+test_known_geometry_and_denominators (test_evaluation.EvaluationSafety.test_known_geometry_and_denominators) ... ok
+test_missing_boxes_cannot_pass_iou (test_evaluation.EvaluationSafety.test_missing_boxes_cannot_pass_iou) ... ok
+test_no_model_output_counts_as_failure_not_exclusion (test_evaluation.EvaluationSafety.test_no_model_output_counts_as_failure_not_exclusion) ... ok
+test_not_run_is_pending_not_model_failure (test_evaluation.EvaluationSafety.test_not_run_is_pending_not_model_failure) ... ok
+test_original_or_unconfirmed_answers_are_not_new_gt (test_evaluation.EvaluationSafety.test_original_or_unconfirmed_answers_are_not_new_gt) ... ok
+test_out_of_bounds_annotation_rejected (test_evaluation.EvaluationSafety.test_out_of_bounds_annotation_rejected) ... ok
+test_unknown_is_not_negative (test_evaluation.EvaluationSafety.test_unknown_is_not_negative) ... ok
+test_wrong_class_counts_as_upstream_failure (test_evaluation.EvaluationSafety.test_wrong_class_counts_as_upstream_failure) ... ok
+test_wrong_source_rejected (test_evaluation.EvaluationSafety.test_wrong_source_rejected) ... ok
+
+----------------------------------------------------------------------
+Ran 10 tests in 0.010s
+
+OK
+
+UI_LOGIC_PASS: 12 cases; incomplete confirmation blocked; draw coordinates; export; edits invalidate confirmation; undo; identity guard.
+LIMIT: DOM harness only; real browser rendering not exercised (no Chromium executable).

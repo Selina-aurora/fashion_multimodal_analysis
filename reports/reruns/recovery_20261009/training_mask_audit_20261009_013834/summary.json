@@ -1,0 +1,23 @@
+{
+  "rows": 2299,
+  "images": 625,
+  "checked": 2299,
+  "errors": 0,
+  "mask_representation_counts": {
+    "full_image": 2299
+  },
+  "review_flag_counts": {
+    "estimated_min_side_below_16px": 56
+  },
+  "training_review_images": 24,
+  "normalized_path_overlap_with_val_core": 0,
+  "train_manifest_sha256": "e8c277055efe4d042b4353bf2d4553bddddc7706eead9398f07f5efcd90bb38f",
+  "labels_modified": false,
+  "model_inference_run": false,
+  "notes": [
+    "Flags are review cues, not proven annotation errors.",
+    "No source-polygon pixel comparison or semantic accuracy computed.",
+    "Sampled reviews are training-side only; normalized-path isolation does not prove cross-path byte/content deduplication.",
+    "Small-object dimension is an approximate resize calculation, not PRD acceptance."
+  ]
+}

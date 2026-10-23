@@ -1,0 +1,44 @@
+{
+  "runtime_ModelBackends_ground": {
+    "source_file": "/workspace/fashion_multimodal_analysis/src/fashion_multimodal_analysis/integration/model_backends.py",
+    "sha256": "5700b3fa3484b8bfd961355ac8448c79a8bcb84c30c70c57963cc87ca833810b",
+    "source_lines": 160,
+    "tokens": {
+      "rejected_region_geometry": true,
+      "semantic": true,
+      "max_local_region_crop_area_ratio": true,
+      "neckline_context": false,
+      "crop_bounds": true,
+      "run_grounding_dino": true,
+      "run_sam": true
+    }
+  },
+  "runtime_run_grounding_dino": {
+    "source_file": "/workspace/fashion_multimodal_analysis/src/fashion_multimodal_analysis/grounding/refinement/run_shoulder_waist_pattern_groundingdino_refinement_v1.py",
+    "sha256": "992b63810eba53beb8f8d34a285c75783bb8a04e04e6485b846300f5311c2151",
+    "source_lines": 103,
+    "tokens": {
+      "rejected_region_geometry": false,
+      "semantic": false,
+      "max_local_region_crop_area_ratio": false,
+      "neckline_context": false,
+      "crop_bounds": false,
+      "run_grounding_dino": true,
+      "run_sam": false
+    }
+  },
+  "experimental_predict_dino": {
+    "source_file": "/workspace/prd31_stage11_parity_rootcause_20261014/scripts/stage9_dino_impl.py",
+    "sha256": "fd85fba41c051e73bf3f5c3d8104158b45f4353f6d109e7a1dd4239afa4b83e8",
+    "source_lines": 22,
+    "tokens": {
+      "rejected_region_geometry": false,
+      "semantic": false,
+      "max_local_region_crop_area_ratio": false,
+      "neckline_context": false,
+      "crop_bounds": false,
+      "run_grounding_dino": false,
+      "run_sam": false
+    }
+  }
+}

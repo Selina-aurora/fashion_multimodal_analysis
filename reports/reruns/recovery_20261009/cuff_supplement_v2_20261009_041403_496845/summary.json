@@ -1,0 +1,20 @@
+{
+  "images": 48,
+  "strata": {
+    "top/DeepFashion2": 8,
+    "top/Fashionpedia": 8,
+    "outerwear/DeepFashion2": 8,
+    "outerwear/Fashionpedia": 8,
+    "dress/DeepFashion2": 8,
+    "dress/Fashionpedia": 8
+  },
+  "protected_unique_paths": 432,
+  "previous_annotation_hashes_excluded": 48,
+  "protected_unique_file_hashes": 432,
+  "excluded_candidate_reasons": {
+    "previous_48_image_hash": 2
+  },
+  "reviewed": 0,
+  "source_files_exact_byte_copies": true,
+  "status": "TRAINING_SIDE_SUPPLEMENT_V2_PENDING_REVIEW"
+}

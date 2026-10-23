@@ -1,0 +1,25 @@
+﻿record_id,disposition,class_as_reviewed,ratio_as_reviewed,note
+v5_train_00484,CONTROLLED_PILOT_ONLY,short,0.27903210170665765,
+v5_train_00533,CONTROLLED_PILOT_ONLY,short,0.2559956297099396,
+v5_train_00638,PREVIOUSLY_EXCLUDED_UNCHANGED,short,0.2521213903151568,上轮已从袖长补标训练池排除，原图未在本次16张包中复检。
+v5_train_00754,NOT_MEASURABLE_EXCLUDED,other,,无法可靠测量，保留原审核原因与ratio=null。
+v5_train_00955,PREVIOUSLY_EXCLUDED_UNCHANGED,sleeveless,0,上轮已从袖长补标训练池排除，原图未在本次16张包中复检。
+v5_train_01028,HOLD_PENDING_PROTOCOL_OR_REANNOTATION,short,0.16917425027186694,核对目标衣物的C及类别；必要时调成cap后重审，不自动改写原类。
+v5_train_01055,CONTROLLED_PILOT_ONLY,cap,0.1535482485663157,
+v5_train_01230,CONTROLLED_PILOT_ONLY,cap,0.11800972087733183,
+v5_train_01445,CONTROLLED_PILOT_ONLY,cap,0.08302126853599445,
+v5_train_00286,REANNOTATE_BEFORE_POSSIBLE_USE,elbow,0.6240813775762358,用户同意重标袖口和同侧点位；当前点位/ratio无效
+v5_train_00415,CONTROLLED_PILOT_ONLY,elbow,0.545583389491745,
+v5_train_00681,HOLD_PENDING_PROTOCOL_OR_REANNOTATION,elbow,0.3858490241514608,改为无法可靠测量/other，或提供清晰且可追踪的真实袖口点。
+v5_train_00791,PREVIOUSLY_EXCLUDED_UNCHANGED,other,,上轮已从袖长补标训练池排除，原图未在本次16张包中复检。
+v5_train_01106,HOLD_PENDING_PROTOCOL_OR_REANNOTATION,elbow,0.5859180120052435,先明确协议是否允许off-shoulder/detached sleeves；严格连续覆盖回归不纳入，若只预测袖口位置可单列特殊样本。
+v5_train_01149,NOT_MEASURABLE_EXCLUDED,other,,无法可靠测量，保留原审核原因与ratio=null。
+v5_train_01155,CONTROLLED_PILOT_ONLY,elbow,0.5563221810825029,
+v5_train_01296,HOLD_PENDING_PROTOCOL_OR_REANNOTATION,elbow,0.5353137670513901,保留肘长类别作为候选语义提示，但不要用当前四点ratio训练回归。
+v5_train_01508,CONTROLLED_PILOT_ONLY,elbow,0.5935462080271263,
+v5_train_01632,PREVIOUSLY_EXCLUDED_UNCHANGED,elbow,0.6230612397598212,上轮已从袖长补标训练池排除，原图未在本次16张包中复检。
+v5_train_01654,PREVIOUSLY_EXCLUDED_UNCHANGED,other,,上轮已从袖长补标训练池排除，原图未在本次16张包中复检。
+v5_train_01674,HOLD_PENDING_PROTOCOL_OR_REANNOTATION,other,0.45866398660952656,保持other语义；若不定义披肩样本的专门测量规范则转为unmeasurable、ratio=null。
+v5_train_01719,EXCLUDE_FROM_THIS_PILOT,elbow,0.8751527434420783,用户同意排除交叉手臂、无袖字段冲突样本；当前比例无效
+v5_train_01748,EXCLUDE_FROM_THIS_PILOT,sleeveless,0,用户同意排除非对称单肩且整件误标无袖样本；原无袖比例不用于训练
+v5_train_01847,PREVIOUSLY_EXCLUDED_UNCHANGED,other,,上轮已从袖长补标训练池排除，原图未在本次16张包中复检。

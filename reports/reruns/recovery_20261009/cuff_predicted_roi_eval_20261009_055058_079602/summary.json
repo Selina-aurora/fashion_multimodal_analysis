@@ -1,0 +1,614 @@
+{
+  "status": "DEVELOPMENT_PREDICTED_ROI_DIAGNOSTIC_COMPLETED",
+  "candidate_checkpoint": "/workspace/fashion_multimodal_analysis/reports/reruns/recovery_20261009/cuff_expanded_train_v4_roiadapt_20261009_054717_760057/checkpoint_best.pth",
+  "candidate_sha256": "c93a105b0b7faae8b9fa7a63733f797198cc84c56adcb02e05200fec2f7d529c",
+  "selected_epoch": 37,
+  "native_roi_control": {
+    "tp": 3,
+    "fp": 2,
+    "fn": 6,
+    "precision": 0.6,
+    "recall": 0.3333333333333333,
+    "f1": 0.42857142857142855,
+    "negative_images": 3,
+    "negative_images_with_fp": 0
+  },
+  "predicted_roi_target_conditioned_metrics": {
+    "tp": 2,
+    "fp": 3,
+    "fn": 7,
+    "precision": 0.4,
+    "recall": 0.2222222222222222,
+    "f1": 0.2857142857142857,
+    "negative_images": 3,
+    "negative_images_with_fp": 1
+  },
+  "matched_garment_targets": 8,
+  "total_targets": 9,
+  "unmatched_negative_targets": 1,
+  "cases": [
+    {
+      "record_id": "df2_balanced150_20261008_00041",
+      "presence": "present",
+      "category": "top",
+      "target_association_status": "MATCHED_PREDICTED_TARGET",
+      "predicted_garment_box": [
+        12.799280166625977,
+        106.9641342163086,
+        467.4478454589844,
+        623.495849609375
+      ],
+      "garment_score": 0.8677529096603394,
+      "garment_iou": 0.9507030450906702,
+      "garment_label_id": 1,
+      "input_crop_xyxy": [
+        0,
+        55,
+        468,
+        676
+      ],
+      "truth_boxes": [
+        [
+          0,
+          397,
+          80,
+          436
+        ]
+      ],
+      "predicted_boxes": [
+        [
+          0.0,
+          393.87896728515625,
+          83.43596649169922,
+          438.097412109375
+        ]
+      ],
+      "scores": [
+        0.8429904580116272
+      ],
+      "tp": 1,
+      "fp": 0,
+      "fn": 0,
+      "matches": [
+        {
+          "prediction_index": 0,
+          "truth_index": 0,
+          "iou": 0.8456639722099363
+        }
+      ]
+    },
+    {
+      "record_id": "v5_train_01363",
+      "presence": "present",
+      "category": "top",
+      "target_association_status": "MATCHED_PREDICTED_TARGET",
+      "predicted_garment_box": [
+        327.7314147949219,
+        244.1676788330078,
+        970.4220581054688,
+        1024.0
+      ],
+      "garment_score": 0.9047921895980835,
+      "garment_iou": 0.8940339035581324,
+      "garment_label_id": 1,
+      "input_crop_xyxy": [
+        263,
+        166,
+        1024,
+        1024
+      ],
+      "truth_boxes": [
+        [
+          447,
+          345,
+          574,
+          451
+        ],
+        [
+          855,
+          850,
+          978,
+          958
+        ]
+      ],
+      "predicted_boxes": [
+        [
+          859.7350463867188,
+          894.620361328125,
+          978.311767578125,
+          976.6075439453125
+        ],
+        [
+          799.9974365234375,
+          859.6614990234375,
+          985.2245483398438,
+          989.5255737304688
+        ]
+      ],
+      "scores": [
+        0.9725965261459351,
+        0.5823903679847717
+      ],
+      "tp": 0,
+      "fp": 2,
+      "fn": 2,
+      "matches": []
+    },
+    {
+      "record_id": "df2_targeted150_20261008_00097",
+      "presence": "present",
+      "category": "outerwear",
+      "target_association_status": "MATCHED_PREDICTED_TARGET",
+      "predicted_garment_box": [
+        164.51434326171875,
+        41.93053436279297,
+        689.8617553710938,
+        829.4179077148438
+      ],
+      "garment_score": 0.990706741809845,
+      "garment_iou": 0.8423078961576776,
+      "garment_label_id": 4,
+      "input_crop_xyxy": [
+        111,
+        0,
+        743,
+        880
+      ],
+      "truth_boxes": [
+        [
+          304,
+          171,
+          379,
+          263
+        ],
+        [
+          652,
+          171,
+          728,
+          264
+        ]
+      ],
+      "predicted_boxes": [],
+      "scores": [],
+      "tp": 0,
+      "fp": 0,
+      "fn": 2,
+      "matches": []
+    },
+    {
+      "record_id": "v5_train_00237",
+      "presence": "present",
+      "category": "outerwear",
+      "target_association_status": "MATCHED_PREDICTED_TARGET",
+      "predicted_garment_box": [
+        310.37591552734375,
+        52.91549301147461,
+        694.5172119140625,
+        633.2733764648438
+      ],
+      "garment_score": 0.9243302941322327,
+      "garment_iou": 0.7182326988338578,
+      "garment_label_id": 4,
+      "input_crop_xyxy": [
+        271,
+        0,
+        733,
+        682
+      ],
+      "truth_boxes": [
+        [
+          599,
+          387,
+          647,
+          429
+        ]
+      ],
+      "predicted_boxes": [],
+      "scores": [],
+      "tp": 0,
+      "fp": 0,
+      "fn": 1,
+      "matches": []
+    },
+    {
+      "record_id": "df2_balanced150_20261008_00003",
+      "presence": "present",
+      "category": "dress",
+      "target_association_status": "MATCHED_PREDICTED_TARGET",
+      "predicted_garment_box": [
+        190.078857421875,
+        365.8365478515625,
+        601.3336181640625,
+        950.8709106445312
+      ],
+      "garment_score": 0.9851686954498291,
+      "garment_iou": 0.9554343120352485,
+      "garment_label_id": 5,
+      "input_crop_xyxy": [
+        148,
+        307,
+        643,
+        961
+      ],
+      "truth_boxes": [
+        [
+          183,
+          486,
+          278,
+          548
+        ],
+        [
+          528,
+          529,
+          607,
+          578
+        ]
+      ],
+      "predicted_boxes": [
+        [
+          178.52730751037598,
+          442.19618225097656,
+          284.6376495361328,
+          548.3828277587891
+        ]
+      ],
+      "scores": [
+        0.7070147395133972
+      ],
+      "tp": 1,
+      "fp": 0,
+      "fn": 1,
+      "matches": [
+        {
+          "prediction_index": 0,
+          "truth_index": 0,
+          "iou": 0.5227423416320366
+        }
+      ]
+    },
+    {
+      "record_id": "v5_train_00276",
+      "presence": "present",
+      "category": "dress",
+      "target_association_status": "MATCHED_PREDICTED_TARGET",
+      "predicted_garment_box": [
+        101.96570587158203,
+        291.6721496582031,
+        614.62158203125,
+        1024.0
+      ],
+      "garment_score": 0.8430683612823486,
+      "garment_iou": 0.9526269501989205,
+      "garment_label_id": 5,
+      "input_crop_xyxy": [
+        50,
+        218,
+        666,
+        1024
+      ],
+      "truth_boxes": [
+        [
+          520,
+          505,
+          594,
+          570
+        ]
+      ],
+      "predicted_boxes": [],
+      "scores": [],
+      "tp": 0,
+      "fp": 0,
+      "fn": 1,
+      "matches": []
+    },
+    {
+      "record_id": "v5_train_01283",
+      "presence": "absent",
+      "category": "top",
+      "target_association_status": "MATCHED_PREDICTED_TARGET",
+      "predicted_garment_box": [
+        226.22877502441406,
+        2.1207094192504883,
+        558.6467895507812,
+        266.2637939453125
+      ],
+      "garment_score": 0.8794524669647217,
+      "garment_iou": 0.8050070467419277,
+      "garment_label_id": 1,
+      "input_crop_xyxy": [
+        192,
+        0,
+        592,
+        293
+      ],
+      "truth_boxes": [],
+      "predicted_boxes": [
+        [
+          201.98251247406006,
+          122.04227447509766,
+          266.6339569091797,
+          150.83642578125
+        ]
+      ],
+      "scores": [
+        0.9311527609825134
+      ],
+      "tp": 0,
+      "fp": 1,
+      "fn": 0,
+      "matches": []
+    },
+    {
+      "record_id": "v5_train_00074",
+      "presence": "absent",
+      "category": "top",
+      "target_association_status": "GARMENT_CLASS_MISMATCH",
+      "predicted_garment_box": [
+        13.983817100524902,
+        0.0,
+        431.2085266113281,
+        578.7852172851562
+      ],
+      "garment_score": 0.8897737264633179,
+      "garment_iou": 0.8620257907560351,
+      "garment_label_id": 5,
+      "input_crop_xyxy": null,
+      "truth_boxes": [],
+      "predicted_boxes": [],
+      "scores": [],
+      "tp": 0,
+      "fp": 0,
+      "fn": 0,
+      "matches": []
+    },
+    {
+      "record_id": "df2_balanced150_20261008_00062",
+      "presence": "absent",
+      "category": "dress",
+      "target_association_status": "MATCHED_PREDICTED_TARGET",
+      "predicted_garment_box": [
+        110.49673461914062,
+        103.64891052246094,
+        480.0628662109375,
+        609.6654663085938
+      ],
+      "garment_score": 0.9895880222320557,
+      "garment_iou": 0.9475957039700065,
+      "garment_label_id": 5,
+      "input_crop_xyxy": [
+        73,
+        53,
+        518,
+        661
+      ],
+      "truth_boxes": [],
+      "predicted_boxes": [],
+      "scores": [],
+      "tp": 0,
+      "fp": 0,
+      "fn": 0,
+      "matches": []
+    }
+  ],
+  "control_cases": [
+    {
+      "record_id": "df2_balanced150_20261008_00041",
+      "truth_boxes": [
+        [
+          0,
+          397,
+          80,
+          436
+        ]
+      ],
+      "predicted_boxes": [
+        [
+          0.0,
+          394.2484436035156,
+          85.73553466796875,
+          439.7543029785156
+        ]
+      ],
+      "scores": [
+        0.8457912802696228
+      ],
+      "tp": 1,
+      "fp": 0,
+      "fn": 0,
+      "matches": [
+        {
+          "prediction_index": 0,
+          "truth_index": 0,
+          "iou": 0.7996987424025733
+        }
+      ]
+    },
+    {
+      "record_id": "v5_train_01363",
+      "truth_boxes": [
+        [
+          447,
+          345,
+          574,
+          451
+        ],
+        [
+          855,
+          850,
+          978,
+          958
+        ]
+      ],
+      "predicted_boxes": [
+        [
+          859.7801513671875,
+          890.1603393554688,
+          979.2273559570312,
+          982.3695068359375
+        ],
+        [
+          842.0193481445312,
+          833.3245849609375,
+          985.87548828125,
+          976.7862548828125
+        ],
+        [
+          759.5504150390625,
+          889.93994140625,
+          889.2666015625,
+          1024.0
+        ]
+      ],
+      "scores": [
+        0.9874477982521057,
+        0.6676415205001831,
+        0.5939971208572388
+      ],
+      "tp": 1,
+      "fp": 2,
+      "fn": 1,
+      "matches": [
+        {
+          "prediction_index": 1,
+          "truth_index": 1,
+          "iou": 0.6436719469236036
+        }
+      ]
+    },
+    {
+      "record_id": "df2_targeted150_20261008_00097",
+      "truth_boxes": [
+        [
+          304,
+          171,
+          379,
+          263
+        ],
+        [
+          652,
+          171,
+          728,
+          264
+        ]
+      ],
+      "predicted_boxes": [],
+      "scores": [],
+      "tp": 0,
+      "fp": 0,
+      "fn": 2,
+      "matches": []
+    },
+    {
+      "record_id": "v5_train_00237",
+      "truth_boxes": [
+        [
+          599,
+          387,
+          647,
+          429
+        ]
+      ],
+      "predicted_boxes": [],
+      "scores": [],
+      "tp": 0,
+      "fp": 0,
+      "fn": 1,
+      "matches": []
+    },
+    {
+      "record_id": "df2_balanced150_20261008_00003",
+      "truth_boxes": [
+        [
+          183,
+          486,
+          278,
+          548
+        ],
+        [
+          528,
+          529,
+          607,
+          578
+        ]
+      ],
+      "predicted_boxes": [
+        [
+          180.7079620361328,
+          448.7167663574219,
+          283.80238342285156,
+          542.5061187744141
+        ]
+      ],
+      "scores": [
+        0.6102782487869263
+      ],
+      "tp": 1,
+      "fp": 0,
+      "fn": 1,
+      "matches": [
+        {
+          "prediction_index": 0,
+          "truth_index": 0,
+          "iou": 0.5267432378183381
+        }
+      ]
+    },
+    {
+      "record_id": "v5_train_00276",
+      "truth_boxes": [
+        [
+          520,
+          505,
+          594,
+          570
+        ]
+      ],
+      "predicted_boxes": [],
+      "scores": [],
+      "tp": 0,
+      "fp": 0,
+      "fn": 1,
+      "matches": []
+    },
+    {
+      "record_id": "v5_train_01283",
+      "truth_boxes": [],
+      "predicted_boxes": [],
+      "scores": [],
+      "tp": 0,
+      "fp": 0,
+      "fn": 0,
+      "matches": []
+    },
+    {
+      "record_id": "v5_train_00074",
+      "truth_boxes": [],
+      "predicted_boxes": [],
+      "scores": [],
+      "tp": 0,
+      "fp": 0,
+      "fn": 0,
+      "matches": []
+    },
+    {
+      "record_id": "df2_balanced150_20261008_00062",
+      "truth_boxes": [],
+      "predicted_boxes": [],
+      "scores": [],
+      "tp": 0,
+      "fp": 0,
+      "fn": 0,
+      "matches": []
+    }
+  ],
+  "formal_prd_acceptance": false,
+  "limitations": [
+    "Same small development set used for model selection; not independent generalization evidence.",
+    "GT garment box/class used only for evaluation target association, not predicted input crop or mask.",
+    "Unmatched garment targets count as missed cuffs for positive targets.",
+    "Unmatched negatives are reported separately; cannot claim successful absence detection.",
+    "Metrics cover the annotated target garment only; unannotated other garment cuffs are not evaluated.",
+    "Standalone candidate diagnostic, not a production pipeline integration."
+  ],
+  "overlay_legend": "green=confirmed cuff; red=predicted cuff; yellow=predicted garment"
+}

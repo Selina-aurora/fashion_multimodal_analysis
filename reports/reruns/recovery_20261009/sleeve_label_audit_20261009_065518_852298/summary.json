@@ -1,0 +1,72 @@
+{
+  "status": "READ_ONLY_SLEEVE_LABEL_AUDIT_COMPLETED",
+  "manifest_provenance": {
+    "train": {
+      "path": "/workspace/fashion_multimodal_analysis/configs/prd_8class_train_v5_balanced150_20261008.csv",
+      "sha256": "e8c277055efe4d042b4353bf2d4553bddddc7706eead9398f07f5efcd90bb38f",
+      "all_rows": 2299,
+      "upper_garment_rows": 785
+    },
+    "val": {
+      "path": "/workspace/fashion_multimodal_analysis/configs/prd_8class_val_v2_full_targets.csv",
+      "sha256": "39141f545ea5512d16ed074788b6f98474b33baff111d3b663ec0ffcc4c40b93",
+      "all_rows": 88,
+      "upper_garment_rows": 33
+    }
+  },
+  "raw_annotation_files": [
+    {
+      "path": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+      "sha256": "f831f415edad12d52acde8b138fe7ebd1592b57bf0dcd6a3b63ba8cabd208223",
+      "annotations": 8781,
+      "attributes": 294
+    }
+  ],
+  "raw_read_issues": [],
+  "raw_root": "/workspace/fashion_data/raw/fashionpedia",
+  "per_split": {
+    "train": {
+      "upper_garments": 785,
+      "status_counts": {
+        "CATEGORY_HINT_ONLY": 251,
+        "NO_NATIVE_SLEEVE_CANDIDATE": 534
+      },
+      "source_counts": {
+        "DeepFashion2": 251,
+        "Fashionpedia": 534
+      },
+      "native_sleeve_candidate_names": {},
+      "weak_hint_counts": {
+        "sleeveless": 51,
+        "short": 114,
+        "long": 86
+      }
+    },
+    "val": {
+      "upper_garments": 33,
+      "status_counts": {
+        "CATEGORY_HINT_ONLY": 20,
+        "NO_NATIVE_SLEEVE_CANDIDATE": 13
+      },
+      "source_counts": {
+        "DeepFashion2": 20,
+        "Fashionpedia": 13
+      },
+      "native_sleeve_candidate_names": {},
+      "weak_hint_counts": {
+        "sleeveless": 5,
+        "short": 9,
+        "long": 6
+      }
+    }
+  },
+  "training_started": false,
+  "formal_prd_acceptance": false,
+  "limitations": [
+    "Native sleeve-related attributes are candidates requiring taxonomy review, not automatically approved six-class sleeve labels.",
+    "DeepFashion2 short/long/vest/sling categories are weak hints; rolled or occluded sleeves can disagree with visible-end review.",
+    "Do not train on validation rows or the 18 reviewed diagnostic images.",
+    "Image basenames and categories are required for raw annotation association; unresolved/multiple matches are not used.",
+    "No feasibility promise before examining class coverage, annotation semantics and example quality."
+  ]
+}

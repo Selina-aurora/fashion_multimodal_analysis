@@ -1,0 +1,157 @@
+{
+  "image_index": "262",
+  "source_dataset": "Fashionpedia",
+  "source_image": "../fashion_data/raw/fashionpedia/images/test/0c6cf79ffbf7f14a266d0f0f21219447.jpg",
+  "record_id": "SEGTEST1_0313",
+  "garment_id": "fashionpedia_ann_498",
+  "gt_class": "bag",
+  "fine_category": "bag, wallet",
+  "pred_class": "",
+  "pred_score": "0.0",
+  "localized_bbox50": "False",
+  "bbox_iou": "0.0",
+  "class_correct": "False",
+  "mask_iou": "0.0",
+  "mask_iou_ge_0_50": "False",
+  "mask_iou_ge_0_85": "False",
+  "outcome": "missed",
+  "visualization_path": "",
+  "export_case": "case_21",
+  "selection_reason": "missed_bag",
+  "source_copy": "case_21/source.jpg",
+  "evaluation_copy": null,
+  "evaluation_visualization_available": false,
+  "visualization_note": "Existing evaluation image only; absent images are not rerendered.",
+  "gt_bbox": [
+    199,
+    207,
+    260,
+    519
+  ],
+  "source_sha256": "33d8e24021f4a8a029c2bc990338c65192fd5b76481e39d157eba7470f49e502",
+  "image_size": [
+    613,
+    1024
+  ],
+  "gt_area_ratio": 0.030319637030995106,
+  "baseline_reproduction_drift": false,
+  "diagnostic": {
+    "diagnostic_group": "no_box50_candidate_above_0_05",
+    "baseline_0_40_match": null,
+    "best_score_localized_candidate": null,
+    "best_score_correct_class_candidate": null,
+    "max_bbox_iou": 0.2346083346132966
+  },
+  "candidates": [
+    {
+      "category": "shoe",
+      "score": 0.9975046515464783,
+      "bbox": [
+        274.034912109375,
+        852.5006713867188,
+        320.8575439453125,
+        971.9124145507812
+      ],
+      "bbox_iou": 0.0
+    },
+    {
+      "category": "shoe",
+      "score": 0.9972302317619324,
+      "bbox": [
+        229.53172302246094,
+        864.6854248046875,
+        276.86968994140625,
+        961.299560546875
+      ],
+      "bbox_iou": 0.0
+    },
+    {
+      "category": "dress",
+      "score": 0.9645500779151917,
+      "bbox": [
+        204.50392150878906,
+        218.90380859375,
+        412.63470458984375,
+        647.7589111328125
+      ],
+      "bbox_iou": 0.18174298955099227
+    },
+    {
+      "category": "outerwear",
+      "score": 0.8334957361221313,
+      "bbox": [
+        170.55142211914062,
+        201.50381469726562,
+        451.2963562011719,
+        578.3829345703125
+      ],
+      "bbox_iou": 0.17987484124987443
+    },
+    {
+      "category": "accessory",
+      "score": 0.7132781147956848,
+      "bbox": [
+        168.42739868164062,
+        495.6110534667969,
+        208.81961059570312,
+        526.9588012695312
+      ],
+      "bbox_iou": 0.011444300873727883
+    },
+    {
+      "category": "top",
+      "score": 0.5343608260154724,
+      "bbox": [
+        211.26992797851562,
+        218.21665954589844,
+        403.6600646972656,
+        520.2090454101562
+      ],
+      "bbox_iou": 0.2346083346132966
+    },
+    {
+      "category": "skirt",
+      "score": 0.32754337787628174,
+      "bbox": [
+        207.49526977539062,
+        293.6558837890625,
+        406.6128234863281,
+        641.5697021484375
+      ],
+      "bbox_iou": 0.15471015774203312
+    },
+    {
+      "category": "shoe",
+      "score": 0.22512978315353394,
+      "bbox": [
+        246.59646606445312,
+        853.548095703125,
+        298.7555847167969,
+        964.700927734375
+      ],
+      "bbox_iou": 0.0
+    },
+    {
+      "category": "shoe",
+      "score": 0.11555947363376617,
+      "bbox": [
+        271.6561279296875,
+        829.5591430664062,
+        293.05609130859375,
+        904.3486938476562
+      ],
+      "bbox_iou": 0.0
+    },
+    {
+      "category": "accessory",
+      "score": 0.0995573103427887,
+      "bbox": [
+        168.30990600585938,
+        450.233154296875,
+        214.65090942382812,
+        533.5259399414062
+      ],
+      "bbox_iou": 0.049334572460712545
+    }
+  ]
+}

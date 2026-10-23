@@ -1,0 +1,1101 @@
+{
+  "schema_version": "sleeve_candidate_qa_report_v1",
+  "packet_id": "sleeve_candidates_24_20261012",
+  "source_review_sha256": "29ffdae8d0a0cb4f40d75e128f4dff17c7fcc4cd14b048cbbc41242e288070ca",
+  "input_annotations": 24,
+  "all_review_status_confirmed": true,
+  "reported_confirmed_training_labels_added": 19,
+  "reported_count_is_ui_state_count_not_train_eligibility": true,
+  "measurable": 17,
+  "sleeveless": 2,
+  "unmeasurable": 5,
+  "geometry_recalculated_and_matched": 17,
+  "manifest_image_hashes_matched": 24,
+  "train_val_csv_hashes_match_manifest": true,
+  "preliminary_pass_source_pending": 7,
+  "recheck_required": 9,
+  "finalized_nontrainable": 2,
+  "excluded_from_supplement": 6,
+  "approved_for_training_now": 0,
+  "annotations": [
+    {
+      "annotation": {
+        "record_id": "v5_train_00484",
+        "source_image_sha256": "53b9adecbc7d65a901794134f43175bf8da7ee51c029157d466be2dee6df293b",
+        "reviewer": "qyx",
+        "side": "image_right",
+        "state": "measurable",
+        "points": {
+          "shoulder": [
+            0.5909413770243395,
+            0.3022919918883037
+          ],
+          "elbow": [
+            0.6000331470783218,
+            0.42367564886275766
+          ],
+          "wrist": [
+            0.6182166871862865,
+            0.5282523379484412
+          ],
+          "cuff": [
+            0.5848801969883511,
+            0.3657849816903258
+          ]
+        },
+        "reason": "",
+        "review_status": "confirmed",
+        "same_arm_confirmed": true,
+        "sleeveless_confirmed": false,
+        "current_class": "short",
+        "class_confirmed": true,
+        "ratio": 0.27903210170665765,
+        "measurement_method": "projected_arm_polyline_v1",
+        "confirmed_at": "2026-10-12T05:01:52.001Z",
+        "prescreen_decision": "priority",
+        "prescreen_reason_zh": "外侧袖口清楚，双臂基本可见；袖长可能更接近普通短袖，先核对袖口和肩关节",
+        "projection_distance_ratio": 0.02937246183198311,
+        "arm_pixels": 232.1286453256376,
+        "native_draft_label_NOT_confirmed": "cap",
+        "garment_id": "fashionpedia_ann_7254",
+        "source_image": "../fashion_data/raw/fashionpedia/images/test/3109762baa95cfc50b5a454db19d4143.jpg"
+      },
+      "qa": {
+        "qa_status": "PRELIM_PASS_SOURCE_PENDING",
+        "qa_reason_zh": "从参考图人工复核后结构与四点暂可接受；正式训练前仍需用GPU无框原图验点，并执行数据隔离校验。",
+        "qa_flags": [],
+        "ready_for_training": false,
+        "qa_inspection_basis": "yellow-box review image; GPU source not available for pixel-level final confirmation"
+      }
+    },
+    {
+      "annotation": {
+        "record_id": "v5_train_00533",
+        "source_image_sha256": "854fe32c69f6a8718fe9215fcd84b2619e24b9830d2a96a19d5277babde3c1c6",
+        "reviewer": "qyx",
+        "side": "image_right",
+        "state": "measurable",
+        "points": {
+          "shoulder": [
+            0.5332955109566697,
+            0.21825715244445093
+          ],
+          "elbow": [
+            0.5272439306904948,
+            0.3508454546780853
+          ],
+          "wrist": [
+            0.5484244616221072,
+            0.4666267890229491
+          ],
+          "cuff": [
+            0.5151407701581449,
+            0.281750142246473
+          ]
+        },
+        "reason": "",
+        "review_status": "confirmed",
+        "same_arm_confirmed": true,
+        "sleeveless_confirmed": false,
+        "current_class": "short",
+        "class_confirmed": true,
+        "ratio": 0.2559956297099396,
+        "measurement_method": "projected_arm_polyline_v1",
+        "confirmed_at": "2026-10-12T05:01:53.673Z",
+        "prescreen_decision": "priority",
+        "prescreen_reason_zh": "袖子可见、人体正面；原生盖袖提示疑似普通短袖，适合作为纠正标签样本",
+        "projection_distance_ratio": 0.03777754701789767,
+        "arm_pixels": 255.13765527114185,
+        "native_draft_label_NOT_confirmed": "cap",
+        "garment_id": "fashionpedia_ann_8796",
+        "source_image": "../fashion_data/raw/fashionpedia/images/test/3696956aa43b2641bdb8ee6fd0ea213f.jpg"
+      },
+      "qa": {
+        "qa_status": "PRELIM_PASS_SOURCE_PENDING",
+        "qa_reason_zh": "从参考图人工复核后结构与四点暂可接受；正式训练前仍需用GPU无框原图验点，并执行数据隔离校验。",
+        "qa_flags": [],
+        "ready_for_training": false,
+        "qa_inspection_basis": "yellow-box review image; GPU source not available for pixel-level final confirmation"
+      }
+    },
+    {
+      "annotation": {
+        "record_id": "v5_train_00638",
+        "source_image_sha256": "0bb7d4f41c990e32e822a0e6a4cae732c92b09f7af4f75dd92f0aa572b96f113",
+        "reviewer": "qyx",
+        "side": "image_left",
+        "state": "measurable",
+        "points": {
+          "shoulder": [
+            0.5308652792990143,
+            0.20891994806180061
+          ],
+          "elbow": [
+            0.35982475355969334,
+            0.2630757334811724
+          ],
+          "wrist": [
+            0.1831763417305586,
+            0.2350641203332215
+          ],
+          "cuff": [
+            0.45796276013143483,
+            0.25187108822199206
+          ]
+        },
+        "reason": "",
+        "review_status": "confirmed",
+        "same_arm_confirmed": true,
+        "sleeveless_confirmed": false,
+        "current_class": "short",
+        "class_confirmed": true,
+        "ratio": 0.2521213903151568,
+        "measurement_method": "projected_arm_polyline_v1",
+        "confirmed_at": "2026-10-12T06:27:12.327Z",
+        "prescreen_decision": "exclude",
+        "prescreen_reason_zh": "目标上衣肩部为无袖式设计，不适合用作盖袖正例；若作无袖负例需另外人工确认",
+        "projection_distance_ratio": 0.07262571936316127,
+        "arm_pixels": 253.00241698885645,
+        "native_draft_label_NOT_confirmed": "cap",
+        "garment_id": "fashionpedia_ann_4661",
+        "source_image": "../fashion_data/raw/fashionpedia/images/test/43778dff8bac7d13784527fdba344468.jpg"
+      },
+      "qa": {
+        "qa_status": "EXCLUDED_FROM_SUPPLEMENT",
+        "qa_reason_zh": "初筛为无袖式设计，但后续标了short与四点；不采纳为短袖训练正例。",
+        "qa_flags": [],
+        "ready_for_training": false,
+        "qa_inspection_basis": "yellow-box review image; GPU source not available for pixel-level final confirmation"
+      }
+    },
+    {
+      "annotation": {
+        "record_id": "v5_train_00754",
+        "source_image_sha256": "dc6c600a4337918646fa09849cd0401b6c6b06efc017480cab456be4e9c88613",
+        "reviewer": "qyx",
+        "side": "",
+        "state": "unmeasurable",
+        "points": {},
+        "reason": "单肩披搭式不对称肩部设计，粉色布料与实际袖口边界不明确，无法可靠确定袖长及袖口中心，暂不纳入四点测量。",
+        "review_status": "confirmed",
+        "same_arm_confirmed": false,
+        "sleeveless_confirmed": false,
+        "current_class": "other",
+        "class_confirmed": true,
+        "ratio": null,
+        "measurement_method": "not_measured",
+        "confirmed_at": "2026-10-12T06:12:15.896Z",
+        "prescreen_decision": "hold",
+        "prescreen_reason_zh": "单肩披搭/不对称肩部，另一侧袖口难界定，不适合优先测量",
+        "native_draft_label_NOT_confirmed": "cap",
+        "garment_id": "fashionpedia_ann_4640",
+        "source_image": "../fashion_data/raw/fashionpedia/images/test/551e65e41de6a13025f2542b4886d8f0.jpg"
+      },
+      "qa": {
+        "qa_status": "FINALIZED_NONTRAINABLE",
+        "qa_reason_zh": "已标无法测量，单肩不对称且袖口不清；维持null，不需要补四点。",
+        "qa_flags": [],
+        "ready_for_training": false,
+        "qa_inspection_basis": "yellow-box review image; GPU source not available for pixel-level final confirmation"
+      }
+    },
+    {
+      "annotation": {
+        "record_id": "v5_train_00955",
+        "source_image_sha256": "b93cb3ffd8df362a48cf95cce274d26e59d7e24dd9ad802c547e111e044a798a",
+        "reviewer": "qyx",
+        "side": "",
+        "state": "sleeveless",
+        "points": {},
+        "reason": "",
+        "review_status": "confirmed",
+        "same_arm_confirmed": false,
+        "sleeveless_confirmed": true,
+        "current_class": "sleeveless",
+        "class_confirmed": true,
+        "ratio": 0,
+        "measurement_method": "visible_sleeve_absence",
+        "confirmed_at": "2026-10-12T06:29:12.130Z",
+        "prescreen_decision": "exclude",
+        "prescreen_reason_zh": "目标黑色背心肩口外露，原生盖袖提示不可信；不作为盖袖正例",
+        "native_draft_label_NOT_confirmed": "cap",
+        "garment_id": "fashionpedia_ann_6429",
+        "source_image": "../fashion_data/raw/fashionpedia/images/test/6beae9033a9244991b99ac04347ba917.jpg"
+      },
+      "qa": {
+        "qa_status": "EXCLUDED_FROM_SUPPLEMENT",
+        "qa_reason_zh": "已正确识别无袖，但本次属于盖袖/肘长袖补标池的排除样本；保留作候选负例，不纳入当前训练。",
+        "qa_flags": [],
+        "ready_for_training": false,
+        "qa_inspection_basis": "yellow-box review image; GPU source not available for pixel-level final confirmation"
+      }
+    },
+    {
+      "annotation": {
+        "record_id": "v5_train_01028",
+        "source_image_sha256": "2212506380f145cfb3b01be31d4ff5509125b61ad3a7e76c45e9cf3211d46cd1",
+        "reviewer": "qyx",
+        "side": "image_left",
+        "state": "measurable",
+        "points": {
+          "shoulder": [
+            0.6400778210116731,
+            0.3233691920347906
+          ],
+          "elbow": [
+            0.5369649805447471,
+            0.1270771343556878
+          ],
+          "wrist": [
+            0.6770428015564203,
+            0.059693293659876405
+          ],
+          "cuff": [
+            0.5817120622568094,
+            0.29114213778896775
+          ]
+        },
+        "reason": "",
+        "review_status": "confirmed",
+        "same_arm_confirmed": true,
+        "sleeveless_confirmed": false,
+        "current_class": "short",
+        "class_confirmed": true,
+        "ratio": 0.16917425027186694,
+        "measurement_method": "projected_arm_polyline_v1",
+        "confirmed_at": "2026-10-12T06:05:23.610Z",
+        "prescreen_decision": "hold",
+        "prescreen_reason_zh": "双臂上举且衣料有褶皱，袖口与同侧肩肘腕位置需要进一步复核",
+        "projection_distance_ratio": 0.10374372803521882,
+        "arm_pixels": 320.7724276235591,
+        "native_draft_label_NOT_confirmed": "cap",
+        "garment_id": "fashionpedia_ann_7833",
+        "source_image": "../fashion_data/raw/fashionpedia/images/test/775c380cd79c0f3a3e34a41f89468022.jpg"
+      },
+      "qa": {
+        "qa_status": "RECHECK_REQUIRED",
+        "qa_reason_zh": "双臂上举、屈肘明显，袖口到手臂路径投影偏差0.104；检查肩肘腕及衣料边界。",
+        "qa_flags": [
+          "袖口偏离投影路径>0.08（人工审查阈值，不是PRD硬阈值）"
+        ],
+        "ready_for_training": false,
+        "qa_inspection_basis": "yellow-box review image; GPU source not available for pixel-level final confirmation"
+      }
+    },
+    {
+      "annotation": {
+        "record_id": "v5_train_01055",
+        "source_image_sha256": "b364e6ed940f49101bea2c02cacac4d765e02916f1297867e5b1266cd356f765",
+        "reviewer": "qyx",
+        "side": "image_left",
+        "state": "measurable",
+        "points": {
+          "shoulder": [
+            0.3852253953268822,
+            0.250003647345462
+          ],
+          "elbow": [
+            0.39730941704035877,
+            0.3844593904556264
+          ],
+          "wrist": [
+            0.3701203681850366,
+            0.5077104883066105
+          ],
+          "cuff": [
+            0.403351427897097,
+            0.28921990575259326
+          ]
+        },
+        "reason": "",
+        "review_status": "confirmed",
+        "same_arm_confirmed": true,
+        "sleeveless_confirmed": false,
+        "current_class": "cap",
+        "class_confirmed": true,
+        "ratio": 0.1535482485663157,
+        "measurement_method": "projected_arm_polyline_v1",
+        "confirmed_at": "2026-10-12T05:01:55.151Z",
+        "prescreen_decision": "priority",
+        "prescreen_reason_zh": "白色连衣裙肩部短盖袖轮廓相对清晰，双臂可见，优先四点标注",
+        "projection_distance_ratio": 0.034788926765854065,
+        "arm_pixels": 265.2721949685055,
+        "native_draft_label_NOT_confirmed": "cap",
+        "garment_id": "fashionpedia_ann_2229",
+        "source_image": "../fashion_data/raw/fashionpedia/images/test/7c3c0cd188f831a4533f8aa2f5902b64.jpg"
+      },
+      "qa": {
+        "qa_status": "PRELIM_PASS_SOURCE_PENDING",
+        "qa_reason_zh": "从参考图人工复核后结构与四点暂可接受；正式训练前仍需用GPU无框原图验点，并执行数据隔离校验。",
+        "qa_flags": [],
+        "ready_for_training": false,
+        "qa_inspection_basis": "yellow-box review image; GPU source not available for pixel-level final confirmation"
+      }
+    },
+    {
+      "annotation": {
+        "record_id": "v5_train_01230",
+        "source_image_sha256": "51322056bbbf477b41f35a3954839164127f17e6c3c19fbf368252528f16b986",
+        "reviewer": "qyx",
+        "side": "image_right",
+        "state": "measurable",
+        "points": {
+          "shoulder": [
+            0.6809338521400778,
+            0.3233691920347906
+          ],
+          "elbow": [
+            0.7509727626459144,
+            0.5665369649805447
+          ],
+          "wrist": [
+            0.6517509727626459,
+            0.7100938429846647
+          ],
+          "cuff": [
+            0.688715953307393,
+            0.3790341039139391
+          ]
+        },
+        "reason": "",
+        "review_status": "confirmed",
+        "same_arm_confirmed": true,
+        "sleeveless_confirmed": false,
+        "current_class": "cap",
+        "class_confirmed": true,
+        "ratio": 0.11800972087733183,
+        "measurement_method": "projected_arm_polyline_v1",
+        "confirmed_at": "2026-10-12T06:04:54.982Z",
+        "prescreen_decision": "hold",
+        "prescreen_reason_zh": "侧身、上臂被覆盖且手臂弯曲，袖口开口中心易误判",
+        "projection_distance_ratio": 0.024136793578629107,
+        "arm_pixels": 321.13717524084757,
+        "native_draft_label_NOT_confirmed": "cap",
+        "garment_id": "fashionpedia_ann_1958",
+        "source_image": "../fashion_data/raw/fashionpedia/images/test/94351b1b66b1e37756eef9206883dd83.jpg"
+      },
+      "qa": {
+        "qa_status": "RECHECK_REQUIRED",
+        "qa_reason_zh": "侧身与遮挡：肩肘腕和袖口开口不够稳定，需要确认测量是否成立。",
+        "qa_flags": [],
+        "ready_for_training": false,
+        "qa_inspection_basis": "yellow-box review image; GPU source not available for pixel-level final confirmation"
+      }
+    },
+    {
+      "annotation": {
+        "record_id": "v5_train_01445",
+        "source_image_sha256": "36ec95313761a48cdc46ea026d9067397320a69938644dac5f50b3517552a887",
+        "reviewer": "qyx",
+        "side": "image_left",
+        "state": "measurable",
+        "points": {
+          "shoulder": [
+            0.28972617743702084,
+            0.27054549698729263
+          ],
+          "elbow": [
+            0.2981380065717415,
+            0.44421749850458836
+          ],
+          "wrist": [
+            0.3177656078860898,
+            0.5824081233678129
+          ],
+          "cuff": [
+            0.2813143483023001,
+            0.2966896692587135
+          ]
+        },
+        "reason": "",
+        "review_status": "confirmed",
+        "same_arm_confirmed": true,
+        "sleeveless_confirmed": false,
+        "current_class": "cap",
+        "class_confirmed": true,
+        "ratio": 0.08302126853599445,
+        "measurement_method": "projected_arm_polyline_v1",
+        "confirmed_at": "2026-10-12T05:01:56.899Z",
+        "prescreen_decision": "priority",
+        "prescreen_reason_zh": "灰粉色连衣裙盖肩袖轮廓较清楚，至少一侧手臂完整可见",
+        "projection_distance_ratio": 0.02061117313005826,
+        "arm_pixels": 320.07155942418456,
+        "native_draft_label_NOT_confirmed": "cap",
+        "garment_id": "fashionpedia_ann_8902",
+        "source_image": "../fashion_data/raw/fashionpedia/images/test/abe7f00720ada9f255b8d1355579dc0e.jpg"
+      },
+      "qa": {
+        "qa_status": "PRELIM_PASS_SOURCE_PENDING",
+        "qa_reason_zh": "从参考图人工复核后结构与四点暂可接受；正式训练前仍需用GPU无框原图验点，并执行数据隔离校验。",
+        "qa_flags": [],
+        "ready_for_training": false,
+        "qa_inspection_basis": "yellow-box review image; GPU source not available for pixel-level final confirmation"
+      }
+    },
+    {
+      "annotation": {
+        "record_id": "v5_train_00286",
+        "source_image_sha256": "468fe5252ab7904b6053229147b41397cc50588533e64fba20a943de5a45e6b2",
+        "reviewer": "qyx",
+        "side": "image_right",
+        "state": "measurable",
+        "points": {
+          "shoulder": [
+            0.6260034560447973,
+            0.24066644296281167
+          ],
+          "elbow": [
+            0.6820001312422075,
+            0.46849422989947914
+          ],
+          "wrist": [
+            0.37681825141632214,
+            0.433012853245408
+          ],
+          "cuff": [
+            0.6232036222849269,
+            0.4479523802576485
+          ]
+        },
+        "reason": "",
+        "review_status": "confirmed",
+        "same_arm_confirmed": true,
+        "sleeveless_confirmed": false,
+        "current_class": "elbow",
+        "class_confirmed": true,
+        "ratio": 0.6240813775762358,
+        "measurement_method": "projected_arm_polyline_v1",
+        "confirmed_at": "2026-10-12T05:01:58.655Z",
+        "prescreen_decision": "priority",
+        "prescreen_reason_zh": "白色宽松袖口大致接近肘部，手臂前屈、肩部被头发部分遮挡；需复核四点",
+        "projection_distance_ratio": 0.030863175718635363,
+        "arm_pixels": 447.99192530177834,
+        "native_draft_label_NOT_confirmed": "elbow",
+        "garment_id": "fashionpedia_ann_1645",
+        "source_image": "../fashion_data/raw/fashionpedia/images/test/13bd73c2068bc2705f3a0b65e425b965.jpg"
+      },
+      "qa": {
+        "qa_status": "RECHECK_REQUIRED",
+        "qa_reason_zh": "弯曲手臂横跨胸前：重点复核同侧腕点与肘点是否属于同一手臂；确认袖口中心。",
+        "qa_flags": [],
+        "ready_for_training": false,
+        "qa_inspection_basis": "yellow-box review image; GPU source not available for pixel-level final confirmation"
+      }
+    },
+    {
+      "annotation": {
+        "record_id": "v5_train_00415",
+        "source_image_sha256": "f62e1c9d4a0cd7015a047e77172fc905c81f9e85fdca27f83dc44588f04add33",
+        "reviewer": "qyx",
+        "side": "image_left",
+        "state": "measurable",
+        "points": {
+          "shoulder": [
+            0.2424262309425378,
+            0.2387990020862816
+          ],
+          "elbow": [
+            0.18922938950499815,
+            0.40126635834439695
+          ],
+          "wrist": [
+            0.2424262309425378,
+            0.526384897071911
+          ],
+          "cuff": [
+            0.2088282258240917,
+            0.3993989174678669
+          ]
+        },
+        "reason": "",
+        "review_status": "confirmed",
+        "same_arm_confirmed": true,
+        "sleeveless_confirmed": false,
+        "current_class": "elbow",
+        "class_confirmed": true,
+        "ratio": 0.545583389491745,
+        "measurement_method": "projected_arm_polyline_v1",
+        "confirmed_at": "2026-10-12T05:02:18.306Z",
+        "prescreen_decision": "priority",
+        "prescreen_reason_zh": "黑色上衣袖口位于肘部附近，左侧可见整段前臂和手部",
+        "projection_distance_ratio": 0.041750775099258355,
+        "arm_pixels": 303.46146202803834,
+        "native_draft_label_NOT_confirmed": "elbow",
+        "garment_id": "fashionpedia_ann_9017",
+        "source_image": "../fashion_data/raw/fashionpedia/images/test/28f3172e9e96bb17c1f9ec3697b175bc.jpg"
+      },
+      "qa": {
+        "qa_status": "PRELIM_PASS_SOURCE_PENDING",
+        "qa_reason_zh": "从参考图人工复核后结构与四点暂可接受；正式训练前仍需用GPU无框原图验点，并执行数据隔离校验。",
+        "qa_flags": [],
+        "ready_for_training": false,
+        "qa_inspection_basis": "yellow-box review image; GPU source not available for pixel-level final confirmation"
+      }
+    },
+    {
+      "annotation": {
+        "record_id": "v5_train_00681",
+        "source_image_sha256": "23f38f3f1a45d181cd1ea74536ceb53b564ae72d1e1dbe0cc7253d8737afc24d",
+        "reviewer": "qyx",
+        "side": "image_left",
+        "state": "measurable",
+        "points": {
+          "shoulder": [
+            0.38488032819252793,
+            0.3022919918883037
+          ],
+          "elbow": [
+            0.34275936204286683,
+            0.41433844448010737
+          ],
+          "wrist": [
+            0.33714323322291206,
+            0.5077104883066105
+          ],
+          "cuff": [
+            0.3680319417326635,
+            0.3825919495790963
+          ]
+        },
+        "reason": "",
+        "review_status": "confirmed",
+        "same_arm_confirmed": true,
+        "sleeveless_confirmed": false,
+        "current_class": "elbow",
+        "class_confirmed": true,
+        "ratio": 0.3858490241514608,
+        "measurement_method": "projected_arm_polyline_v1",
+        "confirmed_at": "2026-10-12T06:22:07.916Z",
+        "prescreen_decision": "hold",
+        "prescreen_reason_zh": "红色单肩宽袖，抬手姿态及披覆布料使目标袖口不确定",
+        "projection_distance_ratio": 0.04118678268796997,
+        "arm_pixels": 213.95626907608448,
+        "native_draft_label_NOT_confirmed": "elbow",
+        "garment_id": "fashionpedia_ann_7986",
+        "source_image": "../fashion_data/raw/fashionpedia/images/test/4c796269b7c4578353de5be59efbb9f9.jpg"
+      },
+      "qa": {
+        "qa_status": "RECHECK_REQUIRED",
+        "qa_reason_zh": "单肩褶皱披覆并且当前标elbow，但覆盖比例只有0.386；需重审袖口归属与类别。",
+        "qa_flags": [],
+        "ready_for_training": false,
+        "qa_inspection_basis": "yellow-box review image; GPU source not available for pixel-level final confirmation"
+      }
+    },
+    {
+      "annotation": {
+        "record_id": "v5_train_00791",
+        "source_image_sha256": "7a0a6305009084b29c4c67d6f634e14728a2e0e9ce7ad2c7518c2eba3a97811f",
+        "reviewer": "qyx",
+        "side": "",
+        "state": "unmeasurable",
+        "points": {},
+        "reason": "棕色皮草呈披肩式结构，覆盖肩部及上臂，缺少可可靠识别的结构性袖口，无法确定袖长覆盖范围，不适合进行四点测量。",
+        "review_status": "confirmed",
+        "same_arm_confirmed": false,
+        "sleeveless_confirmed": false,
+        "current_class": "other",
+        "class_confirmed": true,
+        "ratio": null,
+        "measurement_method": "not_measured",
+        "confirmed_at": "2026-10-12T06:32:52.431Z",
+        "prescreen_decision": "exclude",
+        "prescreen_reason_zh": "毛皮披挂更像披肩/外搭，缺乏可靠结构袖口，难以计算连续覆盖比例",
+        "native_draft_label_NOT_confirmed": "elbow",
+        "garment_id": "fashionpedia_ann_2518",
+        "source_image": "../fashion_data/raw/fashionpedia/images/test/5e9bc1602c42a055f7e8626fc23776a8.jpg"
+      },
+      "qa": {
+        "qa_status": "EXCLUDED_FROM_SUPPLEMENT",
+        "qa_reason_zh": "披肩/毛皮结构无可靠结构袖口，已正确标无法测量。",
+        "qa_flags": [],
+        "ready_for_training": false,
+        "qa_inspection_basis": "yellow-box review image; GPU source not available for pixel-level final confirmation"
+      }
+    },
+    {
+      "annotation": {
+        "record_id": "v5_train_01106",
+        "source_image_sha256": "311f8715261a8b2475aeaaf95718483e991a4841369ce9492e4722f3abdacb0c",
+        "reviewer": "qyx",
+        "side": "image_left",
+        "state": "measurable",
+        "points": {
+          "shoulder": [
+            0.30636125097510813,
+            0.2593408517281123
+          ],
+          "elbow": [
+            0.3154386213743706,
+            0.3657849816903258
+          ],
+          "wrist": [
+            0.2761033496442333,
+            0.49277096129437
+          ],
+          "cuff": [
+            0.32754178190672056,
+            0.3993989174678669
+          ]
+        },
+        "reason": "",
+        "review_status": "confirmed",
+        "same_arm_confirmed": true,
+        "sleeveless_confirmed": false,
+        "current_class": "elbow",
+        "class_confirmed": true,
+        "ratio": 0.5859180120052435,
+        "measurement_method": "projected_arm_polyline_v1",
+        "confirmed_at": "2026-10-12T05:02:20.614Z",
+        "prescreen_decision": "priority",
+        "prescreen_reason_zh": "黑色蕾丝袖口明显在肘部上方；原生肘长袖标签可能需改成短袖，双手可见",
+        "projection_distance_ratio": 0.057865044108259905,
+        "arm_pixels": 241.5383386952534,
+        "native_draft_label_NOT_confirmed": "elbow",
+        "garment_id": "fashionpedia_ann_2594",
+        "source_image": "../fashion_data/raw/fashionpedia/images/test/845197179e9ea35e1dd58144a1e03f36.jpg"
+      },
+      "qa": {
+        "qa_status": "PRELIM_PASS_SOURCE_PENDING",
+        "qa_reason_zh": "从参考图人工复核后结构与四点暂可接受；正式训练前仍需用GPU无框原图验点，并执行数据隔离校验。",
+        "qa_flags": [],
+        "ready_for_training": false,
+        "qa_inspection_basis": "yellow-box review image; GPU source not available for pixel-level final confirmation"
+      }
+    },
+    {
+      "annotation": {
+        "record_id": "v5_train_01149",
+        "source_image_sha256": "6dd497a45ea6c3d907796974f163140899bcfed4d245f03a47ae55e864e370be",
+        "reviewer": "qyx",
+        "side": "",
+        "state": "unmeasurable",
+        "points": {},
+        "reason": "侧坐姿态，宽松袖子与身体及腿部重叠，肩肘腕关键点无法在同侧可靠确认，袖口边界存在歧义，暂不进行四点测量。",
+        "review_status": "confirmed",
+        "same_arm_confirmed": false,
+        "sleeveless_confirmed": false,
+        "current_class": "other",
+        "class_confirmed": true,
+        "ratio": null,
+        "measurement_method": "not_measured",
+        "confirmed_at": "2026-10-12T06:15:34.888Z",
+        "prescreen_decision": "hold",
+        "prescreen_reason_zh": "侧坐姿态，衣物与胳膊相叠，肘腕位置不容易在同侧稳定确认",
+        "native_draft_label_NOT_confirmed": "elbow",
+        "garment_id": "fashionpedia_ann_8804",
+        "source_image": "../fashion_data/raw/fashionpedia/images/test/86f139c6fe14c64090091230a78862fd.jpg"
+      },
+      "qa": {
+        "qa_status": "FINALIZED_NONTRAINABLE",
+        "qa_reason_zh": "已标无法测量，侧坐姿态和衣袖/身体重叠；维持null。",
+        "qa_flags": [],
+        "ready_for_training": false,
+        "qa_inspection_basis": "yellow-box review image; GPU source not available for pixel-level final confirmation"
+      }
+    },
+    {
+      "annotation": {
+        "record_id": "v5_train_01155",
+        "source_image_sha256": "f63325a85091ce7c00b169f3f6e73b9c78f9c0785458e9319ce5680abc16e916",
+        "reviewer": "qyx",
+        "side": "image_left",
+        "state": "measurable",
+        "points": {
+          "shoulder": [
+            0.37121858389658113,
+            0.2854850239995331
+          ],
+          "elbow": [
+            0.3516197475774876,
+            0.40686868097398715
+          ],
+          "wrist": [
+            0.34322024629787606,
+            0.5319872197015012
+          ],
+          "cuff": [
+            0.33202091125839406,
+            0.42180820798622765
+          ]
+        },
+        "reason": "",
+        "review_status": "confirmed",
+        "same_arm_confirmed": true,
+        "sleeveless_confirmed": false,
+        "current_class": "elbow",
+        "class_confirmed": true,
+        "ratio": 0.5563221810825029,
+        "measurement_method": "projected_arm_polyline_v1",
+        "confirmed_at": "2026-10-12T05:02:22.049Z",
+        "prescreen_decision": "priority",
+        "prescreen_reason_zh": "白色连衣裙宽松袖口接近肘部，人物正面、两侧前臂与手腕清楚",
+        "projection_distance_ratio": 0.05009881606967582,
+        "arm_pixels": 253.26534021533337,
+        "native_draft_label_NOT_confirmed": "elbow",
+        "garment_id": "fashionpedia_ann_1578",
+        "source_image": "../fashion_data/raw/fashionpedia/images/test/88383c53ef2404f1596e41e45ebe5ddd.jpg"
+      },
+      "qa": {
+        "qa_status": "PRELIM_PASS_SOURCE_PENDING",
+        "qa_reason_zh": "从参考图人工复核后结构与四点暂可接受；正式训练前仍需用GPU无框原图验点，并执行数据隔离校验。",
+        "qa_flags": [],
+        "ready_for_training": false,
+        "qa_inspection_basis": "yellow-box review image; GPU source not available for pixel-level final confirmation"
+      }
+    },
+    {
+      "annotation": {
+        "record_id": "v5_train_01296",
+        "source_image_sha256": "fc3122090eb9d7efc311b8ee1960956862a415a43a8e8ac385284c5503d1a112",
+        "reviewer": "qyx",
+        "side": "image_left",
+        "state": "measurable",
+        "points": {
+          "shoulder": [
+            0.2140197152245345,
+            0.3078943145178939
+          ],
+          "elbow": [
+            0.2308433734939759,
+            0.5301197788249712
+          ],
+          "wrist": [
+            0.2056078860898138,
+            0.7915615015391798
+          ],
+          "cuff": [
+            0.1971960569550931,
+            0.5656011554790423
+          ]
+        },
+        "reason": "",
+        "review_status": "confirmed",
+        "same_arm_confirmed": true,
+        "sleeveless_confirmed": false,
+        "current_class": "elbow",
+        "class_confirmed": true,
+        "ratio": 0.5353137670513901,
+        "measurement_method": "projected_arm_polyline_v1",
+        "confirmed_at": "2026-10-12T05:02:24.109Z",
+        "prescreen_decision": "priority",
+        "prescreen_reason_zh": "宽大落肩/蝙蝠式轮廓，袖口可能在肘部附近，但肩点与袖口需仔细确认",
+        "projection_distance_ratio": 0.0414605599668201,
+        "arm_pixels": 496.11691034801424,
+        "native_draft_label_NOT_confirmed": "elbow",
+        "garment_id": "fashionpedia_ann_1418",
+        "source_image": "../fashion_data/raw/fashionpedia/images/test/9ac4f47132fe867a5bef9e999fe562fd.jpg"
+      },
+      "qa": {
+        "qa_status": "RECHECK_REQUIRED",
+        "qa_reason_zh": "落肩/蝙蝠袖轮廓：肩点可能偏离解剖肩关节，复核袖口与上臂覆盖位置。",
+        "qa_flags": [],
+        "ready_for_training": false,
+        "qa_inspection_basis": "yellow-box review image; GPU source not available for pixel-level final confirmation"
+      }
+    },
+    {
+      "annotation": {
+        "record_id": "v5_train_01508",
+        "source_image_sha256": "edc14f9cf4b0774f876108b84b21cec714f112e4813903d32e256745fbe7e886",
+        "reviewer": "qyx",
+        "side": "image_right",
+        "state": "measurable",
+        "points": {
+          "shoulder": [
+            0.5536797969767185,
+            0.2014531236322255
+          ],
+          "elbow": [
+            0.5734524991724594,
+            0.3657903183449564
+          ],
+          "wrist": [
+            0.5960498731104491,
+            0.48904321437950454
+          ],
+          "cuff": [
+            0.5875758578837029,
+            0.3713927227101631
+          ]
+        },
+        "reason": "",
+        "review_status": "confirmed",
+        "same_arm_confirmed": true,
+        "sleeveless_confirmed": false,
+        "current_class": "elbow",
+        "class_confirmed": true,
+        "ratio": 0.5935462080271263,
+        "measurement_method": "projected_arm_polyline_v1",
+        "confirmed_at": "2026-10-12T05:02:27.550Z",
+        "prescreen_decision": "priority",
+        "prescreen_reason_zh": "黑白外搭袖口可能在前臂位置，原生肘长提示可能偏短；可测但需要纠正类别",
+        "projection_distance_ratio": 0.029740758318183947,
+        "arm_pixels": 295.947623807869,
+        "native_draft_label_NOT_confirmed": "elbow",
+        "garment_id": "fashionpedia_ann_8888",
+        "source_image": "../fashion_data/raw/fashionpedia/images/test/b22ea58665d776f693c9f13635499460.jpg"
+      },
+      "qa": {
+        "qa_status": "RECHECK_REQUIRED",
+        "qa_reason_zh": "多层外搭：必须确认目标衣物是黑色外搭，袖口点确实落在该层衣物的开口处。",
+        "qa_flags": [],
+        "ready_for_training": false,
+        "qa_inspection_basis": "yellow-box review image; GPU source not available for pixel-level final confirmation"
+      }
+    },
+    {
+      "annotation": {
+        "record_id": "v5_train_01632",
+        "source_image_sha256": "a36bc372b38756ea3caf5bcc43f4d0c548b75bff677a02e3c293e9bde69aca17",
+        "reviewer": "qyx",
+        "side": "image_right",
+        "state": "measurable",
+        "points": {
+          "shoulder": [
+            0.5588164192815356,
+            0.21825715244445093
+          ],
+          "elbow": [
+            0.5216844751728472,
+            0.36391754081379574
+          ],
+          "wrist": [
+            0.3236474399265097,
+            0.44608493938111843
+          ],
+          "cuff": [
+            0.48145820238843495,
+            0.3900617130852166
+          ]
+        },
+        "reason": "",
+        "review_status": "confirmed",
+        "same_arm_confirmed": true,
+        "sleeveless_confirmed": false,
+        "current_class": "elbow",
+        "class_confirmed": true,
+        "ratio": 0.6230612397598212,
+        "measurement_method": "projected_arm_polyline_v1",
+        "confirmed_at": "2026-10-12T06:27:54.096Z",
+        "prescreen_decision": "exclude",
+        "prescreen_reason_zh": "黑色单侧蕾丝袖与另一侧露肩结构不对称，难作为标准肘长袖补标",
+        "projection_distance_ratio": 0.026642057672597988,
+        "arm_pixels": 299.4304732921497,
+        "native_draft_label_NOT_confirmed": "elbow",
+        "garment_id": "fashionpedia_ann_3499",
+        "source_image": "../fashion_data/raw/fashionpedia/images/test/c59652d40810f10a443756d41bfa1287.jpg"
+      },
+      "qa": {
+        "qa_status": "EXCLUDED_FROM_SUPPLEMENT",
+        "qa_reason_zh": "初筛排除的不对称蕾丝外衣却标为elbow；这不是标准同侧袖长样本。",
+        "qa_flags": [],
+        "ready_for_training": false,
+        "qa_inspection_basis": "yellow-box review image; GPU source not available for pixel-level final confirmation"
+      }
+    },
+    {
+      "annotation": {
+        "record_id": "v5_train_01654",
+        "source_image_sha256": "3d4344ed9c38678045b804bd41bdf1e9ee9791f3a41ddb361c94aff73e4ff184",
+        "reviewer": "qyx",
+        "side": "",
+        "state": "unmeasurable",
+        "points": {},
+        "reason": "棕色流动式披挂服装，布料从肩部自然垂落，缺少清晰的结构性袖口，无法可靠确定袖长覆盖范围，不适合进行四点测量。",
+        "review_status": "confirmed",
+        "same_arm_confirmed": false,
+        "sleeveless_confirmed": false,
+        "current_class": "other",
+        "class_confirmed": true,
+        "ratio": null,
+        "measurement_method": "not_measured",
+        "confirmed_at": "2026-10-12T06:35:39.978Z",
+        "prescreen_decision": "exclude",
+        "prescreen_reason_zh": "棕色流动披挂轮廓不显示稳定的实体袖口，原生肘长提示不宜直接采用",
+        "native_draft_label_NOT_confirmed": "elbow",
+        "garment_id": "fashionpedia_ann_3002",
+        "source_image": "../fashion_data/raw/fashionpedia/images/test/c727d3096d448818302663fda2fedb2c.jpg"
+      },
+      "qa": {
+        "qa_status": "EXCLUDED_FROM_SUPPLEMENT",
+        "qa_reason_zh": "披挂服装缺乏明确袖口，已正确标无法测量。",
+        "qa_flags": [],
+        "ready_for_training": false,
+        "qa_inspection_basis": "yellow-box review image; GPU source not available for pixel-level final confirmation"
+      }
+    },
+    {
+      "annotation": {
+        "record_id": "v5_train_01674",
+        "source_image_sha256": "849305e139016320260c1c7be3eae09cf8a1a55474c7cf857bbdbe457776fd7e",
+        "reviewer": "qyx",
+        "side": "image_right",
+        "state": "measurable",
+        "points": {
+          "shoulder": [
+            0.6738663745892661,
+            0.25187108822199206
+          ],
+          "elbow": [
+            0.6738663745892661,
+            0.4703616707760092
+          ],
+          "wrist": [
+            0.6991018619934283,
+            0.6664429628116657
+          ],
+          "cuff": [
+            0.6542387732749179,
+            0.4423500576280583
+          ]
+        },
+        "reason": "",
+        "review_status": "confirmed",
+        "same_arm_confirmed": true,
+        "sleeveless_confirmed": false,
+        "current_class": "other",
+        "class_confirmed": true,
+        "ratio": 0.45866398660952656,
+        "measurement_method": "projected_arm_polyline_v1",
+        "confirmed_at": "2026-10-12T06:01:57.415Z",
+        "prescreen_decision": "priority",
+        "prescreen_reason_zh": "粉色荷叶宽袖下摆接近肘部高度，但袖口是飘垂结构，需查验开口边缘",
+        "projection_distance_ratio": 0.03147742912189364,
+        "arm_pixels": 425.25785840226376,
+        "native_draft_label_NOT_confirmed": "elbow",
+        "garment_id": "fashionpedia_ann_7755",
+        "source_image": "../fashion_data/raw/fashionpedia/images/test/c9946804239bdb74aa23c4a56445b9a8.jpg"
+      },
+      "qa": {
+        "qa_status": "RECHECK_REQUIRED",
+        "qa_reason_zh": "measurable但类别设为other：荷叶披覆结构未定义标准袖长类别；先确定是否纳入可测袖长任务。",
+        "qa_flags": [
+          "未定义为明确标准袖长类别"
+        ],
+        "ready_for_training": false,
+        "qa_inspection_basis": "yellow-box review image; GPU source not available for pixel-level final confirmation"
+      }
+    },
+    {
+      "annotation": {
+        "record_id": "v5_train_01719",
+        "source_image_sha256": "58364d5f9d21f9cd902c0eaaf72a0c0a9dce5110974b23de9d673d5fa84c33ef",
+        "reviewer": "qyx",
+        "side": "image_left",
+        "state": "measurable",
+        "points": {
+          "shoulder": [
+            0.6318072289156627,
+            0.18277577579037976
+          ],
+          "elbow": [
+            0.6962979189485213,
+            0.3247012824066644
+          ],
+          "wrist": [
+            0.6374151150054764,
+            0.34897801380155524
+          ],
+          "cuff": [
+            0.6542387732749179,
+            0.3209664006536043
+          ]
+        },
+        "reason": "",
+        "review_status": "confirmed",
+        "same_arm_confirmed": true,
+        "sleeveless_confirmed": true,
+        "current_class": "elbow",
+        "class_confirmed": true,
+        "ratio": 0.8751527434420783,
+        "measurement_method": "projected_arm_polyline_v1",
+        "confirmed_at": "2026-10-12T06:03:31.473Z",
+        "prescreen_decision": "priority",
+        "prescreen_reason_zh": "灰色短款上衣两袖口清楚，前臂可见但手部交叉；需确认同侧关键点",
+        "projection_distance_ratio": 0.0921772541427655,
+        "arm_pixels": 199.07116032938083,
+        "native_draft_label_NOT_confirmed": "elbow",
+        "garment_id": "fashionpedia_ann_8315",
+        "source_image": "../fashion_data/raw/fashionpedia/images/test/d0c4784dc3efc24c058fd0b9b533ca2d.jpg"
+      },
+      "qa": {
+        "qa_status": "RECHECK_REQUIRED",
+        "qa_reason_zh": "硬性矛盾：state=measurable但sleeveless_confirmed=true；且ratio=0.875，交叉手臂导致腕点和袖口可能混淆，需重新核点。",
+        "qa_flags": [
+          "measurable与sleeveless_confirmed=true互斥",
+          "袖口偏离投影路径>0.08（人工审查阈值，不是PRD硬阈值）"
+        ],
+        "ready_for_training": false,
+        "qa_inspection_basis": "yellow-box review image; GPU source not available for pixel-level final confirmation"
+      }
+    },
+    {
+      "annotation": {
+        "record_id": "v5_train_01748",
+        "source_image_sha256": "d9372cf9897d48b09c4aa5564b4f3107fb0ca1440037190488d740561fb8a11b",
+        "reviewer": "qyx",
+        "side": "image_left",
+        "state": "sleeveless",
+        "points": {},
+        "reason": "",
+        "review_status": "confirmed",
+        "same_arm_confirmed": false,
+        "sleeveless_confirmed": true,
+        "current_class": "sleeveless",
+        "class_confirmed": true,
+        "ratio": 0,
+        "measurement_method": "visible_sleeve_absence",
+        "confirmed_at": "2026-10-12T06:04:13.767Z",
+        "prescreen_decision": "hold",
+        "prescreen_reason_zh": "条纹单肩设计，一侧裸肩、另一侧弯臂，肘腕及衣袖归属不够稳定",
+        "native_draft_label_NOT_confirmed": "elbow",
+        "garment_id": "fashionpedia_ann_8955",
+        "source_image": "../fashion_data/raw/fashionpedia/images/test/d2f3f13a7a3532cc905fe9f3bad10b8a.jpg"
+      },
+      "qa": {
+        "qa_status": "RECHECK_REQUIRED",
+        "qa_reason_zh": "单肩不对称结构，不宜将目标衣服直接整体定义为sleeveless；核对袖部归属或保留非训练。",
+        "qa_flags": [],
+        "ready_for_training": false,
+        "qa_inspection_basis": "yellow-box review image; GPU source not available for pixel-level final confirmation"
+      }
+    },
+    {
+      "annotation": {
+        "record_id": "v5_train_01847",
+        "source_image_sha256": "4069bcad7ae6742c607aea754450388eb4b4a5d88a953a8bb3fb37552f1fd72d",
+        "reviewer": "qyx",
+        "side": "",
+        "state": "unmeasurable",
+        "points": {},
+        "reason": "深色披搭式外衣，衣物层叠且手提包遮挡部分手臂，无法可靠识别肩肘腕关键点及实际袖口边界，不满足四点测量条件。",
+        "review_status": "confirmed",
+        "same_arm_confirmed": false,
+        "sleeveless_confirmed": false,
+        "current_class": "other",
+        "class_confirmed": true,
+        "ratio": null,
+        "measurement_method": "not_measured",
+        "confirmed_at": "2026-10-12T06:37:32.217Z",
+        "prescreen_decision": "exclude",
+        "prescreen_reason_zh": "深色外衣/披搭与大手袋遮挡腕部及袖口，连续测量条件较差",
+        "native_draft_label_NOT_confirmed": "elbow",
+        "garment_id": "fashionpedia_ann_1737",
+        "source_image": "../fashion_data/raw/fashionpedia/images/test/e1f4adf88b71b15a4aaa6a32c6fa0d4a.jpg"
+      },
+      "qa": {
+        "qa_status": "EXCLUDED_FROM_SUPPLEMENT",
+        "qa_reason_zh": "深色外搭层叠、手提包遮挡，已正确标无法测量。",
+        "qa_flags": [],
+        "ready_for_training": false,
+        "qa_inspection_basis": "yellow-box review image; GPU source not available for pixel-level final confirmation"
+      }
+    }
+  ],
+  "cautions": [
+    "No original GPU source images were available; only review images with yellow boxes.",
+    "QA did not alter manual points or override user confirmed values.",
+    "Do not join the original 19 count into training labels until source verification and PRD split/isolation checks."
+  ]
+}

@@ -1,0 +1,104 @@
+{
+  "status": "STAGE6_DIAGNOSTIC_COMPLETED",
+  "mode": "all",
+  "dry_run": false,
+  "project_files_modified": false,
+  "scope": "warmed latency and/or controlled GT/pred garment ROI development diagnostic",
+  "generated_by": "run_stage6.py",
+  "checkpoint": {
+    "device": "NVIDIA GeForce RTX 4090",
+    "torch": "2.13.0+cu132",
+    "checkpoint_sha256": "c5ba795225349b1c521aac0517ac7c493d9818dcc17d558ac4a3f6f8669452f0",
+    "min_size": 640,
+    "max_size": 1024
+  },
+  "latency": {
+    "modules": {
+      "segmentation": {
+        "n": 40,
+        "mean_ms": 28.6538,
+        "median_ms": 25.9583,
+        "p95_ms": 46.7645,
+        "max_ms": 48.766,
+        "threshold_ms": 50,
+        "exceed_target_count": 0,
+        "unit": "image",
+        "unique_sample_ids": 8,
+        "warmup_runs": 10,
+        "timed_passes": 5,
+        "observed_statuses": {
+          "ran": 40
+        },
+        "scope": "WARMED_DIAGNOSTIC_NOT_FORMAL_PRD_ACCEPTANCE"
+      },
+      "grounding": {
+        "n": 80,
+        "mean_ms": 180.7236,
+        "median_ms": 175.0594,
+        "p95_ms": 249.8163,
+        "max_ms": 260.6045,
+        "threshold_ms": 30,
+        "exceed_target_count": 80,
+        "unit": "query_instance",
+        "unique_sample_ids": 2,
+        "warmup_runs": 10,
+        "timed_passes": 5,
+        "observed_statuses": {
+          "detected": 40,
+          "missed": 30,
+          "rejected_region_geometry": 10
+        },
+        "scope": "WARMED_DIAGNOSTIC_NOT_FORMAL_PRD_ACCEPTANCE"
+      },
+      "attributes": {
+        "n": 40,
+        "mean_ms": 44.7189,
+        "median_ms": 43.0084,
+        "p95_ms": 62.6706,
+        "max_ms": 63.3538,
+        "threshold_ms": 20,
+        "exceed_target_count": 40,
+        "unit": "garment_attribute_set",
+        "unique_sample_ids": 8,
+        "warmup_runs": 10,
+        "timed_passes": 5,
+        "observed_statuses": {
+          "predicted:5;requires_review:1": 20,
+          "localization_missing:1;predicted:5": 10,
+          "predicted:6": 10
+        },
+        "scope": "WARMED_DIAGNOSTIC_NOT_FORMAL_PRD_ACCEPTANCE"
+      }
+    },
+    "selected_roi_count": 8,
+    "ground_pair_count": 16
+  },
+  "paired": {
+    "status": "NO_CLASS_CORRECT_MATCHED_PAIRS",
+    "candidate_pairs_before_limit": 0,
+    "selected_pairs": 0,
+    "validation_images_scanned": 32,
+    "source": "configs/prd_8class_val_v2_full_targets.csv",
+    "source_scope": "Validation development diagnostic, not Core400 or blinded test.",
+    "pair_rule": "bbox_IoU>=0.5 and exact 8class match, deterministic selection",
+    "attributes_comparable": 0,
+    "attribute_label_agreement_count": 0,
+    "attribute_label_agreement_rate": null,
+    "regional_queries_run": 0,
+    "both_region_boxes_detected": 0,
+    "mean_cross_input_region_box_iou": null,
+    "skipped_sources_count": 32,
+    "not_measured": [
+      "True attribute accuracy (no regional/attribute GT labels).",
+      "True region localization accuracy (GT garment ROI is NOT GT local part ROI).",
+      "Uncontrolled full-chain accuracy.",
+      "Independent blind holdout acceptance."
+    ],
+    "critical_notes": [
+      "controlled=True is used on BOTH garment ROIs. Neckline uses the same top-center PROXY rule, not GT neckline and not predicted collar.",
+      "Reported agreement is consistency across garment ROI changes, not correctness.",
+      "GT garment ROI masks exist in validation annotations; no regional or attribute ground-truth labels are fabricated.",
+      "Pair membership depends on the model correctly localizing and classifying the garment, thus conditional and selection-biased."
+    ]
+  }
+}

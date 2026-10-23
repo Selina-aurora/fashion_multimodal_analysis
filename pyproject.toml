@@ -25,15 +25,19 @@ fashion_multimodal_analysis = ["command_registry.json", "common/path_aliases.jso
 [tool.black]
 line-length = 88
 target-version = ["py310"]
+# These six GPU-validated files are byte-frozen and checked by verify_sources.py.
+extend-exclude = '(^|/)src/fashion_multimodal_analysis/integration/(attribute_context|model_backends|pipeline|quality_guards|region_semantics|semantic_consistency)\.py$'
 
 [tool.isort]
 profile = "black"
 line_length = 88
 known_first_party = ["fashion_multimodal_analysis"]
+skip = ["src/fashion_multimodal_analysis/integration/attribute_context.py","src/fashion_multimodal_analysis/integration/model_backends.py","src/fashion_multimodal_analysis/integration/pipeline.py","src/fashion_multimodal_analysis/integration/quality_guards.py","src/fashion_multimodal_analysis/integration/region_semantics.py","src/fashion_multimodal_analysis/integration/semantic_consistency.py"]
 
 [tool.ruff]
 line-length = 88
 target-version = "py310"
+extend-exclude = ["src/fashion_multimodal_analysis/integration/attribute_context.py","src/fashion_multimodal_analysis/integration/model_backends.py","src/fashion_multimodal_analysis/integration/pipeline.py","src/fashion_multimodal_analysis/integration/quality_guards.py","src/fashion_multimodal_analysis/integration/region_semantics.py","src/fashion_multimodal_analysis/integration/semantic_consistency.py"]
 
 [tool.ruff.lint]
 select = ["E4", "E7", "E9", "F821", "F822", "F823", "ISC001", "ISC002", "D100", "D101", "D102", "D103", "D104", "D105", "D106", "D107", "ANN001", "ANN002", "ANN003", "ANN201", "ANN202"]
@@ -59,3 +63,4 @@ allow-multiline = false
 
 [tool.ruff.lint.pydocstyle]
 convention = "google"
+

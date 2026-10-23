@@ -1,0 +1,223 @@
+{
+  "epoch": 1,
+  "metrics": {
+    "tp": 0,
+    "fp": 6,
+    "fn": 9,
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "negative_images": 3,
+    "negative_images_with_fp": 2
+  },
+  "cases": [
+    {
+      "record_id": "df2_balanced150_20261008_00041",
+      "presence": "present",
+      "truth_boxes": [
+        [
+          0.0,
+          333.0,
+          80.0,
+          372.0
+        ]
+      ],
+      "predicted_boxes": [],
+      "scores": [],
+      "tp": 0,
+      "fp": 0,
+      "fn": 1,
+      "matches": []
+    },
+    {
+      "record_id": "v5_train_01363",
+      "presence": "present",
+      "truth_boxes": [
+        [
+          200.0,
+          249.0,
+          327.0,
+          355.0
+        ],
+        [
+          608.0,
+          754.0,
+          731.0,
+          862.0
+        ]
+      ],
+      "predicted_boxes": [],
+      "scores": [],
+      "tp": 0,
+      "fp": 0,
+      "fn": 2,
+      "matches": []
+    },
+    {
+      "record_id": "df2_targeted150_20261008_00097",
+      "presence": "present",
+      "truth_boxes": [
+        [
+          184.0,
+          171.0,
+          259.0,
+          263.0
+        ],
+        [
+          532.0,
+          171.0,
+          608.0,
+          264.0
+        ]
+      ],
+      "predicted_boxes": [],
+      "scores": [],
+      "tp": 0,
+      "fp": 0,
+      "fn": 2,
+      "matches": []
+    },
+    {
+      "record_id": "v5_train_00237",
+      "presence": "present",
+      "truth_boxes": [
+        [
+          352.0,
+          387.0,
+          400.0,
+          429.0
+        ]
+      ],
+      "predicted_boxes": [
+        [
+          322.5868835449219,
+          376.7730407714844,
+          406.04986572265625,
+          419.105712890625
+        ]
+      ],
+      "scores": [
+        0.4464844763278961
+      ],
+      "tp": 0,
+      "fp": 1,
+      "fn": 1,
+      "matches": []
+    },
+    {
+      "record_id": "df2_balanced150_20261008_00003",
+      "presence": "present",
+      "truth_boxes": [
+        [
+          43.0,
+          190.0,
+          138.0,
+          252.0
+        ],
+        [
+          388.0,
+          233.0,
+          467.0,
+          282.0
+        ]
+      ],
+      "predicted_boxes": [],
+      "scores": [],
+      "tp": 0,
+      "fp": 0,
+      "fn": 2,
+      "matches": []
+    },
+    {
+      "record_id": "v5_train_00276",
+      "presence": "present",
+      "truth_boxes": [
+        [
+          449.0,
+          293.0,
+          523.0,
+          358.0
+        ]
+      ],
+      "predicted_boxes": [],
+      "scores": [],
+      "tp": 0,
+      "fp": 0,
+      "fn": 1,
+      "matches": []
+    },
+    {
+      "record_id": "v5_train_01283",
+      "presence": "absent",
+      "truth_boxes": [],
+      "predicted_boxes": [
+        [
+          0.0,
+          126.2485580444336,
+          42.257240295410156,
+          145.95895385742188
+        ],
+        [
+          3.116331100463867,
+          132.7854766845703,
+          48.746788024902344,
+          154.27622985839844
+        ],
+        [
+          15.434903144836426,
+          131.699462890625,
+          41.2198486328125,
+          143.74948120117188
+        ],
+        [
+          0.0,
+          102.251220703125,
+          49.83085250854492,
+          157.09872436523438
+        ]
+      ],
+      "scores": [
+        0.4750578999519348,
+        0.4245480000972748,
+        0.4131406545639038,
+        0.4097328782081604
+      ],
+      "tp": 0,
+      "fp": 4,
+      "fn": 0,
+      "matches": []
+    },
+    {
+      "record_id": "v5_train_00074",
+      "presence": "absent",
+      "truth_boxes": [],
+      "predicted_boxes": [],
+      "scores": [],
+      "tp": 0,
+      "fp": 0,
+      "fn": 0,
+      "matches": []
+    },
+    {
+      "record_id": "df2_balanced150_20261008_00062",
+      "presence": "absent",
+      "truth_boxes": [],
+      "predicted_boxes": [
+        [
+          30.506521224975586,
+          503.897705078125,
+          151.27389526367188,
+          605.5759887695312
+        ]
+      ],
+      "scores": [
+        0.4117434024810791
+      ],
+      "tp": 0,
+      "fp": 1,
+      "fn": 0,
+      "matches": []
+    }
+  ],
+  "overlay_legend": "green=confirmed cuff; red=prediction at score >= .4"
+}

@@ -1,0 +1,154 @@
+{
+  "status": "WARMED_TIMING_FINISHED",
+  "notes": [
+    "Matched previous 8 image hashes, but new timed calls.",
+    "Each grounding record is one (garment instance, text query), potentially DINO plus SAM.",
+    "Attribute time covers the full category-applicable attribute set per garment, not one isolated attribute.",
+    "Some attribute labels depend on previously precomputed collar localization; collar call is excluded from attribute timer.",
+    "8-image small diagnostic set, repeated measurements are not independent examples.",
+    "No product image IO/model load/warmups inside module timers; CUDA sync is in existing backend.",
+    "An attribute-set timing >20ms is NOT identical to single-attribute timing; PRD timing granularity must be confirmed.",
+    "No frozen human-reviewed V2, no PRD acceptance claim."
+  ],
+  "modules": {
+    "segmentation": {
+      "n": 40,
+      "mean_ms": 28.6538,
+      "median_ms": 25.9583,
+      "p95_ms": 46.7645,
+      "max_ms": 48.766,
+      "threshold_ms": 50,
+      "exceed_target_count": 0,
+      "unit": "image",
+      "unique_sample_ids": 8,
+      "warmup_runs": 10,
+      "timed_passes": 5,
+      "observed_statuses": {
+        "ran": 40
+      },
+      "scope": "WARMED_DIAGNOSTIC_NOT_FORMAL_PRD_ACCEPTANCE"
+    },
+    "grounding": {
+      "n": 80,
+      "mean_ms": 180.7236,
+      "median_ms": 175.0594,
+      "p95_ms": 249.8163,
+      "max_ms": 260.6045,
+      "threshold_ms": 30,
+      "exceed_target_count": 80,
+      "unit": "query_instance",
+      "unique_sample_ids": 2,
+      "warmup_runs": 10,
+      "timed_passes": 5,
+      "observed_statuses": {
+        "detected": 40,
+        "missed": 30,
+        "rejected_region_geometry": 10
+      },
+      "scope": "WARMED_DIAGNOSTIC_NOT_FORMAL_PRD_ACCEPTANCE"
+    },
+    "attributes": {
+      "n": 40,
+      "mean_ms": 44.7189,
+      "median_ms": 43.0084,
+      "p95_ms": 62.6706,
+      "max_ms": 63.3538,
+      "threshold_ms": 20,
+      "exceed_target_count": 40,
+      "unit": "garment_attribute_set",
+      "unique_sample_ids": 8,
+      "warmup_runs": 10,
+      "timed_passes": 5,
+      "observed_statuses": {
+        "predicted:5;requires_review:1": 20,
+        "localization_missing:1;predicted:5": 10,
+        "predicted:6": 10
+      },
+      "scope": "WARMED_DIAGNOSTIC_NOT_FORMAL_PRD_ACCEPTANCE"
+    }
+  },
+  "per_region": [
+    {
+      "region": "collar",
+      "n": 10,
+      "mean_ms": 181.1756,
+      "median_ms": 181.6662,
+      "p95_ms": 244.4943,
+      "max_ms": 249.2702,
+      "threshold_ms": 30,
+      "exceed_target_count": 10
+    },
+    {
+      "region": "cuff",
+      "n": 10,
+      "mean_ms": 122.6824,
+      "median_ms": 123.8364,
+      "p95_ms": 125.7519,
+      "max_ms": 125.8299,
+      "threshold_ms": 30,
+      "exceed_target_count": 10
+    },
+    {
+      "region": "hem",
+      "n": 10,
+      "mean_ms": 183.6882,
+      "median_ms": 180.5442,
+      "p95_ms": 255.0313,
+      "max_ms": 260.6045,
+      "threshold_ms": 30,
+      "exceed_target_count": 10
+    },
+    {
+      "region": "pocket",
+      "n": 10,
+      "mean_ms": 177.5315,
+      "median_ms": 174.4901,
+      "p95_ms": 236.7437,
+      "max_ms": 238.9326,
+      "threshold_ms": 30,
+      "exceed_target_count": 10
+    },
+    {
+      "region": "shoulder",
+      "n": 10,
+      "mean_ms": 124.2683,
+      "median_ms": 123.9955,
+      "p95_ms": 129.9834,
+      "max_ms": 130.0944,
+      "threshold_ms": 30,
+      "exceed_target_count": 10
+    },
+    {
+      "region": "waist",
+      "n": 10,
+      "mean_ms": 183.0532,
+      "median_ms": 178.8211,
+      "p95_ms": 249.7691,
+      "max_ms": 252.6351,
+      "threshold_ms": 30,
+      "exceed_target_count": 10
+    },
+    {
+      "region": "pattern",
+      "n": 10,
+      "mean_ms": 235.9319,
+      "median_ms": 236.4095,
+      "p95_ms": 247.7764,
+      "max_ms": 248.2652,
+      "threshold_ms": 30,
+      "exceed_target_count": 10
+    },
+    {
+      "region": "decoration",
+      "n": 10,
+      "mean_ms": 237.4575,
+      "median_ms": 235.5706,
+      "p95_ms": 251.0575,
+      "max_ms": 251.9178,
+      "threshold_ms": 30,
+      "exceed_target_count": 10
+    }
+  ],
+  "selected_predicted_roi_count": 8,
+  "ground_pair_count": 16
+}

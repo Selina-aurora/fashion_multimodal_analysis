@@ -1,0 +1,7 @@
+{
+  "runner_sha256": "58c168ada566fef0df538fb37874e55062e275e4b8f7999cc6a3b0aaed6926cf",
+  "training_labels_sha256": "dd5d4dda69f10621e4cb8671130677401f5be34e099f6bd7d2199718303b306b",
+  "pattern_helper_sha256": "4fe0c50478e60e5639a05d1b8c64abe7358999af23a133944ea640f99edb41f0",
+  "design_helper_sha256": "c7e2a14d333eda8318ef5c633f4ee12f283f16cfbada035370c2d30cdccdfbe9",
+  "diagnostic_results_sha256": "6252352a9bd85b51883070ab8dd1bab306aa2c2f63c2faefd4e7e9c1283c43da"
+}

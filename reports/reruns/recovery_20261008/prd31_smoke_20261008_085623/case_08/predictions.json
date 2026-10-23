@@ -1,0 +1,3535 @@
+{
+  "status": "completed",
+  "timings": [
+    {
+      "module": "segmentation",
+      "ms": 96.84542985633016,
+      "unit": "image",
+      "instance_id": ""
+    },
+    {
+      "module": "grounding",
+      "ms": 180.98906613886356,
+      "unit": "query_instance",
+      "instance_id": "pred_0000",
+      "target_region": "collar"
+    },
+    {
+      "module": "grounding",
+      "ms": 169.01943506672978,
+      "unit": "query_instance",
+      "instance_id": "pred_0000",
+      "target_region": "cuff"
+    },
+    {
+      "module": "grounding",
+      "ms": 169.55161606892943,
+      "unit": "query_instance",
+      "instance_id": "pred_0000",
+      "target_region": "hem"
+    },
+    {
+      "module": "grounding",
+      "ms": 170.63525365665555,
+      "unit": "query_instance",
+      "instance_id": "pred_0000",
+      "target_region": "pocket"
+    },
+    {
+      "module": "grounding",
+      "ms": 169.15290569886565,
+      "unit": "query_instance",
+      "instance_id": "pred_0000",
+      "target_region": "shoulder"
+    },
+    {
+      "module": "grounding",
+      "ms": 169.1450010985136,
+      "unit": "query_instance",
+      "instance_id": "pred_0000",
+      "target_region": "waist"
+    },
+    {
+      "module": "grounding",
+      "ms": 170.85951706394553,
+      "unit": "query_instance",
+      "instance_id": "pred_0000",
+      "target_region": "pattern"
+    },
+    {
+      "module": "grounding",
+      "ms": 173.59217628836632,
+      "unit": "query_instance",
+      "instance_id": "pred_0000",
+      "target_region": "decoration"
+    },
+    {
+      "module": "attributes",
+      "ms": 32.42846438661218,
+      "unit": "instance",
+      "instance_id": "pred_0000"
+    },
+    {
+      "module": "grounding",
+      "ms": 237.35842388123274,
+      "unit": "query_instance",
+      "instance_id": "pred_0001",
+      "target_region": "collar"
+    },
+    {
+      "module": "grounding",
+      "ms": 228.36652304977179,
+      "unit": "query_instance",
+      "instance_id": "pred_0001",
+      "target_region": "cuff"
+    },
+    {
+      "module": "grounding",
+      "ms": 228.58157102018595,
+      "unit": "query_instance",
+      "instance_id": "pred_0001",
+      "target_region": "hem"
+    },
+    {
+      "module": "grounding",
+      "ms": 227.5036140345037,
+      "unit": "query_instance",
+      "instance_id": "pred_0001",
+      "target_region": "pocket"
+    },
+    {
+      "module": "grounding",
+      "ms": 228.01932413131,
+      "unit": "query_instance",
+      "instance_id": "pred_0001",
+      "target_region": "shoulder"
+    },
+    {
+      "module": "grounding",
+      "ms": 227.6132400147617,
+      "unit": "query_instance",
+      "instance_id": "pred_0001",
+      "target_region": "waist"
+    },
+    {
+      "module": "grounding",
+      "ms": 228.80648402497172,
+      "unit": "query_instance",
+      "instance_id": "pred_0001",
+      "target_region": "pattern"
+    },
+    {
+      "module": "grounding",
+      "ms": 228.71943935751915,
+      "unit": "query_instance",
+      "instance_id": "pred_0001",
+      "target_region": "decoration"
+    },
+    {
+      "module": "attributes",
+      "ms": 27.87435380741954,
+      "unit": "instance",
+      "instance_id": "pred_0001"
+    },
+    {
+      "module": "grounding",
+      "ms": 226.19309229776263,
+      "unit": "query_instance",
+      "instance_id": "pred_0002",
+      "target_region": "collar"
+    },
+    {
+      "module": "grounding",
+      "ms": 221.3394232094288,
+      "unit": "query_instance",
+      "instance_id": "pred_0002",
+      "target_region": "cuff"
+    },
+    {
+      "module": "grounding",
+      "ms": 223.00592483952641,
+      "unit": "query_instance",
+      "instance_id": "pred_0002",
+      "target_region": "hem"
+    },
+    {
+      "module": "grounding",
+      "ms": 221.23493207618594,
+      "unit": "query_instance",
+      "instance_id": "pred_0002",
+      "target_region": "pocket"
+    },
+    {
+      "module": "grounding",
+      "ms": 221.5093830600381,
+      "unit": "query_instance",
+      "instance_id": "pred_0002",
+      "target_region": "shoulder"
+    },
+    {
+      "module": "grounding",
+      "ms": 220.68658098578453,
+      "unit": "query_instance",
+      "instance_id": "pred_0002",
+      "target_region": "waist"
+    },
+    {
+      "module": "grounding",
+      "ms": 221.15534683689475,
+      "unit": "query_instance",
+      "instance_id": "pred_0002",
+      "target_region": "pattern"
+    },
+    {
+      "module": "grounding",
+      "ms": 221.27091605216265,
+      "unit": "query_instance",
+      "instance_id": "pred_0002",
+      "target_region": "decoration"
+    },
+    {
+      "module": "attributes",
+      "ms": 29.65066721662879,
+      "unit": "instance",
+      "instance_id": "pred_0002"
+    },
+    {
+      "module": "grounding",
+      "ms": 220.27697879821062,
+      "unit": "query_instance",
+      "instance_id": "pred_0003",
+      "target_region": "collar"
+    },
+    {
+      "module": "grounding",
+      "ms": 212.53465628251433,
+      "unit": "query_instance",
+      "instance_id": "pred_0003",
+      "target_region": "cuff"
+    },
+    {
+      "module": "grounding",
+      "ms": 212.93124835938215,
+      "unit": "query_instance",
+      "instance_id": "pred_0003",
+      "target_region": "hem"
+    },
+    {
+      "module": "grounding",
+      "ms": 211.92600578069687,
+      "unit": "query_instance",
+      "instance_id": "pred_0003",
+      "target_region": "pocket"
+    },
+    {
+      "module": "grounding",
+      "ms": 212.08360604941845,
+      "unit": "query_instance",
+      "instance_id": "pred_0003",
+      "target_region": "shoulder"
+    },
+    {
+      "module": "grounding",
+      "ms": 212.9284697584808,
+      "unit": "query_instance",
+      "instance_id": "pred_0003",
+      "target_region": "waist"
+    },
+    {
+      "module": "grounding",
+      "ms": 212.4129212461412,
+      "unit": "query_instance",
+      "instance_id": "pred_0003",
+      "target_region": "pattern"
+    },
+    {
+      "module": "grounding",
+      "ms": 213.49943196401,
+      "unit": "query_instance",
+      "instance_id": "pred_0003",
+      "target_region": "decoration"
+    },
+    {
+      "module": "attributes",
+      "ms": 31.73827100545168,
+      "unit": "instance",
+      "instance_id": "pred_0003"
+    },
+    {
+      "module": "grounding",
+      "ms": 236.30718188360333,
+      "unit": "query_instance",
+      "instance_id": "pred_0004",
+      "target_region": "collar"
+    },
+    {
+      "module": "grounding",
+      "ms": 228.01874298602343,
+      "unit": "query_instance",
+      "instance_id": "pred_0004",
+      "target_region": "cuff"
+    },
+    {
+      "module": "grounding",
+      "ms": 228.1712219119072,
+      "unit": "query_instance",
+      "instance_id": "pred_0004",
+      "target_region": "hem"
+    },
+    {
+      "module": "grounding",
+      "ms": 227.52282908186316,
+      "unit": "query_instance",
+      "instance_id": "pred_0004",
+      "target_region": "pocket"
+    },
+    {
+      "module": "grounding",
+      "ms": 228.93293434754014,
+      "unit": "query_instance",
+      "instance_id": "pred_0004",
+      "target_region": "shoulder"
+    },
+    {
+      "module": "grounding",
+      "ms": 228.9060829207301,
+      "unit": "query_instance",
+      "instance_id": "pred_0004",
+      "target_region": "waist"
+    },
+    {
+      "module": "grounding",
+      "ms": 227.81420964747667,
+      "unit": "query_instance",
+      "instance_id": "pred_0004",
+      "target_region": "pattern"
+    },
+    {
+      "module": "grounding",
+      "ms": 227.2851448506117,
+      "unit": "query_instance",
+      "instance_id": "pred_0004",
+      "target_region": "decoration"
+    },
+    {
+      "module": "attributes",
+      "ms": 36.98150580748916,
+      "unit": "instance",
+      "instance_id": "pred_0004"
+    },
+    {
+      "module": "grounding",
+      "ms": 199.18882800266147,
+      "unit": "query_instance",
+      "instance_id": "pred_0005",
+      "target_region": "collar"
+    },
+    {
+      "module": "grounding",
+      "ms": 196.2585742585361,
+      "unit": "query_instance",
+      "instance_id": "pred_0005",
+      "target_region": "cuff"
+    },
+    {
+      "module": "grounding",
+      "ms": 196.70343911275268,
+      "unit": "query_instance",
+      "instance_id": "pred_0005",
+      "target_region": "hem"
+    },
+    {
+      "module": "grounding",
+      "ms": 197.003117762506,
+      "unit": "query_instance",
+      "instance_id": "pred_0005",
+      "target_region": "pocket"
+    },
+    {
+      "module": "grounding",
+      "ms": 195.3561999835074,
+      "unit": "query_instance",
+      "instance_id": "pred_0005",
+      "target_region": "shoulder"
+    },
+    {
+      "module": "grounding",
+      "ms": 197.411279194057,
+      "unit": "query_instance",
+      "instance_id": "pred_0005",
+      "target_region": "waist"
+    },
+    {
+      "module": "grounding",
+      "ms": 196.47836731746793,
+      "unit": "query_instance",
+      "instance_id": "pred_0005",
+      "target_region": "pattern"
+    },
+    {
+      "module": "grounding",
+      "ms": 196.61715114489198,
+      "unit": "query_instance",
+      "instance_id": "pred_0005",
+      "target_region": "decoration"
+    },
+    {
+      "module": "attributes",
+      "ms": 43.24209317564964,
+      "unit": "instance",
+      "instance_id": "pred_0005"
+    },
+    {
+      "module": "grounding",
+      "ms": 244.41413301974535,
+      "unit": "query_instance",
+      "instance_id": "pred_0006",
+      "target_region": "collar"
+    },
+    {
+      "module": "grounding",
+      "ms": 236.82304611429572,
+      "unit": "query_instance",
+      "instance_id": "pred_0006",
+      "target_region": "cuff"
+    },
+    {
+      "module": "grounding",
+      "ms": 236.60217504948378,
+      "unit": "query_instance",
+      "instance_id": "pred_0006",
+      "target_region": "hem"
+    },
+    {
+      "module": "grounding",
+      "ms": 235.77666794881225,
+      "unit": "query_instance",
+      "instance_id": "pred_0006",
+      "target_region": "pocket"
+    },
+    {
+      "module": "grounding",
+      "ms": 236.25501617789268,
+      "unit": "query_instance",
+      "instance_id": "pred_0006",
+      "target_region": "shoulder"
+    },
+    {
+      "module": "grounding",
+      "ms": 236.60438833758235,
+      "unit": "query_instance",
+      "instance_id": "pred_0006",
+      "target_region": "waist"
+    },
+    {
+      "module": "grounding",
+      "ms": 238.46960673108697,
+      "unit": "query_instance",
+      "instance_id": "pred_0006",
+      "target_region": "pattern"
+    },
+    {
+      "module": "grounding",
+      "ms": 237.1058678254485,
+      "unit": "query_instance",
+      "instance_id": "pred_0006",
+      "target_region": "decoration"
+    },
+    {
+      "module": "attributes",
+      "ms": 40.05538998171687,
+      "unit": "instance",
+      "instance_id": "pred_0006"
+    },
+    {
+      "module": "grounding",
+      "ms": 226.5431499108672,
+      "unit": "query_instance",
+      "instance_id": "pred_0007",
+      "target_region": "collar"
+    },
+    {
+      "module": "grounding",
+      "ms": 217.43331104516983,
+      "unit": "query_instance",
+      "instance_id": "pred_0007",
+      "target_region": "cuff"
+    },
+    {
+      "module": "grounding",
+      "ms": 218.2791638188064,
+      "unit": "query_instance",
+      "instance_id": "pred_0007",
+      "target_region": "hem"
+    },
+    {
+      "module": "grounding",
+      "ms": 218.7545159831643,
+      "unit": "query_instance",
+      "instance_id": "pred_0007",
+      "target_region": "pocket"
+    },
+    {
+      "module": "grounding",
+      "ms": 218.21903996169567,
+      "unit": "query_instance",
+      "instance_id": "pred_0007",
+      "target_region": "shoulder"
+    },
+    {
+      "module": "grounding",
+      "ms": 218.46446627750993,
+      "unit": "query_instance",
+      "instance_id": "pred_0007",
+      "target_region": "waist"
+    },
+    {
+      "module": "grounding",
+      "ms": 218.54730090126395,
+      "unit": "query_instance",
+      "instance_id": "pred_0007",
+      "target_region": "pattern"
+    },
+    {
+      "module": "grounding",
+      "ms": 218.52113027125597,
+      "unit": "query_instance",
+      "instance_id": "pred_0007",
+      "target_region": "decoration"
+    },
+    {
+      "module": "attributes",
+      "ms": 34.2292869463563,
+      "unit": "instance",
+      "instance_id": "pred_0007"
+    },
+    {
+      "module": "grounding",
+      "ms": 219.4566959515214,
+      "unit": "query_instance",
+      "instance_id": "pred_0008",
+      "target_region": "collar"
+    },
+    {
+      "module": "grounding",
+      "ms": 212.505086325109,
+      "unit": "query_instance",
+      "instance_id": "pred_0008",
+      "target_region": "cuff"
+    },
+    {
+      "module": "grounding",
+      "ms": 214.11280892789364,
+      "unit": "query_instance",
+      "instance_id": "pred_0008",
+      "target_region": "hem"
+    },
+    {
+      "module": "grounding",
+      "ms": 219.56175193190575,
+      "unit": "query_instance",
+      "instance_id": "pred_0008",
+      "target_region": "pocket"
+    },
+    {
+      "module": "grounding",
+      "ms": 212.5618802383542,
+      "unit": "query_instance",
+      "instance_id": "pred_0008",
+      "target_region": "shoulder"
+    },
+    {
+      "module": "grounding",
+      "ms": 213.1365006789565,
+      "unit": "query_instance",
+      "instance_id": "pred_0008",
+      "target_region": "waist"
+    },
+    {
+      "module": "grounding",
+      "ms": 215.76677588745952,
+      "unit": "query_instance",
+      "instance_id": "pred_0008",
+      "target_region": "pattern"
+    },
+    {
+      "module": "grounding",
+      "ms": 212.82799309119582,
+      "unit": "query_instance",
+      "instance_id": "pred_0008",
+      "target_region": "decoration"
+    },
+    {
+      "module": "attributes",
+      "ms": 27.127519715577364,
+      "unit": "instance",
+      "instance_id": "pred_0008"
+    },
+    {
+      "module": "grounding",
+      "ms": 202.4652436375618,
+      "unit": "query_instance",
+      "instance_id": "pred_0009",
+      "target_region": "collar"
+    },
+    {
+      "module": "grounding",
+      "ms": 197.3765715956688,
+      "unit": "query_instance",
+      "instance_id": "pred_0009",
+      "target_region": "cuff"
+    },
+    {
+      "module": "grounding",
+      "ms": 197.73893989622593,
+      "unit": "query_instance",
+      "instance_id": "pred_0009",
+      "target_region": "hem"
+    },
+    {
+      "module": "grounding",
+      "ms": 197.3856189288199,
+      "unit": "query_instance",
+      "instance_id": "pred_0009",
+      "target_region": "pocket"
+    },
+    {
+      "module": "grounding",
+      "ms": 198.11192573979497,
+      "unit": "query_instance",
+      "instance_id": "pred_0009",
+      "target_region": "shoulder"
+    },
+    {
+      "module": "grounding",
+      "ms": 196.76964590325952,
+      "unit": "query_instance",
+      "instance_id": "pred_0009",
+      "target_region": "waist"
+    },
+    {
+      "module": "grounding",
+      "ms": 196.90808933228254,
+      "unit": "query_instance",
+      "instance_id": "pred_0009",
+      "target_region": "pattern"
+    },
+    {
+      "module": "grounding",
+      "ms": 197.99453299492598,
+      "unit": "query_instance",
+      "instance_id": "pred_0009",
+      "target_region": "decoration"
+    },
+    {
+      "module": "attributes",
+      "ms": 31.045609153807163,
+      "unit": "instance",
+      "instance_id": "pred_0009"
+    }
+  ],
+  "failures": [],
+  "instances": [
+    {
+      "instance_id": "pred_0000",
+      "category": "accessory",
+      "score": 0.9961250424385071,
+      "bbox": [
+        163.5809326171875,
+        125.49353790283203,
+        258.32977294921875,
+        148.13894653320312
+      ],
+      "provenance": "segmentation_prediction",
+      "mask_path": "instance_000_mask.png",
+      "attributes": {
+        "primary_color": {
+          "status": "predicted",
+          "label": "pink",
+          "confidence": 0.3596828877925873,
+          "roi_provenance": "segmentation_prediction"
+        },
+        "pattern": {
+          "status": "predicted",
+          "label": "solid",
+          "confidence": 0.4273473620414734,
+          "stage1_bucket": "plain_non_pattern",
+          "roi_provenance": "segmentation_prediction"
+        },
+        "sleeve_length": {
+          "status": "not_applicable",
+          "label": ""
+        },
+        "neckline": {
+          "status": "not_applicable",
+          "label": ""
+        },
+        "silhouette_fit": {
+          "status": "not_applicable",
+          "label": ""
+        },
+        "fashion_style": {
+          "status": "not_applicable",
+          "label": ""
+        }
+      },
+      "regions": {
+        "collar": {
+          "status": "detected",
+          "target_region": "collar",
+          "model_phrase": "garment",
+          "score": 0.3904309868812561,
+          "bbox": [
+            164.0,
+            125.0,
+            258.0,
+            148.0
+          ],
+          "proposal_bbox": [
+            163.0,
+            125.0,
+            259.0,
+            148.0
+          ],
+          "sam_score": 0.9683240652084351,
+          "coordinate_space": "original_image",
+          "crop_origin": [
+            163,
+            125,
+            259,
+            149
+          ],
+          "semantic_target_correct": null,
+          "semantic_review_status": "pending",
+          "semantic_note": "Strict semantic correctness needs reviewed output; no automatic manual grade is fabricated.",
+          "mask_path": "instance_000_collar_mask.png"
+        },
+        "cuff": {
+          "status": "detected",
+          "target_region": "cuff",
+          "model_phrase": "garment",
+          "score": 0.47773319482803345,
+          "bbox": [
+            164.0,
+            125.0,
+            258.0,
+            148.0
+          ],
+          "proposal_bbox": [
+            163.0,
+            125.0,
+            259.0,
+            149.0
+          ],
+          "sam_score": 0.9777497053146362,
+          "coordinate_space": "original_image",
+          "crop_origin": [
+            163,
+            125,
+            259,
+            149
+          ],
+          "semantic_target_correct": null,
+          "semantic_review_status": "pending",
+          "semantic_note": "Strict semantic correctness needs reviewed output; no automatic manual grade is fabricated.",
+          "mask_path": "instance_000_cuff_mask.png"
+        },
+        "hem": {
+          "status": "detected",
+          "target_region": "hem",
+          "model_phrase": "garment",
+          "score": 0.5957611799240112,
+          "bbox": [
+            164.0,
+            125.0,
+            258.0,
+            148.0
+          ],
+          "proposal_bbox": [
+            163.0,
+            125.0,
+            259.0,
+            148.0
+          ],
+          "sam_score": 0.9683240652084351,
+          "coordinate_space": "original_image",
+          "crop_origin": [
+            163,
+            125,
+            259,
+            149
+          ],
+          "semantic_target_correct": null,
+          "semantic_review_status": "pending",
+          "semantic_note": "Strict semantic correctness needs reviewed output; no automatic manual grade is fabricated.",
+          "mask_path": "instance_000_hem_mask.png"
+        },
+        "pocket": {
+          "status": "detected",
+          "target_region": "pocket",
+          "model_phrase": "garment",
+          "score": 0.5698632597923279,
+          "bbox": [
+            164.0,
+            125.0,
+            258.0,
+            148.0
+          ],
+          "proposal_bbox": [
+            163.0,
+            125.0,
+            259.0,
+            148.0
+          ],
+          "sam_score": 0.9683240652084351,
+          "coordinate_space": "original_image",
+          "crop_origin": [
+            163,
+            125,
+            259,
+            149
+          ],
+          "semantic_target_correct": null,
+          "semantic_review_status": "pending",
+          "semantic_note": "Strict semantic correctness needs reviewed output; no automatic manual grade is fabricated.",
+          "mask_path": "instance_000_pocket_mask.png"
+        },
+        "shoulder": {
+          "status": "detected",
+          "target_region": "shoulder",
+          "model_phrase": "garment",
+          "score": 0.5729223489761353,
+          "bbox": [
+            164.0,
+            125.0,
+            258.0,
+            148.0
+          ],
+          "proposal_bbox": [
+            163.0,
+            125.0,
+            259.0,
+            148.0
+          ],
+          "sam_score": 0.9683240652084351,
+          "coordinate_space": "original_image",
+          "crop_origin": [
+            163,
+            125,
+            259,
+            149
+          ],
+          "semantic_target_correct": null,
+          "semantic_review_status": "pending",
+          "semantic_note": "Strict semantic correctness needs reviewed output; no automatic manual grade is fabricated.",
+          "mask_path": "instance_000_shoulder_mask.png"
+        },
+        "waist": {
+          "status": "detected",
+          "target_region": "waist",
+          "model_phrase": "garment",
+          "score": 0.577099621295929,
+          "bbox": [
+            164.0,
+            125.0,
+            258.0,
+            148.0
+          ],
+          "proposal_bbox": [
+            163.0,
+            125.0,
+            259.0,
+            148.0
+          ],
+          "sam_score": 0.9683240652084351,
+          "coordinate_space": "original_image",
+          "crop_origin": [
+            163,
+            125,
+            259,
+            149
+          ],
+          "semantic_target_correct": null,
+          "semantic_review_status": "pending",
+          "semantic_note": "Strict semantic correctness needs reviewed output; no automatic manual grade is fabricated.",
+          "mask_path": "instance_000_waist_mask.png"
+        },
+        "pattern": {
+          "status": "detected",
+          "target_region": "pattern",
+          "model_phrase": "garment",
+          "score": 0.4399637281894684,
+          "bbox": [
+            164.0,
+            125.0,
+            258.0,
+            148.0
+          ],
+          "proposal_bbox": [
+            163.0,
+            125.0,
+            259.0,
+            148.0
+          ],
+          "sam_score": 0.9683240652084351,
+          "coordinate_space": "original_image",
+          "crop_origin": [
+            163,
+            125,
+            259,
+            149
+          ],
+          "semantic_target_correct": null,
+          "semantic_review_status": "pending",
+          "semantic_note": "Strict semantic correctness needs reviewed output; no automatic manual grade is fabricated.",
+          "mask_path": "instance_000_pattern_mask.png"
+        },
+        "decoration": {
+          "status": "detected",
+          "target_region": "decoration",
+          "model_phrase": "garment",
+          "score": 0.41996997594833374,
+          "bbox": [
+            164.0,
+            125.0,
+            258.0,
+            148.0
+          ],
+          "proposal_bbox": [
+            163.0,
+            125.0,
+            259.0,
+            148.0
+          ],
+          "sam_score": 0.9683240652084351,
+          "coordinate_space": "original_image",
+          "crop_origin": [
+            163,
+            125,
+            259,
+            149
+          ],
+          "semantic_target_correct": null,
+          "semantic_review_status": "pending",
+          "semantic_note": "Strict semantic correctness needs reviewed output; no automatic manual grade is fabricated.",
+          "mask_path": "instance_000_decoration_mask.png"
+        }
+      }
+    },
+    {
+      "instance_id": "pred_0001",
+      "category": "shoe",
+      "score": 0.9880414009094238,
+      "bbox": [
+        192.09719848632812,
+        850.5928344726562,
+        310.280029296875,
+        928.0547485351562
+      ],
+      "provenance": "segmentation_prediction",
+      "mask_path": "instance_001_mask.png",
+      "attributes": {
+        "primary_color": {
+          "status": "predicted",
+          "label": "blue",
+          "confidence": 0.3373735845088959,
+          "roi_provenance": "segmentation_prediction"
+        },
+        "pattern": {
+          "status": "predicted",
+          "label": "solid",
+          "confidence": 0.5023735165596008,
+          "stage1_bucket": "plain_non_pattern",
+          "roi_provenance": "segmentation_prediction"
+        },
+        "sleeve_length": {
+          "status": "not_applicable",
+          "label": ""
+        },
+        "neckline": {
+          "status": "not_applicable",
+          "label": ""
+        },
+        "silhouette_fit": {
+          "status": "not_applicable",
+          "label": ""
+        },
+        "fashion_style": {
+          "status": "not_applicable",
+          "label": ""
+        }
+      },
+      "regions": {
+        "collar": {
+          "status": "detected",
+          "target_region": "collar",
+          "model_phrase": "garment",
+          "score": 0.6155696511268616,
+          "bbox": [
+            199.0,
+            859.0,
+            307.0,
+            928.0
+          ],
+          "proposal_bbox": [
+            197.0,
+            857.0,
+            308.0,
+            929.0
+          ],
+          "sam_score": 0.9024487733840942,
+          "coordinate_space": "original_image",
+          "crop_origin": [
+            192,
+            850,
+            311,
+            929
+          ],
+          "semantic_target_correct": null,
+          "semantic_review_status": "pending",
+          "semantic_note": "Strict semantic correctness needs reviewed output; no automatic manual grade is fabricated.",
+          "mask_path": "instance_001_collar_mask.png"
+        },
+        "cuff": {
+          "status": "detected",
+          "target_region": "cuff",
+          "model_phrase": "garment",
+          "score": 0.5694169998168945,
+          "bbox": [
+            199.0,
+            859.0,
+            307.0,
+            928.0
+          ],
+          "proposal_bbox": [
+            197.0,
+            857.0,
+            308.0,
+            929.0
+          ],
+          "sam_score": 0.9024487733840942,
+          "coordinate_space": "original_image",
+          "crop_origin": [
+            192,
+            850,
+            311,
+            929
+          ],
+          "semantic_target_correct": null,
+          "semantic_review_status": "pending",
+          "semantic_note": "Strict semantic correctness needs reviewed output; no automatic manual grade is fabricated.",
+          "mask_path": "instance_001_cuff_mask.png"
+        },
+        "hem": {
+          "status": "detected",
+          "target_region": "hem",
+          "model_phrase": "garment",
+          "score": 0.7140488624572754,
+          "bbox": [
+            199.0,
+            859.0,
+            307.0,
+            928.0
+          ],
+          "proposal_bbox": [
+            197.0,
+            857.0,
+            308.0,
+            929.0
+          ],
+          "sam_score": 0.9024487733840942,
+          "coordinate_space": "original_image",
+          "crop_origin": [
+            192,
+            850,
+            311,
+            929
+          ],
+          "semantic_target_correct": null,
+          "semantic_review_status": "pending",
+          "semantic_note": "Strict semantic correctness needs reviewed output; no automatic manual grade is fabricated.",
+          "mask_path": "instance_001_hem_mask.png"
+        },
+        "pocket": {
+          "status": "detected",
+          "target_region": "pocket",
+          "model_phrase": "garment",
+          "score": 0.7044084072113037,
+          "bbox": [
+            199.0,
+            859.0,
+            307.0,
+            928.0
+          ],
+          "proposal_bbox": [
+            197.0,
+            857.0,
+            308.0,
+            929.0
+          ],
+          "sam_score": 0.9024487733840942,
+          "coordinate_space": "original_image",
+          "crop_origin": [
+            192,
+            850,
+            311,
+            929
+          ],
+          "semantic_target_correct": null,
+          "semantic_review_status": "pending",
+          "semantic_note": "Strict semantic correctness needs reviewed output; no automatic manual grade is fabricated.",
+          "mask_path": "instance_001_pocket_mask.png"
+        },
+        "shoulder": {
+          "status": "detected",
+          "target_region": "shoulder",
+          "model_phrase": "garment",
+          "score": 0.7090846300125122,
+          "bbox": [
+            199.0,
+            859.0,
+            307.0,
+            928.0
+          ],
+          "proposal_bbox": [
+            197.0,
+            857.0,
+            308.0,
+            929.0
+          ],
+          "sam_score": 0.9024487733840942,
+          "coordinate_space": "original_image",
+          "crop_origin": [
+            192,
+            850,
+            311,
+            929
+          ],
+          "semantic_target_correct": null,
+          "semantic_review_status": "pending",
+          "semantic_note": "Strict semantic correctness needs reviewed output; no automatic manual grade is fabricated.",
+          "mask_path": "instance_001_shoulder_mask.png"
+        },
+        "waist": {
+          "status": "detected",
+          "target_region": "waist",
+          "model_phrase": "garment",
+          "score": 0.6620737314224243,
+          "bbox": [
+            199.0,
+            859.0,
+            307.0,
+            928.0
+          ],
+          "proposal_bbox": [
+            197.0,
+            857.0,
+            308.0,
+            929.0
+          ],
+          "sam_score": 0.9024487733840942,
+          "coordinate_space": "original_image",
+          "crop_origin": [
+            192,
+            850,
+            311,
+            929
+          ],
+          "semantic_target_correct": null,
+          "semantic_review_status": "pending",
+          "semantic_note": "Strict semantic correctness needs reviewed output; no automatic manual grade is fabricated.",
+          "mask_path": "instance_001_waist_mask.png"
+        },
+        "pattern": {
+          "status": "detected",
+          "target_region": "pattern",
+          "model_phrase": "garment",
+          "score": 0.5707611441612244,
+          "bbox": [
+            199.0,
+            859.0,
+            307.0,
+            928.0
+          ],
+          "proposal_bbox": [
+            197.0,
+            857.0,
+            308.0,
+            929.0
+          ],
+          "sam_score": 0.9024487733840942,
+          "coordinate_space": "original_image",
+          "crop_origin": [
+            192,
+            850,
+            311,
+            929
+          ],
+          "semantic_target_correct": null,
+          "semantic_review_status": "pending",
+          "semantic_note": "Strict semantic correctness needs reviewed output; no automatic manual grade is fabricated.",
+          "mask_path": "instance_001_pattern_mask.png"
+        },
+        "decoration": {
+          "status": "detected",
+          "target_region": "decoration",
+          "model_phrase": "garment",
+          "score": 0.5603428483009338,
+          "bbox": [
+            199.0,
+            859.0,
+            307.0,
+            928.0
+          ],
+          "proposal_bbox": [
+            197.0,
+            857.0,
+            308.0,
+            929.0
+          ],
+          "sam_score": 0.9024487733840942,
+          "coordinate_space": "original_image",
+          "crop_origin": [
+            192,
+            850,
+            311,
+            929
+          ],
+          "semantic_target_correct": null,
+          "semantic_review_status": "pending",
+          "semantic_note": "Strict semantic correctness needs reviewed output; no automatic manual grade is fabricated.",
+          "mask_path": "instance_001_decoration_mask.png"
+        }
+      }
+    },
+    {
+      "instance_id": "pred_0002",
+      "category": "skirt",
+      "score": 0.9774956703186035,
+      "bbox": [
+        152.82785034179688,
+        455.487548828125,
+        316.5289611816406,
+        663.23291015625
+      ],
+      "provenance": "segmentation_prediction",
+      "mask_path": "instance_002_mask.png",
+      "attributes": {
+        "primary_color": {
+          "status": "predicted",
+          "label": "beige",
+          "confidence": 0.27607136964797974,
+          "roi_provenance": "segmentation_prediction"
+        },
+        "pattern": {
+          "status": "predicted",
+          "label": "camouflage",
+          "confidence": 0.3682284951210022,
+          "stage1_bucket": "repeated_surface_pattern",
+          "roi_provenance": "segmentation_prediction"
+        },
+        "sleeve_length": {
+          "status": "not_applicable",
+          "label": ""
+        },
+        "neckline": {
+          "status": "not_applicable",
+          "label": ""
+        },
+        "silhouette_fit": {
+          "status": "predicted",
+          "label": "flared",
+          "confidence": 0.7479529976844788,
+          "roi_provenance": "segmentation_prediction"
+        },
+        "fashion_style": {
+          "status": "predicted",
+          "label": "vintage",
+          "confidence": 0.34396976232528687,
+          "roi_provenance": "segmentation_prediction"
+        }
+      },
+      "regions": {
+        "collar": {
+          "status": "detected",
+          "target_region": "collar",
+          "model_phrase": "garment",
+          "score": 0.6659814715385437,
+          "bbox": [
+            161.0,
+            459.0,
+            315.0,
+            663.0
+          ],
+          "proposal_bbox": [
+            161.0,
+            458.0,
+            314.0,
+            663.0
+          ],
+          "sam_score": 0.9718266129493713,
+          "coordinate_space": "original_image",
+          "crop_origin": [
+            152,
+            455,
+            317,
+            664
+          ],
+          "semantic_target_correct": null,
+          "semantic_review_status": "pending",
+          "semantic_note": "Strict semantic correctness needs reviewed output; no automatic manual grade is fabricated.",
+          "mask_path": "instance_002_collar_mask.png"
+        },
+        "cuff": {
+          "status": "detected",
+          "target_region": "cuff",
+          "model_phrase": "garment",
+          "score": 0.7126327157020569,
+          "bbox": [
+            161.0,
+            458.0,
+            315.0,
+            663.0
+          ],
+          "proposal_bbox": [
+            165.0,
+            458.0,
+            314.0,
+            663.0
+          ],
+          "sam_score": 0.9709327220916748,
+          "coordinate_space": "original_image",
+          "crop_origin": [
+            152,
+            455,
+            317,
+            664
+          ],
+          "semantic_target_correct": null,
+          "semantic_review_status": "pending",
+          "semantic_note": "Strict semantic correctness needs reviewed output; no automatic manual grade is fabricated.",
+          "mask_path": "instance_002_cuff_mask.png"
+        },
+        "hem": {
+          "status": "detected",
+          "target_region": "hem",
+          "model_phrase": "garment",
+          "score": 0.6921218037605286,
+          "bbox": [
+            161.0,
+            459.0,
+            315.0,
+            663.0
+          ],
+          "proposal_bbox": [
+            162.0,
+            458.0,
+            314.0,
+            663.0
+          ],
+          "sam_score": 0.9704540371894836,
+          "coordinate_space": "original_image",
+          "crop_origin": [
+            152,
+            455,
+            317,
+            664
+          ],
+          "semantic_target_correct": null,
+          "semantic_review_status": "pending",
+          "semantic_note": "Strict semantic correctness needs reviewed output; no automatic manual grade is fabricated.",
+          "mask_path": "instance_002_hem_mask.png"
+        },
+        "pocket": {
+          "status": "detected",
+          "target_region": "pocket",
+          "model_phrase": "garment",
+          "score": 0.7009677886962891,
+          "bbox": [
+            161.0,
+            459.0,
+            315.0,
+            663.0
+          ],
+          "proposal_bbox": [
+            161.0,
+            458.0,
+            314.0,
+            663.0
+          ],
+          "sam_score": 0.9718266129493713,
+          "coordinate_space": "original_image",
+          "crop_origin": [
+            152,
+            455,
+            317,
+            664
+          ],
+          "semantic_target_correct": null,
+          "semantic_review_status": "pending",
+          "semantic_note": "Strict semantic correctness needs reviewed output; no automatic manual grade is fabricated.",
+          "mask_path": "instance_002_pocket_mask.png"
+        },
+        "shoulder": {
+          "status": "detected",
+          "target_region": "shoulder",
+          "model_phrase": "garment",
+          "score": 0.6985800862312317,
+          "bbox": [
+            161.0,
+            459.0,
+            315.0,
+            663.0
+          ],
+          "proposal_bbox": [
+            162.0,
+            458.0,
+            314.0,
+            663.0
+          ],
+          "sam_score": 0.9704540371894836,
+          "coordinate_space": "original_image",
+          "crop_origin": [
+            152,
+            455,
+            317,
+            664
+          ],
+          "semantic_target_correct": null,
+          "semantic_review_status": "pending",
+          "semantic_note": "Strict semantic correctness needs reviewed output; no automatic manual grade is fabricated.",
+          "mask_path": "instance_002_shoulder_mask.png"
+        },
+        "waist": {
+          "status": "detected",
+          "target_region": "waist",
+          "model_phrase": "garment",
+          "score": 0.6801850199699402,
+          "bbox": [
+            161.0,
+            459.0,
+            315.0,
+            663.0
+          ],
+          "proposal_bbox": [
+            161.0,
+            458.0,
+            314.0,
+            663.0
+          ],
+          "sam_score": 0.9718266129493713,
+          "coordinate_space": "original_image",
+          "crop_origin": [
+            152,
+            455,
+            317,
+            664
+          ],
+          "semantic_target_correct": null,
+          "semantic_review_status": "pending",
+          "semantic_note": "Strict semantic correctness needs reviewed output; no automatic manual grade is fabricated.",
+          "mask_path": "instance_002_waist_mask.png"
+        },
+        "pattern": {
+          "status": "detected",
+          "target_region": "pattern",
+          "model_phrase": "garment",
+          "score": 0.4762777090072632,
+          "bbox": [
+            161.0,
+            459.0,
+            315.0,
+            663.0
+          ],
+          "proposal_bbox": [
+            161.0,
+            458.0,
+            314.0,
+            663.0
+          ],
+          "sam_score": 0.9718266129493713,
+          "coordinate_space": "original_image",
+          "crop_origin": [
+            152,
+            455,
+            317,
+            664
+          ],
+          "semantic_target_correct": null,
+          "semantic_review_status": "pending",
+          "semantic_note": "Strict semantic correctness needs reviewed output; no automatic manual grade is fabricated.",
+          "mask_path": "instance_002_pattern_mask.png"
+        },
+        "decoration": {
+          "status": "detected",
+          "target_region": "decoration",
+          "model_phrase": "garment",
+          "score": 0.4884474277496338,
+          "bbox": [
+            161.0,
+            459.0,
+            315.0,
+            663.0
+          ],
+          "proposal_bbox": [
+            161.0,
+            458.0,
+            314.0,
+            663.0
+          ],
+          "sam_score": 0.9718266129493713,
+          "coordinate_space": "original_image",
+          "crop_origin": [
+            152,
+            455,
+            317,
+            664
+          ],
+          "semantic_target_correct": null,
+          "semantic_review_status": "pending",
+          "semantic_note": "Strict semantic correctness needs reviewed output; no automatic manual grade is fabricated.",
+          "mask_path": "instance_002_decoration_mask.png"
+        }
+      }
+    },
+    {
+      "instance_id": "pred_0003",
+      "category": "pants",
+      "score": 0.9600667357444763,
+      "bbox": [
+        141.7347412109375,
+        605.6895141601562,
+        294.09637451171875,
+        937.9376831054688
+      ],
+      "provenance": "segmentation_prediction",
+      "mask_path": "instance_003_mask.png",
+      "attributes": {
+        "primary_color": {
+          "status": "predicted",
+          "label": "purple",
+          "confidence": 0.6343854665756226,
+          "roi_provenance": "segmentation_prediction"
+        },
+        "pattern": {
+          "status": "predicted",
+          "label": "solid",
+          "confidence": 0.5616443753242493,
+          "stage1_bucket": "plain_non_pattern",
+          "roi_provenance": "segmentation_prediction"
+        },
+        "sleeve_length": {
+          "status": "not_applicable",
+          "label": ""
+        },
+        "neckline": {
+          "status": "not_applicable",
+          "label": ""
+        },
+        "silhouette_fit": {
+          "status": "predicted",
+          "label": "flared",
+          "confidence": 0.5060300230979919,
+          "roi_provenance": "segmentation_prediction"
+        },
+        "fashion_style": {
+          "status": "predicted",
+          "label": "sporty",
+          "confidence": 0.5754737257957458,
+          "roi_provenance": "segmentation_prediction"
+        }
+      },
+      "regions": {
+        "collar": {
+          "status": "detected",
+          "target_region": "collar",
+          "model_phrase": "garment",
+          "score": 0.6753152012825012,
+          "bbox": [
+            149.0,
+            638.0,
+            272.0,
+            915.0
+          ],
+          "proposal_bbox": [
+            146.0,
+            637.0,
+            274.0,
+            914.0
+          ],
+          "sam_score": 0.9715835452079773,
+          "coordinate_space": "original_image",
+          "crop_origin": [
+            141,
+            605,
+            295,
+            938
+          ],
+          "semantic_target_correct": null,
+          "semantic_review_status": "pending",
+          "semantic_note": "Strict semantic correctness needs reviewed output; no automatic manual grade is fabricated.",
+          "mask_path": "instance_003_collar_mask.png"
+        },
+        "cuff": {
+          "status": "detected",
+          "target_region": "cuff",
+          "model_phrase": "garment",
+          "score": 0.5700446367263794,
+          "bbox": [
+            149.0,
+            638.0,
+            272.0,
+            915.0
+          ],
+          "proposal_bbox": [
+            146.0,
+            636.0,
+            274.0,
+            914.0
+          ],
+          "sam_score": 0.971411406993866,
+          "coordinate_space": "original_image",
+          "crop_origin": [
+            141,
+            605,
+            295,
+            938
+          ],
+          "semantic_target_correct": null,
+          "semantic_review_status": "pending",
+          "semantic_note": "Strict semantic correctness needs reviewed output; no automatic manual grade is fabricated.",
+          "mask_path": "instance_003_cuff_mask.png"
+        },
+        "hem": {
+          "status": "detected",
+          "target_region": "hem",
+          "model_phrase": "garment",
+          "score": 0.7668197751045227,
+          "bbox": [
+            149.0,
+            638.0,
+            272.0,
+            915.0
+          ],
+          "proposal_bbox": [
+            146.0,
+            636.0,
+            274.0,
+            914.0
+          ],
+          "sam_score": 0.971411406993866,
+          "coordinate_space": "original_image",
+          "crop_origin": [
+            141,
+            605,
+            295,
+            938
+          ],
+          "semantic_target_correct": null,
+          "semantic_review_status": "pending",
+          "semantic_note": "Strict semantic correctness needs reviewed output; no automatic manual grade is fabricated.",
+          "mask_path": "instance_003_hem_mask.png"
+        },
+        "pocket": {
+          "status": "detected",
+          "target_region": "pocket",
+          "model_phrase": "garment",
+          "score": 0.6954877376556396,
+          "bbox": [
+            149.0,
+            638.0,
+            272.0,
+            915.0
+          ],
+          "proposal_bbox": [
+            146.0,
+            637.0,
+            274.0,
+            914.0
+          ],
+          "sam_score": 0.9715835452079773,
+          "coordinate_space": "original_image",
+          "crop_origin": [
+            141,
+            605,
+            295,
+            938
+          ],
+          "semantic_target_correct": null,
+          "semantic_review_status": "pending",
+          "semantic_note": "Strict semantic correctness needs reviewed output; no automatic manual grade is fabricated.",
+          "mask_path": "instance_003_pocket_mask.png"
+        },
+        "shoulder": {
+          "status": "detected",
+          "target_region": "shoulder",
+          "model_phrase": "garment",
+          "score": 0.7526533603668213,
+          "bbox": [
+            149.0,
+            638.0,
+            272.0,
+            915.0
+          ],
+          "proposal_bbox": [
+            146.0,
+            637.0,
+            274.0,
+            914.0
+          ],
+          "sam_score": 0.9715835452079773,
+          "coordinate_space": "original_image",
+          "crop_origin": [
+            141,
+            605,
+            295,
+            938
+          ],
+          "semantic_target_correct": null,
+          "semantic_review_status": "pending",
+          "semantic_note": "Strict semantic correctness needs reviewed output; no automatic manual grade is fabricated.",
+          "mask_path": "instance_003_shoulder_mask.png"
+        },
+        "waist": {
+          "status": "detected",
+          "target_region": "waist",
+          "model_phrase": "garment",
+          "score": 0.6918960809707642,
+          "bbox": [
+            149.0,
+            638.0,
+            272.0,
+            915.0
+          ],
+          "proposal_bbox": [
+            146.0,
+            636.0,
+            274.0,
+            914.0
+          ],
+          "sam_score": 0.971411406993866,
+          "coordinate_space": "original_image",
+          "crop_origin": [
+            141,
+            605,
+            295,
+            938
+          ],
+          "semantic_target_correct": null,
+          "semantic_review_status": "pending",
+          "semantic_note": "Strict semantic correctness needs reviewed output; no automatic manual grade is fabricated.",
+          "mask_path": "instance_003_waist_mask.png"
+        },
+        "pattern": {
+          "status": "detected",
+          "target_region": "pattern",
+          "model_phrase": "garment",
+          "score": 0.6033459305763245,
+          "bbox": [
+            149.0,
+            638.0,
+            272.0,
+            915.0
+          ],
+          "proposal_bbox": [
+            146.0,
+            637.0,
+            274.0,
+            914.0
+          ],
+          "sam_score": 0.9715835452079773,
+          "coordinate_space": "original_image",
+          "crop_origin": [
+            141,
+            605,
+            295,
+            938
+          ],
+          "semantic_target_correct": null,
+          "semantic_review_status": "pending",
+          "semantic_note": "Strict semantic correctness needs reviewed output; no automatic manual grade is fabricated.",
+          "mask_path": "instance_003_pattern_mask.png"
+        },
+        "decoration": {
+          "status": "detected",
+          "target_region": "decoration",
+          "model_phrase": "the garment",
+          "score": 0.6107308864593506,
+          "bbox": [
+            149.0,
+            638.0,
+            272.0,
+            915.0
+          ],
+          "proposal_bbox": [
+            146.0,
+            637.0,
+            274.0,
+            914.0
+          ],
+          "sam_score": 0.9715835452079773,
+          "coordinate_space": "original_image",
+          "crop_origin": [
+            141,
+            605,
+            295,
+            938
+          ],
+          "semantic_target_correct": null,
+          "semantic_review_status": "pending",
+          "semantic_note": "Strict semantic correctness needs reviewed output; no automatic manual grade is fabricated.",
+          "mask_path": "instance_003_decoration_mask.png"
+        }
+      }
+    },
+    {
+      "instance_id": "pred_0004",
+      "category": "top",
+      "score": 0.9566811323165894,
+      "bbox": [
+        139.066162109375,
+        227.38458251953125,
+        309.9280090332031,
+        476.14276123046875
+      ],
+      "provenance": "segmentation_prediction",
+      "mask_path": "instance_004_mask.png",
+      "attributes": {
+        "primary_color": {
+          "status": "predicted",
+          "label": "purple",
+          "confidence": 0.5074953436851501,
+          "roi_provenance": "segmentation_prediction"
+        },
+        "pattern": {
+          "status": "predicted",
+          "label": "other_pattern",
+          "confidence": 0.2758200466632843,
+          "stage1_bucket": "repeated_surface_pattern",
+          "roi_provenance": "segmentation_prediction"
+        },
+        "sleeve_length": {
+          "status": "predicted",
+          "label": "long",
+          "confidence": 0.3157811164855957,
+          "roi_provenance": "segmentation_prediction"
+        },
+        "neckline": {
+          "status": "predicted",
+          "label": "turtleneck",
+          "confidence": 0.39363348484039307,
+          "roi_provenance": "3_1_2_predicted_collar_roi"
+        },
+        "silhouette_fit": {
+          "status": "predicted",
+          "label": "slim_fitted",
+          "confidence": 0.8761208057403564,
+          "roi_provenance": "segmentation_prediction"
+        },
+        "fashion_style": {
+          "status": "predicted",
+          "label": "vintage",
+          "confidence": 0.23563097417354584,
+          "roi_provenance": "segmentation_prediction"
+        }
+      },
+      "regions": {
+        "collar": {
+          "status": "detected",
+          "target_region": "collar",
+          "model_phrase": "garment",
+          "score": 0.6634995937347412,
+          "bbox": [
+            140.0,
+            228.0,
+            301.0,
+            471.0
+          ],
+          "proposal_bbox": [
+            140.0,
+            228.0,
+            303.0,
+            473.0
+          ],
+          "sam_score": 0.9438809156417847,
+          "coordinate_space": "original_image",
+          "crop_origin": [
+            139,
+            227,
+            310,
+            477
+          ],
+          "semantic_target_correct": null,
+          "semantic_review_status": "pending",
+          "semantic_note": "Strict semantic correctness needs reviewed output; no automatic manual grade is fabricated.",
+          "mask_path": "instance_004_collar_mask.png"
+        },
+        "cuff": {
+          "status": "detected",
+          "target_region": "cuff",
+          "model_phrase": "garment",
+          "score": 0.7056682705879211,
+          "bbox": [
+            140.0,
+            228.0,
+            301.0,
+            471.0
+          ],
+          "proposal_bbox": [
+            140.0,
+            227.0,
+            303.0,
+            473.0
+          ],
+          "sam_score": 0.9431481957435608,
+          "coordinate_space": "original_image",
+          "crop_origin": [
+            139,
+            227,
+            310,
+            477
+          ],
+          "semantic_target_correct": null,
+          "semantic_review_status": "pending",
+          "semantic_note": "Strict semantic correctness needs reviewed output; no automatic manual grade is fabricated.",
+          "mask_path": "instance_004_cuff_mask.png"
+        },
+        "hem": {
+          "status": "detected",
+          "target_region": "hem",
+          "model_phrase": "garment",
+          "score": 0.7556346654891968,
+          "bbox": [
+            140.0,
+            228.0,
+            301.0,
+            471.0
+          ],
+          "proposal_bbox": [
+            140.0,
+            227.0,
+            303.0,
+            473.0
+          ],
+          "sam_score": 0.9431481957435608,
+          "coordinate_space": "original_image",
+          "crop_origin": [
+            139,
+            227,
+            310,
+            477
+          ],
+          "semantic_target_correct": null,
+          "semantic_review_status": "pending",
+          "semantic_note": "Strict semantic correctness needs reviewed output; no automatic manual grade is fabricated.",
+          "mask_path": "instance_004_hem_mask.png"
+        },
+        "pocket": {
+          "status": "detected",
+          "target_region": "pocket",
+          "model_phrase": "garment",
+          "score": 0.7303406596183777,
+          "bbox": [
+            140.0,
+            228.0,
+            301.0,
+            471.0
+          ],
+          "proposal_bbox": [
+            140.0,
+            227.0,
+            303.0,
+            473.0
+          ],
+          "sam_score": 0.9431481957435608,
+          "coordinate_space": "original_image",
+          "crop_origin": [
+            139,
+            227,
+            310,
+            477
+          ],
+          "semantic_target_correct": null,
+          "semantic_review_status": "pending",
+          "semantic_note": "Strict semantic correctness needs reviewed output; no automatic manual grade is fabricated.",
+          "mask_path": "instance_004_pocket_mask.png"
+        },
+        "shoulder": {
+          "status": "detected",
+          "target_region": "shoulder",
+          "model_phrase": "garment",
+          "score": 0.7484369277954102,
+          "bbox": [
+            140.0,
+            228.0,
+            301.0,
+            471.0
+          ],
+          "proposal_bbox": [
+            140.0,
+            227.0,
+            303.0,
+            473.0
+          ],
+          "sam_score": 0.9431481957435608,
+          "coordinate_space": "original_image",
+          "crop_origin": [
+            139,
+            227,
+            310,
+            477
+          ],
+          "semantic_target_correct": null,
+          "semantic_review_status": "pending",
+          "semantic_note": "Strict semantic correctness needs reviewed output; no automatic manual grade is fabricated.",
+          "mask_path": "instance_004_shoulder_mask.png"
+        },
+        "waist": {
+          "status": "detected",
+          "target_region": "waist",
+          "model_phrase": "garment",
+          "score": 0.7264120578765869,
+          "bbox": [
+            140.0,
+            228.0,
+            301.0,
+            471.0
+          ],
+          "proposal_bbox": [
+            140.0,
+            227.0,
+            303.0,
+            473.0
+          ],
+          "sam_score": 0.9431481957435608,
+          "coordinate_space": "original_image",
+          "crop_origin": [
+            139,
+            227,
+            310,
+            477
+          ],
+          "semantic_target_correct": null,
+          "semantic_review_status": "pending",
+          "semantic_note": "Strict semantic correctness needs reviewed output; no automatic manual grade is fabricated.",
+          "mask_path": "instance_004_waist_mask.png"
+        },
+        "pattern": {
+          "status": "detected",
+          "target_region": "pattern",
+          "model_phrase": "garment",
+          "score": 0.5874132513999939,
+          "bbox": [
+            140.0,
+            228.0,
+            301.0,
+            471.0
+          ],
+          "proposal_bbox": [
+            140.0,
+            227.0,
+            303.0,
+            473.0
+          ],
+          "sam_score": 0.9431481957435608,
+          "coordinate_space": "original_image",
+          "crop_origin": [
+            139,
+            227,
+            310,
+            477
+          ],
+          "semantic_target_correct": null,
+          "semantic_review_status": "pending",
+          "semantic_note": "Strict semantic correctness needs reviewed output; no automatic manual grade is fabricated.",
+          "mask_path": "instance_004_pattern_mask.png"
+        },
+        "decoration": {
+          "status": "detected",
+          "target_region": "decoration",
+          "model_phrase": "garment",
+          "score": 0.6221485733985901,
+          "bbox": [
+            140.0,
+            228.0,
+            301.0,
+            471.0
+          ],
+          "proposal_bbox": [
+            140.0,
+            227.0,
+            303.0,
+            473.0
+          ],
+          "sam_score": 0.9431481957435608,
+          "coordinate_space": "original_image",
+          "crop_origin": [
+            139,
+            227,
+            310,
+            477
+          ],
+          "semantic_target_correct": null,
+          "semantic_review_status": "pending",
+          "semantic_note": "Strict semantic correctness needs reviewed output; no automatic manual grade is fabricated.",
+          "mask_path": "instance_004_decoration_mask.png"
+        }
+      }
+    },
+    {
+      "instance_id": "pred_0005",
+      "category": "dress",
+      "score": 0.866593599319458,
+      "bbox": [
+        135.66168212890625,
+        217.34762573242188,
+        309.0784606933594,
+        684.142578125
+      ],
+      "provenance": "segmentation_prediction",
+      "mask_path": "instance_005_mask.png",
+      "attributes": {
+        "primary_color": {
+          "status": "predicted",
+          "label": "purple",
+          "confidence": 0.64519202709198,
+          "roi_provenance": "segmentation_prediction"
+        },
+        "pattern": {
+          "status": "predicted",
+          "label": "floral",
+          "confidence": 0.30835315585136414,
+          "stage1_bucket": "repeated_surface_pattern",
+          "roi_provenance": "segmentation_prediction"
+        },
+        "sleeve_length": {
+          "status": "predicted",
+          "label": "long",
+          "confidence": 0.36394378542900085,
+          "roi_provenance": "segmentation_prediction"
+        },
+        "neckline": {
+          "status": "predicted",
+          "label": "square",
+          "confidence": 0.16805651783943176,
+          "roi_provenance": "3_1_2_predicted_collar_roi"
+        },
+        "silhouette_fit": {
+          "status": "predicted",
+          "label": "flared",
+          "confidence": 0.5184697508811951,
+          "roi_provenance": "segmentation_prediction"
+        },
+        "fashion_style": {
+          "status": "predicted",
+          "label": "vintage",
+          "confidence": 0.4015839993953705,
+          "roi_provenance": "segmentation_prediction"
+        }
+      },
+      "regions": {
+        "collar": {
+          "status": "detected",
+          "target_region": "collar",
+          "model_phrase": "garment",
+          "score": 0.601673424243927,
+          "bbox": [
+            136.0,
+            221.0,
+            309.0,
+            661.0
+          ],
+          "proposal_bbox": [
+            137.0,
+            223.0,
+            308.0,
+            662.0
+          ],
+          "sam_score": 0.9229332208633423,
+          "coordinate_space": "original_image",
+          "crop_origin": [
+            135,
+            217,
+            310,
+            685
+          ],
+          "semantic_target_correct": null,
+          "semantic_review_status": "pending",
+          "semantic_note": "Strict semantic correctness needs reviewed output; no automatic manual grade is fabricated.",
+          "mask_path": "instance_005_collar_mask.png"
+        },
+        "cuff": {
+          "status": "detected",
+          "target_region": "cuff",
+          "model_phrase": "garment",
+          "score": 0.6786876320838928,
+          "bbox": [
+            136.0,
+            221.0,
+            309.0,
+            661.0
+          ],
+          "proposal_bbox": [
+            137.0,
+            220.0,
+            308.0,
+            662.0
+          ],
+          "sam_score": 0.9309049844741821,
+          "coordinate_space": "original_image",
+          "crop_origin": [
+            135,
+            217,
+            310,
+            685
+          ],
+          "semantic_target_correct": null,
+          "semantic_review_status": "pending",
+          "semantic_note": "Strict semantic correctness needs reviewed output; no automatic manual grade is fabricated.",
+          "mask_path": "instance_005_cuff_mask.png"
+        },
+        "hem": {
+          "status": "detected",
+          "target_region": "hem",
+          "model_phrase": "garment",
+          "score": 0.6284555196762085,
+          "bbox": [
+            136.0,
+            221.0,
+            309.0,
+            661.0
+          ],
+          "proposal_bbox": [
+            137.0,
+            220.0,
+            308.0,
+            662.0
+          ],
+          "sam_score": 0.9309049844741821,
+          "coordinate_space": "original_image",
+          "crop_origin": [
+            135,
+            217,
+            310,
+            685
+          ],
+          "semantic_target_correct": null,
+          "semantic_review_status": "pending",
+          "semantic_note": "Strict semantic correctness needs reviewed output; no automatic manual grade is fabricated.",
+          "mask_path": "instance_005_hem_mask.png"
+        },
+        "pocket": {
+          "status": "detected",
+          "target_region": "pocket",
+          "model_phrase": "garment",
+          "score": 0.7147179841995239,
+          "bbox": [
+            136.0,
+            221.0,
+            309.0,
+            661.0
+          ],
+          "proposal_bbox": [
+            137.0,
+            220.0,
+            308.0,
+            662.0
+          ],
+          "sam_score": 0.9309049844741821,
+          "coordinate_space": "original_image",
+          "crop_origin": [
+            135,
+            217,
+            310,
+            685
+          ],
+          "semantic_target_correct": null,
+          "semantic_review_status": "pending",
+          "semantic_note": "Strict semantic correctness needs reviewed output; no automatic manual grade is fabricated.",
+          "mask_path": "instance_005_pocket_mask.png"
+        },
+        "shoulder": {
+          "status": "detected",
+          "target_region": "shoulder",
+          "model_phrase": "garment",
+          "score": 0.6758238673210144,
+          "bbox": [
+            136.0,
+            221.0,
+            309.0,
+            661.0
+          ],
+          "proposal_bbox": [
+            138.0,
+            221.0,
+            308.0,
+            662.0
+          ],
+          "sam_score": 0.9317137002944946,
+          "coordinate_space": "original_image",
+          "crop_origin": [
+            135,
+            217,
+            310,
+            685
+          ],
+          "semantic_target_correct": null,
+          "semantic_review_status": "pending",
+          "semantic_note": "Strict semantic correctness needs reviewed output; no automatic manual grade is fabricated.",
+          "mask_path": "instance_005_shoulder_mask.png"
+        },
+        "waist": {
+          "status": "detected",
+          "target_region": "waist",
+          "model_phrase": "garment",
+          "score": 0.6719350218772888,
+          "bbox": [
+            136.0,
+            221.0,
+            309.0,
+            661.0
+          ],
+          "proposal_bbox": [
+            137.0,
+            220.0,
+            308.0,
+            662.0
+          ],
+          "sam_score": 0.9309049844741821,
+          "coordinate_space": "original_image",
+          "crop_origin": [
+            135,
+            217,
+            310,
+            685
+          ],
+          "semantic_target_correct": null,
+          "semantic_review_status": "pending",
+          "semantic_note": "Strict semantic correctness needs reviewed output; no automatic manual grade is fabricated.",
+          "mask_path": "instance_005_waist_mask.png"
+        },
+        "pattern": {
+          "status": "detected",
+          "target_region": "pattern",
+          "model_phrase": "garment",
+          "score": 0.5036218762397766,
+          "bbox": [
+            136.0,
+            221.0,
+            309.0,
+            661.0
+          ],
+          "proposal_bbox": [
+            137.0,
+            220.0,
+            308.0,
+            662.0
+          ],
+          "sam_score": 0.9309049844741821,
+          "coordinate_space": "original_image",
+          "crop_origin": [
+            135,
+            217,
+            310,
+            685
+          ],
+          "semantic_target_correct": null,
+          "semantic_review_status": "pending",
+          "semantic_note": "Strict semantic correctness needs reviewed output; no automatic manual grade is fabricated.",
+          "mask_path": "instance_005_pattern_mask.png"
+        },
+        "decoration": {
+          "status": "detected",
+          "target_region": "decoration",
+          "model_phrase": "the garment",
+          "score": 0.5220233798027039,
+          "bbox": [
+            136.0,
+            221.0,
+            309.0,
+            661.0
+          ],
+          "proposal_bbox": [
+            137.0,
+            220.0,
+            308.0,
+            662.0
+          ],
+          "sam_score": 0.9309049844741821,
+          "coordinate_space": "original_image",
+          "crop_origin": [
+            135,
+            217,
+            310,
+            685
+          ],
+          "semantic_target_correct": null,
+          "semantic_review_status": "pending",
+          "semantic_note": "Strict semantic correctness needs reviewed output; no automatic manual grade is fabricated.",
+          "mask_path": "instance_005_decoration_mask.png"
+        }
+      }
+    },
+    {
+      "instance_id": "pred_0006",
+      "category": "outerwear",
+      "score": 0.8083113431930542,
+      "bbox": [
+        100.33010864257812,
+        211.43072509765625,
+        328.18408203125,
+        573.6913452148438
+      ],
+      "provenance": "segmentation_prediction",
+      "mask_path": "instance_006_mask.png",
+      "attributes": {
+        "primary_color": {
+          "status": "predicted",
+          "label": "purple",
+          "confidence": 0.8003489971160889,
+          "roi_provenance": "segmentation_prediction"
+        },
+        "pattern": {
+          "status": "predicted",
+          "label": "solid",
+          "confidence": 0.357589989900589,
+          "stage1_bucket": "texture_structure_non_pattern",
+          "roi_provenance": "segmentation_prediction"
+        },
+        "sleeve_length": {
+          "status": "predicted",
+          "label": "long",
+          "confidence": 0.7210631966590881,
+          "roi_provenance": "segmentation_prediction"
+        },
+        "neckline": {
+          "status": "predicted",
+          "label": "round_scoop",
+          "confidence": 0.19304589927196503,
+          "roi_provenance": "3_1_2_predicted_collar_roi"
+        },
+        "silhouette_fit": {
+          "status": "predicted",
+          "label": "slim_fitted",
+          "confidence": 0.7942721247673035,
+          "roi_provenance": "segmentation_prediction"
+        },
+        "fashion_style": {
+          "status": "predicted",
+          "label": "formal",
+          "confidence": 0.35901567339897156,
+          "roi_provenance": "segmentation_prediction"
+        }
+      },
+      "regions": {
+        "collar": {
+          "status": "detected",
+          "target_region": "collar",
+          "model_phrase": "garment",
+          "score": 0.4921611249446869,
+          "bbox": [
+            104.0,
+            223.0,
+            197.0,
+            543.0
+          ],
+          "proposal_bbox": [
+            103.0,
+            214.0,
+            198.0,
+            551.0
+          ],
+          "sam_score": 0.9649714231491089,
+          "coordinate_space": "original_image",
+          "crop_origin": [
+            100,
+            211,
+            329,
+            574
+          ],
+          "semantic_target_correct": null,
+          "semantic_review_status": "pending",
+          "semantic_note": "Strict semantic correctness needs reviewed output; no automatic manual grade is fabricated.",
+          "mask_path": "instance_006_collar_mask.png"
+        },
+        "cuff": {
+          "status": "detected",
+          "target_region": "cuff",
+          "model_phrase": "garment",
+          "score": 0.5159352421760559,
+          "bbox": [
+            104.0,
+            223.0,
+            197.0,
+            543.0
+          ],
+          "proposal_bbox": [
+            103.0,
+            215.0,
+            199.0,
+            551.0
+          ],
+          "sam_score": 0.9662043452262878,
+          "coordinate_space": "original_image",
+          "crop_origin": [
+            100,
+            211,
+            329,
+            574
+          ],
+          "semantic_target_correct": null,
+          "semantic_review_status": "pending",
+          "semantic_note": "Strict semantic correctness needs reviewed output; no automatic manual grade is fabricated.",
+          "mask_path": "instance_006_cuff_mask.png"
+        },
+        "hem": {
+          "status": "detected",
+          "target_region": "hem",
+          "model_phrase": "garment",
+          "score": 0.6015675663948059,
+          "bbox": [
+            104.0,
+            223.0,
+            197.0,
+            543.0
+          ],
+          "proposal_bbox": [
+            103.0,
+            214.0,
+            198.0,
+            551.0
+          ],
+          "sam_score": 0.9649714231491089,
+          "coordinate_space": "original_image",
+          "crop_origin": [
+            100,
+            211,
+            329,
+            574
+          ],
+          "semantic_target_correct": null,
+          "semantic_review_status": "pending",
+          "semantic_note": "Strict semantic correctness needs reviewed output; no automatic manual grade is fabricated.",
+          "mask_path": "instance_006_hem_mask.png"
+        },
+        "pocket": {
+          "status": "detected",
+          "target_region": "pocket",
+          "model_phrase": "garment",
+          "score": 0.540557861328125,
+          "bbox": [
+            104.0,
+            223.0,
+            197.0,
+            543.0
+          ],
+          "proposal_bbox": [
+            103.0,
+            214.0,
+            198.0,
+            551.0
+          ],
+          "sam_score": 0.9649714231491089,
+          "coordinate_space": "original_image",
+          "crop_origin": [
+            100,
+            211,
+            329,
+            574
+          ],
+          "semantic_target_correct": null,
+          "semantic_review_status": "pending",
+          "semantic_note": "Strict semantic correctness needs reviewed output; no automatic manual grade is fabricated.",
+          "mask_path": "instance_006_pocket_mask.png"
+        },
+        "shoulder": {
+          "status": "detected",
+          "target_region": "shoulder",
+          "model_phrase": "garment",
+          "score": 0.5508884191513062,
+          "bbox": [
+            104.0,
+            223.0,
+            197.0,
+            543.0
+          ],
+          "proposal_bbox": [
+            103.0,
+            214.0,
+            198.0,
+            551.0
+          ],
+          "sam_score": 0.9649714231491089,
+          "coordinate_space": "original_image",
+          "crop_origin": [
+            100,
+            211,
+            329,
+            574
+          ],
+          "semantic_target_correct": null,
+          "semantic_review_status": "pending",
+          "semantic_note": "Strict semantic correctness needs reviewed output; no automatic manual grade is fabricated.",
+          "mask_path": "instance_006_shoulder_mask.png"
+        },
+        "waist": {
+          "status": "detected",
+          "target_region": "waist",
+          "model_phrase": "garment",
+          "score": 0.5325354933738708,
+          "bbox": [
+            104.0,
+            223.0,
+            197.0,
+            543.0
+          ],
+          "proposal_bbox": [
+            103.0,
+            214.0,
+            198.0,
+            551.0
+          ],
+          "sam_score": 0.9649714231491089,
+          "coordinate_space": "original_image",
+          "crop_origin": [
+            100,
+            211,
+            329,
+            574
+          ],
+          "semantic_target_correct": null,
+          "semantic_review_status": "pending",
+          "semantic_note": "Strict semantic correctness needs reviewed output; no automatic manual grade is fabricated.",
+          "mask_path": "instance_006_waist_mask.png"
+        },
+        "pattern": {
+          "status": "detected",
+          "target_region": "pattern",
+          "model_phrase": "garment",
+          "score": 0.42758244276046753,
+          "bbox": [
+            247.0,
+            229.0,
+            321.0,
+            468.0
+          ],
+          "proposal_bbox": [
+            241.0,
+            228.0,
+            322.0,
+            469.0
+          ],
+          "sam_score": 0.8173350691795349,
+          "coordinate_space": "original_image",
+          "crop_origin": [
+            100,
+            211,
+            329,
+            574
+          ],
+          "semantic_target_correct": null,
+          "semantic_review_status": "pending",
+          "semantic_note": "Strict semantic correctness needs reviewed output; no automatic manual grade is fabricated.",
+          "mask_path": "instance_006_pattern_mask.png"
+        },
+        "decoration": {
+          "status": "detected",
+          "target_region": "decoration",
+          "model_phrase": "the garment",
+          "score": 0.4348793625831604,
+          "bbox": [
+            104.0,
+            223.0,
+            197.0,
+            543.0
+          ],
+          "proposal_bbox": [
+            103.0,
+            214.0,
+            199.0,
+            551.0
+          ],
+          "sam_score": 0.9653082489967346,
+          "coordinate_space": "original_image",
+          "crop_origin": [
+            100,
+            211,
+            329,
+            574
+          ],
+          "semantic_target_correct": null,
+          "semantic_review_status": "pending",
+          "semantic_note": "Strict semantic correctness needs reviewed output; no automatic manual grade is fabricated.",
+          "mask_path": "instance_006_decoration_mask.png"
+        }
+      }
+    },
+    {
+      "instance_id": "pred_0007",
+      "category": "top",
+      "score": 0.6399632692337036,
+      "bbox": [
+        155.18972778320312,
+        297.6419677734375,
+        307.8743896484375,
+        420.44940185546875
+      ],
+      "provenance": "segmentation_prediction",
+      "mask_path": "instance_007_mask.png",
+      "attributes": {
+        "primary_color": {
+          "status": "predicted",
+          "label": "purple",
+          "confidence": 0.3963075280189514,
+          "roi_provenance": "segmentation_prediction"
+        },
+        "pattern": {
+          "status": "predicted",
+          "label": "polka_dot",
+          "confidence": 0.3497123718261719,
+          "stage1_bucket": "repeated_surface_pattern",
+          "roi_provenance": "segmentation_prediction"
+        },
+        "sleeve_length": {
+          "status": "predicted",
+          "label": "long",
+          "confidence": 0.4956940710544586,
+          "roi_provenance": "segmentation_prediction"
+        },
+        "neckline": {
+          "status": "predicted",
+          "label": "square",
+          "confidence": 0.17003288865089417,
+          "roi_provenance": "3_1_2_predicted_collar_roi"
+        },
+        "silhouette_fit": {
+          "status": "predicted",
+          "label": "slim_fitted",
+          "confidence": 0.8842020630836487,
+          "roi_provenance": "segmentation_prediction"
+        },
+        "fashion_style": {
+          "status": "predicted",
+          "label": "vintage",
+          "confidence": 0.34440529346466064,
+          "roi_provenance": "segmentation_prediction"
+        }
+      },
+      "regions": {
+        "collar": {
+          "status": "detected",
+          "target_region": "collar",
+          "model_phrase": "garment",
+          "score": 0.6812308430671692,
+          "bbox": [
+            162.0,
+            310.0,
+            296.0,
+            420.0
+          ],
+          "proposal_bbox": [
+            162.0,
+            307.0,
+            297.0,
+            420.0
+          ],
+          "sam_score": 0.9748687744140625,
+          "coordinate_space": "original_image",
+          "crop_origin": [
+            155,
+            297,
+            308,
+            421
+          ],
+          "semantic_target_correct": null,
+          "semantic_review_status": "pending",
+          "semantic_note": "Strict semantic correctness needs reviewed output; no automatic manual grade is fabricated.",
+          "mask_path": "instance_007_collar_mask.png"
+        },
+        "cuff": {
+          "status": "detected",
+          "target_region": "cuff",
+          "model_phrase": "garment",
+          "score": 0.6625432372093201,
+          "bbox": [
+            162.0,
+            310.0,
+            296.0,
+            420.0
+          ],
+          "proposal_bbox": [
+            162.0,
+            307.0,
+            297.0,
+            420.0
+          ],
+          "sam_score": 0.9748687744140625,
+          "coordinate_space": "original_image",
+          "crop_origin": [
+            155,
+            297,
+            308,
+            421
+          ],
+          "semantic_target_correct": null,
+          "semantic_review_status": "pending",
+          "semantic_note": "Strict semantic correctness needs reviewed output; no automatic manual grade is fabricated.",
+          "mask_path": "instance_007_cuff_mask.png"
+        },
+        "hem": {
+          "status": "detected",
+          "target_region": "hem",
+          "model_phrase": "garment",
+          "score": 0.7170982956886292,
+          "bbox": [
+            162.0,
+            310.0,
+            296.0,
+            420.0
+          ],
+          "proposal_bbox": [
+            162.0,
+            307.0,
+            297.0,
+            420.0
+          ],
+          "sam_score": 0.9748687744140625,
+          "coordinate_space": "original_image",
+          "crop_origin": [
+            155,
+            297,
+            308,
+            421
+          ],
+          "semantic_target_correct": null,
+          "semantic_review_status": "pending",
+          "semantic_note": "Strict semantic correctness needs reviewed output; no automatic manual grade is fabricated.",
+          "mask_path": "instance_007_hem_mask.png"
+        },
+        "pocket": {
+          "status": "detected",
+          "target_region": "pocket",
+          "model_phrase": "garment",
+          "score": 0.6198728680610657,
+          "bbox": [
+            162.0,
+            310.0,
+            296.0,
+            420.0
+          ],
+          "proposal_bbox": [
+            162.0,
+            307.0,
+            297.0,
+            420.0
+          ],
+          "sam_score": 0.9748687744140625,
+          "coordinate_space": "original_image",
+          "crop_origin": [
+            155,
+            297,
+            308,
+            421
+          ],
+          "semantic_target_correct": null,
+          "semantic_review_status": "pending",
+          "semantic_note": "Strict semantic correctness needs reviewed output; no automatic manual grade is fabricated.",
+          "mask_path": "instance_007_pocket_mask.png"
+        },
+        "shoulder": {
+          "status": "detected",
+          "target_region": "shoulder",
+          "model_phrase": "garment",
+          "score": 0.726410448551178,
+          "bbox": [
+            162.0,
+            310.0,
+            296.0,
+            420.0
+          ],
+          "proposal_bbox": [
+            162.0,
+            307.0,
+            297.0,
+            420.0
+          ],
+          "sam_score": 0.9748687744140625,
+          "coordinate_space": "original_image",
+          "crop_origin": [
+            155,
+            297,
+            308,
+            421
+          ],
+          "semantic_target_correct": null,
+          "semantic_review_status": "pending",
+          "semantic_note": "Strict semantic correctness needs reviewed output; no automatic manual grade is fabricated.",
+          "mask_path": "instance_007_shoulder_mask.png"
+        },
+        "waist": {
+          "status": "detected",
+          "target_region": "waist",
+          "model_phrase": "garment",
+          "score": 0.6709205508232117,
+          "bbox": [
+            162.0,
+            310.0,
+            296.0,
+            420.0
+          ],
+          "proposal_bbox": [
+            162.0,
+            307.0,
+            297.0,
+            420.0
+          ],
+          "sam_score": 0.9748687744140625,
+          "coordinate_space": "original_image",
+          "crop_origin": [
+            155,
+            297,
+            308,
+            421
+          ],
+          "semantic_target_correct": null,
+          "semantic_review_status": "pending",
+          "semantic_note": "Strict semantic correctness needs reviewed output; no automatic manual grade is fabricated.",
+          "mask_path": "instance_007_waist_mask.png"
+        },
+        "pattern": {
+          "status": "detected",
+          "target_region": "pattern",
+          "model_phrase": "garment",
+          "score": 0.4991709589958191,
+          "bbox": [
+            162.0,
+            310.0,
+            296.0,
+            420.0
+          ],
+          "proposal_bbox": [
+            162.0,
+            307.0,
+            297.0,
+            420.0
+          ],
+          "sam_score": 0.9748687744140625,
+          "coordinate_space": "original_image",
+          "crop_origin": [
+            155,
+            297,
+            308,
+            421
+          ],
+          "semantic_target_correct": null,
+          "semantic_review_status": "pending",
+          "semantic_note": "Strict semantic correctness needs reviewed output; no automatic manual grade is fabricated.",
+          "mask_path": "instance_007_pattern_mask.png"
+        },
+        "decoration": {
+          "status": "detected",
+          "target_region": "decoration",
+          "model_phrase": "garment",
+          "score": 0.5393077731132507,
+          "bbox": [
+            162.0,
+            310.0,
+            296.0,
+            420.0
+          ],
+          "proposal_bbox": [
+            162.0,
+            307.0,
+            297.0,
+            420.0
+          ],
+          "sam_score": 0.9748687744140625,
+          "coordinate_space": "original_image",
+          "crop_origin": [
+            155,
+            297,
+            308,
+            421
+          ],
+          "semantic_target_correct": null,
+          "semantic_review_status": "pending",
+          "semantic_note": "Strict semantic correctness needs reviewed output; no automatic manual grade is fabricated.",
+          "mask_path": "instance_007_decoration_mask.png"
+        }
+      }
+    },
+    {
+      "instance_id": "pred_0008",
+      "category": "shoe",
+      "score": 0.5355319380760193,
+      "bbox": [
+        145.2361297607422,
+        876.3908081054688,
+        255.6986541748047,
+        975.4714965820312
+      ],
+      "provenance": "segmentation_prediction",
+      "mask_path": "instance_008_mask.png",
+      "attributes": {
+        "primary_color": {
+          "status": "predicted",
+          "label": "white",
+          "confidence": 0.5011325478553772,
+          "roi_provenance": "segmentation_prediction"
+        },
+        "pattern": {
+          "status": "predicted",
+          "label": "solid",
+          "confidence": 0.3431852161884308,
+          "stage1_bucket": "plain_non_pattern",
+          "roi_provenance": "segmentation_prediction"
+        },
+        "sleeve_length": {
+          "status": "not_applicable",
+          "label": ""
+        },
+        "neckline": {
+          "status": "not_applicable",
+          "label": ""
+        },
+        "silhouette_fit": {
+          "status": "not_applicable",
+          "label": ""
+        },
+        "fashion_style": {
+          "status": "not_applicable",
+          "label": ""
+        }
+      },
+      "regions": {
+        "collar": {
+          "status": "detected",
+          "target_region": "collar",
+          "model_phrase": "garment",
+          "score": 0.6077671051025391,
+          "bbox": [
+            149.0,
+            898.0,
+            253.0,
+            976.0
+          ],
+          "proposal_bbox": [
+            147.0,
+            888.0,
+            254.0,
+            976.0
+          ],
+          "sam_score": 0.938130795955658,
+          "coordinate_space": "original_image",
+          "crop_origin": [
+            145,
+            876,
+            256,
+            976
+          ],
+          "semantic_target_correct": null,
+          "semantic_review_status": "pending",
+          "semantic_note": "Strict semantic correctness needs reviewed output; no automatic manual grade is fabricated.",
+          "mask_path": "instance_008_collar_mask.png"
+        },
+        "cuff": {
+          "status": "detected",
+          "target_region": "cuff",
+          "model_phrase": "the sleeve cuff",
+          "score": 0.42588478326797485,
+          "bbox": [
+            149.0,
+            896.0,
+            253.0,
+            976.0
+          ],
+          "proposal_bbox": [
+            147.0,
+            888.0,
+            253.0,
+            976.0
+          ],
+          "sam_score": 0.940844714641571,
+          "coordinate_space": "original_image",
+          "crop_origin": [
+            145,
+            876,
+            256,
+            976
+          ],
+          "semantic_target_correct": null,
+          "semantic_review_status": "pending",
+          "semantic_note": "Strict semantic correctness needs reviewed output; no automatic manual grade is fabricated.",
+          "mask_path": "instance_008_cuff_mask.png"
+        },
+        "hem": {
+          "status": "detected",
+          "target_region": "hem",
+          "model_phrase": "garment",
+          "score": 0.6318968534469604,
+          "bbox": [
+            149.0,
+            898.0,
+            253.0,
+            976.0
+          ],
+          "proposal_bbox": [
+            147.0,
+            888.0,
+            254.0,
+            976.0
+          ],
+          "sam_score": 0.938130795955658,
+          "coordinate_space": "original_image",
+          "crop_origin": [
+            145,
+            876,
+            256,
+            976
+          ],
+          "semantic_target_correct": null,
+          "semantic_review_status": "pending",
+          "semantic_note": "Strict semantic correctness needs reviewed output; no automatic manual grade is fabricated.",
+          "mask_path": "instance_008_hem_mask.png"
+        },
+        "pocket": {
+          "status": "detected",
+          "target_region": "pocket",
+          "model_phrase": "garment",
+          "score": 0.521533727645874,
+          "bbox": [
+            149.0,
+            898.0,
+            253.0,
+            976.0
+          ],
+          "proposal_bbox": [
+            147.0,
+            888.0,
+            254.0,
+            976.0
+          ],
+          "sam_score": 0.938130795955658,
+          "coordinate_space": "original_image",
+          "crop_origin": [
+            145,
+            876,
+            256,
+            976
+          ],
+          "semantic_target_correct": null,
+          "semantic_review_status": "pending",
+          "semantic_note": "Strict semantic correctness needs reviewed output; no automatic manual grade is fabricated.",
+          "mask_path": "instance_008_pocket_mask.png"
+        },
+        "shoulder": {
+          "status": "detected",
+          "target_region": "shoulder",
+          "model_phrase": "garment",
+          "score": 0.605692446231842,
+          "bbox": [
+            149.0,
+            898.0,
+            253.0,
+            976.0
+          ],
+          "proposal_bbox": [
+            147.0,
+            888.0,
+            254.0,
+            976.0
+          ],
+          "sam_score": 0.938130795955658,
+          "coordinate_space": "original_image",
+          "crop_origin": [
+            145,
+            876,
+            256,
+            976
+          ],
+          "semantic_target_correct": null,
+          "semantic_review_status": "pending",
+          "semantic_note": "Strict semantic correctness needs reviewed output; no automatic manual grade is fabricated.",
+          "mask_path": "instance_008_shoulder_mask.png"
+        },
+        "waist": {
+          "status": "detected",
+          "target_region": "waist",
+          "model_phrase": "garment",
+          "score": 0.5770716071128845,
+          "bbox": [
+            149.0,
+            898.0,
+            253.0,
+            976.0
+          ],
+          "proposal_bbox": [
+            147.0,
+            888.0,
+            254.0,
+            976.0
+          ],
+          "sam_score": 0.938130795955658,
+          "coordinate_space": "original_image",
+          "crop_origin": [
+            145,
+            876,
+            256,
+            976
+          ],
+          "semantic_target_correct": null,
+          "semantic_review_status": "pending",
+          "semantic_note": "Strict semantic correctness needs reviewed output; no automatic manual grade is fabricated.",
+          "mask_path": "instance_008_waist_mask.png"
+        },
+        "pattern": {
+          "status": "detected",
+          "target_region": "pattern",
+          "model_phrase": "garment",
+          "score": 0.5326490998268127,
+          "bbox": [
+            149.0,
+            896.0,
+            253.0,
+            976.0
+          ],
+          "proposal_bbox": [
+            148.0,
+            888.0,
+            254.0,
+            976.0
+          ],
+          "sam_score": 0.9409470558166504,
+          "coordinate_space": "original_image",
+          "crop_origin": [
+            145,
+            876,
+            256,
+            976
+          ],
+          "semantic_target_correct": null,
+          "semantic_review_status": "pending",
+          "semantic_note": "Strict semantic correctness needs reviewed output; no automatic manual grade is fabricated.",
+          "mask_path": "instance_008_pattern_mask.png"
+        },
+        "decoration": {
+          "status": "detected",
+          "target_region": "decoration",
+          "model_phrase": "garment",
+          "score": 0.479295939207077,
+          "bbox": [
+            149.0,
+            896.0,
+            253.0,
+            976.0
+          ],
+          "proposal_bbox": [
+            148.0,
+            888.0,
+            254.0,
+            976.0
+          ],
+          "sam_score": 0.9409470558166504,
+          "coordinate_space": "original_image",
+          "crop_origin": [
+            145,
+            876,
+            256,
+            976
+          ],
+          "semantic_target_correct": null,
+          "semantic_review_status": "pending",
+          "semantic_note": "Strict semantic correctness needs reviewed output; no automatic manual grade is fabricated.",
+          "mask_path": "instance_008_decoration_mask.png"
+        }
+      }
+    },
+    {
+      "instance_id": "pred_0009",
+      "category": "accessory",
+      "score": 0.49857160449028015,
+      "bbox": [
+        179.05633544921875,
+        634.534423828125,
+        283.9829406738281,
+        899.1572265625
+      ],
+      "provenance": "segmentation_prediction",
+      "mask_path": "instance_009_mask.png",
+      "attributes": {
+        "primary_color": {
+          "status": "predicted",
+          "label": "blue",
+          "confidence": 0.3645997643470764,
+          "roi_provenance": "segmentation_prediction"
+        },
+        "pattern": {
+          "status": "predicted",
+          "label": "solid",
+          "confidence": 0.4045393764972687,
+          "stage1_bucket": "texture_structure_non_pattern",
+          "roi_provenance": "segmentation_prediction"
+        },
+        "sleeve_length": {
+          "status": "not_applicable",
+          "label": ""
+        },
+        "neckline": {
+          "status": "not_applicable",
+          "label": ""
+        },
+        "silhouette_fit": {
+          "status": "not_applicable",
+          "label": ""
+        },
+        "fashion_style": {
+          "status": "not_applicable",
+          "label": ""
+        }
+      },
+      "regions": {
+        "collar": {
+          "status": "detected",
+          "target_region": "collar",
+          "model_phrase": "garment",
+          "score": 0.6785867810249329,
+          "bbox": [
+            180.0,
+            639.0,
+            275.0,
+            895.0
+          ],
+          "proposal_bbox": [
+            179.0,
+            637.0,
+            276.0,
+            897.0
+          ],
+          "sam_score": 0.9674593806266785,
+          "coordinate_space": "original_image",
+          "crop_origin": [
+            179,
+            634,
+            284,
+            900
+          ],
+          "semantic_target_correct": null,
+          "semantic_review_status": "pending",
+          "semantic_note": "Strict semantic correctness needs reviewed output; no automatic manual grade is fabricated.",
+          "mask_path": "instance_009_collar_mask.png"
+        },
+        "cuff": {
+          "status": "detected",
+          "target_region": "cuff",
+          "model_phrase": "garment",
+          "score": 0.5982264876365662,
+          "bbox": [
+            180.0,
+            639.0,
+            275.0,
+            895.0
+          ],
+          "proposal_bbox": [
+            179.0,
+            637.0,
+            276.0,
+            896.0
+          ],
+          "sam_score": 0.9654868841171265,
+          "coordinate_space": "original_image",
+          "crop_origin": [
+            179,
+            634,
+            284,
+            900
+          ],
+          "semantic_target_correct": null,
+          "semantic_review_status": "pending",
+          "semantic_note": "Strict semantic correctness needs reviewed output; no automatic manual grade is fabricated.",
+          "mask_path": "instance_009_cuff_mask.png"
+        },
+        "hem": {
+          "status": "detected",
+          "target_region": "hem",
+          "model_phrase": "garment",
+          "score": 0.7245009541511536,
+          "bbox": [
+            180.0,
+            639.0,
+            275.0,
+            895.0
+          ],
+          "proposal_bbox": [
+            179.0,
+            637.0,
+            276.0,
+            896.0
+          ],
+          "sam_score": 0.9654868841171265,
+          "coordinate_space": "original_image",
+          "crop_origin": [
+            179,
+            634,
+            284,
+            900
+          ],
+          "semantic_target_correct": null,
+          "semantic_review_status": "pending",
+          "semantic_note": "Strict semantic correctness needs reviewed output; no automatic manual grade is fabricated.",
+          "mask_path": "instance_009_hem_mask.png"
+        },
+        "pocket": {
+          "status": "detected",
+          "target_region": "pocket",
+          "model_phrase": "garment",
+          "score": 0.6772236227989197,
+          "bbox": [
+            180.0,
+            639.0,
+            275.0,
+            895.0
+          ],
+          "proposal_bbox": [
+            179.0,
+            637.0,
+            276.0,
+            897.0
+          ],
+          "sam_score": 0.9674593806266785,
+          "coordinate_space": "original_image",
+          "crop_origin": [
+            179,
+            634,
+            284,
+            900
+          ],
+          "semantic_target_correct": null,
+          "semantic_review_status": "pending",
+          "semantic_note": "Strict semantic correctness needs reviewed output; no automatic manual grade is fabricated.",
+          "mask_path": "instance_009_pocket_mask.png"
+        },
+        "shoulder": {
+          "status": "detected",
+          "target_region": "shoulder",
+          "model_phrase": "garment",
+          "score": 0.7113369703292847,
+          "bbox": [
+            180.0,
+            639.0,
+            275.0,
+            895.0
+          ],
+          "proposal_bbox": [
+            179.0,
+            637.0,
+            276.0,
+            897.0
+          ],
+          "sam_score": 0.9674593806266785,
+          "coordinate_space": "original_image",
+          "crop_origin": [
+            179,
+            634,
+            284,
+            900
+          ],
+          "semantic_target_correct": null,
+          "semantic_review_status": "pending",
+          "semantic_note": "Strict semantic correctness needs reviewed output; no automatic manual grade is fabricated.",
+          "mask_path": "instance_009_shoulder_mask.png"
+        },
+        "waist": {
+          "status": "detected",
+          "target_region": "waist",
+          "model_phrase": "garment",
+          "score": 0.6958374977111816,
+          "bbox": [
+            180.0,
+            639.0,
+            275.0,
+            895.0
+          ],
+          "proposal_bbox": [
+            179.0,
+            637.0,
+            276.0,
+            896.0
+          ],
+          "sam_score": 0.9654868841171265,
+          "coordinate_space": "original_image",
+          "crop_origin": [
+            179,
+            634,
+            284,
+            900
+          ],
+          "semantic_target_correct": null,
+          "semantic_review_status": "pending",
+          "semantic_note": "Strict semantic correctness needs reviewed output; no automatic manual grade is fabricated.",
+          "mask_path": "instance_009_waist_mask.png"
+        },
+        "pattern": {
+          "status": "detected",
+          "target_region": "pattern",
+          "model_phrase": "garment",
+          "score": 0.6030571460723877,
+          "bbox": [
+            180.0,
+            639.0,
+            275.0,
+            895.0
+          ],
+          "proposal_bbox": [
+            179.0,
+            637.0,
+            276.0,
+            897.0
+          ],
+          "sam_score": 0.9674593806266785,
+          "coordinate_space": "original_image",
+          "crop_origin": [
+            179,
+            634,
+            284,
+            900
+          ],
+          "semantic_target_correct": null,
+          "semantic_review_status": "pending",
+          "semantic_note": "Strict semantic correctness needs reviewed output; no automatic manual grade is fabricated.",
+          "mask_path": "instance_009_pattern_mask.png"
+        },
+        "decoration": {
+          "status": "detected",
+          "target_region": "decoration",
+          "model_phrase": "garment",
+          "score": 0.6193960309028625,
+          "bbox": [
+            180.0,
+            639.0,
+            275.0,
+            895.0
+          ],
+          "proposal_bbox": [
+            179.0,
+            637.0,
+            276.0,
+            896.0
+          ],
+          "sam_score": 0.9654868841171265,
+          "coordinate_space": "original_image",
+          "crop_origin": [
+            179,
+            634,
+            284,
+            900
+          ],
+          "semantic_target_correct": null,
+          "semantic_review_status": "pending",
+          "semantic_note": "Strict semantic correctness needs reviewed output; no automatic manual grade is fabricated.",
+          "mask_path": "instance_009_decoration_mask.png"
+        }
+      }
+    }
+  ],
+  "interface_issues": []
+}

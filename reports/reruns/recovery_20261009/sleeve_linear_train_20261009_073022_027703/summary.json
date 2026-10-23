@@ -1,0 +1,304 @@
+{
+  "status": "EXPERIMENTAL_SLEEVE_HEAD_TRAINING_COMPLETED",
+  "reviewed_usable_targets": 44,
+  "label_counts": {
+    "cap": 5,
+    "short": 11,
+    "elbow": 8,
+    "three_quarter": 5,
+    "long": 8,
+    "sleeveless": 7
+  },
+  "train_targets": 32,
+  "dev_targets": 12,
+  "train_label_counts": {
+    "cap": 3,
+    "short": 9,
+    "elbow": 6,
+    "three_quarter": 3,
+    "long": 6,
+    "sleeveless": 5
+  },
+  "dev_label_counts": {
+    "cap": 2,
+    "short": 2,
+    "elbow": 2,
+    "three_quarter": 2,
+    "long": 2,
+    "sleeveless": 2
+  },
+  "best_epoch": 150,
+  "selection_rule": "Max dev correct, tie lower dev CE; diagnostic targets not used",
+  "epochs": 150,
+  "seed": 20261009,
+  "lr": 0.01,
+  "weight_decay": 0.05,
+  "augmentation": "Train-only horizontal flip",
+  "clip_frozen": true,
+  "input_view": "raw_garment_bbox_no_expansion",
+  "head_checkpoint_sha256": "826bf1cdd911981fa5be8b176c76e4240a08fb01e56c01d5dade83011beec17c",
+  "metrics": {
+    "train": {
+      "eligible": 32,
+      "correct": 32,
+      "accuracy": 1.0,
+      "missing": 0,
+      "unknown_excluded": 0,
+      "confusion": {
+        "cap": {
+          "cap": 3
+        },
+        "short": {
+          "short": 9
+        },
+        "elbow": {
+          "elbow": 6
+        },
+        "three_quarter": {
+          "three_quarter": 3
+        },
+        "long": {
+          "long": 6
+        },
+        "sleeveless": {
+          "sleeveless": 5
+        }
+      }
+    },
+    "dev": {
+      "eligible": 12,
+      "correct": 7,
+      "accuracy": 0.5833333333333334,
+      "missing": 0,
+      "unknown_excluded": 0,
+      "confusion": {
+        "cap": {
+          "three_quarter": 2
+        },
+        "short": {
+          "long": 1,
+          "short": 1
+        },
+        "elbow": {
+          "three_quarter": 1,
+          "elbow": 1
+        },
+        "three_quarter": {
+          "three_quarter": 1,
+          "short": 1
+        },
+        "long": {
+          "long": 2
+        },
+        "sleeveless": {
+          "sleeveless": 2
+        }
+      }
+    },
+    "diagnostic_gt_roi": {
+      "eligible": 15,
+      "correct": 5,
+      "accuracy": 0.3333333333333333,
+      "missing": 0,
+      "unknown_excluded": 3,
+      "confusion": {
+        "short": {
+          "sleeveless": 2,
+          "elbow": 1,
+          "short": 1
+        },
+        "long": {
+          "short": 1,
+          "cap": 1,
+          "long": 2,
+          "three_quarter": 1
+        },
+        "elbow": {
+          "elbow": 1
+        },
+        "three_quarter": {
+          "sleeveless": 2
+        },
+        "sleeveless": {
+          "sleeveless": 1,
+          "short": 1,
+          "long": 1
+        }
+      }
+    },
+    "diagnostic_predicted_roi": {
+      "eligible": 15,
+      "correct": 4,
+      "accuracy": 0.26666666666666666,
+      "missing": 2,
+      "unknown_excluded": 3,
+      "confusion": {
+        "short": {
+          "sleeveless": 2,
+          "elbow": 1,
+          "short": 1
+        },
+        "long": {
+          "elbow": 1,
+          "cap": 1,
+          "long": 1,
+          "<missing>": 1,
+          "three_quarter": 1
+        },
+        "elbow": {
+          "elbow": 1
+        },
+        "three_quarter": {
+          "sleeveless": 1,
+          "<missing>": 1
+        },
+        "sleeveless": {
+          "sleeveless": 1,
+          "short": 1,
+          "long": 1
+        }
+      }
+    }
+  },
+  "same_raw_view_prompt_baseline_metrics": {
+    "train": {
+      "eligible": 32,
+      "correct": 7,
+      "accuracy": 0.21875,
+      "missing": 0,
+      "unknown_excluded": 0,
+      "confusion": {
+        "cap": {
+          "sleeveless": 2,
+          "elbow": 1
+        },
+        "short": {
+          "sleeveless": 3,
+          "long": 2,
+          "elbow": 2,
+          "short": 2
+        },
+        "elbow": {
+          "short": 3,
+          "elbow": 2,
+          "long": 1
+        },
+        "three_quarter": {
+          "elbow": 2,
+          "sleeveless": 1
+        },
+        "long": {
+          "elbow": 4,
+          "long": 2
+        },
+        "sleeveless": {
+          "short": 2,
+          "cap": 1,
+          "sleeveless": 1,
+          "three_quarter": 1
+        }
+      }
+    },
+    "dev": {
+      "eligible": 12,
+      "correct": 4,
+      "accuracy": 0.3333333333333333,
+      "missing": 0,
+      "unknown_excluded": 0,
+      "confusion": {
+        "cap": {
+          "sleeveless": 1,
+          "short": 1
+        },
+        "short": {
+          "short": 1,
+          "long": 1
+        },
+        "elbow": {
+          "sleeveless": 1,
+          "short": 1
+        },
+        "three_quarter": {
+          "three_quarter": 1,
+          "long": 1
+        },
+        "long": {
+          "long": 1,
+          "cap": 1
+        },
+        "sleeveless": {
+          "sleeveless": 1,
+          "cap": 1
+        }
+      }
+    },
+    "diagnostic_gt_roi": {
+      "eligible": 15,
+      "correct": 7,
+      "accuracy": 0.4666666666666667,
+      "missing": 0,
+      "unknown_excluded": 3,
+      "confusion": {
+        "short": {
+          "short": 3,
+          "cap": 1
+        },
+        "long": {
+          "long": 2,
+          "elbow": 2,
+          "cap": 1
+        },
+        "elbow": {
+          "short": 1
+        },
+        "three_quarter": {
+          "elbow": 1,
+          "sleeveless": 1
+        },
+        "sleeveless": {
+          "sleeveless": 2,
+          "cap": 1
+        }
+      }
+    },
+    "diagnostic_predicted_roi": {
+      "eligible": 15,
+      "correct": 4,
+      "accuracy": 0.26666666666666666,
+      "missing": 2,
+      "unknown_excluded": 3,
+      "confusion": {
+        "short": {
+          "short": 3,
+          "cap": 1
+        },
+        "long": {
+          "elbow": 3,
+          "long": 1,
+          "<missing>": 1
+        },
+        "elbow": {
+          "short": 1
+        },
+        "three_quarter": {
+          "long": 1,
+          "<missing>": 1
+        },
+        "sleeveless": {
+          "short": 2,
+          "elbow": 1
+        }
+      }
+    }
+  },
+  "production_changed": false,
+  "formal_prd_acceptance": false,
+  "limitations": [
+    "44 small manually reviewed sources, native class hints corrected by review; generalization remains uncertain.",
+    "Internal dev is small and used for checkpoint selection; its accuracy is optimistic.",
+    "18 previously inspected validation targets are development diagnostics, not a fresh blind test.",
+    "Frozen CLIP, linear head only; no segmentation or local-region model updates.",
+    "Input-view choice followed prior diagnostic analysis; independently reviewed new images still needed before promotion.",
+    "Softmax scores are uncalibrated; unmatched diagnostic targets remain missing errors."
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "source_sha256": "c1f89da6b31ff8314601805cb8b00143b335e19874eaa30075e9e8e582f0e285",
+  "n_candidates": 28,
+  "n_images": 6,
+  "by_region": [
+    {
+      "region": "hem",
+      "total": 11,
+      "correct": 2,
+      "wrong_region": 6,
+      "upstream_instance_error": 3,
+      "comment": "Emitted candidates only; NOT recall / IoU / mAP"
+    },
+    {
+      "region": "waist",
+      "total": 8,
+      "correct": 1,
+      "wrong_region": 5,
+      "upstream_instance_error": 2,
+      "comment": "Emitted candidates only; NOT recall / IoU / mAP"
+    },
+    {
+      "region": "pocket",
+      "total": 9,
+      "correct": 0,
+      "wrong_region": 7,
+      "upstream_instance_error": 2,
+      "comment": "Emitted candidates only; NOT recall / IoU / mAP"
+    }
+  ],
+  "interpretation": "The review covers 28 emitted candidates only, lacks per-region exhaustively annotated positives and GT bbox; cannot compute recall/IoU/mAP; mixed batch not comparable with pocket24 audit."
+}

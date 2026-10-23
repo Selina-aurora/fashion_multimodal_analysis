@@ -1,0 +1,77 @@
+{
+  "record_id": "v5_train_00894",
+  "split": "train",
+  "presence": "present",
+  "category": "outerwear",
+  "source_dataset": "Fashionpedia",
+  "source_image_sha256": "f10ea79ee72b94371b7e7233820e4432d6d656f724e8a042e6062d1d3631e155",
+  "native_crop_xyxy": [
+    211,
+    310,
+    488,
+    673
+  ],
+  "input_crop_xyxy": [
+    183,
+    273,
+    516,
+    710
+  ],
+  "context_padding_fraction": 0.1,
+  "crop_size": [
+    333,
+    437
+  ],
+  "image": "train/v5_train_00894/image.png",
+  "garment_mask": "train/v5_train_00894/garment_mask.png",
+  "cuff_boxes_xyxy_local": [
+    [
+      58,
+      217,
+      110,
+      269
+    ],
+    [
+      250,
+      249,
+      298,
+      294
+    ]
+  ],
+  "box_audit": [
+    {
+      "source_box": [
+        241,
+        490,
+        293,
+        542
+      ],
+      "local_box": [
+        58,
+        217,
+        110,
+        269
+      ],
+      "source_box_area_retained": 1.0,
+      "native_garment_mask_fraction_in_box": 0.6693786982248521
+    },
+    {
+      "source_box": [
+        433,
+        522,
+        481,
+        567
+      ],
+      "local_box": [
+        250,
+        249,
+        298,
+        294
+      ],
+      "source_box_area_retained": 1.0,
+      "native_garment_mask_fraction_in_box": 0.7541666666666667
+    }
+  ],
+  "image_sha256": "a326ae8122c8c26624c1fe8d75dc271985da5b04f1aa6c391c67625ab4712f55",
+  "garment_mask_sha256": "61d8ee2a50c4788511a48fb711d73c6ec994aa4b87b296012e29256697987899"
+}

@@ -1,0 +1,10 @@
+{
+  "status": "DRY_RUN_PASS",
+  "project_files_modified": false,
+  "accuracy_acceptance": false,
+  "latency_acceptance": false,
+  "selection": {
+    "eligible_val_images": 24,
+    "candidate_count": 24
+  }
+}

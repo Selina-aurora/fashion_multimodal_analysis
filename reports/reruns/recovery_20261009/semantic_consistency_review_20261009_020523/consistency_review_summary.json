@@ -1,0 +1,26 @@
+{
+  "status": "cached_review_completed",
+  "images": 8,
+  "predicted_instances": 34,
+  "conflict_evidence_counts": {
+    "grounding_and_pattern_attribute_disagree": 25,
+    "different_regions_share_near_identical_box": 9
+  },
+  "region_review_counts": {
+    "pattern": 25,
+    "hem": 7,
+    "waist": 3,
+    "cuff": 3,
+    "pocket": 2
+  },
+  "attribute_review_counts": {
+    "pattern": 25,
+    "neckline": 6
+  },
+  "source_report": "/workspace/fashion_multimodal_analysis/reports/reruns/recovery_20261009/prd31_neckline_context_20261009_012052",
+  "model_inference_run": false,
+  "classes_boxes_masks_changed": false,
+  "accuracy_evaluated": false,
+  "prd_acceptance_evaluated": false,
+  "note": "Review statuses are abstentions, not semantic corrections or accuracy gains. Raw model candidates are preserved. Prior summary.json describes the original inference."
+}

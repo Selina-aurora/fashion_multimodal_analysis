@@ -1,0 +1,70 @@
+{
+  "status": "NATIVE_SLEEVE_PART_AUDIT_COMPLETED",
+  "raw_coverage": [
+    {
+      "file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+      "sleeve_part_categories": [
+        {
+          "id": 31,
+          "name": "sleeve",
+          "supercategory": "garment parts",
+          "level": 2,
+          "taxonomy_id": "obj000053_00"
+        }
+      ],
+      "native_sleeve_parts": 1442
+    }
+  ],
+  "all_native_sleeve_category_counts": {
+    "sleeve": 1442
+  },
+  "all_native_sleeve_attribute_names": {
+    "wrist-length": 813,
+    "set-in sleeve": 845,
+    "dropped-shoulder sleeve": 82,
+    "three quarter (length)": 146,
+    "poet (sleeve)": 10,
+    "short (length)": 305,
+    "circular flounce (sleeve)": 14,
+    "leg of mutton (sleeve)": 17,
+    "bell (sleeve)": 34,
+    "puff (sleeve)": 53,
+    "elbow-length": 116,
+    "dolman (sleeve), batwing (sleeve)": 43,
+    "cap (sleeve)": 120,
+    "bishop (sleeve)": 16,
+    "kimono (sleeve)": 6,
+    "sleeveless": 12,
+    "tulip (sleeve)": 23,
+    "raglan (sleeve)": 29
+  },
+  "sleeve_parts_on_selected_garment_images": 559,
+  "selected_image_part_attribute_names": {
+    "wrist-length": 347,
+    "set-in sleeve": 336,
+    "dropped-shoulder sleeve": 28,
+    "three quarter (length)": 58,
+    "poet (sleeve)": 6,
+    "short (length)": 92,
+    "puff (sleeve)": 22,
+    "bell (sleeve)": 6,
+    "cap (sleeve)": 39,
+    "elbow-length": 45,
+    "sleeveless": 7,
+    "bishop (sleeve)": 8,
+    "dolman (sleeve), batwing (sleeve)": 22,
+    "circular flounce (sleeve)": 4,
+    "raglan (sleeve)": 12,
+    "leg of mutton (sleeve)": 6,
+    "tulip (sleeve)": 9
+  },
+  "train_garments_with_same_image_sleeve_parts": 402,
+  "val_garments_with_same_image_sleeve_parts": 10,
+  "training_started": false,
+  "formal_prd_acceptance": false,
+  "limitations": [
+    "Same-image sleeve and garment annotations do not establish ownership.",
+    "Native length definitions must be mapped carefully; sleeve shape is not sleeve length.",
+    "No automatically generated garment labels; no train/val merging."
+  ]
+}

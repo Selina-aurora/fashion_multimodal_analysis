@@ -1,0 +1,27 @@
+{
+  "created_at_utc": "2026-10-12",
+  "records_total": 24,
+  "pilot8": 8,
+  "quarantine16": 16,
+  "counts_by_class": {
+    "elbow": 3,
+    "short": 2,
+    "cap": 3
+  },
+  "pilot8_ids": [
+    "v5_train_00415",
+    "v5_train_00484",
+    "v5_train_00533",
+    "v5_train_01055",
+    "v5_train_01155",
+    "v5_train_01230",
+    "v5_train_01445",
+    "v5_train_01508"
+  ],
+  "all_source_sha256_locally_verified": true,
+  "previous_44_overlap": false,
+  "gpu_preflight_not_executed_this_turn": true,
+  "core400_full_overlap_not_yet_checked": true,
+  "original_json_sha256": "29ffdae8d0a0cb4f40d75e128f4dff17c7fcc4cd14b048cbbc41242e288070ca",
+  "no_training_or_dataset_change": true
+}

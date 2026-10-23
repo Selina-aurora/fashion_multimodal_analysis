@@ -1,0 +1,6 @@
+{
+  "script_sha256": "9ebbee44223b73cb792578fcd8f688691aed344711f3e4654edbe17548fb2b62",
+  "checkpoint_path": "/workspace/fashion_multimodal_analysis/reports/reruns/recovery_20261009/sleeve_linear_train_20261009_073022_027703/sleeve_head_best.pth",
+  "input_view": "raw_garment_bbox_no_expansion",
+  "clip_model": "openai/clip-vit-base-patch32"
+}

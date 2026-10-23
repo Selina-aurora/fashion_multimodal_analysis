@@ -1,0 +1,330 @@
+{
+  "date": "2026-10-14",
+  "timestamp_utc": "2026-10-14T01:52:06.762286+00:00",
+  "root": "/workspace/fashion_multimodal_analysis",
+  "root_exists": true,
+  "read_only_project": true,
+  "configs": {
+    "configs/prd_8class_train_v5_balanced150_20261008.csv": {
+      "exists": true,
+      "sha256": "e8c277055efe4d042b4353bf2d4553bddddc7706eead9398f07f5efcd90bb38f",
+      "bytes": 634230,
+      "rows": 2299,
+      "columns": [
+        "record_id",
+        "source_dataset",
+        "source_image",
+        "garment_id",
+        "garment_category",
+        "fine_category",
+        "source_category_id",
+        "annotation_ref",
+        "mask_path",
+        "bbox_x1",
+        "bbox_y1",
+        "bbox_x2",
+        "bbox_y2",
+        "bbox_width",
+        "bbox_height",
+        "image_width",
+        "image_height",
+        "source_manifest"
+      ],
+      "sample_first_row": {
+        "record_id": "v5_train_00001",
+        "source_dataset": "DeepFashion2",
+        "source_image": "../fashion_data/raw/train/train/image/006491.jpg",
+        "garment_id": "item1_sling_dress",
+        "garment_category": "dress",
+        "fine_category": "sling_dress",
+        "source_category_id": "13",
+        "annotation_ref": "item1",
+        "mask_path": "../fashion_data/processed/prd8_full_targets_v5/train/df2_006491_item1.png",
+        "bbox_x1": "67",
+        "bbox_y1": "13",
+        "bbox_x2": "397",
+        "bbox_y2": "642",
+        "bbox_width": "330",
+        "bbox_height": "629",
+        "image_width": "468",
+        "image_height": "699",
+        "source_manifest": "raw_complete_targets_v5"
+      }
+    },
+    "configs/prd_8class_train_v5_full_targets.csv": {
+      "exists": true,
+      "sha256": "36ff78831b20e492d787c66161f05747433f8e85f7a089fd5df981c2bdf476e6",
+      "bytes": 563454,
+      "rows": 2039,
+      "columns": [
+        "record_id",
+        "source_dataset",
+        "source_image",
+        "garment_id",
+        "garment_category",
+        "fine_category",
+        "source_category_id",
+        "annotation_ref",
+        "mask_path",
+        "bbox_x1",
+        "bbox_y1",
+        "bbox_x2",
+        "bbox_y2",
+        "bbox_width",
+        "bbox_height",
+        "image_width",
+        "image_height",
+        "source_manifest"
+      ],
+      "sample_first_row": {
+        "record_id": "v5_train_00001",
+        "source_dataset": "DeepFashion2",
+        "source_image": "../fashion_data/raw/train/train/image/006491.jpg",
+        "garment_id": "item1_sling_dress",
+        "garment_category": "dress",
+        "fine_category": "sling_dress",
+        "source_category_id": "13",
+        "annotation_ref": "item1",
+        "mask_path": "../fashion_data/processed/prd8_full_targets_v5/train/df2_006491_item1.png",
+        "bbox_x1": "67",
+        "bbox_y1": "13",
+        "bbox_x2": "397",
+        "bbox_y2": "642",
+        "bbox_width": "330",
+        "bbox_height": "629",
+        "image_width": "468",
+        "image_height": "699",
+        "source_manifest": "raw_complete_targets_v5"
+      }
+    },
+    "configs/prd_8class_val_v2_full_targets.csv": {
+      "exists": true,
+      "sha256": "39141f545ea5512d16ed074788b6f98474b33baff111d3b663ec0ffcc4c40b93",
+      "bytes": 24731,
+      "rows": 88,
+      "columns": [
+        "record_id",
+        "source_dataset",
+        "source_image",
+        "garment_id",
+        "garment_category",
+        "fine_category",
+        "source_category_id",
+        "annotation_ref",
+        "mask_path",
+        "bbox_x1",
+        "bbox_y1",
+        "bbox_x2",
+        "bbox_y2",
+        "bbox_width",
+        "bbox_height",
+        "image_width",
+        "image_height",
+        "source_manifest"
+      ],
+      "sample_first_row": {
+        "record_id": "v5_validation_00001",
+        "source_dataset": "DeepFashion2",
+        "source_image": "../fashion_data/raw/train/train/image/002278.jpg",
+        "garment_id": "item1_sling_dress",
+        "garment_category": "dress",
+        "fine_category": "sling_dress",
+        "source_category_id": "13",
+        "annotation_ref": "item1",
+        "mask_path": "../fashion_data/processed/prd8_full_targets_v5/validation/df2_002278_item1.png",
+        "bbox_x1": "131",
+        "bbox_y1": "252",
+        "bbox_x2": "376",
+        "bbox_y2": "624",
+        "bbox_width": "245",
+        "bbox_height": "372",
+        "image_width": "468",
+        "image_height": "624",
+        "source_manifest": "raw_complete_targets_v5"
+      }
+    },
+    "benchmark/prd_3_1_v1/manifests/segmentation_test_v1.csv": {
+      "exists": true,
+      "sha256": "c83204aca87c9c4dee304b774fd459bf5a18a2d1d65f0a3a9a79b92721224b89",
+      "bytes": 285993,
+      "rows": 400,
+      "columns": [
+        "source_dataset",
+        "source_image",
+        "source_image_name",
+        "annotation_path",
+        "annotation_id",
+        "garment_id",
+        "garment_category",
+        "fine_or_source_category",
+        "source_category_id",
+        "image_width",
+        "image_height",
+        "gt_bbox_x1",
+        "gt_bbox_y1",
+        "gt_bbox_x2",
+        "gt_bbox_y2",
+        "bbox_area_ratio",
+        "bbox_min_side_px",
+        "benchmark_version",
+        "review_subset",
+        "review_sample_id",
+        "gt_mask_path",
+        "gt_overlay_path",
+        "area_bin",
+        "minside_bin",
+        "absolute_small_object",
+        "human_review_status",
+        "benchmark_subset",
+        "final_sample_id",
+        "final_annotation_valid",
+        "annotation_validation_basis",
+        "scene_type",
+        "scene_label_source",
+        "size_bucket",
+        "occlusion_level",
+        "visibility_level",
+        "occlusion_visibility_label_source",
+        "qc_v2_status",
+        "human_exception_decision",
+        "prediction_score_threshold",
+        "prediction_mask_threshold",
+        "bbox_match_iou_threshold",
+        "mask_quality_reference_iou"
+      ],
+      "sample_first_row": {
+        "source_dataset": "DeepFashion2",
+        "source_image": "../fashion_data/raw/train/train/image/139497.jpg",
+        "source_image_name": "139497.jpg",
+        "annotation_path": "../fashion_data/raw/train/train/annos/139497.json",
+        "annotation_id": "",
+        "garment_id": "item1_long_sleeve_top",
+        "garment_category": "top",
+        "fine_or_source_category": "long_sleeve_top",
+        "source_category_id": "2",
+        "image_width": "709",
+        "image_height": "511",
+        "gt_bbox_x1": "198.0",
+        "gt_bbox_y1": "3.0",
+        "gt_bbox_x2": "424.0",
+        "gt_bbox_y2": "232.0",
+        "bbox_area_ratio": "0.14284886240370523",
+        "bbox_min_side_px": "226.0",
+        "benchmark_version": "prd_3_1_v1",
+        "review_subset": "core",
+        "review_sample_id": "SEGCORE1_0001",
+        "gt_mask_path": "benchmark/prd_3_1_v1/candidates/segmentation_core_stress_v1/masks/core/top/SEGCORE1_0001.png",
+        "gt_overlay_path": "benchmark/prd_3_1_v1/candidates/segmentation_core_stress_v1/overlays/core/top/SEGCORE1_0001.jpg",
+        "area_bin": "large_>=10%",
+        "minside_bin": ">=100",
+        "absolute_small_object": "0",
+        "human_review_status": "unreviewed",
+        "benchmark_subset": "Core",
+        "final_sample_id": "SEGTEST1_0001",
+        "final_annotation_valid": "PASS",
+        "annotation_validation_basis": "QC_V2_GEOMETRY_PASS+FULL_CORE_HUMAN_CONTACT_SHEET_REVIEW",
+        "scene_type": "worn_person",
+        "scene_label_source": "HUMAN_REVIEW",
+        "size_bucket": "large",
+        "occlusion_level": "partial",
+        "visibility_level": "partial",
+        "occlusion_visibility_label_source": "CLIP_ASSISTED_DIAGNOSTIC_NOT_HUMAN_GT",
+        "qc_v2_status": "GEOMETRY_PASS",
+        "human_exception_decision": "",
+        "prediction_score_threshold": "0.40",
+        "prediction_mask_threshold": "0.50",
+        "bbox_match_iou_threshold": "0.50",
+        "mask_quality_reference_iou": "0.85"
+      },
+      "sha_match_expected": true
+    }
+  },
+  "checkpoint_candidates": [
+    {
+      "relpath": "outputs/recovery_20261008/v5_no_jumpsuit619/checkpoint_last.pth",
+      "bytes": 351385723,
+      "mtime": "2026-10-08T13:44:52.173911+00:00"
+    },
+    {
+      "relpath": "outputs/recovery_20261008/v5_no_jumpsuit619/checkpoint_epoch_15.pth",
+      "bytes": 351385723,
+      "mtime": "2026-10-08T13:44:52.173911+00:00"
+    },
+    {
+      "relpath": "outputs/recovery_20261008/v5_no_jumpsuit619/checkpoint_epoch_10.pth",
+      "bytes": 351383483,
+      "mtime": "2026-10-08T13:41:54.675099+00:00"
+    },
+    {
+      "relpath": "outputs/recovery_20261008/v5_no_jumpsuit619/checkpoint_epoch_05.pth",
+      "bytes": 351381115,
+      "mtime": "2026-10-08T13:35:40.230395+00:00"
+    },
+    {
+      "relpath": "outputs/recovery_20261008/v5_balanced150/checkpoint_last.pth",
+      "bytes": 351385339,
+      "mtime": "2026-10-08T08:26:34.976444+00:00"
+    },
+    {
+      "relpath": "outputs/recovery_20261008/v5_balanced150/checkpoint_epoch_15.pth",
+      "bytes": 351385339,
+      "mtime": "2026-10-08T08:26:34.976444+00:00"
+    },
+    {
+      "relpath": "outputs/recovery_20261008/v5_balanced150/checkpoint_epoch_10.pth",
+      "bytes": 351383163,
+      "mtime": "2026-10-08T08:23:13.628401+00:00"
+    },
+    {
+      "relpath": "outputs/recovery_20261008/v5_balanced150/checkpoint_epoch_05.pth",
+      "bytes": 351380923,
+      "mtime": "2026-10-08T08:19:53.046584+00:00"
+    },
+    {
+      "relpath": "outputs/recovery_20261008/v5_targeted150/checkpoint_last.pth",
+      "bytes": 351385339,
+      "mtime": "2026-10-08T07:54:35.091313+00:00"
+    },
+    {
+      "relpath": "outputs/recovery_20261008/v5_targeted150/checkpoint_epoch_15.pth",
+      "bytes": 351385339,
+      "mtime": "2026-10-08T07:54:35.091313+00:00"
+    },
+    {
+      "relpath": "outputs/recovery_20261008/v5_targeted150/checkpoint_epoch_10.pth",
+      "bytes": 351383163,
+      "mtime": "2026-10-08T07:51:19.500073+00:00"
+    },
+    {
+      "relpath": "outputs/recovery_20261008/v5_targeted150/checkpoint_epoch_05.pth",
+      "bytes": 351380923,
+      "mtime": "2026-10-08T07:48:08.228128+00:00"
+    },
+    {
+      "relpath": "outputs/recovery_20261008/v5_full_targets/checkpoint_last.pth",
+      "bytes": 351385339,
+      "mtime": "2026-10-08T07:04:04.648119+00:00"
+    },
+    {
+      "relpath": "outputs/recovery_20261008/v5_full_targets/checkpoint_epoch_15.pth",
+      "bytes": 351385339,
+      "mtime": "2026-10-08T07:04:04.648119+00:00"
+    },
+    {
+      "relpath": "outputs/recovery_20261008/v5_full_targets/checkpoint_epoch_10.pth",
+      "bytes": 351383099,
+      "mtime": "2026-10-08T07:01:36.760996+00:00"
+    },
+    {
+      "relpath": "outputs/recovery_20261008/v5_full_targets/checkpoint_epoch_05.pth",
+      "bytes": 351380923,
+      "mtime": "2026-10-08T06:59:07.702870+00:00"
+    }
+  ],
+  "core400_expected_sha256": "c83204aca87c9c4dee304b774fd459bf5a18a2d1d65f0a3a9a79b92721224b89",
+  "pass_overall": true,
+  "warnings": [],
+  "limitations": [
+    "This script only inventories inputs/checkpoints; no model forward pass, accuracy/latency measurement or image-level cross-split hash audit."
+  ]
+}

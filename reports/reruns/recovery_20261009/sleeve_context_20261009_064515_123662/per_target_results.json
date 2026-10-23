@@ -1,0 +1,1221 @@
+{
+  "gt_roi": [
+    {
+      "record_id": "v5_validation_00014",
+      "category": "top",
+      "truth": "short",
+      "status": "GT_ROI",
+      "views": {
+        "masked_baseline": {
+          "label": "sleeveless",
+          "score": 0.3879799544811249
+        },
+        "raw_garment": {
+          "label": "short",
+          "score": 0.3350696861743927,
+          "top2_label": "sleeveless",
+          "margin": 0.12243467569351196,
+          "bounds": [
+            267,
+            222,
+            530,
+            407
+          ]
+        },
+        "raw_context_10pct": {
+          "label": "short",
+          "score": 0.4934757351875305,
+          "top2_label": "sleeveless",
+          "margin": 0.31717485189437866,
+          "bounds": [
+            240,
+            203,
+            557,
+            426
+          ]
+        }
+      }
+    },
+    {
+      "record_id": "v5_validation_00027",
+      "category": "top",
+      "truth": "long",
+      "status": "GT_ROI",
+      "views": {
+        "masked_baseline": {
+          "label": "elbow",
+          "score": 0.3710906505584717
+        },
+        "raw_garment": {
+          "label": "long",
+          "score": 0.5187841653823853,
+          "top2_label": "elbow",
+          "margin": 0.340591162443161,
+          "bounds": [
+            71,
+            138,
+            597,
+            745
+          ]
+        },
+        "raw_context_10pct": {
+          "label": "long",
+          "score": 0.34694361686706543,
+          "top2_label": "cap",
+          "margin": 0.0419030487537384,
+          "bounds": [
+            18,
+            77,
+            640,
+            806
+          ]
+        }
+      }
+    },
+    {
+      "record_id": "v5_validation_00016",
+      "category": "top",
+      "truth": "short",
+      "status": "GT_ROI",
+      "views": {
+        "masked_baseline": {
+          "label": "short",
+          "score": 0.403667688369751
+        },
+        "raw_garment": {
+          "label": "short",
+          "score": 0.3500334322452545,
+          "top2_label": "sleeveless",
+          "margin": 0.013310670852661133,
+          "bounds": [
+            153,
+            116,
+            406,
+            377
+          ]
+        },
+        "raw_context_10pct": {
+          "label": "short",
+          "score": 0.3727661669254303,
+          "top2_label": "long",
+          "margin": 0.1616596132516861,
+          "bounds": [
+            127,
+            89,
+            432,
+            404
+          ]
+        }
+      }
+    },
+    {
+      "record_id": "v5_validation_00046",
+      "category": "top",
+      "truth": "elbow",
+      "status": "GT_ROI",
+      "views": {
+        "masked_baseline": {
+          "label": "short",
+          "score": 0.7666592597961426
+        },
+        "raw_garment": {
+          "label": "short",
+          "score": 0.5816575884819031,
+          "top2_label": "three_quarter",
+          "margin": 0.33388690650463104,
+          "bounds": [
+            234,
+            194,
+            530,
+            504
+          ]
+        },
+        "raw_context_10pct": {
+          "label": "short",
+          "score": 0.6633022427558899,
+          "top2_label": "three_quarter",
+          "margin": 0.4514707028865814,
+          "bounds": [
+            204,
+            163,
+            560,
+            535
+          ]
+        }
+      }
+    },
+    {
+      "record_id": "v5_validation_00053",
+      "category": "top",
+      "truth": "unknown",
+      "status": "GT_ROI",
+      "views": {
+        "masked_baseline": {
+          "label": "sleeveless",
+          "score": 0.3458290100097656
+        },
+        "raw_garment": {
+          "label": "long",
+          "score": 0.24055878818035126,
+          "top2_label": "elbow",
+          "margin": 0.03830958902835846,
+          "bounds": [
+            306,
+            487,
+            379,
+            621
+          ]
+        },
+        "raw_context_10pct": {
+          "label": "long",
+          "score": 0.4982481300830841,
+          "top2_label": "elbow",
+          "margin": 0.3334948867559433,
+          "bounds": [
+            298,
+            473,
+            387,
+            635
+          ]
+        }
+      }
+    },
+    {
+      "record_id": "v5_validation_00035",
+      "category": "top",
+      "truth": "short",
+      "status": "GT_ROI",
+      "views": {
+        "masked_baseline": {
+          "label": "cap",
+          "score": 0.4674449563026428
+        },
+        "raw_garment": {
+          "label": "cap",
+          "score": 0.43977081775665283,
+          "top2_label": "short",
+          "margin": 0.21926520764827728,
+          "bounds": [
+            342,
+            251,
+            531,
+            405
+          ]
+        },
+        "raw_context_10pct": {
+          "label": "cap",
+          "score": 0.3734535276889801,
+          "top2_label": "short",
+          "margin": 0.162417471408844,
+          "bounds": [
+            323,
+            235,
+            550,
+            421
+          ]
+        }
+      }
+    },
+    {
+      "record_id": "v5_validation_00013",
+      "category": "outerwear",
+      "truth": "unknown",
+      "status": "GT_ROI",
+      "views": {
+        "masked_baseline": {
+          "label": "three_quarter",
+          "score": 0.24901287257671356
+        },
+        "raw_garment": {
+          "label": "long",
+          "score": 0.27861320972442627,
+          "top2_label": "three_quarter",
+          "margin": 0.015179485082626343,
+          "bounds": [
+            76,
+            98,
+            468,
+            574
+          ]
+        },
+        "raw_context_10pct": {
+          "label": "elbow",
+          "score": 0.31661131978034973,
+          "top2_label": "three_quarter",
+          "margin": 0.05855187773704529,
+          "bounds": [
+            36,
+            50,
+            468,
+            622
+          ]
+        }
+      }
+    },
+    {
+      "record_id": "v5_validation_00018",
+      "category": "outerwear",
+      "truth": "three_quarter",
+      "status": "GT_ROI",
+      "views": {
+        "masked_baseline": {
+          "label": "elbow",
+          "score": 0.3721052408218384
+        },
+        "raw_garment": {
+          "label": "elbow",
+          "score": 0.34300127625465393,
+          "top2_label": "long",
+          "margin": 0.05936151742935181,
+          "bounds": [
+            126,
+            200,
+            640,
+            957
+          ]
+        },
+        "raw_context_10pct": {
+          "label": "long",
+          "score": 0.43031045794487,
+          "top2_label": "elbow",
+          "margin": 0.2247968167066574,
+          "bounds": [
+            74,
+            124,
+            640,
+            960
+          ]
+        }
+      }
+    },
+    {
+      "record_id": "v5_validation_00024",
+      "category": "outerwear",
+      "truth": "three_quarter",
+      "status": "GT_ROI",
+      "views": {
+        "masked_baseline": {
+          "label": "sleeveless",
+          "score": 0.257943332195282
+        },
+        "raw_garment": {
+          "label": "sleeveless",
+          "score": 0.4071394205093384,
+          "top2_label": "long",
+          "margin": 0.1813717484474182,
+          "bounds": [
+            5,
+            127,
+            305,
+            395
+          ]
+        },
+        "raw_context_10pct": {
+          "label": "sleeveless",
+          "score": 0.32505133748054504,
+          "top2_label": "long",
+          "margin": 0.07826714217662811,
+          "bounds": [
+            0,
+            100,
+            305,
+            395
+          ]
+        }
+      }
+    },
+    {
+      "record_id": "v5_validation_00036",
+      "category": "outerwear",
+      "truth": "long",
+      "status": "GT_ROI",
+      "views": {
+        "masked_baseline": {
+          "label": "long",
+          "score": 0.46689775586128235
+        },
+        "raw_garment": {
+          "label": "long",
+          "score": 0.42935624718666077,
+          "top2_label": "three_quarter",
+          "margin": 0.126359224319458,
+          "bounds": [
+            99,
+            208,
+            326,
+            545
+          ]
+        },
+        "raw_context_10pct": {
+          "label": "three_quarter",
+          "score": 0.3637509047985077,
+          "top2_label": "long",
+          "margin": 0.20809561014175415,
+          "bounds": [
+            76,
+            174,
+            349,
+            579
+          ]
+        }
+      }
+    },
+    {
+      "record_id": "v5_validation_00062",
+      "category": "outerwear",
+      "truth": "long",
+      "status": "GT_ROI",
+      "views": {
+        "masked_baseline": {
+          "label": "three_quarter",
+          "score": 0.3414880633354187
+        },
+        "raw_garment": {
+          "label": "elbow",
+          "score": 0.43362024426460266,
+          "top2_label": "long",
+          "margin": 0.14816096425056458,
+          "bounds": [
+            218,
+            187,
+            535,
+            635
+          ]
+        },
+        "raw_context_10pct": {
+          "label": "elbow",
+          "score": 0.40600523352622986,
+          "top2_label": "long",
+          "margin": 0.10803711414337158,
+          "bounds": [
+            186,
+            142,
+            567,
+            680
+          ]
+        }
+      }
+    },
+    {
+      "record_id": "v5_validation_00064",
+      "category": "outerwear",
+      "truth": "long",
+      "status": "GT_ROI",
+      "views": {
+        "masked_baseline": {
+          "label": "cap",
+          "score": 0.5555274486541748
+        },
+        "raw_garment": {
+          "label": "cap",
+          "score": 0.36815541982650757,
+          "top2_label": "long",
+          "margin": 0.21463710069656372,
+          "bounds": [
+            544,
+            300,
+            669,
+            493
+          ]
+        },
+        "raw_context_10pct": {
+          "label": "cap",
+          "score": 0.35092929005622864,
+          "top2_label": "short",
+          "margin": 0.15837350487709045,
+          "bounds": [
+            531,
+            280,
+            682,
+            513
+          ]
+        }
+      }
+    },
+    {
+      "record_id": "v5_validation_00031",
+      "category": "dress",
+      "truth": "long",
+      "status": "GT_ROI",
+      "views": {
+        "masked_baseline": {
+          "label": "sleeveless",
+          "score": 0.3344290256500244
+        },
+        "raw_garment": {
+          "label": "elbow",
+          "score": 0.3146289885044098,
+          "top2_label": "cap",
+          "margin": 0.12180095911026001,
+          "bounds": [
+            186,
+            4,
+            760,
+            1067
+          ]
+        },
+        "raw_context_10pct": {
+          "label": "elbow",
+          "score": 0.287632018327713,
+          "top2_label": "cap",
+          "margin": 0.09102143347263336,
+          "bounds": [
+            128,
+            0,
+            790,
+            1174
+          ]
+        }
+      }
+    },
+    {
+      "record_id": "v5_validation_00006",
+      "category": "dress",
+      "truth": "sleeveless",
+      "status": "GT_ROI",
+      "views": {
+        "masked_baseline": {
+          "label": "cap",
+          "score": 0.4865965247154236
+        },
+        "raw_garment": {
+          "label": "sleeveless",
+          "score": 0.3120132386684418,
+          "top2_label": "short",
+          "margin": 0.028171122074127197,
+          "bounds": [
+            63,
+            189,
+            466,
+            624
+          ]
+        },
+        "raw_context_10pct": {
+          "label": "short",
+          "score": 0.37003740668296814,
+          "top2_label": "sleeveless",
+          "margin": 0.13618452847003937,
+          "bounds": [
+            22,
+            145,
+            468,
+            624
+          ]
+        }
+      }
+    },
+    {
+      "record_id": "v5_validation_00005",
+      "category": "dress",
+      "truth": "short",
+      "status": "GT_ROI",
+      "views": {
+        "masked_baseline": {
+          "label": "cap",
+          "score": 0.3039379417896271
+        },
+        "raw_garment": {
+          "label": "short",
+          "score": 0.31103089451789856,
+          "top2_label": "cap",
+          "margin": 0.09280602633953094,
+          "bounds": [
+            55,
+            239,
+            349,
+            644
+          ]
+        },
+        "raw_context_10pct": {
+          "label": "cap",
+          "score": 0.2950230836868286,
+          "top2_label": "sleeveless",
+          "margin": 0.03061351180076599,
+          "bounds": [
+            25,
+            198,
+            379,
+            685
+          ]
+        }
+      }
+    },
+    {
+      "record_id": "v5_validation_00072",
+      "category": "dress",
+      "truth": "sleeveless",
+      "status": "GT_ROI",
+      "views": {
+        "masked_baseline": {
+          "label": "sleeveless",
+          "score": 0.24552930891513824
+        },
+        "raw_garment": {
+          "label": "sleeveless",
+          "score": 0.43219274282455444,
+          "top2_label": "short",
+          "margin": 0.08177557587623596,
+          "bounds": [
+            107,
+            248,
+            352,
+            711
+          ]
+        },
+        "raw_context_10pct": {
+          "label": "sleeveless",
+          "score": 0.5870309472084045,
+          "top2_label": "short",
+          "margin": 0.3376086950302124,
+          "bounds": [
+            82,
+            201,
+            377,
+            758
+          ]
+        }
+      }
+    },
+    {
+      "record_id": "v5_validation_00085",
+      "category": "dress",
+      "truth": "unknown",
+      "status": "GT_ROI",
+      "views": {
+        "masked_baseline": {
+          "label": "cap",
+          "score": 0.33522042632102966
+        },
+        "raw_garment": {
+          "label": "cap",
+          "score": 0.2785505950450897,
+          "top2_label": "short",
+          "margin": 0.08188125491142273,
+          "bounds": [
+            192,
+            229,
+            479,
+            753
+          ]
+        },
+        "raw_context_10pct": {
+          "label": "sleeveless",
+          "score": 0.29068881273269653,
+          "top2_label": "cap",
+          "margin": 0.06444817781448364,
+          "bounds": [
+            163,
+            176,
+            508,
+            806
+          ]
+        }
+      }
+    },
+    {
+      "record_id": "v5_validation_00081",
+      "category": "dress",
+      "truth": "sleeveless",
+      "status": "GT_ROI",
+      "views": {
+        "masked_baseline": {
+          "label": "elbow",
+          "score": 0.39507725834846497
+        },
+        "raw_garment": {
+          "label": "cap",
+          "score": 0.4159362018108368,
+          "top2_label": "elbow",
+          "margin": 0.06589183211326599,
+          "bounds": [
+            521,
+            125,
+            753,
+            646
+          ]
+        },
+        "raw_context_10pct": {
+          "label": "cap",
+          "score": 0.3972752094268799,
+          "top2_label": "sleeveless",
+          "margin": 0.16905264556407928,
+          "bounds": [
+            497,
+            72,
+            777,
+            681
+          ]
+        }
+      }
+    }
+  ],
+  "predicted_roi": [
+    {
+      "record_id": "v5_validation_00014",
+      "category": "top",
+      "truth": "short",
+      "status": "MATCHED_PREDICTED_TARGET",
+      "views": {
+        "masked_baseline": {
+          "label": "sleeveless",
+          "score": 0.2595996856689453
+        },
+        "raw_garment": {
+          "label": "short",
+          "score": 0.4759906530380249,
+          "top2_label": "sleeveless",
+          "margin": 0.14286303520202637,
+          "bounds": [
+            267,
+            218,
+            528,
+            442
+          ]
+        },
+        "raw_context_10pct": {
+          "label": "short",
+          "score": 0.5359957218170166,
+          "top2_label": "sleeveless",
+          "margin": 0.353792279958725,
+          "bounds": [
+            241,
+            195,
+            554,
+            464
+          ]
+        }
+      }
+    },
+    {
+      "record_id": "v5_validation_00027",
+      "category": "top",
+      "truth": "long",
+      "status": "MATCHED_PREDICTED_TARGET",
+      "views": {
+        "masked_baseline": {
+          "label": "elbow",
+          "score": 0.31212568283081055
+        },
+        "raw_garment": {
+          "label": "elbow",
+          "score": 0.2795296013355255,
+          "top2_label": "long",
+          "margin": 0.0021567940711975098,
+          "bounds": [
+            117,
+            170,
+            593,
+            729
+          ]
+        },
+        "raw_context_10pct": {
+          "label": "long",
+          "score": 0.564645528793335,
+          "top2_label": "cap",
+          "margin": 0.39896540343761444,
+          "bounds": [
+            70,
+            115,
+            640,
+            785
+          ]
+        }
+      }
+    },
+    {
+      "record_id": "v5_validation_00016",
+      "category": "top",
+      "truth": "short",
+      "status": "MATCHED_PREDICTED_TARGET",
+      "views": {
+        "masked_baseline": {
+          "label": "short",
+          "score": 0.350178599357605
+        },
+        "raw_garment": {
+          "label": "short",
+          "score": 0.45836517214775085,
+          "top2_label": "sleeveless",
+          "margin": 0.23600244522094727,
+          "bounds": [
+            125,
+            128,
+            402,
+            390
+          ]
+        },
+        "raw_context_10pct": {
+          "label": "short",
+          "score": 0.4547455906867981,
+          "top2_label": "sleeveless",
+          "margin": 0.23032428324222565,
+          "bounds": [
+            97,
+            102,
+            429,
+            416
+          ]
+        }
+      }
+    },
+    {
+      "record_id": "v5_validation_00046",
+      "category": "top",
+      "truth": "elbow",
+      "status": "MATCHED_PREDICTED_TARGET",
+      "views": {
+        "masked_baseline": {
+          "label": "short",
+          "score": 0.5661818981170654
+        },
+        "raw_garment": {
+          "label": "short",
+          "score": 0.6717900037765503,
+          "top2_label": "three_quarter",
+          "margin": 0.4706978499889374,
+          "bounds": [
+            234,
+            193,
+            536,
+            512
+          ]
+        },
+        "raw_context_10pct": {
+          "label": "short",
+          "score": 0.71001797914505,
+          "top2_label": "three_quarter",
+          "margin": 0.5399224907159805,
+          "bounds": [
+            203,
+            161,
+            566,
+            543
+          ]
+        }
+      }
+    },
+    {
+      "record_id": "v5_validation_00053",
+      "category": "top",
+      "truth": "unknown",
+      "status": "MATCHED_PREDICTED_TARGET",
+      "views": {
+        "masked_baseline": {
+          "label": "long",
+          "score": 0.22321376204490662
+        },
+        "raw_garment": {
+          "label": "long",
+          "score": 0.3605365455150604,
+          "top2_label": "elbow",
+          "margin": 0.06542536616325378,
+          "bounds": [
+            305,
+            477,
+            389,
+            622
+          ]
+        },
+        "raw_context_10pct": {
+          "label": "long",
+          "score": 0.4494578242301941,
+          "top2_label": "elbow",
+          "margin": 0.2703290581703186,
+          "bounds": [
+            297,
+            463,
+            397,
+            636
+          ]
+        }
+      }
+    },
+    {
+      "record_id": "v5_validation_00035",
+      "category": "top",
+      "truth": "short",
+      "status": "MATCHED_PREDICTED_TARGET",
+      "views": {
+        "masked_baseline": {
+          "label": "cap",
+          "score": 0.4957018792629242
+        },
+        "raw_garment": {
+          "label": "cap",
+          "score": 0.4540660083293915,
+          "top2_label": "sleeveless",
+          "margin": 0.2814808636903763,
+          "bounds": [
+            349,
+            253,
+            535,
+            452
+          ]
+        },
+        "raw_context_10pct": {
+          "label": "cap",
+          "score": 0.2952364981174469,
+          "top2_label": "sleeveless",
+          "margin": 0.05675062537193298,
+          "bounds": [
+            330,
+            233,
+            554,
+            472
+          ]
+        }
+      }
+    },
+    {
+      "record_id": "v5_validation_00013",
+      "category": "outerwear",
+      "truth": "unknown",
+      "status": "GARMENT_CLASS_MISMATCH",
+      "views": {
+        "masked_baseline": {}
+      }
+    },
+    {
+      "record_id": "v5_validation_00018",
+      "category": "outerwear",
+      "truth": "three_quarter",
+      "status": "MATCHED_PREDICTED_TARGET",
+      "views": {
+        "masked_baseline": {
+          "label": "long",
+          "score": 0.25669586658477783
+        },
+        "raw_garment": {
+          "label": "long",
+          "score": 0.4227990210056305,
+          "top2_label": "elbow",
+          "margin": 0.2312731295824051,
+          "bounds": [
+            108,
+            265,
+            626,
+            954
+          ]
+        },
+        "raw_context_10pct": {
+          "label": "long",
+          "score": 0.33600208163261414,
+          "top2_label": "elbow",
+          "margin": 0.1151188462972641,
+          "bounds": [
+            56,
+            197,
+            640,
+            960
+          ]
+        }
+      }
+    },
+    {
+      "record_id": "v5_validation_00024",
+      "category": "outerwear",
+      "truth": "three_quarter",
+      "status": "GARMENT_CLASS_MISMATCH",
+      "views": {
+        "masked_baseline": {}
+      }
+    },
+    {
+      "record_id": "v5_validation_00036",
+      "category": "outerwear",
+      "truth": "long",
+      "status": "MATCHED_PREDICTED_TARGET",
+      "views": {
+        "masked_baseline": {
+          "label": "long",
+          "score": 0.7210631966590881
+        },
+        "raw_garment": {
+          "label": "long",
+          "score": 0.39087554812431335,
+          "top2_label": "three_quarter",
+          "margin": 0.05427563190460205,
+          "bounds": [
+            100,
+            211,
+            329,
+            574
+          ]
+        },
+        "raw_context_10pct": {
+          "label": "three_quarter",
+          "score": 0.31456273794174194,
+          "top2_label": "long",
+          "margin": 0.00971764326095581,
+          "bounds": [
+            77,
+            175,
+            351,
+            610
+          ]
+        }
+      }
+    },
+    {
+      "record_id": "v5_validation_00062",
+      "category": "outerwear",
+      "truth": "long",
+      "status": "MATCHED_PREDICTED_TARGET",
+      "views": {
+        "masked_baseline": {
+          "label": "elbow",
+          "score": 0.33363819122314453
+        },
+        "raw_garment": {
+          "label": "elbow",
+          "score": 0.4459128975868225,
+          "top2_label": "long",
+          "margin": 0.16255071759223938,
+          "bounds": [
+            218,
+            167,
+            529,
+            648
+          ]
+        },
+        "raw_context_10pct": {
+          "label": "elbow",
+          "score": 0.4373091161251068,
+          "top2_label": "long",
+          "margin": 0.14852994680404663,
+          "bounds": [
+            187,
+            119,
+            560,
+            696
+          ]
+        }
+      }
+    },
+    {
+      "record_id": "v5_validation_00064",
+      "category": "outerwear",
+      "truth": "long",
+      "status": "GARMENT_CLASS_MISMATCH",
+      "views": {
+        "masked_baseline": {}
+      }
+    },
+    {
+      "record_id": "v5_validation_00031",
+      "category": "dress",
+      "truth": "long",
+      "status": "MATCHED_PREDICTED_TARGET",
+      "views": {
+        "masked_baseline": {
+          "label": "cap",
+          "score": 0.2923695743083954
+        },
+        "raw_garment": {
+          "label": "elbow",
+          "score": 0.22261065244674683,
+          "top2_label": "cap",
+          "margin": 0.014263257384300232,
+          "bounds": [
+            168,
+            79,
+            770,
+            1104
+          ]
+        },
+        "raw_context_10pct": {
+          "label": "elbow",
+          "score": 0.29955393075942993,
+          "top2_label": "cap",
+          "margin": 0.02354714274406433,
+          "bounds": [
+            108,
+            0,
+            790,
+            1192
+          ]
+        }
+      }
+    },
+    {
+      "record_id": "v5_validation_00006",
+      "category": "dress",
+      "truth": "sleeveless",
+      "status": "MATCHED_PREDICTED_TARGET",
+      "views": {
+        "masked_baseline": {
+          "label": "cap",
+          "score": 0.29978856444358826
+        },
+        "raw_garment": {
+          "label": "short",
+          "score": 0.30630457401275635,
+          "top2_label": "sleeveless",
+          "margin": 0.053063273429870605,
+          "bounds": [
+            77,
+            218,
+            455,
+            618
+          ]
+        },
+        "raw_context_10pct": {
+          "label": "short",
+          "score": 0.3359202742576599,
+          "top2_label": "sleeveless",
+          "margin": 0.13238640129566193,
+          "bounds": [
+            39,
+            178,
+            468,
+            624
+          ]
+        }
+      }
+    },
+    {
+      "record_id": "v5_validation_00005",
+      "category": "dress",
+      "truth": "short",
+      "status": "MATCHED_PREDICTED_TARGET",
+      "views": {
+        "masked_baseline": {
+          "label": "cap",
+          "score": 0.31966957449913025
+        },
+        "raw_garment": {
+          "label": "short",
+          "score": 0.36223164200782776,
+          "top2_label": "cap",
+          "margin": 0.17409279942512512,
+          "bounds": [
+            48,
+            235,
+            361,
+            646
+          ]
+        },
+        "raw_context_10pct": {
+          "label": "cap",
+          "score": 0.2962120473384857,
+          "top2_label": "short",
+          "margin": 0.07521049678325653,
+          "bounds": [
+            17,
+            194,
+            392,
+            687
+          ]
+        }
+      }
+    },
+    {
+      "record_id": "v5_validation_00072",
+      "category": "dress",
+      "truth": "sleeveless",
+      "status": "MATCHED_PREDICTED_TARGET",
+      "views": {
+        "masked_baseline": {
+          "label": "sleeveless",
+          "score": 0.35544347763061523
+        },
+        "raw_garment": {
+          "label": "short",
+          "score": 0.43893325328826904,
+          "top2_label": "sleeveless",
+          "margin": 0.14727702736854553,
+          "bounds": [
+            103,
+            262,
+            342,
+            718
+          ]
+        },
+        "raw_context_10pct": {
+          "label": "sleeveless",
+          "score": 0.5391567945480347,
+          "top2_label": "short",
+          "margin": 0.2554694712162018,
+          "bounds": [
+            80,
+            216,
+            365,
+            764
+          ]
+        }
+      }
+    },
+    {
+      "record_id": "v5_validation_00085",
+      "category": "dress",
+      "truth": "unknown",
+      "status": "MATCHED_PREDICTED_TARGET",
+      "views": {
+        "masked_baseline": {
+          "label": "cap",
+          "score": 0.28726956248283386
+        },
+        "raw_garment": {
+          "label": "sleeveless",
+          "score": 0.31321725249290466,
+          "top2_label": "cap",
+          "margin": 0.07982267439365387,
+          "bounds": [
+            203,
+            233,
+            479,
+            752
+          ]
+        },
+        "raw_context_10pct": {
+          "label": "sleeveless",
+          "score": 0.24219320714473724,
+          "top2_label": "cap",
+          "margin": 0.014937415719032288,
+          "bounds": [
+            176,
+            181,
+            507,
+            804
+          ]
+        }
+      }
+    },
+    {
+      "record_id": "v5_validation_00081",
+      "category": "dress",
+      "truth": "sleeveless",
+      "status": "MATCHED_PREDICTED_TARGET",
+      "views": {
+        "masked_baseline": {
+          "label": "elbow",
+          "score": 0.4590550661087036
+        },
+        "raw_garment": {
+          "label": "elbow",
+          "score": 0.47251057624816895,
+          "top2_label": "cap",
+          "margin": 0.1003246009349823,
+          "bounds": [
+            518,
+            131,
+            743,
+            646
+          ]
+        },
+        "raw_context_10pct": {
+          "label": "cap",
+          "score": 0.3609207272529602,
+          "top2_label": "elbow",
+          "margin": 0.11343798041343689,
+          "bounds": [
+            496,
+            79,
+            765,
+            681
+          ]
+        }
+      }
+    }
+  ]
+}

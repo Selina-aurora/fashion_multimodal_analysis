@@ -1,0 +1,866 @@
+{
+  "main_all14": {
+    "n_train": 14,
+    "n_dev": 9,
+    "alpha_fixed": 0.1,
+    "train_ids": [
+      "df2_targeted150_20261008_00228",
+      "df2_targeted150_20261008_00186",
+      "v5_train_01994",
+      "v5_train_01252",
+      "v5_train_01298",
+      "v5_train_01963",
+      "v5_train_00569",
+      "v5_train_01779",
+      "v5_train_00276",
+      "v5_train_00425",
+      "v5_train_00909",
+      "v5_train_00996",
+      "v5_train_00521",
+      "v5_train_00326"
+    ],
+    "dev_ids": [
+      "v5_train_01295",
+      "v5_train_00642",
+      "v5_train_01075",
+      "v5_train_02036",
+      "v5_train_00714",
+      "v5_train_01934",
+      "v5_train_01831",
+      "df2_targeted150_20261008_00271",
+      "df2_balanced150_20261008_00029"
+    ],
+    "train_class_support": [
+      3,
+      1,
+      4,
+      1,
+      2,
+      3
+    ],
+    "thresholds_train_median_midpoints": [
+      0.08746606350087811,
+      0.2625974494709918,
+      0.5163256503310445,
+      0.7328102498997071,
+      0.8916159855387763
+    ],
+    "train_class_mean_ratios": [
+      0.0,
+      0.17493212700175623,
+      0.32274858065523565,
+      0.6823885287218616,
+      0.7832319710775526,
+      0.9967491860376559
+    ],
+    "direct_six_class_ridge": {
+      "correct": 4,
+      "n": 9,
+      "accuracy": 0.4444444444444444,
+      "macro_f1_fixed_six_classes": 0.2888888888888889,
+      "class_order": [
+        "sleeveless",
+        "cap",
+        "short",
+        "elbow",
+        "three_quarter",
+        "long"
+      ],
+      "support": [
+        2,
+        2,
+        2,
+        1,
+        1,
+        1
+      ],
+      "confusion_matrix_rows_truth": [
+        [
+          2,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          2,
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    "continuous_ridge_to_class": {
+      "correct": 1,
+      "n": 9,
+      "accuracy": 0.1111111111111111,
+      "macro_f1_fixed_six_classes": 0.08333333333333333,
+      "class_order": [
+        "sleeveless",
+        "cap",
+        "short",
+        "elbow",
+        "three_quarter",
+        "long"
+      ],
+      "support": [
+        2,
+        2,
+        2,
+        1,
+        1,
+        1
+      ],
+      "confusion_matrix_rows_truth": [
+        [
+          0,
+          2,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          2,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          1,
+          0,
+          0
+        ]
+      ]
+    },
+    "continuous_ridge": {
+      "n": 9,
+      "mae": 0.246117620871715,
+      "rmse": 0.2789655010737489
+    },
+    "direct_class_to_train_mean_ratio": {
+      "n": 9,
+      "mae": 0.1885311246097437,
+      "rmse": 0.2549259783540193
+    },
+    "train_majority_class_baseline": {
+      "correct": 2,
+      "n": 9,
+      "accuracy": 0.2222222222222222,
+      "macro_f1_fixed_six_classes": 0.06060606060606061,
+      "class_order": [
+        "sleeveless",
+        "cap",
+        "short",
+        "elbow",
+        "three_quarter",
+        "long"
+      ],
+      "support": [
+        2,
+        2,
+        2,
+        1,
+        1,
+        1
+      ],
+      "confusion_matrix_rows_truth": [
+        [
+          0,
+          0,
+          2,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          2,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          2,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          0,
+          0,
+          0
+        ]
+      ]
+    },
+    "train_mean_ratio_baseline": {
+      "n": 9,
+      "mae": 0.31571288099582456,
+      "rmse": 0.3396865457208128
+    },
+    "manual_ratio_mapping_NOT_model_accuracy": {
+      "train": {
+        "correct": 12,
+        "n": 14,
+        "accuracy": 0.8571428571428571,
+        "macro_f1_fixed_six_classes": 0.8095238095238094,
+        "class_order": [
+          "sleeveless",
+          "cap",
+          "short",
+          "elbow",
+          "three_quarter",
+          "long"
+        ],
+        "support": [
+          3,
+          1,
+          4,
+          1,
+          2,
+          3
+        ],
+        "confusion_matrix_rows_truth": [
+          [
+            3,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            3,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            1,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            1,
+            1,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            3
+          ]
+        ]
+      },
+      "dev": {
+        "correct": 8,
+        "n": 9,
+        "accuracy": 0.8888888888888888,
+        "macro_f1_fixed_six_classes": 0.9111111111111111,
+        "class_order": [
+          "sleeveless",
+          "cap",
+          "short",
+          "elbow",
+          "three_quarter",
+          "long"
+        ],
+        "support": [
+          2,
+          2,
+          2,
+          1,
+          1,
+          1
+        ],
+        "confusion_matrix_rows_truth": [
+          [
+            2,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            2,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            1,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            1,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            1
+          ]
+        ]
+      },
+      "note": "Uses human target ratios. Label-consistency diagnostic only; not model performance."
+    }
+  },
+  "sensitivity_without_clipped12": {
+    "n_train": 12,
+    "n_dev": 9,
+    "alpha_fixed": 0.1,
+    "train_ids": [
+      "df2_targeted150_20261008_00228",
+      "df2_targeted150_20261008_00186",
+      "v5_train_01994",
+      "v5_train_01252",
+      "v5_train_01298",
+      "v5_train_01963",
+      "v5_train_00569",
+      "v5_train_01779",
+      "v5_train_00276",
+      "v5_train_00425",
+      "v5_train_00909",
+      "v5_train_00996"
+    ],
+    "dev_ids": [
+      "v5_train_01295",
+      "v5_train_00642",
+      "v5_train_01075",
+      "v5_train_02036",
+      "v5_train_00714",
+      "v5_train_01934",
+      "v5_train_01831",
+      "df2_targeted150_20261008_00271",
+      "df2_balanced150_20261008_00029"
+    ],
+    "train_class_support": [
+      3,
+      1,
+      4,
+      1,
+      2,
+      1
+    ],
+    "thresholds_train_median_midpoints": [
+      0.08746606350087811,
+      0.2625974494709918,
+      0.5163256503310445,
+      0.7328102498997071,
+      0.8867397645952602
+    ],
+    "train_class_mean_ratios": [
+      0.0,
+      0.17493212700175623,
+      0.32274858065523565,
+      0.6823885287218616,
+      0.7832319710775526,
+      0.9902475581129678
+    ],
+    "direct_six_class_ridge": {
+      "correct": 3,
+      "n": 9,
+      "accuracy": 0.3333333333333333,
+      "macro_f1_fixed_six_classes": 0.15079365079365079,
+      "class_order": [
+        "sleeveless",
+        "cap",
+        "short",
+        "elbow",
+        "three_quarter",
+        "long"
+      ],
+      "support": [
+        2,
+        2,
+        2,
+        1,
+        1,
+        1
+      ],
+      "confusion_matrix_rows_truth": [
+        [
+          2,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          2,
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          0,
+          0,
+          0
+        ]
+      ]
+    },
+    "continuous_ridge_to_class": {
+      "correct": 2,
+      "n": 9,
+      "accuracy": 0.2222222222222222,
+      "macro_f1_fixed_six_classes": 0.07407407407407407,
+      "class_order": [
+        "sleeveless",
+        "cap",
+        "short",
+        "elbow",
+        "three_quarter",
+        "long"
+      ],
+      "support": [
+        2,
+        2,
+        2,
+        1,
+        1,
+        1
+      ],
+      "confusion_matrix_rows_truth": [
+        [
+          0,
+          2,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          2,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          2,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          0,
+          0,
+          0
+        ]
+      ]
+    },
+    "continuous_ridge": {
+      "n": 9,
+      "mae": 0.24753302961757248,
+      "rmse": 0.2789298151079951
+    },
+    "direct_class_to_train_mean_ratio": {
+      "n": 9,
+      "mae": 0.2931833658554813,
+      "rmse": 0.39064062820968204
+    },
+    "train_majority_class_baseline": {
+      "correct": 2,
+      "n": 9,
+      "accuracy": 0.2222222222222222,
+      "macro_f1_fixed_six_classes": 0.06060606060606061,
+      "class_order": [
+        "sleeveless",
+        "cap",
+        "short",
+        "elbow",
+        "three_quarter",
+        "long"
+      ],
+      "support": [
+        2,
+        2,
+        2,
+        1,
+        1,
+        1
+      ],
+      "confusion_matrix_rows_truth": [
+        [
+          0,
+          0,
+          2,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          2,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          2,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          0,
+          0,
+          0
+        ]
+      ]
+    },
+    "train_mean_ratio_baseline": {
+      "n": 9,
+      "mae": 0.28676457337127154,
+      "rmse": 0.31296779651514467
+    },
+    "manual_ratio_mapping_NOT_model_accuracy": {
+      "train": {
+        "correct": 10,
+        "n": 12,
+        "accuracy": 0.8333333333333334,
+        "macro_f1_fixed_six_classes": 0.8095238095238094,
+        "class_order": [
+          "sleeveless",
+          "cap",
+          "short",
+          "elbow",
+          "three_quarter",
+          "long"
+        ],
+        "support": [
+          3,
+          1,
+          4,
+          1,
+          2,
+          1
+        ],
+        "confusion_matrix_rows_truth": [
+          [
+            3,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            3,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            1,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            1,
+            1,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            1
+          ]
+        ]
+      },
+      "dev": {
+        "correct": 8,
+        "n": 9,
+        "accuracy": 0.8888888888888888,
+        "macro_f1_fixed_six_classes": 0.9111111111111111,
+        "class_order": [
+          "sleeveless",
+          "cap",
+          "short",
+          "elbow",
+          "three_quarter",
+          "long"
+        ],
+        "support": [
+          2,
+          2,
+          2,
+          1,
+          1,
+          1
+        ],
+        "confusion_matrix_rows_truth": [
+          [
+            2,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            2,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            1,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            1,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            1
+          ]
+        ]
+      },
+      "note": "Uses human target ratios. Label-consistency diagnostic only; not model performance."
+    }
+  }
+}

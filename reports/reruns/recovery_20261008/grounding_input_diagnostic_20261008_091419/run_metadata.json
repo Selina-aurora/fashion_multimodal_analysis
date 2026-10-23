@@ -1,0 +1,11 @@
+{
+  "source_smoke_run": "/workspace/fashion_multimodal_analysis/reports/reruns/recovery_20261008/prd31_smoke_20261008_090702",
+  "model": "IDEA-Research/grounding-dino-tiny",
+  "model_revision": "a2bb814dd30d776dcf7e30523b00659f4f141c71",
+  "box_threshold": 0.3,
+  "text_threshold": 0.25,
+  "calls": 18,
+  "sam_used": false,
+  "accuracy_evaluated": false,
+  "note": "All DINO candidates are preserved, including wrong phrases. Full-image proposals are not automatically assigned to the selected garment. Timings exclude processing and include first-call effects."
+}

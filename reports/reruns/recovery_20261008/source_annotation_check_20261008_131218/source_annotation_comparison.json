@@ -1,0 +1,831 @@
+[
+  {
+    "case_id": "case_01",
+    "source_image": "/workspace/fashion_data/raw/train/train/image/013010.jpg",
+    "source_annotation_file": "/workspace/fashion_data/raw/train/train/annos/013010.json",
+    "csv_objects": [
+      {
+        "record_id": "v5_validation_00003",
+        "source_dataset": "DeepFashion2",
+        "source_image": "../fashion_data/raw/train/train/image/013010.jpg",
+        "garment_id": "item1_short_sleeve_top",
+        "garment_category": "top",
+        "fine_category": "short_sleeve_top",
+        "source_category_id": "1",
+        "annotation_ref": "item1",
+        "mask_path": "../fashion_data/processed/prd8_full_targets_v5/validation/df2_013010_item1.png",
+        "bbox_x1": "448",
+        "bbox_y1": "2",
+        "bbox_x2": "569",
+        "bbox_y2": "177",
+        "bbox_width": "121",
+        "bbox_height": "175",
+        "image_width": "747",
+        "image_height": "585",
+        "source_manifest": "raw_complete_targets_v5"
+      },
+      {
+        "record_id": "v5_validation_00004",
+        "source_dataset": "DeepFashion2",
+        "source_image": "../fashion_data/raw/train/train/image/013010.jpg",
+        "garment_id": "item2_trousers",
+        "garment_category": "pants",
+        "fine_category": "trousers",
+        "source_category_id": "8",
+        "annotation_ref": "item2",
+        "mask_path": "../fashion_data/processed/prd8_full_targets_v5/validation/df2_013010_item2.png",
+        "bbox_x1": "449",
+        "bbox_y1": "177",
+        "bbox_x2": "602",
+        "bbox_y2": "507",
+        "bbox_width": "153",
+        "bbox_height": "330",
+        "image_width": "747",
+        "image_height": "585",
+        "source_manifest": "raw_complete_targets_v5"
+      }
+    ],
+    "raw_source_objects": [
+      {
+        "annotation_ref": "item2",
+        "category_id": 8,
+        "category_name": "df2_category_8",
+        "bbox_xyxy": [
+          444,
+          168,
+          603,
+          519
+        ]
+      },
+      {
+        "annotation_ref": "item1",
+        "category_id": 1,
+        "category_name": "df2_category_1",
+        "bbox_xyxy": [
+          441,
+          1,
+          573,
+          180
+        ]
+      }
+    ],
+    "conversion_mismatches": [],
+    "review_status": "requires_visual_review_not_frozen_gt"
+  },
+  {
+    "case_id": "case_02",
+    "source_image": "/workspace/fashion_data/raw/train/train/image/051719.jpg",
+    "source_annotation_file": "/workspace/fashion_data/raw/train/train/annos/051719.json",
+    "csv_objects": [
+      {
+        "record_id": "v5_validation_00008",
+        "source_dataset": "DeepFashion2",
+        "source_image": "../fashion_data/raw/train/train/image/051719.jpg",
+        "garment_id": "item1_trousers",
+        "garment_category": "pants",
+        "fine_category": "trousers",
+        "source_category_id": "8",
+        "annotation_ref": "item1",
+        "mask_path": "../fashion_data/processed/prd8_full_targets_v5/validation/df2_051719_item1.png",
+        "bbox_x1": "0",
+        "bbox_y1": "0",
+        "bbox_x2": "582",
+        "bbox_y2": "586",
+        "bbox_width": "582",
+        "bbox_height": "586",
+        "image_width": "640",
+        "image_height": "640",
+        "source_manifest": "raw_complete_targets_v5"
+      }
+    ],
+    "raw_source_objects": [
+      {
+        "annotation_ref": "item1",
+        "category_id": 8,
+        "category_name": "df2_category_8",
+        "bbox_xyxy": [
+          1,
+          0,
+          583,
+          591
+        ]
+      }
+    ],
+    "conversion_mismatches": [],
+    "review_status": "requires_visual_review_not_frozen_gt"
+  },
+  {
+    "case_id": "case_03",
+    "source_image": "/workspace/fashion_data/raw/train/train/image/032014.jpg",
+    "source_annotation_file": "/workspace/fashion_data/raw/train/train/annos/032014.json",
+    "csv_objects": [
+      {
+        "record_id": "v5_validation_00007",
+        "source_dataset": "DeepFashion2",
+        "source_image": "../fashion_data/raw/train/train/image/032014.jpg",
+        "garment_id": "item1_skirt",
+        "garment_category": "skirt",
+        "fine_category": "skirt",
+        "source_category_id": "9",
+        "annotation_ref": "item1",
+        "mask_path": "../fashion_data/processed/prd8_full_targets_v5/validation/df2_032014_item1.png",
+        "bbox_x1": "4",
+        "bbox_y1": "3",
+        "bbox_x2": "463",
+        "bbox_y2": "597",
+        "bbox_width": "459",
+        "bbox_height": "594",
+        "image_width": "468",
+        "image_height": "631",
+        "source_manifest": "raw_complete_targets_v5"
+      }
+    ],
+    "raw_source_objects": [
+      {
+        "annotation_ref": "item1",
+        "category_id": 9,
+        "category_name": "df2_category_9",
+        "bbox_xyxy": [
+          0,
+          0,
+          467,
+          630
+        ]
+      }
+    ],
+    "conversion_mismatches": [],
+    "review_status": "requires_visual_review_not_frozen_gt"
+  },
+  {
+    "case_id": "case_04",
+    "source_image": "/workspace/fashion_data/raw/train/train/image/092719.jpg",
+    "source_annotation_file": "/workspace/fashion_data/raw/train/train/annos/092719.json",
+    "csv_objects": [
+      {
+        "record_id": "v5_validation_00013",
+        "source_dataset": "DeepFashion2",
+        "source_image": "../fashion_data/raw/train/train/image/092719.jpg",
+        "garment_id": "item1_long_sleeve_outwear",
+        "garment_category": "outerwear",
+        "fine_category": "long_sleeve_outwear",
+        "source_category_id": "4",
+        "annotation_ref": "item1",
+        "mask_path": "../fashion_data/processed/prd8_full_targets_v5/validation/df2_092719_item1.png",
+        "bbox_x1": "76",
+        "bbox_y1": "98",
+        "bbox_x2": "468",
+        "bbox_y2": "574",
+        "bbox_width": "392",
+        "bbox_height": "476",
+        "image_width": "468",
+        "image_height": "624",
+        "source_manifest": "raw_complete_targets_v5"
+      }
+    ],
+    "raw_source_objects": [
+      {
+        "annotation_ref": "item1",
+        "category_id": 4,
+        "category_name": "df2_category_4",
+        "bbox_xyxy": [
+          55,
+          89,
+          467,
+          589
+        ]
+      }
+    ],
+    "conversion_mismatches": [],
+    "review_status": "requires_visual_review_not_frozen_gt"
+  },
+  {
+    "case_id": "case_05",
+    "source_image": "/workspace/fashion_data/raw/train/train/image/002278.jpg",
+    "source_annotation_file": "/workspace/fashion_data/raw/train/train/annos/002278.json",
+    "csv_objects": [
+      {
+        "record_id": "v5_validation_00001",
+        "source_dataset": "DeepFashion2",
+        "source_image": "../fashion_data/raw/train/train/image/002278.jpg",
+        "garment_id": "item1_sling_dress",
+        "garment_category": "dress",
+        "fine_category": "sling_dress",
+        "source_category_id": "13",
+        "annotation_ref": "item1",
+        "mask_path": "../fashion_data/processed/prd8_full_targets_v5/validation/df2_002278_item1.png",
+        "bbox_x1": "131",
+        "bbox_y1": "252",
+        "bbox_x2": "376",
+        "bbox_y2": "624",
+        "bbox_width": "245",
+        "bbox_height": "372",
+        "image_width": "468",
+        "image_height": "624",
+        "source_manifest": "raw_complete_targets_v5"
+      }
+    ],
+    "raw_source_objects": [
+      {
+        "annotation_ref": "item1",
+        "category_id": 13,
+        "category_name": "df2_category_13",
+        "bbox_xyxy": [
+          125,
+          251,
+          374,
+          623
+        ]
+      }
+    ],
+    "conversion_mismatches": [],
+    "review_status": "requires_visual_review_not_frozen_gt"
+  },
+  {
+    "case_id": "case_06",
+    "source_image": "/workspace/fashion_data/raw/fashionpedia/images/test/311db0d6f5b7be84ac3c952a443ef981.jpg",
+    "source_annotation_file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "csv_objects": [
+      {
+        "record_id": "v5_validation_00032",
+        "source_dataset": "Fashionpedia",
+        "source_image": "../fashion_data/raw/fashionpedia/images/test/311db0d6f5b7be84ac3c952a443ef981.jpg",
+        "garment_id": "fashionpedia_ann_6948",
+        "garment_category": "pants",
+        "fine_category": "pants",
+        "source_category_id": "6",
+        "annotation_ref": "6948",
+        "mask_path": "../fashion_data/processed/prd8_full_targets_v5/validation/fp_6948.png",
+        "bbox_x1": "353",
+        "bbox_y1": "367",
+        "bbox_x2": "511",
+        "bbox_y2": "879",
+        "bbox_width": "158",
+        "bbox_height": "512",
+        "image_width": "680",
+        "image_height": "1024",
+        "source_manifest": "raw_complete_targets_v5"
+      },
+      {
+        "record_id": "v5_validation_00033",
+        "source_dataset": "Fashionpedia",
+        "source_image": "../fashion_data/raw/fashionpedia/images/test/311db0d6f5b7be84ac3c952a443ef981.jpg",
+        "garment_id": "fashionpedia_ann_6949",
+        "garment_category": "shoe",
+        "fine_category": "shoe",
+        "source_category_id": "23",
+        "annotation_ref": "6949",
+        "mask_path": "../fashion_data/processed/prd8_full_targets_v5/validation/fp_6949.png",
+        "bbox_x1": "359",
+        "bbox_y1": "836",
+        "bbox_x2": "401",
+        "bbox_y2": "895",
+        "bbox_width": "42",
+        "bbox_height": "59",
+        "image_width": "680",
+        "image_height": "1024",
+        "source_manifest": "raw_complete_targets_v5"
+      },
+      {
+        "record_id": "v5_validation_00034",
+        "source_dataset": "Fashionpedia",
+        "source_image": "../fashion_data/raw/fashionpedia/images/test/311db0d6f5b7be84ac3c952a443ef981.jpg",
+        "garment_id": "fashionpedia_ann_6950",
+        "garment_category": "shoe",
+        "fine_category": "shoe",
+        "source_category_id": "23",
+        "annotation_ref": "6950",
+        "mask_path": "../fashion_data/processed/prd8_full_targets_v5/validation/fp_6950.png",
+        "bbox_x1": "444",
+        "bbox_y1": "868",
+        "bbox_x2": "490",
+        "bbox_y2": "913",
+        "bbox_width": "46",
+        "bbox_height": "45",
+        "image_width": "680",
+        "image_height": "1024",
+        "source_manifest": "raw_complete_targets_v5"
+      },
+      {
+        "record_id": "v5_validation_00035",
+        "source_dataset": "Fashionpedia",
+        "source_image": "../fashion_data/raw/fashionpedia/images/test/311db0d6f5b7be84ac3c952a443ef981.jpg",
+        "garment_id": "fashionpedia_ann_6951",
+        "garment_category": "top",
+        "fine_category": "top, t-shirt, sweatshirt",
+        "source_category_id": "1",
+        "annotation_ref": "6951",
+        "mask_path": "../fashion_data/processed/prd8_full_targets_v5/validation/fp_6951.png",
+        "bbox_x1": "342",
+        "bbox_y1": "251",
+        "bbox_x2": "531",
+        "bbox_y2": "405",
+        "bbox_width": "189",
+        "bbox_height": "154",
+        "image_width": "680",
+        "image_height": "1024",
+        "source_manifest": "raw_complete_targets_v5"
+      }
+    ],
+    "raw_source_objects": [
+      {
+        "annotation_ref": "6948",
+        "category_id": 6,
+        "category_name": "pants",
+        "bbox_xyxy": [
+          353.0,
+          367.0,
+          510.0,
+          878.0
+        ]
+      },
+      {
+        "annotation_ref": "6949",
+        "category_id": 23,
+        "category_name": "shoe",
+        "bbox_xyxy": [
+          359.0,
+          836.0,
+          400.0,
+          894.0
+        ]
+      },
+      {
+        "annotation_ref": "6950",
+        "category_id": 23,
+        "category_name": "shoe",
+        "bbox_xyxy": [
+          444.0,
+          868.0,
+          489.0,
+          912.0
+        ]
+      },
+      {
+        "annotation_ref": "6951",
+        "category_id": 1,
+        "category_name": "top, t-shirt, sweatshirt",
+        "bbox_xyxy": [
+          342.0,
+          251.0,
+          530.0,
+          404.0
+        ]
+      },
+      {
+        "annotation_ref": "6952",
+        "category_id": 31,
+        "category_name": "sleeve",
+        "bbox_xyxy": [
+          342.0,
+          264.0,
+          388.0,
+          333.0
+        ]
+      },
+      {
+        "annotation_ref": "6953",
+        "category_id": 31,
+        "category_name": "sleeve",
+        "bbox_xyxy": [
+          509.0,
+          287.0,
+          530.0,
+          338.0
+        ]
+      }
+    ],
+    "conversion_mismatches": [],
+    "review_status": "requires_visual_review_not_frozen_gt"
+  },
+  {
+    "case_id": "case_07",
+    "source_image": "/workspace/fashion_data/raw/fashionpedia/images/test/4f23f05daee3cbdd96295f84825e3581.jpg",
+    "source_annotation_file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "csv_objects": [
+      {
+        "record_id": "v5_validation_00059",
+        "source_dataset": "Fashionpedia",
+        "source_image": "../fashion_data/raw/fashionpedia/images/test/4f23f05daee3cbdd96295f84825e3581.jpg",
+        "garment_id": "fashionpedia_ann_6080",
+        "garment_category": "bag",
+        "fine_category": "bag, wallet",
+        "source_category_id": "24",
+        "annotation_ref": "6080",
+        "mask_path": "../fashion_data/processed/prd8_full_targets_v5/validation/fp_6080.png",
+        "bbox_x1": "278",
+        "bbox_y1": "211",
+        "bbox_x2": "513",
+        "bbox_y2": "561",
+        "bbox_width": "235",
+        "bbox_height": "350",
+        "image_width": "683",
+        "image_height": "1024",
+        "source_manifest": "raw_complete_targets_v5"
+      },
+      {
+        "record_id": "v5_validation_00060",
+        "source_dataset": "Fashionpedia",
+        "source_image": "../fashion_data/raw/fashionpedia/images/test/4f23f05daee3cbdd96295f84825e3581.jpg",
+        "garment_id": "fashionpedia_ann_6081",
+        "garment_category": "shoe",
+        "fine_category": "shoe",
+        "source_category_id": "23",
+        "annotation_ref": "6081",
+        "mask_path": "../fashion_data/processed/prd8_full_targets_v5/validation/fp_6081.png",
+        "bbox_x1": "308",
+        "bbox_y1": "900",
+        "bbox_x2": "370",
+        "bbox_y2": "964",
+        "bbox_width": "62",
+        "bbox_height": "64",
+        "image_width": "683",
+        "image_height": "1024",
+        "source_manifest": "raw_complete_targets_v5"
+      },
+      {
+        "record_id": "v5_validation_00061",
+        "source_dataset": "Fashionpedia",
+        "source_image": "../fashion_data/raw/fashionpedia/images/test/4f23f05daee3cbdd96295f84825e3581.jpg",
+        "garment_id": "fashionpedia_ann_6082",
+        "garment_category": "shoe",
+        "fine_category": "shoe",
+        "source_category_id": "23",
+        "annotation_ref": "6082",
+        "mask_path": "../fashion_data/processed/prd8_full_targets_v5/validation/fp_6082.png",
+        "bbox_x1": "351",
+        "bbox_y1": "883",
+        "bbox_x2": "400",
+        "bbox_y2": "940",
+        "bbox_width": "49",
+        "bbox_height": "57",
+        "image_width": "683",
+        "image_height": "1024",
+        "source_manifest": "raw_complete_targets_v5"
+      },
+      {
+        "record_id": "v5_validation_00062",
+        "source_dataset": "Fashionpedia",
+        "source_image": "../fashion_data/raw/fashionpedia/images/test/4f23f05daee3cbdd96295f84825e3581.jpg",
+        "garment_id": "fashionpedia_ann_6083",
+        "garment_category": "outerwear",
+        "fine_category": "coat",
+        "source_category_id": "9",
+        "annotation_ref": "6083",
+        "mask_path": "../fashion_data/processed/prd8_full_targets_v5/validation/fp_6083.png",
+        "bbox_x1": "218",
+        "bbox_y1": "187",
+        "bbox_x2": "535",
+        "bbox_y2": "635",
+        "bbox_width": "317",
+        "bbox_height": "448",
+        "image_width": "683",
+        "image_height": "1024",
+        "source_manifest": "raw_complete_targets_v5"
+      }
+    ],
+    "raw_source_objects": [
+      {
+        "annotation_ref": "6076",
+        "category_id": 28,
+        "category_name": "collar",
+        "bbox_xyxy": [
+          315.0,
+          181.0,
+          387.0,
+          225.0
+        ]
+      },
+      {
+        "annotation_ref": "6077",
+        "category_id": 11,
+        "category_name": "jumpsuit",
+        "bbox_xyxy": [
+          272.0,
+          181.0,
+          430.0,
+          844.0
+        ]
+      },
+      {
+        "annotation_ref": "6078",
+        "category_id": 31,
+        "category_name": "sleeve",
+        "bbox_xyxy": [
+          444.0,
+          226.0,
+          534.0,
+          518.0
+        ]
+      },
+      {
+        "annotation_ref": "6079",
+        "category_id": 32,
+        "category_name": "pocket",
+        "bbox_xyxy": [
+          406.0,
+          454.0,
+          452.0,
+          546.0
+        ]
+      },
+      {
+        "annotation_ref": "6080",
+        "category_id": 24,
+        "category_name": "bag, wallet",
+        "bbox_xyxy": [
+          278.0,
+          211.0,
+          512.0,
+          560.0
+        ]
+      },
+      {
+        "annotation_ref": "6081",
+        "category_id": 23,
+        "category_name": "shoe",
+        "bbox_xyxy": [
+          308.0,
+          900.0,
+          369.0,
+          963.0
+        ]
+      },
+      {
+        "annotation_ref": "6082",
+        "category_id": 23,
+        "category_name": "shoe",
+        "bbox_xyxy": [
+          351.0,
+          883.0,
+          399.0,
+          939.0
+        ]
+      },
+      {
+        "annotation_ref": "6083",
+        "category_id": 9,
+        "category_name": "coat",
+        "bbox_xyxy": [
+          218.0,
+          187.0,
+          534.0,
+          634.0
+        ]
+      },
+      {
+        "annotation_ref": "6084",
+        "category_id": 31,
+        "category_name": "sleeve",
+        "bbox_xyxy": [
+          229.0,
+          265.0,
+          262.0,
+          522.0
+        ]
+      },
+      {
+        "annotation_ref": "6085",
+        "category_id": 32,
+        "category_name": "pocket",
+        "bbox_xyxy": [
+          255.0,
+          461.0,
+          274.0,
+          505.0
+        ]
+      }
+    ],
+    "conversion_mismatches": [],
+    "review_status": "requires_visual_review_not_frozen_gt"
+  },
+  {
+    "case_id": "case_08",
+    "source_image": "/workspace/fashion_data/raw/fashionpedia/images/test/32227cade6d3646824f9c0f3fa9dc9e7.jpg",
+    "source_annotation_file": "/workspace/fashion_data/raw/fashionpedia/annotations/instances_attributes_val2020.json",
+    "csv_objects": [
+      {
+        "record_id": "v5_validation_00036",
+        "source_dataset": "Fashionpedia",
+        "source_image": "../fashion_data/raw/fashionpedia/images/test/32227cade6d3646824f9c0f3fa9dc9e7.jpg",
+        "garment_id": "fashionpedia_ann_7673",
+        "garment_category": "outerwear",
+        "fine_category": "cardigan",
+        "source_category_id": "3",
+        "annotation_ref": "7673",
+        "mask_path": "../fashion_data/processed/prd8_full_targets_v5/validation/fp_7673.png",
+        "bbox_x1": "99",
+        "bbox_y1": "208",
+        "bbox_x2": "326",
+        "bbox_y2": "545",
+        "bbox_width": "227",
+        "bbox_height": "337",
+        "image_width": "532",
+        "image_height": "1024",
+        "source_manifest": "raw_complete_targets_v5"
+      },
+      {
+        "record_id": "v5_validation_00037",
+        "source_dataset": "Fashionpedia",
+        "source_image": "../fashion_data/raw/fashionpedia/images/test/32227cade6d3646824f9c0f3fa9dc9e7.jpg",
+        "garment_id": "fashionpedia_ann_7677",
+        "garment_category": "accessory",
+        "fine_category": "tights, stockings",
+        "source_category_id": "21",
+        "annotation_ref": "7677",
+        "mask_path": "../fashion_data/processed/prd8_full_targets_v5/validation/fp_7677.png",
+        "bbox_x1": "146",
+        "bbox_y1": "648",
+        "bbox_x2": "255",
+        "bbox_y2": "919",
+        "bbox_width": "109",
+        "bbox_height": "271",
+        "image_width": "532",
+        "image_height": "1024",
+        "source_manifest": "raw_complete_targets_v5"
+      },
+      {
+        "record_id": "v5_validation_00038",
+        "source_dataset": "Fashionpedia",
+        "source_image": "../fashion_data/raw/fashionpedia/images/test/32227cade6d3646824f9c0f3fa9dc9e7.jpg",
+        "garment_id": "fashionpedia_ann_7678",
+        "garment_category": "accessory",
+        "fine_category": "tights, stockings",
+        "source_category_id": "21",
+        "annotation_ref": "7678",
+        "mask_path": "../fashion_data/processed/prd8_full_targets_v5/validation/fp_7678.png",
+        "bbox_x1": "205",
+        "bbox_y1": "635",
+        "bbox_x2": "278",
+        "bbox_y2": "877",
+        "bbox_width": "73",
+        "bbox_height": "242",
+        "image_width": "532",
+        "image_height": "1024",
+        "source_manifest": "raw_complete_targets_v5"
+      },
+      {
+        "record_id": "v5_validation_00039",
+        "source_dataset": "Fashionpedia",
+        "source_image": "../fashion_data/raw/fashionpedia/images/test/32227cade6d3646824f9c0f3fa9dc9e7.jpg",
+        "garment_id": "fashionpedia_ann_7679",
+        "garment_category": "shoe",
+        "fine_category": "shoe",
+        "source_category_id": "23",
+        "annotation_ref": "7679",
+        "mask_path": "../fashion_data/processed/prd8_full_targets_v5/validation/fp_7679.png",
+        "bbox_x1": "197",
+        "bbox_y1": "846",
+        "bbox_x2": "302",
+        "bbox_y2": "932",
+        "bbox_width": "105",
+        "bbox_height": "86",
+        "image_width": "532",
+        "image_height": "1024",
+        "source_manifest": "raw_complete_targets_v5"
+      },
+      {
+        "record_id": "v5_validation_00040",
+        "source_dataset": "Fashionpedia",
+        "source_image": "../fashion_data/raw/fashionpedia/images/test/32227cade6d3646824f9c0f3fa9dc9e7.jpg",
+        "garment_id": "fashionpedia_ann_7680",
+        "garment_category": "shoe",
+        "fine_category": "shoe",
+        "source_category_id": "23",
+        "annotation_ref": "7680",
+        "mask_path": "../fashion_data/processed/prd8_full_targets_v5/validation/fp_7680.png",
+        "bbox_x1": "136",
+        "bbox_y1": "877",
+        "bbox_x2": "246",
+        "bbox_y2": "975",
+        "bbox_width": "110",
+        "bbox_height": "98",
+        "image_width": "532",
+        "image_height": "1024",
+        "source_manifest": "raw_complete_targets_v5"
+      },
+      {
+        "record_id": "v5_validation_00041",
+        "source_dataset": "Fashionpedia",
+        "source_image": "../fashion_data/raw/fashionpedia/images/test/32227cade6d3646824f9c0f3fa9dc9e7.jpg",
+        "garment_id": "fashionpedia_ann_7681",
+        "garment_category": "accessory",
+        "fine_category": "glasses",
+        "source_category_id": "13",
+        "annotation_ref": "7681",
+        "mask_path": "../fashion_data/processed/prd8_full_targets_v5/validation/fp_7681.png",
+        "bbox_x1": "165",
+        "bbox_y1": "124",
+        "bbox_x2": "262",
+        "bbox_y2": "151",
+        "bbox_width": "97",
+        "bbox_height": "27",
+        "image_width": "532",
+        "image_height": "1024",
+        "source_manifest": "raw_complete_targets_v5"
+      }
+    ],
+    "raw_source_objects": [
+      {
+        "annotation_ref": "7673",
+        "category_id": 3,
+        "category_name": "cardigan",
+        "bbox_xyxy": [
+          99.0,
+          208.0,
+          325.0,
+          544.0
+        ]
+      },
+      {
+        "annotation_ref": "7674",
+        "category_id": 31,
+        "category_name": "sleeve",
+        "bbox_xyxy": [
+          99.0,
+          243.0,
+          175.0,
+          544.0
+        ]
+      },
+      {
+        "annotation_ref": "7675",
+        "category_id": 31,
+        "category_name": "sleeve",
+        "bbox_xyxy": [
+          295.0,
+          360.0,
+          325.0,
+          471.0
+        ]
+      },
+      {
+        "annotation_ref": "7676",
+        "category_id": 28,
+        "category_name": "collar",
+        "bbox_xyxy": [
+          198.0,
+          208.0,
+          271.0,
+          250.0
+        ]
+      },
+      {
+        "annotation_ref": "7677",
+        "category_id": 21,
+        "category_name": "tights, stockings",
+        "bbox_xyxy": [
+          146.0,
+          648.0,
+          254.0,
+          918.0
+        ]
+      },
+      {
+        "annotation_ref": "7678",
+        "category_id": 21,
+        "category_name": "tights, stockings",
+        "bbox_xyxy": [
+          205.0,
+          635.0,
+          277.0,
+          876.0
+        ]
+      },
+      {
+        "annotation_ref": "7679",
+        "category_id": 23,
+        "category_name": "shoe",
+        "bbox_xyxy": [
+          197.0,
+          846.0,
+          301.0,
+          931.0
+        ]
+      },
+      {
+        "annotation_ref": "7680",
+        "category_id": 23,
+        "category_name": "shoe",
+        "bbox_xyxy": [
+          136.0,
+          877.0,
+          245.0,
+          974.0
+        ]
+      },
+      {
+        "annotation_ref": "7681",
+        "category_id": 13,
+        "category_name": "glasses",
+        "bbox_xyxy": [
+          165.0,
+          124.0,
+          261.0,
+          150.0
+        ]
+      }
+    ],
+    "conversion_mismatches": [],
+    "review_status": "requires_visual_review_not_frozen_gt"
+  }
+]

@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "/workspace/prd31_stage6_latency_paired_20261014/run_stage6.py", line 403, in main
+    config,selection=check_inputs(root,out)
+                     ^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/prd31_stage6_latency_paired_20261014/run_stage6.py", line 93, in check_inputs
+    if actual!=expected:raise ValueError(f'Protected input changed: {rel}')
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: Protected input changed: configs/prd_8class_val_v2_full_targets.csv

@@ -1,0 +1,729 @@
+{
+  "adapted_training_images": 63,
+  "native_only_fallback_training_images": 4,
+  "train_view_mixing_probability": 0.5,
+  "source_dataset_json_sha256": "573b67718e9dda990476828136f20d51a22174e145e526c8ba70faae9d455b47",
+  "base_segmenter_sha256": "c5ba795225349b1c521aac0517ac7c493d9818dcc17d558ac4a3f6f8669452f0",
+  "validation_native_views_unchanged": true,
+  "target_association": "ground truth associates training garment only; predicted box determines crop",
+  "fallback_policy": "unmatched class/box, incomplete part coverage, empty mask: keep native training view without changing labels",
+  "audit": [
+    {
+      "record_id": "df2_targeted150_20261008_00237",
+      "status": "READY",
+      "predicted_crop_xyxy": [
+        31,
+        199,
+        674,
+        923
+      ],
+      "fallback_native": false
+    },
+    {
+      "record_id": "df2_targeted150_20261008_00209",
+      "status": "READY",
+      "predicted_crop_xyxy": [
+        116,
+        245,
+        640,
+        794
+      ],
+      "fallback_native": false
+    },
+    {
+      "record_id": "v5_train_01260",
+      "status": "READY",
+      "predicted_crop_xyxy": [
+        0,
+        0,
+        985,
+        952
+      ],
+      "fallback_native": false
+    },
+    {
+      "record_id": "v5_train_00456",
+      "status": "READY",
+      "predicted_crop_xyxy": [
+        0,
+        458,
+        674,
+        1024
+      ],
+      "fallback_native": false
+    },
+    {
+      "record_id": "v5_train_00169",
+      "status": "READY",
+      "predicted_crop_xyxy": [
+        92,
+        256,
+        664,
+        921
+      ],
+      "fallback_native": false
+    },
+    {
+      "record_id": "v5_train_01890",
+      "status": "WRONG_GARMENT_CLASS",
+      "predicted_crop_xyxy": null,
+      "fallback_native": true
+    },
+    {
+      "record_id": "v5_train_02027",
+      "status": "READY",
+      "predicted_crop_xyxy": [
+        251,
+        176,
+        756,
+        775
+      ],
+      "fallback_native": false
+    },
+    {
+      "record_id": "v5_train_00021",
+      "status": "READY",
+      "predicted_crop_xyxy": [
+        0,
+        0,
+        640,
+        960
+      ],
+      "fallback_native": false
+    },
+    {
+      "record_id": "df2_targeted150_20261008_00036",
+      "status": "READY",
+      "predicted_crop_xyxy": [
+        0,
+        4,
+        640,
+        960
+      ],
+      "fallback_native": false
+    },
+    {
+      "record_id": "df2_targeted150_20261008_00035",
+      "status": "READY",
+      "predicted_crop_xyxy": [
+        0,
+        0,
+        468,
+        576
+      ],
+      "fallback_native": false
+    },
+    {
+      "record_id": "v5_train_01045",
+      "status": "READY",
+      "predicted_crop_xyxy": [
+        0,
+        65,
+        680,
+        1016
+      ],
+      "fallback_native": false
+    },
+    {
+      "record_id": "v5_train_00503",
+      "status": "READY",
+      "predicted_crop_xyxy": [
+        21,
+        95,
+        999,
+        682
+      ],
+      "fallback_native": false
+    },
+    {
+      "record_id": "v5_train_00298",
+      "status": "READY",
+      "predicted_crop_xyxy": [
+        38,
+        110,
+        660,
+        988
+      ],
+      "fallback_native": false
+    },
+    {
+      "record_id": "v5_train_01153",
+      "status": "READY",
+      "predicted_crop_xyxy": [
+        40,
+        394,
+        672,
+        1024
+      ],
+      "fallback_native": false
+    },
+    {
+      "record_id": "df2_balanced150_20261008_00025",
+      "status": "WRONG_GARMENT_CLASS",
+      "predicted_crop_xyxy": null,
+      "fallback_native": true
+    },
+    {
+      "record_id": "v5_train_00304",
+      "status": "READY",
+      "predicted_crop_xyxy": [
+        38,
+        125,
+        593,
+        1024
+      ],
+      "fallback_native": false
+    },
+    {
+      "record_id": "v5_train_00895",
+      "status": "READY",
+      "predicted_crop_xyxy": [
+        113,
+        388,
+        756,
+        1011
+      ],
+      "fallback_native": false
+    },
+    {
+      "record_id": "v5_train_00256",
+      "status": "READY",
+      "predicted_crop_xyxy": [
+        150,
+        108,
+        683,
+        1024
+      ],
+      "fallback_native": false
+    },
+    {
+      "record_id": "v5_train_01632",
+      "status": "READY",
+      "predicted_crop_xyxy": [
+        86,
+        143,
+        559,
+        1024
+      ],
+      "fallback_native": false
+    },
+    {
+      "record_id": "v5_train_00772",
+      "status": "READY",
+      "predicted_crop_xyxy": [
+        105,
+        249,
+        569,
+        703
+      ],
+      "fallback_native": false
+    },
+    {
+      "record_id": "v5_train_00340",
+      "status": "READY",
+      "predicted_crop_xyxy": [
+        235,
+        124,
+        521,
+        498
+      ],
+      "fallback_native": false
+    },
+    {
+      "record_id": "v5_train_00330",
+      "status": "READY",
+      "predicted_crop_xyxy": [
+        290,
+        298,
+        738,
+        682
+      ],
+      "fallback_native": false
+    },
+    {
+      "record_id": "df2_targeted150_20261008_00248",
+      "status": "READY",
+      "predicted_crop_xyxy": [
+        227,
+        0,
+        683,
+        675
+      ],
+      "fallback_native": false
+    },
+    {
+      "record_id": "df2_targeted150_20261008_00186",
+      "status": "READY",
+      "predicted_crop_xyxy": [
+        148,
+        279,
+        522,
+        726
+      ],
+      "fallback_native": false
+    },
+    {
+      "record_id": "v5_train_00047",
+      "status": "READY",
+      "predicted_crop_xyxy": [
+        0,
+        161,
+        461,
+        624
+      ],
+      "fallback_native": false
+    },
+    {
+      "record_id": "df2_balanced150_20261008_00064",
+      "status": "READY",
+      "predicted_crop_xyxy": [
+        197,
+        229,
+        683,
+        1279
+      ],
+      "fallback_native": false
+    },
+    {
+      "record_id": "df2_balanced150_20261008_00046",
+      "status": "READY",
+      "predicted_crop_xyxy": [
+        0,
+        23,
+        458,
+        624
+      ],
+      "fallback_native": false
+    },
+    {
+      "record_id": "v5_train_00053",
+      "status": "READY",
+      "predicted_crop_xyxy": [
+        63,
+        3,
+        422,
+        368
+      ],
+      "fallback_native": false
+    },
+    {
+      "record_id": "df2_targeted150_20261008_00226",
+      "status": "READY",
+      "predicted_crop_xyxy": [
+        0,
+        0,
+        389,
+        450
+      ],
+      "fallback_native": false
+    },
+    {
+      "record_id": "v5_train_00007",
+      "status": "READY",
+      "predicted_crop_xyxy": [
+        99,
+        0,
+        368,
+        142
+      ],
+      "fallback_native": false
+    },
+    {
+      "record_id": "df2_targeted150_20261008_00261",
+      "status": "READY",
+      "predicted_crop_xyxy": [
+        200,
+        155,
+        480,
+        518
+      ],
+      "fallback_native": false
+    },
+    {
+      "record_id": "v5_train_00069",
+      "status": "READY",
+      "predicted_crop_xyxy": [
+        120,
+        0,
+        400,
+        167
+      ],
+      "fallback_native": false
+    },
+    {
+      "record_id": "df2_targeted150_20261008_00252",
+      "status": "READY",
+      "predicted_crop_xyxy": [
+        291,
+        252,
+        592,
+        532
+      ],
+      "fallback_native": false
+    },
+    {
+      "record_id": "v5_train_00642",
+      "status": "READY",
+      "predicted_crop_xyxy": [
+        290,
+        123,
+        572,
+        475
+      ],
+      "fallback_native": false
+    },
+    {
+      "record_id": "v5_train_00638",
+      "status": "READY",
+      "predicted_crop_xyxy": [
+        291,
+        162,
+        474,
+        517
+      ],
+      "fallback_native": false
+    },
+    {
+      "record_id": "v5_train_00672",
+      "status": "READY",
+      "predicted_crop_xyxy": [
+        306,
+        170,
+        613,
+        541
+      ],
+      "fallback_native": false
+    },
+    {
+      "record_id": "v5_train_01929",
+      "status": "WRONG_GARMENT_CLASS",
+      "predicted_crop_xyxy": null,
+      "fallback_native": true
+    },
+    {
+      "record_id": "v5_train_00951",
+      "status": "READY",
+      "predicted_crop_xyxy": [
+        268,
+        187,
+        469,
+        479
+      ],
+      "fallback_native": false
+    },
+    {
+      "record_id": "v5_train_01611",
+      "status": "READY",
+      "predicted_crop_xyxy": [
+        275,
+        111,
+        547,
+        486
+      ],
+      "fallback_native": false
+    },
+    {
+      "record_id": "v5_train_00076",
+      "status": "READY",
+      "predicted_crop_xyxy": [
+        0,
+        0,
+        468,
+        624
+      ],
+      "fallback_native": false
+    },
+    {
+      "record_id": "df2_targeted150_20261008_00093",
+      "status": "READY",
+      "predicted_crop_xyxy": [
+        0,
+        0,
+        468,
+        624
+      ],
+      "fallback_native": false
+    },
+    {
+      "record_id": "v5_train_00078",
+      "status": "READY",
+      "predicted_crop_xyxy": [
+        93,
+        120,
+        390,
+        702
+      ],
+      "fallback_native": false
+    },
+    {
+      "record_id": "df2_targeted150_20261008_00003",
+      "status": "READY",
+      "predicted_crop_xyxy": [
+        83,
+        0,
+        479,
+        625
+      ],
+      "fallback_native": false
+    },
+    {
+      "record_id": "df2_targeted150_20261008_00029",
+      "status": "READY",
+      "predicted_crop_xyxy": [
+        254,
+        288,
+        514,
+        599
+      ],
+      "fallback_native": false
+    },
+    {
+      "record_id": "df2_targeted150_20261008_00102",
+      "status": "READY",
+      "predicted_crop_xyxy": [
+        188,
+        209,
+        591,
+        686
+      ],
+      "fallback_native": false
+    },
+    {
+      "record_id": "df2_targeted150_20261008_00115",
+      "status": "READY",
+      "predicted_crop_xyxy": [
+        271,
+        121,
+        540,
+        445
+      ],
+      "fallback_native": false
+    },
+    {
+      "record_id": "df2_targeted150_20261008_00090",
+      "status": "READY",
+      "predicted_crop_xyxy": [
+        0,
+        0,
+        468,
+        624
+      ],
+      "fallback_native": false
+    },
+    {
+      "record_id": "v5_train_00162",
+      "status": "READY",
+      "predicted_crop_xyxy": [
+        178,
+        92,
+        563,
+        663
+      ],
+      "fallback_native": false
+    },
+    {
+      "record_id": "v5_train_00894",
+      "status": "READY",
+      "predicted_crop_xyxy": [
+        196,
+        268,
+        506,
+        704
+      ],
+      "fallback_native": false
+    },
+    {
+      "record_id": "v5_train_01138",
+      "status": "READY",
+      "predicted_crop_xyxy": [
+        264,
+        279,
+        463,
+        579
+      ],
+      "fallback_native": false
+    },
+    {
+      "record_id": "v5_train_00968",
+      "status": "READY",
+      "predicted_crop_xyxy": [
+        171,
+        165,
+        489,
+        664
+      ],
+      "fallback_native": false
+    },
+    {
+      "record_id": "v5_train_01737",
+      "status": "READY",
+      "predicted_crop_xyxy": [
+        131,
+        169,
+        502,
+        702
+      ],
+      "fallback_native": false
+    },
+    {
+      "record_id": "v5_train_01866",
+      "status": "READY",
+      "predicted_crop_xyxy": [
+        363,
+        243,
+        635,
+        683
+      ],
+      "fallback_native": false
+    },
+    {
+      "record_id": "v5_train_00557",
+      "status": "WRONG_GARMENT_CLASS",
+      "predicted_crop_xyxy": null,
+      "fallback_native": true
+    },
+    {
+      "record_id": "v5_train_01487",
+      "status": "READY",
+      "predicted_crop_xyxy": [
+        173,
+        145,
+        590,
+        548
+      ],
+      "fallback_native": false
+    },
+    {
+      "record_id": "df2_targeted150_20261008_00110",
+      "status": "READY",
+      "predicted_crop_xyxy": [
+        16,
+        0,
+        227,
+        451
+      ],
+      "fallback_native": false
+    },
+    {
+      "record_id": "v5_train_00056",
+      "status": "READY",
+      "predicted_crop_xyxy": [
+        0,
+        0,
+        139,
+        326
+      ],
+      "fallback_native": false
+    },
+    {
+      "record_id": "df2_balanced150_20261008_00011",
+      "status": "READY",
+      "predicted_crop_xyxy": [
+        206,
+        195,
+        473,
+        580
+      ],
+      "fallback_native": false
+    },
+    {
+      "record_id": "v5_train_00086",
+      "status": "READY",
+      "predicted_crop_xyxy": [
+        260,
+        364,
+        535,
+        701
+      ],
+      "fallback_native": false
+    },
+    {
+      "record_id": "df2_targeted150_20261008_00010",
+      "status": "READY",
+      "predicted_crop_xyxy": [
+        153,
+        360,
+        254,
+        569
+      ],
+      "fallback_native": false
+    },
+    {
+      "record_id": "v5_train_00120",
+      "status": "READY",
+      "predicted_crop_xyxy": [
+        285,
+        262,
+        483,
+        899
+      ],
+      "fallback_native": false
+    },
+    {
+      "record_id": "v5_train_01821",
+      "status": "READY",
+      "predicted_crop_xyxy": [
+        335,
+        374,
+        682,
+        833
+      ],
+      "fallback_native": false
+    },
+    {
+      "record_id": "v5_train_00388",
+      "status": "READY",
+      "predicted_crop_xyxy": [
+        185,
+        192,
+        452,
+        689
+      ],
+      "fallback_native": false
+    },
+    {
+      "record_id": "v5_train_00706",
+      "status": "READY",
+      "predicted_crop_xyxy": [
+        134,
+        318,
+        664,
+        1024
+      ],
+      "fallback_native": false
+    },
+    {
+      "record_id": "v5_train_01766",
+      "status": "READY",
+      "predicted_crop_xyxy": [
+        199,
+        189,
+        463,
+        1024
+      ],
+      "fallback_native": false
+    },
+    {
+      "record_id": "v5_train_00569",
+      "status": "READY",
+      "predicted_crop_xyxy": [
+        149,
+        169,
+        496,
+        855
+      ],
+      "fallback_native": false
+    },
+    {
+      "record_id": "v5_train_01181",
+      "status": "READY",
+      "predicted_crop_xyxy": [
+        50,
+        238,
+        631,
+        682
+      ],
+      "fallback_native": false
+    }
+  ]
+}

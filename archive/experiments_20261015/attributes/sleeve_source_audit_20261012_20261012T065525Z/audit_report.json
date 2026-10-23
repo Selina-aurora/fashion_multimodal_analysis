@@ -1,0 +1,271 @@
+{
+  "status": "SOURCE_AUDIT_PASSED_VISUAL_REVIEW_STILL_NEEDED",
+  "ready_for_training": false,
+  "raw_training_labels_added": 0,
+  "reviewed_images": 16,
+  "expected_images": 16,
+  "checks": {
+    "train_csv": {
+      "file": "/workspace/fashion_multimodal_analysis/configs/prd_8class_train_v5_balanced150_20261008.csv",
+      "sha256": "e8c277055efe4d042b4353bf2d4553bddddc7706eead9398f07f5efcd90bb38f",
+      "matches_frozen": true
+    },
+    "val_csv": {
+      "file": "/workspace/fashion_multimodal_analysis/configs/prd_8class_val_v2_full_targets.csv",
+      "sha256": "39141f545ea5512d16ed074788b6f98474b33baff111d3b663ec0ffcc4c40b93",
+      "matches_frozen": true
+    },
+    "validation_images_hashed": 32,
+    "previously_reviewed_images_hashed": 47,
+    "dev_split_images_known": 12
+  },
+  "errors": [],
+  "images": [
+    {
+      "record_id": "v5_train_00286",
+      "source_sha256": "468fe5252ab7904b6053229147b41397cc50588533e64fba20a943de5a45e6b2",
+      "original_path": "original_no_boxes/01_v5_train_00286.jpg",
+      "overlay_path": "point_overlays/01_v5_train_00286.jpg",
+      "original_dimensions": [
+        683,
+        1024
+      ],
+      "qa_status": "RECHECK_REQUIRED",
+      "original_ratio": 0.6240813775762358,
+      "original_state": "measurable",
+      "original_class": "elbow",
+      "note": "弯曲手臂横跨胸前：重点复核同侧腕点与肘点是否属于同一手臂；确认袖口中心。"
+    },
+    {
+      "record_id": "v5_train_00681",
+      "source_sha256": "23f38f3f1a45d181cd1ea74536ceb53b564ae72d1e1dbe0cc7253d8737afc24d",
+      "original_path": "original_no_boxes/02_v5_train_00681.jpg",
+      "overlay_path": "point_overlays/02_v5_train_00681.jpg",
+      "original_dimensions": [
+        681,
+        1024
+      ],
+      "qa_status": "RECHECK_REQUIRED",
+      "original_ratio": 0.3858490241514608,
+      "original_state": "measurable",
+      "original_class": "elbow",
+      "note": "单肩褶皱披覆并且当前标elbow，但覆盖比例只有0.386；需重审袖口归属与类别。"
+    },
+    {
+      "record_id": "v5_train_01719",
+      "source_sha256": "58364d5f9d21f9cd902c0eaaf72a0c0a9dce5110974b23de9d673d5fa84c33ef",
+      "original_path": "original_no_boxes/03_v5_train_01719.jpg",
+      "overlay_path": "point_overlays/03_v5_train_01719.jpg",
+      "original_dimensions": [
+        682,
+        1024
+      ],
+      "qa_status": "RECHECK_REQUIRED",
+      "original_ratio": 0.8751527434420783,
+      "original_state": "measurable",
+      "original_class": "elbow",
+      "note": "硬性矛盾：state=measurable但sleeveless_confirmed=true；且ratio=0.875，交叉手臂导致腕点和袖口可能混淆，需重新核点。"
+    },
+    {
+      "record_id": "v5_train_01748",
+      "source_sha256": "d9372cf9897d48b09c4aa5564b4f3107fb0ca1440037190488d740561fb8a11b",
+      "original_path": "original_no_boxes/04_v5_train_01748.jpg",
+      "overlay_path": "point_overlays/04_v5_train_01748.jpg",
+      "original_dimensions": [
+        683,
+        1024
+      ],
+      "qa_status": "RECHECK_REQUIRED",
+      "original_ratio": 0,
+      "original_state": "sleeveless",
+      "original_class": "sleeveless",
+      "note": "单肩不对称结构，不宜将目标衣服直接整体定义为sleeveless；核对袖部归属或保留非训练。"
+    },
+    {
+      "record_id": "v5_train_01028",
+      "source_sha256": "2212506380f145cfb3b01be31d4ff5509125b61ad3a7e76c45e9cf3211d46cd1",
+      "original_path": "original_no_boxes/05_v5_train_01028.jpg",
+      "overlay_path": "point_overlays/05_v5_train_01028.jpg",
+      "original_dimensions": [
+        1024,
+        680
+      ],
+      "qa_status": "RECHECK_REQUIRED",
+      "original_ratio": 0.16917425027186694,
+      "original_state": "measurable",
+      "original_class": "short",
+      "note": "双臂上举、屈肘明显，袖口到手臂路径投影偏差0.104；检查肩肘腕及衣料边界。"
+    },
+    {
+      "record_id": "v5_train_01230",
+      "source_sha256": "51322056bbbf477b41f35a3954839164127f17e6c3c19fbf368252528f16b986",
+      "original_path": "original_no_boxes/06_v5_train_01230.jpg",
+      "overlay_path": "point_overlays/06_v5_train_01230.jpg",
+      "original_dimensions": [
+        1024,
+        680
+      ],
+      "qa_status": "RECHECK_REQUIRED",
+      "original_ratio": 0.11800972087733183,
+      "original_state": "measurable",
+      "original_class": "cap",
+      "note": "侧身与遮挡：肩肘腕和袖口开口不够稳定，需要确认测量是否成立。"
+    },
+    {
+      "record_id": "v5_train_01296",
+      "source_sha256": "fc3122090eb9d7efc311b8ee1960956862a415a43a8e8ac385284c5503d1a112",
+      "original_path": "original_no_boxes/07_v5_train_01296.jpg",
+      "overlay_path": "point_overlays/07_v5_train_01296.jpg",
+      "original_dimensions": [
+        682,
+        1024
+      ],
+      "qa_status": "RECHECK_REQUIRED",
+      "original_ratio": 0.5353137670513901,
+      "original_state": "measurable",
+      "original_class": "elbow",
+      "note": "落肩/蝙蝠袖轮廓：肩点可能偏离解剖肩关节，复核袖口与上臂覆盖位置。"
+    },
+    {
+      "record_id": "v5_train_01508",
+      "source_sha256": "edc14f9cf4b0774f876108b84b21cec714f112e4813903d32e256745fbe7e886",
+      "original_path": "original_no_boxes/08_v5_train_01508.jpg",
+      "overlay_path": "point_overlays/08_v5_train_01508.jpg",
+      "original_dimensions": [
+        677,
+        1024
+      ],
+      "qa_status": "RECHECK_REQUIRED",
+      "original_ratio": 0.5935462080271263,
+      "original_state": "measurable",
+      "original_class": "elbow",
+      "note": "多层外搭：必须确认目标衣物是黑色外搭，袖口点确实落在该层衣物的开口处。"
+    },
+    {
+      "record_id": "v5_train_01674",
+      "source_sha256": "849305e139016320260c1c7be3eae09cf8a1a55474c7cf857bbdbe457776fd7e",
+      "original_path": "original_no_boxes/09_v5_train_01674.jpg",
+      "overlay_path": "point_overlays/09_v5_train_01674.jpg",
+      "original_dimensions": [
+        682,
+        1024
+      ],
+      "qa_status": "RECHECK_REQUIRED",
+      "original_ratio": 0.45866398660952656,
+      "original_state": "measurable",
+      "original_class": "other",
+      "note": "measurable但类别设为other：荷叶披覆结构未定义标准袖长类别；先确定是否纳入可测袖长任务。"
+    },
+    {
+      "record_id": "v5_train_00415",
+      "source_sha256": "f62e1c9d4a0cd7015a047e77172fc905c81f9e85fdca27f83dc44588f04add33",
+      "original_path": "original_no_boxes/10_v5_train_00415.jpg",
+      "overlay_path": "point_overlays/10_v5_train_00415.jpg",
+      "original_dimensions": [
+        683,
+        1024
+      ],
+      "qa_status": "PRELIM_PASS_SOURCE_PENDING",
+      "original_ratio": 0.545583389491745,
+      "original_state": "measurable",
+      "original_class": "elbow",
+      "note": "从参考图人工复核后结构与四点暂可接受；正式训练前仍需用GPU无框原图验点，并执行数据隔离校验。"
+    },
+    {
+      "record_id": "v5_train_00484",
+      "source_sha256": "53b9adecbc7d65a901794134f43175bf8da7ee51c029157d466be2dee6df293b",
+      "original_path": "original_no_boxes/11_v5_train_00484.jpg",
+      "overlay_path": "point_overlays/11_v5_train_00484.jpg",
+      "original_dimensions": [
+        631,
+        1024
+      ],
+      "qa_status": "PRELIM_PASS_SOURCE_PENDING",
+      "original_ratio": 0.27903210170665765,
+      "original_state": "measurable",
+      "original_class": "short",
+      "note": "从参考图人工复核后结构与四点暂可接受；正式训练前仍需用GPU无框原图验点，并执行数据隔离校验。"
+    },
+    {
+      "record_id": "v5_train_00533",
+      "source_sha256": "854fe32c69f6a8718fe9215fcd84b2619e24b9830d2a96a19d5277babde3c1c6",
+      "original_path": "original_no_boxes/12_v5_train_00533.jpg",
+      "overlay_path": "point_overlays/12_v5_train_00533.jpg",
+      "original_dimensions": [
+        632,
+        1024
+      ],
+      "qa_status": "PRELIM_PASS_SOURCE_PENDING",
+      "original_ratio": 0.2559956297099396,
+      "original_state": "measurable",
+      "original_class": "short",
+      "note": "从参考图人工复核后结构与四点暂可接受；正式训练前仍需用GPU无框原图验点，并执行数据隔离校验。"
+    },
+    {
+      "record_id": "v5_train_01055",
+      "source_sha256": "b364e6ed940f49101bea2c02cacac4d765e02916f1297867e5b1266cd356f765",
+      "original_path": "original_no_boxes/13_v5_train_01055.jpg",
+      "overlay_path": "point_overlays/13_v5_train_01055.jpg",
+      "original_dimensions": [
+        633,
+        1024
+      ],
+      "qa_status": "PRELIM_PASS_SOURCE_PENDING",
+      "original_ratio": 0.1535482485663157,
+      "original_state": "measurable",
+      "original_class": "cap",
+      "note": "从参考图人工复核后结构与四点暂可接受；正式训练前仍需用GPU无框原图验点，并执行数据隔离校验。"
+    },
+    {
+      "record_id": "v5_train_01106",
+      "source_sha256": "311f8715261a8b2475aeaaf95718483e991a4841369ce9492e4722f3abdacb0c",
+      "original_path": "original_no_boxes/14_v5_train_01106.jpg",
+      "overlay_path": "point_overlays/14_v5_train_01106.jpg",
+      "original_dimensions": [
+        632,
+        1024
+      ],
+      "qa_status": "PRELIM_PASS_SOURCE_PENDING",
+      "original_ratio": 0.5859180120052435,
+      "original_state": "measurable",
+      "original_class": "elbow",
+      "note": "从参考图人工复核后结构与四点暂可接受；正式训练前仍需用GPU无框原图验点，并执行数据隔离校验。"
+    },
+    {
+      "record_id": "v5_train_01155",
+      "source_sha256": "f63325a85091ce7c00b169f3f6e73b9c78f9c0785458e9319ce5680abc16e916",
+      "original_path": "original_no_boxes/15_v5_train_01155.jpg",
+      "overlay_path": "point_overlays/15_v5_train_01155.jpg",
+      "original_dimensions": [
+        683,
+        1024
+      ],
+      "qa_status": "PRELIM_PASS_SOURCE_PENDING",
+      "original_ratio": 0.5563221810825029,
+      "original_state": "measurable",
+      "original_class": "elbow",
+      "note": "从参考图人工复核后结构与四点暂可接受；正式训练前仍需用GPU无框原图验点，并执行数据隔离校验。"
+    },
+    {
+      "record_id": "v5_train_01445",
+      "source_sha256": "36ec95313761a48cdc46ea026d9067397320a69938644dac5f50b3517552a887",
+      "original_path": "original_no_boxes/16_v5_train_01445.jpg",
+      "overlay_path": "point_overlays/16_v5_train_01445.jpg",
+      "original_dimensions": [
+        682,
+        1024
+      ],
+      "qa_status": "PRELIM_PASS_SOURCE_PENDING",
+      "original_ratio": 0.08302126853599445,
+      "original_state": "measurable",
+      "original_class": "cap",
+      "note": "从参考图人工复核后结构与四点暂可接受；正式训练前仍需用GPU无框原图验点，并执行数据隔离校验。"
+    }
+  ],
+  "limitations": [
+    "These are reference exports, not training-ready labels",
+    "Manual visual check of points and garment semantics required",
+    "Even a verified source cannot automatically resolve 9 QA ambiguities",
+    "Keep frozen dev/validation data unchanged"
+  ]
+}

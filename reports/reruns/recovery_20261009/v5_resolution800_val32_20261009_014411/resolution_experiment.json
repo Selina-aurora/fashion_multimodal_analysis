@@ -1,0 +1,19 @@
+{
+  "experiment": "inference_resolution_only",
+  "checkpoint": "/workspace/fashion_multimodal_analysis/outputs/recovery_20261008/v5_balanced150/checkpoint_last.pth",
+  "checkpoint_sha256": "c5ba795225349b1c521aac0517ac7c493d9818dcc17d558ac4a3f6f8669452f0",
+  "val_csv": "/workspace/fashion_multimodal_analysis/configs/prd_8class_val_v2_full_targets.csv",
+  "val_sha256": "39141f545ea5512d16ed074788b6f98474b33baff111d3b663ec0ffcc4c40b93",
+  "baseline_inference_min_size": 640,
+  "baseline_inference_max_size": 1024,
+  "candidate_inference_min_size": 800,
+  "candidate_inference_max_size": 1333,
+  "checkpoint_training_resolution_unchanged": true,
+  "weights_modified": false,
+  "score_threshold": 0.4,
+  "mask_threshold": 0.5,
+  "match_bbox_iou": 0.5,
+  "warmup_runs": 10,
+  "timed_passes": 5,
+  "accuracy_acceptance_claimed": false
+}

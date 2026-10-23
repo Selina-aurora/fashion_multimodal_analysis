@@ -10,3 +10,10 @@
 benchmark/** -text
 reports/** -text
 configs/*.csv -text
+
+# Preserve archived run manifests and code hashes across platforms.
+archive/experiments_20261015/** -text
+archive/gpu_previous_versions_20261015/** -text
+
+# Historical runtime bytes used by the October 14 SHA gates.
+archive/runtime_snapshot_20261014/** -text

@@ -1,0 +1,117 @@
+{
+  "cases": [
+    {
+      "id": "case_01",
+      "class": "top",
+      "crop_size": [
+        126,
+        178
+      ],
+      "regions": [
+        "collar",
+        "cuff",
+        "hem",
+        "pocket"
+      ]
+    },
+    {
+      "id": "case_02",
+      "class": "dress",
+      "crop_size": [
+        275,
+        614
+      ],
+      "regions": [
+        "collar",
+        "cuff",
+        "hem",
+        "pocket"
+      ]
+    },
+    {
+      "id": "case_03",
+      "class": "outerwear",
+      "crop_size": [
+        468,
+        576
+      ],
+      "regions": [
+        "collar",
+        "cuff",
+        "hem",
+        "pocket"
+      ]
+    },
+    {
+      "id": "case_04",
+      "class": "outerwear",
+      "crop_size": [
+        364,
+        565
+      ],
+      "regions": [
+        "collar",
+        "cuff",
+        "hem",
+        "pocket"
+      ]
+    },
+    {
+      "id": "case_05",
+      "class": "dress",
+      "crop_size": [
+        254,
+        355
+      ],
+      "regions": [
+        "collar",
+        "cuff",
+        "hem",
+        "pocket"
+      ]
+    },
+    {
+      "id": "case_06",
+      "class": "top",
+      "crop_size": [
+        186,
+        199
+      ],
+      "regions": [
+        "collar",
+        "cuff",
+        "hem",
+        "pocket"
+      ]
+    },
+    {
+      "id": "case_07",
+      "class": "top",
+      "crop_size": [
+        79,
+        191
+      ],
+      "regions": [
+        "collar",
+        "cuff",
+        "hem",
+        "pocket"
+      ]
+    },
+    {
+      "id": "case_08",
+      "class": "top",
+      "crop_size": [
+        171,
+        250
+      ],
+      "regions": [
+        "collar",
+        "cuff",
+        "hem",
+        "pocket"
+      ]
+    }
+  ],
+  "skipped": []
+}
