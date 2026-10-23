@@ -1,0 +1,66 @@
+test_agreement_is_still_pending_review (test_attribute_context.AttributeContextTests.test_agreement_is_still_pending_review)
+视图一致也不能自动认定为人工审核通过。 ... ok
+test_context_contains_collar_and_stays_in_garment (test_attribute_context.AttributeContextTests.test_context_contains_collar_and_stays_in_garment)
+扩展范围应包含领口且被服饰框限制。 ... ok
+test_disagreement_is_review_without_final_label (test_attribute_context.AttributeContextTests.test_disagreement_is_review_without_final_label)
+视图分歧应保留候选并清空正式标签。 ... ok
+test_disjoint_is_error (test_attribute_context.AttributeContextTests.test_disjoint_is_error)
+领口与服饰不相交时应拒绝构造上下文。 ... ok
+test_image_edge_clipped (test_attribute_context.AttributeContextTests.test_image_edge_clipped)
+越界服饰框的上下文应裁到原图范围。 ... ok
+test_nonfinite_is_error (test_attribute_context.AttributeContextTests.test_nonfinite_is_error)
+非有限坐标应触发明确异常。 ... ok
+test_tiny_box_retains_context (test_attribute_context.AttributeContextTests.test_tiny_box_retains_context)
+极小领口框仍应保留最低宽高的上下文。 ... ok
+test_backend_conflicting_views_need_review (test_attribute_context.BackendContextTests.test_backend_conflicting_views_need_review)
+后端应将原裁剪与上下文分歧传为待复核。 ... ok
+test_controlled_path_keeps_existing_gt_proxy (test_attribute_context.BackendContextTests.test_controlled_path_keeps_existing_gt_proxy)
+受控GT轨道不受预测领口上下文开关影响。 ... ok
+test_disabled_retains_original_prediction (test_attribute_context.BackendContextTests.test_disabled_retains_original_prediction)
+开关关闭时应保持原裁剪预测。 ... ok
+test_missing_collar_does_not_fabricate_context (test_attribute_context.BackendContextTests.test_missing_collar_does_not_fabricate_context)
+缺少领口定位时不能伪造上下文候选。 ... ok
+test_candidates_sorted_by_confidence (test_quality_guards.QualityGuardTests.test_candidates_sorted_by_confidence)
+候选选择应按分数而非模型返回顺序进行。 ... ok
+test_disjoint_instances_not_flagged (test_quality_guards.QualityGuardTests.test_disjoint_instances_not_flagged)
+不相交实例不应被标为重叠。 ... ok
+test_mask_does_not_expand_past_proposal (test_quality_guards.QualityGuardTests.test_mask_does_not_expand_past_proposal)
+局部mask不得扩张到候选框外。 ... ok
+test_mask_shape_mismatch_is_error (test_quality_guards.QualityGuardTests.test_mask_shape_mismatch_is_error)
+不同尺寸的SAM与服饰mask应被拒绝。 ... ok
+test_mask_stays_inside_garment (test_quality_guards.QualityGuardTests.test_mask_stays_inside_garment)
+局部mask不得越过服饰mask。 ... ok
+test_overlap_marks_both_without_deleting (test_quality_guards.QualityGuardTests.test_overlap_marks_both_without_deleting)
+重叠实例应双方标记并全部保留。 ... ok
+test_oversized_local_box_is_rejected (test_quality_guards.QualityGuardTests.test_oversized_local_box_is_rejected)
+整件衣服大小的局部候选应被几何门禁拒绝。 ... ok
+test_pattern_is_not_subject_to_local_area_limit (test_quality_guards.QualityGuardTests.test_pattern_is_not_subject_to_local_area_limit)
+整衣图案查询不应套用局部面积限制。 ... ok
+test_pipeline_preserves_predictions_and_flags_sleeveless (test_quality_guards.QualityGuardTests.test_pipeline_preserves_predictions_and_flags_sleeveless)
+无袖预测应产生适用性提示而不覆盖实例或标签。 ... ok
+test_rejected_candidate_does_not_hide_valid_candidate (test_quality_guards.QualityGuardTests.test_rejected_candidate_does_not_hide_valid_candidate)
+被拒候选不应遮蔽后续合法候选。 ... ok
+test_agreeing_pattern_is_retained (test_semantic_consistency.ConsistencyTests.test_agreeing_pattern_is_retained)
+一致图案预测应保留原输出。 ... ok
+test_conflicted_collar_propagates_to_neckline (test_semantic_consistency.ConsistencyTests.test_conflicted_collar_propagates_to_neckline)
+领口冲突应传递为领型属性待复核。 ... ok
+test_generic_pattern_phrase_does_not_claim_floral (test_semantic_consistency.ConsistencyTests.test_generic_pattern_phrase_does_not_claim_floral)
+泛称图案不得自动解释为印花类别。 ... ok
+test_missed_is_not_absence_or_review (test_semantic_consistency.ConsistencyTests.test_missed_is_not_absence_or_review)
+漏检不能被转换成不存在或正确复核。 ... ok
+test_other_pattern_is_not_forced (test_semantic_consistency.ConsistencyTests.test_other_pattern_is_not_forced)
+其他图案标签不应被强制映射为具体类别。 ... ok
+test_pattern_conflict_preserves_both_candidates (test_semantic_consistency.ConsistencyTests.test_pattern_conflict_preserves_both_candidates)
+图案分歧应保留两方候选而不强行裁决。 ... ok
+test_pipeline_explicit_option_checks_conflict_without_class_override (test_semantic_consistency.ConsistencyTests.test_pipeline_explicit_option_checks_conflict_without_class_override)
+显式开关应启用冲突检查但不更改服饰类别。 ... ok
+test_same_cuff_and_hem_keep_geometry_but_require_review (test_semantic_consistency.ConsistencyTests.test_same_cuff_and_hem_keep_geometry_but_require_review)
+重合袖口与下摆应保留几何并改为待复核。 ... ok
+test_separate_regions_not_changed (test_semantic_consistency.ConsistencyTests.test_separate_regions_not_changed)
+分离的局部区域不应被冲突规则修改。 ... ok
+
+----------------------------------------------------------------------
+Ran 30 tests in 0.115s
+
+OK
+
