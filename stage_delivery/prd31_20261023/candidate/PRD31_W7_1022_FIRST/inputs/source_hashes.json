@@ -1,0 +1,6 @@
+{
+  "src/fashion_multimodal_analysis/integration/quality_guards.py": "5252a7a2c52e81ee655a467fb45f924dd09bc6bfd82de5b26eb789f70589514a",
+  "src/fashion_multimodal_analysis/integration/region_semantics.py": "c21cedf6d9bb450eea8de9b5f9fa7ad45d55f463ea1240211484a936b8208255",
+  "src/fashion_multimodal_analysis/integration/model_backends.py": "0efd47f3a29e6c25d7396717cb4fc1b1540ed30c16df171a9ad7b93fade7f7ec",
+  "src/fashion_multimodal_analysis/integration/pipeline.py": "8c6e8b3278cc94fdbc934defbd7f51aa5081dabb1d767a03c9160854dc22da68"
+}
