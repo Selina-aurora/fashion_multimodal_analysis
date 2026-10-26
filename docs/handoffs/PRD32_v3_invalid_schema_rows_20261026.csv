@@ -1,0 +1,6 @@
+﻿image_id,variant,error_code,raw_category,v3_design_json,upstream_31_freeze_blocker
+dev_04,marked_full_image,unknown_category,shirt,"{""neckline"":""翻领"",""sleeve"":""长袖"",""strap"":""细肩带"",""front"":""纽扣门襟"",""details"":[]}",NO
+dev_04,reference_roi,unknown_category,shirt,"{""neckline"":""翻领"",""sleeve"":""长袖"",""strap"":""细肩带"",""front"":""纽扣门襟"",""details"":[]}",NO
+dev_05,marked_full_image,unknown_category,shirt,"{""neckline"":""翻领"",""sleeve"":""长袖"",""strap"":null,""front"":""纽扣门襟"",""details"":[]}",NO
+dev_12,marked_full_image,out_of_vocab_strap,top,"{""neckline"":""翻领"",""sleeve"":""长袖"",""strap"":""null"",""front"":""纽扣门襟"",""details"":[]}",NO
+dev_12,reference_roi,out_of_vocab_strap,top,"{""neckline"":""翻领"",""sleeve"":""长袖"",""strap"":""null"",""front"":""纽扣门襟"",""details"":[]}",NO

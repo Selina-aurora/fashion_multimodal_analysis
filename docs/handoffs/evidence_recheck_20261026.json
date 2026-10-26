@@ -1,0 +1,78 @@
+{
+  "date": "2026-10-26",
+  "basis": "local recheck of archived stage-freeze source embedded historical snapshots; not GPU verification",
+  "historical_images_checked": 20,
+  "historical_instances_checked": 109,
+  "prepared_3_2_requests": 12,
+  "interface_blockers_found": 0,
+  "optional_warnings_total": 83,
+  "warning_counts_by_reason": {
+    "attribute_unavailable:neckline:localization_missing": 4,
+    "local_region_unavailable_or_requires_review:collar": 9,
+    "local_region_unavailable_or_requires_review:pocket": 12,
+    "local_region_unavailable_or_requires_review:waist": 9,
+    "attribute_unavailable:pattern:requires_review": 8,
+    "attribute_unavailable:neckline:requires_review": 8,
+    "local_region_unavailable_or_requires_review:cuff": 8,
+    "local_region_unavailable_or_requires_review:hem": 8,
+    "local_region_unavailable_or_requires_review:shoulder": 8,
+    "local_region_unavailable_or_requires_review:pattern": 8,
+    "local_region_unavailable_or_requires_review:decoration": 1
+  },
+  "source_script_sha256": "076a8bec0d23dd2e1ab3cff137cebd8c465f075a3a66f8cf3ad04bf0306161a8",
+  "prd32_v3": {
+    "n_images": 7,
+    "n_inference_calls": 14,
+    "strict_schema_valid_count": 9,
+    "strict_schema_invalid_count": 5,
+    "raw_native_json_count": 0,
+    "error_codes": {
+      "unknown_category": 3,
+      "out_of_vocab_strap": 2
+    },
+    "invalid_cases": [
+      {
+        "image_id": "dev_04",
+        "variant": "marked_full_image",
+        "error": "unknown_category",
+        "category_raw": "shirt",
+        "design_json": "{\"neckline\":\"翻领\",\"sleeve\":\"长袖\",\"strap\":\"细肩带\",\"front\":\"纽扣门襟\",\"details\":[]}"
+      },
+      {
+        "image_id": "dev_04",
+        "variant": "reference_roi",
+        "error": "unknown_category",
+        "category_raw": "shirt",
+        "design_json": "{\"neckline\":\"翻领\",\"sleeve\":\"长袖\",\"strap\":\"细肩带\",\"front\":\"纽扣门襟\",\"details\":[]}"
+      },
+      {
+        "image_id": "dev_05",
+        "variant": "marked_full_image",
+        "error": "unknown_category",
+        "category_raw": "shirt",
+        "design_json": "{\"neckline\":\"翻领\",\"sleeve\":\"长袖\",\"strap\":null,\"front\":\"纽扣门襟\",\"details\":[]}"
+      },
+      {
+        "image_id": "dev_12",
+        "variant": "marked_full_image",
+        "error": "out_of_vocab_strap",
+        "category_raw": "top",
+        "design_json": "{\"neckline\":\"翻领\",\"sleeve\":\"长袖\",\"strap\":\"null\",\"front\":\"纽扣门襟\",\"details\":[]}"
+      },
+      {
+        "image_id": "dev_12",
+        "variant": "reference_roi",
+        "error": "out_of_vocab_strap",
+        "category_raw": "top",
+        "design_json": "{\"neckline\":\"翻领\",\"sleeve\":\"长袖\",\"strap\":\"null\",\"front\":\"纽扣门襟\",\"details\":[]}"
+      }
+    ]
+  },
+  "not_reverified": [
+    "AutoDL freeze summary.json",
+    "freeze_record.json",
+    "source checkpoint and active code fingerprint live on GPU",
+    "actual Git commit",
+    "true PRD31 bridge_inputs.jsonl"
+  ]
+}

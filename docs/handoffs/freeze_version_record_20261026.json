@@ -1,0 +1,41 @@
+{
+  "record_kind": "reconstructed_teacher_delivery_metadata_not_original_freeze_record",
+  "stage_date": "2026-10-26",
+  "reported_status": "PRD31_STAGE_FREEZE_READY",
+  "reported_status_source": "prior AutoDL run recorded in archived handoff; original summary.json not included",
+  "candidate_id": "PRD31_CANDIDATE_20261022_WHITE_SAM_REUSE",
+  "checkpoint_sha256_expected": "c5ba795225349b1c521aac0517ac7c493d9818dcc17d558ac4a3f6f8669452f0",
+  "production_sources_sha256_expected": {
+    "src/fashion_multimodal_analysis/integration/quality_guards.py": "5252a7a2c52e81ee655a467fb45f924dd09bc6bfd82de5b26eb789f70589514a",
+    "src/fashion_multimodal_analysis/integration/region_semantics.py": "c21cedf6d9bb450eea8de9b5f9fa7ad45d55f463ea1240211484a936b8208255",
+    "src/fashion_multimodal_analysis/integration/model_backends.py": "0efd47f3a29e6c25d7396717cb4fc1b1540ed30c16df171a9ad7b93fade7f7ec",
+    "src/fashion_multimodal_analysis/integration/pipeline.py": "8c6e8b3278cc94fdbc934defbd7f51aa5081dabb1d767a03c9160854dc22da68"
+  },
+  "components": [
+    "Mask R-CNN V5 checkpoint",
+    "white-sam reuse candidate, uncompiled",
+    "white fallback"
+  ],
+  "excluded_directions": [
+    "SAM nonempty fallback unadopted",
+    "static compile not adopted",
+    "manual rectangular ROI direction closed"
+  ],
+  "input_evidence": {
+    "historical_images": 20,
+    "instances": 109,
+    "requests": 12,
+    "observed_interface_blockers": 0,
+    "quality_warning_mentions": 83
+  },
+  "checkpoint_path": "AutoDL project: must verify on server",
+  "git_commit_sha": null,
+  "historical_release_url": "https://github.com/Selina-aurora/fashion_multimodal_analysis/releases/tag/prd31-stage-20261023",
+  "published_this_turn": false,
+  "full_prd_accepted": false,
+  "missing_actual_evidence": [
+    "/workspace/prd31_stage_freeze_20261026/summary.json",
+    "/workspace/prd31_stage_freeze_20261026/freeze_record.json",
+    "/workspace/prd31_stage_freeze_20261026/bridge_inputs.jsonl"
+  ]
+}

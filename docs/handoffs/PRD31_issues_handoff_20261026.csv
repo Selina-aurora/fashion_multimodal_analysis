@@ -1,0 +1,11 @@
+﻿priority,domain,issue,blocking_judgment,evidence,next_action,owner,status
+P0,INTERFACE,字段/实例ID/目标绑定/图片身份或bbox协议失效,可能阻塞对应请求；历史12条无结构性阻塞,真实冻结桥接输入、schema和坏输入接口自动化覆盖,失败明确分类与安全回退；核对输入身份,PRD31→32联调,open
+P0,PRD32_PROTOCOL,V3 严格Schema非法5/14：shirt 3条、字符串null 2条,如果消费原始输出可阻塞严格consumer；非3.1冻结失败,7非盲图×两输入；原生严格JSON 0/14,实施强校验；分开统计raw/schema/service JSON,PRD32,open_v3_not_promoted
+P0,DATA_INTEGRITY,dev_10类别冲突、dev_11图片路径与SHA冲突、dev_03历史审核不全,局部样本评分/复现阻塞；非全局接口阻塞,W7审核恢复记录,保持隔离直至人工核实,数据/审核,open
+P1,LOCALIZATION,上游错选目标、袖口/下摆/领口漏检和局部范围误差,效果遗留,W7开发集和历史错误案例,上游分割vs局部定位分别归因,PRD31,open
+P1,SPEED,局部查询均值139.63ms、P95 178.55ms vs 30ms目标,非流程阻塞；时延未达标,历史候选性能检查，非统一生产端到端,冻结后基于共同口径重测，含精度损失,PRD31,open
+P1,ATTRIBUTES,颜色/图案/袖长、复杂结构设计可能误判,非接口阻塞；可能污染3.2文字生成,人工GT/预测对照,标注未人工核验预测来源与未知值,PRD31/32,open
+P1,EVALUATION,七图非盲且主要top/outerwear；历史reference ROI并非真实V5 predicted ROI,正式泛化/业务验收证据不足,V2/V3 summary,八类新开发图与独立评估；禁止开启holdout调参,评估,open
+P1,PRD32_FUNCTION,开放式QA、文案满意度、生产API P95/QPS未系统完成,正式功能验收未完成,smoke及开发回归,建设统一3功能接口和计分规则,PRD32,open
+P2,SOURCE_EVIDENCE,AutoDL freeze summary/record/bridge与git commit缺失于可恢复包,证据归档缺口,历史记录+内嵌源码,从AutoDL/仓库补取并校验hash；不伪造,交付归档,open
+SCOPE,PRODUCT_DECISION,面料、工艺、复杂设计属性暂缓；人工矩形ROI关闭,依带教收缩范围处理,阶段会议要求,不按原14类200+统一判作当前欠账,导师确认,acknowledged
