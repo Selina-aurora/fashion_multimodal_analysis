@@ -1,0 +1,19 @@
+{
+  "schema": "prd32_train5_tags_dev_run_v1",
+  "status": "TRAIN_DEV_RUN_COMPLETED_NOT_PRD_ACCEPTED",
+  "inputs": 40,
+  "model_load_seconds": 4.82,
+  "status_counts": {
+    "GENERATED_UNVERIFIED": 40
+  },
+  "median_end_to_end_ms": 1236.78,
+  "generated": 40,
+  "native_json_count": 0,
+  "strict_schema_count": 40,
+  "verified_accuracy": null,
+  "scope": "TRAIN_DEV_DIAGNOSTIC_ONLY",
+  "model_input_GT": false,
+  "bbox_from_frozen_V5": false,
+  "independent_PRD_acceptance": false,
+  "holdout_used": false
+}

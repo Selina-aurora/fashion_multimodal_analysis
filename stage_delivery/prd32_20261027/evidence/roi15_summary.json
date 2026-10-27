@@ -1,0 +1,27 @@
+{
+  "schema": "prd32_dev_roi_target_binding_ablation_v1",
+  "status": "DEV_ROI_ABLATION_COMPLETED_NOT_PRD_ACCEPTED",
+  "requested": 15,
+  "inference_completed": 15,
+  "failed": 0,
+  "by_review_cause": {
+    "MODEL_CLASSIFICATION": {
+      "n": 7,
+      "inference_success": 7,
+      "roi_agrees_reviewed_human": 2,
+      "category_changed": 2
+    },
+    "MODEL_TARGET_BINDING": {
+      "n": 8,
+      "inference_success": 8,
+      "roi_agrees_reviewed_human": 1,
+      "category_changed": 1
+    }
+  },
+  "median_roi_ms": 1191.84,
+  "model_load_seconds": 4.71,
+  "human_gt_passed_to_model": false,
+  "historical_GT_pilot_bbox_not_frozen_V5": true,
+  "holdout_used": false,
+  "baseline_independent_accuracy": false
+}

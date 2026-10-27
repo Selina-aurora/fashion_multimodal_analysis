@@ -1,0 +1,33 @@
+{
+  "status": "DEV_DEFENSIVE_BATCH_COMPLETED_NOT_PRD_ACCEPTED",
+  "source_requests": 12,
+  "eligible_for_inference": 12,
+  "blocked_input_cases": 0,
+  "error_counts": {},
+  "guard_decision_counts": {
+    "PASS": 12
+  },
+  "model_not_loaded": false,
+  "frozen_candidate_id": "PRD31_CANDIDATE_20261022_WHITE_SAM_REUSE",
+  "frozen_bridge_sha256": "6bbfc0e3ca935f1c72b4e86d603c6f3c6b5738f7391d9fe7fce2c0da7c4821fb",
+  "holdout_used": false,
+  "note": "A blocked case returns an explicit null fallback; it does not get an inferred answer.",
+  "model_load_seconds": 4.6,
+  "simulated_backend": false,
+  "inference_completed": 12,
+  "inference_failed": 0,
+  "output_status_counts": {
+    "DRAFT_UNVERIFIED": 7,
+    "DEGRADED_REVIEW_REQUIRED": 1,
+    "CANDIDATE_UNVERIFIED": 2,
+    "CONTENT_HOLD_FOR_REVIEW": 2
+  },
+  "median_inference_ms": 696.63,
+  "full_prd_acceptance": false,
+  "frozen_prd31_modified": false,
+  "limitations": [
+    "Offline freeze replay, not live 3.1 model execution",
+    "Schema/semantic caution is not verified visual accuracy",
+    "No formal QA/copy human scoring, eight-class evaluation or P95/QPS"
+  ]
+}

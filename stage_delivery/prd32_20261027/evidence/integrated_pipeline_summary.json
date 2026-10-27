@@ -1,0 +1,41 @@
+{
+  "schema": "prd32_integrated_pipeline_v1",
+  "status": "PIPELINE_DEV_SMOKE_COMPLETED_NOT_ACCEPTED",
+  "completed_at_utc": "2026-10-27T02:38:47.611839+00:00",
+  "frozen_bridge_sha256": "6bbfc0e3ca935f1c72b4e86d603c6f3c6b5738f7391d9fe7fce2c0da7c4821fb",
+  "frozen_candidate_id": "PRD31_CANDIDATE_20261022_WHITE_SAM_REUSE",
+  "selected_cases": 12,
+  "generated_cases": 12,
+  "failed_cases": 0,
+  "task_counts": {
+    "vqa": 6,
+    "tags": 3,
+    "copy": 3
+  },
+  "input_mode": "marked_full_image",
+  "model": "/workspace/models/Qwen2.5-VL-7B-Instruct",
+  "model_load_seconds": 4.57,
+  "gpu_name": "NVIDIA GeForce RTX 4090",
+  "gpu_peak_allocated_gib": 15.62,
+  "median_single_request_ms": 683.78,
+  "median_latency_by_task_ms": {
+    "vqa": 282.78,
+    "tags": 1215.83,
+    "copy": 743.58
+  },
+  "tags_generated": 3,
+  "tags_schema_valid": 3,
+  "tags_native_json": 0,
+  "tags_canonical_service_available": 3,
+  "qa_and_copy_outputs_not_human_graded": true,
+  "frozen_prd31_reexecuted": false,
+  "frozen_prd31_modified": false,
+  "holdout_used": false,
+  "full_prd_acceptance": false,
+  "limitations": [
+    "Offline frozen interface case replay, NOT new 3.1 inference on uploaded images",
+    "Input uses actual 3.1 frozen predicted bboxes, NOT historical human reference ROI",
+    "Model predictions are not human GT; QA/copy quality and formal eight-class accuracy not measured",
+    "Single/small-batch local GPU timings NOT production service P95 or QPS"
+  ]
+}

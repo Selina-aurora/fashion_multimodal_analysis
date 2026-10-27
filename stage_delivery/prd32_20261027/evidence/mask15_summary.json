@@ -1,0 +1,23 @@
+{
+  "schema": "prd32_mask_guided_paired_dev_results_v1",
+  "status": "DEV_MASK_PAIRED_DONE_NOT_PRD_ACCEPTED",
+  "mask_eligible": 15,
+  "both_conditions_completed": 15,
+  "failed": 0,
+  "pairs": {
+    "A_wrong_B_correct": 1,
+    "A_correct_B_wrong": 0,
+    "A_correct_B_correct": 3,
+    "A_wrong_B_wrong": 11
+  },
+  "observed_A_correct": 3,
+  "observed_B_correct": 4,
+  "median_A_ms": 1159.9,
+  "median_B_ms": 1144.4,
+  "model_load_seconds": 4.75,
+  "human_gt_passed_to_model": false,
+  "historical_GT_pilot_mask_not_frozen_V5": true,
+  "development_error_selection_only": true,
+  "sealed_holdout_used": false,
+  "full_prd_acceptance": false
+}

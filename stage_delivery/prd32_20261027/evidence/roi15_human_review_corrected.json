@@ -1,0 +1,126 @@
+{
+  "schema": "prd32_roi15_visual_review_v1",
+  "scope": "train_dev_not_independent",
+  "rows": [
+    {
+      "case_id": "train_dev_009",
+      "target_visible": "YES",
+      "roi_single_item": "NO",
+      "target_type_clear": "YES",
+      "cause_revision": "CROP_MIXED_ITEMS",
+      "notes": "目标是裤子但是roi里面上衣也占很大一部分"
+    },
+    {
+      "case_id": "train_dev_010",
+      "target_visible": "YES",
+      "roi_single_item": "NO",
+      "target_type_clear": "YES",
+      "cause_revision": "CROP_MIXED_ITEMS",
+      "notes": "目标是裤子，混入了包包，外套，上衣"
+    },
+    {
+      "case_id": "train_dev_011",
+      "target_visible": "YES",
+      "roi_single_item": "NO",
+      "target_type_clear": "YES",
+      "cause_revision": "CROP_MIXED_ITEMS",
+      "notes": "目标是裤子，roi里混入一小部分上衣"
+    },
+    {
+      "case_id": "train_dev_012",
+      "target_visible": "YES",
+      "roi_single_item": "NO",
+      "target_type_clear": "YES",
+      "cause_revision": "CROP_MIXED_ITEMS",
+      "notes": "目标是裤子，但是roi里面还有部分上衣和外套"
+    },
+    {
+      "case_id": "train_dev_013",
+      "target_visible": "YES",
+      "roi_single_item": "NO",
+      "target_type_clear": "YES",
+      "cause_revision": "CROP_MIXED_ITEMS",
+      "notes": "目标是裤子，但是roi混入了上衣，外套"
+    },
+    {
+      "case_id": "train_dev_014",
+      "target_visible": "YES",
+      "roi_single_item": "YES",
+      "target_type_clear": "YES",
+      "cause_revision": "OTHER",
+      "notes": "特殊结构"
+    },
+    {
+      "case_id": "train_dev_020",
+      "target_visible": "YES",
+      "roi_single_item": "NO",
+      "target_type_clear": "NO",
+      "cause_revision": "CROP_MIXED_ITEMS",
+      "notes": "红框定位基本正确，目标为黄色下装，但 ROI 中同时包含白色印花上衣。由于黄色下装仅部分可见，无法可靠区分 skirt 与 pants；模型却预测为 top，疑似受到白色上衣干扰，存在目标绑定错误。主要归因为多服饰混入导致的目标识别偏移，同时记录目标细分类别存在视觉歧义。"
+    },
+    {
+      "case_id": "train_dev_021",
+      "target_visible": "YES",
+      "roi_single_item": "NO",
+      "target_type_clear": "YES",
+      "cause_revision": "CROP_MIXED_ITEMS",
+      "notes": ""
+    },
+    {
+      "case_id": "train_dev_022",
+      "target_visible": "YES",
+      "roi_single_item": "NO",
+      "target_type_clear": "YES",
+      "cause_revision": "CROP_MIXED_ITEMS",
+      "notes": "目标是裙子，但是roi混入上衣"
+    },
+    {
+      "case_id": "train_dev_025",
+      "target_visible": "YES",
+      "roi_single_item": "NO",
+      "target_type_clear": "YES",
+      "cause_revision": "CROP_MIXED_ITEMS",
+      "notes": "目标是外套。但是roi混入内搭"
+    },
+    {
+      "case_id": "train_dev_026",
+      "target_visible": "YES",
+      "roi_single_item": "NO",
+      "target_type_clear": "YES",
+      "cause_revision": "CROP_MIXED_ITEMS",
+      "notes": "目标是外套，混入部分内搭"
+    },
+    {
+      "case_id": "train_dev_030",
+      "target_visible": "YES",
+      "roi_single_item": "NO",
+      "target_type_clear": "YES",
+      "cause_revision": "CROP_MIXED_ITEMS",
+      "notes": "目标是外塔但是能看到一点点里面的白的内搭"
+    },
+    {
+      "case_id": "train_dev_031",
+      "target_visible": "YES",
+      "roi_single_item": "NO",
+      "target_type_clear": "YES",
+      "cause_revision": "CROP_MIXED_ITEMS",
+      "notes": ""
+    },
+    {
+      "case_id": "train_dev_032",
+      "target_visible": "YES",
+      "roi_single_item": "NO",
+      "target_type_clear": "YES",
+      "cause_revision": "CROP_MIXED_ITEMS",
+      "notes": "目标是外套，混入白色内搭，模型识别到白色内搭去了\n"
+    },
+    {
+      "case_id": "train_dev_033",
+      "target_visible": "YES",
+      "roi_single_item": "YES",
+      "target_type_clear": "YES",
+      "cause_revision": "MODEL_CLASS_BIAS",
+      "notes": "目标服饰为白色无袖连衣裙（dress），可见 V 形领口及向下展开的衣身结构。虽然完整裙摆未显示，但现有视觉特征支持连衣裙判断。红框及 ROI 基本正确，未明显混入其他服饰。模型仍预测为 top，属于目标正确但类别识别错误。"
+    }
+  ]
+}

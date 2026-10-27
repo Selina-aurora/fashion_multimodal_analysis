@@ -1,0 +1,26 @@
+{
+  "schema": "prd32_existing_dataset_dev_pool_v1",
+  "total_inventory_records": 216,
+  "train_dev_paths_present": 156,
+  "quarantined_records": 60,
+  "training_source_class_counts": {
+    "dress": 36,
+    "pants": 39,
+    "top": 52,
+    "skirt": 16,
+    "outerwear": 13
+  },
+  "selected_for_preview": 40,
+  "preview_created": 40,
+  "preview_failures": [],
+  "metadata_only": false,
+  "source_project": "/workspace/fashion_multimodal_analysis",
+  "data_root": "/workspace/fashion_data",
+  "training_source_images_opened": 40,
+  "protected_images_opened": 0,
+  "holdout_used": false,
+  "model_inference_calls": 0,
+  "approved_for_independent_accuracy": 0,
+  "scope": "TRAIN_DEV_DIAGNOSTIC_ONLY_NOT_OFFICIAL",
+  "note": "Garment category in manifest is NOT assumed to be human-verified GT. Training images must not be reported as independent PRD acceptance."
+}

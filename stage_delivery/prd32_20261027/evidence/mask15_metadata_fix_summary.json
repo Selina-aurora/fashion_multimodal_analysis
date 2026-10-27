@@ -1,0 +1,15 @@
+{
+  "scope": "metadata_field_correction_only",
+  "field_fix": "roi_mixed_others_human now inverses original ROI-only-human label roi_single_item",
+  "paired_total": 15,
+  "roi_mixed_other_clothes": 13,
+  "roi_single_item": 2,
+  "A_correct": 3,
+  "B_correct": 4,
+  "mask_corrected_case_ids": [
+    "train_dev_013"
+  ],
+  "mask_corrected_among_mixed": 1,
+  "mask_corrected_among_single": 0,
+  "caution": "GT-pilot error-selected developer study; not independent accuracy and no causal proof"
+}

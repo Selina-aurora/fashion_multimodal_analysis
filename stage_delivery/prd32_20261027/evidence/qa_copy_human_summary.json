@@ -1,0 +1,37 @@
+{
+  "schema": "prd32_qa_copy_human_review_analysis_v1",
+  "scope": "dev_offline_not_prd_accepted",
+  "source_file_sha256": "1dc53f8ffea82f9a0de4eb08669cd978bd2e16211c3bca0b43898dcb3b3c228f",
+  "reviewed_total": 9,
+  "reviewed_verified": 9,
+  "qa_n": 6,
+  "qa_verdict_correct": 6,
+  "qa_reported_accuracy": 1.0,
+  "qa_explicit_refusal_count": 3,
+  "qa_explicit_refusal_case_ids": [
+    "vqa_neck_02",
+    "vqa_cuff_04",
+    "vqa_material_06"
+  ],
+  "qa_non_refusal_count": 3,
+  "copy_n": 3,
+  "copy_satisfied": 1,
+  "copy_reported_satisfaction": 0.3333333333333333,
+  "copy_unsatisfied": 2,
+  "review_rows_requiring_recheck": [
+    "vqa_decoration_05",
+    "vqa_neck_02",
+    "vqa_cuff_04",
+    "vqa_material_06",
+    "copy_01",
+    "copy_02",
+    "copy_03"
+  ],
+  "reviewed_original_file_not_modified": true,
+  "caveats": [
+    "Nonblind small development replay; not PRD acceptance",
+    "At least one decoration QA answer and image-evidence review merits recheck",
+    "QA abstention handling not pre-registered",
+    "Three tag cases not included in human review"
+  ]
+}

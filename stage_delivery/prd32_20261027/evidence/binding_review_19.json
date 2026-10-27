@@ -1,0 +1,158 @@
+{
+  "schema": "prd32_train5_binding_diagnostic_review_v1",
+  "scope": "train_dev_diagnostic_only_NOT_INDEPENDENT",
+  "rows": [
+    {
+      "case_id": "train_dev_009",
+      "bbox_status": "VALID",
+      "human_category": "pants",
+      "cause": "MODEL_TARGET_BINDING",
+      "notes": "",
+      "review_status": "REVIEWED"
+    },
+    {
+      "case_id": "train_dev_010",
+      "bbox_status": "VALID",
+      "human_category": "pants",
+      "cause": "MODEL_TARGET_BINDING",
+      "notes": "",
+      "review_status": "REVIEWED"
+    },
+    {
+      "case_id": "train_dev_011",
+      "bbox_status": "VALID",
+      "human_category": "pants",
+      "cause": "MODEL_TARGET_BINDING",
+      "notes": "",
+      "review_status": "REVIEWED"
+    },
+    {
+      "case_id": "train_dev_012",
+      "bbox_status": "VALID",
+      "human_category": "pants",
+      "cause": "MODEL_CLASSIFICATION",
+      "notes": "",
+      "review_status": "REVIEWED"
+    },
+    {
+      "case_id": "train_dev_013",
+      "bbox_status": "VALID",
+      "human_category": "pants",
+      "cause": "MODEL_TARGET_BINDING",
+      "notes": "",
+      "review_status": "REVIEWED"
+    },
+    {
+      "case_id": "train_dev_014",
+      "bbox_status": "VALID",
+      "human_category": "pants",
+      "cause": "MODEL_CLASSIFICATION",
+      "notes": "",
+      "review_status": "REVIEWED"
+    },
+    {
+      "case_id": "train_dev_016",
+      "bbox_status": "VALID",
+      "human_category": "uncertain",
+      "cause": "CATEGORY_AMBIGUITY",
+      "notes": "",
+      "review_status": "REVIEWED"
+    },
+    {
+      "case_id": "train_dev_019",
+      "bbox_status": "INCOMPLETE",
+      "human_category": "dress",
+      "cause": "UPSTREAM_BBOX",
+      "notes": "",
+      "review_status": "REVIEWED"
+    },
+    {
+      "case_id": "train_dev_020",
+      "bbox_status": "VALID",
+      "human_category": "skirt",
+      "cause": "MODEL_TARGET_BINDING",
+      "notes": "",
+      "review_status": "REVIEWED"
+    },
+    {
+      "case_id": "train_dev_021",
+      "bbox_status": "VALID",
+      "human_category": "skirt",
+      "cause": "MODEL_TARGET_BINDING",
+      "notes": "模型看成外套了\n",
+      "review_status": "REVIEWED"
+    },
+    {
+      "case_id": "train_dev_022",
+      "bbox_status": "VALID",
+      "human_category": "skirt",
+      "cause": "MODEL_TARGET_BINDING",
+      "notes": "",
+      "review_status": "REVIEWED"
+    },
+    {
+      "case_id": "train_dev_025",
+      "bbox_status": "VALID",
+      "human_category": "outerwear",
+      "cause": "MODEL_CLASSIFICATION",
+      "notes": "翻领，纯色（我感觉是把两件衣服一起看了没分清是两件）",
+      "review_status": "REVIEWED"
+    },
+    {
+      "case_id": "train_dev_026",
+      "bbox_status": "VALID",
+      "human_category": "outerwear",
+      "cause": "MODEL_CLASSIFICATION",
+      "notes": "",
+      "review_status": "REVIEWED"
+    },
+    {
+      "case_id": "train_dev_030",
+      "bbox_status": "VALID",
+      "human_category": "outerwear",
+      "cause": "MODEL_CLASSIFICATION",
+      "notes": "",
+      "review_status": "REVIEWED"
+    },
+    {
+      "case_id": "train_dev_031",
+      "bbox_status": "VALID",
+      "human_category": "outerwear",
+      "cause": "MODEL_CLASSIFICATION",
+      "notes": "",
+      "review_status": "REVIEWED"
+    },
+    {
+      "case_id": "train_dev_032",
+      "bbox_status": "VALID",
+      "human_category": "outerwear",
+      "cause": "MODEL_TARGET_BINDING",
+      "notes": "",
+      "review_status": "REVIEWED"
+    },
+    {
+      "case_id": "train_dev_033",
+      "bbox_status": "VALID",
+      "human_category": "dress",
+      "cause": "MODEL_CLASSIFICATION",
+      "notes": "",
+      "review_status": "REVIEWED"
+    },
+    {
+      "case_id": "train_dev_038",
+      "bbox_status": "VALID",
+      "human_category": "uncertain",
+      "cause": "CATEGORY_AMBIGUITY",
+      "notes": "目标服饰下半部分被图像截断，仅能观察上半身，无法根据可见信息明确区分 dress 与 top。红框覆盖基本正确，属于类别视觉歧义。",
+      "review_status": "REVIEWED"
+    },
+    {
+      "case_id": "train_dev_040",
+      "bbox_status": "VALID",
+      "human_category": "top",
+      "cause": "SOURCE_LABEL_ERROR",
+      "notes": "",
+      "review_status": "REVIEWED"
+    }
+  ]
+}
