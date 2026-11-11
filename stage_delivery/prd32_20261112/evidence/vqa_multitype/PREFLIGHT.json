@@ -1,0 +1,22 @@
+{
+  "status": "MULTITYPE_PILOT_PREFLIGHT_PASS",
+  "n_targets": 16,
+  "n_queries": 32,
+  "source_hashes": {
+    "src/fashion_multimodal_analysis/evaluation/runtime.py": "ff85ca020695498ab287d73e8afd915b44345ecd2168b38eb24410fb8ddddfb8",
+    "src/fashion_multimodal_analysis/segmentation/modeling.py": "e17c526cfae507e12d79f83ac1662aae6334497ee20be5547d54642da44d2454",
+    "src/fashion_multimodal_analysis/common/schema.py": "86916cc6a565c682320618e890fdf61e4ec7e8881a971a5cd9178502baee4f0c"
+  },
+  "fixed_plan_sha256": "7a188040c5e744c4065c5bb54fe63a924a288b183683ef4b0be3abf05e774026",
+  "original_baseline_prompt_sha256": "5e288115687cf5a18e4fa049e637716f04e1070c9f02615cdbe9cf7cc8289470",
+  "example_new_prompt_sha256": "0ecabff4b4fe2c87a0c8f2b0a50ddd03307df51d26e7df80ffe35ed649e0cf8a",
+  "new_question_present_in_prompt": true,
+  "multitype_prompt_version": "vqa_multitype_question_passthrough_v2",
+  "all_32_questions_prompt_checked": true,
+  "original_baseline_used_only_for_warmup": true,
+  "old_question_removed": true,
+  "holdout_used": false,
+  "production_release": false,
+  "three_task_guard_not_invoked": true,
+  "independent_gt": false
+}

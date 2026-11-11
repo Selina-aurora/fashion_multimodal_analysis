@@ -1,0 +1,60 @@
+{
+  "schema": "PRD32_ARCHITECTURE_AB_V1_SHADOW",
+  "status": "AB_COMPLETED_PENDING_USER_REVIEW",
+  "gpu_name": "NVIDIA GeForce RTX 4090",
+  "unique_dev60_targets": 16,
+  "repeats": 1,
+  "baseline_full_three_tasks": {
+    "n": 16,
+    "mean_ms": 2325.013,
+    "p50_ms": 2290.65,
+    "p95_ms": 2585.114
+  },
+  "vqa_only": {
+    "n": 16,
+    "mean_ms": 284.926,
+    "p50_ms": 255.962,
+    "p95_ms": 505.286
+  },
+  "merchant_tags_copy": {
+    "n": 16,
+    "mean_ms": 2098.515,
+    "p50_ms": 2060.381,
+    "p95_ms": 2382.986
+  },
+  "merchant_tags_template": {
+    "n": 16,
+    "mean_ms": 1316.244,
+    "p50_ms": 1303.443,
+    "p95_ms": 1481.434
+  },
+  "measured_qwen_calls": 112,
+  "warmup_qwen_calls": 3,
+  "comparable_unmodified_task_responses": {
+    "vqa_only": {
+      "vqa_only_vqa_equals_baseline": 16
+    },
+    "merchant_tags_copy": {
+      "merchant_tags_copy_tags_equals_baseline": 16,
+      "merchant_tags_copy_copy_equals_baseline": 16
+    },
+    "merchant_tags_template": {
+      "merchant_tags_template_tags_equals_baseline": 16
+    }
+  },
+  "quality_review": {
+    "template_review_required_count": 16,
+    "template_blocked_count": 0,
+    "needs_human_copy_quality": true,
+    "baseline_existing_guard_blocked_count": 16,
+    "alternative_guard_not_evaluated_due_to_partial_tasks": true
+  },
+  "request_scope_warning": "VQA-only and merchant routes do not produce all three task outputs; not equivalent to baseline full request. No all-three PRD claim.",
+  "template_warning": "Rule Copy uses predicted Tags: inherits tag errors, cannot replace original Copy without human quality scoring and new Guard contract.",
+  "original_guard_changed": false,
+  "all_candidate_outputs_shadow_blocked": true,
+  "models_and_baseline_prompts_unchanged": true,
+  "holdout_accessed": false,
+  "production_release": false,
+  "official_prd_acceptance": false
+}

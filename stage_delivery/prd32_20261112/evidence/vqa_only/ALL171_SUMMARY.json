@@ -1,0 +1,73 @@
+{
+  "schema": "PRD32_VQA_ONLY_DEV60_V2_ALL171",
+  "status": "SHADOW_ONLY_COMPLETE_171",
+  "target_count": 171,
+  "source_images": 60,
+  "chunk_count": 8,
+  "measured_qwen_calls": 171,
+  "excluded_warmup_calls": 8,
+  "mean_vqa_only_e2e_ms": 298.529,
+  "p95_vqa_only_e2e_ms": 547.447,
+  "mean_vqa_host_task_ms": 246.564,
+  "mean_historical_three_task_e2e_ms": 2362.772,
+  "matched_baseline_vqa_responses": 171,
+  "vqa_only_e2e_under_200ms": 6,
+  "vqa_only_e2e_under_400ms": 154,
+  "note": "Times compare separate warm runs, not same-sitting paired A/B. VQA is fixed color question. No production Guard.",
+  "independent_gt": false,
+  "original_guard_invoked": false,
+  "new_guard_contract_approved": false,
+  "publish_allowed": false,
+  "holdout_used": false,
+  "prd_acceptance": false,
+  "chunks": [
+    {
+      "archive": "/workspace/PRD32_VQA_ONLY_V2_CHUNK01_20261111_055043_298.zip",
+      "chunk": 1,
+      "target_count": 24,
+      "archive_sha256": "005b7605f653edbafc81a6378462d886fa044eed0e045db50048142e4e39abdd"
+    },
+    {
+      "archive": "/workspace/PRD32_VQA_ONLY_V2_CHUNK02_20261111_055103_298.zip",
+      "chunk": 2,
+      "target_count": 24,
+      "archive_sha256": "8a4c040b14f17e7678098e85dfb360e74d2aefb0ee8104718f15d0f1edf04be8"
+    },
+    {
+      "archive": "/workspace/PRD32_VQA_ONLY_V2_CHUNK03_20261111_055122_298.zip",
+      "chunk": 3,
+      "target_count": 24,
+      "archive_sha256": "a481697fea6b4ebc2e3b246ef842f3238f6cbcee2cfe58f4bb46c64ca660e6ad"
+    },
+    {
+      "archive": "/workspace/PRD32_VQA_ONLY_V2_CHUNK04_20261111_055143_298.zip",
+      "chunk": 4,
+      "target_count": 24,
+      "archive_sha256": "8bc3ded34a4a522c68ca7618268972e0ecd5dcd7b61cedf935aed6bef33cd084"
+    },
+    {
+      "archive": "/workspace/PRD32_VQA_ONLY_V2_CHUNK05_20261111_055203_298.zip",
+      "chunk": 5,
+      "target_count": 24,
+      "archive_sha256": "7c71abb3d4d53870493d41106551cd5ab5cf3bf2c5d1ae0952c525def91855fc"
+    },
+    {
+      "archive": "/workspace/PRD32_VQA_ONLY_V2_CHUNK06_20261111_055223_298.zip",
+      "chunk": 6,
+      "target_count": 24,
+      "archive_sha256": "d5711e3947d22398601d210c491844cfe4af24d7a14e320c401d96290f74676c"
+    },
+    {
+      "archive": "/workspace/PRD32_VQA_ONLY_V2_CHUNK07_20261111_055244_298.zip",
+      "chunk": 7,
+      "target_count": 24,
+      "archive_sha256": "2091103c815912607e696310ede120679d16c09969a8bfff9a211454e297b769"
+    },
+    {
+      "archive": "/workspace/PRD32_VQA_ONLY_V2_CHUNK08_20261111_055304_298.zip",
+      "chunk": 8,
+      "target_count": 3,
+      "archive_sha256": "0282376c16b1c05dd015f536096365546088eb854be8e62452b9295f0af685d7"
+    }
+  ]
+}

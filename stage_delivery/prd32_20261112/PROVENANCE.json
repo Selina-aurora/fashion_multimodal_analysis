@@ -1,0 +1,503 @@
+{
+  "date": "2026-11-12",
+  "status": "PREPARED_NOT_PUSHED",
+  "records": [
+    {
+      "repo_path": "stage_delivery/prd32_20261112/evidence/architecture/AB16_COPY_QUALITY_REVIEW_PENDING.csv",
+      "archive": "arch_ab_v1.zip",
+      "archive_internal_path": "PRD32_ARCHITECTURE_AB_V1/AB16_COPY_QUALITY_REVIEW_PENDING.csv",
+      "size_bytes": 9680,
+      "sha256": "5b818aa12c026ec77cddde36b30ce42475cb03ab49777b9afcbf79c56923d6c2"
+    },
+    {
+      "repo_path": "stage_delivery/prd32_20261112/evidence/architecture/AB16_RULE_COPY_REVIEW_USER_CONFIRMED.csv",
+      "archive": "vqa_only_v2.zip",
+      "archive_internal_path": "PRD32_VQA_ONLY_DEV60_V2/AB16_RULE_COPY_REVIEW_USER_CONFIRMED.csv",
+      "size_bytes": 16422,
+      "sha256": "1f47d1edf19d95729abca42df82c5bafef19934dca10809421daf29197ac8b69"
+    },
+    {
+      "repo_path": "stage_delivery/prd32_20261112/evidence/architecture/ARCHITECTURE_DECISION_STAGE0.md",
+      "archive": "arch_ab_v1.zip",
+      "archive_internal_path": "PRD32_ARCHITECTURE_AB_V1/ARCHITECTURE_DECISION_STAGE0.md",
+      "size_bytes": 1585,
+      "sha256": "3f65c84e32f03774b28b056c8ee1186b2424f129cdb17b107a4a0cec585a9c92"
+    },
+    {
+      "repo_path": "stage_delivery/prd32_20261112/evidence/architecture/ARCH_AB_SUMMARY.json",
+      "archive": "PRD32_ARCH_AB_V1_20261111_042035_220_UPLOAD_THIS.zip",
+      "archive_internal_path": "ARCH_AB_SUMMARY.json",
+      "size_bytes": 1856,
+      "sha256": "e8c6fb151157dff1798c8d29c84847796ab2e66b3f2b86c11b5c69e4d680e6ad"
+    },
+    {
+      "repo_path": "stage_delivery/prd32_20261112/evidence/architecture/ARCH_AB_V1_RESULT_REPORT.md",
+      "archive": "PRD32_ARCH_AB_V1_RESULT_ANALYSIS_20261111_PACKET.zip",
+      "archive_internal_path": "ARCH_AB_V1_RESULT_REPORT.md",
+      "size_bytes": 3856,
+      "sha256": "9d3e518ab08123f490fb306c694452770bdef17969fe978bf348c14fc4c33210"
+    },
+    {
+      "repo_path": "stage_delivery/prd32_20261112/evidence/architecture/OFFLINE_171_ARCHITECTURE_COUNTERFACTUAL_NOT_LIVE.csv",
+      "archive": "arch_ab_v1.zip",
+      "archive_internal_path": "PRD32_ARCHITECTURE_AB_V1/OFFLINE_171_ARCHITECTURE_COUNTERFACTUAL_NOT_LIVE.csv",
+      "size_bytes": 93257,
+      "sha256": "6a01b7da6f32e9a76996653dc63df1f582931630dcbe6afc2a08a88bf49a511c"
+    },
+    {
+      "repo_path": "stage_delivery/prd32_20261112/evidence/architecture/OFFLINE_SUMMARY.json",
+      "archive": "arch_ab_v1.zip",
+      "archive_internal_path": "PRD32_ARCHITECTURE_AB_V1/OFFLINE_SUMMARY.json",
+      "size_bytes": 1472,
+      "sha256": "1097929a73ce66e42573b835b60c12c41e9cf4ab68a1ff869891c85a0fc92dad"
+    },
+    {
+      "repo_path": "stage_delivery/prd32_20261112/evidence/architecture/PAIRED_AB_RESULTS.csv",
+      "archive": "PRD32_ARCH_AB_V1_20261111_042035_220_UPLOAD_THIS.zip",
+      "archive_internal_path": "PAIRED_AB_RESULTS.csv",
+      "size_bytes": 6077,
+      "sha256": "4a3ff6cb00ececa0127718457540cf786a83163a0cad6e7f87f5ce39f1383ba8"
+    },
+    {
+      "repo_path": "stage_delivery/prd32_20261112/evidence/architecture/RAW_EXPERIMENT_SUMMARY.json",
+      "archive": "PRD32_ARCH_AB_V1_RESULT_ANALYSIS_20261111_PACKET.zip",
+      "archive_internal_path": "RAW_EXPERIMENT_SUMMARY.json",
+      "size_bytes": 1855,
+      "sha256": "6efeab19ed73e781e766cdccb03d2b155bc07ea77c806c8c0dd8bbe98c6f65b0"
+    },
+    {
+      "repo_path": "stage_delivery/prd32_20261112/evidence/oracle8/ORACLE8_7_PAIRS_AI_PREFILLED_PENDING_CONFIRMATION.csv",
+      "archive": "PRD32_ORACLE8_AB_V1_RESULT_REVIEW_PACKET.zip",
+      "archive_internal_path": "ORACLE8_7_PAIRS_AI_PREFILLED_PENDING_CONFIRMATION.csv",
+      "size_bytes": 5077,
+      "sha256": "d89bfbbdbfa00461215fa82d4773dbb6950ae9a076e94788f652413b8d3962b7"
+    },
+    {
+      "repo_path": "stage_delivery/prd32_20261112/evidence/oracle8/ORACLE8_7_PAIRS_USER_ACCEPTED.csv",
+      "archive": "PRD32_ORACLE8_NEUTRAL_AB_V2_20261111_UPLOAD_THIS.zip",
+      "archive_internal_path": "PRD32_ORACLE8_NEUTRAL_AB_V2_20261111/reference/ORACLE8_7_PAIRS_USER_ACCEPTED.csv",
+      "size_bytes": 7172,
+      "sha256": "e015c299089239aa25c76cc7cd21302e961602939b5c34eb2c7b112962629e55"
+    },
+    {
+      "repo_path": "stage_delivery/prd32_20261112/evidence/oracle8/ORACLE8_AB_FINDINGS.md",
+      "archive": "PRD32_ORACLE8_AB_V1_RESULT_REVIEW_PACKET.zip",
+      "archive_internal_path": "ORACLE8_AB_FINDINGS.md",
+      "size_bytes": 3563,
+      "sha256": "45d2c1e428f4a7d0d063814383812a94e7cc7a946dcfe914991a70c9f8756ef7"
+    },
+    {
+      "repo_path": "stage_delivery/prd32_20261112/evidence/performance/DECODE_GPU_PER_CALL.json",
+      "archive": "PRD32_DECODE_GPU_PROBE_20261111_040141_UPLOAD_THIS.zip",
+      "archive_internal_path": "per_call.json",
+      "size_bytes": 17994,
+      "sha256": "56a1adc3cd855c9368d685e49954240c0dcc18629f8e7260110bf415d741c186"
+    },
+    {
+      "repo_path": "stage_delivery/prd32_20261112/evidence/performance/DECODE_GPU_SUMMARY.json",
+      "archive": "PRD32_DECODE_GPU_PROBE_20261111_040141_UPLOAD_THIS.zip",
+      "archive_internal_path": "summary.json",
+      "size_bytes": 797,
+      "sha256": "7709e4f3d9c6af305f45a69463b2d81e4eb72f6e690f797c049d0d799314f8ea"
+    },
+    {
+      "repo_path": "stage_delivery/prd32_20261112/evidence/performance/PERFORMANCE_ROOT_CAUSE.md",
+      "archive": "PRD32_PERFORMANCE_ROOT_CAUSE_20261111.zip",
+      "archive_internal_path": "PRD32_PERF_ROOT_CAUSE_20261111/PRD32_完整性能剖分与架构决策.md",
+      "size_bytes": 10676,
+      "sha256": "e400b9fab1a051b2cb262f351a5a2a7f821dbc3b26d526553719c0daa54453ba"
+    },
+    {
+      "repo_path": "stage_delivery/prd32_20261112/evidence/performance/PERFORMANCE_SUMMARY.json",
+      "archive": "PRD32_PERFORMANCE_ROOT_CAUSE_20261111.zip",
+      "archive_internal_path": "PRD32_PERF_ROOT_CAUSE_20261111/PERFORMANCE_SUMMARY.json",
+      "size_bytes": 3671,
+      "sha256": "37b9628528f601439080ecfbc724a04dc077d756573ef76fa0b12a73af8d453d"
+    },
+    {
+      "repo_path": "stage_delivery/prd32_20261112/evidence/performance/PER_CALL_513_TIMING.csv",
+      "archive": "PRD32_PERFORMANCE_ROOT_CAUSE_20261111.zip",
+      "archive_internal_path": "PRD32_PERF_ROOT_CAUSE_20261111/PER_CALL_513_TIMING.csv",
+      "size_bytes": 95983,
+      "sha256": "7f20eaeeeada965070e84c12bc9f8c6c606127a22b540dd3c280c6dbea011a18"
+    },
+    {
+      "repo_path": "stage_delivery/prd32_20261112/evidence/vqa_concise/AB_SUMMARY.json",
+      "archive": "PRD32_VQA_CONCISE_AB_V2_ANALYSIS_AND_REVIEW_20261111.zip",
+      "archive_internal_path": "AB_SUMMARY.json",
+      "size_bytes": 4644,
+      "sha256": "25eb0b95fc8fdb7e4518e19374f16de71e92958f094a059493ce51230cbc55ff"
+    },
+    {
+      "repo_path": "stage_delivery/prd32_20261112/evidence/vqa_concise/PER_CASE_RESULTS.jsonl",
+      "archive": "PRD32_VQA_CONCISE_AB_V2_ANALYSIS_AND_REVIEW_20261111.zip",
+      "archive_internal_path": "PER_CASE_RESULTS.jsonl",
+      "size_bytes": 87576,
+      "sha256": "048686ad1d897beb325cf8119b958358f9a620e74ce2761d433876991cf97daa"
+    },
+    {
+      "repo_path": "stage_delivery/prd32_20261112/evidence/vqa_concise/V1_34_REVIEW_USER_CONFIRMED_ASSISTED.csv",
+      "archive": "vqa_concise_ab_v2.zip",
+      "archive_internal_path": "PRD32_VQA_CONCISE_AB_V2_20261111/V1_34_REVIEW_USER_CONFIRMED_ASSISTED.csv",
+      "size_bytes": 7290,
+      "sha256": "14db1d61faa662806ff7f0858bce1e3956f1be3ac4f30ec7996eaabfb15356cf"
+    },
+    {
+      "repo_path": "stage_delivery/prd32_20261112/evidence/vqa_concise/V2_34_USER_CONFIRMED_DEVELOPMENT_REVIEW.csv",
+      "archive": "vqa_multitype_fixed.zip",
+      "archive_internal_path": "PRD32_VQA_MULTITYPE_DEV60_PILOT_V1_20261111/V2_34_USER_CONFIRMED_DEVELOPMENT_REVIEW.csv",
+      "size_bytes": 28563,
+      "sha256": "5b938b0c846e59095bec4ea9f2c3522f05eeef0e76450b5cd5f1e6771f79257e"
+    },
+    {
+      "repo_path": "stage_delivery/prd32_20261112/evidence/vqa_concise/VQA_V2_CRITICAL_CASES.csv",
+      "archive": "PRD32_VQA_CONCISE_AB_V2_ANALYSIS_AND_REVIEW_20261111.zip",
+      "archive_internal_path": "VQA_V2_CRITICAL_CASES.csv",
+      "size_bytes": 7232,
+      "sha256": "e0fa14ca37b38a939f0ea5c1c2468d1e6203085e0a66c0339463d308093b8506"
+    },
+    {
+      "repo_path": "stage_delivery/prd32_20261112/evidence/vqa_concise/VQA_V2_GPU_FINDINGS_AND_DECISION.md",
+      "archive": "PRD32_VQA_CONCISE_AB_V2_ANALYSIS_AND_REVIEW_20261111.zip",
+      "archive_internal_path": "VQA_V2_GPU_FINDINGS_AND_DECISION.md",
+      "size_bytes": 3542,
+      "sha256": "0439642fdf8fafc4098edf61197593997d0dc9b0dd9b0b8d7d9a3e5a290166e9"
+    },
+    {
+      "repo_path": "stage_delivery/prd32_20261112/evidence/vqa_multitype/PER_QUESTION_RESULTS.jsonl",
+      "archive": "PRD32_VQA_MULTITYPE_V1_RESULT_REVIEW_PACKET.zip",
+      "archive_internal_path": "PER_QUESTION_RESULTS.jsonl",
+      "size_bytes": 57878,
+      "sha256": "462f2122b010b019f842be8e18e753ef9df73e8f554cc2a92a1c238448bd3334"
+    },
+    {
+      "repo_path": "stage_delivery/prd32_20261112/evidence/vqa_multitype/PREFLIGHT.json",
+      "archive": "PRD32_VQA_MULTITYPE_V1_RESULT_REVIEW_PACKET.zip",
+      "archive_internal_path": "PREFLIGHT.json",
+      "size_bytes": 1153,
+      "sha256": "9cf8d68c8cf4e85770fb51640989b07e61004e9629d18862bb6939cd671a903e"
+    },
+    {
+      "repo_path": "stage_delivery/prd32_20261112/evidence/vqa_multitype/RESULT_AUDIT_AND_DECISION.md",
+      "archive": "PRD32_VQA_MULTITYPE_V1_RESULT_REVIEW_PACKET.zip",
+      "archive_internal_path": "RESULT_AUDIT_AND_DECISION.md",
+      "size_bytes": 3080,
+      "sha256": "8a6c063434b7441753352c813afa622a9cad26d823562cc21b476ef8a9bc0a1a"
+    },
+    {
+      "repo_path": "stage_delivery/prd32_20261112/evidence/vqa_multitype/SUMMARY.json",
+      "archive": "PRD32_VQA_MULTITYPE_V1_RESULT_REVIEW_PACKET.zip",
+      "archive_internal_path": "SUMMARY.json",
+      "size_bytes": 1302,
+      "sha256": "2aeaea384a158ed2c9e2dc30dd4396aee477c21e253fcb99cf6f3c30463581b2"
+    },
+    {
+      "repo_path": "stage_delivery/prd32_20261112/evidence/vqa_multitype/VQA_MULTITYPE_GUARD_SHADOW_PROTOCOL.md",
+      "archive": "vqa_multitype_fixed.zip",
+      "archive_internal_path": "PRD32_VQA_MULTITYPE_DEV60_PILOT_V1_20261111/VQA_MULTITYPE_GUARD_SHADOW_PROTOCOL.md",
+      "size_bytes": 1093,
+      "sha256": "ad77f7da894926aff91a45780bac1170dfd6606b0aaeeaa76f644a42e215a5bb"
+    },
+    {
+      "repo_path": "stage_delivery/prd32_20261112/evidence/vqa_only/ALL171_LATENCY_AND_SHADOW_FLAGS.jsonl",
+      "archive": "PRD32_VQA_ONLY_V2_ALL171_ANALYSIS_20261111.zip",
+      "archive_internal_path": "ALL171_LATENCY_AND_SHADOW_FLAGS.jsonl",
+      "size_bytes": 162278,
+      "sha256": "ece3d69296d2f19880687884cf20c9bf0c9b4eddc52aecf6570acd1a0d85a3dd"
+    },
+    {
+      "repo_path": "stage_delivery/prd32_20261112/evidence/vqa_only/ALL171_SUMMARY.json",
+      "archive": "PRD32_VQA_ONLY_DEV60_V2_ALL171_UPLOAD_THIS_20261111_055318_298.zip",
+      "archive_internal_path": "ALL171_SUMMARY.json",
+      "size_bytes": 2634,
+      "sha256": "cdf4663063fde9d1d04cc292d23e46982d35300dcdec6f70e2b06e991d95e11c"
+    },
+    {
+      "repo_path": "stage_delivery/prd32_20261112/evidence/vqa_only/ALL171_VQA_ONLY_PER_TARGET.jsonl",
+      "archive": "PRD32_VQA_ONLY_DEV60_V2_ALL171_UPLOAD_THIS_20261111_055318_298.zip",
+      "archive_internal_path": "ALL171_VQA_ONLY_PER_TARGET.jsonl",
+      "size_bytes": 122211,
+      "sha256": "38dd4f45aba2b992c709c22f170809c023f900e8f9afbc1175486bf41e2a04d5"
+    },
+    {
+      "repo_path": "stage_delivery/prd32_20261112/evidence/vqa_only/AUDIT_METRICS.json",
+      "archive": "PRD32_VQA_ONLY_V2_ALL171_ANALYSIS_20261111.zip",
+      "archive_internal_path": "AUDIT_METRICS.json",
+      "size_bytes": 1155,
+      "sha256": "633decae0e8576def67cae5911e613e836a402b97ad9a3be88932730f7bf84f5"
+    },
+    {
+      "repo_path": "stage_delivery/prd32_20261112/evidence/vqa_only/PERFORMANCE_FINDINGS.md",
+      "archive": "PRD32_VQA_ONLY_V2_ALL171_ANALYSIS_20261111.zip",
+      "archive_internal_path": "PERFORMANCE_FINDINGS.md",
+      "size_bytes": 3662,
+      "sha256": "5e6e49503bdf58d9fd6a5b71b501ae18b01866c660c08db4eae7507381737558"
+    },
+    {
+      "repo_path": "stage_delivery/prd32_20261112/evidence/vqa_only/VQA_ONLY_GUARD_CONTRACT_DRAFT.md",
+      "archive": "PRD32_VQA_ONLY_V2_ALL171_ANALYSIS_20261111.zip",
+      "archive_internal_path": "VQA_ONLY_GUARD_CONTRACT_DRAFT.md",
+      "size_bytes": 1825,
+      "sha256": "59b9aa240090e4e2643998bfcfb07634ed5f60f9c00798478ef519e970b106ce"
+    },
+    {
+      "repo_path": "stage_delivery/prd32_20261112/repro/arch_ab_common.py",
+      "archive": "arch_ab_v1.zip",
+      "archive_internal_path": "PRD32_ARCHITECTURE_AB_V1/arch_ab_common.py",
+      "size_bytes": 3339,
+      "sha256": "0d7446bd705d962873a4661d25de35236fd50212d97798ec2dbfd09d1dfc1949"
+    },
+    {
+      "repo_path": "stage_delivery/prd32_20261112/repro/build_offline_counterfactual.py",
+      "archive": "arch_ab_v1.zip",
+      "archive_internal_path": "PRD32_ARCHITECTURE_AB_V1/build_offline_counterfactual.py",
+      "size_bytes": 5684,
+      "sha256": "c2c75bb449501b798aa98f2e21e2192a1f19e21dd300582ba66b5b0a5de85ba8"
+    },
+    {
+      "repo_path": "stage_delivery/prd32_20261112/repro/data/FIXED_16_TARGETS_32_QUESTIONS.json",
+      "archive": "vqa_multitype_fixed.zip",
+      "archive_internal_path": "PRD32_VQA_MULTITYPE_DEV60_PILOT_V1_20261111/FIXED_16_TARGETS_32_QUESTIONS.json",
+      "size_bytes": 24680,
+      "sha256": "7a188040c5e744c4065c5bb54fe63a924a288b183683ef4b0be3abf05e774026"
+    },
+    {
+      "repo_path": "stage_delivery/prd32_20261112/repro/data/FIXED_SELECTION_34.json",
+      "archive": "vqa_concise_ab_v2.zip",
+      "archive_internal_path": "PRD32_VQA_CONCISE_AB_V2_20261111/FIXED_SELECTION_34.json",
+      "size_bytes": 21933,
+      "sha256": "2baddf1d249b252a7523f27d3bb62e966231df593fe17a53d281e6044a856b5f"
+    },
+    {
+      "repo_path": "stage_delivery/prd32_20261112/repro/data/ORACLE8_CHAT_CONFIRMED_ASSISTED_DEV_NOT_BLIND_GT.json",
+      "archive": "prd32_oracle8_ab_v1.zip",
+      "archive_internal_path": "PRD32_ORACLE8_AB_V1_20261111/ORACLE8_CHAT_CONFIRMED_ASSISTED_DEV_NOT_BLIND_GT.json",
+      "size_bytes": 10192,
+      "sha256": "b68fc1e69a179ecf5251349e454b30c08642d708405c95a3445c4c3e4980acf6"
+    },
+    {
+      "repo_path": "stage_delivery/prd32_20261112/repro/data/ORACLE8_INPUT_HASHES.json",
+      "archive": "prd32_oracle8_ab_v1.zip",
+      "archive_internal_path": "PRD32_ORACLE8_AB_V1_20261111/ORACLE8_INPUT_HASHES.json",
+      "size_bytes": 359,
+      "sha256": "e447114dea70fc0a7ea8ea7463e4f42927d6e25eb66adf7fc92937c47586961d"
+    },
+    {
+      "repo_path": "stage_delivery/prd32_20261112/repro/data/PREVIOUS_V1_GPU_34.json",
+      "archive": "vqa_concise_ab_v2.zip",
+      "archive_internal_path": "PRD32_VQA_CONCISE_AB_V2_20261111/PREVIOUS_V1_GPU_34.json",
+      "size_bytes": 17990,
+      "sha256": "3f7427cdc7752c11e81742ecb006f9c2ea25efef05d0e161a8fe9a803b51c184"
+    },
+    {
+      "repo_path": "stage_delivery/prd32_20261112/repro/data/VQA_FROZEN_BASELINE_171.json",
+      "archive": "vqa_only_v2.zip",
+      "archive_internal_path": "PRD32_VQA_ONLY_DEV60_V2/VQA_FROZEN_BASELINE_171.json",
+      "size_bytes": 105802,
+      "sha256": "f6831878d299a2f770db8de5eae9d420f841433a2c75bb407d1f716c95189b3b"
+    },
+    {
+      "repo_path": "stage_delivery/prd32_20261112/repro/data/full_dev60_171_manifest_v1.json",
+      "archive": "vqa_only_v2.zip",
+      "archive_internal_path": "PRD32_VQA_ONLY_DEV60_V2/full_dev60_171_manifest_v1.json",
+      "size_bytes": 55033,
+      "sha256": "eff0be8fb8e53d0ed7f8f228e668571b2461fa896c376545de72f65e252482f9"
+    },
+    {
+      "repo_path": "stage_delivery/prd32_20261112/repro/gpu_decode_probe.py",
+      "archive": "PRD32_PERFORMANCE_ROOT_CAUSE_20261111.zip",
+      "archive_internal_path": "PRD32_PERF_ROOT_CAUSE_20261111/gpu_decode_probe.py",
+      "size_bytes": 9892,
+      "sha256": "05c1919cc158c8cff62b59bb70720d6d45f30d04b27ddc2978ef3a73ee59ebe2"
+    },
+    {
+      "repo_path": "stage_delivery/prd32_20261112/repro/joint_eval_stage2_dev60.py",
+      "archive": "arch_ab_v1.zip",
+      "archive_internal_path": "PRD32_ARCHITECTURE_AB_V1/joint_eval_stage2_dev60.py",
+      "size_bytes": 12289,
+      "sha256": "0de0649a135a90017b1aaa8dfe6da6421525ae694fb5c4e5a728e1a967c779cf"
+    },
+    {
+      "repo_path": "stage_delivery/prd32_20261112/repro/live_observer_v4.py",
+      "archive": "arch_ab_v1.zip",
+      "archive_internal_path": "PRD32_ARCHITECTURE_AB_V1/live_observer_v4.py",
+      "size_bytes": 9232,
+      "sha256": "9abf76c436acfc14e682d806daf5b5144233019e1e6ac19edf1264e30dab3a7f"
+    },
+    {
+      "repo_path": "stage_delivery/prd32_20261112/repro/neutral_ab/README_FIRST.md",
+      "archive": "PRD32_ORACLE8_NEUTRAL_AB_V2_20261111_UPLOAD_THIS.zip",
+      "archive_internal_path": "PRD32_ORACLE8_NEUTRAL_AB_V2_20261111/README_FIRST.md",
+      "size_bytes": 3413,
+      "sha256": "cf850ecfe1fc636666d8942a427f9be2b905944c1f4e60972739af4913b329d8"
+    },
+    {
+      "repo_path": "stage_delivery/prd32_20261112/repro/neutral_ab/build_review.py",
+      "archive": "PRD32_ORACLE8_NEUTRAL_AB_V2_20261111_UPLOAD_THIS.zip",
+      "archive_internal_path": "PRD32_ORACLE8_NEUTRAL_AB_V2_20261111/build_review.py",
+      "size_bytes": 5907,
+      "sha256": "c8e3ddfcb261c0db8197603b57c1575373ea66069e57b97a21f89a6f357b10a0"
+    },
+    {
+      "repo_path": "stage_delivery/prd32_20261112/repro/neutral_ab/manifest.csv",
+      "archive": "PRD32_ORACLE8_NEUTRAL_AB_V2_20261111_UPLOAD_THIS.zip",
+      "archive_internal_path": "PRD32_ORACLE8_NEUTRAL_AB_V2_20261111/manifest.csv",
+      "size_bytes": 5083,
+      "sha256": "b6f4bad57290c71cd1d79159143f61336642d2eed992d85d02427b0ede34b69e"
+    },
+    {
+      "repo_path": "stage_delivery/prd32_20261112/repro/neutral_ab/manifest.json",
+      "archive": "PRD32_ORACLE8_NEUTRAL_AB_V2_20261111_UPLOAD_THIS.zip",
+      "archive_internal_path": "PRD32_ORACLE8_NEUTRAL_AB_V2_20261111/manifest.json",
+      "size_bytes": 7048,
+      "sha256": "a6314cd9488a653c921357b9aeebfbe2b4bd3703e18165e656dfffa092484d21"
+    },
+    {
+      "repo_path": "stage_delivery/prd32_20261112/repro/neutral_ab/marker_control_integrity.json",
+      "archive": "PRD32_ORACLE8_NEUTRAL_AB_V2_20261111_UPLOAD_THIS.zip",
+      "archive_internal_path": "PRD32_ORACLE8_NEUTRAL_AB_V2_20261111/marker_control_integrity.json",
+      "size_bytes": 2000,
+      "sha256": "deff2a5c85ceeea6d49a9b82e010e0a5eaba060613fa3ca2eb51a9d44d04556e"
+    },
+    {
+      "repo_path": "stage_delivery/prd32_20261112/repro/neutral_ab/run_neutral_ab.py",
+      "archive": "PRD32_ORACLE8_NEUTRAL_AB_V2_20261111_UPLOAD_THIS.zip",
+      "archive_internal_path": "PRD32_ORACLE8_NEUTRAL_AB_V2_20261111/run_neutral_ab.py",
+      "size_bytes": 5125,
+      "sha256": "0d2f79aeb8d3421e01bcc060543cda8b1fe2de11217a54de8fa7409643cb7d4d"
+    },
+    {
+      "repo_path": "stage_delivery/prd32_20261112/repro/neutral_ab/validate_inputs.py",
+      "archive": "PRD32_ORACLE8_NEUTRAL_AB_V2_20261111_UPLOAD_THIS.zip",
+      "archive_internal_path": "PRD32_ORACLE8_NEUTRAL_AB_V2_20261111/validate_inputs.py",
+      "size_bytes": 1591,
+      "sha256": "788a3610db496178e4c4880b4a7ef4d7ff3efaab1b2745cf9b9467bb1b685164"
+    },
+    {
+      "repo_path": "stage_delivery/prd32_20261112/repro/producer_contract_v7.py",
+      "archive": "arch_ab_v1.zip",
+      "archive_internal_path": "PRD32_ARCHITECTURE_AB_V1/producer_contract_v7.py",
+      "size_bytes": 9031,
+      "sha256": "9aaf16109e560dfc1bab532a5fae71c0f5b577b5a5247796ce585fe5c2b03e7a"
+    },
+    {
+      "repo_path": "stage_delivery/prd32_20261112/repro/run_all_vqa_only_dev60_v2.py",
+      "archive": "vqa_only_v2.zip",
+      "archive_internal_path": "PRD32_VQA_ONLY_DEV60_V2/run_all_vqa_only_dev60_v2.py",
+      "size_bytes": 9159,
+      "sha256": "db90ef2fb7ef54eac6a31bfe74b1aeba6eb0651e2c51c1a2e54c794e12e8c515"
+    },
+    {
+      "repo_path": "stage_delivery/prd32_20261112/repro/run_architecture_ab_v1.py",
+      "archive": "arch_ab_v1.zip",
+      "archive_internal_path": "PRD32_ARCHITECTURE_AB_V1/run_architecture_ab_v1.py",
+      "size_bytes": 20398,
+      "sha256": "912361c2d73cb8957056252b1b40183c5774aec9481e247ca244105e9a29ec3d"
+    },
+    {
+      "repo_path": "stage_delivery/prd32_20261112/repro/run_live_probe_v4.py",
+      "archive": "arch_ab_v1.zip",
+      "archive_internal_path": "PRD32_ARCHITECTURE_AB_V1/run_live_probe_v4.py",
+      "size_bytes": 12229,
+      "sha256": "5fa9d2bfddce424b68d26e5e260db2010a510f6fadb81e7595ef36c683c3a001"
+    },
+    {
+      "repo_path": "stage_delivery/prd32_20261112/repro/run_oracle8_ab_v1.py",
+      "archive": "prd32_oracle8_ab_v1.zip",
+      "archive_internal_path": "PRD32_ORACLE8_AB_V1_20261111/run_oracle8_ab_v1.py",
+      "size_bytes": 22455,
+      "sha256": "9b9983a840e4b90eadb575472fa0525fedeeb81ff6282e7dd9149246b1ae470e"
+    },
+    {
+      "repo_path": "stage_delivery/prd32_20261112/repro/run_v5_runtime_producer_v7.py",
+      "archive": "arch_ab_v1.zip",
+      "archive_internal_path": "PRD32_ARCHITECTURE_AB_V1/run_v5_runtime_producer_v7.py",
+      "size_bytes": 10102,
+      "sha256": "bb279a8262291e7f8b3705f30560c83d754e1d0d3a72e5682e99fcb6a9b003c9"
+    },
+    {
+      "repo_path": "stage_delivery/prd32_20261112/repro/run_vqa_concise_ab_v2.py",
+      "archive": "vqa_concise_ab_v2.zip",
+      "archive_internal_path": "PRD32_VQA_CONCISE_AB_V2_20261111/run_vqa_concise_ab_v2.py",
+      "size_bytes": 29937,
+      "sha256": "b5142148df9456502cea88ea6d680461c9ad673a66f222ca5ca0eb6d7ab6c9b6"
+    },
+    {
+      "repo_path": "stage_delivery/prd32_20261112/repro/run_vqa_multitype_pilot_v1.py",
+      "archive": "vqa_multitype_fixed.zip",
+      "archive_internal_path": "PRD32_VQA_MULTITYPE_DEV60_PILOT_V1_20261111/run_vqa_multitype_pilot_v1.py",
+      "size_bytes": 22124,
+      "sha256": "744f5deb636e486a4c3355889ea2ee876a3371fd2f96237993c0846d5db97e5b"
+    },
+    {
+      "repo_path": "stage_delivery/prd32_20261112/repro/run_vqa_only_dev60_v2.py",
+      "archive": "vqa_only_v2.zip",
+      "archive_internal_path": "PRD32_VQA_ONLY_DEV60_V2/run_vqa_only_dev60_v2.py",
+      "size_bytes": 12297,
+      "sha256": "a931b8193982dcbada11d52c48dc4a15fd41e95c0141894e00f52223d57f1b9d"
+    },
+    {
+      "repo_path": "stage_delivery/prd32_20261112/repro/stage1_verified_runtime.py",
+      "archive": "arch_ab_v1.zip",
+      "archive_internal_path": "PRD32_ARCHITECTURE_AB_V1/stage1_verified_runtime.py",
+      "size_bytes": 24104,
+      "sha256": "bffdb69c23f281204f5265f693f0b069013d2b766494ffbf0b014d5170890eb2"
+    },
+    {
+      "repo_path": "stage_delivery/prd32_20261112/repro/tests/test_arch_ab_v1.py",
+      "archive": "arch_ab_v1.zip",
+      "archive_internal_path": "PRD32_ARCHITECTURE_AB_V1/tests/test_arch_ab_v1.py",
+      "size_bytes": 3283,
+      "sha256": "271d558b64c7e9af7fdfeb360582ff927a868ee2195a07c07272f467d8876ff3"
+    },
+    {
+      "repo_path": "stage_delivery/prd32_20261112/repro/tests/test_concise_v2.py",
+      "archive": "vqa_concise_ab_v2.zip",
+      "archive_internal_path": "PRD32_VQA_CONCISE_AB_V2_20261111/tests/test_concise_v2.py",
+      "size_bytes": 1988,
+      "sha256": "008275600de81c9979d8b7f097db193bfd4d06b6b698c504af580b6274b776e7"
+    },
+    {
+      "repo_path": "stage_delivery/prd32_20261112/repro/tests/test_multitype_plan.py",
+      "archive": "vqa_multitype_fixed.zip",
+      "archive_internal_path": "PRD32_VQA_MULTITYPE_DEV60_PILOT_V1_20261111/tests/test_multitype_plan.py",
+      "size_bytes": 1190,
+      "sha256": "16a207e71cce0c06957769d9c5861b779e85c7363e2f3c4d797dbc97a70d75a0"
+    },
+    {
+      "repo_path": "stage_delivery/prd32_20261112/repro/tests/test_multitype_prompt.py",
+      "archive": "vqa_multitype_fixed.zip",
+      "archive_internal_path": "PRD32_VQA_MULTITYPE_DEV60_PILOT_V1_20261111/tests/test_multitype_prompt.py",
+      "size_bytes": 1530,
+      "sha256": "01a323e4f5c33165c6925b723daaf3ed6010913d0f2cbe2ec99dcd2be96426da"
+    },
+    {
+      "repo_path": "stage_delivery/prd32_20261112/repro/tests/test_oracle8_contract.py",
+      "archive": "prd32_oracle8_ab_v1.zip",
+      "archive_internal_path": "PRD32_ORACLE8_AB_V1_20261111/tests/test_oracle8_contract.py",
+      "size_bytes": 2257,
+      "sha256": "6505f9752556872c5572a600e45b26a2951d324a74f364c87a440a0a48e16c44"
+    },
+    {
+      "repo_path": "stage_delivery/prd32_20261112/repro/tests/test_vqa_only_v2.py",
+      "archive": "vqa_only_v2.zip",
+      "archive_internal_path": "PRD32_VQA_ONLY_DEV60_V2/tests/test_vqa_only_v2.py",
+      "size_bytes": 4073,
+      "sha256": "cac3fec686a47d58dc634c8bcc76ce22806ef54498c77d8f76983da137423cb6"
+    },
+    {
+      "repo_path": "stage_delivery/prd32_20261112/repro/verified_guard_loader.py",
+      "archive": "arch_ab_v1.zip",
+      "archive_internal_path": "PRD32_ARCHITECTURE_AB_V1/verified_guard_loader.py",
+      "size_bytes": 922,
+      "sha256": "246bd613bd4abd606f414dffa82e274ac306385b3a4e5553031be3cd9d093d1b"
+    },
+    {
+      "repo_path": "stage_delivery/prd32_20261112/repro/vqa_route_contract.py",
+      "archive": "vqa_only_v2.zip",
+      "archive_internal_path": "PRD32_VQA_ONLY_DEV60_V2/vqa_route_contract.py",
+      "size_bytes": 1686,
+      "sha256": "d7672b73613bbcdc92eb5665c1a4f0c98e75b9969b707e21195c987dade66857"
+    }
+  ]
+}

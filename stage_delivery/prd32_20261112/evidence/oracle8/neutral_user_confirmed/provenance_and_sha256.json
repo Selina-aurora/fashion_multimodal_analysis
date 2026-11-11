@@ -1,0 +1,28 @@
+{
+  "schema": "prd32_oracle8_neutral_user_confirmed_v1",
+  "confirmation_date": "2026-11-12",
+  "confirmation_channel": "current_chat_user_explicitly_accepted_all_five_AI_prefilled_results",
+  "case_ids": [
+    "03",
+    "04",
+    "05",
+    "06",
+    "07"
+  ],
+  "gpu_results_count": 10,
+  "user_confirmed_count": 5,
+  "review_status": "USER_CONFIRMED_CHAT_REVIEW",
+  "independent_blind_GT": false,
+  "production_release_allowed": false,
+  "experimental_status": "SHADOW_BLOCKED",
+  "source_files": {
+    "ai_draft_csv_sha256": "af2631c3cca73352f6a662ccf57f771b20a7a38c9fedce708e727054da3f1929",
+    "gpu_results_jsonl_sha256": "eb1a6cf5d17ab610c104b2988f2de6bf86ba71a29b1bb93ffc1dfe8bb6c7d85e"
+  },
+  "files_sha256": {
+    "ORACLE8_NEUTRAL_5_PAIRS_USER_CONFIRMED.html": "66a71e89a8c3438c564992882b7eec42473048ddd498baba6c4c397c73d981be",
+    "ORACLE8_NEUTRAL_5_PAIRS_USER_CONFIRMED.csv": "bdef825cd911eec4302fd8ba2447bf46c7160d62bd13f822b60d2a396b855180",
+    "neutral_results_GPU_ORIGINAL.jsonl": "eb1a6cf5d17ab610c104b2988f2de6bf86ba71a29b1bb93ffc1dfe8bb6c7d85e",
+    "README_用户确认与实验结论.md": "e8c896414ee071f4e6e05653acfa4679c05fc3d133fdcdaa9432e1fe56069f4b"
+  }
+}

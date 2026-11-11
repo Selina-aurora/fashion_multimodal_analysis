@@ -1,0 +1,6 @@
+﻿case_id,verdict,error_tags,note,human_confirmed,independent_blind_GT,production_release_allowed,review_source
+03,两者均有实质错误,目标绑定,图片中红框/青框均标在脚部黑色露趾凉鞋上，而两次回答都写成“黑白条纹”，明显取用了人物上衣的颜色和条纹，未描述被标记的鞋子。两种框色均发生跨实例目标绑定错误；不能把青框回答更详细视为质量提升。,True,False,False,USER_CONFIRMED_IN_CHAT_AFTER_AI_VISUAL_PREFILL_2026-11-12
+04,红框更好,其他,两组均定位到人物脸部的深色太阳镜/墨镜，颜色方向基本正确。镜片外形更接近圆润椭圆/圆角形而非严格矩形，两组对形状都有过度确定的描述。红框版的黑色镜片和镜框描述与可见证据更接近；青框版额外断言“两条镜腿均为黑色”，且称蓝色标记框遮挡到无法看清镜片，图中并无足够证据支持。红框相对更稳妥，不等于完全正确。,True,False,False,USER_CONFIRMED_IN_CHAT_AFTER_AI_VISUAL_PREFILL_2026-11-12
+05,两者均有实质错误,Logo/文字遗漏,被标记目标是白色无袖上衣，胸前有清晰、醒目的黑色“miu miu”字样。两组正确识别白色主体，却均没有报告该文字图案；红框直接说“没有明显的图案”与图像矛盾，青框对图案“无法确定”也低估了可见证据。两组均存在 Logo/文字遗漏，不能认定青框更正确。,True,False,False,USER_CONFIRMED_IN_CHAT_AFTER_AI_VISUAL_PREFILL_2026-11-12
+06,红框更好,材质臆测,红框/青框指向同一件深色（近黑色）短裤，红框给出的白T恤+运动鞋日常搭配具体且合理。青框在相同建议外新增“牛仔短裤”的材质判断；当前低清晰度照片无法可靠证明其面料属于牛仔，且提问要求不要假设看不见的材质或工艺。因此红框更符合证据约束，青框存在无充分依据的材质具体化。,True,False,False,USER_CONFIRMED_IN_CHAT_AFTER_AI_VISUAL_PREFILL_2026-11-12
+07,青框更好,目标绑定;其他,框内目标是黑色手袋，带可见的金色扣件/金属连接部件，袋面没有清晰可见的印花图案。红框答“黑色和红色”，红色很可能来自旁边红色裙/裤而非手袋，且没有回答是否有图案；青框说“黑色和金色”更符合手袋主体与金属件，但“有明显的可见图案”没有充分依据，可能将五金装饰误当印花/图案。青框在颜色与目标属性上相对更好，仍有实质缺陷。,True,False,False,USER_CONFIRMED_IN_CHAT_AFTER_AI_VISUAL_PREFILL_2026-11-12

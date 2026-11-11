@@ -1,0 +1,1369 @@
+﻿case_id,instance_id,baseline_measured_ms,v5_measured_ms,tags_measured_ms,vqa_measured_ms,copy_measured_ms,other_measured_ms,vqa_only_offline_estimate_ms,merchant_tags_copy_offline_estimate_ms,merchant_tags_template_offline_lower_bound_estimate_ms,tags_tokens,vqa_tokens,copy_tokens,tags_response,vqa_response,baseline_copy,template_copy,template_status,template_copy_chars,template_had_debug_phrase,baseline_had_debug_phrase,baseline_guard_status
+fresh_dev_001,pred_0000,2237.485,25.445,1203.554,184.202,820.991,28.738,212.94,2053.283,1232.292,42,2,27,"```json
+{
+  ""category"": ""top"",
+  ""primary_color"": ""白色"",
+  ""pattern"": ""纯色"",
+  ""visible_design"": ""圆领;肩带""
+}
+```",白色,白色无袖背心，胸前印有“MIU MIU”字样，肩带设计简洁，平铺展示。,这款上衣的可见特征包括：以白色为主色调；整体呈纯色风格；可见圆领;肩带细节。,TEMPLATE_DRAFT_NEEDS_HUMAN_REVIEW,38,False,False,REVIEW_REQUIRED_NOT_RELEASED
+fresh_dev_001,pred_0001,2258.102,42.061,1211.168,184.524,817.133,45.277,229.801,2073.578,1256.445,42,2,27,"```json
+{
+  ""category"": ""top"",
+  ""primary_color"": ""白色"",
+  ""pattern"": ""纯色"",
+  ""visible_design"": ""圆领;肩带""
+}
+```",白色,白色无袖背心，胸前印有“MIU MIU”字样，肩带设计简洁，平铺展示。,这款上衣的可见特征包括：以白色为主色调；整体呈纯色风格；可见圆领;肩带细节。,TEMPLATE_DRAFT_NEEDS_HUMAN_REVIEW,38,False,False,REVIEW_REQUIRED_NOT_RELEASED
+fresh_dev_002,pred_0000,2804.928,86.369,1375.946,281.21,1056.732,91.04,372.25,2523.718,1466.986,46,4,34,"```json
+{
+  ""category"": ""top"",
+  ""primary_color"": ""白色"",
+  ""pattern"": ""波点"",
+  ""visible_design"": ""圆领;短袖;无肩带""
+}
+```",白色和黑色,红色边框内展示的上衣为白色底，带有黑色波点图案，袖口和领口有蕾丝装饰，整体设计清新简约。,这款上衣的可见特征包括：以白色为主色调；可见波点图案；可见圆领;短袖;无肩带细节。,TEMPLATE_DRAFT_NEEDS_HUMAN_REVIEW,41,False,True,REVIEW_REQUIRED_NOT_RELEASED
+fresh_dev_002,pred_0001,2469.472,88.21,1286.521,231.735,858.812,92.404,324.139,2237.737,1378.925,42,2,27,"```json
+{
+  ""category"": ""top"",
+  ""primary_color"": ""白色"",
+  ""pattern"": ""波点"",
+  ""visible_design"": ""圆领;短袖""
+}
+```",黑色,黑色波点短袖上衣，圆点分布均匀，袖口有蕾丝装饰，衣摆自然垂落。,这款上衣的可见特征包括：以白色为主色调；可见波点图案；可见圆领;短袖细节。,TEMPLATE_DRAFT_NEEDS_HUMAN_REVIEW,37,False,False,REVIEW_REQUIRED_NOT_RELEASED
+fresh_dev_003,pred_0000,2301.785,97.214,1204.725,183.778,812.347,100.935,284.713,2118.007,1305.66,42,2,27,"```json
+{
+  ""category"": ""top"",
+  ""primary_color"": ""白色"",
+  ""pattern"": ""纯色"",
+  ""visible_design"": ""圆领;短袖""
+}
+```",白色,红色边框内展示的是一件纯白色T恤，圆领设计，无明显图案，质地看起来柔软舒适。,这款上衣的可见特征包括：以白色为主色调；整体呈纯色风格；可见圆领;短袖细节。,TEMPLATE_DRAFT_NEEDS_HUMAN_REVIEW,38,False,True,REVIEW_REQUIRED_NOT_RELEASED
+fresh_dev_003,pred_0001,2196.62,22.191,1216.219,186.878,768.273,25.25,212.128,2009.742,1241.469,42,2,25,"```json
+{
+  ""category"": ""top"",
+  ""primary_color"": ""白色"",
+  ""pattern"": ""纯色"",
+  ""visible_design"": ""圆领;短袖""
+}
+```",白色,红色边框内展示的为一件纯白色T恤，圆领设计，无明显图案，质地平整。,这款上衣的可见特征包括：以白色为主色调；整体呈纯色风格；可见圆领;短袖细节。,TEMPLATE_DRAFT_NEEDS_HUMAN_REVIEW,38,False,True,REVIEW_REQUIRED_NOT_RELEASED
+fresh_dev_003,pred_0002,2229.156,38.55,1206.455,184.461,795.819,42.421,226.882,2044.695,1248.876,42,2,26,"```json
+{
+  ""category"": ""top"",
+  ""primary_color"": ""白色"",
+  ""pattern"": ""纯色"",
+  ""visible_design"": ""圆领;短袖""
+}
+```",白色,红色边框内展示的是一款纯白色T恤，圆领设计，无明显图案，质地看起来柔软舒适。,这款上衣的可见特征包括：以白色为主色调；整体呈纯色风格；可见圆领;短袖细节。,TEMPLATE_DRAFT_NEEDS_HUMAN_REVIEW,38,False,True,REVIEW_REQUIRED_NOT_RELEASED
+fresh_dev_004,pred_0000,2637.991,106.549,1361.621,236.432,928.581,111.357,347.789,2401.559,1472.978,42,2,29,"```json
+{
+  ""category"": ""pants"",
+  ""primary_color"": ""蓝色"",
+  ""pattern"": ""破洞"",
+  ""visible_design"": ""高腰;破洞""
+}
+```",蓝色,红色边框内展示了一条浅蓝色牛仔短裤，带有破洞设计和毛边装饰，口袋上有金属扣。,这款裤装的可见特征包括：以蓝色为主色调；可见破洞图案；可见高腰;破洞细节。,TEMPLATE_DRAFT_NEEDS_HUMAN_REVIEW,37,False,True,REVIEW_REQUIRED_NOT_RELEASED
+fresh_dev_004,pred_0001,2583.709,89.919,1220.203,257.734,1011.246,94.526,352.26,2325.975,1314.729,39,3,32,"```json
+{
+  ""category"": ""top"",
+  ""primary_color"": ""黄色"",
+  ""pattern"": ""文字印花"",
+  ""visible_design"": ""圆领""
+}
+```",无法确定,红色方框内展示的是浅蓝色牛仔短裤，带有破洞设计和毛边装饰，正面有两个口袋，中间有一个纽扣。,这款上衣的可见特征包括：以黄色为主色调；可见文字印花图案；可见圆领细节。,TEMPLATE_DRAFT_NEEDS_HUMAN_REVIEW,36,False,False,REVIEW_REQUIRED_NOT_RELEASED
+fresh_dev_004,pred_0002,2455.934,78.442,1255.886,229.909,887.469,82.67,312.579,2226.025,1338.556,42,2,28,"```json
+{
+  ""category"": ""pants"",
+  ""primary_color"": ""蓝色"",
+  ""pattern"": ""破洞"",
+  ""visible_design"": ""高腰;破洞""
+}
+```",蓝色,红色边框内展示了一条浅蓝色牛仔短裤，带有破洞设计和金属扣装饰，适合夏季穿着。,这款裤装的可见特征包括：以蓝色为主色调；可见破洞图案；可见高腰;破洞细节。,TEMPLATE_DRAFT_NEEDS_HUMAN_REVIEW,37,False,True,REVIEW_REQUIRED_NOT_RELEASED
+fresh_dev_005,pred_0000,2362.294,31.538,1142.535,211.482,972.87,35.407,246.889,2150.812,1177.942,39,3,33,"```json
+{
+  ""category"": ""top"",
+  ""primary_color"": ""白色"",
+  ""pattern"": ""波点"",
+  ""visible_design"": ""无设计""
+}
+```",无法确定,红色边框内展示的服饰为白色上衣，带有黑色波点图案，衣领处有黑色装饰条纹，整体设计简约时尚。,这款上衣的可见特征包括：以白色为主色调；可见波点图案。,TEMPLATE_DRAFT_NEEDS_HUMAN_REVIEW,27,False,True,REVIEW_REQUIRED_NOT_RELEASED
+fresh_dev_005,pred_0001,2160.838,43.567,1109.559,187.654,816.481,47.144,234.798,1973.184,1156.703,38,2,27,"```json
+{
+  ""category"": ""top"",
+  ""primary_color"": ""白色"",
+  ""pattern"": ""无"",
+  ""visible_design"": ""无设计""
+}
+```",黑色,红色框内展示了一条深蓝色牛仔短裤，表面有白色缝线装饰，裤脚略显磨损。,这款上衣的可见特征包括：以白色为主色调。,TEMPLATE_DRAFT_NEEDS_HUMAN_REVIEW,20,False,False,REVIEW_REQUIRED_NOT_RELEASED
+fresh_dev_005,pred_0002,2248.955,47.651,1144.544,236.318,816.706,51.387,287.705,2012.637,1195.931,39,3,27,"```json
+{
+  ""category"": ""skirt"",
+  ""primary_color"": ""黑色"",
+  ""pattern"": ""无"",
+  ""visible_design"": ""无设计""
+}
+```",无法确定,红色框内展示了一条深蓝色牛仔短裤，表面有白色斑点装饰，裤脚略显磨损。,这款裙装的可见特征包括：以黑色为主色调。,TEMPLATE_DRAFT_NEEDS_HUMAN_REVIEW,20,False,False,REVIEW_REQUIRED_NOT_RELEASED
+fresh_dev_006,pred_0000,2267.417,40.743,1276.204,230.117,716.352,44.744,274.861,2037.3,1320.948,42,2,21,"```json
+{
+  ""category"": ""skirt"",
+  ""primary_color"": ""蓝色"",
+  ""pattern"": ""无"",
+  ""visible_design"": ""纽扣;毛边""
+}
+```",蓝色,牛仔短裤，深蓝色，毛边设计，正面有三颗纽扣装饰。,这款裙装的可见特征包括：以蓝色为主色调；可见纽扣;毛边细节。,TEMPLATE_DRAFT_NEEDS_HUMAN_REVIEW,30,False,False,REVIEW_REQUIRED_NOT_RELEASED
+fresh_dev_007,pred_0000,2138.214,41.826,1188.241,211.287,693.014,45.672,256.959,1926.927,1233.913,40,2,21,"```json
+{
+  ""category"": ""pants"",
+  ""primary_color"": ""深蓝色"",
+  ""pattern"": ""破洞"",
+  ""visible_design"": ""破洞""
+}
+```",黑色,深紫色紧身牛仔裤，膝盖处有破洞设计，表面无明显图案。,这款裤装的可见特征包括：以深蓝色为主色调；可见破洞图案；可见破洞细节。,TEMPLATE_DRAFT_NEEDS_HUMAN_REVIEW,35,False,False,REVIEW_REQUIRED_NOT_RELEASED
+fresh_dev_007,pred_0001,2194.318,43.523,1192.461,236.784,717.889,47.184,283.968,1957.534,1239.645,39,3,22,"```json
+{
+  ""category"": ""shoe"",
+  ""primary_color"": ""粉色"",
+  ""pattern"": ""花卉"",
+  ""visible_design"": ""无设计""
+}
+```",无法确定,红框内为紫色运动鞋，鞋面有粉色豹纹图案，鞋底为白色。,这款鞋履的可见特征包括：以粉色为主色调；可见花卉图案。,TEMPLATE_DRAFT_NEEDS_HUMAN_REVIEW,27,False,True,REVIEW_REQUIRED_NOT_RELEASED
+fresh_dev_008,pred_0000,2059.251,31.385,1240.506,234.673,549.202,34.87,269.543,1824.578,1275.376,42,3,15,"```json
+{
+  ""category"": ""top"",
+  ""primary_color"": ""白色"",
+  ""pattern"": ""文字印花"",
+  ""visible_design"": ""圆领;短袖""
+}
+```",无法确定,红色短裙，表面有金色装饰扣，无明显图案。,这款上衣的可见特征包括：以白色为主色调；可见文字印花图案；可见圆领;短袖细节。,TEMPLATE_DRAFT_NEEDS_HUMAN_REVIEW,39,False,False,REVIEW_REQUIRED_NOT_RELEASED
+fresh_dev_008,pred_0001,2333.764,30.846,1255.561,210.341,833.162,34.7,245.041,2123.423,1290.261,42,2,26,"```json
+{
+  ""category"": ""top"",
+  ""primary_color"": ""白色"",
+  ""pattern"": ""文字印花"",
+  ""visible_design"": ""圆领;短袖""
+}
+```",白色,红色大蝴蝶结装饰白色T恤，圆领短袖设计，胸前有复古风格的女性头像图案。,这款上衣的可见特征包括：以白色为主色调；可见文字印花图案；可见圆领;短袖细节。,TEMPLATE_DRAFT_NEEDS_HUMAN_REVIEW,39,False,False,REVIEW_REQUIRED_NOT_RELEASED
+fresh_dev_008,pred_0002,2146.466,31.357,1260.235,234.072,617.163,34.996,269.068,1912.394,1295.231,42,3,18,"```json
+{
+  ""category"": ""top"",
+  ""primary_color"": ""白色"",
+  ""pattern"": ""文字印花"",
+  ""visible_design"": ""圆领;短袖""
+}
+```",无法确定,红色斜挎包，金属扣件设计，表面光滑，无明显图案。,这款上衣的可见特征包括：以白色为主色调；可见文字印花图案；可见圆领;短袖细节。,TEMPLATE_DRAFT_NEEDS_HUMAN_REVIEW,39,False,False,REVIEW_REQUIRED_NOT_RELEASED
+fresh_dev_009,pred_0000,2320.554,82.279,1192.941,174.506,867.487,85.62,260.126,2146.048,1278.561,41,2,29,"```json
+{
+  ""category"": ""dress"",
+  ""primary_color"": ""白色"",
+  ""pattern"": ""花卉"",
+  ""visible_design"": ""圆领;喇叭袖""
+}
+```",白色,红色边框内展示的是一条白色蕾丝连衣裙，带有精致的花卉图案和荷叶边袖口设计。,这款连衣裙的可见特征包括：以白色为主色调；可见花卉图案；可见圆领;喇叭袖细节。,TEMPLATE_DRAFT_NEEDS_HUMAN_REVIEW,39,False,True,REVIEW_REQUIRED_NOT_RELEASED
+fresh_dev_009,pred_0001,2406.368,81.905,1318.818,175.69,825.814,86.046,261.736,2230.678,1404.864,45,2,27,"```json
+{
+  ""category"": ""dress"",
+  ""primary_color"": ""白色"",
+  ""pattern"": ""蕾丝"",
+  ""visible_design"": ""圆领;喇叭袖;层叠""
+}
+```",白色,白色蕾丝连衣裙，轻盈透明，袖口和裙摆有精致花边装饰，适合春夏穿着。,这款连衣裙的可见特征包括：以白色为主色调；可见蕾丝图案；可见圆领;喇叭袖;层叠细节。,TEMPLATE_DRAFT_NEEDS_HUMAN_REVIEW,42,False,False,REVIEW_REQUIRED_NOT_RELEASED
+fresh_dev_010,pred_0000,2353.42,42.498,1135.247,480.742,691.302,46.129,526.871,1872.678,1181.376,39,14,22,"```json
+{
+  ""category"": ""dress"",
+  ""primary_color"": ""粉色"",
+  ""pattern"": ""纯色"",
+  ""visible_design"": ""无设计""
+}
+```",红框内目标服饰的主要可见颜色是粉色和白色。,红色连衣裙，上半部分为白色蕾丝，下半部分为粉色褶皱设计。,这款连衣裙的可见特征包括：以粉色为主色调；整体呈纯色风格。,TEMPLATE_DRAFT_NEEDS_HUMAN_REVIEW,29,False,False,REVIEW_REQUIRED_NOT_RELEASED
+fresh_dev_010,pred_0001,2198.704,102.049,1152.891,184.288,755.836,105.689,289.977,2014.416,1258.58,39,2,24,"```json
+{
+  ""category"": ""dress"",
+  ""primary_color"": ""粉色"",
+  ""pattern"": ""纯色"",
+  ""visible_design"": ""无设计""
+}
+```",粉色,红色褶皱裙，白色蕾丝上衣拼接设计，无袖无领，适合春夏穿着。,这款连衣裙的可见特征包括：以粉色为主色调；整体呈纯色风格。,TEMPLATE_DRAFT_NEEDS_HUMAN_REVIEW,29,False,False,REVIEW_REQUIRED_NOT_RELEASED
+fresh_dev_010,pred_0002,2131.405,23.787,1135.442,233.587,735.375,27.001,260.588,1897.818,1162.443,39,4,24,"```json
+{
+  ""category"": ""dress"",
+  ""primary_color"": ""粉色"",
+  ""pattern"": ""纯色"",
+  ""visible_design"": ""无设计""
+}
+```",白色和粉色,红色蓬松裙摆连衣裙，白色蕾丝上衣，无袖设计，适合春夏穿着。,这款连衣裙的可见特征包括：以粉色为主色调；整体呈纯色风格。,TEMPLATE_DRAFT_NEEDS_HUMAN_REVIEW,29,False,False,REVIEW_REQUIRED_NOT_RELEASED
+fresh_dev_011,pred_0000,2561.567,148.536,1221.607,237.043,948.414,154.503,391.546,2324.524,1376.11,39,2,30,"```json
+{
+  ""category"": ""dress"",
+  ""primary_color"": ""蓝色"",
+  ""pattern"": ""纯色"",
+  ""visible_design"": ""无设计""
+}
+```",蓝色,红色边框内展示了一件深蓝色牛仔背带裙，表面有白色圆点装饰，腰间系有蝴蝶结。,这款连衣裙的可见特征包括：以蓝色为主色调；整体呈纯色风格。,TEMPLATE_DRAFT_NEEDS_HUMAN_REVIEW,29,False,True,REVIEW_REQUIRED_NOT_RELEASED
+fresh_dev_011,pred_0001,2349.758,46.415,1205.708,238.493,854.112,51.445,289.938,2111.265,1257.153,39,2,26,"```json
+{
+  ""category"": ""dress"",
+  ""primary_color"": ""蓝色"",
+  ""pattern"": ""纯色"",
+  ""visible_design"": ""无设计""
+}
+```",蓝色,红色边框内展示了一件深蓝色牛仔背带裙，表面有绳结装饰，无明显图案。,这款连衣裙的可见特征包括：以蓝色为主色调；整体呈纯色风格。,TEMPLATE_DRAFT_NEEDS_HUMAN_REVIEW,29,False,True,REVIEW_REQUIRED_NOT_RELEASED
+fresh_dev_011,pred_0002,2232.545,49.892,1199.194,235.372,742.992,54.987,290.359,1997.173,1254.181,39,2,22,"```json
+{
+  ""category"": ""dress"",
+  ""primary_color"": ""蓝色"",
+  ""pattern"": ""纯色"",
+  ""visible_design"": ""无设计""
+}
+```",蓝色,深蓝色牛仔背带裙，表面有白色波点装饰，腰间系带设计。,这款连衣裙的可见特征包括：以蓝色为主色调；整体呈纯色风格。,TEMPLATE_DRAFT_NEEDS_HUMAN_REVIEW,29,False,False,REVIEW_REQUIRED_NOT_RELEASED
+fresh_dev_011,pred_0003,2431.37,30.899,1224.074,238.288,933.187,35.821,274.109,2193.082,1259.895,39,2,29,"```json
+{
+  ""category"": ""dress"",
+  ""primary_color"": ""蓝色"",
+  ""pattern"": ""纯色"",
+  ""visible_design"": ""无设计""
+}
+```",蓝色,红色框内展示了一件深蓝色牛仔背带裙，表面有自然磨损效果，腰间系有绳结装饰。,这款连衣裙的可见特征包括：以蓝色为主色调；整体呈纯色风格。,TEMPLATE_DRAFT_NEEDS_HUMAN_REVIEW,29,False,False,REVIEW_REQUIRED_NOT_RELEASED
+fresh_dev_012,pred_0000,2083.863,23.168,1141.519,208.888,706.719,26.737,235.625,1874.975,1168.256,39,3,23,"```json
+{
+  ""category"": ""dress"",
+  ""primary_color"": ""绿色"",
+  ""pattern"": ""迷彩"",
+  ""visible_design"": ""无设计""
+}
+```",无法确定,红色边框内：迷彩图案布料，表面有缝线，清晰可见脚踝处。,这款连衣裙的可见特征包括：以绿色为主色调；可见迷彩图案。,TEMPLATE_DRAFT_NEEDS_HUMAN_REVIEW,28,False,True,REVIEW_REQUIRED_NOT_RELEASED
+fresh_dev_012,pred_0001,2197.664,27.42,1179.115,210.748,777.098,30.703,241.451,1986.916,1209.818,40,3,25,"```json
+{
+  ""category"": ""skirt"",
+  ""primary_color"": ""绿色"",
+  ""pattern"": ""迷彩"",
+  ""visible_design"": ""无设计""
+}
+```",无法确定,迷彩裤，绿色为主色调，带有黑色和棕色斑点图案，裤脚处有明显缝线。,这款裙装的可见特征包括：以绿色为主色调；可见迷彩图案。,TEMPLATE_DRAFT_NEEDS_HUMAN_REVIEW,27,False,False,REVIEW_REQUIRED_NOT_RELEASED
+fresh_dev_012,pred_0002,2252.771,27.873,1244.511,224.563,752.185,31.512,256.075,2028.208,1276.023,40,3,24,"```json
+{
+  ""category"": ""skirt"",
+  ""primary_color"": ""绿色"",
+  ""pattern"": ""迷彩"",
+  ""visible_design"": ""无设计""
+}
+```",无法确定,迷彩图案长裤，绿色为主色调，表面有深色斑点装饰，口袋设计清晰可见。,这款裙装的可见特征包括：以绿色为主色调；可见迷彩图案。,TEMPLATE_DRAFT_NEEDS_HUMAN_REVIEW,27,False,False,REVIEW_REQUIRED_NOT_RELEASED
+fresh_dev_013,pred_0000,2143.131,22.453,1248.625,210.182,658.114,26.21,236.392,1932.949,1274.835,42,2,19,"```json
+{
+  ""category"": ""top"",
+  ""primary_color"": ""白色"",
+  ""pattern"": ""纯色"",
+  ""visible_design"": ""圆领;短袖""
+}
+```",白色,白色圆领短袖T恤，简约无图案设计，适合日常休闲穿着。,这款上衣的可见特征包括：以白色为主色调；整体呈纯色风格；可见圆领;短袖细节。,TEMPLATE_DRAFT_NEEDS_HUMAN_REVIEW,38,False,False,REVIEW_REQUIRED_NOT_RELEASED
+fresh_dev_013,pred_0001,2417.21,84.521,1261.787,213.603,853.573,88.247,301.85,2203.607,1350.034,42,2,27,"```json
+{
+  ""category"": ""top"",
+  ""primary_color"": ""白色"",
+  ""pattern"": ""纯色"",
+  ""visible_design"": ""圆领;短袖""
+}
+```",蓝色,红色框内显示的是一条深蓝色短裤，裤脚卷起，表面无明显图案，整体设计简约。,这款上衣的可见特征包括：以白色为主色调；整体呈纯色风格；可见圆领;短袖细节。,TEMPLATE_DRAFT_NEEDS_HUMAN_REVIEW,38,False,False,REVIEW_REQUIRED_NOT_RELEASED
+fresh_dev_014,pred_0000,2742.783,44.476,1317.626,524.503,851.696,48.958,573.461,2218.28,1366.584,44,14,27,"```json
+{
+  ""category"": ""top"",
+  ""primary_color"": ""黑色;白色"",
+  ""pattern"": ""条纹"",
+  ""visible_design"": ""圆领;无袖""
+}
+```",红框内目标服饰的主要可见颜色是黑白条纹。,红框服饰为黑白条纹无袖上衣，下摆荷叶边设计，肩部有黑色装饰带。,这款上衣的可见特征包括：以黑色;白色为主色调；可见条纹图案；可见圆领;无袖细节。,TEMPLATE_DRAFT_NEEDS_HUMAN_REVIEW,40,False,True,REVIEW_REQUIRED_NOT_RELEASED
+fresh_dev_014,pred_0001,2333.347,97.23,1430.85,220.128,580.506,101.863,321.991,2113.219,1532.713,48,2,16,"```json
+{
+  ""category"": ""top"",
+  ""primary_color"": ""黑色;白色"",
+  ""pattern"": ""条纹"",
+  ""visible_design"": ""圆领;无袖;荷叶边""
+}
+```",黑色,黑色凉鞋，平底设计，简约风格，适合夏季穿着。,这款上衣的可见特征包括：以黑色;白色为主色调；可见条纹图案；可见圆领;无袖;荷叶边细节。,TEMPLATE_DRAFT_NEEDS_HUMAN_REVIEW,44,False,False,REVIEW_REQUIRED_NOT_RELEASED
+fresh_dev_014,pred_0002,2768.602,85.64,1319.876,525.62,832.785,90.321,615.941,2242.982,1410.197,44,14,26,"```json
+{
+  ""category"": ""top"",
+  ""primary_color"": ""黑色;白色"",
+  ""pattern"": ""条纹"",
+  ""visible_design"": ""圆领;短袖""
+}
+```",红框内目标服饰的主要可见颜色是黑白条纹。,红框服饰为黑白条纹上衣，表面有细密条纹，下摆呈荷叶边设计。,这款上衣的可见特征包括：以黑色;白色为主色调；可见条纹图案；可见圆领;短袖细节。,TEMPLATE_DRAFT_NEEDS_HUMAN_REVIEW,40,False,True,REVIEW_REQUIRED_NOT_RELEASED
+fresh_dev_014,pred_0003,2516.439,30.332,1420.422,218.867,842.308,34.842,253.709,2297.572,1455.264,48,2,26,"```json
+{
+  ""category"": ""top"",
+  ""primary_color"": ""黑色;白色"",
+  ""pattern"": ""条纹"",
+  ""visible_design"": ""圆领;无袖;荷叶边""
+}
+```",黑色,红框服饰为黑色与白色条纹相间，表面无明显图案，下摆有荷叶边装饰。,这款上衣的可见特征包括：以黑色;白色为主色调；可见条纹图案；可见圆领;无袖;荷叶边细节。,TEMPLATE_DRAFT_NEEDS_HUMAN_REVIEW,44,False,True,REVIEW_REQUIRED_NOT_RELEASED
+fresh_dev_014,pred_0004,2146.795,29.073,1299.031,220.237,593.706,33.821,254.058,1926.558,1332.852,44,2,17,"```json
+{
+  ""category"": ""top"",
+  ""primary_color"": ""黑色;白色"",
+  ""pattern"": ""条纹"",
+  ""visible_design"": ""圆领;无袖""
+}
+```",黑色,黑色凉鞋，红色条纹装饰，简约设计，适合夏季穿着。,这款上衣的可见特征包括：以黑色;白色为主色调；可见条纹图案；可见圆领;无袖细节。,TEMPLATE_DRAFT_NEEDS_HUMAN_REVIEW,40,False,False,REVIEW_REQUIRED_NOT_RELEASED
+fresh_dev_014,pred_0005,2611.517,105.273,1322.111,220.691,958.803,109.912,330.603,2390.826,1432.023,44,2,26,"```json
+{
+  ""category"": ""top"",
+  ""primary_color"": ""黑色;白色"",
+  ""pattern"": ""条纹"",
+  ""visible_design"": ""圆领;无袖""
+}
+```",黑色,红框服饰为黑色与白色条纹相间，表面无明显图案，下摆有荷叶边装饰。,这款上衣的可见特征包括：以黑色;白色为主色调；可见条纹图案；可见圆领;无袖细节。,TEMPLATE_DRAFT_NEEDS_HUMAN_REVIEW,40,False,True,REVIEW_REQUIRED_NOT_RELEASED
+fresh_dev_014,pred_0006,2749.74,29.703,1308.751,525.303,881.751,33.935,559.238,2224.437,1342.686,44,14,28,"```json
+{
+  ""category"": ""top"",
+  ""primary_color"": ""黑色;白色"",
+  ""pattern"": ""条纹"",
+  ""visible_design"": ""圆领;无袖""
+}
+```",红框内目标服饰的主要可见颜色是黑白条纹。,红框服饰为黑白条纹无袖上衣，圆领设计，下摆荷叶边装饰，适合夏季穿着。,这款上衣的可见特征包括：以黑色;白色为主色调；可见条纹图案；可见圆领;无袖细节。,TEMPLATE_DRAFT_NEEDS_HUMAN_REVIEW,40,False,True,REVIEW_REQUIRED_NOT_RELEASED
+fresh_dev_015,pred_0000,2802.378,22.53,1247.349,497.359,1031.903,25.767,523.126,2305.019,1273.116,42,14,35,"```json
+{
+  ""category"": ""top"",
+  ""primary_color"": ""白色"",
+  ""pattern"": ""条纹"",
+  ""visible_design"": ""圆领;短袖""
+}
+```",红框内目标服饰的主要可见颜色是黑白条纹。,红框内展示的是一条黑白条纹连衣裙，表面无明显图案，领口为V型设计，袖子为三四分袖。,这款上衣的可见特征包括：以白色为主色调；可见条纹图案；可见圆领;短袖细节。,TEMPLATE_DRAFT_NEEDS_HUMAN_REVIEW,37,False,True,REVIEW_REQUIRED_NOT_RELEASED
+fresh_dev_015,pred_0001,2852.986,23.317,1246.719,505.815,1073.429,27.023,532.838,2347.171,1273.742,42,14,36,"```json
+{
+  ""category"": ""top"",
+  ""primary_color"": ""白色"",
+  ""pattern"": ""条纹"",
+  ""visible_design"": ""V领;袖子""
+}
+```",红框内目标服饰的主要可见颜色是黑白条纹。,红框内展示的是一条黑白条纹连衣裙，表面平整无明显瑕疵，袖口为三七分设计，领口为V型开口。,这款上衣的可见特征包括：以白色为主色调；可见条纹图案；可见V领;袖子细节。,TEMPLATE_DRAFT_NEEDS_HUMAN_REVIEW,37,False,True,REVIEW_REQUIRED_NOT_RELEASED
+fresh_dev_016,pred_0000,2503.451,83.628,1223.734,202.014,990.092,87.611,289.625,2301.437,1311.345,41,2,33,"```json
+{
+  ""category"": ""top"",
+  ""primary_color"": ""白色"",
+  ""pattern"": ""无"",
+  ""visible_design"": ""圆领;短袖""
+}
+```",白色,红框内展示的服饰为白色T恤，搭配灰色格子长裤，裤腰系有黑色抽绳，裤脚略显宽松。,这款上衣的可见特征包括：以白色为主色调；可见圆领;短袖细节。,TEMPLATE_DRAFT_NEEDS_HUMAN_REVIEW,30,False,True,REVIEW_REQUIRED_NOT_RELEASED
+fresh_dev_016,pred_0001,2425.898,89.436,1226.155,205.375,901.11,93.258,298.633,2220.523,1319.413,41,2,29,"```json
+{
+  ""category"": ""top"",
+  ""primary_color"": ""白色"",
+  ""pattern"": ""无"",
+  ""visible_design"": ""圆领;短袖""
+}
+```",灰色,红框内展示灰色格子休闲裤，表面有白色线条网格图案，松紧腰设计，裤脚略显宽松。,这款上衣的可见特征包括：以白色为主色调；可见圆领;短袖细节。,TEMPLATE_DRAFT_NEEDS_HUMAN_REVIEW,30,False,True,REVIEW_REQUIRED_NOT_RELEASED
+fresh_dev_016,pred_0002,2226.967,26.059,1147.824,204.398,844.682,30.063,234.461,2022.569,1177.887,38,2,27,"```json
+{
+  ""category"": ""top"",
+  ""primary_color"": ""白色"",
+  ""pattern"": ""无"",
+  ""visible_design"": ""圆领""
+}
+```",灰色,红框内展示的是一条灰色格子休闲裤，带有松紧腰设计和抽绳，适合日常穿着。,这款上衣的可见特征包括：以白色为主色调；可见圆领细节。,TEMPLATE_DRAFT_NEEDS_HUMAN_REVIEW,27,False,True,REVIEW_REQUIRED_NOT_RELEASED
+fresh_dev_017,pred_0000,2363.665,28.108,1184.277,210.553,936.791,32.044,242.597,2153.112,1216.321,39,2,30,"```json
+{
+  ""category"": ""top"",
+  ""primary_color"": ""深蓝色"",
+  ""pattern"": ""无"",
+  ""visible_design"": ""无设计""
+}
+```",蓝色,红色框内展示了一条深蓝色牛仔裤，膝盖处有破洞设计，裤脚卷起，搭配白色运动鞋。,这款上衣的可见特征包括：以深蓝色为主色调。,TEMPLATE_DRAFT_NEEDS_HUMAN_REVIEW,21,False,False,REVIEW_REQUIRED_NOT_RELEASED
+fresh_dev_017,pred_0001,2279.825,31.266,1247.19,234.217,763.435,34.983,269.2,2045.608,1282.173,42,3,24,"```json
+{
+  ""category"": ""top"",
+  ""primary_color"": ""深蓝色"",
+  ""pattern"": ""无"",
+  ""visible_design"": ""圆领;短袖""
+}
+```",无法确定,深蓝色牛仔裤，膝盖处破洞设计，裤脚卷边，腰间有扣环。,这款上衣的可见特征包括：以深蓝色为主色调；可见圆领;短袖细节。,TEMPLATE_DRAFT_NEEDS_HUMAN_REVIEW,31,False,False,REVIEW_REQUIRED_NOT_RELEASED
+fresh_dev_017,pred_0002,2258.332,27.999,1250.831,210.839,764.912,31.75,242.589,2047.493,1282.581,43,2,24,"```json
+{
+  ""category"": ""shoe"",
+  ""primary_color"": ""黑色"",
+  ""pattern"": ""纯色"",
+  ""visible_design"": ""低帮;系带""
+}
+```",黑色,黑色帆布鞋，白色鞋带，鞋底为橡胶材质，鞋头有白色条纹装饰。,这款鞋履的可见特征包括：以黑色为主色调；整体呈纯色风格；可见低帮;系带细节。,TEMPLATE_DRAFT_NEEDS_HUMAN_REVIEW,38,False,False,REVIEW_REQUIRED_NOT_RELEASED
+fresh_dev_017,pred_0003,2136.394,31.968,1291.225,211.3,597.775,36.094,247.394,1925.094,1327.319,43,2,17,"```json
+{
+  ""category"": ""shoe"",
+  ""primary_color"": ""黑色"",
+  ""pattern"": ""纯色"",
+  ""visible_design"": ""低帮;系带""
+}
+```",黑色,黑色帆布鞋，白色鞋带，红色鞋底，简洁设计。,这款鞋履的可见特征包括：以黑色为主色调；整体呈纯色风格；可见低帮;系带细节。,TEMPLATE_DRAFT_NEEDS_HUMAN_REVIEW,38,False,False,REVIEW_REQUIRED_NOT_RELEASED
+fresh_dev_017,pred_0004,2163.407,27.311,1295.254,211.393,625.197,31.563,242.956,1952.014,1326.817,43,2,18,"```json
+{
+  ""category"": ""shoe"",
+  ""primary_color"": ""黑色"",
+  ""pattern"": ""纯色"",
+  ""visible_design"": ""低帮；系带""
+}
+```",黑色,黑色帆布鞋，白色鞋带，红色边框装饰，简洁设计。,这款鞋履的可见特征包括：以黑色为主色调；整体呈纯色风格；可见低帮；系带细节。,TEMPLATE_DRAFT_NEEDS_HUMAN_REVIEW,38,False,True,REVIEW_REQUIRED_NOT_RELEASED
+fresh_dev_017,pred_0005,2199.995,27.185,1167.77,209.257,792.244,30.724,239.981,1990.738,1198.494,39,2,25,"```json
+{
+  ""category"": ""top"",
+  ""primary_color"": ""深蓝色"",
+  ""pattern"": ""无"",
+  ""visible_design"": ""无设计""
+}
+```",黑色,红色箭头指向的服饰为黑色运动鞋，鞋面有白色条纹装饰，鞋带为白色。,这款上衣的可见特征包括：以深蓝色为主色调。,TEMPLATE_DRAFT_NEEDS_HUMAN_REVIEW,21,False,False,REVIEW_REQUIRED_NOT_RELEASED
+fresh_dev_018,pred_0000,2502.772,100.071,1335.301,220.921,841.778,104.772,325.693,2281.851,1440.073,42,2,26,"```json
+{
+  ""category"": ""top"",
+  ""primary_color"": ""白色"",
+  ""pattern"": ""文字印花"",
+  ""visible_design"": ""圆领;短袖""
+}
+```",蓝色,红色框内展示了一条蓝色牛仔裤，腰间配有金色装饰带扣，裤脚略显宽松。,这款上衣的可见特征包括：以白色为主色调；可见文字印花图案；可见圆领;短袖细节。,TEMPLATE_DRAFT_NEEDS_HUMAN_REVIEW,39,False,False,REVIEW_REQUIRED_NOT_RELEASED
+fresh_dev_018,pred_0001,2499.624,85.49,1277.536,219.964,912.515,89.609,309.573,2279.66,1367.145,42,2,29,"```json
+{
+  ""category"": ""top"",
+  ""primary_color"": ""白色"",
+  ""pattern"": ""蕾丝"",
+  ""visible_design"": ""圆领;短袖""
+}
+```",白色,白色蕾丝短袖上衣，胸前有精致蕾丝装饰，搭配银色亮片腰带，展现优雅与时尚。,这款上衣的可见特征包括：以白色为主色调；可见蕾丝图案；可见圆领;短袖细节。,TEMPLATE_DRAFT_NEEDS_HUMAN_REVIEW,37,False,False,REVIEW_REQUIRED_NOT_RELEASED
+fresh_dev_018,pred_0002,2453.71,26.07,1271.6,220.71,930.865,30.535,251.245,2233.0,1302.135,42,2,29,"```json
+{
+  ""category"": ""top"",
+  ""primary_color"": ""白色"",
+  ""pattern"": ""蕾丝"",
+  ""visible_design"": ""圆领;短袖""
+}
+```",白色,白色蕾丝短袖上衣，胸前有精致蕾丝装饰，搭配银色亮片腰带，展现优雅与时尚。,这款上衣的可见特征包括：以白色为主色调；可见蕾丝图案；可见圆领;短袖细节。,TEMPLATE_DRAFT_NEEDS_HUMAN_REVIEW,37,False,False,REVIEW_REQUIRED_NOT_RELEASED
+fresh_dev_019,pred_0000,2400.332,30.257,1305.305,244.024,814.25,36.753,280.777,2156.308,1342.058,42,2,24,"```json
+{
+  ""category"": ""top"",
+  ""primary_color"": ""红色"",
+  ""pattern"": ""文字印花"",
+  ""visible_design"": ""圆领;短袖""
+}
+```",红色,红色T恤，胸前印有卡通图案和文字，圆领设计，短袖，适合休闲穿着。,这款上衣的可见特征包括：以红色为主色调；可见文字印花图案；可见圆领;短袖细节。,TEMPLATE_DRAFT_NEEDS_HUMAN_REVIEW,39,False,False,REVIEW_REQUIRED_NOT_RELEASED
+fresh_dev_019,pred_0001,2308.693,28.602,1323.963,244.008,705.859,34.863,278.871,2064.685,1358.826,43,2,20,"```json
+{
+  ""category"": ""top"",
+  ""primary_color"": ""酒红色"",
+  ""pattern"": ""文字印花"",
+  ""visible_design"": ""圆领;短袖""
+}
+```",白色,白色牛仔短裙，高腰设计，单排扣装饰，简约百搭。,这款上衣的可见特征包括：以酒红色为主色调；可见文字印花图案；可见圆领;短袖细节。,TEMPLATE_DRAFT_NEEDS_HUMAN_REVIEW,40,False,False,REVIEW_REQUIRED_NOT_RELEASED
+fresh_dev_020,pred_0000,2503.415,90.005,1363.061,240.39,804.725,95.239,335.629,2263.025,1458.3,45,2,24,"```json
+{
+  ""category"": ""top"",
+  ""primary_color"": ""蓝色"",
+  ""pattern"": ""纯色"",
+  ""visible_design"": ""圆领;无袖;肩带""
+}
+```",蓝色,红色方框内展示了一件蓝色背带裤套装，带有白色文字装饰，整体设计简约时尚。,这款上衣的可见特征包括：以蓝色为主色调；整体呈纯色风格；可见圆领;无袖;肩带细节。,TEMPLATE_DRAFT_NEEDS_HUMAN_REVIEW,41,False,False,REVIEW_REQUIRED_NOT_RELEASED
+fresh_dev_020,pred_0001,2407.171,91.846,1220.984,237.097,851.292,97.798,334.895,2170.074,1318.782,39,2,26,"```json
+{
+  ""category"": ""top"",
+  ""primary_color"": ""蓝色"",
+  ""pattern"": ""纯色"",
+  ""visible_design"": ""无设计""
+}
+```",蓝色,红色框内显示蓝色运动短裤，正面有白色日文字符，裤脚处有白色条纹装饰。,这款上衣的可见特征包括：以蓝色为主色调；整体呈纯色风格。,TEMPLATE_DRAFT_NEEDS_HUMAN_REVIEW,28,False,False,REVIEW_REQUIRED_NOT_RELEASED
+fresh_dev_020,pred_0002,2396.077,33.644,1258.355,239.42,859.378,38.924,278.344,2156.657,1297.279,41,2,26,"```json
+{
+  ""category"": ""top"",
+  ""primary_color"": ""白色"",
+  ""pattern"": ""无"",
+  ""visible_design"": ""圆领;短袖""
+}
+```",白色,红框内白色运动鞋，鞋面有黑色条纹装饰，鞋带为白色，鞋底为白色。,这款上衣的可见特征包括：以白色为主色调；可见圆领;短袖细节。,TEMPLATE_DRAFT_NEEDS_HUMAN_REVIEW,30,False,True,REVIEW_REQUIRED_NOT_RELEASED
+fresh_dev_020,pred_0003,2215.106,32.881,1279.377,238.615,658.912,38.202,276.817,1976.491,1317.579,41,2,18,"```json
+{
+  ""category"": ""top"",
+  ""primary_color"": ""白色"",
+  ""pattern"": ""无"",
+  ""visible_design"": ""圆领;短袖""
+}
+```",白色,红框内白色运动鞋，黑色条纹装饰，鞋带为白色。,这款上衣的可见特征包括：以白色为主色调；可见圆领;短袖细节。,TEMPLATE_DRAFT_NEEDS_HUMAN_REVIEW,30,False,True,REVIEW_REQUIRED_NOT_RELEASED
+fresh_dev_021,pred_0000,2565.31,23.0,1251.819,210.724,1076.295,26.472,237.196,2354.586,1278.291,42,2,36,"```json
+{
+  ""category"": ""top"",
+  ""primary_color"": ""白色"",
+  ""pattern"": ""文字印花"",
+  ""visible_design"": ""圆领;短袖""
+}
+```",白色,红色方框内展示了一件白色T恤，正面印有四个人物图案和“MAN1”、“MAN2”、“MAN3-4”字样。,这款上衣的可见特征包括：以白色为主色调；可见文字印花图案；可见圆领;短袖细节。,TEMPLATE_DRAFT_NEEDS_HUMAN_REVIEW,39,False,False,REVIEW_REQUIRED_NOT_RELEASED
+fresh_dev_021,pred_0001,2155.543,26.441,1261.166,218.734,645.715,29.928,248.662,1936.809,1291.094,42,2,19,"```json
+{
+  ""category"": ""top"",
+  ""primary_color"": ""白色"",
+  ""pattern"": ""文字印花"",
+  ""visible_design"": ""圆领;短袖""
+}
+```",粉色,红色系松紧腰带休闲裤，正面有口袋设计，适合日常穿着。,这款上衣的可见特征包括：以白色为主色调；可见文字印花图案；可见圆领;短袖细节。,TEMPLATE_DRAFT_NEEDS_HUMAN_REVIEW,39,False,False,REVIEW_REQUIRED_NOT_RELEASED
+fresh_dev_022,pred_0000,2534.633,24.951,1220.46,210.946,1074.726,28.501,239.447,2323.687,1248.961,41,2,36,"```json
+{
+  ""category"": ""top"",
+  ""primary_color"": ""白色"",
+  ""pattern"": ""无"",
+  ""visible_design"": ""圆领;长袖""
+}
+```",白色,红色边框内展示的服饰为白色上衣，搭配绿色宽松长裤，上衣有袖口设计，裤子垂坠感强，适合休闲场合。,这款上衣的可见特征包括：以白色为主色调；可见圆领;长袖细节。,TEMPLATE_DRAFT_NEEDS_HUMAN_REVIEW,30,False,True,REVIEW_REQUIRED_NOT_RELEASED
+fresh_dev_022,pred_0001,2249.298,30.875,1231.571,211.432,771.695,34.6,246.032,2037.866,1266.171,41,2,24,"```json
+{
+  ""category"": ""top"",
+  ""primary_color"": ""白色"",
+  ""pattern"": ""无"",
+  ""visible_design"": ""圆领;长袖""
+}
+```",黑色,黑色皮鞋，鞋面光滑，无明显图案，鞋头圆润，鞋带孔清晰可见。,这款上衣的可见特征包括：以白色为主色调；可见圆领;长袖细节。,TEMPLATE_DRAFT_NEEDS_HUMAN_REVIEW,30,False,False,REVIEW_REQUIRED_NOT_RELEASED
+fresh_dev_022,pred_0002,2262.815,25.167,1230.757,207.343,795.666,29.049,236.392,2055.472,1259.806,41,2,25,"```json
+{
+  ""category"": ""top"",
+  ""primary_color"": ""白色"",
+  ""pattern"": ""无"",
+  ""visible_design"": ""圆领;长袖""
+}
+```",绿色,红色边框内展示了一条绿色宽松长裤，裤脚略显褶皱，整体设计简约大方。,这款上衣的可见特征包括：以白色为主色调；可见圆领;长袖细节。,TEMPLATE_DRAFT_NEEDS_HUMAN_REVIEW,30,False,True,REVIEW_REQUIRED_NOT_RELEASED
+fresh_dev_022,pred_0003,2311.125,28.886,1222.807,208.79,846.891,32.637,241.427,2102.335,1255.444,41,2,27,"```json
+{
+  ""category"": ""top"",
+  ""primary_color"": ""白色"",
+  ""pattern"": ""无"",
+  ""visible_design"": ""圆领;长袖""
+}
+```",绿色,红色边框内展示了一条绿色宽松长裤，裤腿宽大，裤腰带设计，适合休闲穿着。,这款上衣的可见特征包括：以白色为主色调；可见圆领;长袖细节。,TEMPLATE_DRAFT_NEEDS_HUMAN_REVIEW,30,False,True,REVIEW_REQUIRED_NOT_RELEASED
+fresh_dev_023,pred_0000,2302.473,26.123,1376.444,231.557,664.322,30.15,261.707,2070.916,1406.594,45,2,19,"```json
+{
+  ""category"": ""top"",
+  ""primary_color"": ""白色"",
+  ""pattern"": ""纯色"",
+  ""visible_design"": ""立领;短袖;门襟""
+}
+```",灰色,灰色短裤，表面无明显图案，直筒剪裁，适合休闲穿着。,这款上衣的可见特征包括：以白色为主色调；整体呈纯色风格；可见立领;短袖;门襟细节。,TEMPLATE_DRAFT_NEEDS_HUMAN_REVIEW,41,False,False,REVIEW_REQUIRED_NOT_RELEASED
+fresh_dev_023,pred_0001,2341.163,82.804,1374.398,232.491,647.208,87.066,319.557,2108.672,1461.464,45,2,18,"```json
+{
+  ""category"": ""top"",
+  ""primary_color"": ""白色"",
+  ""pattern"": ""纯色"",
+  ""visible_design"": ""圆领;短袖;门襟""
+}
+```",白色,白色短袖衬衫，圆领设计，纽扣装饰，简洁百搭。,这款上衣的可见特征包括：以白色为主色调；整体呈纯色风格；可见圆领;短袖;门襟细节。,TEMPLATE_DRAFT_NEEDS_HUMAN_REVIEW,41,False,False,REVIEW_REQUIRED_NOT_RELEASED
+fresh_dev_023,pred_0002,2560.262,83.67,1367.842,229.64,874.723,88.057,317.697,2330.622,1455.899,45,2,27,"```json
+{
+  ""category"": ""top"",
+  ""primary_color"": ""白色"",
+  ""pattern"": ""纯色"",
+  ""visible_design"": ""立领;短袖;门襟""
+}
+```",白色,白色短袖衬衫，简洁无图案，圆领设计，纽扣式前襟，袖口为五分袖。,这款上衣的可见特征包括：以白色为主色调；整体呈纯色风格；可见立领;短袖;门襟细节。,TEMPLATE_DRAFT_NEEDS_HUMAN_REVIEW,41,False,False,REVIEW_REQUIRED_NOT_RELEASED
+fresh_dev_024,pred_0000,2211.978,30.958,1261.312,242.229,672.556,35.881,278.11,1969.749,1297.193,41,2,19,"```json
+{
+  ""category"": ""top"",
+  ""primary_color"": ""白色"",
+  ""pattern"": ""无"",
+  ""visible_design"": ""圆领;喇叭袖""
+}
+```",灰色,灰色紧身裤，星星图案装饰，高腰设计，搭配黑色靴子。,这款上衣的可见特征包括：以白色为主色调；可见圆领;喇叭袖细节。,TEMPLATE_DRAFT_NEEDS_HUMAN_REVIEW,31,False,False,REVIEW_REQUIRED_NOT_RELEASED
+fresh_dev_024,pred_0001,2340.737,83.969,1257.824,244.002,749.733,89.178,333.18,2096.735,1347.002,41,2,20,"```json
+{
+  ""category"": ""top"",
+  ""primary_color"": ""白色"",
+  ""pattern"": ""无"",
+  ""visible_design"": ""圆领;喇叭袖""
+}
+```",黑色,黑色短靴，侧面拉链设计，鞋头圆润，适合搭配休闲装。,这款上衣的可见特征包括：以白色为主色调；可见圆领;喇叭袖细节。,TEMPLATE_DRAFT_NEEDS_HUMAN_REVIEW,31,False,False,REVIEW_REQUIRED_NOT_RELEASED
+fresh_dev_024,pred_0002,2227.319,28.083,1250.299,240.395,703.454,33.171,273.566,1986.924,1283.47,41,2,20,"```json
+{
+  ""category"": ""top"",
+  ""primary_color"": ""白色"",
+  ""pattern"": ""无"",
+  ""visible_design"": ""圆领;喇叭袖""
+}
+```",白色,白色宽松上衣，袖口开叉设计，搭配灰色星星图案紧身裤。,这款上衣的可见特征包括：以白色为主色调；可见圆领;喇叭袖细节。,TEMPLATE_DRAFT_NEEDS_HUMAN_REVIEW,31,False,False,REVIEW_REQUIRED_NOT_RELEASED
+fresh_dev_024,pred_0003,2284.401,85.842,1254.956,239.137,699.419,90.889,330.026,2045.264,1345.845,41,2,20,"```json
+{
+  ""category"": ""top"",
+  ""primary_color"": ""白色"",
+  ""pattern"": ""无"",
+  ""visible_design"": ""圆领;喇叭袖""
+}
+```",白色,白色宽松上衣，袖口开叉设计，搭配灰色星星图案紧身裤。,这款上衣的可见特征包括：以白色为主色调；可见圆领;喇叭袖细节。,TEMPLATE_DRAFT_NEEDS_HUMAN_REVIEW,31,False,False,REVIEW_REQUIRED_NOT_RELEASED
+fresh_dev_024,pred_0004,2481.295,98.329,1263.565,241.446,872.945,103.339,344.785,2239.849,1366.904,41,2,27,"```json
+{
+  ""category"": ""top"",
+  ""primary_color"": ""白色"",
+  ""pattern"": ""无"",
+  ""visible_design"": ""圆领;喇叭袖""
+}
+```",黑色,红色边框内展示的服饰为黑色太阳镜，镜片为深色，镜框为红色边框设计。,这款上衣的可见特征包括：以白色为主色调；可见圆领;喇叭袖细节。,TEMPLATE_DRAFT_NEEDS_HUMAN_REVIEW,31,False,True,REVIEW_REQUIRED_NOT_RELEASED
+fresh_dev_025,pred_0000,2481.226,28.477,1296.427,229.704,922.484,32.611,262.315,2251.522,1329.038,42,2,29,"```json
+{
+  ""category"": ""top"",
+  ""primary_color"": ""白色"",
+  ""pattern"": ""十字图案"",
+  ""visible_design"": ""圆领;短袖""
+}
+```",黑色,红色方框内展示了一件白色T恤，正面有黑色十字图案和几何图形装饰，袖口处有小标签。,这款上衣的可见特征包括：以白色为主色调；可见十字图案图案；可见圆领;短袖细节。,TEMPLATE_DRAFT_NEEDS_HUMAN_REVIEW,39,False,False,REVIEW_REQUIRED_NOT_RELEASED
+fresh_dev_025,pred_0001,2241.884,24.051,1263.58,233.729,716.81,27.765,261.494,2008.155,1291.345,42,2,21,"```json
+{
+  ""category"": ""top"",
+  ""primary_color"": ""白色"",
+  ""pattern"": ""文字印花"",
+  ""visible_design"": ""圆领;短袖""
+}
+```",白色,白色T恤，正面有黑色十字图案和几何图形装饰，圆领短袖设计。,这款上衣的可见特征包括：以白色为主色调；可见文字印花图案；可见圆领;短袖细节。,TEMPLATE_DRAFT_NEEDS_HUMAN_REVIEW,39,False,False,REVIEW_REQUIRED_NOT_RELEASED
+fresh_dev_025,pred_0002,2315.546,100.969,1271.658,228.625,710.017,105.246,333.871,2086.921,1376.904,42,2,21,"```json
+{
+  ""category"": ""top"",
+  ""primary_color"": ""白色"",
+  ""pattern"": ""文字印花"",
+  ""visible_design"": ""圆领;短袖""
+}
+```",白色,白色T恤，正面有黑色十字图案和几何图形装饰，圆领短袖设计。,这款上衣的可见特征包括：以白色为主色调；可见文字印花图案；可见圆领;短袖细节。,TEMPLATE_DRAFT_NEEDS_HUMAN_REVIEW,39,False,False,REVIEW_REQUIRED_NOT_RELEASED
+fresh_dev_026,pred_0000,2448.932,77.499,1275.996,220.145,870.808,81.983,302.128,2228.787,1357.979,42,2,27,"```json
+{
+  ""category"": ""top"",
+  ""primary_color"": ""白色"",
+  ""pattern"": ""无设计"",
+  ""visible_design"": ""翻领;长袖""
+}
+```",黑色,红色方框内展示的服饰为白色衬衫，袖口和领口有黑色花纹装饰，整体设计简约大方。,这款上衣的可见特征包括：以白色为主色调；可见翻领;长袖细节。,TEMPLATE_DRAFT_NEEDS_HUMAN_REVIEW,30,False,False,REVIEW_REQUIRED_NOT_RELEASED
+fresh_dev_026,pred_0001,2180.611,80.981,1269.189,220.359,605.755,85.308,305.667,1960.252,1354.497,42,2,17,"```json
+{
+  ""category"": ""top"",
+  ""primary_color"": ""白色"",
+  ""pattern"": ""无设计"",
+  ""visible_design"": ""翻领;长袖""
+}
+```",白色,白色衬衫，黑色花纹装饰领口和袖口，简洁优雅设计。,这款上衣的可见特征包括：以白色为主色调；可见翻领;长袖细节。,TEMPLATE_DRAFT_NEEDS_HUMAN_REVIEW,30,False,False,REVIEW_REQUIRED_NOT_RELEASED
+fresh_dev_026,pred_0002,2199.476,24.691,1322.831,221.162,626.403,29.08,250.242,1978.314,1351.911,44,2,18,"```json
+{
+  ""category"": ""top"",
+  ""primary_color"": ""白色"",
+  ""pattern"": ""无"",
+  ""visible_design"": ""翻领;长袖;装饰边""
+}
+```",白色,白色衬衫，领口和袖口有黑色刺绣装饰，简洁大方。,这款上衣的可见特征包括：以白色为主色调；可见翻领;长袖;装饰边细节。,TEMPLATE_DRAFT_NEEDS_HUMAN_REVIEW,34,False,False,REVIEW_REQUIRED_NOT_RELEASED
+fresh_dev_027,pred_0000,2508.049,26.642,1375.979,239.594,860.598,31.878,271.472,2268.455,1407.857,45,2,26,"```json
+{
+  ""category"": ""top"",
+  ""primary_color"": ""白色"",
+  ""pattern"": ""无"",
+  ""visible_design"": ""翻领;长袖;肩部装饰""
+}
+```",白色,红色框内展示的白色衬衫，肩部有金属铆钉装饰，袖口有蕾丝花边细节。,这款上衣的可见特征包括：以白色为主色调；可见翻领;长袖;肩部装饰细节。,TEMPLATE_DRAFT_NEEDS_HUMAN_REVIEW,35,False,False,REVIEW_REQUIRED_NOT_RELEASED
+fresh_dev_027,pred_0001,2433.087,86.579,1294.473,261.892,784.831,91.891,353.783,2171.195,1386.364,42,3,23,"```json
+{
+  ""category"": ""top"",
+  ""primary_color"": ""白色"",
+  ""pattern"": ""纯色"",
+  ""visible_design"": ""翻领;长袖""
+}
+```",无法确定,红色框内展示了一条深蓝色牛仔裤，表面有明显的缝线和扣子细节。,这款上衣的可见特征包括：以白色为主色调；整体呈纯色风格；可见翻领;长袖细节。,TEMPLATE_DRAFT_NEEDS_HUMAN_REVIEW,38,False,False,REVIEW_REQUIRED_NOT_RELEASED
+fresh_dev_028,pred_0000,2272.679,24.657,1284.397,222.394,737.114,28.774,251.168,2050.285,1313.171,42,2,22,"```json
+{
+  ""category"": ""top"",
+  ""primary_color"": ""白色"",
+  ""pattern"": ""文字印花"",
+  ""visible_design"": ""圆领;短袖""
+}
+```",白色,白色T恤，字母印花设计，修身版型，圆领短袖，舒适亲肤。,这款上衣的可见特征包括：以白色为主色调；可见文字印花图案；可见圆领;短袖细节。,TEMPLATE_DRAFT_NEEDS_HUMAN_REVIEW,39,False,False,REVIEW_REQUIRED_NOT_RELEASED
+fresh_dev_028,pred_0001,2328.013,80.933,1275.634,223.548,743.461,85.37,308.918,2104.465,1361.004,42,2,22,"```json
+{
+  ""category"": ""top"",
+  ""primary_color"": ""白色"",
+  ""pattern"": ""文字印花"",
+  ""visible_design"": ""圆领;短袖""
+}
+```",白色,白色T恤，胸前字母印花，袖口数字装饰，圆领设计，修身剪裁。,这款上衣的可见特征包括：以白色为主色调；可见文字印花图案；可见圆领;短袖细节。,TEMPLATE_DRAFT_NEEDS_HUMAN_REVIEW,39,False,False,REVIEW_REQUIRED_NOT_RELEASED
+fresh_dev_029,pred_0000,2277.149,90.509,1216.069,247.519,719.0,94.561,342.08,2029.63,1310.63,39,2,20,"```json
+{
+  ""category"": ""top"",
+  ""primary_color"": ""白色"",
+  ""pattern"": ""文字印花"",
+  ""visible_design"": ""圆领""
+}
+```",蓝色,牛仔裤，浅蓝色，腰带扣清晰可见，裤头有口袋设计。,这款上衣的可见特征包括：以白色为主色调；可见文字印花图案；可见圆领细节。,TEMPLATE_DRAFT_NEEDS_HUMAN_REVIEW,36,False,False,REVIEW_REQUIRED_NOT_RELEASED
+fresh_dev_029,pred_0001,2405.757,84.838,1286.804,235.465,794.961,88.527,323.992,2170.292,1375.331,42,2,24,"```json
+{
+  ""category"": ""top"",
+  ""primary_color"": ""白色"",
+  ""pattern"": ""文字印花"",
+  ""visible_design"": ""圆领;短袖""
+}
+```",白色,白色T恤，正面印有黑色“MICKEY MOUSE”字样及三幅米奇老鼠插画。,这款上衣的可见特征包括：以白色为主色调；可见文字印花图案；可见圆领;短袖细节。,TEMPLATE_DRAFT_NEEDS_HUMAN_REVIEW,39,False,False,REVIEW_REQUIRED_NOT_RELEASED
+fresh_dev_030,pred_0000,2553.659,27.909,1461.906,183.872,876.667,31.214,215.086,2369.787,1493.12,51,2,29,"```json
+{
+  ""category"": ""dress"",
+  ""primary_color"": ""白色;浅蓝色"",
+  ""pattern"": ""花卉"",
+  ""visible_design"": ""圆领;短袖;无肩带;门襟""
+}
+```",白色,红色边框内展示的是一件白色上衣，带有蓝色裙子。上衣正面有花卉图案装饰，整体设计简洁优雅。,这款连衣裙的可见特征包括：以白色;浅蓝色为主色调；可见花卉图案；可见圆领;短袖;无肩带;门襟细节。,TEMPLATE_DRAFT_NEEDS_HUMAN_REVIEW,49,False,True,REVIEW_REQUIRED_NOT_RELEASED
+fresh_dev_030,pred_0001,2320.933,28.147,1292.417,185.81,810.605,32.101,217.911,2135.123,1324.518,44,2,26,"```json
+{
+  ""category"": ""dress"",
+  ""primary_color"": ""蓝色"",
+  ""pattern"": ""花卉"",
+  ""visible_design"": ""圆领;短袖;层叠""
+}
+```",蓝色,红框内为浅蓝色连衣裙，裙摆呈波浪状褶皱设计，无明显图案装饰。,这款连衣裙的可见特征包括：以蓝色为主色调；可见花卉图案；可见圆领;短袖;层叠细节。,TEMPLATE_DRAFT_NEEDS_HUMAN_REVIEW,41,False,True,REVIEW_REQUIRED_NOT_RELEASED
+fresh_dev_030,pred_0002,2283.688,24.41,1299.997,184.962,770.847,27.882,212.844,2098.726,1327.879,45,2,25,"```json
+{
+  ""category"": ""dress"",
+  ""primary_color"": ""浅蓝色"",
+  ""pattern"": ""花卉"",
+  ""visible_design"": ""圆领;短袖;层叠""
+}
+```",蓝色,红框内为浅蓝色褶皱裙摆，搭配白色上衣，上衣正面有花卉图案装饰。,这款连衣裙的可见特征包括：以浅蓝色为主色调；可见花卉图案；可见圆领;短袖;层叠细节。,TEMPLATE_DRAFT_NEEDS_HUMAN_REVIEW,42,False,True,REVIEW_REQUIRED_NOT_RELEASED
+fresh_dev_031,pred_0000,2102.67,25.078,1076.262,168.145,830.583,27.68,195.825,1934.525,1103.942,38,3,29,"```json
+{
+  ""category"": ""pants"",
+  ""primary_color"": ""黑色"",
+  ""pattern"": ""无"",
+  ""visible_design"": ""无设计""
+}
+```",无法确定,红色框内展示了一条深绿色紧身裤，裤腰处有金色图案装饰，裤脚部分可见黑色拉链。,这款裤装的可见特征包括：以黑色为主色调。,TEMPLATE_DRAFT_NEEDS_HUMAN_REVIEW,20,False,False,REVIEW_REQUIRED_NOT_RELEASED
+fresh_dev_031,pred_0001,1931.417,21.959,1099.111,203.103,604.628,24.575,227.678,1728.314,1123.686,38,3,20,"```json
+{
+  ""category"": ""top"",
+  ""primary_color"": ""绿色"",
+  ""pattern"": ""无"",
+  ""visible_design"": ""无设计""
+}
+```",无法确定,深绿色紧身裤，正面有金色刺绣图案，腰带松紧设计。,这款上衣的可见特征包括：以绿色为主色调。,TEMPLATE_DRAFT_NEEDS_HUMAN_REVIEW,20,False,False,REVIEW_REQUIRED_NOT_RELEASED
+fresh_dev_032,pred_0000,2021.993,78.199,1189.823,147.513,603.793,80.864,228.377,1874.48,1270.687,42,2,20,"```json
+{
+  ""category"": ""top"",
+  ""primary_color"": ""白色"",
+  ""pattern"": ""动物图案"",
+  ""visible_design"": ""圆领;短袖""
+}
+```",白色,白色T恤，红色斑马图案，短袖设计，圆领，清晰可见。,这款上衣的可见特征包括：以白色为主色调；可见动物图案图案；可见圆领;短袖细节。,TEMPLATE_DRAFT_NEEDS_HUMAN_REVIEW,39,False,False,REVIEW_REQUIRED_NOT_RELEASED
+fresh_dev_032,pred_0001,1894.113,82.068,1189.045,147.803,472.333,84.932,232.735,1746.31,1273.977,42,2,15,"```json
+{
+  ""category"": ""top"",
+  ""primary_color"": ""白色"",
+  ""pattern"": ""文字印花"",
+  ""visible_design"": ""圆领;短袖""
+}
+```",黑色,黑色短裤，白色条纹装饰，正面有红色图案。,这款上衣的可见特征包括：以白色为主色调；可见文字印花图案；可见圆领;短袖细节。,TEMPLATE_DRAFT_NEEDS_HUMAN_REVIEW,39,False,False,REVIEW_REQUIRED_NOT_RELEASED
+fresh_dev_033,pred_0000,2077.569,21.121,1162.733,114.012,776.757,24.067,138.079,1963.557,1186.8,42,2,28,"```json
+{
+  ""category"": ""top"",
+  ""primary_color"": ""白色"",
+  ""pattern"": ""文字印花"",
+  ""visible_design"": ""圆领;短袖""
+}
+```",白色,红色边框内展示的T恤为白色底色，正面印有卡通图案，图案下方有黑色蕾丝装饰。,这款上衣的可见特征包括：以白色为主色调；可见文字印花图案；可见圆领;短袖细节。,TEMPLATE_DRAFT_NEEDS_HUMAN_REVIEW,39,False,True,REVIEW_REQUIRED_NOT_RELEASED
+fresh_dev_033,pred_0001,1822.167,20.146,1179.921,115.984,503.574,22.688,138.672,1706.183,1202.609,42,2,17,"```json
+{
+  ""category"": ""top"",
+  ""primary_color"": ""白色"",
+  ""pattern"": ""文字印花"",
+  ""visible_design"": ""圆领;短袖""
+}
+```",黑色,黑色蕾丝短裤，边缘有装饰花边，适合夏季穿着。,这款上衣的可见特征包括：以白色为主色调；可见文字印花图案；可见圆领;短袖细节。,TEMPLATE_DRAFT_NEEDS_HUMAN_REVIEW,39,False,False,REVIEW_REQUIRED_NOT_RELEASED
+fresh_dev_033,pred_0002,1829.293,20.274,1173.23,114.798,518.334,22.931,137.729,1714.495,1196.161,42,2,18,"```json
+{
+  ""category"": ""top"",
+  ""primary_color"": ""白色"",
+  ""pattern"": ""文字印花"",
+  ""visible_design"": ""圆领;短袖""
+}
+```",黑色,黑色蕾丝短裤，边缘有装饰性花边，适合夏季穿着。,这款上衣的可见特征包括：以白色为主色调；可见文字印花图案；可见圆领;短袖细节。,TEMPLATE_DRAFT_NEEDS_HUMAN_REVIEW,39,False,False,REVIEW_REQUIRED_NOT_RELEASED
+fresh_dev_034,pred_0000,2276.54,26.233,1282.718,234.711,726.839,32.272,266.983,2041.829,1314.99,42,2,21,"```json
+{
+  ""category"": ""top"",
+  ""primary_color"": ""白色"",
+  ""pattern"": ""文字印花"",
+  ""visible_design"": ""圆领;短袖""
+}
+```",白色,红色百褶裙，垂坠感强，裙摆层次分明，适合搭配T恤。,这款上衣的可见特征包括：以白色为主色调；可见文字印花图案；可见圆领;短袖细节。,TEMPLATE_DRAFT_NEEDS_HUMAN_REVIEW,39,False,False,REVIEW_REQUIRED_NOT_RELEASED
+fresh_dev_034,pred_0001,2284.474,27.64,1249.964,237.397,764.628,32.485,269.882,2047.077,1282.449,40,2,22,"```json
+{
+  ""category"": ""skirt"",
+  ""primary_color"": ""红色"",
+  ""pattern"": ""纯色"",
+  ""visible_design"": ""无设计""
+}
+```",红色,红色百褶裙，表面光滑无图案，腰部松紧设计，下摆自然垂坠。,这款裙装的可见特征包括：以红色为主色调；整体呈纯色风格。,TEMPLATE_DRAFT_NEEDS_HUMAN_REVIEW,28,False,False,REVIEW_REQUIRED_NOT_RELEASED
+fresh_dev_034,pred_0002,2259.041,25.239,1237.15,235.959,755.95,29.982,265.941,2023.082,1267.132,40,2,22,"```json
+{
+  ""category"": ""skirt"",
+  ""primary_color"": ""红色"",
+  ""pattern"": ""纯色"",
+  ""visible_design"": ""无设计""
+}
+```",红色,红色百褶裙，表面光滑无图案，裙摆层次分明，适合搭配简约上衣。,这款裙装的可见特征包括：以红色为主色调；整体呈纯色风格。,TEMPLATE_DRAFT_NEEDS_HUMAN_REVIEW,28,False,False,REVIEW_REQUIRED_NOT_RELEASED
+fresh_dev_035,pred_0000,2320.339,26.343,1254.886,233.811,800.512,31.13,264.941,2086.528,1286.016,41,2,24,"```json
+{
+  ""category"": ""top"",
+  ""primary_color"": ""蓝色"",
+  ""pattern"": ""无"",
+  ""visible_design"": ""圆领;短袖""
+}
+```",蓝色,红色边框内：蓝色短袖T恤，胸前口袋设计，圆领，袖口略宽松。,这款上衣的可见特征包括：以蓝色为主色调；可见圆领;短袖细节。,TEMPLATE_DRAFT_NEEDS_HUMAN_REVIEW,30,False,True,REVIEW_REQUIRED_NOT_RELEASED
+fresh_dev_035,pred_0001,2262.163,31.275,1269.63,235.179,721.163,36.191,271.37,2026.984,1305.821,41,2,21,"```json
+{
+  ""category"": ""top"",
+  ""primary_color"": ""蓝色"",
+  ""pattern"": ""无"",
+  ""visible_design"": ""圆领;短袖""
+}
+```",白色,白色短裙，无明显图案，A字型设计，腰间有拉链装饰。,这款上衣的可见特征包括：以蓝色为主色调；可见圆领;短袖细节。,TEMPLATE_DRAFT_NEEDS_HUMAN_REVIEW,30,False,False,REVIEW_REQUIRED_NOT_RELEASED
+fresh_dev_035,pred_0002,2306.446,26.587,1265.268,233.389,776.179,31.61,264.999,2073.057,1296.878,41,2,23,"```json
+{
+  ""category"": ""top"",
+  ""primary_color"": ""蓝色"",
+  ""pattern"": ""无"",
+  ""visible_design"": ""圆领;短袖""
+}
+```",蓝色,红色边框内：蓝色短袖T恤，胸前口袋设计，白色波点发带装饰。,这款上衣的可见特征包括：以蓝色为主色调；可见圆领;短袖细节。,TEMPLATE_DRAFT_NEEDS_HUMAN_REVIEW,30,False,True,REVIEW_REQUIRED_NOT_RELEASED
+fresh_dev_036,pred_0000,2471.792,86.303,1293.838,249.723,837.666,90.565,340.288,2222.069,1384.403,43,3,26,"```json
+{
+  ""category"": ""dress"",
+  ""primary_color"": ""浅蓝色"",
+  ""pattern"": ""条纹"",
+  ""visible_design"": ""圆领;短袖""
+}
+```",无法确定,红框服饰为浅蓝色条纹短袖上衣，搭配浅蓝色网纱裙，整体设计简约清新。,这款连衣裙的可见特征包括：以浅蓝色为主色调；可见条纹图案；可见圆领;短袖细节。,TEMPLATE_DRAFT_NEEDS_HUMAN_REVIEW,39,False,True,REVIEW_REQUIRED_NOT_RELEASED
+fresh_dev_036,pred_0001,2251.117,25.042,1279.753,248.736,692.981,29.647,278.383,2002.381,1309.4,41,3,20,"```json
+{
+  ""category"": ""skirt"",
+  ""primary_color"": ""浅蓝色"",
+  ""pattern"": ""纯色"",
+  ""visible_design"": ""层叠""
+}
+```",浅蓝色,浅蓝色网纱裙，轻盈飘逸，层次分明，适合春夏季节穿着。,这款裙装的可见特征包括：以浅蓝色为主色调；整体呈纯色风格；可见层叠细节。,TEMPLATE_DRAFT_NEEDS_HUMAN_REVIEW,36,False,False,REVIEW_REQUIRED_NOT_RELEASED
+fresh_dev_037,pred_0000,2178.12,46.163,1362.79,182.958,582.973,49.399,232.357,1995.162,1412.189,48,2,18,"```json
+{
+  ""category"": ""outerwear"",
+  ""primary_color"": ""黑色"",
+  ""pattern"": ""纯色"",
+  ""visible_design"": ""立领;拉链;袖口拉链""
+}
+```",黑色,黑色皮夹克，无明显图案，有拉链和纽扣细节。,这款外套的可见特征包括：以黑色为主色调；整体呈纯色风格；可见立领;拉链;袖口拉链细节。,TEMPLATE_DRAFT_NEEDS_HUMAN_REVIEW,43,False,False,REVIEW_REQUIRED_NOT_RELEASED
+fresh_dev_037,pred_0001,2375.043,30.691,1398.036,186.539,756.403,34.065,220.604,2188.504,1432.101,48,2,24,"```json
+{
+  ""category"": ""outerwear"",
+  ""primary_color"": ""黑色"",
+  ""pattern"": ""纯色"",
+  ""visible_design"": ""立领;拉链;袖口松紧""
+}
+```",黑色,黑色皮夹克，无明显图案，后背有拉链设计，袖口有扣子装饰。,这款外套的可见特征包括：以黑色为主色调；整体呈纯色风格；可见立领;拉链;袖口松紧细节。,TEMPLATE_DRAFT_NEEDS_HUMAN_REVIEW,43,False,False,REVIEW_REQUIRED_NOT_RELEASED
+fresh_dev_037,pred_0002,2217.631,27.012,1254.073,185.829,746.947,30.782,216.611,2031.802,1284.855,43,2,24,"```json
+{
+  ""category"": ""outerwear"",
+  ""primary_color"": ""黑色"",
+  ""pattern"": ""纯色"",
+  ""visible_design"": ""立领;拉链""
+}
+```",黑色,黑色皮夹克，无明显图案，袖口有拉链设计，后背有纽扣装饰。,这款外套的可见特征包括：以黑色为主色调；整体呈纯色风格；可见立领;拉链细节。,TEMPLATE_DRAFT_NEEDS_HUMAN_REVIEW,38,False,False,REVIEW_REQUIRED_NOT_RELEASED
+fresh_dev_038,pred_0000,2215.301,86.47,1192.028,233.758,698.589,90.926,324.684,1981.543,1282.954,38,2,20,"```json
+{
+  ""category"": ""top"",
+  ""primary_color"": ""白色"",
+  ""pattern"": ""无"",
+  ""visible_design"": ""无设计""
+}
+```",蓝色,牛仔短裤，蓝色，表面有磨损效果，前部有拉链设计。,这款上衣的可见特征包括：以白色为主色调。,TEMPLATE_DRAFT_NEEDS_HUMAN_REVIEW,20,False,False,REVIEW_REQUIRED_NOT_RELEASED
+fresh_dev_038,pred_0001,2278.512,85.132,1242.366,235.164,711.627,89.355,324.519,2043.348,1331.721,41,2,21,"```json
+{
+  ""category"": ""top"",
+  ""primary_color"": ""白色"",
+  ""pattern"": ""无"",
+  ""visible_design"": ""V领;流苏""
+}
+```",白色,白色流苏开衫，无袖设计，搭配黑色内搭和牛仔短裤。,这款上衣的可见特征包括：以白色为主色调；可见V领;流苏细节。,TEMPLATE_DRAFT_NEEDS_HUMAN_REVIEW,30,False,False,REVIEW_REQUIRED_NOT_RELEASED
+fresh_dev_038,pred_0002,2312.976,87.683,1261.824,233.931,725.217,92.004,325.935,2079.045,1353.828,41,2,21,"```json
+{
+  ""category"": ""top"",
+  ""primary_color"": ""白色"",
+  ""pattern"": ""无"",
+  ""visible_design"": ""V领;流苏""
+}
+```",白色,白色流苏开衫，无袖设计，胸前有流苏装饰，适合夏季穿着。,这款上衣的可见特征包括：以白色为主色调；可见V领;流苏细节。,TEMPLATE_DRAFT_NEEDS_HUMAN_REVIEW,30,False,False,REVIEW_REQUIRED_NOT_RELEASED
+fresh_dev_039,pred_0000,2597.932,27.34,1244.113,186.054,1137.024,30.741,216.795,2411.878,1274.854,42,2,39,"```json
+{
+  ""category"": ""top"",
+  ""primary_color"": ""蓝色"",
+  ""pattern"": ""条纹"",
+  ""visible_design"": ""门襟;扣合""
+}
+```",蓝色,红色边框内：深蓝色牛仔外套，正面有金色纽扣，内搭黑白条纹T恤，下穿黑色紧身裤，脚穿白色凉鞋。,这款上衣的可见特征包括：以蓝色为主色调；可见条纹图案；可见门襟;扣合细节。,TEMPLATE_DRAFT_NEEDS_HUMAN_REVIEW,37,False,True,REVIEW_REQUIRED_NOT_RELEASED
+fresh_dev_039,pred_0001,2342.103,26.861,1245.976,185.142,880.554,30.431,215.573,2156.961,1276.407,43,2,29,"```json
+{
+  ""category"": ""outerwear"",
+  ""primary_color"": ""深蓝色"",
+  ""pattern"": ""无"",
+  ""visible_design"": ""门襟;扣合""
+}
+```",蓝色,红色框内展示了一件深蓝色牛仔外套，表面有白色条纹装饰，衣摆宽松，扣子排列整齐。,这款外套的可见特征包括：以深蓝色为主色调；可见门襟;扣合细节。,TEMPLATE_DRAFT_NEEDS_HUMAN_REVIEW,31,False,False,REVIEW_REQUIRED_NOT_RELEASED
+fresh_dev_039,pred_0002,2453.255,130.335,1237.253,210.09,872.036,133.876,343.966,2243.165,1371.129,42,3,29,"```json
+{
+  ""category"": ""top"",
+  ""primary_color"": ""蓝色"",
+  ""pattern"": ""条纹"",
+  ""visible_design"": ""门襟;扣合""
+}
+```",无法确定,红色框内展示了一条深蓝色牛仔裤，表面有白色条纹装饰，裤脚处有明显缝线细节。,这款上衣的可见特征包括：以蓝色为主色调；可见条纹图案；可见门襟;扣合细节。,TEMPLATE_DRAFT_NEEDS_HUMAN_REVIEW,37,False,False,REVIEW_REQUIRED_NOT_RELEASED
+fresh_dev_040,pred_0000,2163.14,22.884,1252.998,185.58,697.858,26.704,212.284,1977.56,1279.702,43,2,22,"```json
+{
+  ""category"": ""top"",
+  ""primary_color"": ""白色"",
+  ""pattern"": ""菱形编织"",
+  ""visible_design"": ""圆领;长袖""
+}
+```",白色,白色针织开衫，菱形编织图案，圆领设计，袖口有松紧带。,这款上衣的可见特征包括：以白色为主色调；可见菱形编织图案；可见圆领;长袖细节。,TEMPLATE_DRAFT_NEEDS_HUMAN_REVIEW,39,False,False,REVIEW_REQUIRED_NOT_RELEASED
+fresh_dev_040,pred_0001,2190.785,83.23,1262.156,185.164,656.893,86.572,271.736,2005.621,1348.728,43,2,20,"```json
+{
+  ""category"": ""top"",
+  ""primary_color"": ""白色"",
+  ""pattern"": ""菱形编织"",
+  ""visible_design"": ""圆领;长袖""
+}
+```",白色,白色针织开衫，菱形镂空设计，肩部有黑色条纹装饰。,这款上衣的可见特征包括：以白色为主色调；可见菱形编织图案；可见圆领;长袖细节。,TEMPLATE_DRAFT_NEEDS_HUMAN_REVIEW,39,False,False,REVIEW_REQUIRED_NOT_RELEASED
+fresh_dev_041,pred_0000,2946.621,80.6,1318.009,543.854,999.674,85.084,628.938,2402.767,1403.093,43,14,32,"```json
+{
+  ""category"": ""dress"",
+  ""primary_color"": ""蓝色"",
+  ""pattern"": ""格纹"",
+  ""visible_design"": ""翻领;七分袖""
+}
+```",红框内目标服饰的主要可见颜色是蓝色和白色。,红框服饰为浅蓝色格子衬衫连衣裙，表面有细密格纹，袖口卷起，下摆开叉设计。,这款连衣裙的可见特征包括：以蓝色为主色调；可见格纹图案；可见翻领;七分袖细节。,TEMPLATE_DRAFT_NEEDS_HUMAN_REVIEW,39,False,True,REVIEW_REQUIRED_NOT_RELEASED
+fresh_dev_041,pred_0001,3095.231,86.254,1323.055,573.471,1107.425,91.28,664.751,2521.76,1414.335,43,15,36,"```json
+{
+  ""category"": ""top"",
+  ""primary_color"": ""蓝色"",
+  ""pattern"": ""格纹"",
+  ""visible_design"": ""翻领;七分袖""
+}
+```",红框内目标服饰的主要可见颜色是浅蓝色和白色。,红框内展示的是一条蓝白格子衬衫连衣裙，带有翻领设计和纽扣装饰，袖口卷起，整体风格休闲舒适。,这款上衣的可见特征包括：以蓝色为主色调；可见格纹图案；可见翻领;七分袖细节。,TEMPLATE_DRAFT_NEEDS_HUMAN_REVIEW,38,False,True,REVIEW_REQUIRED_NOT_RELEASED
+fresh_dev_042,pred_0000,2770.599,38.799,1229.926,520.369,977.926,42.378,562.747,2250.23,1272.304,41,14,32,"```json
+{
+  ""category"": ""top"",
+  ""primary_color"": ""白色"",
+  ""pattern"": ""无"",
+  ""visible_design"": ""圆领;短袖""
+}
+```",红框内目标服饰的主要可见颜色是黑色和白色。,红色边框内展示的服饰为白色T恤搭配蓝色牛仔短裙，牛仔裙有破洞设计，整体风格休闲时尚。,这款上衣的可见特征包括：以白色为主色调；可见圆领;短袖细节。,TEMPLATE_DRAFT_NEEDS_HUMAN_REVIEW,30,False,True,REVIEW_REQUIRED_NOT_RELEASED
+fresh_dev_042,pred_0001,2486.753,28.711,1221.679,261.422,971.291,32.361,293.783,2225.331,1254.04,41,4,32,"```json
+{
+  ""category"": ""top"",
+  ""primary_color"": ""白色"",
+  ""pattern"": ""无"",
+  ""visible_design"": ""圆领;长袖""
+}
+```",黑色和白色,红色边框内展示的服饰为白色T恤搭配蓝色牛仔短裙，牛仔裙有破洞设计，整体风格休闲时尚。,这款上衣的可见特征包括：以白色为主色调；可见圆领;长袖细节。,TEMPLATE_DRAFT_NEEDS_HUMAN_REVIEW,30,False,True,REVIEW_REQUIRED_NOT_RELEASED
+fresh_dev_042,pred_0002,2088.921,32.514,1207.759,207.409,637.538,36.215,243.624,1881.512,1243.974,40,2,19,"```json
+{
+  ""category"": ""skirt"",
+  ""primary_color"": ""蓝色"",
+  ""pattern"": ""牛仔"",
+  ""visible_design"": ""无设计""
+}
+```",蓝色,牛仔短裙，蓝色，表面有破洞设计，腰带为黑色。,这款裙装的可见特征包括：以蓝色为主色调；可见牛仔图案。,TEMPLATE_DRAFT_NEEDS_HUMAN_REVIEW,27,False,False,REVIEW_REQUIRED_NOT_RELEASED
+fresh_dev_042,pred_0003,2149.234,27.897,1216.511,210.14,690.934,31.649,241.789,1939.094,1248.16,41,2,21,"```json
+{
+  ""category"": ""top"",
+  ""primary_color"": ""白色"",
+  ""pattern"": ""无"",
+  ""visible_design"": ""圆领;长袖""
+}
+```",白色,白色T恤，圆领设计，胸前有黑色装饰条纹，表面光滑无图案。,这款上衣的可见特征包括：以白色为主色调；可见圆领;长袖细节。,TEMPLATE_DRAFT_NEEDS_HUMAN_REVIEW,30,False,False,REVIEW_REQUIRED_NOT_RELEASED
+fresh_dev_042,pred_0004,2182.377,68.769,1227.85,212.106,669.866,72.555,284.661,1970.271,1300.405,41,2,20,"```json
+{
+  ""category"": ""top"",
+  ""primary_color"": ""白色"",
+  ""pattern"": ""无"",
+  ""visible_design"": ""圆领;长袖""
+}
+```",蓝色,牛仔短裙，蓝色，破洞设计，高腰线，修身剪裁。,这款上衣的可见特征包括：以白色为主色调；可见圆领;长袖细节。,TEMPLATE_DRAFT_NEEDS_HUMAN_REVIEW,30,False,False,REVIEW_REQUIRED_NOT_RELEASED
+fresh_dev_042,pred_0005,2182.018,83.553,1194.684,209.269,690.678,87.387,296.656,1972.749,1282.071,40,2,21,"```json
+{
+  ""category"": ""skirt"",
+  ""primary_color"": ""蓝色"",
+  ""pattern"": ""破洞"",
+  ""visible_design"": ""无设计""
+}
+```",蓝色,牛仔短裙，蓝色，表面有破洞设计，腰带为织物材质。,这款裙装的可见特征包括：以蓝色为主色调；可见破洞图案。,TEMPLATE_DRAFT_NEEDS_HUMAN_REVIEW,27,False,False,REVIEW_REQUIRED_NOT_RELEASED
+fresh_dev_043,pred_0000,2306.315,76.942,1131.633,118.602,976.218,79.862,198.464,2187.713,1211.495,41,2,36,"```json
+{
+  ""category"": ""top"",
+  ""primary_color"": ""白色"",
+  ""pattern"": ""花卉"",
+  ""visible_design"": ""圆领;长袖""
+}
+```",红色,红色边框内展示的服饰为白色T恤，正面有黑色翅膀图案和数字“19”。搭配花卉图案的外套，外套边缘有黑色装饰。,这款上衣的可见特征包括：以白色为主色调；可见花卉图案；可见圆领;长袖细节。,TEMPLATE_DRAFT_NEEDS_HUMAN_REVIEW,37,False,True,REVIEW_REQUIRED_NOT_RELEASED
+fresh_dev_043,pred_0001,2046.85,22.489,1137.754,139.938,744.129,25.029,164.967,1906.912,1162.783,41,3,26,"```json
+{
+  ""category"": ""top"",
+  ""primary_color"": ""白色"",
+  ""pattern"": ""花卉"",
+  ""visible_design"": ""圆领;短袖""
+}
+```",无法确定,红色边框内展示的项链为金色吊坠设计，表面光滑，搭配白色T恤和花卉图案外套。,这款上衣的可见特征包括：以白色为主色调；可见花卉图案；可见圆领;短袖细节。,TEMPLATE_DRAFT_NEEDS_HUMAN_REVIEW,37,False,True,REVIEW_REQUIRED_NOT_RELEASED
+fresh_dev_043,pred_0002,2316.143,22.061,1114.977,413.216,763.324,24.626,437.842,1902.927,1139.603,41,14,28,"```json
+{
+  ""category"": ""top"",
+  ""primary_color"": ""白色"",
+  ""pattern"": ""花卉"",
+  ""visible_design"": ""圆领;长袖""
+}
+```",红框内目标服饰的主要可见颜色是黑色和粉色。,红色边框内展示的服饰为白色T恤，正面有黑色字母和翅膀图案装饰，搭配黑色花卉图案外套。,这款上衣的可见特征包括：以白色为主色调；可见花卉图案；可见圆领;长袖细节。,TEMPLATE_DRAFT_NEEDS_HUMAN_REVIEW,37,False,True,REVIEW_REQUIRED_NOT_RELEASED
+fresh_dev_044,pred_0000,2365.701,28.535,1340.743,212.444,780.407,32.107,244.551,2153.257,1372.85,45,2,24,"```json
+{
+  ""category"": ""top"",
+  ""primary_color"": ""白色"",
+  ""pattern"": ""条纹"",
+  ""visible_design"": ""圆领;长袖;门襟""
+}
+```",白色,白色条纹开衫，长袖设计，纽扣装饰，下摆开叉，适合春季穿着。,这款上衣的可见特征包括：以白色为主色调；可见条纹图案；可见圆领;长袖;门襟细节。,TEMPLATE_DRAFT_NEEDS_HUMAN_REVIEW,40,False,False,REVIEW_REQUIRED_NOT_RELEASED
+fresh_dev_044,pred_0001,2221.654,27.587,1335.557,209.717,644.621,31.759,241.476,2011.937,1367.316,45,2,19,"```json
+{
+  ""category"": ""top"",
+  ""primary_color"": ""白色"",
+  ""pattern"": ""文字印花"",
+  ""visible_design"": ""圆领;长袖;门襟""
+}
+```",黑色,黑色紧身裤，膝盖处有破洞设计，表面光滑无明显纹理。,这款上衣的可见特征包括：以白色为主色调；可见文字印花图案；可见圆领;长袖;门襟细节。,TEMPLATE_DRAFT_NEEDS_HUMAN_REVIEW,42,False,False,REVIEW_REQUIRED_NOT_RELEASED
+fresh_dev_044,pred_0002,2435.008,104.98,1350.381,210.015,765.63,108.982,318.997,2224.993,1459.363,46,2,24,"```json
+{
+  ""category"": ""outerwear"",
+  ""primary_color"": ""白色"",
+  ""pattern"": ""条纹"",
+  ""visible_design"": ""圆领;长袖;门襟""
+}
+```",白色,白色条纹开衫，圆领设计，单排扣装饰，宽松版型，适合春季穿着。,这款外套的可见特征包括：以白色为主色调；可见条纹图案；可见圆领;长袖;门襟细节。,TEMPLATE_DRAFT_NEEDS_HUMAN_REVIEW,40,False,False,REVIEW_REQUIRED_NOT_RELEASED
+fresh_dev_044,pred_0003,2379.486,47.66,1308.569,217.799,801.689,51.429,269.228,2161.687,1359.998,43,2,25,"```json
+{
+  ""category"": ""outerwear"",
+  ""primary_color"": ""白色"",
+  ""pattern"": ""条纹"",
+  ""visible_design"": ""门襟;扣合""
+}
+```",白色,白色长款开衫，正面有黑色纽扣装饰，袖口卷起，下摆自然垂落。,这款外套的可见特征包括：以白色为主色调；可见条纹图案；可见门襟;扣合细节。,TEMPLATE_DRAFT_NEEDS_HUMAN_REVIEW,37,False,False,REVIEW_REQUIRED_NOT_RELEASED
+fresh_dev_044,pred_0004,2402.91,28.598,1269.454,210.788,890.105,32.563,243.351,2192.122,1302.017,43,2,29,"```json
+{
+  ""category"": ""outerwear"",
+  ""primary_color"": ""白色"",
+  ""pattern"": ""条纹"",
+  ""visible_design"": ""门襟;扣合""
+}
+```",白色,红色边框内展示的服饰为白色长款开衫外套，带有黑色纽扣装饰，表面有竖条纹设计。,这款外套的可见特征包括：以白色为主色调；可见条纹图案；可见门襟;扣合细节。,TEMPLATE_DRAFT_NEEDS_HUMAN_REVIEW,37,False,True,REVIEW_REQUIRED_NOT_RELEASED
+fresh_dev_045,pred_0000,2183.444,21.687,1202.637,184.467,771.181,25.159,209.626,1998.977,1227.796,41,2,25,"```json
+{
+  ""category"": ""top"",
+  ""primary_color"": ""白色"",
+  ""pattern"": ""无"",
+  ""visible_design"": ""V领;肩带""
+}
+```",白色,白色吊带连衣裙，肩带设计独特，胸前有蕾丝花边装饰，整体简约优雅。,这款上衣的可见特征包括：以白色为主色调；可见V领;肩带细节。,TEMPLATE_DRAFT_NEEDS_HUMAN_REVIEW,30,False,False,REVIEW_REQUIRED_NOT_RELEASED
+fresh_dev_046,pred_0000,2795.367,23.15,1201.902,515.648,1050.828,26.989,542.637,2279.719,1228.891,40,14,35,"```json
+{
+  ""category"": ""dress"",
+  ""primary_color"": ""白色"",
+  ""pattern"": ""人字纹"",
+  ""visible_design"": ""无设计""
+}
+```",红框内目标服饰的主要可见颜色是白色和黑色。,红框内展示的是一款白色连衣裙，带有黑色波浪形图案装饰，无袖设计，腰部有褶皱装饰，整体风格简约时尚。,这款连衣裙的可见特征包括：以白色为主色调；可见人字纹图案。,TEMPLATE_DRAFT_NEEDS_HUMAN_REVIEW,29,False,True,REVIEW_REQUIRED_NOT_RELEASED
+fresh_dev_047,pred_0000,2448.064,23.489,1363.722,211.078,846.231,27.033,238.111,2236.986,1390.755,46,2,27,"```json
+{
+  ""category"": ""top"",
+  ""primary_color"": ""白色"",
+  ""pattern"": ""纯色"",
+  ""visible_design"": ""露肩;喇叭袖;荷叶边""
+}
+```",白色,白色露肩上衣，荷叶边装饰，肩带可调节，袖口喇叭设计，搭配黑色短裤。,这款上衣的可见特征包括：以白色为主色调；整体呈纯色风格；可见露肩;喇叭袖;荷叶边细节。,TEMPLATE_DRAFT_NEEDS_HUMAN_REVIEW,43,False,False,REVIEW_REQUIRED_NOT_RELEASED
+fresh_dev_048,pred_0000,2628.904,102.916,1277.561,245.958,995.964,109.421,355.379,2382.946,1386.982,41,2,31,"```json
+{
+  ""category"": ""skirt"",
+  ""primary_color"": ""浅蓝色"",
+  ""pattern"": ""纯色"",
+  ""visible_design"": ""无设计""
+}
+```",蓝色,红框内展示了一条浅蓝色牛仔背带裙，表面有轻微磨损效果，搭配白色T恤，整体设计简约时尚。,这款裙装的可见特征包括：以浅蓝色为主色调；整体呈纯色风格。,TEMPLATE_DRAFT_NEEDS_HUMAN_REVIEW,29,False,True,REVIEW_REQUIRED_NOT_RELEASED
+fresh_dev_048,pred_0001,2789.994,89.42,1359.338,240.476,1094.451,95.729,336.205,2549.518,1455.067,45,2,36,"```json
+{
+  ""category"": ""top"",
+  ""primary_color"": ""白色"",
+  ""pattern"": ""文字印花"",
+  ""visible_design"": ""圆领;短袖;肩带""
+}
+```",白色,红色方框内展示了一件白色T恤，正面印有黑色卡通图案，搭配浅蓝色牛仔背带裙，裙摆呈A字型设计。,这款上衣的可见特征包括：以白色为主色调；可见文字印花图案；可见圆领;短袖;肩带细节。,TEMPLATE_DRAFT_NEEDS_HUMAN_REVIEW,42,False,False,REVIEW_REQUIRED_NOT_RELEASED
+fresh_dev_049,pred_0000,2146.086,25.306,1271.304,181.76,664.567,28.455,210.215,1964.326,1299.759,44,2,21,"```json
+{
+  ""category"": ""top"",
+  ""primary_color"": ""白色"",
+  ""pattern"": ""无"",
+  ""visible_design"": ""高领;长袖;层叠""
+}
+```",白色,白色高领连衣裙，蕾丝袖口，下摆宽松，适合日常穿着。,这款上衣的可见特征包括：以白色为主色调；可见高领;长袖;层叠细节。,TEMPLATE_DRAFT_NEEDS_HUMAN_REVIEW,33,False,False,REVIEW_REQUIRED_NOT_RELEASED
+fresh_dev_049,pred_0001,2404.152,21.929,1286.176,184.199,908.693,25.084,209.283,2219.953,1311.26,44,2,29,"```json
+{
+  ""category"": ""dress"",
+  ""primary_color"": ""白色"",
+  ""pattern"": ""无"",
+  ""visible_design"": ""圆领;长袖;层叠""
+}
+```",白色,红色边框内展示的服饰为白色上衣，带有蕾丝袖口和下摆褶皱设计，整体简约优雅。,这款连衣裙的可见特征包括：以白色为主色调；可见圆领;长袖;层叠细节。,TEMPLATE_DRAFT_NEEDS_HUMAN_REVIEW,34,False,True,REVIEW_REQUIRED_NOT_RELEASED
+fresh_dev_050,pred_0000,2243.028,26.718,1290.62,182.566,739.267,30.575,213.141,2060.462,1321.195,44,2,24,"```json
+{
+  ""category"": ""dress"",
+  ""primary_color"": ""黑色"",
+  ""pattern"": ""无"",
+  ""visible_design"": ""V领;无袖;肩带""
+}
+```",黑色,黑色蕾丝连衣裙，V领设计，胸前有立体花形装饰，肩带可调节。,这款连衣裙的可见特征包括：以黑色为主色调；可见V领;无袖;肩带细节。,TEMPLATE_DRAFT_NEEDS_HUMAN_REVIEW,34,False,False,REVIEW_REQUIRED_NOT_RELEASED
+fresh_dev_051,pred_0000,2629.537,35.725,1381.443,253.287,952.628,42.179,295.466,2376.25,1423.622,45,2,30,"```json
+{
+  ""category"": ""dress"",
+  ""primary_color"": ""黑色"",
+  ""pattern"": ""蕾丝"",
+  ""visible_design"": ""圆领;长袖;层叠""
+}
+```",黑色,黑色蕾丝连衣裙，长袖设计，圆领，胸前有蕾丝镂空装饰，裙摆呈A字型。,这款连衣裙的可见特征包括：以黑色为主色调；可见蕾丝图案；可见圆领;长袖;层叠细节。,TEMPLATE_DRAFT_NEEDS_HUMAN_REVIEW,41,False,False,REVIEW_REQUIRED_NOT_RELEASED
+fresh_dev_052,pred_0000,2734.838,23.661,1265.301,522.405,919.92,27.212,549.617,2212.433,1292.513,42,14,30,"```json
+{
+  ""category"": ""dress"",
+  ""primary_color"": ""绿色"",
+  ""pattern"": ""格纹"",
+  ""visible_design"": ""圆领;短袖""
+}
+```",红框内目标服饰的主要可见颜色是绿色和白色。,红框服饰为浅绿色与白色格子图案，短袖连衣裙设计，领口及袖口有翻边装饰。,这款连衣裙的可见特征包括：以绿色为主色调；可见格纹图案；可见圆领;短袖细节。,TEMPLATE_DRAFT_NEEDS_HUMAN_REVIEW,38,False,True,REVIEW_REQUIRED_NOT_RELEASED
+fresh_dev_052,pred_0001,2673.432,23.118,1233.553,504.744,908.224,26.911,531.655,2168.688,1260.464,42,14,30,"```json
+{
+  ""category"": ""dress"",
+  ""primary_color"": ""绿色"",
+  ""pattern"": ""格纹"",
+  ""visible_design"": ""圆领;短袖""
+}
+```",红框内目标服饰的主要可见颜色是绿色和白色。,红框服饰为浅绿色与白色格子图案，短袖连衣裙设计，袖口与领口有翻边装饰。,这款连衣裙的可见特征包括：以绿色为主色调；可见格纹图案；可见圆领;短袖细节。,TEMPLATE_DRAFT_NEEDS_HUMAN_REVIEW,38,False,True,REVIEW_REQUIRED_NOT_RELEASED
+fresh_dev_052,pred_0002,2573.307,23.606,1232.402,543.04,770.187,27.678,570.718,2030.267,1260.08,42,14,23,"```json
+{
+  ""category"": ""dress"",
+  ""primary_color"": ""绿色"",
+  ""pattern"": ""格纹"",
+  ""visible_design"": ""圆领;短袖""
+}
+```",红框内目标服饰的主要可见颜色是绿色和白色。,红框服饰为浅绿色与白色格子图案，短袖连衣裙设计，简洁大方。,这款连衣裙的可见特征包括：以绿色为主色调；可见格纹图案；可见圆领;短袖细节。,TEMPLATE_DRAFT_NEEDS_HUMAN_REVIEW,38,False,True,REVIEW_REQUIRED_NOT_RELEASED
+fresh_dev_053,pred_0000,2628.44,88.064,1256.168,227.663,1052.433,92.176,319.839,2400.777,1348.344,42,2,35,"```json
+{
+  ""category"": ""dress"",
+  ""primary_color"": ""黄色"",
+  ""pattern"": ""波点"",
+  ""visible_design"": ""圆领;无袖""
+}
+```",黄色,红色方框内展示了一件黄色波点无袖连衣裙，裙子上点缀着小黑点，领口和袖口有装饰性细节。,这款连衣裙的可见特征包括：以黄色为主色调；可见波点图案；可见圆领;无袖细节。,TEMPLATE_DRAFT_NEEDS_HUMAN_REVIEW,38,False,False,REVIEW_REQUIRED_NOT_RELEASED
+fresh_dev_053,pred_0001,2409.961,25.201,1195.947,225.551,959.295,29.168,254.719,2184.41,1225.115,39,2,31,"```json
+{
+  ""category"": ""dress"",
+  ""primary_color"": ""黄色"",
+  ""pattern"": ""波点"",
+  ""visible_design"": ""无设计""
+}
+```",黄色,红色边框内展示了一件黄色波点无袖连衣裙，裙子上有小圆点装饰，搭配珍珠项链和手链。,这款连衣裙的可见特征包括：以黄色为主色调；可见波点图案。,TEMPLATE_DRAFT_NEEDS_HUMAN_REVIEW,28,False,True,REVIEW_REQUIRED_NOT_RELEASED
+fresh_dev_053,pred_0002,2332.931,41.793,1188.721,225.761,872.678,45.771,271.532,2107.17,1234.492,39,2,28,"```json
+{
+  ""category"": ""dress"",
+  ""primary_color"": ""黄色"",
+  ""pattern"": ""波点"",
+  ""visible_design"": ""无设计""
+}
+```",黄色,红色边框内展示了一件黄色波点无袖连衣裙，裙子上有小圆点装饰，设计简约优雅。,这款连衣裙的可见特征包括：以黄色为主色调；可见波点图案。,TEMPLATE_DRAFT_NEEDS_HUMAN_REVIEW,28,False,True,REVIEW_REQUIRED_NOT_RELEASED
+fresh_dev_053,pred_0003,2417.031,26.047,1257.728,225.103,903.983,30.217,255.32,2191.928,1287.945,42,2,29,"```json
+{
+  ""category"": ""dress"",
+  ""primary_color"": ""黄色"",
+  ""pattern"": ""波点"",
+  ""visible_design"": ""圆领;无袖""
+}
+```",黄色,红色边框内展示了一件黄色波点无袖连衣裙，裙子上点缀着小黑点，设计简约优雅。,这款连衣裙的可见特征包括：以黄色为主色调；可见波点图案；可见圆领;无袖细节。,TEMPLATE_DRAFT_NEEDS_HUMAN_REVIEW,38,False,True,REVIEW_REQUIRED_NOT_RELEASED
+fresh_dev_053,pred_0004,2489.383,80.356,1253.987,227.123,923.393,84.88,312.003,2262.26,1338.867,39,2,29,"```json
+{
+  ""category"": ""dress"",
+  ""primary_color"": ""黄色"",
+  ""pattern"": ""波点"",
+  ""visible_design"": ""无设计""
+}
+```",黄色,红色边框内展示了一件黄色波点无袖连衣裙，裙子上点缀着小黑点，设计简约优雅。,这款连衣裙的可见特征包括：以黄色为主色调；可见波点图案。,TEMPLATE_DRAFT_NEEDS_HUMAN_REVIEW,28,False,True,REVIEW_REQUIRED_NOT_RELEASED
+fresh_dev_054,pred_0000,2598.642,25.533,1287.323,239.875,1041.845,29.599,269.474,2358.767,1316.922,42,2,33,"```json
+{
+  ""category"": ""dress"",
+  ""primary_color"": ""蓝色"",
+  ""pattern"": ""纯色"",
+  ""visible_design"": ""V领;无袖""
+}
+```",蓝色,红色框内展示了一件深蓝色牛仔连衣裙，无袖设计，V领，胸前有白色条纹装饰，整体简约时尚。,这款连衣裙的可见特征包括：以蓝色为主色调；整体呈纯色风格；可见V领;无袖细节。,TEMPLATE_DRAFT_NEEDS_HUMAN_REVIEW,39,False,False,REVIEW_REQUIRED_NOT_RELEASED
+fresh_dev_054,pred_0001,2316.169,81.914,1262.151,235.815,731.87,86.333,322.148,2080.354,1348.484,42,2,22,"```json
+{
+  ""category"": ""top"",
+  ""primary_color"": ""蓝色"",
+  ""pattern"": ""纯色"",
+  ""visible_design"": ""V领;无袖""
+}
+```",蓝色,蓝色牛仔无袖连衣裙，V领设计，肩带可调节，简约时尚。,这款上衣的可见特征包括：以蓝色为主色调；整体呈纯色风格；可见V领;无袖细节。,TEMPLATE_DRAFT_NEEDS_HUMAN_REVIEW,38,False,False,REVIEW_REQUIRED_NOT_RELEASED
+fresh_dev_055,pred_0000,2519.317,77.48,1277.467,150.001,1011.13,80.719,230.72,2369.316,1358.186,45,2,36,"```json
+{
+  ""category"": ""dress"",
+  ""primary_color"": ""深蓝"",
+  ""pattern"": ""花卉"",
+  ""visible_design"": ""方领;无袖;肩带""
+}
+```",蓝色,红色边框内展示了一件深蓝色底色的无袖连衣裙，上面印有粉色和白色的花卉图案。裙子设计简洁，无明显装饰。,这款连衣裙的可见特征包括：以深蓝为主色调；可见花卉图案；可见方领;无袖;肩带细节。,TEMPLATE_DRAFT_NEEDS_HUMAN_REVIEW,41,False,True,REVIEW_REQUIRED_NOT_RELEASED
+fresh_dev_055,pred_0001,2662.208,21.231,1275.559,149.106,1213.046,24.497,173.603,2513.102,1300.056,45,2,44,"```json
+{
+  ""category"": ""dress"",
+  ""primary_color"": ""深蓝"",
+  ""pattern"": ""花卉"",
+  ""visible_design"": ""方领;无袖;肩带""
+}
+```",蓝色,红色边框内展示了一件深蓝色底色的无袖连衣裙，上面印有粉色和白色的花卉图案。裙子设计简洁，肩带宽大，裙摆呈A字型。,这款连衣裙的可见特征包括：以深蓝为主色调；可见花卉图案；可见方领;无袖;肩带细节。,TEMPLATE_DRAFT_NEEDS_HUMAN_REVIEW,41,False,True,REVIEW_REQUIRED_NOT_RELEASED
+fresh_dev_055,pred_0002,2421.81,77.864,1271.755,164.922,903.911,81.222,246.144,2256.888,1352.977,45,2,31,"```json
+{
+  ""category"": ""dress"",
+  ""primary_color"": ""深蓝"",
+  ""pattern"": ""花卉"",
+  ""visible_design"": ""方领;无袖;肩带""
+}
+```",蓝色,红色方框内展示了一件深蓝色底带有粉色和白色花朵图案的无袖连衣裙，裙子边缘有褶皱设计。,这款连衣裙的可见特征包括：以深蓝为主色调；可见花卉图案；可见方领;无袖;肩带细节。,TEMPLATE_DRAFT_NEEDS_HUMAN_REVIEW,41,False,False,REVIEW_REQUIRED_NOT_RELEASED
+fresh_dev_056,pred_0000,2234.762,30.393,1234.898,235.313,729.341,35.21,270.523,1999.449,1270.108,40,2,21,"```json
+{
+  ""category"": ""skirt"",
+  ""primary_color"": ""黑色"",
+  ""pattern"": ""格纹"",
+  ""visible_design"": ""无设计""
+}
+```",白色,白色尖头高跟鞋，鞋面光滑，鞋跟细长，设计简约优雅。,这款裙装的可见特征包括：以黑色为主色调；可见格纹图案。,TEMPLATE_DRAFT_NEEDS_HUMAN_REVIEW,27,False,False,REVIEW_REQUIRED_NOT_RELEASED
+fresh_dev_056,pred_0001,2321.825,33.753,1259.071,232.724,791.472,38.558,271.282,2089.101,1297.629,42,2,24,"```json
+{
+  ""category"": ""top"",
+  ""primary_color"": ""白色"",
+  ""pattern"": ""文字印花"",
+  ""visible_design"": ""圆领;短袖""
+}
+```",白色,白色短袖T恤，正面印有黑色字母“iYi”，圆领设计，简约时尚。,这款上衣的可见特征包括：以白色为主色调；可见文字印花图案；可见圆领;短袖细节。,TEMPLATE_DRAFT_NEEDS_HUMAN_REVIEW,39,False,False,REVIEW_REQUIRED_NOT_RELEASED
+fresh_dev_056,pred_0002,2274.078,34.215,1226.221,236.366,772.079,39.412,275.778,2037.712,1265.633,40,2,23,"```json
+{
+  ""category"": ""skirt"",
+  ""primary_color"": ""黑色"",
+  ""pattern"": ""格纹"",
+  ""visible_design"": ""无设计""
+}
+```",黑色,黑色网纱半身裙，透明格子图案，高腰设计，适合搭配白色上衣。,这款裙装的可见特征包括：以黑色为主色调；可见格纹图案。,TEMPLATE_DRAFT_NEEDS_HUMAN_REVIEW,27,False,False,REVIEW_REQUIRED_NOT_RELEASED
+fresh_dev_056,pred_0003,2287.473,86.441,1212.08,262.227,721.31,91.856,354.083,2025.246,1303.936,39,3,21,"```json
+{
+  ""category"": ""skirt"",
+  ""primary_color"": ""黑色"",
+  ""pattern"": ""网格"",
+  ""visible_design"": ""无设计""
+}
+```",无法确定,黑色网纱半身裙，透明格子设计，腰部紧身，下摆宽松。,这款裙装的可见特征包括：以黑色为主色调；可见网格图案。,TEMPLATE_DRAFT_NEEDS_HUMAN_REVIEW,27,False,False,REVIEW_REQUIRED_NOT_RELEASED
+fresh_dev_057,pred_0000,2743.955,83.439,1278.02,570.318,807.149,88.468,658.786,2173.637,1366.488,42,15,24,"```json
+{
+  ""category"": ""dress"",
+  ""primary_color"": ""橙白条纹"",
+  ""pattern"": ""条纹"",
+  ""visible_design"": ""无设计""
+}
+```",红框内目标服饰的主要可见颜色是橙色和白色。,红框服饰为无袖连衣裙，条纹设计，橙白相间，无明显装饰。,这款连衣裙的可见特征包括：以橙白条纹为主色调；可见条纹图案。,TEMPLATE_DRAFT_NEEDS_HUMAN_REVIEW,30,False,True,REVIEW_REQUIRED_NOT_RELEASED
+fresh_dev_058,pred_0000,2591.224,42.526,1256.027,212.837,1076.46,45.9,258.737,2378.387,1301.927,42,2,36,"```json
+{
+  ""category"": ""top"",
+  ""primary_color"": ""白色"",
+  ""pattern"": ""卡通人物"",
+  ""visible_design"": ""圆领;短袖""
+}
+```",白色,红色框内展示了一件白色T恤，正面印有卡通人物图案和文字“EYES”。T恤下摆为黑色，袖口有彩色装饰。,这款上衣的可见特征包括：以白色为主色调；可见卡通人物图案；可见圆领;短袖细节。,TEMPLATE_DRAFT_NEEDS_HUMAN_REVIEW,39,False,False,REVIEW_REQUIRED_NOT_RELEASED
+fresh_dev_058,pred_0001,2471.181,137.738,1239.657,208.896,881.349,141.279,350.175,2262.285,1380.936,42,2,29,"```json
+{
+  ""category"": ""top"",
+  ""primary_color"": ""黑色"",
+  ""pattern"": ""卡通人物"",
+  ""visible_design"": ""圆领;短袖""
+}
+```",黑色,黑色T恤，正面印有卡通人物图案，袖口和领口有粉色装饰，左侧肩部有红色边框。,这款上衣的可见特征包括：以黑色为主色调；可见卡通人物图案；可见圆领;短袖细节。,TEMPLATE_DRAFT_NEEDS_HUMAN_REVIEW,39,False,True,REVIEW_REQUIRED_NOT_RELEASED
+fresh_dev_058,pred_0002,2269.277,31.426,1245.408,237.826,750.904,35.139,272.965,2031.451,1280.547,42,3,23,"```json
+{
+  ""category"": ""dress"",
+  ""primary_color"": ""粉色"",
+  ""pattern"": ""卡通图案"",
+  ""visible_design"": ""圆领;短袖""
+}
+```",无法确定,荧光黄色运动鞋，鞋面有反光条纹装饰，鞋带为同色系。,这款连衣裙的可见特征包括：以粉色为主色调；可见卡通图案图案；可见圆领;短袖细节。,TEMPLATE_DRAFT_NEEDS_HUMAN_REVIEW,40,False,False,REVIEW_REQUIRED_NOT_RELEASED
+fresh_dev_058,pred_0003,2637.006,29.869,1235.282,510.045,857.847,33.832,543.877,2126.961,1269.114,42,14,28,"```json
+{
+  ""category"": ""top"",
+  ""primary_color"": ""粉色"",
+  ""pattern"": ""卡通人物"",
+  ""visible_design"": ""圆领;短袖""
+}
+```",红框内目标服饰的主要可见颜色是黑色和白色。,红框服饰为白色短袖T恤，正面印有黑色卡通图案和粉色文字，搭配浅粉色半身裙。,这款上衣的可见特征包括：以粉色为主色调；可见卡通人物图案；可见圆领;短袖细节。,TEMPLATE_DRAFT_NEEDS_HUMAN_REVIEW,39,False,True,REVIEW_REQUIRED_NOT_RELEASED
+fresh_dev_059,pred_0000,2521.511,83.731,1348.265,238.692,845.073,89.481,328.173,2282.819,1437.746,45,2,26,"```json
+{
+  ""category"": ""dress"",
+  ""primary_color"": ""紫色"",
+  ""pattern"": ""无设计"",
+  ""visible_design"": ""露肩;长袖;层叠""
+}
+```",紫色,紫色透明网纱连衣裙，肩部蕾丝装饰，无袖设计，下摆不规则剪裁。,这款连衣裙的可见特征包括：以紫色为主色调；可见露肩;长袖;层叠细节。,TEMPLATE_DRAFT_NEEDS_HUMAN_REVIEW,34,False,False,REVIEW_REQUIRED_NOT_RELEASED
+fresh_dev_059,pred_0001,2501.004,99.46,1400.899,273.457,721.375,105.273,378.73,2227.547,1506.172,46,3,21,"```json
+{
+  ""category"": ""dress"",
+  ""primary_color"": ""紫色"",
+  ""pattern"": ""无设计"",
+  ""visible_design"": ""露肩;短袖;无肩带""
+}
+```",无法确定,紫色透明网纱长裙，肩部蕾丝装饰，下摆轻盈飘逸。,这款连衣裙的可见特征包括：以紫色为主色调；可见露肩;短袖;无肩带细节。,TEMPLATE_DRAFT_NEEDS_HUMAN_REVIEW,35,False,False,REVIEW_REQUIRED_NOT_RELEASED
+fresh_dev_060,pred_0000,2424.452,26.969,1218.1,240.915,934.094,31.343,272.258,2183.537,1249.443,41,3,31,"```json
+{
+  ""category"": ""skirt"",
+  ""primary_color"": ""蓝色"",
+  ""pattern"": ""牛仔布"",
+  ""visible_design"": ""吊带""
+}
+```",无法确定,红色方框内展示了一件白色T恤，搭配浅蓝色牛仔背带裙，T恤上有米奇图案和文字装饰。,这款裙装的可见特征包括：以蓝色为主色调；可见牛仔布图案；可见吊带细节。,TEMPLATE_DRAFT_NEEDS_HUMAN_REVIEW,35,False,False,REVIEW_REQUIRED_NOT_RELEASED
+fresh_dev_060,pred_0001,2342.963,30.126,1188.557,207.421,913.334,33.651,241.072,2135.542,1222.208,40,2,30,"```json
+{
+  ""category"": ""skirt"",
+  ""primary_color"": ""蓝色"",
+  ""pattern"": ""纯色"",
+  ""visible_design"": ""无设计""
+}
+```",蓝色,红色边框内展示了一条浅蓝色牛仔背带裙，带有大口袋设计，表面有明显的缝线和磨损效果。,这款裙装的可见特征包括：以蓝色为主色调；整体呈纯色风格。,TEMPLATE_DRAFT_NEEDS_HUMAN_REVIEW,28,False,True,REVIEW_REQUIRED_NOT_RELEASED
+fresh_dev_060,pred_0002,2263.19,26.36,1193.819,210.485,828.75,30.136,240.621,2052.705,1223.955,40,2,26,"```json
+{
+  ""category"": ""skirt"",
+  ""primary_color"": ""蓝色"",
+  ""pattern"": ""纯色"",
+  ""visible_design"": ""无设计""
+}
+```",黑色,红色边框内展示的是一款浅蓝色牛仔背带裙，表面有明显的口袋设计和纽扣装饰。,这款裙装的可见特征包括：以蓝色为主色调；整体呈纯色风格。,TEMPLATE_DRAFT_NEEDS_HUMAN_REVIEW,28,False,True,REVIEW_REQUIRED_NOT_RELEASED
+fresh_dev_060,pred_0003,2293.504,43.329,1180.842,210.087,855.252,47.323,257.41,2083.417,1228.165,40,2,27,"```json
+{
+  ""category"": ""skirt"",
+  ""primary_color"": ""蓝色"",
+  ""pattern"": ""纯色"",
+  ""visible_design"": ""无设计""
+}
+```",黑色,红色边框内展示的是一副墨镜，镜片为深色，镜框为黑色，带有金属装饰。,这款裙装的可见特征包括：以蓝色为主色调；整体呈纯色风格。,TEMPLATE_DRAFT_NEEDS_HUMAN_REVIEW,28,False,True,REVIEW_REQUIRED_NOT_RELEASED
+fresh_dev_060,pred_0004,2267.612,42.164,1184.224,237.883,799.778,45.727,283.61,2029.729,1229.951,40,3,25,"```json
+{
+  ""category"": ""skirt"",
+  ""primary_color"": ""蓝色"",
+  ""pattern"": ""纯色"",
+  ""visible_design"": ""无设计""
+}
+```",无法确定,红色方框内展示了一条浅蓝色牛仔背带裙，表面有口袋设计，整体简约时尚。,这款裙装的可见特征包括：以蓝色为主色调；整体呈纯色风格。,TEMPLATE_DRAFT_NEEDS_HUMAN_REVIEW,28,False,False,REVIEW_REQUIRED_NOT_RELEASED
+fresh_dev_060,pred_0005,2222.324,26.57,1208.198,209.408,774.405,30.313,239.721,2012.916,1238.511,40,2,24,"```json
+{
+  ""category"": ""skirt"",
+  ""primary_color"": ""蓝色"",
+  ""pattern"": ""纯色"",
+  ""visible_design"": ""无设计""
+}
+```",蓝色,红色框内展示了一条浅蓝色牛仔背带裙，表面有明显的缝线和口袋设计。,这款裙装的可见特征包括：以蓝色为主色调；整体呈纯色风格。,TEMPLATE_DRAFT_NEEDS_HUMAN_REVIEW,28,False,False,REVIEW_REQUIRED_NOT_RELEASED
+fresh_dev_060,pred_0006,2493.39,27.297,1199.728,208.599,1054.271,30.792,239.391,2284.791,1230.52,40,2,35,"```json
+{
+  ""category"": ""skirt"",
+  ""primary_color"": ""蓝色"",
+  ""pattern"": ""纯色"",
+  ""visible_design"": ""无设计""
+}
+```",蓝色,红色边框内展示了一条牛仔背带裙，颜色为浅蓝色，表面有明显的磨损效果，带有两个大口袋和金属扣子装饰。,这款裙装的可见特征包括：以蓝色为主色调；整体呈纯色风格。,TEMPLATE_DRAFT_NEEDS_HUMAN_REVIEW,28,False,True,REVIEW_REQUIRED_NOT_RELEASED

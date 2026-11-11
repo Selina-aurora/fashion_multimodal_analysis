@@ -1,0 +1,6 @@
+# Exact original experimental evidence; do not normalize CRLF in CSV
+evidence/** -text
+repro/data/** -text
+repro/neutral_ab/manifest.csv -text
+repro/neutral_ab/manifest.json -text
+repro/neutral_ab/marker_control_integrity.json -text

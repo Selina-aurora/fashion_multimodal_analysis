@@ -1,0 +1,167 @@
+{
+  "schema": "prd32_vqa_concise_ab_v2_three_arm",
+  "status": "COMPLETE_SHADOW_ONLY",
+  "selected_targets": 34,
+  "original_guard_invoked": false,
+  "publish_allowed": false,
+  "independent_gt": false,
+  "model_weights_unchanged": true,
+  "all_arms_max_new_tokens": 128,
+  "v1_suffix_sha256": "8e137abac46c68552f0759e8187894900a6d7e9201dcb2bfd7bd7c6940a1a664",
+  "v2_suffix_sha256": "1a231f7c63b0cbd96df850fdf558cd23ade26225df2c3aa1e846b03bee94b386",
+  "cohorts": {
+    "SLOW17": {
+      "n": 17,
+      "baseline_e2e_ms": {
+        "n": 17,
+        "mean": 566.958,
+        "median": 571.282,
+        "p95": 651.832,
+        "max": 690.014
+      },
+      "v1_e2e_ms": {
+        "n": 17,
+        "mean": 332.726,
+        "median": 320.749,
+        "p95": 403.867,
+        "max": 429.482
+      },
+      "v2_e2e_ms": {
+        "n": 17,
+        "mean": 348.899,
+        "median": 345.941,
+        "p95": 432.882,
+        "max": 438.913
+      },
+      "v2_vs_v1_mean_latency_change_pct": 4.861,
+      "v2_vs_baseline_mean_reduction_pct": 38.461,
+      "baseline_under_400ms": 1,
+      "v1_under_400ms": 16,
+      "v2_under_400ms": 14,
+      "v1_generated_tokens": {
+        "n": 17,
+        "mean": 3.941,
+        "median": 4.0,
+        "p95": 4.2,
+        "max": 5.0
+      },
+      "v2_generated_tokens": {
+        "n": 17,
+        "mean": 4.235,
+        "median": 4.0,
+        "p95": 5.0,
+        "max": 5.0
+      },
+      "v2_normalized_matches_baseline": 4,
+      "v2_normalized_matches_v1": 1,
+      "v2_flagged_review_count": 16,
+      "v2_baseline_refusal_became_definite": 0,
+      "v2_v1_refusal_became_definite": 0
+    },
+    "CONTROL17": {
+      "n": 17,
+      "baseline_e2e_ms": {
+        "n": 17,
+        "mean": 265.124,
+        "median": 263.325,
+        "p95": 324.607,
+        "max": 325.255
+      },
+      "v1_e2e_ms": {
+        "n": 17,
+        "mean": 281.902,
+        "median": 266.47,
+        "p95": 340.843,
+        "max": 341.274
+      },
+      "v2_e2e_ms": {
+        "n": 17,
+        "mean": 293.145,
+        "median": 283.962,
+        "p95": 394.362,
+        "max": 431.119
+      },
+      "v2_vs_v1_mean_latency_change_pct": 3.988,
+      "v2_vs_baseline_mean_reduction_pct": -10.569,
+      "baseline_under_400ms": 17,
+      "v1_under_400ms": 17,
+      "v2_under_400ms": 16,
+      "v1_generated_tokens": {
+        "n": 17,
+        "mean": 2.235,
+        "median": 2.0,
+        "p95": 4.0,
+        "max": 4.0
+      },
+      "v2_generated_tokens": {
+        "n": 17,
+        "mean": 2.353,
+        "median": 2.0,
+        "p95": 3.4,
+        "max": 5.0
+      },
+      "v2_normalized_matches_baseline": 10,
+      "v2_normalized_matches_v1": 11,
+      "v2_flagged_review_count": 7,
+      "v2_baseline_refusal_became_definite": 3,
+      "v2_v1_refusal_became_definite": 0
+    },
+    "ALL34": {
+      "n": 34,
+      "baseline_e2e_ms": {
+        "n": 34,
+        "mean": 416.041,
+        "median": 324.85,
+        "p95": 635.313,
+        "max": 690.014
+      },
+      "v1_e2e_ms": {
+        "n": 34,
+        "mean": 307.314,
+        "median": 313.51,
+        "p95": 390.537,
+        "max": 429.482
+      },
+      "v2_e2e_ms": {
+        "n": 34,
+        "mean": 321.022,
+        "median": 309.882,
+        "p95": 431.208,
+        "max": 438.913
+      },
+      "v2_vs_v1_mean_latency_change_pct": 4.461,
+      "v2_vs_baseline_mean_reduction_pct": 22.839,
+      "baseline_under_400ms": 18,
+      "v1_under_400ms": 33,
+      "v2_under_400ms": 30,
+      "v1_generated_tokens": {
+        "n": 34,
+        "mean": 3.088,
+        "median": 4.0,
+        "p95": 4.0,
+        "max": 5.0
+      },
+      "v2_generated_tokens": {
+        "n": 34,
+        "mean": 3.294,
+        "median": 3.0,
+        "p95": 5.0,
+        "max": 5.0
+      },
+      "v2_normalized_matches_baseline": 14,
+      "v2_normalized_matches_v1": 12,
+      "v2_flagged_review_count": 23,
+      "v2_baseline_refusal_became_definite": 3,
+      "v2_v1_refusal_became_definite": 0
+    }
+  },
+  "decision": "DO_NOT_MERGE_OR_PUBLISH_AWAIT_HUMAN_REVIEW_AND_FULL_DEV60_REGRESSION",
+  "notes": [
+    "All three arms use the same marked image; only the VQA prompt differs.",
+    "Baseline and V1 output hashes must reproduce frozen previous GPU results.",
+    "No actual standalone VQA guard approval; all remain shadow-blocked.",
+    "Selective 34-case DEV60 sample is intentionally enriched for slow cases; not representative of full DEV60.",
+    "V2 quality assessment needs review; baseline text or previous chat-approved review is not independent blind GT.",
+    "Reported latency = shared V5 + marked image + one Qwen call; excludes service, network, routing and Guard."
+  ]
+}

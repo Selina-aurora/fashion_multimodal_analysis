@@ -1,0 +1,1554 @@
+{
+  "schema": "prd31_prd32_joint_eval_stage2_fixed_dev60_171_v1",
+  "date": "2026-11-10",
+  "scope": "DEV60_V5_PREDICTED_TARGETS_ONLY",
+  "target_count": 171,
+  "source_image_count": 60,
+  "chunk_size": 24,
+  "chunk_count": 8,
+  "selection": "135 never-live-measured first, then 12 stage1, then 24 prior warm; round robin V5 category within each tier; every frozen predicted instance exactly once",
+  "baseline_policy": "Same verified V5 epoch15, Qwen2.5-VL-7B-Instruct, baseline prompt, Guard; shadow-only; full marked source image not mask pixel input",
+  "release_allowed": false,
+  "independent_holdout_used": false,
+  "targets": [
+    {
+      "case_id": "fresh_dev_060",
+      "instance_id": "pred_0003",
+      "v5_frozen_category": "accessory",
+      "source_image_sha256": "1ff3fc0f63441fd6a488ef2ee2a1c482e1760e78b98cfd7f7f8df91468bfbd60",
+      "coverage_group": "NEW_NEVER_LIVE_MEASURED",
+      "fixed_plan_index": 1,
+      "chunk_id": 1
+    },
+    {
+      "case_id": "fresh_dev_011",
+      "instance_id": "pred_0002",
+      "v5_frozen_category": "bag",
+      "source_image_sha256": "c8e90d41368318265b2d1282df8712985e0d02789f5de64a5bba6d45b4ef768f",
+      "coverage_group": "NEW_NEVER_LIVE_MEASURED",
+      "fixed_plan_index": 2,
+      "chunk_id": 1
+    },
+    {
+      "case_id": "fresh_dev_003",
+      "instance_id": "pred_0000",
+      "v5_frozen_category": "dress",
+      "source_image_sha256": "9c4089fc54cfb412408954b26e4498e9b4fdf36c1c2f045ec83d9a29e587f3a4",
+      "coverage_group": "NEW_NEVER_LIVE_MEASURED",
+      "fixed_plan_index": 3,
+      "chunk_id": 1
+    },
+    {
+      "case_id": "fresh_dev_025",
+      "instance_id": "pred_0002",
+      "v5_frozen_category": "outerwear",
+      "source_image_sha256": "73ae9960d16d5201c2c277b496298af7786d0b045dbcdc1cb57d1bca23a6a08e",
+      "coverage_group": "NEW_NEVER_LIVE_MEASURED",
+      "fixed_plan_index": 4,
+      "chunk_id": 1
+    },
+    {
+      "case_id": "fresh_dev_004",
+      "instance_id": "pred_0000",
+      "v5_frozen_category": "pants",
+      "source_image_sha256": "dc58b87123274a7577e4d906c454e1e47c043c8e0b8d8a41af47112b7acde3b4",
+      "coverage_group": "NEW_NEVER_LIVE_MEASURED",
+      "fixed_plan_index": 5,
+      "chunk_id": 1
+    },
+    {
+      "case_id": "fresh_dev_014",
+      "instance_id": "pred_0001",
+      "v5_frozen_category": "shoe",
+      "source_image_sha256": "a23e53ad9cff8c87adfbfef8968d1a26444d7a0bb255ffb07d6a75023e87a326",
+      "coverage_group": "NEW_NEVER_LIVE_MEASURED",
+      "fixed_plan_index": 6,
+      "chunk_id": 1
+    },
+    {
+      "case_id": "fresh_dev_005",
+      "instance_id": "pred_0002",
+      "v5_frozen_category": "skirt",
+      "source_image_sha256": "9147ca6addb5c7252ef49cc4550c9408448b024d428fa4570a90ddb194f401e7",
+      "coverage_group": "NEW_NEVER_LIVE_MEASURED",
+      "fixed_plan_index": 7,
+      "chunk_id": 1
+    },
+    {
+      "case_id": "fresh_dev_001",
+      "instance_id": "pred_0001",
+      "v5_frozen_category": "top",
+      "source_image_sha256": "08d9b1b4aa091a8070c8286dcd4e38af3329d73749fad31bffcc16281013d7c1",
+      "coverage_group": "NEW_NEVER_LIVE_MEASURED",
+      "fixed_plan_index": 8,
+      "chunk_id": 1
+    },
+    {
+      "case_id": "fresh_dev_044",
+      "instance_id": "pred_0003",
+      "v5_frozen_category": "bag",
+      "source_image_sha256": "12b4f71451dee9ff4b4c2da9cef1ddc92c72b34b3d05240ed323aeaf4adda15d",
+      "coverage_group": "NEW_NEVER_LIVE_MEASURED",
+      "fixed_plan_index": 9,
+      "chunk_id": 1
+    },
+    {
+      "case_id": "fresh_dev_010",
+      "instance_id": "pred_0000",
+      "v5_frozen_category": "dress",
+      "source_image_sha256": "b507a312031287995a9fb9ef2f720b8fc14c8261888fee49470aff0f8372d72a",
+      "coverage_group": "NEW_NEVER_LIVE_MEASURED",
+      "fixed_plan_index": 10,
+      "chunk_id": 1
+    },
+    {
+      "case_id": "fresh_dev_037",
+      "instance_id": "pred_0000",
+      "v5_frozen_category": "outerwear",
+      "source_image_sha256": "0e2c63bd53932c0186dc6718771ef2c1f9f7a2000d68d299751fef6e8cf223a2",
+      "coverage_group": "NEW_NEVER_LIVE_MEASURED",
+      "fixed_plan_index": 11,
+      "chunk_id": 1
+    },
+    {
+      "case_id": "fresh_dev_005",
+      "instance_id": "pred_0001",
+      "v5_frozen_category": "pants",
+      "source_image_sha256": "9147ca6addb5c7252ef49cc4550c9408448b024d428fa4570a90ddb194f401e7",
+      "coverage_group": "NEW_NEVER_LIVE_MEASURED",
+      "fixed_plan_index": 12,
+      "chunk_id": 1
+    },
+    {
+      "case_id": "fresh_dev_014",
+      "instance_id": "pred_0004",
+      "v5_frozen_category": "shoe",
+      "source_image_sha256": "a23e53ad9cff8c87adfbfef8968d1a26444d7a0bb255ffb07d6a75023e87a326",
+      "coverage_group": "NEW_NEVER_LIVE_MEASURED",
+      "fixed_plan_index": 13,
+      "chunk_id": 1
+    },
+    {
+      "case_id": "fresh_dev_014",
+      "instance_id": "pred_0006",
+      "v5_frozen_category": "skirt",
+      "source_image_sha256": "a23e53ad9cff8c87adfbfef8968d1a26444d7a0bb255ffb07d6a75023e87a326",
+      "coverage_group": "NEW_NEVER_LIVE_MEASURED",
+      "fixed_plan_index": 14,
+      "chunk_id": 1
+    },
+    {
+      "case_id": "fresh_dev_002",
+      "instance_id": "pred_0000",
+      "v5_frozen_category": "top",
+      "source_image_sha256": "427e4b35b0db8c6199590c4ec002173431ecdf9ef1d3348aa696324c0f7b5d5f",
+      "coverage_group": "NEW_NEVER_LIVE_MEASURED",
+      "fixed_plan_index": 15,
+      "chunk_id": 1
+    },
+    {
+      "case_id": "fresh_dev_044",
+      "instance_id": "pred_0004",
+      "v5_frozen_category": "bag",
+      "source_image_sha256": "12b4f71451dee9ff4b4c2da9cef1ddc92c72b34b3d05240ed323aeaf4adda15d",
+      "coverage_group": "NEW_NEVER_LIVE_MEASURED",
+      "fixed_plan_index": 16,
+      "chunk_id": 1
+    },
+    {
+      "case_id": "fresh_dev_010",
+      "instance_id": "pred_0002",
+      "v5_frozen_category": "dress",
+      "source_image_sha256": "b507a312031287995a9fb9ef2f720b8fc14c8261888fee49470aff0f8372d72a",
+      "coverage_group": "NEW_NEVER_LIVE_MEASURED",
+      "fixed_plan_index": 17,
+      "chunk_id": 1
+    },
+    {
+      "case_id": "fresh_dev_038",
+      "instance_id": "pred_0001",
+      "v5_frozen_category": "outerwear",
+      "source_image_sha256": "f7c5d22e63f898014bdc9e3423b75b93cbe972a4b4b755896f4be7374ce8ce6e",
+      "coverage_group": "NEW_NEVER_LIVE_MEASURED",
+      "fixed_plan_index": 18,
+      "chunk_id": 1
+    },
+    {
+      "case_id": "fresh_dev_007",
+      "instance_id": "pred_0000",
+      "v5_frozen_category": "pants",
+      "source_image_sha256": "e6225a1f98beaa870f9b31ae3f4294eee271966f500a423b84a23f622377dff5",
+      "coverage_group": "NEW_NEVER_LIVE_MEASURED",
+      "fixed_plan_index": 19,
+      "chunk_id": 1
+    },
+    {
+      "case_id": "fresh_dev_017",
+      "instance_id": "pred_0002",
+      "v5_frozen_category": "shoe",
+      "source_image_sha256": "9b3fe32ef33dab940c4c0f378235ffbe9307fdf5cad7d2897b8dd3c096ed7b1d",
+      "coverage_group": "NEW_NEVER_LIVE_MEASURED",
+      "fixed_plan_index": 20,
+      "chunk_id": 1
+    },
+    {
+      "case_id": "fresh_dev_019",
+      "instance_id": "pred_0001",
+      "v5_frozen_category": "skirt",
+      "source_image_sha256": "e90a160fa8718253b7d9378dda9125c609c2a275a0e433ded17fc294d578fc7d",
+      "coverage_group": "NEW_NEVER_LIVE_MEASURED",
+      "fixed_plan_index": 21,
+      "chunk_id": 1
+    },
+    {
+      "case_id": "fresh_dev_003",
+      "instance_id": "pred_0002",
+      "v5_frozen_category": "top",
+      "source_image_sha256": "9c4089fc54cfb412408954b26e4498e9b4fdf36c1c2f045ec83d9a29e587f3a4",
+      "coverage_group": "NEW_NEVER_LIVE_MEASURED",
+      "fixed_plan_index": 22,
+      "chunk_id": 1
+    },
+    {
+      "case_id": "fresh_dev_060",
+      "instance_id": "pred_0004",
+      "v5_frozen_category": "bag",
+      "source_image_sha256": "1ff3fc0f63441fd6a488ef2ee2a1c482e1760e78b98cfd7f7f8df91468bfbd60",
+      "coverage_group": "NEW_NEVER_LIVE_MEASURED",
+      "fixed_plan_index": 23,
+      "chunk_id": 1
+    },
+    {
+      "case_id": "fresh_dev_011",
+      "instance_id": "pred_0001",
+      "v5_frozen_category": "dress",
+      "source_image_sha256": "c8e90d41368318265b2d1282df8712985e0d02789f5de64a5bba6d45b4ef768f",
+      "coverage_group": "NEW_NEVER_LIVE_MEASURED",
+      "fixed_plan_index": 24,
+      "chunk_id": 1
+    },
+    {
+      "case_id": "fresh_dev_039",
+      "instance_id": "pred_0000",
+      "v5_frozen_category": "outerwear",
+      "source_image_sha256": "9e1289bca5ec2a5c1316601adc7c4e62f02d3abe004aa6d0cbab200604f2bf73",
+      "coverage_group": "NEW_NEVER_LIVE_MEASURED",
+      "fixed_plan_index": 25,
+      "chunk_id": 2
+    },
+    {
+      "case_id": "fresh_dev_013",
+      "instance_id": "pred_0001",
+      "v5_frozen_category": "pants",
+      "source_image_sha256": "0336c99475cbf7043cb56378bc6c93a5a3ed699af44c59e5d8a5014b7fe4b2d4",
+      "coverage_group": "NEW_NEVER_LIVE_MEASURED",
+      "fixed_plan_index": 26,
+      "chunk_id": 2
+    },
+    {
+      "case_id": "fresh_dev_017",
+      "instance_id": "pred_0003",
+      "v5_frozen_category": "shoe",
+      "source_image_sha256": "9b3fe32ef33dab940c4c0f378235ffbe9307fdf5cad7d2897b8dd3c096ed7b1d",
+      "coverage_group": "NEW_NEVER_LIVE_MEASURED",
+      "fixed_plan_index": 27,
+      "chunk_id": 2
+    },
+    {
+      "case_id": "fresh_dev_030",
+      "instance_id": "pred_0001",
+      "v5_frozen_category": "skirt",
+      "source_image_sha256": "794153c26f77474628c69a77677b1b486ba690f92e979d0d20247adba902aae1",
+      "coverage_group": "NEW_NEVER_LIVE_MEASURED",
+      "fixed_plan_index": 28,
+      "chunk_id": 2
+    },
+    {
+      "case_id": "fresh_dev_004",
+      "instance_id": "pred_0001",
+      "v5_frozen_category": "top",
+      "source_image_sha256": "dc58b87123274a7577e4d906c454e1e47c043c8e0b8d8a41af47112b7acde3b4",
+      "coverage_group": "NEW_NEVER_LIVE_MEASURED",
+      "fixed_plan_index": 29,
+      "chunk_id": 2
+    },
+    {
+      "case_id": "fresh_dev_012",
+      "instance_id": "pred_0002",
+      "v5_frozen_category": "dress",
+      "source_image_sha256": "caf9e364eafb4bd482bf78418478a85ac3cdd6f02ded1f288c93728bab3e0c81",
+      "coverage_group": "NEW_NEVER_LIVE_MEASURED",
+      "fixed_plan_index": 30,
+      "chunk_id": 2
+    },
+    {
+      "case_id": "fresh_dev_041",
+      "instance_id": "pred_0001",
+      "v5_frozen_category": "outerwear",
+      "source_image_sha256": "0fd56ab9d740f2f246f4ae687ec0ee358392b2468b511e7090d43cb1fdc8bc6a",
+      "coverage_group": "NEW_NEVER_LIVE_MEASURED",
+      "fixed_plan_index": 31,
+      "chunk_id": 2
+    },
+    {
+      "case_id": "fresh_dev_016",
+      "instance_id": "pred_0001",
+      "v5_frozen_category": "pants",
+      "source_image_sha256": "da21b8e40e8fbe907636f108269bfe9d3d0ebcd4df2e3472cd956b2f35789d84",
+      "coverage_group": "NEW_NEVER_LIVE_MEASURED",
+      "fixed_plan_index": 32,
+      "chunk_id": 2
+    },
+    {
+      "case_id": "fresh_dev_017",
+      "instance_id": "pred_0004",
+      "v5_frozen_category": "shoe",
+      "source_image_sha256": "9b3fe32ef33dab940c4c0f378235ffbe9307fdf5cad7d2897b8dd3c096ed7b1d",
+      "coverage_group": "NEW_NEVER_LIVE_MEASURED",
+      "fixed_plan_index": 33,
+      "chunk_id": 2
+    },
+    {
+      "case_id": "fresh_dev_031",
+      "instance_id": "pred_0001",
+      "v5_frozen_category": "skirt",
+      "source_image_sha256": "33044063ecfb5fac13f80b0a1edbaf6dbfdaca6659cf5d5207c7227db68ccbf2",
+      "coverage_group": "NEW_NEVER_LIVE_MEASURED",
+      "fixed_plan_index": 34,
+      "chunk_id": 2
+    },
+    {
+      "case_id": "fresh_dev_008",
+      "instance_id": "pred_0001",
+      "v5_frozen_category": "top",
+      "source_image_sha256": "e7fa570eb1d147c3256a81876287ad1cf035998209020a5baa60653987d0f92a",
+      "coverage_group": "NEW_NEVER_LIVE_MEASURED",
+      "fixed_plan_index": 35,
+      "chunk_id": 2
+    },
+    {
+      "case_id": "fresh_dev_015",
+      "instance_id": "pred_0001",
+      "v5_frozen_category": "dress",
+      "source_image_sha256": "4024569d6963470f1d2d8273a34bd94375aaa732a9fdb1bdd720fa3cea6f7e17",
+      "coverage_group": "NEW_NEVER_LIVE_MEASURED",
+      "fixed_plan_index": 36,
+      "chunk_id": 2
+    },
+    {
+      "case_id": "fresh_dev_044",
+      "instance_id": "pred_0000",
+      "v5_frozen_category": "outerwear",
+      "source_image_sha256": "12b4f71451dee9ff4b4c2da9cef1ddc92c72b34b3d05240ed323aeaf4adda15d",
+      "coverage_group": "NEW_NEVER_LIVE_MEASURED",
+      "fixed_plan_index": 37,
+      "chunk_id": 2
+    },
+    {
+      "case_id": "fresh_dev_017",
+      "instance_id": "pred_0000",
+      "v5_frozen_category": "pants",
+      "source_image_sha256": "9b3fe32ef33dab940c4c0f378235ffbe9307fdf5cad7d2897b8dd3c096ed7b1d",
+      "coverage_group": "NEW_NEVER_LIVE_MEASURED",
+      "fixed_plan_index": 38,
+      "chunk_id": 2
+    },
+    {
+      "case_id": "fresh_dev_020",
+      "instance_id": "pred_0003",
+      "v5_frozen_category": "shoe",
+      "source_image_sha256": "f3705b33848feecc5fe13377cfc2d485b6f1e8148cfdcc000ea069fb6d369dd8",
+      "coverage_group": "NEW_NEVER_LIVE_MEASURED",
+      "fixed_plan_index": 39,
+      "chunk_id": 2
+    },
+    {
+      "case_id": "fresh_dev_033",
+      "instance_id": "pred_0001",
+      "v5_frozen_category": "skirt",
+      "source_image_sha256": "c979881a9bd9d3f56c300151482cc6f1a4b79e22e22254ec04db970caa157db7",
+      "coverage_group": "NEW_NEVER_LIVE_MEASURED",
+      "fixed_plan_index": 40,
+      "chunk_id": 2
+    },
+    {
+      "case_id": "fresh_dev_009",
+      "instance_id": "pred_0001",
+      "v5_frozen_category": "top",
+      "source_image_sha256": "3689b8afda9165f80d147a244a6e6feb59e30db99b58c4eae2acfc82dadf6996",
+      "coverage_group": "NEW_NEVER_LIVE_MEASURED",
+      "fixed_plan_index": 41,
+      "chunk_id": 2
+    },
+    {
+      "case_id": "fresh_dev_016",
+      "instance_id": "pred_0002",
+      "v5_frozen_category": "dress",
+      "source_image_sha256": "da21b8e40e8fbe907636f108269bfe9d3d0ebcd4df2e3472cd956b2f35789d84",
+      "coverage_group": "NEW_NEVER_LIVE_MEASURED",
+      "fixed_plan_index": 42,
+      "chunk_id": 2
+    },
+    {
+      "case_id": "fresh_dev_049",
+      "instance_id": "pred_0001",
+      "v5_frozen_category": "outerwear",
+      "source_image_sha256": "fe633e1bcb15e401175c6e74c34fbade174456e314c08cbf20d2f96d90a2cd97",
+      "coverage_group": "NEW_NEVER_LIVE_MEASURED",
+      "fixed_plan_index": 43,
+      "chunk_id": 2
+    },
+    {
+      "case_id": "fresh_dev_018",
+      "instance_id": "pred_0000",
+      "v5_frozen_category": "pants",
+      "source_image_sha256": "5a5183a5cc5c83844bfcafeec8335541aedf1a6a21ed5fee7b04e811798d9d4f",
+      "coverage_group": "NEW_NEVER_LIVE_MEASURED",
+      "fixed_plan_index": 44,
+      "chunk_id": 2
+    },
+    {
+      "case_id": "fresh_dev_022",
+      "instance_id": "pred_0001",
+      "v5_frozen_category": "shoe",
+      "source_image_sha256": "063d009531f2129545bbeac0f68c33fd28de1331f880eb06502783d2053b0fd0",
+      "coverage_group": "NEW_NEVER_LIVE_MEASURED",
+      "fixed_plan_index": 45,
+      "chunk_id": 2
+    },
+    {
+      "case_id": "fresh_dev_034",
+      "instance_id": "pred_0001",
+      "v5_frozen_category": "skirt",
+      "source_image_sha256": "355106ae411ad68494d1b415717dd3eb8dbc8c33be1a9c7c99fc2c0acab59102",
+      "coverage_group": "NEW_NEVER_LIVE_MEASURED",
+      "fixed_plan_index": 46,
+      "chunk_id": 2
+    },
+    {
+      "case_id": "fresh_dev_013",
+      "instance_id": "pred_0000",
+      "v5_frozen_category": "top",
+      "source_image_sha256": "0336c99475cbf7043cb56378bc6c93a5a3ed699af44c59e5d8a5014b7fe4b2d4",
+      "coverage_group": "NEW_NEVER_LIVE_MEASURED",
+      "fixed_plan_index": 47,
+      "chunk_id": 2
+    },
+    {
+      "case_id": "fresh_dev_018",
+      "instance_id": "pred_0002",
+      "v5_frozen_category": "dress",
+      "source_image_sha256": "5a5183a5cc5c83844bfcafeec8335541aedf1a6a21ed5fee7b04e811798d9d4f",
+      "coverage_group": "NEW_NEVER_LIVE_MEASURED",
+      "fixed_plan_index": 48,
+      "chunk_id": 2
+    },
+    {
+      "case_id": "fresh_dev_060",
+      "instance_id": "pred_0006",
+      "v5_frozen_category": "outerwear",
+      "source_image_sha256": "1ff3fc0f63441fd6a488ef2ee2a1c482e1760e78b98cfd7f7f8df91468bfbd60",
+      "coverage_group": "NEW_NEVER_LIVE_MEASURED",
+      "fixed_plan_index": 49,
+      "chunk_id": 3
+    },
+    {
+      "case_id": "fresh_dev_020",
+      "instance_id": "pred_0001",
+      "v5_frozen_category": "pants",
+      "source_image_sha256": "f3705b33848feecc5fe13377cfc2d485b6f1e8148cfdcc000ea069fb6d369dd8",
+      "coverage_group": "NEW_NEVER_LIVE_MEASURED",
+      "fixed_plan_index": 50,
+      "chunk_id": 3
+    },
+    {
+      "case_id": "fresh_dev_024",
+      "instance_id": "pred_0001",
+      "v5_frozen_category": "shoe",
+      "source_image_sha256": "02f2dc3a8695beacf9be466b2b010463a57a1a3ecc344d8672ff23ace2a668f4",
+      "coverage_group": "NEW_NEVER_LIVE_MEASURED",
+      "fixed_plan_index": 51,
+      "chunk_id": 3
+    },
+    {
+      "case_id": "fresh_dev_035",
+      "instance_id": "pred_0001",
+      "v5_frozen_category": "skirt",
+      "source_image_sha256": "ede84286363c555097591acb365ccdd09bacda4b2fcbe4dda2dc2681110b33ba",
+      "coverage_group": "NEW_NEVER_LIVE_MEASURED",
+      "fixed_plan_index": 52,
+      "chunk_id": 3
+    },
+    {
+      "case_id": "fresh_dev_014",
+      "instance_id": "pred_0002",
+      "v5_frozen_category": "top",
+      "source_image_sha256": "a23e53ad9cff8c87adfbfef8968d1a26444d7a0bb255ffb07d6a75023e87a326",
+      "coverage_group": "NEW_NEVER_LIVE_MEASURED",
+      "fixed_plan_index": 53,
+      "chunk_id": 3
+    },
+    {
+      "case_id": "fresh_dev_022",
+      "instance_id": "pred_0003",
+      "v5_frozen_category": "dress",
+      "source_image_sha256": "063d009531f2129545bbeac0f68c33fd28de1331f880eb06502783d2053b0fd0",
+      "coverage_group": "NEW_NEVER_LIVE_MEASURED",
+      "fixed_plan_index": 54,
+      "chunk_id": 3
+    },
+    {
+      "case_id": "fresh_dev_021",
+      "instance_id": "pred_0001",
+      "v5_frozen_category": "pants",
+      "source_image_sha256": "0149097caf09d96edaeeac426a685c2938ced685d0c8b2be37386390f009319c",
+      "coverage_group": "NEW_NEVER_LIVE_MEASURED",
+      "fixed_plan_index": 55,
+      "chunk_id": 3
+    },
+    {
+      "case_id": "fresh_dev_059",
+      "instance_id": "pred_0001",
+      "v5_frozen_category": "shoe",
+      "source_image_sha256": "c441f16ed71e3b716a785d73a73525bb2aacd2f0462452901107d7fbf0652c9b",
+      "coverage_group": "NEW_NEVER_LIVE_MEASURED",
+      "fixed_plan_index": 56,
+      "chunk_id": 3
+    },
+    {
+      "case_id": "fresh_dev_036",
+      "instance_id": "pred_0001",
+      "v5_frozen_category": "skirt",
+      "source_image_sha256": "151927bbe2b74e2e3a1877767314a661e30261a9a287ef7f59f7b0a152ad5621",
+      "coverage_group": "NEW_NEVER_LIVE_MEASURED",
+      "fixed_plan_index": 57,
+      "chunk_id": 3
+    },
+    {
+      "case_id": "fresh_dev_015",
+      "instance_id": "pred_0000",
+      "v5_frozen_category": "top",
+      "source_image_sha256": "4024569d6963470f1d2d8273a34bd94375aaa732a9fdb1bdd720fa3cea6f7e17",
+      "coverage_group": "NEW_NEVER_LIVE_MEASURED",
+      "fixed_plan_index": 58,
+      "chunk_id": 3
+    },
+    {
+      "case_id": "fresh_dev_023",
+      "instance_id": "pred_0002",
+      "v5_frozen_category": "dress",
+      "source_image_sha256": "ecd5bd09f677dbe5e60fb3609aefabecf749cb4c404c3bf069e4946ee8020794",
+      "coverage_group": "NEW_NEVER_LIVE_MEASURED",
+      "fixed_plan_index": 59,
+      "chunk_id": 3
+    },
+    {
+      "case_id": "fresh_dev_022",
+      "instance_id": "pred_0002",
+      "v5_frozen_category": "pants",
+      "source_image_sha256": "063d009531f2129545bbeac0f68c33fd28de1331f880eb06502783d2053b0fd0",
+      "coverage_group": "NEW_NEVER_LIVE_MEASURED",
+      "fixed_plan_index": 60,
+      "chunk_id": 3
+    },
+    {
+      "case_id": "fresh_dev_042",
+      "instance_id": "pred_0002",
+      "v5_frozen_category": "skirt",
+      "source_image_sha256": "0a753a36b79a70e9f892d1da614d252dc6374966ab75885378fc97754c009858",
+      "coverage_group": "NEW_NEVER_LIVE_MEASURED",
+      "fixed_plan_index": 61,
+      "chunk_id": 3
+    },
+    {
+      "case_id": "fresh_dev_016",
+      "instance_id": "pred_0000",
+      "v5_frozen_category": "top",
+      "source_image_sha256": "da21b8e40e8fbe907636f108269bfe9d3d0ebcd4df2e3472cd956b2f35789d84",
+      "coverage_group": "NEW_NEVER_LIVE_MEASURED",
+      "fixed_plan_index": 62,
+      "chunk_id": 3
+    },
+    {
+      "case_id": "fresh_dev_024",
+      "instance_id": "pred_0002",
+      "v5_frozen_category": "dress",
+      "source_image_sha256": "02f2dc3a8695beacf9be466b2b010463a57a1a3ecc344d8672ff23ace2a668f4",
+      "coverage_group": "NEW_NEVER_LIVE_MEASURED",
+      "fixed_plan_index": 63,
+      "chunk_id": 3
+    },
+    {
+      "case_id": "fresh_dev_023",
+      "instance_id": "pred_0000",
+      "v5_frozen_category": "pants",
+      "source_image_sha256": "ecd5bd09f677dbe5e60fb3609aefabecf749cb4c404c3bf069e4946ee8020794",
+      "coverage_group": "NEW_NEVER_LIVE_MEASURED",
+      "fixed_plan_index": 64,
+      "chunk_id": 3
+    },
+    {
+      "case_id": "fresh_dev_055",
+      "instance_id": "pred_0002",
+      "v5_frozen_category": "skirt",
+      "source_image_sha256": "186ca393ae9e4fe4a85d042880d3f10bb1c19dde5ad9192047b5d4ce5e8b7a36",
+      "coverage_group": "NEW_NEVER_LIVE_MEASURED",
+      "fixed_plan_index": 65,
+      "chunk_id": 3
+    },
+    {
+      "case_id": "fresh_dev_017",
+      "instance_id": "pred_0001",
+      "v5_frozen_category": "top",
+      "source_image_sha256": "9b3fe32ef33dab940c4c0f378235ffbe9307fdf5cad7d2897b8dd3c096ed7b1d",
+      "coverage_group": "NEW_NEVER_LIVE_MEASURED",
+      "fixed_plan_index": 66,
+      "chunk_id": 3
+    },
+    {
+      "case_id": "fresh_dev_034",
+      "instance_id": "pred_0002",
+      "v5_frozen_category": "dress",
+      "source_image_sha256": "355106ae411ad68494d1b415717dd3eb8dbc8c33be1a9c7c99fc2c0acab59102",
+      "coverage_group": "NEW_NEVER_LIVE_MEASURED",
+      "fixed_plan_index": 67,
+      "chunk_id": 3
+    },
+    {
+      "case_id": "fresh_dev_025",
+      "instance_id": "pred_0000",
+      "v5_frozen_category": "pants",
+      "source_image_sha256": "73ae9960d16d5201c2c277b496298af7786d0b045dbcdc1cb57d1bca23a6a08e",
+      "coverage_group": "NEW_NEVER_LIVE_MEASURED",
+      "fixed_plan_index": 68,
+      "chunk_id": 3
+    },
+    {
+      "case_id": "fresh_dev_060",
+      "instance_id": "pred_0005",
+      "v5_frozen_category": "skirt",
+      "source_image_sha256": "1ff3fc0f63441fd6a488ef2ee2a1c482e1760e78b98cfd7f7f8df91468bfbd60",
+      "coverage_group": "NEW_NEVER_LIVE_MEASURED",
+      "fixed_plan_index": 69,
+      "chunk_id": 3
+    },
+    {
+      "case_id": "fresh_dev_018",
+      "instance_id": "pred_0001",
+      "v5_frozen_category": "top",
+      "source_image_sha256": "5a5183a5cc5c83844bfcafeec8335541aedf1a6a21ed5fee7b04e811798d9d4f",
+      "coverage_group": "NEW_NEVER_LIVE_MEASURED",
+      "fixed_plan_index": 70,
+      "chunk_id": 3
+    },
+    {
+      "case_id": "fresh_dev_035",
+      "instance_id": "pred_0002",
+      "v5_frozen_category": "dress",
+      "source_image_sha256": "ede84286363c555097591acb365ccdd09bacda4b2fcbe4dda2dc2681110b33ba",
+      "coverage_group": "NEW_NEVER_LIVE_MEASURED",
+      "fixed_plan_index": 71,
+      "chunk_id": 3
+    },
+    {
+      "case_id": "fresh_dev_026",
+      "instance_id": "pred_0000",
+      "v5_frozen_category": "pants",
+      "source_image_sha256": "ac16df83da46193e97adf24f860d313a625fe85f5bcd9c1933b0e63ae423532d",
+      "coverage_group": "NEW_NEVER_LIVE_MEASURED",
+      "fixed_plan_index": 72,
+      "chunk_id": 3
+    },
+    {
+      "case_id": "fresh_dev_019",
+      "instance_id": "pred_0000",
+      "v5_frozen_category": "top",
+      "source_image_sha256": "e90a160fa8718253b7d9378dda9125c609c2a275a0e433ded17fc294d578fc7d",
+      "coverage_group": "NEW_NEVER_LIVE_MEASURED",
+      "fixed_plan_index": 73,
+      "chunk_id": 4
+    },
+    {
+      "case_id": "fresh_dev_038",
+      "instance_id": "pred_0002",
+      "v5_frozen_category": "dress",
+      "source_image_sha256": "f7c5d22e63f898014bdc9e3423b75b93cbe972a4b4b755896f4be7374ce8ce6e",
+      "coverage_group": "NEW_NEVER_LIVE_MEASURED",
+      "fixed_plan_index": 74,
+      "chunk_id": 4
+    },
+    {
+      "case_id": "fresh_dev_027",
+      "instance_id": "pred_0001",
+      "v5_frozen_category": "pants",
+      "source_image_sha256": "1dcc3c38915c40d12095c7d9c45614a2bbaf7c7a0b86feaf7387dbec254721b2",
+      "coverage_group": "NEW_NEVER_LIVE_MEASURED",
+      "fixed_plan_index": 75,
+      "chunk_id": 4
+    },
+    {
+      "case_id": "fresh_dev_020",
+      "instance_id": "pred_0000",
+      "v5_frozen_category": "top",
+      "source_image_sha256": "f3705b33848feecc5fe13377cfc2d485b6f1e8148cfdcc000ea069fb6d369dd8",
+      "coverage_group": "NEW_NEVER_LIVE_MEASURED",
+      "fixed_plan_index": 76,
+      "chunk_id": 4
+    },
+    {
+      "case_id": "fresh_dev_040",
+      "instance_id": "pred_0001",
+      "v5_frozen_category": "dress",
+      "source_image_sha256": "cf6b7b4aaafa31a9c1fa0a046ddcbf028f9a094bcc7b94932c2bce599438a0e9",
+      "coverage_group": "NEW_NEVER_LIVE_MEASURED",
+      "fixed_plan_index": 77,
+      "chunk_id": 4
+    },
+    {
+      "case_id": "fresh_dev_028",
+      "instance_id": "pred_0001",
+      "v5_frozen_category": "pants",
+      "source_image_sha256": "ff69cbcbd16e5290593efff7ed70d1314427a80242e5830ca59344c98d42ebed",
+      "coverage_group": "NEW_NEVER_LIVE_MEASURED",
+      "fixed_plan_index": 78,
+      "chunk_id": 4
+    },
+    {
+      "case_id": "fresh_dev_021",
+      "instance_id": "pred_0000",
+      "v5_frozen_category": "top",
+      "source_image_sha256": "0149097caf09d96edaeeac426a685c2938ced685d0c8b2be37386390f009319c",
+      "coverage_group": "NEW_NEVER_LIVE_MEASURED",
+      "fixed_plan_index": 79,
+      "chunk_id": 4
+    },
+    {
+      "case_id": "fresh_dev_042",
+      "instance_id": "pred_0004",
+      "v5_frozen_category": "dress",
+      "source_image_sha256": "0a753a36b79a70e9f892d1da614d252dc6374966ab75885378fc97754c009858",
+      "coverage_group": "NEW_NEVER_LIVE_MEASURED",
+      "fixed_plan_index": 80,
+      "chunk_id": 4
+    },
+    {
+      "case_id": "fresh_dev_029",
+      "instance_id": "pred_0000",
+      "v5_frozen_category": "pants",
+      "source_image_sha256": "28dbd59d685a39d39f97418ba91f9b8163494d50be5e5fcd109e7da569f29437",
+      "coverage_group": "NEW_NEVER_LIVE_MEASURED",
+      "fixed_plan_index": 81,
+      "chunk_id": 4
+    },
+    {
+      "case_id": "fresh_dev_022",
+      "instance_id": "pred_0000",
+      "v5_frozen_category": "top",
+      "source_image_sha256": "063d009531f2129545bbeac0f68c33fd28de1331f880eb06502783d2053b0fd0",
+      "coverage_group": "NEW_NEVER_LIVE_MEASURED",
+      "fixed_plan_index": 82,
+      "chunk_id": 4
+    },
+    {
+      "case_id": "fresh_dev_043",
+      "instance_id": "pred_0000",
+      "v5_frozen_category": "dress",
+      "source_image_sha256": "67ad0a245ba72e5cd1d27fc259a0113fba1721adb50c6d7a4b7f23e14e50077c",
+      "coverage_group": "NEW_NEVER_LIVE_MEASURED",
+      "fixed_plan_index": 83,
+      "chunk_id": 4
+    },
+    {
+      "case_id": "fresh_dev_030",
+      "instance_id": "pred_0002",
+      "v5_frozen_category": "pants",
+      "source_image_sha256": "794153c26f77474628c69a77677b1b486ba690f92e979d0d20247adba902aae1",
+      "coverage_group": "NEW_NEVER_LIVE_MEASURED",
+      "fixed_plan_index": 84,
+      "chunk_id": 4
+    },
+    {
+      "case_id": "fresh_dev_023",
+      "instance_id": "pred_0001",
+      "v5_frozen_category": "top",
+      "source_image_sha256": "ecd5bd09f677dbe5e60fb3609aefabecf749cb4c404c3bf069e4946ee8020794",
+      "coverage_group": "NEW_NEVER_LIVE_MEASURED",
+      "fixed_plan_index": 85,
+      "chunk_id": 4
+    },
+    {
+      "case_id": "fresh_dev_043",
+      "instance_id": "pred_0001",
+      "v5_frozen_category": "dress",
+      "source_image_sha256": "67ad0a245ba72e5cd1d27fc259a0113fba1721adb50c6d7a4b7f23e14e50077c",
+      "coverage_group": "NEW_NEVER_LIVE_MEASURED",
+      "fixed_plan_index": 86,
+      "chunk_id": 4
+    },
+    {
+      "case_id": "fresh_dev_031",
+      "instance_id": "pred_0000",
+      "v5_frozen_category": "pants",
+      "source_image_sha256": "33044063ecfb5fac13f80b0a1edbaf6dbfdaca6659cf5d5207c7227db68ccbf2",
+      "coverage_group": "NEW_NEVER_LIVE_MEASURED",
+      "fixed_plan_index": 87,
+      "chunk_id": 4
+    },
+    {
+      "case_id": "fresh_dev_024",
+      "instance_id": "pred_0003",
+      "v5_frozen_category": "top",
+      "source_image_sha256": "02f2dc3a8695beacf9be466b2b010463a57a1a3ecc344d8672ff23ace2a668f4",
+      "coverage_group": "NEW_NEVER_LIVE_MEASURED",
+      "fixed_plan_index": 88,
+      "chunk_id": 4
+    },
+    {
+      "case_id": "fresh_dev_045",
+      "instance_id": "pred_0000",
+      "v5_frozen_category": "dress",
+      "source_image_sha256": "5a47b48bf9bc11c84743a78becb19504efad400d5305939d4064c7b0dec3e8bc",
+      "coverage_group": "NEW_NEVER_LIVE_MEASURED",
+      "fixed_plan_index": 89,
+      "chunk_id": 4
+    },
+    {
+      "case_id": "fresh_dev_037",
+      "instance_id": "pred_0001",
+      "v5_frozen_category": "pants",
+      "source_image_sha256": "0e2c63bd53932c0186dc6718771ef2c1f9f7a2000d68d299751fef6e8cf223a2",
+      "coverage_group": "NEW_NEVER_LIVE_MEASURED",
+      "fixed_plan_index": 90,
+      "chunk_id": 4
+    },
+    {
+      "case_id": "fresh_dev_026",
+      "instance_id": "pred_0001",
+      "v5_frozen_category": "top",
+      "source_image_sha256": "ac16df83da46193e97adf24f860d313a625fe85f5bcd9c1933b0e63ae423532d",
+      "coverage_group": "NEW_NEVER_LIVE_MEASURED",
+      "fixed_plan_index": 91,
+      "chunk_id": 4
+    },
+    {
+      "case_id": "fresh_dev_046",
+      "instance_id": "pred_0000",
+      "v5_frozen_category": "dress",
+      "source_image_sha256": "1bef3e35846550e58b240ed1089c31627f465c4c460028655e298f618e86338f",
+      "coverage_group": "NEW_NEVER_LIVE_MEASURED",
+      "fixed_plan_index": 92,
+      "chunk_id": 4
+    },
+    {
+      "case_id": "fresh_dev_037",
+      "instance_id": "pred_0002",
+      "v5_frozen_category": "pants",
+      "source_image_sha256": "0e2c63bd53932c0186dc6718771ef2c1f9f7a2000d68d299751fef6e8cf223a2",
+      "coverage_group": "NEW_NEVER_LIVE_MEASURED",
+      "fixed_plan_index": 93,
+      "chunk_id": 4
+    },
+    {
+      "case_id": "fresh_dev_027",
+      "instance_id": "pred_0000",
+      "v5_frozen_category": "top",
+      "source_image_sha256": "1dcc3c38915c40d12095c7d9c45614a2bbaf7c7a0b86feaf7387dbec254721b2",
+      "coverage_group": "NEW_NEVER_LIVE_MEASURED",
+      "fixed_plan_index": 94,
+      "chunk_id": 4
+    },
+    {
+      "case_id": "fresh_dev_047",
+      "instance_id": "pred_0000",
+      "v5_frozen_category": "dress",
+      "source_image_sha256": "e26d056c8a20d1530ddd818b9d449480be14e731d98ab2231587851ac90dafca",
+      "coverage_group": "NEW_NEVER_LIVE_MEASURED",
+      "fixed_plan_index": 95,
+      "chunk_id": 4
+    },
+    {
+      "case_id": "fresh_dev_039",
+      "instance_id": "pred_0001",
+      "v5_frozen_category": "pants",
+      "source_image_sha256": "9e1289bca5ec2a5c1316601adc7c4e62f02d3abe004aa6d0cbab200604f2bf73",
+      "coverage_group": "NEW_NEVER_LIVE_MEASURED",
+      "fixed_plan_index": 96,
+      "chunk_id": 4
+    },
+    {
+      "case_id": "fresh_dev_028",
+      "instance_id": "pred_0000",
+      "v5_frozen_category": "top",
+      "source_image_sha256": "ff69cbcbd16e5290593efff7ed70d1314427a80242e5830ca59344c98d42ebed",
+      "coverage_group": "NEW_NEVER_LIVE_MEASURED",
+      "fixed_plan_index": 97,
+      "chunk_id": 5
+    },
+    {
+      "case_id": "fresh_dev_048",
+      "instance_id": "pred_0000",
+      "v5_frozen_category": "dress",
+      "source_image_sha256": "f1a8dd47ca0411c6675af302978a81f16b91e88d85222776791bd3b8112ff3ff",
+      "coverage_group": "NEW_NEVER_LIVE_MEASURED",
+      "fixed_plan_index": 98,
+      "chunk_id": 5
+    },
+    {
+      "case_id": "fresh_dev_039",
+      "instance_id": "pred_0002",
+      "v5_frozen_category": "pants",
+      "source_image_sha256": "9e1289bca5ec2a5c1316601adc7c4e62f02d3abe004aa6d0cbab200604f2bf73",
+      "coverage_group": "NEW_NEVER_LIVE_MEASURED",
+      "fixed_plan_index": 99,
+      "chunk_id": 5
+    },
+    {
+      "case_id": "fresh_dev_029",
+      "instance_id": "pred_0001",
+      "v5_frozen_category": "top",
+      "source_image_sha256": "28dbd59d685a39d39f97418ba91f9b8163494d50be5e5fcd109e7da569f29437",
+      "coverage_group": "NEW_NEVER_LIVE_MEASURED",
+      "fixed_plan_index": 100,
+      "chunk_id": 5
+    },
+    {
+      "case_id": "fresh_dev_050",
+      "instance_id": "pred_0000",
+      "v5_frozen_category": "dress",
+      "source_image_sha256": "90a5b432bc618be564ec256c977e941c27386a12f417051d3512a379b0475d5f",
+      "coverage_group": "NEW_NEVER_LIVE_MEASURED",
+      "fixed_plan_index": 101,
+      "chunk_id": 5
+    },
+    {
+      "case_id": "fresh_dev_042",
+      "instance_id": "pred_0005",
+      "v5_frozen_category": "pants",
+      "source_image_sha256": "0a753a36b79a70e9f892d1da614d252dc6374966ab75885378fc97754c009858",
+      "coverage_group": "NEW_NEVER_LIVE_MEASURED",
+      "fixed_plan_index": 102,
+      "chunk_id": 5
+    },
+    {
+      "case_id": "fresh_dev_030",
+      "instance_id": "pred_0000",
+      "v5_frozen_category": "top",
+      "source_image_sha256": "794153c26f77474628c69a77677b1b486ba690f92e979d0d20247adba902aae1",
+      "coverage_group": "NEW_NEVER_LIVE_MEASURED",
+      "fixed_plan_index": 103,
+      "chunk_id": 5
+    },
+    {
+      "case_id": "fresh_dev_051",
+      "instance_id": "pred_0000",
+      "v5_frozen_category": "dress",
+      "source_image_sha256": "800d5ad44da59bfa4fd719ff459524b3acebb3c49acbd0a6cb062b68092b54ac",
+      "coverage_group": "NEW_NEVER_LIVE_MEASURED",
+      "fixed_plan_index": 104,
+      "chunk_id": 5
+    },
+    {
+      "case_id": "fresh_dev_044",
+      "instance_id": "pred_0001",
+      "v5_frozen_category": "pants",
+      "source_image_sha256": "12b4f71451dee9ff4b4c2da9cef1ddc92c72b34b3d05240ed323aeaf4adda15d",
+      "coverage_group": "NEW_NEVER_LIVE_MEASURED",
+      "fixed_plan_index": 105,
+      "chunk_id": 5
+    },
+    {
+      "case_id": "fresh_dev_032",
+      "instance_id": "pred_0000",
+      "v5_frozen_category": "top",
+      "source_image_sha256": "24c13ff85a1507daaa158417e4feeb565ee354ad48472f7355d13c3aeb5b4935",
+      "coverage_group": "NEW_NEVER_LIVE_MEASURED",
+      "fixed_plan_index": 106,
+      "chunk_id": 5
+    },
+    {
+      "case_id": "fresh_dev_052",
+      "instance_id": "pred_0000",
+      "v5_frozen_category": "dress",
+      "source_image_sha256": "b8afc1fff47b66e1459d7bb466b0204b97daa8b411054703781d5f3830165787",
+      "coverage_group": "NEW_NEVER_LIVE_MEASURED",
+      "fixed_plan_index": 107,
+      "chunk_id": 5
+    },
+    {
+      "case_id": "fresh_dev_053",
+      "instance_id": "pred_0004",
+      "v5_frozen_category": "pants",
+      "source_image_sha256": "be50a11c80ad7c0c61d44e14d1c8e97ba047947def8d6317dafb7f6eb14ed632",
+      "coverage_group": "NEW_NEVER_LIVE_MEASURED",
+      "fixed_plan_index": 108,
+      "chunk_id": 5
+    },
+    {
+      "case_id": "fresh_dev_033",
+      "instance_id": "pred_0000",
+      "v5_frozen_category": "top",
+      "source_image_sha256": "c979881a9bd9d3f56c300151482cc6f1a4b79e22e22254ec04db970caa157db7",
+      "coverage_group": "NEW_NEVER_LIVE_MEASURED",
+      "fixed_plan_index": 109,
+      "chunk_id": 5
+    },
+    {
+      "case_id": "fresh_dev_053",
+      "instance_id": "pred_0001",
+      "v5_frozen_category": "dress",
+      "source_image_sha256": "be50a11c80ad7c0c61d44e14d1c8e97ba047947def8d6317dafb7f6eb14ed632",
+      "coverage_group": "NEW_NEVER_LIVE_MEASURED",
+      "fixed_plan_index": 110,
+      "chunk_id": 5
+    },
+    {
+      "case_id": "fresh_dev_034",
+      "instance_id": "pred_0000",
+      "v5_frozen_category": "top",
+      "source_image_sha256": "355106ae411ad68494d1b415717dd3eb8dbc8c33be1a9c7c99fc2c0acab59102",
+      "coverage_group": "NEW_NEVER_LIVE_MEASURED",
+      "fixed_plan_index": 111,
+      "chunk_id": 5
+    },
+    {
+      "case_id": "fresh_dev_055",
+      "instance_id": "pred_0000",
+      "v5_frozen_category": "dress",
+      "source_image_sha256": "186ca393ae9e4fe4a85d042880d3f10bb1c19dde5ad9192047b5d4ce5e8b7a36",
+      "coverage_group": "NEW_NEVER_LIVE_MEASURED",
+      "fixed_plan_index": 112,
+      "chunk_id": 5
+    },
+    {
+      "case_id": "fresh_dev_035",
+      "instance_id": "pred_0000",
+      "v5_frozen_category": "top",
+      "source_image_sha256": "ede84286363c555097591acb365ccdd09bacda4b2fcbe4dda2dc2681110b33ba",
+      "coverage_group": "NEW_NEVER_LIVE_MEASURED",
+      "fixed_plan_index": 113,
+      "chunk_id": 5
+    },
+    {
+      "case_id": "fresh_dev_055",
+      "instance_id": "pred_0001",
+      "v5_frozen_category": "dress",
+      "source_image_sha256": "186ca393ae9e4fe4a85d042880d3f10bb1c19dde5ad9192047b5d4ce5e8b7a36",
+      "coverage_group": "NEW_NEVER_LIVE_MEASURED",
+      "fixed_plan_index": 114,
+      "chunk_id": 5
+    },
+    {
+      "case_id": "fresh_dev_036",
+      "instance_id": "pred_0000",
+      "v5_frozen_category": "top",
+      "source_image_sha256": "151927bbe2b74e2e3a1877767314a661e30261a9a287ef7f59f7b0a152ad5621",
+      "coverage_group": "NEW_NEVER_LIVE_MEASURED",
+      "fixed_plan_index": 115,
+      "chunk_id": 5
+    },
+    {
+      "case_id": "fresh_dev_056",
+      "instance_id": "pred_0002",
+      "v5_frozen_category": "dress",
+      "source_image_sha256": "b7ee4922c4b9f3dc48ae7a2981ecebfa1895c8a2a62e76bc29e372f5cd4c26f0",
+      "coverage_group": "NEW_NEVER_LIVE_MEASURED",
+      "fixed_plan_index": 116,
+      "chunk_id": 5
+    },
+    {
+      "case_id": "fresh_dev_042",
+      "instance_id": "pred_0001",
+      "v5_frozen_category": "top",
+      "source_image_sha256": "0a753a36b79a70e9f892d1da614d252dc6374966ab75885378fc97754c009858",
+      "coverage_group": "NEW_NEVER_LIVE_MEASURED",
+      "fixed_plan_index": 117,
+      "chunk_id": 5
+    },
+    {
+      "case_id": "fresh_dev_057",
+      "instance_id": "pred_0000",
+      "v5_frozen_category": "dress",
+      "source_image_sha256": "3996f34402ba1a5a99c7926f46f0deb0ff1128b14ff67cd5e4cf80a028403b89",
+      "coverage_group": "NEW_NEVER_LIVE_MEASURED",
+      "fixed_plan_index": 118,
+      "chunk_id": 5
+    },
+    {
+      "case_id": "fresh_dev_042",
+      "instance_id": "pred_0003",
+      "v5_frozen_category": "top",
+      "source_image_sha256": "0a753a36b79a70e9f892d1da614d252dc6374966ab75885378fc97754c009858",
+      "coverage_group": "NEW_NEVER_LIVE_MEASURED",
+      "fixed_plan_index": 119,
+      "chunk_id": 5
+    },
+    {
+      "case_id": "fresh_dev_058",
+      "instance_id": "pred_0000",
+      "v5_frozen_category": "dress",
+      "source_image_sha256": "dd8e888565919d38b48a5aa8898daef60baa96239f843630db596b3fe94c5501",
+      "coverage_group": "NEW_NEVER_LIVE_MEASURED",
+      "fixed_plan_index": 120,
+      "chunk_id": 5
+    },
+    {
+      "case_id": "fresh_dev_043",
+      "instance_id": "pred_0002",
+      "v5_frozen_category": "top",
+      "source_image_sha256": "67ad0a245ba72e5cd1d27fc259a0113fba1721adb50c6d7a4b7f23e14e50077c",
+      "coverage_group": "NEW_NEVER_LIVE_MEASURED",
+      "fixed_plan_index": 121,
+      "chunk_id": 6
+    },
+    {
+      "case_id": "fresh_dev_058",
+      "instance_id": "pred_0001",
+      "v5_frozen_category": "dress",
+      "source_image_sha256": "dd8e888565919d38b48a5aa8898daef60baa96239f843630db596b3fe94c5501",
+      "coverage_group": "NEW_NEVER_LIVE_MEASURED",
+      "fixed_plan_index": 122,
+      "chunk_id": 6
+    },
+    {
+      "case_id": "fresh_dev_048",
+      "instance_id": "pred_0001",
+      "v5_frozen_category": "top",
+      "source_image_sha256": "f1a8dd47ca0411c6675af302978a81f16b91e88d85222776791bd3b8112ff3ff",
+      "coverage_group": "NEW_NEVER_LIVE_MEASURED",
+      "fixed_plan_index": 123,
+      "chunk_id": 6
+    },
+    {
+      "case_id": "fresh_dev_059",
+      "instance_id": "pred_0000",
+      "v5_frozen_category": "dress",
+      "source_image_sha256": "c441f16ed71e3b716a785d73a73525bb2aacd2f0462452901107d7fbf0652c9b",
+      "coverage_group": "NEW_NEVER_LIVE_MEASURED",
+      "fixed_plan_index": 124,
+      "chunk_id": 6
+    },
+    {
+      "case_id": "fresh_dev_049",
+      "instance_id": "pred_0000",
+      "v5_frozen_category": "top",
+      "source_image_sha256": "fe633e1bcb15e401175c6e74c34fbade174456e314c08cbf20d2f96d90a2cd97",
+      "coverage_group": "NEW_NEVER_LIVE_MEASURED",
+      "fixed_plan_index": 125,
+      "chunk_id": 6
+    },
+    {
+      "case_id": "fresh_dev_060",
+      "instance_id": "pred_0001",
+      "v5_frozen_category": "dress",
+      "source_image_sha256": "1ff3fc0f63441fd6a488ef2ee2a1c482e1760e78b98cfd7f7f8df91468bfbd60",
+      "coverage_group": "NEW_NEVER_LIVE_MEASURED",
+      "fixed_plan_index": 126,
+      "chunk_id": 6
+    },
+    {
+      "case_id": "fresh_dev_052",
+      "instance_id": "pred_0001",
+      "v5_frozen_category": "top",
+      "source_image_sha256": "b8afc1fff47b66e1459d7bb466b0204b97daa8b411054703781d5f3830165787",
+      "coverage_group": "NEW_NEVER_LIVE_MEASURED",
+      "fixed_plan_index": 127,
+      "chunk_id": 6
+    },
+    {
+      "case_id": "fresh_dev_052",
+      "instance_id": "pred_0002",
+      "v5_frozen_category": "top",
+      "source_image_sha256": "b8afc1fff47b66e1459d7bb466b0204b97daa8b411054703781d5f3830165787",
+      "coverage_group": "NEW_NEVER_LIVE_MEASURED",
+      "fixed_plan_index": 128,
+      "chunk_id": 6
+    },
+    {
+      "case_id": "fresh_dev_053",
+      "instance_id": "pred_0000",
+      "v5_frozen_category": "top",
+      "source_image_sha256": "be50a11c80ad7c0c61d44e14d1c8e97ba047947def8d6317dafb7f6eb14ed632",
+      "coverage_group": "NEW_NEVER_LIVE_MEASURED",
+      "fixed_plan_index": 129,
+      "chunk_id": 6
+    },
+    {
+      "case_id": "fresh_dev_053",
+      "instance_id": "pred_0002",
+      "v5_frozen_category": "top",
+      "source_image_sha256": "be50a11c80ad7c0c61d44e14d1c8e97ba047947def8d6317dafb7f6eb14ed632",
+      "coverage_group": "NEW_NEVER_LIVE_MEASURED",
+      "fixed_plan_index": 130,
+      "chunk_id": 6
+    },
+    {
+      "case_id": "fresh_dev_053",
+      "instance_id": "pred_0003",
+      "v5_frozen_category": "top",
+      "source_image_sha256": "be50a11c80ad7c0c61d44e14d1c8e97ba047947def8d6317dafb7f6eb14ed632",
+      "coverage_group": "NEW_NEVER_LIVE_MEASURED",
+      "fixed_plan_index": 131,
+      "chunk_id": 6
+    },
+    {
+      "case_id": "fresh_dev_054",
+      "instance_id": "pred_0001",
+      "v5_frozen_category": "top",
+      "source_image_sha256": "0bdc5eec3a6551fe9a90390e48fc28b19899649dd0baa2743ad2d5db1546fd20",
+      "coverage_group": "NEW_NEVER_LIVE_MEASURED",
+      "fixed_plan_index": 132,
+      "chunk_id": 6
+    },
+    {
+      "case_id": "fresh_dev_056",
+      "instance_id": "pred_0001",
+      "v5_frozen_category": "top",
+      "source_image_sha256": "b7ee4922c4b9f3dc48ae7a2981ecebfa1895c8a2a62e76bc29e372f5cd4c26f0",
+      "coverage_group": "NEW_NEVER_LIVE_MEASURED",
+      "fixed_plan_index": 133,
+      "chunk_id": 6
+    },
+    {
+      "case_id": "fresh_dev_058",
+      "instance_id": "pred_0003",
+      "v5_frozen_category": "top",
+      "source_image_sha256": "dd8e888565919d38b48a5aa8898daef60baa96239f843630db596b3fe94c5501",
+      "coverage_group": "NEW_NEVER_LIVE_MEASURED",
+      "fixed_plan_index": 134,
+      "chunk_id": 6
+    },
+    {
+      "case_id": "fresh_dev_060",
+      "instance_id": "pred_0000",
+      "v5_frozen_category": "top",
+      "source_image_sha256": "1ff3fc0f63441fd6a488ef2ee2a1c482e1760e78b98cfd7f7f8df91468bfbd60",
+      "coverage_group": "NEW_NEVER_LIVE_MEASURED",
+      "fixed_plan_index": 135,
+      "chunk_id": 6
+    },
+    {
+      "case_id": "fresh_dev_014",
+      "instance_id": "pred_0003",
+      "v5_frozen_category": "accessory",
+      "source_image_sha256": "a23e53ad9cff8c87adfbfef8968d1a26444d7a0bb255ffb07d6a75023e87a326",
+      "coverage_group": "STAGE1_PILOT12_PREVIOUSLY_MEASURED",
+      "fixed_plan_index": 136,
+      "chunk_id": 6
+    },
+    {
+      "case_id": "fresh_dev_008",
+      "instance_id": "pred_0002",
+      "v5_frozen_category": "bag",
+      "source_image_sha256": "e7fa570eb1d147c3256a81876287ad1cf035998209020a5baa60653987d0f92a",
+      "coverage_group": "STAGE1_PILOT12_PREVIOUSLY_MEASURED",
+      "fixed_plan_index": 137,
+      "chunk_id": 6
+    },
+    {
+      "case_id": "fresh_dev_001",
+      "instance_id": "pred_0000",
+      "v5_frozen_category": "dress",
+      "source_image_sha256": "08d9b1b4aa091a8070c8286dcd4e38af3329d73749fad31bffcc16281013d7c1",
+      "coverage_group": "STAGE1_PILOT12_PREVIOUSLY_MEASURED",
+      "fixed_plan_index": 138,
+      "chunk_id": 6
+    },
+    {
+      "case_id": "fresh_dev_003",
+      "instance_id": "pred_0001",
+      "v5_frozen_category": "outerwear",
+      "source_image_sha256": "9c4089fc54cfb412408954b26e4498e9b4fdf36c1c2f045ec83d9a29e587f3a4",
+      "coverage_group": "STAGE1_PILOT12_PREVIOUSLY_MEASURED",
+      "fixed_plan_index": 139,
+      "chunk_id": 6
+    },
+    {
+      "case_id": "fresh_dev_002",
+      "instance_id": "pred_0001",
+      "v5_frozen_category": "pants",
+      "source_image_sha256": "427e4b35b0db8c6199590c4ec002173431ecdf9ef1d3348aa696324c0f7b5d5f",
+      "coverage_group": "STAGE1_PILOT12_PREVIOUSLY_MEASURED",
+      "fixed_plan_index": 140,
+      "chunk_id": 6
+    },
+    {
+      "case_id": "fresh_dev_012",
+      "instance_id": "pred_0000",
+      "v5_frozen_category": "shoe",
+      "source_image_sha256": "caf9e364eafb4bd482bf78418478a85ac3cdd6f02ded1f288c93728bab3e0c81",
+      "coverage_group": "STAGE1_PILOT12_PREVIOUSLY_MEASURED",
+      "fixed_plan_index": 141,
+      "chunk_id": 6
+    },
+    {
+      "case_id": "fresh_dev_004",
+      "instance_id": "pred_0002",
+      "v5_frozen_category": "skirt",
+      "source_image_sha256": "dc58b87123274a7577e4d906c454e1e47c043c8e0b8d8a41af47112b7acde3b4",
+      "coverage_group": "STAGE1_PILOT12_PREVIOUSLY_MEASURED",
+      "fixed_plan_index": 142,
+      "chunk_id": 6
+    },
+    {
+      "case_id": "fresh_dev_005",
+      "instance_id": "pred_0000",
+      "v5_frozen_category": "top",
+      "source_image_sha256": "9147ca6addb5c7252ef49cc4550c9408448b024d428fa4570a90ddb194f401e7",
+      "coverage_group": "STAGE1_PILOT12_PREVIOUSLY_MEASURED",
+      "fixed_plan_index": 143,
+      "chunk_id": 6
+    },
+    {
+      "case_id": "fresh_dev_009",
+      "instance_id": "pred_0000",
+      "v5_frozen_category": "dress",
+      "source_image_sha256": "3689b8afda9165f80d147a244a6e6feb59e30db99b58c4eae2acfc82dadf6996",
+      "coverage_group": "STAGE1_PILOT12_PREVIOUSLY_MEASURED",
+      "fixed_plan_index": 144,
+      "chunk_id": 6
+    },
+    {
+      "case_id": "fresh_dev_006",
+      "instance_id": "pred_0000",
+      "v5_frozen_category": "pants",
+      "source_image_sha256": "baffc31f1a0efa2700f5bd73111fc550bfd5c33f114070f976b86760df4044f4",
+      "coverage_group": "STAGE1_PILOT12_PREVIOUSLY_MEASURED",
+      "fixed_plan_index": 145,
+      "chunk_id": 7
+    },
+    {
+      "case_id": "fresh_dev_010",
+      "instance_id": "pred_0001",
+      "v5_frozen_category": "skirt",
+      "source_image_sha256": "b507a312031287995a9fb9ef2f720b8fc14c8261888fee49470aff0f8372d72a",
+      "coverage_group": "STAGE1_PILOT12_PREVIOUSLY_MEASURED",
+      "fixed_plan_index": 146,
+      "chunk_id": 7
+    },
+    {
+      "case_id": "fresh_dev_011",
+      "instance_id": "pred_0000",
+      "v5_frozen_category": "top",
+      "source_image_sha256": "c8e90d41368318265b2d1282df8712985e0d02789f5de64a5bba6d45b4ef768f",
+      "coverage_group": "STAGE1_PILOT12_PREVIOUSLY_MEASURED",
+      "fixed_plan_index": 147,
+      "chunk_id": 7
+    },
+    {
+      "case_id": "fresh_dev_017",
+      "instance_id": "pred_0005",
+      "v5_frozen_category": "accessory",
+      "source_image_sha256": "9b3fe32ef33dab940c4c0f378235ffbe9307fdf5cad7d2897b8dd3c096ed7b1d",
+      "coverage_group": "PRIOR_WARM24_PREVIOUSLY_MEASURED",
+      "fixed_plan_index": 148,
+      "chunk_id": 7
+    },
+    {
+      "case_id": "fresh_dev_014",
+      "instance_id": "pred_0005",
+      "v5_frozen_category": "bag",
+      "source_image_sha256": "a23e53ad9cff8c87adfbfef8968d1a26444d7a0bb255ffb07d6a75023e87a326",
+      "coverage_group": "PRIOR_WARM24_PREVIOUSLY_MEASURED",
+      "fixed_plan_index": 149,
+      "chunk_id": 7
+    },
+    {
+      "case_id": "fresh_dev_014",
+      "instance_id": "pred_0000",
+      "v5_frozen_category": "dress",
+      "source_image_sha256": "a23e53ad9cff8c87adfbfef8968d1a26444d7a0bb255ffb07d6a75023e87a326",
+      "coverage_group": "PRIOR_WARM24_PREVIOUSLY_MEASURED",
+      "fixed_plan_index": 150,
+      "chunk_id": 7
+    },
+    {
+      "case_id": "fresh_dev_026",
+      "instance_id": "pred_0002",
+      "v5_frozen_category": "outerwear",
+      "source_image_sha256": "ac16df83da46193e97adf24f860d313a625fe85f5bcd9c1933b0e63ae423532d",
+      "coverage_group": "PRIOR_WARM24_PREVIOUSLY_MEASURED",
+      "fixed_plan_index": 151,
+      "chunk_id": 7
+    },
+    {
+      "case_id": "fresh_dev_008",
+      "instance_id": "pred_0000",
+      "v5_frozen_category": "pants",
+      "source_image_sha256": "e7fa570eb1d147c3256a81876287ad1cf035998209020a5baa60653987d0f92a",
+      "coverage_group": "PRIOR_WARM24_PREVIOUSLY_MEASURED",
+      "fixed_plan_index": 152,
+      "chunk_id": 7
+    },
+    {
+      "case_id": "fresh_dev_007",
+      "instance_id": "pred_0001",
+      "v5_frozen_category": "shoe",
+      "source_image_sha256": "e6225a1f98beaa870f9b31ae3f4294eee271966f500a423b84a23f622377dff5",
+      "coverage_group": "PRIOR_WARM24_PREVIOUSLY_MEASURED",
+      "fixed_plan_index": 153,
+      "chunk_id": 7
+    },
+    {
+      "case_id": "fresh_dev_011",
+      "instance_id": "pred_0003",
+      "v5_frozen_category": "skirt",
+      "source_image_sha256": "c8e90d41368318265b2d1282df8712985e0d02789f5de64a5bba6d45b4ef768f",
+      "coverage_group": "PRIOR_WARM24_PREVIOUSLY_MEASURED",
+      "fixed_plan_index": 154,
+      "chunk_id": 7
+    },
+    {
+      "case_id": "fresh_dev_012",
+      "instance_id": "pred_0001",
+      "v5_frozen_category": "top",
+      "source_image_sha256": "caf9e364eafb4bd482bf78418478a85ac3cdd6f02ded1f288c93728bab3e0c81",
+      "coverage_group": "PRIOR_WARM24_PREVIOUSLY_MEASURED",
+      "fixed_plan_index": 155,
+      "chunk_id": 7
+    },
+    {
+      "case_id": "fresh_dev_024",
+      "instance_id": "pred_0004",
+      "v5_frozen_category": "accessory",
+      "source_image_sha256": "02f2dc3a8695beacf9be466b2b010463a57a1a3ecc344d8672ff23ace2a668f4",
+      "coverage_group": "PRIOR_WARM24_PREVIOUSLY_MEASURED",
+      "fixed_plan_index": 156,
+      "chunk_id": 7
+    },
+    {
+      "case_id": "fresh_dev_056",
+      "instance_id": "pred_0003",
+      "v5_frozen_category": "bag",
+      "source_image_sha256": "b7ee4922c4b9f3dc48ae7a2981ecebfa1895c8a2a62e76bc29e372f5cd4c26f0",
+      "coverage_group": "PRIOR_WARM24_PREVIOUSLY_MEASURED",
+      "fixed_plan_index": 157,
+      "chunk_id": 7
+    },
+    {
+      "case_id": "fresh_dev_041",
+      "instance_id": "pred_0000",
+      "v5_frozen_category": "dress",
+      "source_image_sha256": "0fd56ab9d740f2f246f4ae687ec0ee358392b2468b511e7090d43cb1fdc8bc6a",
+      "coverage_group": "PRIOR_WARM24_PREVIOUSLY_MEASURED",
+      "fixed_plan_index": 158,
+      "chunk_id": 7
+    },
+    {
+      "case_id": "fresh_dev_040",
+      "instance_id": "pred_0000",
+      "v5_frozen_category": "outerwear",
+      "source_image_sha256": "cf6b7b4aaafa31a9c1fa0a046ddcbf028f9a094bcc7b94932c2bce599438a0e9",
+      "coverage_group": "PRIOR_WARM24_PREVIOUSLY_MEASURED",
+      "fixed_plan_index": 159,
+      "chunk_id": 7
+    },
+    {
+      "case_id": "fresh_dev_024",
+      "instance_id": "pred_0000",
+      "v5_frozen_category": "pants",
+      "source_image_sha256": "02f2dc3a8695beacf9be466b2b010463a57a1a3ecc344d8672ff23ace2a668f4",
+      "coverage_group": "PRIOR_WARM24_PREVIOUSLY_MEASURED",
+      "fixed_plan_index": 160,
+      "chunk_id": 7
+    },
+    {
+      "case_id": "fresh_dev_020",
+      "instance_id": "pred_0002",
+      "v5_frozen_category": "shoe",
+      "source_image_sha256": "f3705b33848feecc5fe13377cfc2d485b6f1e8148cfdcc000ea069fb6d369dd8",
+      "coverage_group": "PRIOR_WARM24_PREVIOUSLY_MEASURED",
+      "fixed_plan_index": 161,
+      "chunk_id": 7
+    },
+    {
+      "case_id": "fresh_dev_032",
+      "instance_id": "pred_0001",
+      "v5_frozen_category": "skirt",
+      "source_image_sha256": "24c13ff85a1507daaa158417e4feeb565ee354ad48472f7355d13c3aeb5b4935",
+      "coverage_group": "PRIOR_WARM24_PREVIOUSLY_MEASURED",
+      "fixed_plan_index": 162,
+      "chunk_id": 7
+    },
+    {
+      "case_id": "fresh_dev_025",
+      "instance_id": "pred_0001",
+      "v5_frozen_category": "top",
+      "source_image_sha256": "73ae9960d16d5201c2c277b496298af7786d0b045dbcdc1cb57d1bca23a6a08e",
+      "coverage_group": "PRIOR_WARM24_PREVIOUSLY_MEASURED",
+      "fixed_plan_index": 163,
+      "chunk_id": 7
+    },
+    {
+      "case_id": "fresh_dev_058",
+      "instance_id": "pred_0002",
+      "v5_frozen_category": "accessory",
+      "source_image_sha256": "dd8e888565919d38b48a5aa8898daef60baa96239f843630db596b3fe94c5501",
+      "coverage_group": "PRIOR_WARM24_PREVIOUSLY_MEASURED",
+      "fixed_plan_index": 164,
+      "chunk_id": 7
+    },
+    {
+      "case_id": "fresh_dev_060",
+      "instance_id": "pred_0002",
+      "v5_frozen_category": "bag",
+      "source_image_sha256": "1ff3fc0f63441fd6a488ef2ee2a1c482e1760e78b98cfd7f7f8df91468bfbd60",
+      "coverage_group": "PRIOR_WARM24_PREVIOUSLY_MEASURED",
+      "fixed_plan_index": 165,
+      "chunk_id": 7
+    },
+    {
+      "case_id": "fresh_dev_054",
+      "instance_id": "pred_0000",
+      "v5_frozen_category": "dress",
+      "source_image_sha256": "0bdc5eec3a6551fe9a90390e48fc28b19899649dd0baa2743ad2d5db1546fd20",
+      "coverage_group": "PRIOR_WARM24_PREVIOUSLY_MEASURED",
+      "fixed_plan_index": 166,
+      "chunk_id": 7
+    },
+    {
+      "case_id": "fresh_dev_042",
+      "instance_id": "pred_0000",
+      "v5_frozen_category": "outerwear",
+      "source_image_sha256": "0a753a36b79a70e9f892d1da614d252dc6374966ab75885378fc97754c009858",
+      "coverage_group": "PRIOR_WARM24_PREVIOUSLY_MEASURED",
+      "fixed_plan_index": 167,
+      "chunk_id": 7
+    },
+    {
+      "case_id": "fresh_dev_033",
+      "instance_id": "pred_0002",
+      "v5_frozen_category": "pants",
+      "source_image_sha256": "c979881a9bd9d3f56c300151482cc6f1a4b79e22e22254ec04db970caa157db7",
+      "coverage_group": "PRIOR_WARM24_PREVIOUSLY_MEASURED",
+      "fixed_plan_index": 168,
+      "chunk_id": 7
+    },
+    {
+      "case_id": "fresh_dev_056",
+      "instance_id": "pred_0000",
+      "v5_frozen_category": "shoe",
+      "source_image_sha256": "b7ee4922c4b9f3dc48ae7a2981ecebfa1895c8a2a62e76bc29e372f5cd4c26f0",
+      "coverage_group": "PRIOR_WARM24_PREVIOUSLY_MEASURED",
+      "fixed_plan_index": 169,
+      "chunk_id": 8
+    },
+    {
+      "case_id": "fresh_dev_038",
+      "instance_id": "pred_0000",
+      "v5_frozen_category": "skirt",
+      "source_image_sha256": "f7c5d22e63f898014bdc9e3423b75b93cbe972a4b4b755896f4be7374ce8ce6e",
+      "coverage_group": "PRIOR_WARM24_PREVIOUSLY_MEASURED",
+      "fixed_plan_index": 170,
+      "chunk_id": 8
+    },
+    {
+      "case_id": "fresh_dev_044",
+      "instance_id": "pred_0002",
+      "v5_frozen_category": "top",
+      "source_image_sha256": "12b4f71451dee9ff4b4c2da9cef1ddc92c72b34b3d05240ed323aeaf4adda15d",
+      "coverage_group": "PRIOR_WARM24_PREVIOUSLY_MEASURED",
+      "fixed_plan_index": 171,
+      "chunk_id": 8
+    }
+  ]
+}

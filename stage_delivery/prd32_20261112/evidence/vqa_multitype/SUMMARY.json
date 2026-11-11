@@ -1,0 +1,44 @@
+{
+  "status": "MULTITYPE_VQA_PILOT_V1_COMPLETED_SHADOW_ONLY",
+  "qwen_calls_measured": 32,
+  "warmup_qwen_calls_excluded": 1,
+  "target_count": 16,
+  "question_types": {
+    "attribute_visible": {
+      "n": 8,
+      "mean_qwen_host_ms": 698.209,
+      "p95_qwen_host_ms": 755.463,
+      "mean_output_tokens": 20.5,
+      "hit_token_cap_count": 0
+    },
+    "design_visible": {
+      "n": 8,
+      "mean_qwen_host_ms": 802.789,
+      "p95_qwen_host_ms": 1108.595,
+      "mean_output_tokens": 24,
+      "hit_token_cap_count": 0
+    },
+    "material_process_boundary": {
+      "n": 8,
+      "mean_qwen_host_ms": 273.873,
+      "p95_qwen_host_ms": 319.42,
+      "mean_output_tokens": 4,
+      "hit_token_cap_count": 0
+    },
+    "styling_advice": {
+      "n": 8,
+      "mean_qwen_host_ms": 782.956,
+      "p95_qwen_host_ms": 1158.689,
+      "mean_output_tokens": 23.5,
+      "hit_token_cap_count": 0
+    }
+  },
+  "overall_mean_qwen_host_ms": 639.457,
+  "original_guard_invoked": false,
+  "production_release": false,
+  "no_holdout": true,
+  "multitype_prompt_version": "vqa_multitype_question_passthrough_v2",
+  "independent_gt": false,
+  "official_prd_accuracy_evaluated": false,
+  "note": "Exploratory DEV60 multitype pilot; do not compare directly to fixed-color VQA accuracy or production E2E SLA."
+}

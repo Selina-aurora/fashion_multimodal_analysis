@@ -1,0 +1,305 @@
+{
+  "schema": "prd32_oracle8_user_chat_confirmed_assisted_20261111_v1",
+  "origin": "user_accepted_ai_visual_assistance_in_chat_not_independently_annotated",
+  "verification": "source_image_sha256_verified_by_script",
+  "ai_assisted": true,
+  "human_confirmed": true,
+  "independent_blind_gt": false,
+  "holdout_used": false,
+  "production_release": false,
+  "annotations": [
+    {
+      "case_id": "fresh_dev_030",
+      "instance_id": "pred_0001",
+      "question_id": "MQ05_1",
+      "cohort": "critical",
+      "source_image_sha256": "794153c26f77474628c69a77677b1b486ba690f92e979d0d20247adba902aae1",
+      "source_image_size": [
+        468,
+        624
+      ],
+      "reference_category_dev_assisted_not_blind_gt": "skirt",
+      "v5_bbox_xyxy": [
+        64.333,
+        282.255,
+        389.093,
+        583.205
+      ],
+      "ai_proposed_bbox_xyxy": [
+        66,
+        308,
+        386,
+        600
+      ],
+      "ai_review_decision": "bbox_correction_candidate",
+      "ai_review_confidence": "medium",
+      "ai_reason": "建议只覆盖浅蓝色半身裙：从白色上衣下摆以下开始，保留蓝色裙摆；不包含白色上衣。",
+      "limitation": "仅用于矩形框定位A/B；上衣部分遮挡裙腰边缘，框不能保证像素级分离。",
+      "human_approved": true,
+      "oracle_bbox_xyxy": [
+        66,
+        308,
+        386,
+        600
+      ],
+      "oracle_target_status": "USER_CHAT_CONFIRMED_ASSISTED_DEV_REVIEW",
+      "eligible_for_oracle_comparison": true,
+      "holdout_used": false,
+      "production_release": false,
+      "user_chat_confirmed_ai_assisted_review": true,
+      "independent_blind_gt": false
+    },
+    {
+      "case_id": "fresh_dev_010",
+      "instance_id": "pred_0000",
+      "question_id": "MQ10_2",
+      "cohort": "critical",
+      "source_image_sha256": "b507a312031287995a9fb9ef2f720b8fc14c8261888fee49470aff0f8372d72a",
+      "source_image_size": [
+        468,
+        624
+      ],
+      "reference_category_dev_assisted_not_blind_gt": "dress",
+      "v5_bbox_xyxy": [
+        61.682,
+        8.09,
+        376.021,
+        624.0
+      ],
+      "ai_proposed_bbox_xyxy": [
+        54,
+        12,
+        394,
+        624
+      ],
+      "ai_review_decision": "bbox_correction_candidate",
+      "ai_review_confidence": "medium",
+      "ai_reason": "整体是一件白色上身、粉色裙摆的拼色连衣裙；建议框包含两部分并覆盖下摆。",
+      "limitation": "类别理解错误不一定因边界微调得到纠正；改框可能同时增加背景。",
+      "human_approved": true,
+      "oracle_bbox_xyxy": [
+        54,
+        12,
+        394,
+        624
+      ],
+      "oracle_target_status": "USER_CHAT_CONFIRMED_ASSISTED_DEV_REVIEW",
+      "eligible_for_oracle_comparison": true,
+      "holdout_used": false,
+      "production_release": false,
+      "user_chat_confirmed_ai_assisted_review": true,
+      "independent_blind_gt": false
+    },
+    {
+      "case_id": "fresh_dev_014",
+      "instance_id": "pred_0001",
+      "question_id": "MQ11_2",
+      "cohort": "critical",
+      "source_image_sha256": "a23e53ad9cff8c87adfbfef8968d1a26444d7a0bb255ffb07d6a75023e87a326",
+      "source_image_size": [
+        640,
+        750
+      ],
+      "reference_category_dev_assisted_not_blind_gt": "shoe",
+      "v5_bbox_xyxy": [
+        281.16,
+        659.896,
+        325.661,
+        728.76
+      ],
+      "ai_proposed_bbox_xyxy": [
+        281.16,
+        659.896,
+        325.661,
+        728.76
+      ],
+      "ai_review_decision": "same_bbox_control",
+      "ai_review_confidence": "high",
+      "ai_reason": "V5 框覆盖单只黑色凉鞋，不应擅自将另一只鞋合并为一个实例。",
+      "limitation": "上游框基本对准；模型回答衣服条纹属于整图串扰的疑点，适合标记方式对照。",
+      "human_approved": true,
+      "oracle_bbox_xyxy": null,
+      "oracle_target_status": "USER_CHAT_CONFIRMED_ASSISTED_DEV_REVIEW",
+      "eligible_for_oracle_comparison": false,
+      "holdout_used": false,
+      "production_release": false,
+      "user_chat_confirmed_ai_assisted_review": true,
+      "independent_blind_gt": false
+    },
+    {
+      "case_id": "fresh_dev_024",
+      "instance_id": "pred_0004",
+      "question_id": "MQ16_2",
+      "cohort": "critical",
+      "source_image_sha256": "02f2dc3a8695beacf9be466b2b010463a57a1a3ecc344d8672ff23ace2a668f4",
+      "source_image_size": [
+        640,
+        900
+      ],
+      "reference_category_dev_assisted_not_blind_gt": "accessory",
+      "v5_bbox_xyxy": [
+        233.853,
+        189.657,
+        303.451,
+        222.78
+      ],
+      "ai_proposed_bbox_xyxy": [
+        233.853,
+        189.657,
+        303.451,
+        222.78
+      ],
+      "ai_review_decision": "marker_style_control",
+      "ai_review_confidence": "high",
+      "ai_reason": "V5 框基本对准深色墨镜；红色描述可能来自后加红色目标标记。",
+      "limitation": "保持位置，比较红框/中性标记；不把红色框误当成墨镜商品颜色。",
+      "human_approved": true,
+      "oracle_bbox_xyxy": null,
+      "oracle_target_status": "USER_CHAT_CONFIRMED_ASSISTED_DEV_REVIEW",
+      "eligible_for_oracle_comparison": false,
+      "holdout_used": false,
+      "production_release": false,
+      "user_chat_confirmed_ai_assisted_review": true,
+      "independent_blind_gt": false
+    },
+    {
+      "case_id": "fresh_dev_001",
+      "instance_id": "pred_0001",
+      "question_id": "MQ01_1",
+      "cohort": "control",
+      "source_image_sha256": "08d9b1b4aa091a8070c8286dcd4e38af3329d73749fad31bffcc16281013d7c1",
+      "source_image_size": [
+        468,
+        625
+      ],
+      "reference_category_dev_assisted_not_blind_gt": "top",
+      "v5_bbox_xyxy": [
+        11.756,
+        23.875,
+        411.409,
+        533.425
+      ],
+      "ai_proposed_bbox_xyxy": [
+        11.756,
+        23.875,
+        411.409,
+        533.425
+      ],
+      "ai_review_decision": "same_bbox_control",
+      "ai_review_confidence": "medium",
+      "ai_reason": "V5 框基本定位白色带黑色文字印花背心；底部下摆可能略未全部覆盖。",
+      "limitation": "用于细节理解对照，不作为像素级完整框真值。",
+      "human_approved": true,
+      "oracle_bbox_xyxy": null,
+      "oracle_target_status": "USER_CHAT_CONFIRMED_ASSISTED_DEV_REVIEW",
+      "eligible_for_oracle_comparison": false,
+      "holdout_used": false,
+      "production_release": false,
+      "user_chat_confirmed_ai_assisted_review": true,
+      "independent_blind_gt": false
+    },
+    {
+      "case_id": "fresh_dev_005",
+      "instance_id": "pred_0001",
+      "question_id": "MQ04_1",
+      "cohort": "control",
+      "source_image_sha256": "9147ca6addb5c7252ef49cc4550c9408448b024d428fa4570a90ddb194f401e7",
+      "source_image_size": [
+        468,
+        624
+      ],
+      "reference_category_dev_assisted_not_blind_gt": "pants",
+      "v5_bbox_xyxy": [
+        96.329,
+        109.847,
+        292.358,
+        331.399
+      ],
+      "ai_proposed_bbox_xyxy": [
+        96.329,
+        109.847,
+        292.358,
+        331.399
+      ],
+      "ai_review_decision": "same_bbox_control",
+      "ai_review_confidence": "medium",
+      "ai_reason": "V5 框对应深色短裤主体；周边遮挡不影响目标身份识别，但不能推断不可见细节。",
+      "limitation": "原框作对照，不需要为制造差异而调整坐标。",
+      "human_approved": true,
+      "oracle_bbox_xyxy": null,
+      "oracle_target_status": "USER_CHAT_CONFIRMED_ASSISTED_DEV_REVIEW",
+      "eligible_for_oracle_comparison": false,
+      "holdout_used": false,
+      "production_release": false,
+      "user_chat_confirmed_ai_assisted_review": true,
+      "independent_blind_gt": false
+    },
+    {
+      "case_id": "fresh_dev_008",
+      "instance_id": "pred_0002",
+      "question_id": "MQ13_1",
+      "cohort": "control",
+      "source_image_sha256": "e7fa570eb1d147c3256a81876287ad1cf035998209020a5baa60653987d0f92a",
+      "source_image_size": [
+        468,
+        702
+      ],
+      "reference_category_dev_assisted_not_blind_gt": "bag",
+      "v5_bbox_xyxy": [
+        134.658,
+        497.386,
+        301.367,
+        701.212
+      ],
+      "ai_proposed_bbox_xyxy": [
+        134.658,
+        497.386,
+        301.367,
+        701.212
+      ],
+      "ai_review_decision": "same_bbox_control",
+      "ai_review_confidence": "high",
+      "ai_reason": "V5 框基本对应图下部深色手提包；白上衣和红裙与包同框出现，存在全图注意力串扰。",
+      "limitation": "保持 V5 框；建议后续对比中性轮廓/Mask，引导颜色识别。",
+      "human_approved": true,
+      "oracle_bbox_xyxy": null,
+      "oracle_target_status": "USER_CHAT_CONFIRMED_ASSISTED_DEV_REVIEW",
+      "eligible_for_oracle_comparison": false,
+      "holdout_used": false,
+      "production_release": false,
+      "user_chat_confirmed_ai_assisted_review": true,
+      "independent_blind_gt": false
+    },
+    {
+      "case_id": "fresh_dev_040",
+      "instance_id": "pred_0000",
+      "question_id": "MQ08_1",
+      "cohort": "control",
+      "source_image_sha256": "cf6b7b4aaafa31a9c1fa0a046ddcbf028f9a094bcc7b94932c2bce599438a0e9",
+      "source_image_size": [
+        468,
+        624
+      ],
+      "reference_category_dev_assisted_not_blind_gt": "outerwear",
+      "v5_bbox_xyxy": [
+        72.967,
+        31.301,
+        435.276,
+        595.703
+      ],
+      "ai_proposed_bbox_xyxy": null,
+      "ai_review_decision": "needs_mask_or_target_review",
+      "ai_review_confidence": "low",
+      "ai_reason": "浅色针织外搭与条纹内搭部分重叠，矩形框无法将两者完全分开。",
+      "limitation": "不作为 bbox 修正的 Oracle 对照；后续需要目标级 mask 或精细分割审查。",
+      "human_approved": true,
+      "oracle_bbox_xyxy": null,
+      "oracle_target_status": "USER_CHAT_CONFIRMED_ASSISTED_DEV_REVIEW",
+      "eligible_for_oracle_comparison": false,
+      "holdout_used": false,
+      "production_release": false,
+      "user_chat_confirmed_ai_assisted_review": true,
+      "independent_blind_gt": false
+    }
+  ]
+}

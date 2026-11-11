@@ -1,0 +1,259 @@
+"""可视化与审核：图片用于发现共性错误，人工判断需要回填到审核记录。
+
+Build a row-numbered image pack for the fresh pattern-v3 holdout audit.
+
+Place at:
+    scripts/visualization/build_pattern_v3_holdout_audit_pack.py
+
+Run from project root:
+    python scripts/visualization/build_pattern_v3_holdout_audit_pack.py
+
+Inputs
+------
+reports/prd_attribute_extraction/pattern_v3_hierarchical/
+    pattern_v3_predictions.csv
+    pattern_v3_holdout_audit_template.csv
+
+outputs/prd_attribute_extraction/pattern_v3_hierarchical/
+    per_instance/
+
+Outputs
+-------
+outputs/prd_attribute_extraction/pattern_v3_hierarchical/
+    holdout_audit_v1/
+        01_<garment_id>.jpg
+        ...
+    holdout_audit_v1_contact_sheet.jpg
+
+The ROW number on each tile matches the row order in
+pattern_v3_holdout_audit_template.csv.
+"""
+
+from __future__ import annotations
+
+import csv
+import math
+import shutil
+from pathlib import Path
+
+from PIL import Image, ImageDraw, ImageFont
+
+from fashion_multimodal_analysis.common.paths import (
+    data_root,
+)
+from fashion_multimodal_analysis.common.paths import project_root as get_project_root
+from fashion_multimodal_analysis.common.paths import (
+    resolve_path as resolve_artifact_path,
+)
+
+PROJECT_ROOT = get_project_root()
+
+REPORT_DIR = (
+    PROJECT_ROOT / "reports" / "prd_attribute_extraction" / "pattern_v3_hierarchical"
+)
+
+OUTPUT_DIR = (
+    PROJECT_ROOT / "outputs" / "prd_attribute_extraction" / "pattern_v3_hierarchical"
+)
+
+PREDICTIONS_CSV = REPORT_DIR / "pattern_v3_predictions.csv"
+HOLDOUT_CSV = REPORT_DIR / "pattern_v3_holdout_audit_template.csv"
+PER_INSTANCE_DIR = OUTPUT_DIR / "per_instance"
+
+PACK_DIR = OUTPUT_DIR / "holdout_audit_v1"
+CONTACT_SHEET = OUTPUT_DIR / "holdout_audit_v1_contact_sheet.jpg"
+
+
+def read_csv(path: Path) -> list[dict[str, str]]:
+    """读取带表头的 CSV，保留每列原始字符串。
+
+    Args:
+        path: 要读取或写入的文件路径。
+
+    Returns:
+        每行一个字段字典；值保留原始字符串，不自动改变标签。
+
+    Raises:
+        FileNotFoundError: 需要的文件不存在。
+    """
+    if not path.exists():
+        raise FileNotFoundError(path)
+
+    with path.open("r", encoding="utf-8-sig", newline="") as f:
+        return list(csv.DictReader(f))
+
+
+def safe_name(text: str) -> str:
+    """将名称转换为可用的文件名组成部分。
+
+    Args:
+        text: 文本。
+
+    Returns:
+        本步骤计算或解析得到的结果；函数体保留了具体结构和空值处理规则。
+    """
+    return text.replace("/", "_").replace("\\", "_").replace(":", "_")
+
+
+def main() -> None:
+    """解析运行参数并执行本模块的实验入口。
+
+    Raises:
+        FileNotFoundError: 需要的文件不存在。
+        RuntimeError: No holdout images were created.
+    """
+    predictions = read_csv(PREDICTIONS_CSV)
+    holdout = read_csv(HOLDOUT_CSV)
+
+    if not PER_INSTANCE_DIR.exists():
+        raise FileNotFoundError(PER_INSTANCE_DIR)
+
+    prediction_index = {}
+
+    for idx, row in enumerate(predictions, start=1):
+        key = (
+            row["source_image"].strip(),
+            row["garment_id"].strip(),
+        )
+        prediction_index[key] = idx
+
+    PACK_DIR.mkdir(parents=True, exist_ok=True)
+
+    for old in PACK_DIR.glob("*.jpg"):
+        old.unlink()
+
+    panels = []
+    missing = []
+
+    for holdout_idx, row in enumerate(holdout, start=1):
+        key = (
+            row["source_image"].strip(),
+            row["garment_id"].strip(),
+        )
+
+        pred_idx = prediction_index.get(key)
+
+        if pred_idx is None:
+            missing.append((holdout_idx, row["garment_id"], "not in predictions"))
+            continue
+
+        garment_id = row["garment_id"].strip()
+
+        src = PER_INSTANCE_DIR / f"{pred_idx:03d}_{garment_id}.jpg"
+
+        if not src.exists():
+            missing.append((holdout_idx, garment_id, str(src)))
+            continue
+
+        dst = PACK_DIR / f"{holdout_idx:02d}_{safe_name(garment_id)}.jpg"
+
+        shutil.copy2(src, dst)
+
+        with Image.open(dst) as img:
+            img = img.convert("RGB")
+            img.thumbnail((360, 450))
+
+            panel = Image.new(
+                "RGB",
+                (400, 590),
+                "white",
+            )
+
+            draw = ImageDraw.Draw(panel)
+            font = ImageFont.load_default()
+
+            title_lines = [
+                f"ROW {holdout_idx:02d} | {garment_id}",
+                f"final: {row['final_pattern']}",
+                f"bucket: {row['stage1_bucket']}",
+                f"route: {row['pattern_presence']}",
+                (
+                    "stage1 score/margin/H: "
+                    + f"{float(row['stage1_top1_score']):.3f} / "
+                    + f"{float(row['stage1_margin']):.3f} / "
+                    + f"{float(row['stage1_entropy']):.3f}"
+                ),
+            ]
+
+            if row.get("stage2_top1", "").strip():
+                title_lines.append(
+                    (
+                        f"subtype: {row['stage2_top1']} "
+                        + f"({float(row['stage2_top1_score']):.3f})"
+                    )
+                )
+                title_lines.append(
+                    (
+                        "stage2 margin/H: "
+                        + f"{float(row['stage2_margin']):.3f} / "
+                        + f"{float(row['stage2_entropy']):.3f}"
+                    )
+                )
+
+            y = 8
+
+            for line in title_lines:
+                draw.text(
+                    (10, y),
+                    line,
+                    fill="black",
+                    font=font,
+                )
+                y += 18
+
+            image_y = 140
+            x = (400 - img.width) // 2
+
+            panel.paste(
+                img,
+                (x, image_y),
+            )
+
+            panels.append(panel)
+
+    if not panels:
+        raise RuntimeError("No holdout images were created.")
+
+    cols = 4
+    rows = math.ceil(len(panels) / cols)
+
+    sheet = Image.new(
+        "RGB",
+        (cols * 400, rows * 590),
+        "white",
+    )
+
+    for idx, panel in enumerate(panels):
+        x = (idx % cols) * 400
+        y = (idx // cols) * 590
+        sheet.paste(panel, (x, y))
+
+    sheet.save(
+        CONTACT_SHEET,
+        quality=92,
+    )
+
+    print("=== PATTERN V3 HOLDOUT AUDIT PACK ===")
+    print(f"holdout rows     : {len(holdout)}")
+    print(f"images created   : {len(panels)}")
+    print(f"missing          : {len(missing)}")
+    print(
+        "folder           : outputs/prd_attribute_extraction/"
+        + "pattern_v3_hierarchical/holdout_audit_v1/"
+    )
+    print(
+        "contact sheet    : outputs/prd_attribute_extraction/"
+        + "pattern_v3_hierarchical/holdout_audit_v1_contact_sheet.jpg"
+    )
+
+    if missing:
+        print("")
+        print("Missing rows:")
+        for item in missing:
+            print(item)
+
+    print("=====================================")
+
+
+if __name__ == "__main__":
+    main()

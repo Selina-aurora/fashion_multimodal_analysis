@@ -1,0 +1,42 @@
+{
+  "status": "OFFLINE_ROUTE_COUNTERFACTUAL_NOT_GPU_AB",
+  "scope": "171 developer-predicted targets, previously measured frozen Stage2 DEV60",
+  "important": "Subtracting unused task wall time is additive approximation; different scopes/quality, cache and scheduling effects unmeasured. Template estimate omits template CPU construction/guard/service overhead.",
+  "route_metrics": {
+    "baseline_three_tasks_measured": {
+      "n": 171,
+      "mean_ms": 2362.772,
+      "p50_ms": 2320.933,
+      "p95_ms": 2759.171
+    },
+    "vqa_only_offline_estimate": {
+      "n": 171,
+      "mean_ms": 297.33,
+      "p50_ms": 271.282,
+      "p95_ms": 546.747
+    },
+    "merchant_tags_copy_offline_estimate": {
+      "n": 171,
+      "mean_ms": 2119.641,
+      "p50_ms": 2102.335,
+      "p95_ms": 2386.886
+    },
+    "merchant_tags_template_offline_lower_bound": {
+      "n": 171,
+      "mean_ms": 1307.979,
+      "p50_ms": 1300.056,
+      "p95_ms": 1455.581
+    }
+  },
+  "template_status_counts": {
+    "TEMPLATE_DRAFT_NEEDS_HUMAN_REVIEW": 171
+  },
+  "template_length_20_to_80_count": 171,
+  "baseline_debug_phrase_count": 64,
+  "template_debug_phrase_count": 0,
+  "quality_warning": "The template inherits any Tags misclassification and cannot be called accurate until human review. Copy quality comparison needs user review, not automatic success.",
+  "not_formal_prd_acceptance": true,
+  "no_gpu_calls": true,
+  "holdout_used": false,
+  "publication_or_release_allowed": false
+}

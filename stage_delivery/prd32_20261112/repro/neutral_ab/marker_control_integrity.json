@@ -1,0 +1,48 @@
+{
+  "schema": "prd32_oracle8_neutral_prompt_marker_only_v2",
+  "design": "two PNGs derived from same red JPEG canvas; only red-to-cyan marker pixels changed",
+  "all_pixels_outside_marker_identical": true,
+  "cases": [
+    {
+      "case_id": "03",
+      "target": "fresh_dev_014/pred_0001",
+      "changed_marker_pixels": 1560,
+      "bbox_xyxy": "280,659,327,729",
+      "red_sha256": "58b88531880f5b85bd9948b30f74168c1dc30c5682330e6523e167da86be96d9",
+      "cyan_sha256": "99dd6a19cd2c0de644daeb23fa919e8bfe89d0687bd7f1c259c14ad1176693df"
+    },
+    {
+      "case_id": "04",
+      "target": "fresh_dev_024/pred_0004",
+      "changed_marker_pixels": 1357,
+      "bbox_xyxy": "234,190,303,223",
+      "red_sha256": "234d10c568041f495e89aaf95b32a903c8972d13547311625c6b5155b543cdef",
+      "cyan_sha256": "d2ac90e5dc4786c42ccca190b7205b65555d7bab1d406d21022cc78d3262caa0"
+    },
+    {
+      "case_id": "05",
+      "target": "fresh_dev_001/pred_0001",
+      "changed_marker_pixels": 12032,
+      "bbox_xyxy": "12,24,412,534",
+      "red_sha256": "a50693243677d6c4dbb39a8299709171dd4a287884a8952a23a069351c946a96",
+      "cyan_sha256": "a40f9a1f349474171547bfeffad2b9de0593ff0a70cf5206ca1cf718795e743e"
+    },
+    {
+      "case_id": "06",
+      "target": "fresh_dev_005/pred_0001",
+      "changed_marker_pixels": 5885,
+      "bbox_xyxy": "96,109,293,331",
+      "red_sha256": "3f5d8000b6149b3db526d55778db92e5854af36659c053481370359c8bb661ca",
+      "cyan_sha256": "6f5b358c2fdc72636ce38eac796eb39561890f23c30096e77108422d9e3d9887"
+    },
+    {
+      "case_id": "07",
+      "target": "fresh_dev_008/pred_0002",
+      "changed_marker_pixels": 4768,
+      "bbox_xyxy": "134,496,302,701",
+      "red_sha256": "c53ae9b21a88b800842c54ba772c66ab7cc18497278841d9366c8c7bee304571",
+      "cyan_sha256": "3bb477a96575f353538fd094ebb6e78bfaa073a7150ca7c9905d0717b267d628"
+    }
+  ],
+  "note": "Does not prove accuracy or isolate all model-side nondeterminism; source cases are exploratory development samples."
+}

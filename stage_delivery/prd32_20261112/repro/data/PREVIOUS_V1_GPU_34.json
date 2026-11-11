@@ -1,0 +1,240 @@
+{
+  "fresh_dev_010/pred_0000": {
+    "v1_concise_answer_sha256": "0ee6116d8fd7145ce4012e9afef31473530e8a8c83c93b8727d40a909fe466bd",
+    "baseline_answer_sha256": "95ef421f16d47a8d3b3068e303bf6d9c35ac63b6d8f836b6606f2567b9fa29f6",
+    "user_confirmed_review": "语义保持",
+    "user_confirmed_review_note": "候选“粉色和白色”与原版语义一致，历史参考 VQA 为“正确”；但目标身份/Mask 为“匹配 / 部分正确”，仍应保留上游证据限制。",
+    "v1_gpu_result_is_independent_gt": false
+  },
+  "fresh_dev_011/pred_0000": {
+    "v1_concise_answer_sha256": "67035e6b7f82acdb9ab43bb4925f377f4a7e5a5a3cc61b8eb3db2038364c3cf3",
+    "baseline_answer_sha256": "67035e6b7f82acdb9ab43bb4925f377f4a7e5a5a3cc61b8eb3db2038364c3cf3",
+    "user_confirmed_review": "目标不可靠",
+    "user_confirmed_review_note": "原版与候选均为“蓝色”，文本未退化；但历史审核为目标身份“不匹配”、Mask“错误”，当前无法独立证实回答针对正确服饰，不应计作质量通过。",
+    "v1_gpu_result_is_independent_gt": false
+  },
+  "fresh_dev_014/pred_0000": {
+    "v1_concise_answer_sha256": "032874420a890b6fc5aeb4e4e4e150bb5ff78cb5bf7245971350291a01991c34",
+    "baseline_answer_sha256": "6f9c9b0beb44c25db78fde2191cc33e70ac82c4099a2e98ae818a76993caf3af",
+    "user_confirmed_review": "语义保持",
+    "user_confirmed_review_note": "输出内容保持“黑白条纹”；历史 VQA 审核状态为“无法判断”，只能判定相对于基线没有新的文字语义变化，不能断言颜色正确。",
+    "v1_gpu_result_is_independent_gt": false
+  },
+  "fresh_dev_014/pred_0002": {
+    "v1_concise_answer_sha256": "032874420a890b6fc5aeb4e4e4e150bb5ff78cb5bf7245971350291a01991c34",
+    "baseline_answer_sha256": "6f9c9b0beb44c25db78fde2191cc33e70ac82c4099a2e98ae818a76993caf3af",
+    "user_confirmed_review": "语义保持",
+    "user_confirmed_review_note": "候选“黑白条纹”与原版语义一致，历史参考 VQA 为“正确”；但目标身份/Mask 为“部分正确 / 部分正确”，仍应保留上游证据限制。",
+    "v1_gpu_result_is_independent_gt": false
+  },
+  "fresh_dev_014/pred_0006": {
+    "v1_concise_answer_sha256": "032874420a890b6fc5aeb4e4e4e150bb5ff78cb5bf7245971350291a01991c34",
+    "baseline_answer_sha256": "6f9c9b0beb44c25db78fde2191cc33e70ac82c4099a2e98ae818a76993caf3af",
+    "user_confirmed_review": "目标不可靠",
+    "user_confirmed_review_note": "原版与候选均为“黑白条纹”，文本未退化；但历史审核为目标身份“不匹配”、Mask“错误”，当前无法独立证实回答针对正确服饰，不应计作质量通过。",
+    "v1_gpu_result_is_independent_gt": false
+  },
+  "fresh_dev_015/pred_0000": {
+    "v1_concise_answer_sha256": "032874420a890b6fc5aeb4e4e4e150bb5ff78cb5bf7245971350291a01991c34",
+    "baseline_answer_sha256": "6f9c9b0beb44c25db78fde2191cc33e70ac82c4099a2e98ae818a76993caf3af",
+    "user_confirmed_review": "语义保持",
+    "user_confirmed_review_note": "输出内容保持“黑白条纹”；历史 VQA 审核状态为“无法判断”，只能判定相对于基线没有新的文字语义变化，不能断言颜色正确。",
+    "v1_gpu_result_is_independent_gt": false
+  },
+  "fresh_dev_015/pred_0001": {
+    "v1_concise_answer_sha256": "032874420a890b6fc5aeb4e4e4e150bb5ff78cb5bf7245971350291a01991c34",
+    "baseline_answer_sha256": "6f9c9b0beb44c25db78fde2191cc33e70ac82c4099a2e98ae818a76993caf3af",
+    "user_confirmed_review": "语义保持",
+    "user_confirmed_review_note": "候选“黑白条纹”与原版语义一致，历史参考 VQA 为“正确”；但目标身份/Mask 为“匹配 / 部分正确”，仍应保留上游证据限制。",
+    "v1_gpu_result_is_independent_gt": false
+  },
+  "fresh_dev_041/pred_0000": {
+    "v1_concise_answer_sha256": "2e02d8c957cc5c9b1e24bf453007a69b7e24b1240fc1efef1f4850388add89e7",
+    "baseline_answer_sha256": "646369b556f4e1b069f0ac2d9a2ce4f603d40811e524ce71064f255721d2335c",
+    "user_confirmed_review": "语义保持",
+    "user_confirmed_review_note": "候选“蓝色和白色”与原版语义一致，历史参考 VQA 为“正确”；但目标身份/Mask 为“匹配 / 部分正确”，仍应保留上游证据限制。",
+    "v1_gpu_result_is_independent_gt": false
+  },
+  "fresh_dev_041/pred_0001": {
+    "v1_concise_answer_sha256": "2e02d8c957cc5c9b1e24bf453007a69b7e24b1240fc1efef1f4850388add89e7",
+    "baseline_answer_sha256": "895ae9720fc3ded5d4779dc74f352eeb6c724dbca092126e52971c9a8d986799",
+    "user_confirmed_review": "语义退化",
+    "user_confirmed_review_note": "浅蓝白格的“浅”字丢失；多色基本保持，但颜色深浅细节退化。",
+    "v1_gpu_result_is_independent_gt": false
+  },
+  "fresh_dev_042/pred_0000": {
+    "v1_concise_answer_sha256": "c8ae80e0a10f855506ce81986aabac0c3057aa4179c2e7aa53cc49f4f067958b",
+    "baseline_answer_sha256": "4f978be1520cbcce93c9d90d49186d1721f8eeaa6de557e1c1949d23f7e8364f",
+    "user_confirmed_review": "语义保持",
+    "user_confirmed_review_note": "输出内容保持“黑色和白色”；历史 VQA 审核状态为“无法判断”，只能判定相对于基线没有新的文字语义变化，不能断言颜色正确。",
+    "v1_gpu_result_is_independent_gt": false
+  },
+  "fresh_dev_043/pred_0002": {
+    "v1_concise_answer_sha256": "8a97b1ca7d5536f31b24c430d2e86456143e08c6b1dc9bdbfe3cc21392eca396",
+    "baseline_answer_sha256": "d86186905c97530393bda97d17f762ce84a7929d2a339f447332b006811d7e01",
+    "user_confirmed_review": "目标不可靠",
+    "user_confirmed_review_note": "原版与候选均为“黑色和粉色”，文本未退化；但历史审核为目标身份“难判定”、Mask“无法判断”，当前无法独立证实回答针对正确服饰，不应计作质量通过。",
+    "v1_gpu_result_is_independent_gt": false
+  },
+  "fresh_dev_046/pred_0000": {
+    "v1_concise_answer_sha256": "032874420a890b6fc5aeb4e4e4e150bb5ff78cb5bf7245971350291a01991c34",
+    "baseline_answer_sha256": "735c6547357fefdfa9d7161b79edf0f2c42a5418a535bdb412b198ea78ffe76e",
+    "user_confirmed_review": "有条件改善",
+    "user_confirmed_review_note": "黑白几何条纹在画面中可见；“黑白条纹”保留颜色，但相较纯颜色回答增加了图案字段，应与 VQA 输出规范区分。",
+    "v1_gpu_result_is_independent_gt": false
+  },
+  "fresh_dev_052/pred_0000": {
+    "v1_concise_answer_sha256": "81a00f5c32d80a066969bb16fa5fb3f9a5237b9bde64ae43d3c14441e48040f9",
+    "baseline_answer_sha256": "03a908aeaf928d64f7e4b54f06e6fc268926cb651c520ddf3ef0bd49f3b3b7ca",
+    "user_confirmed_review": "语义保持",
+    "user_confirmed_review_note": "候选“绿色和白色”与原版语义一致，历史参考 VQA 为“正确”；但目标身份/Mask 为“部分正确 / 部分正确”，仍应保留上游证据限制。",
+    "v1_gpu_result_is_independent_gt": false
+  },
+  "fresh_dev_052/pred_0001": {
+    "v1_concise_answer_sha256": "81a00f5c32d80a066969bb16fa5fb3f9a5237b9bde64ae43d3c14441e48040f9",
+    "baseline_answer_sha256": "03a908aeaf928d64f7e4b54f06e6fc268926cb651c520ddf3ef0bd49f3b3b7ca",
+    "user_confirmed_review": "语义保持",
+    "user_confirmed_review_note": "候选“绿色和白色”与原版语义一致，历史参考 VQA 为“正确”；但目标身份/Mask 为“部分正确 / 部分正确”，仍应保留上游证据限制。",
+    "v1_gpu_result_is_independent_gt": false
+  },
+  "fresh_dev_052/pred_0002": {
+    "v1_concise_answer_sha256": "81a00f5c32d80a066969bb16fa5fb3f9a5237b9bde64ae43d3c14441e48040f9",
+    "baseline_answer_sha256": "03a908aeaf928d64f7e4b54f06e6fc268926cb651c520ddf3ef0bd49f3b3b7ca",
+    "user_confirmed_review": "语义保持",
+    "user_confirmed_review_note": "候选“绿色和白色”与原版语义一致，历史参考 VQA 为“正确”；但目标身份/Mask 为“部分正确 / 部分正确”，仍应保留上游证据限制。",
+    "v1_gpu_result_is_independent_gt": false
+  },
+  "fresh_dev_057/pred_0000": {
+    "v1_concise_answer_sha256": "49ace1704526cef471a506217d79bddb33c35e92975f421d15a9f056b0246322",
+    "baseline_answer_sha256": "e6e3989db8fbf4798767b61314f188d8b92792c7bdedfce62e16ba5405f05724",
+    "user_confirmed_review": "有条件改善",
+    "user_confirmed_review_note": "橙白竖条纹真实可见；候选保留橙、白两色且增加条纹，但颜色问答是否允许混入图案要按最终 Schema 确认。",
+    "v1_gpu_result_is_independent_gt": false
+  },
+  "fresh_dev_058/pred_0003": {
+    "v1_concise_answer_sha256": "c8ae80e0a10f855506ce81986aabac0c3057aa4179c2e7aa53cc49f4f067958b",
+    "baseline_answer_sha256": "4f978be1520cbcce93c9d90d49186d1721f8eeaa6de557e1c1949d23f7e8364f",
+    "user_confirmed_review": "语义保持",
+    "user_confirmed_review_note": "输出内容保持“黑色和白色”；历史 VQA 审核状态为“错误”，只能判定相对于基线没有新的文字语义变化，不能断言颜色正确。",
+    "v1_gpu_result_is_independent_gt": false
+  },
+  "fresh_dev_017/pred_0005": {
+    "v1_concise_answer_sha256": "c8ae80e0a10f855506ce81986aabac0c3057aa4179c2e7aa53cc49f4f067958b",
+    "baseline_answer_sha256": "ed7d2c54184be5f5b81cbcae880942acec9635014aad20bab6cca1d68dbe3f75",
+    "user_confirmed_review": "目标不可靠",
+    "user_confirmed_review_note": "目标框仅圈到鞋尖附近的小区域，缺少可信的整鞋定位证据；黑色→黑色和白色不能据此判定改善。",
+    "v1_gpu_result_is_independent_gt": false
+  },
+  "fresh_dev_060/pred_0003": {
+    "v1_concise_answer_sha256": "ed7d2c54184be5f5b81cbcae880942acec9635014aad20bab6cca1d68dbe3f75",
+    "baseline_answer_sha256": "ed7d2c54184be5f5b81cbcae880942acec9635014aad20bab6cca1d68dbe3f75",
+    "user_confirmed_review": "语义保持",
+    "user_confirmed_review_note": "候选“黑色”与原版语义一致，目标身份及 Mask 的既有审核均为正确；这是开发集辅助审核证据，不是新的独立盲测 GT。",
+    "v1_gpu_result_is_independent_gt": false
+  },
+  "fresh_dev_008/pred_0002": {
+    "v1_concise_answer_sha256": "789f61dbfcc7a2d21a5a9b3ef23d0dbac2aee42a2b91d65baaeb20a94f3152ab",
+    "baseline_answer_sha256": "7a6fbfa6a4e12301343782ef7fd8cd65031ecb229626cceb50feb08d9ecb6a6d",
+    "user_confirmed_review": "语义退化",
+    "user_confirmed_review_note": "目标框主要对应黑色手袋，附近有红色衣物；“无法确定”→“红色”疑似跨目标串扰，是明确高风险回归，不可采纳。",
+    "v1_gpu_result_is_independent_gt": false
+  },
+  "fresh_dev_044/pred_0003": {
+    "v1_concise_answer_sha256": "f56e7eff58bf730d36d96ba551937061a9ff5b800cfa12efafa7fe0a98c1257a",
+    "baseline_answer_sha256": "f56e7eff58bf730d36d96ba551937061a9ff5b800cfa12efafa7fe0a98c1257a",
+    "user_confirmed_review": "目标不可靠",
+    "user_confirmed_review_note": "原版与候选均为“白色”，文本未退化；但历史审核为目标身份“难判定”、Mask“无法判断”，当前无法独立证实回答针对正确服饰，不应计作质量通过。",
+    "v1_gpu_result_is_independent_gt": false
+  },
+  "fresh_dev_001/pred_0000": {
+    "v1_concise_answer_sha256": "f56e7eff58bf730d36d96ba551937061a9ff5b800cfa12efafa7fe0a98c1257a",
+    "baseline_answer_sha256": "f56e7eff58bf730d36d96ba551937061a9ff5b800cfa12efafa7fe0a98c1257a",
+    "user_confirmed_review": "语义保持",
+    "user_confirmed_review_note": "候选“白色”与原版语义一致，目标身份及 Mask 的既有审核均为正确；这是开发集辅助审核证据，不是新的独立盲测 GT。",
+    "v1_gpu_result_is_independent_gt": false
+  },
+  "fresh_dev_003/pred_0000": {
+    "v1_concise_answer_sha256": "f56e7eff58bf730d36d96ba551937061a9ff5b800cfa12efafa7fe0a98c1257a",
+    "baseline_answer_sha256": "f56e7eff58bf730d36d96ba551937061a9ff5b800cfa12efafa7fe0a98c1257a",
+    "user_confirmed_review": "语义保持",
+    "user_confirmed_review_note": "候选“白色”与原版语义一致，目标身份及 Mask 的既有审核均为正确；这是开发集辅助审核证据，不是新的独立盲测 GT。",
+    "v1_gpu_result_is_independent_gt": false
+  },
+  "fresh_dev_025/pred_0002": {
+    "v1_concise_answer_sha256": "f56e7eff58bf730d36d96ba551937061a9ff5b800cfa12efafa7fe0a98c1257a",
+    "baseline_answer_sha256": "f56e7eff58bf730d36d96ba551937061a9ff5b800cfa12efafa7fe0a98c1257a",
+    "user_confirmed_review": "语义保持",
+    "user_confirmed_review_note": "候选“白色”与原版语义一致，历史参考 VQA 为“正确”；但目标身份/Mask 为“匹配 / 部分正确”，仍应保留上游证据限制。",
+    "v1_gpu_result_is_independent_gt": false
+  },
+  "fresh_dev_037/pred_0000": {
+    "v1_concise_answer_sha256": "ed7d2c54184be5f5b81cbcae880942acec9635014aad20bab6cca1d68dbe3f75",
+    "baseline_answer_sha256": "ed7d2c54184be5f5b81cbcae880942acec9635014aad20bab6cca1d68dbe3f75",
+    "user_confirmed_review": "语义保持",
+    "user_confirmed_review_note": "候选“黑色”与原版语义一致，目标身份及 Mask 的既有审核均为正确；这是开发集辅助审核证据，不是新的独立盲测 GT。",
+    "v1_gpu_result_is_independent_gt": false
+  },
+  "fresh_dev_004/pred_0000": {
+    "v1_concise_answer_sha256": "67035e6b7f82acdb9ab43bb4925f377f4a7e5a5a3cc61b8eb3db2038364c3cf3",
+    "baseline_answer_sha256": "67035e6b7f82acdb9ab43bb4925f377f4a7e5a5a3cc61b8eb3db2038364c3cf3",
+    "user_confirmed_review": "语义保持",
+    "user_confirmed_review_note": "候选“蓝色”与原版语义一致，目标身份及 Mask 的既有审核均为正确；这是开发集辅助审核证据，不是新的独立盲测 GT。",
+    "v1_gpu_result_is_independent_gt": false
+  },
+  "fresh_dev_005/pred_0001": {
+    "v1_concise_answer_sha256": "ed7d2c54184be5f5b81cbcae880942acec9635014aad20bab6cca1d68dbe3f75",
+    "baseline_answer_sha256": "ed7d2c54184be5f5b81cbcae880942acec9635014aad20bab6cca1d68dbe3f75",
+    "user_confirmed_review": "语义保持",
+    "user_confirmed_review_note": "输出内容保持“黑色”；历史 VQA 审核状态为“无法判断”，只能判定相对于基线没有新的文字语义变化，不能断言颜色正确。",
+    "v1_gpu_result_is_independent_gt": false
+  },
+  "fresh_dev_006/pred_0000": {
+    "v1_concise_answer_sha256": "67035e6b7f82acdb9ab43bb4925f377f4a7e5a5a3cc61b8eb3db2038364c3cf3",
+    "baseline_answer_sha256": "67035e6b7f82acdb9ab43bb4925f377f4a7e5a5a3cc61b8eb3db2038364c3cf3",
+    "user_confirmed_review": "语义保持",
+    "user_confirmed_review_note": "候选“蓝色”与原版语义一致，目标身份及 Mask 的既有审核均为正确；这是开发集辅助审核证据，不是新的独立盲测 GT。",
+    "v1_gpu_result_is_independent_gt": false
+  },
+  "fresh_dev_007/pred_0001": {
+    "v1_concise_answer_sha256": "4d452de834077cbe877ab4915f93997e19141a006e6c458a50b4c025bb3cf8f8",
+    "baseline_answer_sha256": "7a6fbfa6a4e12301343782ef7fd8cd65031ecb229626cceb50feb08d9ecb6a6d",
+    "user_confirmed_review": "目标不可靠",
+    "user_confirmed_review_note": "目标框仅在鞋底一小块，尽管紫粉色可见，预测目标定位不完整；从拒答转为确定回答缺乏充分证据，需阻断。",
+    "v1_gpu_result_is_independent_gt": false
+  },
+  "fresh_dev_012/pred_0000": {
+    "v1_concise_answer_sha256": "f56e7eff58bf730d36d96ba551937061a9ff5b800cfa12efafa7fe0a98c1257a",
+    "baseline_answer_sha256": "7a6fbfa6a4e12301343782ef7fd8cd65031ecb229626cceb50feb08d9ecb6a6d",
+    "user_confirmed_review": "目标不可靠",
+    "user_confirmed_review_note": "目标框只覆盖白色凉鞋一部分，遮挡和目标边界导致证据不足；原合理拒答→“白色”不应直接视为质量提升。",
+    "v1_gpu_result_is_independent_gt": false
+  },
+  "fresh_dev_019/pred_0001": {
+    "v1_concise_answer_sha256": "f56e7eff58bf730d36d96ba551937061a9ff5b800cfa12efafa7fe0a98c1257a",
+    "baseline_answer_sha256": "f56e7eff58bf730d36d96ba551937061a9ff5b800cfa12efafa7fe0a98c1257a",
+    "user_confirmed_review": "语义保持",
+    "user_confirmed_review_note": "候选“白色”与原版语义一致，历史参考 VQA 为“正确”；但目标身份/Mask 为“部分正确 / 正确”，仍应保留上游证据限制。",
+    "v1_gpu_result_is_independent_gt": false
+  },
+  "fresh_dev_030/pred_0001": {
+    "v1_concise_answer_sha256": "67035e6b7f82acdb9ab43bb4925f377f4a7e5a5a3cc61b8eb3db2038364c3cf3",
+    "baseline_answer_sha256": "67035e6b7f82acdb9ab43bb4925f377f4a7e5a5a3cc61b8eb3db2038364c3cf3",
+    "user_confirmed_review": "语义保持",
+    "user_confirmed_review_note": "候选“蓝色”与原版语义一致，历史参考 VQA 为“正确”；但目标身份/Mask 为“匹配 / 部分正确”，仍应保留上游证据限制。",
+    "v1_gpu_result_is_independent_gt": false
+  },
+  "fresh_dev_009/pred_0001": {
+    "v1_concise_answer_sha256": "f56e7eff58bf730d36d96ba551937061a9ff5b800cfa12efafa7fe0a98c1257a",
+    "baseline_answer_sha256": "f56e7eff58bf730d36d96ba551937061a9ff5b800cfa12efafa7fe0a98c1257a",
+    "user_confirmed_review": "语义保持",
+    "user_confirmed_review_note": "候选“白色”与原版语义一致，历史参考 VQA 为“正确”；但目标身份/Mask 为“匹配 / 部分正确”，仍应保留上游证据限制。",
+    "v1_gpu_result_is_independent_gt": false
+  },
+  "fresh_dev_013/pred_0000": {
+    "v1_concise_answer_sha256": "f56e7eff58bf730d36d96ba551937061a9ff5b800cfa12efafa7fe0a98c1257a",
+    "baseline_answer_sha256": "f56e7eff58bf730d36d96ba551937061a9ff5b800cfa12efafa7fe0a98c1257a",
+    "user_confirmed_review": "语义保持",
+    "user_confirmed_review_note": "候选“白色”与原版语义一致，历史参考 VQA 为“正确”；但目标身份/Mask 为“匹配 / 部分正确”，仍应保留上游证据限制。",
+    "v1_gpu_result_is_independent_gt": false
+  }
+}
